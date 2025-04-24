@@ -1,15 +1,25 @@
 state={
 	id=446
 	name="STATE_446"
+	resources={
+		resources_mm = 2
+		resources_rm = 10
+	}
 	provinces={
 		549 751 1008 1477 2294 2862 3193 3249 3371 3598 4324 4372 4907 5060 5201 5497 5574 5924 6185 6212 6217 6533 6547 7469 8016 8081 8729 8993 9266 9881 9890 9921 9932 9945 9952 10006 10042 10047 
 	}
 	history = {
-		owner = HYA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		owner = A15
+		add_core_of=A15
 		add_core_of=HYA
 		victory_points = {8993 10}
     }
-	manpower=0
+	manpower=54300
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

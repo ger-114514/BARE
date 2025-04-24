@@ -5,11 +5,16 @@ state={
 		612 1660 5403 5460 5548 6648 7726 7968 8193 10851 10965 
 	}
 	history = {
-		owner = D10
-		add_core_of=D10
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A45
+		add_core_of=A45
 		victory_points = {7726 5}
+		victory_points = {5548 5}
     }
-	manpower=0
+	manpower=24600
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

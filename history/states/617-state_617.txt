@@ -1,16 +1,20 @@
 state={
 	id=617
 	name="STATE_617"
+	resources={
+		resources_rm = 10
+		resources_fe = 5
+	}
 	provinces={
 		178 956 1911 1944 2062 2094 2433 2539 3149 3178 3970 5796 6054 6106 6812 6819 7031 7186 7294 7329 7536 7610 8119 11895 11918 11924 11932 11946 11967 12006 
 	}
 	history = {
-		owner = D14
-		add_core_of=D14
+		owner = A49
+		add_core_of=A49
 		victory_points = {2539 15}
     }
-	manpower=0
-	state_category=wasteland
+	manpower=8100
+	state_category=large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -1,292 +1,670 @@
 technologies = {
-	industrial_complex_I = {
-		enable_building = {
-			building = industrial_complex
-			level = 9
-		}
+	Industrial_construction_T1 = {#自治区工业建设
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 3 y = 0 }
 		}
-		research_cost = 2
-		path = { leads_to_tech = industrial_complex_II }
-		path = { leads_to_tech = synthetic_refinery_I }
-		dependencies = { tech_CIV_rank_I_token = 1 }
-	}
-	industrial_complex_II = {
-		
-		global_building_slots_factor = 0.25
-		folder = {
-			name = industry_folder
-			position = { x = 2 y = 0 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = industrial_complex_III }
-		path = { leads_to_tech = refining_complex_I }
-		dependencies = { tech_CIV_rank_II_token = 1 }
-	}
-	industrial_complex_III = {
-		global_building_slots_factor = 0.25
-		folder = {
-			name = industry_folder
-			position = { x = 4 y = 0 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = industrial_complex_IV }
-		path = { leads_to_tech = processing_complex_I }
-		path = { leads_to_tech = petrochemical_complex_I }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	industrial_complex_IV = {
-		global_building_slots_factor = 0.25
-		folder = {
-			name = industry_folder
-			position = { x = 6 y = 0 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = industrial_complex_V }
-		dependencies = { tech_CIV_rank_IV_token = 1 }
-	}
-	industrial_complex_V = {
-		global_building_slots_factor = 0.25
-		folder = {
-			name = industry_folder
-			position = { x = 8 y = 0 }
-		}
-		research_cost = 2
-		dependencies = { tech_CIV_rank_V_token = 1 }
-	}
+		research_cost = 1.5
+		path = { leads_to_tech = Industrial_construction_T2 }
+		path = { leads_to_tech = Decentralized_industrial_T1 }
+		path = { leads_to_tech = Centralized_industrial_T1 }
+		path = { leads_to_tech = Heavy_industry_T1 }
 
-	refining_complex_I = {
-		enable_building = {
-			building = refining_complex
-			level = 3
+		categories = {
+			industry
+			construction_tech
 		}
-		folder = {
-			name = industry_folder
-			position = { x = 2 y = 2 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = refining_complex_II }
-		path = { leads_to_tech = arms_factory_I }
-		dependencies = { tech_CIV_rank_II_token = 1 }
-	}
-	arms_factory_I = {
+
 		enable_building = {
 			building = arms_factory
-			level = 9
+			level = 25
 		}
-		folder = {
-			name = industry_folder
-			position = { x = 2 y = 4 }
-		}
-		research_cost = 2
-		dependencies = { tech_MIL_rank_II_token = 1 }
-	}
-	refining_complex_II = {
 		
+		enable_building = {
+			building = industrial_complex
+			level = 25
+		}
+
+		dependencies = {
+			T1_production = 1
+		}
+
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
+	}
+	Industrial_construction_T2 = {#标准建筑技术
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 2 }
+			position = { x = 3 y = 2 }
 		}
-		research_cost = 2
-		path = { leads_to_tech = refining_complex_III }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	refining_complex_III = {
+		research_cost = 1.5
+		production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.1
 
+		categories = {
+			industry
+			construction_tech
+		}
+		dependencies = {
+			T2_production = 1
+		}
+		research_cost = 1.5
+		path = { leads_to_tech = Construction_center_T1 }
+		path = { leads_to_tech = Industrial_construction_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Construction_center_T1 = {#日结工基地
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 5 }
+		}
+		research_cost = 1.5
+		production_speed_buildings_factor = 0.05
+
+		enable_building = {
+			building = construction_center
+			level = 1
+		}
+
+		categories = {
+			industry
+			construction_tech
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		research_cost = 1.5
+		path = { leads_to_tech = Construction_center_T2 }
+		ai_will_do = { factor = 1 }
+	}
+	Construction_center_T2 = {#劳务服务中心
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 7 }
+		}
+		research_cost = 1.5
+		conversion_cost_civ_to_mil_factor = -0.1
+		conversion_cost_mil_to_civ_factor = -0.1
+
+		dependencies = {
+			T4_production = 1
+		}
+		enable_building = {
+			building = construction_center
+			level = 2
+		}
+
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Construction_center_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Construction_center_T3 = {#职业培训所
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 9 }
+		}
+		research_cost = 1.5
+		research_speed_factor = 0.025
+
+		enable_building = {
+			building = construction_center
+			level = 3
+		}
+
+		dependencies = {
+			T5_production = 1
+		}
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
+	}
+	Industrial_construction_T3 = {#混凝土浇筑施工
+		folder = {
+			name = industry_folder
+			position = { x = 3 y = 5 }
+		}
+		research_cost = 1.5
+		production_speed_buildings_factor = 0.15
+		industry_repair_factor = 0.15
+
+
+		dependencies = {
+			T3_production = 1
+		}
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Industrial_construction_T4 }
+		ai_will_do = { factor = 1 }
+	}
+	Industrial_construction_T4 = {#复合材料建筑
+		folder = {
+			name = industry_folder
+			position = { x = 3 y = 7 }
+		}
+		research_cost = 1.5
+		production_speed_buildings_factor = 0.15
+		industry_repair_factor = 0.15
+
+		
+		dependencies = {
+			T4_production = 1
+		}
+
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Industrial_construction_T5 }
+		ai_will_do = { factor = 1 }
+	}
+	Industrial_construction_T5 = {#新式建筑学
+		folder = {
+			name = industry_folder
+			position = { x = 3 y = 9 }
+		}
+		research_cost = 1.5
+		dependencies = {
+			T5_production = 1
+		}
+		production_speed_buildings_factor = 0.15
+		industry_repair_factor = 0.15
+
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
+	}
+	Decentralized_industrial_T1 = {#分散式工业布局
 		folder = {
 			name = industry_folder
 			position = { x = 6 y = 2 }
 		}
-		research_cost = 2
-		path = { leads_to_tech = refining_complex_IV }
-		dependencies = { tech_CIV_rank_IV_token = 1 }
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+
+		dependencies = {
+			T2_production = 1
+		}
+		XOR = {
+			Centralized_industrial_T1
+		}
+
+		industrial_capacity_factory = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		production_factory_max_efficiency_factor = 0.1
+
+		global_building_slots_factor = 0.25
+
+
+		research_cost = 1.5
+		path = { leads_to_tech = Decentralized_industrial_T2 }
+		ai_will_do = { factor = 1 }
 	}
-	refining_complex_IV = {
-		
+	Decentralized_industrial_T2 = {#产业链配套物流设备
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 2 }
+			position = { x = 6 y = 5 }
 		}
-		research_cost = 2
-		dependencies = { tech_CIV_rank_V_token = 1 }
-	}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T3_production = 1
+		}
+		industrial_capacity_factory = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		production_factory_max_efficiency_factor = 0.1
 
-	processing_complex_I = {
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		path = { leads_to_tech = Decentralized_industrial_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Decentralized_industrial_T3 = {#产业潜力发掘
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 7 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T4_production = 1
+		}
+		industrial_capacity_factory = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		production_factory_max_efficiency_factor = 0.1
+
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		path = { leads_to_tech = Decentralized_industrial_T4 }
+		ai_will_do = { factor = 1 }
+	}
+	Decentralized_industrial_T4 = {#企业协同发展
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 9 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T5_production = 1
+		}
+		industrial_capacity_factory = 0.1
+		line_change_production_efficiency_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+		industry_air_damage_factor = -0.10
+		production_factory_max_efficiency_factor = 0.1
+
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
+	}
+	Centralized_industrial_T1 = {#集中式工业布局
+		folder = {
+			name = industry_folder
+			position = { x = 9 y = 2 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T2_production = 1
+		}
+		XOR = {
+			Decentralized_industrial_T1
+		}
+
+		industrial_capacity_factory = 0.175
+		industrial_capacity_dockyard = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		path = { leads_to_tech = Centralized_industrial_T2 }
+		ai_will_do = { factor = 1 }
+	}
+	Centralized_industrial_T2 = {#大型工业园区建设
+		folder = {
+			name = industry_folder
+			position = { x = 9 y = 5 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T3_production = 1
+		}
+		industrial_capacity_factory = 0.175
+		industrial_capacity_dockyard = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		path = { leads_to_tech = Centralized_industrial_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Centralized_industrial_T3 = {#上下游企业进驻
+		folder = {
+			name = industry_folder
+			position = { x = 9 y = 7 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T4_production = 1
+		}
+		industrial_capacity_factory = 0.175
+		industrial_capacity_dockyard = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		path = { leads_to_tech = Centralized_industrial_T4 }
+		ai_will_do = { factor = 1 }
+	}
+	Centralized_industrial_T4 = {#集中设备创新
+		folder = {
+			name = industry_folder
+			position = { x = 9 y = 9 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T5_production = 1
+		}
+		industrial_capacity_factory = 0.175
+		industrial_capacity_dockyard = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		global_building_slots_factor = 0.25
+
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
+	}
+	Heavy_industry_T1 = {#标准重工设备
+		folder = {
+			name = industry_folder
+			position = { x = 12 y = 2 }
+		}
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T2_production = 1
+		}
 		enable_building = {
-			building = processing_complex
+			building = heavy_arms_factory
 			level = 3
 		}
-		folder = {
-			name = industry_folder
-			position = { x = 4 y = 4 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = processing_complex_II }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	processing_complex_II = {
 
-		folder = {
-			name = industry_folder
-			position = { x = 6 y = 4 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = processing_complex_III }
-		dependencies = { tech_CIV_rank_IV_token = 1 }
+
+		research_cost = 1.5
+		path = { leads_to_tech = Heavy_industry_T2 }
+		ai_will_do = { factor = 1 }
 	}
-	processing_complex_III = {
-		
+	Heavy_industry_T2 = {#重型机床
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 4 }
+			position = { x = 12 y = 5 }
 		}
-		research_cost = 2
-		dependencies = { tech_CIV_rank_V_token = 1 }
+		research_cost = 1.5
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T3_production = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building = heavy_arms_factory
+				resource = resources_hic
+				amount = 1
+			}
+		}
+		
+		enable_building = {
+			building = heavy_arms_factory
+			level = 6
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Heavy_industry_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Heavy_industry_T3 = {#一体化生产车间
+		folder = {
+			name = industry_folder
+			position = { x = 12 y = 7 }
+		}
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T4_production = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building = heavy_arms_factory
+				resource = resources_hic
+				amount = 2
+			}
+		}
+		
+		enable_building = {
+			building = heavy_arms_factory
+			level = 8
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Heavy_industry_T4 }
+		ai_will_do = { factor = 1 }
+	}
+	Heavy_industry_T4 = {#超大型复合车间
+		folder = {
+			name = industry_folder
+			position = { x = 12 y = 9 }
+		}
+
+		categories = {
+			industry
+		}	
+		dependencies = {
+			T5_production = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building = heavy_arms_factory
+				resource = resources_hic
+				amount = 2
+			}
+		}
+		
+		enable_building = {
+			building = heavy_arms_factory
+			level = 10
+		}
+
+
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
+	}
+	Infrastructure_construction_T1 = {#自治区生活设施建设
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 0 }
+		}
+
+
+		production_speed_infrastructure_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+
+
+		can_use_combat_readiness_percentage = 0.03
+
+		categories = {
+			industry
+			construction_tech
+		}
+		dependencies = {
+			T1_production = 1
+		}
+		research_cost = 1.5
+		path = { leads_to_tech = Infrastructure_construction_T2 }
+		path = { leads_to_tech = Train_T1 }
+		ai_will_do = { factor = 1 }
+	}
+	Infrastructure_construction_T2 = {#自治区公交交通
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 2 }
+		}
+		dependencies = {
+			T2_production = 1
+		}
+		production_speed_infrastructure_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+
+		supply_node_range = 0.05
+
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Infrastructure_construction_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Infrastructure_construction_T3 = {#标准化道路整修
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 5 }
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		production_speed_infrastructure_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+
+		supply_node_range = 0.05
+
+		categories = {
+			industry
+			construction_tech
+		}
+
+		research_cost = 1.5
+		path = { leads_to_tech = Infrastructure_construction_T4 }
+		ai_will_do = { factor = 1 }
+	}
+	Infrastructure_construction_T4 = {#改进住宅建设
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 7 }
+		}
+		dependencies = {
+			T4_production = 1
+		}
+		production_speed_infrastructure_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+
+		can_use_combat_readiness_percentage = 0.03
+
+		categories = {
+			industry
+			construction_tech
+		}
+		research_cost = 1.5
+		path = { leads_to_tech = Infrastructure_construction_T5 }
+		ai_will_do = { factor = 1 }
+	}
+	Infrastructure_construction_T5 = {#先进城区规划
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 9 }
+		}
+		dependencies = {
+			T5_production = 1
+		}
+		production_speed_infrastructure_factor = 0.1
+		production_speed_supply_node_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		supply_node_range = 0.05
+		can_use_combat_readiness_percentage = 0.03
+		research_cost = 1.5
+
+		categories = {
+			industry
+			construction_tech
+		}
+		ai_will_do = { factor = 1 }
+	}
+	Train_T1 = {#重型交通工具
+		folder = {
+			name = industry_folder
+			position = { x = 18 y = 0 }
+		}
+		dependencies = {
+			T1_production = 1
+		}
+		enable_equipments = {
+			train_equipment_1
+		}
+		force_use_small_tech_layout = yes
+		research_cost = 1.5
+		path = { leads_to_tech = Train_T2 }
+		ai_will_do = { factor = 1 }
+
+		categories = {
+			industry
+		}	
+	}
+	Train_T2 = {#武装运输载具
+		folder = {
+			name = industry_folder
+			position = { x = 18 y = 2 }
+		}
+		dependencies = {
+			T2_production = 1
+		}
+		
+		enable_equipments = {
+			train_equipment_2
+		}
+
+		categories = {
+			industry
+		}	
+
+		force_use_small_tech_layout = yes
+		research_cost = 1.5
+		path = { leads_to_tech = Train_T3 }
+		ai_will_do = { factor = 1 }
+	}
+	Train_T3 = {#量产化运输载具
+		folder = {
+			name = industry_folder
+			position = { x = 18 y = 5 }
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		
+		enable_equipments = {
+			train_equipment_3
+		}
+
+		categories = {
+			industry
+		}	
+
+		force_use_small_tech_layout = yes
+		research_cost = 1.5
+		ai_will_do = { factor = 1 }
 	}
 	
-	petrochemical_complex_I = {
-		enable_building = {
-			building = petrochemical_complex
-			level = 3
-		}
-		folder = {
-			name = industry_folder
-			position = { x = 4 y = 6 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = petrochemical_complex_II }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	petrochemical_complex_II = {
-
-		folder = {
-			name = industry_folder
-			position = { x = 6 y = 6 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = petrochemical_complex_III }
-		dependencies = { tech_CIV_rank_IV_token = 1 }
-	}
-	petrochemical_complex_III = {
-		
-		folder = {
-			name = industry_folder
-			position = { x = 8 y = 6 }
-		}
-		research_cost = 2
-		dependencies = { tech_CIV_rank_V_token = 1 }
-	}
-
-	fuel_silo_I = {
-		enable_building = {
-			building = fuel_silo
-			level = 3
-		}
-		folder = {
-			name = industry_folder
-			position = { x = 4 y = 8 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = fuel_silo_II }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	fuel_silo_II = {
-
-		folder = {
-			name = industry_folder
-			position = { x = 6 y = 8 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = fuel_silo_III }
-		dependencies = { tech_CIV_rank_IV_token = 1 }
-	}
-	fuel_silo_III = {
-		
-		folder = {
-			name = industry_folder
-			position = { x = 8 y = 8 }
-		}
-		research_cost = 2
-		dependencies = { tech_CIV_rank_V_token = 1 }
-	}
-
-	synthetic_refinery_I = {
-		enable_building = {
-			building = synthetic_refinery
-			level = 3
-		}
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 10 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = synthetic_refinery_II }
-		dependencies = { tech_CIV_rank_I_token = 1 }
-	}
-	synthetic_refinery_II = {
-		
-		folder = {
-			name = industry_folder
-			position = { x = 2 y = 10 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = synthetic_refinery_III }
-		dependencies = { tech_CIV_rank_II_token = 1 }
-	}
-	synthetic_refinery_III = {
-
-		folder = {
-			name = industry_folder
-			position = { x = 4 y = 10 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = synthetic_refinery_IV }
-		path = { leads_to_tech = fuel_silo_I }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	synthetic_refinery_IV = {
-		
-		folder = {
-			name = industry_folder
-			position = { x = 6 y = 10 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = synthetic_refinery_V }
-		dependencies = { tech_CIV_rank_IV_token = 1 }
-	}
-	synthetic_refinery_V = {
-		
-		folder = {
-			name = industry_folder
-			position = { x = 8 y = 10 }
-		}
-		research_cost = 2
-		dependencies = { tech_CIV_rank_V_token = 1 }
-	}
-
-	transmutation_complex_I = {
-		enable_building = {
-			building = transmutation_complex
-			level = 3
-		}
-		folder = {
-			name = industry_folder
-			position = { x = 4 y = 12 }
-		}
-		research_cost = 2
-		path = { leads_to_tech = transmutation_complex_II }
-		dependencies = { tech_MYS_rank_III_token = 1 }
-		dependencies = { tech_CIV_rank_III_token = 1 }
-	}
-	transmutation_complex_II = {
-		folder = {
-			name = industry_folder
-			position = { x = 8 y = 12 }
-		}
-		research_cost = 2
-		dependencies = { tech_MYS_rank_V_token = 1 }
-		dependencies = { tech_CIV_rank_V_token = 1 }
-	}
 }

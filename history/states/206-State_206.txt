@@ -5,11 +5,16 @@ state={
 		582 675 1830 2125 4915 6061 7872 8504 10976 11001 11048 
 	}
 	history = {
-		owner = ABY
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = A25
+		add_core_of=A25
 		add_core_of=ABY
     }
-	manpower=1
-	state_category = pastoral
+	manpower=123000
+	state_category =large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

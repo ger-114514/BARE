@@ -4,12 +4,12 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = D08
+			tag = A43
 		}
 	}
     default = no
     focus = {  #混混团体
-        id = D08_ork_team
+        id = A43_ork_team
         icon = GFX_goal_unknown
 		cost = 5
         x = 1
@@ -22,12 +22,12 @@ focus_tree = {
 		}
     }
     focus = {  #老大之位
-		id = D08_ork_waghboss
+		id = A43_ork_waghboss
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_team }
+		prerequisite = { focus = A43_ork_team }
 		x = -5
 		y = 1
-		relative_position_id = D08_ork_team
+		relative_position_id = A43_ork_team
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -37,13 +37,13 @@ focus_tree = {
 		}
 	}
     focus = {  #最狡猾的
-		id = D08_ork_mork
+		id = A43_ork_mork
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_waghboss }
-        mutually_exclusive = { focus = D08_ork_gork }
+		prerequisite = { focus = A43_ork_waghboss }
+        mutually_exclusive = { focus = A43_ork_gork }
 		x = -1
 		y = 1
-		relative_position_id = D08_ork_waghboss
+		relative_position_id = A43_ork_waghboss
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -53,13 +53,13 @@ focus_tree = {
 		}
 	}
     focus = {  #最能打的
-		id = D08_ork_gork
+		id = A43_ork_gork
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_waghboss }
-        mutually_exclusive = { focus = D08_ork_mork }
+		prerequisite = { focus = A43_ork_waghboss }
+        mutually_exclusive = { focus = A43_ork_mork }
 		x = 1
 		y = 1
-		relative_position_id = D08_ork_waghboss
+		relative_position_id = A43_ork_waghboss
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -69,12 +69,12 @@ focus_tree = {
 		}
 	}
     focus = {  #老大万岁
-		id = D08_ork_waghboss_yes
+		id = A43_ork_waghboss_yes
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_mork focus = D08_ork_gork }
+		prerequisite = { focus = A43_ork_mork focus = A43_ork_gork }
 		x = 0
 		y = 2
-		relative_position_id = D08_ork_waghboss
+		relative_position_id = A43_ork_waghboss
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -84,12 +84,12 @@ focus_tree = {
 		}
 	}
     focus = {  #钢盔团出击！
-		id = D08_ork_waaaaaagh
+		id = A43_ork_waaaaaagh
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_waghboss_yes }
+		prerequisite = { focus = A43_ork_waghboss_yes }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_waghboss_yes
+		relative_position_id = A43_ork_waghboss_yes
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -99,13 +99,13 @@ focus_tree = {
 		}
 	}
     focus = {  #劫掠物资
-		id = D08_ork_loot
+		id = A43_ork_loot
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_team }
-        mutually_exclusive = { focus = D08_ork_factory }
+		prerequisite = { focus = A43_ork_team }
+        mutually_exclusive = { focus = A43_ork_factory }
 		x = -1
 		y = 1
-		relative_position_id = D08_ork_team
+		relative_position_id = A43_ork_team
 		cost = 5
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -115,12 +115,12 @@ focus_tree = {
 		}
 	}
     focus = {  #收集弹药
-		id = D08_ork_ammo
+		id = A43_ork_ammo
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_loot }
+		prerequisite = { focus = A43_ork_loot }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_loot
+		relative_position_id = A43_ork_loot
 		cost = 5
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -130,12 +130,12 @@ focus_tree = {
 		}
 	}
     focus = {  #简易维修
-		id = D08_ork_repair
+		id = A43_ork_repair
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_ammo }
+		prerequisite = { focus = A43_ork_ammo }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_ammo
+		relative_position_id = A43_ork_ammo
 		cost = 5
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -145,13 +145,13 @@ focus_tree = {
 		}
 	}
     focus = {  #接管工厂
-		id = D08_ork_factory
+		id = A43_ork_factory
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_team }
-        mutually_exclusive = { focus = D08_ork_loot }
+		prerequisite = { focus = A43_ork_team }
+        mutually_exclusive = { focus = A43_ork_loot }
 		x = 1
 		y = 1
-		relative_position_id = D08_ork_team
+		relative_position_id = A43_ork_team
 		cost = 5
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -161,12 +161,12 @@ focus_tree = {
 		}
 	}
     focus = {  #寻找设备
-		id = D08_ork_equipment
+		id = A43_ork_equipment
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_factory }
+		prerequisite = { focus = A43_ork_factory }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_factory
+		relative_position_id = A43_ork_factory
 		cost = 5
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -176,12 +176,12 @@ focus_tree = {
 		}
 	}
     focus = {  #重启产线
-		id = D08_ork_line
+		id = A43_ork_line
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_equipment }
+		prerequisite = { focus = A43_ork_equipment }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_equipment
+		relative_position_id = A43_ork_equipment
 		cost = 5
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -191,12 +191,12 @@ focus_tree = {
 		}
 	}
     focus = {  #打出名头
-		id = D08_ork_renown
+		id = A43_ork_renown
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_team }
+		prerequisite = { focus = A43_ork_team }
 		x = 5
 		y = 1
-		relative_position_id = D08_ork_team
+		relative_position_id = A43_ork_team
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -206,13 +206,13 @@ focus_tree = {
 		}
 	}
     focus = {  #更多小弟
-		id = D08_ork_more_zaku
+		id = A43_ork_more_zaku
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_renown }
-        mutually_exclusive = { focus = D08_ork_motor }
+		prerequisite = { focus = A43_ork_renown }
+        mutually_exclusive = { focus = A43_ork_motor }
 		x = -1
 		y = 1
-		relative_position_id = D08_ork_renown
+		relative_position_id = A43_ork_renown
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -222,13 +222,13 @@ focus_tree = {
 		}
 	}
     focus = {  #扎堆干架
-		id = D08_ork_beat
+		id = A43_ork_beat
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_more_zaku }
-        mutually_exclusive = { focus = D08_ork_motor }
+		prerequisite = { focus = A43_ork_more_zaku }
+        mutually_exclusive = { focus = A43_ork_motor }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_more_zaku
+		relative_position_id = A43_ork_more_zaku
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -238,13 +238,13 @@ focus_tree = {
 		}
 	}
     focus = {  #摩托暴走族
-		id = D08_ork_motor
+		id = A43_ork_motor
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_renown }
-        mutually_exclusive = { focus = D08_ork_mork }
+		prerequisite = { focus = A43_ork_renown }
+        mutually_exclusive = { focus = A43_ork_mork }
 		x = 1
 		y = 1
-		relative_position_id = D08_ork_renown
+		relative_position_id = A43_ork_renown
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
@@ -254,13 +254,13 @@ focus_tree = {
 		}
 	}
     focus = {  #夜露死苦
-		id = D08_ork_yoroshiku
+		id = A43_ork_yoroshiku
 		icon = GFX_goal_unknown
-		prerequisite = { focus = D08_ork_motor }
-        mutually_exclusive = { focus = D08_ork_mork }
+		prerequisite = { focus = A43_ork_motor }
+        mutually_exclusive = { focus = A43_ork_mork }
 		x = 0
 		y = 1
-		relative_position_id = D08_ork_motor
+		relative_position_id = A43_ork_motor
 		cost = 5
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no

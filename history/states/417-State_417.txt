@@ -1,14 +1,23 @@
 state={
 	id=417
 	name="STATE_417"
+	resources={
+		resources_rm = 12
+		resources_fe = 2
+	}
 	provinces={
 		1395 1413 3142 3320 3355 4120 4799 5870 6559 7336 8076 8097 8833 8876 11412 11454 11465 11467 11475 11483 11487 
 	}
 	history = {
-		owner = SHA
+		buildings = {
+			infrastructure = 1
+		}
+		owner = A18
+		add_core_of=A18
 		add_core_of=SHA
     }
-	manpower=0
+	manpower=6450
+	state_category = wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

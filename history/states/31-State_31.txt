@@ -1,15 +1,24 @@
 state={
 	id=31
 	name="STATE_31"
+	resources={
+		resources_ec = 15
+	}
 	provinces={
 		925 1872 6150 6218 9011 12187 
 	}
 	history = {
-		owner = MIL
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		owner = A03
+		add_core_of=A03
 		add_core_of=MIL
     }
-	manpower=1
-	state_category = pastoral
+	manpower=109800
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

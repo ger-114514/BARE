@@ -4,11 +4,19 @@ state={
 	provinces={
 		367 570 1521 3700 4797 4821 5009 6531 7024 7361 7995 12165 12200 12205 12223 12228 
 	}
-	history={
-		owner=D01
-		victory_points = {6531 15}
+	resources = {
+		resources_rm = 10
 	}
-	manpower=0
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner=A36
+		victory_points = {6531 5}
+		victory_points = {12165 5}
+	}
+	manpower=9410
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

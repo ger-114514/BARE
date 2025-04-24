@@ -1,16 +1,25 @@
 state={
 	id=120
 	name="STATE_120"
+	resources={
+		resources_cm = 20
+		resources_ec = 10
+	}
 	provinces={
 		 5498 589 817 903 1274 2969 3216 3542 6459 7235 8235 8506 11212
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			electronic_component_factory = 2
+		}
 		owner = TRI
 		add_core_of=TRI
 		victory_points = {8506 10}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=121000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

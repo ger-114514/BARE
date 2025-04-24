@@ -4,12 +4,24 @@ state={
 	provinces={
 		2612 3864 4312 5639 10905 10942 10948 
 	}
+	resources = {
+		resources_ec = 10
+                resources_cm = 10
+	}
 	history = {
-		owner = GEH
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 1
+		}
+		owner = A06
+		add_core_of=A06
 		add_core_of=GEH
+		victory_points = {4312 10}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=178100
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

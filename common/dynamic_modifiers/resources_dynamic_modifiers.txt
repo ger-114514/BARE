@@ -30,3 +30,11 @@ restart_state_build = {
 
 	local_resources_factor = 1
 }
+
+
+test_manpower_modifier = {
+	icon = GFX_decision_hol_inundate_water_lines
+	enable = { always = yes }
+	local_manpower = 0.1
+	recruitable_population_factor = 0.15
+}

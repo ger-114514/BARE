@@ -16,7 +16,7 @@ equipments = {
 		group_by = archetype
 		
 		interface_category = interface_category_land
-		active = yes
+		active = no
 		
 		reliability = 0.5
 
@@ -35,7 +35,7 @@ equipments = {
 		year = 2000
 
 		archetype = support_equipment
-		active = yes
+		active = no
 		priority = 20	
 	}
 
@@ -164,21 +164,25 @@ equipments = {
 		group_by = archetype
 
 		interface_category = interface_category_land
-		active = yes
+
+		
+		upgrades = {
+			fire_support_equipment_attack_upgrade
+			fire_support_equipment_reliability_upgrade
+		}
+		active = no
 
 		reliability = 0.5
 		soft_attack = 30
-		hard_attack = 5
+		hard_attack = 3
 		defense = 10
 		breakthrough = 5
-		armor_value = 1
-		ap_attack = 1
-		hardness = 0.01
+		ap_attack = 5
 
 		#Space taken in convoy
 		lend_lease_cost = 1
 
-		build_cost_ic = 10
+		build_cost_ic = 4
 		resources = {
 			resources_rm = 1
 			resources_cm = 2
@@ -189,7 +193,7 @@ equipments = {
 		year = 2000
 
 		archetype = light_fire_support_equipment
-		active = yes
+		active = no
 		priority = 20	
 		visual_level = 0
 	}
@@ -204,14 +208,13 @@ equipments = {
 
 		#Defensive Abilities
 		reliability = 0.5
-		soft_attack = 45
-		hard_attack = 8
+		soft_attack = 44
+		hard_attack = 5
 		defense = 12
 		breakthrough = 6
-		armor_value = 1
-		ap_attack = 1
+		ap_attack = 7
 
-		build_cost_ic = 13
+		build_cost_ic = 4.5
 		resources = {
 			resources_rm = 1
 			resources_cm = 2
@@ -229,14 +232,13 @@ equipments = {
 
 		#Defensive Abilities
 		reliability = 0.5
-		soft_attack = 60
-		hard_attack = 11
+		soft_attack = 58
+		hard_attack = 7
 		defense = 15
 		breakthrough = 8
-		armor_value = 1
-		ap_attack = 1
+		ap_attack = 9
 
-		build_cost_ic = 15
+		build_cost_ic = 5
 		resources = {
 			resources_rm = 2
 			resources_cm = 3
@@ -251,27 +253,30 @@ equipments = {
 		picture = archetype_heavy_fire_support_equipment
 		is_buildable = no
 		type = {
-			artillery
+			anti_tank
 			infantry 
 		}
 		group_by = archetype
 
 		interface_category = interface_category_land
-		active = yes
+		active = no
+
+		upgrades = {
+			fire_support_equipment_attack_upgrade
+			fire_support_equipment_reliability_upgrade
+		}
 
 		reliability = 0.5
 		soft_attack = 5
 		hard_attack = 30
 		defense = 10
 		breakthrough = 5
-		armor_value = 1
-		ap_attack = 20
-		hardness = 0.01
+		ap_attack = 60
 
 		#Space taken in convoy
 		lend_lease_cost = 1
 
-		build_cost_ic = 10
+		build_cost_ic = 4
 		resources = {
 			resources_rm = 1
 			resources_cm = 2
@@ -282,7 +287,7 @@ equipments = {
 		year = 2000
 
 		archetype = heavy_fire_support_equipment
-		active = yes
+		active = no
 		priority = 20	
 		visual_level = 0
 	}
@@ -301,10 +306,9 @@ equipments = {
 		hard_attack = 45
 		defense = 12
 		breakthrough = 6
-		armor_value = 1
-		ap_attack = 25
+		ap_attack = 90
 
-		build_cost_ic = 13
+		build_cost_ic = 4.5
 		resources = {
 			resources_rm = 2
 			resources_cm = 2
@@ -326,10 +330,11 @@ equipments = {
 		hard_attack = 60
 		defense = 15
 		breakthrough = 8
-		armor_value = 1
-		ap_attack = 30
+		ap_attack = 120
 
-		build_cost_ic = 15
+		ap_attack = 12
+
+		build_cost_ic = 5
 		resources = {
 			resources_rm = 2
 			resources_cm = 3
@@ -343,24 +348,32 @@ equipments = {
 		is_archetype = yes
 		picture = archetype_special_fire_support_equipment
 		is_buildable = no
-		type = support
+		type = {
+			artillery
+			infantry 
+		}
 		group_by = archetype
 
 		interface_category = interface_category_land
-		active = yes
+		active = no
+
+		
+		upgrades = {
+			fire_support_equipment_attack_upgrade
+			fire_support_equipment_reliability_upgrade
+		}
 
 		reliability = 0.5
-		soft_attack = 15
-		hard_attack = 15
+		soft_attack = 25
+		hard_attack = 20
 		defense = 10
 		breakthrough = 5
-		armor_value = 100
-		ap_attack = 100
+		ap_attack = 1
 
 		#Space taken in convoy
 		lend_lease_cost = 1
 
-		build_cost_ic = 15
+		build_cost_ic = 6
 		resources = {
 			resources_rm = 1
 			resources_cm = 2
@@ -372,7 +385,7 @@ equipments = {
 		year = 2000
 
 		archetype = special_fire_support_equipment
-		active = yes
+		active = no
 		priority = 20	
 		visual_level = 0
 	}
@@ -387,14 +400,12 @@ equipments = {
 
 		#Defensive Abilities
 		reliability = 0.5
-		soft_attack = 25
-		hard_attack = 25
+		soft_attack = 35
+		hard_attack = 30
 		defense = 12
 		breakthrough = 8
-		armor_value = 100
-		ap_attack = 100
-
-		build_cost_ic = 18
+		ap_attack = 1
+		build_cost_ic = 6.8
 		resources = {
 			resources_rm = 2
 			resources_cm = 2
@@ -412,14 +423,13 @@ equipments = {
 
 		#Defensive Abilities
 		reliability = 0.5
-		soft_attack = 35
-		hard_attack = 35
+		soft_attack = 45
+		hard_attack = 40
 		defense = 15
 		breakthrough = 8
-		armor_value = 100
-		ap_attack = 100
+		ap_attack = 1
 
-		build_cost_ic = 20
+		build_cost_ic = 7.6
 		resources = {
 			resources_rm = 2
 			resources_cm = 3

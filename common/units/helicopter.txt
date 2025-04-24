@@ -18,6 +18,7 @@ sub_units = {
 			category_front_line
 			category_light_infantry
 			category_all_infantry
+			category_assist_heil
 			category_army
 		}
 		
@@ -27,7 +28,7 @@ sub_units = {
 		max_strength = 30
 		max_organisation = 40
 		default_morale = 1.2
-		manpower = 800
+		manpower = 150
 
 		#Misc Abilities
 		training_time = 120
@@ -38,15 +39,15 @@ sub_units = {
 		
 		supply_consumption = 0.2
 
-		transport = helicopter_airframe
+		transport = helicopter_equipment
 
 		essential = {
-			helicopter_airframe
+			helicopter_equipment
 			infantry_equipment
 		}
 
 		need = {
-			helicopter_airframe = 4
+			helicopter_equipment = 4
 			infantry_equipment = 160
 		}
 
@@ -95,6 +96,7 @@ sub_units = {
 		
 		categories = {
 			category_army
+			category_attack_heil
 		}
 		
 		combat_width = 3
@@ -103,7 +105,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 0
 		default_morale = 0.16
-		manpower = 600
+		manpower = 130
 
 		#Misc Abilities
 		training_time = 120
@@ -114,14 +116,14 @@ sub_units = {
 		
 		supply_consumption = 0.5
 
-		transport = helicopter_cas_airframe
+		transport = attack_helicopter_equipment
 
 		essential = {
-			helicopter_cas_airframe
+			attack_helicopter_equipment
 		}
 
 		need = {
-			helicopter_cas_airframe = 6
+			attack_helicopter_equipment = 6
 		}
 
 		forest = {

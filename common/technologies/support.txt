@@ -1,179 +1,1572 @@
 technologies = {
-	# support_equipment_T1 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 0 y = -1 }
-	# 	}
-	# 	path = { leads_to_tech = burst_support_weapons_T2 }
-	# 	path = { leads_to_tech = penetration_support_weapons_T2 }
-	# 	path = { leads_to_tech = mystical_support_weapons_T3 }
-	# 	dependencies = { tech_MIL_rank_I_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# burst_support_weapons_T2 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = -1 y = 3 }
-	# 	}
-	# 	path = { leads_to_tech = burst_support_weapons_T4 }
-	# 	path = { leads_to_tech = burst_support_weapons_upgrade_T3 }
-	# 	sub_technologies = { burst_support_weapons_upgrade_T2 }
-	# 	dependencies = { tech_MIL_rank_II_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# penetration_support_weapons_T2 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 1 y = 3 }
-	# 	}
-	# 	path = { leads_to_tech = penetration_support_weapons_T4 }
-	# 	path = { leads_to_tech = penetration_support_weapons_upgrade_T3 }
-	# 	sub_technologies = { penetration_support_weapons_upgrade_T2 }
-	# 	dependencies = { tech_MIL_rank_II_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# burst_support_weapons_T4 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = -1 y = 11 }
-	# 	}
-	# 	path = { leads_to_tech = burst_support_weapons_T5 }
-	# 	sub_technologies = { penetration_support_weapons_upgrade_T4 }
-	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# penetration_support_weapons_T4 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 1 y = 11 }
-	# 	}
-	# 	path = { leads_to_tech = penetration_support_weapons_T5 }
-	# 	sub_technologies = { penetration_support_weapons_upgrade_T4 }
-	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# burst_support_weapons_T5 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = -2 y = 15 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_V_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# penetration_support_weapons_T5 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 2 y = 15 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_V_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# mystical_support_weapons_T3 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 0 y = 7 }
-	# 	}
-	# 	path = { leads_to_tech = mystical_support_weapons_T5 }
-	# 	dependencies = { tech_MIL_rank_III_token = 1 }
-	# 	dependencies = { tech_MYS_rank_III_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# mystical_support_weapons_T5 = {
-	# 	enable_equipments = { infantry_equipment_0 }
-	# 	research_cost = 2
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 0 y = 15 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_V_token = 1 }
-	# 	dependencies = { tech_MYS_rank_V_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
+	#########################################
+	#火力支援装备
+	#T1和升级
+	fire_support_weapons_T1 = {
+		enable_equipments = {
+			heavy_fire_support_equipment_0
+			light_fire_support_equipment_0
+			special_fire_support_equipment_0
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 4
+				y = -1
+			}
+		}
+		path = {
+			leads_to_tech = fire_support_weapons_upgrade_1_T2
+		}
+		path = {
+			leads_to_tech = fire_support_weapons_upgrade_2_T2
+		}
+		path = {
+			leads_to_tech = fire_support_weapons_upgrade_4_T2
+		}
+		path = {
+			leads_to_tech = fire_support_weapons_upgrade_2_T2
+		}
+		dependencies = {
+			T1_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fire_support_weapons_upgrade_1_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 4
+			}
+		}
+		path = {
+			leads_to_tech = light_fire_support_weapons_T3
+		}
 
-	# burst_support_weapons_upgrade_T2 = {
-	# 	research_cost = 1
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = -2 y = 8 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_II_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# penetration_support_weapons_upgrade_T2 = {
-	# 	research_cost = 1
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 2 y = 8 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_II_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# burst_support_weapons_upgrade_T3 = {
-	# 	research_cost = 1
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = -2 y = 7 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_III_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# penetration_support_weapons_upgrade_T3 = {
-	# 	research_cost = 1
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 2 y = 7 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_III_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# burst_support_weapons_upgrade_T4 = {
-	# 	research_cost = 1
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = -1 y = 13 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
-	# penetration_support_weapons_upgrade_T4 = {
-	# 	research_cost = 1
-	# 	folder = {
-	# 		name = infantry_folder
-	# 		position = { x = 1 y = 13 }
-	# 	}
-	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
-	# 	categories = { infantry_weapons }
-	# 	ai_will_do = { factor = 1 }
-	# }
+		category_light_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fire_support_weapons_upgrade_2_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 4
+				y = 4
+			}
+		}
+
+		category_heavy_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		category_light_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	fire_support_weapons_upgrade_4_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 8
+				y = 4
+			}
+		}
+
+		category_heavy_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.1
+		}
+
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		path = {
+			leads_to_tech = heavy_fire_support_weapons_T3
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#爆发科技树
+	light_fire_support_weapons_T3 = {
+		enable_equipments = {
+			light_fire_support_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = light_fire_support_weapons_upgrade_T3
+		}
+		path = {
+			leads_to_tech = light_fire_support_weapons_upgrade_1_T4
+		}
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	light_fire_support_weapons_upgrade_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 2
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = light_fire_support_weapons_upgrade_2_T4
+		}
+
+
+		category_light_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	light_fire_support_weapons_upgrade_1_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 14
+			}
+		}
+		category_light_artillery = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		path = {
+			leads_to_tech = light_fire_support_weapons_T5
+		}
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	light_fire_support_weapons_upgrade_2_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 2
+				y = 14
+			}
+		}
+
+		category_light_artillery = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		category_heavy_artillery = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	light_fire_support_weapons_T5 = {
+		enable_equipments = {
+			light_fire_support_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 0
+				y = 19
+			}
+		}
+		path = {
+			leads_to_tech = light_fire_support_weapons_upgrade_T5
+		}
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	light_fire_support_weapons_upgrade_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 2
+				y = 19
+			}
+		}
+
+		category_light_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#贯穿科技树
+	heavy_fire_support_weapons_T3 = {
+		enable_equipments = {
+			heavy_fire_support_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 8
+				y = 9
+			}
+		}
+
+
+
+		path = {
+			leads_to_tech = heavy_fire_support_weapons_upgrade_T3
+		}
+		path = {
+			leads_to_tech = heavy_fire_support_weapons_upgrade_1_T4
+		}
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	heavy_fire_support_weapons_upgrade_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 6
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = heavy_fire_support_weapons_upgrade_2_T4
+		}
+
+		category_heavy_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.1
+		}
+
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	heavy_fire_support_weapons_upgrade_1_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 8
+				y = 14
+			}
+		}
+
+		category_heavy_artillery = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		path = {
+			leads_to_tech = heavy_fire_support_weapons_T5
+		}
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	heavy_fire_support_weapons_upgrade_2_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 6
+				y = 14
+			}
+		}
+
+		
+		category_heavy_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		category_light_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	heavy_fire_support_weapons_T5 = {
+		enable_equipments = {
+			heavy_fire_support_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 8
+				y = 19
+			}
+		}
+		path = {
+			leads_to_tech = heavy_fire_support_weapons_upgrade_T5
+		}
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	heavy_fire_support_weapons_upgrade_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 6
+				y = 19
+			}
+		}
+
+		category_heavy_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.1
+		}
+
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###############################################
+	#支援装备
+	support_equipment_T1 = {
+		enable_equipments = {
+			support_equipment_1
+		}
+		enable_subunits = {
+			engineer
+			logistics_company
+			helicopter_logistics_company
+			maintenance_company
+			military_police
+			signal_company
+			field_hospital
+			recon
+			apc_recon
+			mbt_recon
+			helicopter_recon
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 14
+				y = -1
+			}
+		}
+		
+		path = {
+			leads_to_tech = support_engineer_T2
+		}
+		path = {
+			leads_to_tech = support_logistics_T2
+		}
+		path = {
+			leads_to_tech = support_security_T2
+		}
+		dependencies = {
+			T1_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#工程
+	support_engineer_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 12
+				y = 4
+			}
+		}
+		path = {
+			leads_to_tech = support_engineer_T3
+		}
+
+		engineer = {	
+			entrenchment = 0.4
+			max_organisation = 2
+			fort = {
+				defence = 0.08
+				attack = 0.08
+			}
+		}
+
+		maintenance_company = {
+			max_organisation = 2
+			reliability_factor = 0.04
+			equipment_capture_factor = 0.04
+		}
+
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_engineer_T3 = {
+		enable_equipments = {
+			support_engineer_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 12
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = support_engineer_T4
+		}
+
+		desc = support_engineer_T3_need
+		custom_modifier_tooltip = support_engineer_T3_need
+		engineer = {	
+			entrenchment = 1
+			max_organisation = 4
+			fort = {
+				defence = 0.15
+				attack = 0.15
+			}
+			need = {
+				support_engineer_equipment_1 = 8
+			}
+		}
+
+		maintenance_company = {
+			max_organisation = 4
+			reliability_factor = 0.1
+			equipment_capture_factor = 0.1
+
+			need = {
+				support_engineer_equipment_1 = 8
+			}
+		}
+
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_engineer_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 12
+				y = 14
+			}
+		}
+		path = {
+			leads_to_tech = support_engineer_T5
+		}
+
+		engineer = {	
+			entrenchment = 0.4
+			max_organisation = 2
+			fort = {
+				defence = 0.08
+				attack = 0.08
+			}
+		}
+
+		maintenance_company = {
+			max_organisation = 2
+			reliability_factor = 0.04
+			equipment_capture_factor = 0.04
+		}
+
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_engineer_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 12
+				y = 19
+			}
+		}
+		desc = support_engineer_T5_need
+		custom_modifier_tooltip = support_engineer_T5_need
+		engineer = {	
+			entrenchment = 1
+			max_organisation = 4
+			fort = {
+				defence = 0.15
+				attack = 0.15
+			}
+			need = {
+				support_engineer_equipment = 6
+			}
+		}
+
+		maintenance_company = {
+			max_organisation = 4
+			reliability_factor = 0.1
+			equipment_capture_factor = 0.1
+
+			need = {
+				support_engineer_equipment = 6
+			}
+		}
+
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#后勤
+	support_logistics_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 14
+				y = 4
+			}
+		}
+
+		helicopter_logistics_company = {
+			supply_consumption_factor = -0.1
+		}
+
+		motorized_logistics_company = {
+			supply_consumption_factor = -0.08
+			fuel_consumption_factor = -0.02
+		}
+
+		field_hospital = {
+			casualty_trickleback = 0.06
+			experience_loss_factor = -0.06
+		}
+
+		logistics_company = {
+			supply_consumption_factor = -0.06
+			fuel_consumption_factor = -0.03
+		}
+
+		signal_company = {
+			initiative = 0.1
+		}
+
+
+		path = {
+			leads_to_tech = support_logistics_T3
+		}
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_logistics_T3 = {
+		enable_equipments = {
+			support_logistics_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 14
+				y = 9
+			}
+		}
+
+		desc = support_logistics_T3_need
+		custom_modifier_tooltip =  support_logistics_T3_need
+		field_hospital = {
+			casualty_trickleback = 0.12
+			experience_loss_factor = -0.12
+			need = {
+				support_logistics_equipment_1 = 8
+			}
+		}
+
+		helicopter_logistics_company = {
+			supply_consumption_factor = -0.16
+
+			need = {
+				support_logistics_equipment = 8
+			}
+		}
+
+		motorized_logistics_company = {
+			supply_consumption_factor = -0.14
+			fuel_consumption_factor = -0.03
+
+			need = {
+				support_logistics_equipment = 8
+			}
+		}
+
+
+		logistics_company = {
+			supply_consumption_factor = -0.12
+			fuel_consumption_factor = -0.06
+
+			need = {
+				support_logistics_equipment = 8
+			}
+		}
+
+		signal_company = {
+			initiative = 0.2
+			need = {
+				support_logistics_equipment = 8
+			}
+		}
+
+
+		path = {
+			leads_to_tech = support_logistics_T4
+		}
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_logistics_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 14
+				y = 14
+			}
+		}
+
+		field_hospital = {
+			casualty_trickleback = 0.06
+			experience_loss_factor = -0.06
+		}
+
+		helicopter_logistics_company = {
+			supply_consumption_factor = -0.1
+		}
+
+		motorized_logistics_company = {
+			supply_consumption_factor = -0.08
+			fuel_consumption_factor = -0.02
+		}
+
+		logistics_company = {
+			supply_consumption_factor = -0.06
+			fuel_consumption_factor = -0.03
+		}
+
+		signal_company = {
+			initiative = 0.1
+		}
+
+		path = {
+			leads_to_tech = support_logistics_T5
+		}
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_logistics_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 14
+				y = 19
+			}
+		}
+
+		desc = support_logistics_T5_need
+		custom_modifier_tooltip =  support_logistics_T5_need
+		field_hospital = {
+			casualty_trickleback = 0.12
+			experience_loss_factor = -0.12
+			need = {
+				support_logistics_equipment = 6
+			}
+		}
+
+		helicopter_logistics_company = {
+			supply_consumption_factor = -0.16
+
+			need = {
+				support_logistics_equipment = 6
+			}
+		}
+
+		motorized_logistics_company = {
+			supply_consumption_factor = -0.14
+			fuel_consumption_factor = -0.03
+
+			need = {
+				support_logistics_equipment = 6
+			}
+		}
+
+
+		logistics_company = {
+			supply_consumption_factor = -0.12
+			fuel_consumption_factor = -0.06
+
+			need = {
+				support_logistics_equipment = 6
+			}
+		}
+
+		signal_company = {
+			initiative = 0.2
+			need = {
+				support_logistics_equipment = 6
+			}
+		}
+
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#安保
+	support_security_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 16
+				y = 4
+			}
+		}
+
+		military_police = {
+			max_organisation = 3
+			suppression_factor = 0.08
+		}
+
+		category_recon = {
+			max_organisation = 3
+			recon = 1.5
+		}
+
+		path = {
+			leads_to_tech = support_security_T3
+		}
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_security_T3 = {
+		enable_equipments = {
+			support_security_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 16
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = support_security_T4
+		}
+
+		desc = support_security_T3_need
+		custom_modifier_tooltip = support_security_T3_need
+
+		military_police = {
+			max_organisation = 5
+			suppression_factor = 0.16
+			need = {
+				support_security_equipment = 8
+			}
+		}
+
+		category_recon = {
+			max_organisation = 5
+			recon = 3
+
+			need = {
+				support_security_equipment = 8
+			}
+		}
+
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_security_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 16
+				y = 14
+			}
+		}
+		path = {
+			leads_to_tech = support_security_T5
+		}
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+
+		military_police = {
+			max_organisation = 3
+			suppression_factor = 0.08
+		}
+
+		category_recon = {
+			max_organisation = 3
+			recon = 1.5
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	support_security_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 16
+				y = 19
+			}
+		}
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		categories = {
+			support
+			support_all
+		}
+		desc = support_security_T5_need
+		custom_modifier_tooltip = support_security_T5_need
+		
+		military_police = {
+			max_organisation = 5
+			suppression_factor = 0.16
+			need = {
+				support_security_equipment = 6
+			}
+		}
+
+		category_recon = {
+			max_organisation = 5
+			recon = 3
+
+			need = {
+				support_security_equipment = 6
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+    #神秘科技树
+	special_fire_support_weapons_T1 = {
+		enable_equipments = {
+			special_fire_support_equipment_0
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 20
+				y = -1
+			}
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T21
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T22
+		}
+		
+		dependencies = {
+			T1_infantry_weapon = 1
+			T1_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	special_fire_support_weapons_T21 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 18
+				y = 4
+			}
+		}
+
+		category_special_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T3
+		}
+
+		
+		dependencies = {
+			T2_infantry_weapon = 1
+			T2_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	special_fire_support_weapons_T22 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 22
+				y = 4
+			}
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T3
+		}
+
+		category_special_artillery = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+
+		
+		dependencies = {
+			T2_infantry_weapon = 1
+			T2_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	special_fire_support_weapons_T3 = {
+		enable_equipments = {
+			special_fire_support_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 20
+				y = 9
+			}
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T41
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T42
+		}
+
+
+		
+		
+		dependencies = {
+			T3_infantry_weapon = 1
+			T3_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	special_fire_support_weapons_T41 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 18
+				y = 14
+			}
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T5
+		}
+
+		category_special_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		
+		dependencies = {
+			T4_infantry_weapon = 1
+			T4_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	special_fire_support_weapons_T42 = {
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 22
+				y = 14
+			}
+		}
+
+		path = {
+			leads_to_tech = special_fire_support_weapons_T5
+		}
+
+		category_special_artillery = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+
+		
+		dependencies = {
+			T4_infantry_weapon = 1
+			T4_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	special_fire_support_weapons_T5 = {
+		enable_equipments = {
+			special_fire_support_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 20
+				y = 19
+			}
+		}
+
+
+
+		
+		
+		dependencies = {
+			T5_infantry_weapon = 1
+			T5_opaz = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+    
+	
+    #防空装备
+	air_defense_weapons_T1 = {
+		enable_equipments = {
+			infantry_anti_air_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 26
+				y = -1
+			}
+		}
+
+
+		path = {
+			leads_to_tech = air_defense_weapons_T21
+		}
+		path = {
+			leads_to_tech = air_defense_weapons_T22
+		}
+
+		dependencies = {
+			T1_infantry_weapon = 1
+		}
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	air_defense_weapons_T21 = {
+		
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 24
+				y = 4
+			}
+		}
+
+		
+		category_anti_air = {
+			air_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = air_defense_weapons_T3
+		}
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	air_defense_weapons_T22 = {
+		
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 28
+				y = 4
+			}
+		}
+		path = {
+			leads_to_tech = air_defense_weapons_T3
+		}
+
+		dependencies = {
+			T2_infantry_weapon = 1
+		}
+		category_anti_air = {
+			air_attack = 0.1
+		}
+		
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	air_defense_weapons_T3 = {
+		enable_equipments = {
+			infantry_anti_air_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 26
+				y = 9
+			}
+		}
+
+		path = {
+			leads_to_tech = air_defense_weapons_T41
+		}
+		path = {
+			leads_to_tech = air_defense_weapons_T42
+		}
+
+		dependencies = {
+			T3_infantry_weapon = 1
+		}
+
+		
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	air_defense_weapons_T41 = {
+		
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 24
+				y = 14
+			}
+		}
+
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		category_anti_air = {
+			air_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = air_defense_weapons_T5
+		}
+
+		
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	air_defense_weapons_T42 = {
+		
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 28
+				y = 14
+			}
+		}
+
+		dependencies = {
+			T4_infantry_weapon = 1
+		}
+		category_anti_air = {
+			air_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = air_defense_weapons_T5
+		}
+
+
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	air_defense_weapons_T5 = {
+		enable_equipments = {
+			infantry_anti_air_equipment_3
+		}
+		research_cost = 1.5
+		folder = {
+			name = support_folder
+			position = {
+				x = 26
+				y = 19
+			}
+		}
+
+
+		dependencies = {
+			T5_infantry_weapon = 1
+		}
+		
+		categories = {
+			fire_support
+			support_all
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+
+	
+
+
+
+
 
 }

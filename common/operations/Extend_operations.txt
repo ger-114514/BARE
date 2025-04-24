@@ -1,0 +1,848 @@
+operation_sabotage_things = {
+	icon = GFX_operations_targeted_sabotage
+	map_icon = GFX_operations_targeted_sabotage_map
+	name = operation_targeted_sabotage_industry
+	desc = operation_targeted_sabotage_industry_desc
+	priority = 13
+	
+	days = 45
+	network_strength = 60
+	operatives = 2
+
+	visible = {
+		num_of_operatives > 1
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+        has_operation_token = {
+ 			tag = FROM
+ 			token = token_civilian
+ 		}
+	}
+
+
+	requirements = {
+
+	}
+	selection_target = {
+		targets = { FROM }
+
+	}
+
+	selection_target_state = {
+	}
+	required_tokens = { token_civilian }
+	equipment = {
+		
+	}
+
+	risk_chance = 0.2
+	experience = 2
+	outcome_extra_chance = 0.25
+	outcome_modifiers = { target_sabotage_factor operation_risk }
+	risk_modifiers = { target_sabotage_risk operation_outcome }
+	cost_modifiers = { target_sabotage_cost operation_cost }
+	outcome_execute = {
+		FROM = {
+			if = {
+				limit = {
+					ROOT = {
+						has_operation_token = {
+							tag = FROM
+							token = token_army
+						}
+					}
+				}
+				FROM.FROM = {
+					add_to_variable = {
+						var = targeted_sabotage_industry
+						value = 5
+					}
+					custom_effect_tooltip = targeted_sabotage_industry_2_tt
+				}
+				}
+			if= {
+				limit = {
+					ROOT = {
+						has_operation_token = {
+							tag = FROM
+							token = token_civilian
+						}
+					}
+				}
+				FROM.FROM = {
+					add_to_variable = {
+						var = targeted_sabotage_infrastructure
+						value = 5
+					}
+					custom_effect_tooltip = targeted_sabotage_infrastructure_2_tt
+				}
+				}
+			if= {
+				limit = {
+					ROOT = {
+						has_operation_token = {
+							tag = FROM
+							token = token_airforce
+						}
+					}
+				}				
+				FROM.FROM = {
+					add_to_variable = {
+						var = targeted_sabotage_resources
+						value = 5
+					}
+					custom_effect_tooltip = targeted_sabotage_resources_2_tt
+				}
+				}	
+			}
+        ROOT = {
+            remove_operation_token = {
+ 				tag = FROM
+ 				token = token_civilian
+ 			}
+        } 
+	}
+
+
+	
+	outcome_extra_execute = { 
+
+	}
+
+	outcome_potential = {	
+
+	}
+	phases = { #infiltration
+	infiltration_border = { base = 50 }
+	infiltration_paradrop = { 
+		base = 50 
+		modifier = {
+			ROOT = { 
+				has_equipment = {
+					transport_plane_equipment < 1
+				}
+			}
+			factor = 0
+		}
+	    }
+    }
+	phases = { #exfiltration
+		targeted_sabotage_plant_explosives = { base = 72 }
+		targeted_sabotage_organize_more_meetings = { base = 10 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 50 }
+	}	
+}
+
+operation_steal_tech_indus_civilian = { ### 12 3/35
+	icon = GFX_operations_steal_blueprints
+	map_icon = GFX_operations_steal_blueprints_map
+	name = operation_steal_tech_indus_civilian
+	desc = operation_steal_tech_indus_civilian_desc
+	priority = 12
+
+	days = 90
+	network_strength = 60
+	operatives = 3
+	cost_multiplier = 0.05
+
+	visible = {
+		num_of_operatives > 0
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		has_operation_token = {
+			tag = FROM
+			token = token_civilian
+		}
+	}
+
+	equipment = {
+	
+	}
+
+	required_tokens = {
+		token_civilian
+	}
+	risk_chance = 0.2
+	experience = 2
+	outcome_extra_chance = 0.25
+	risk_modifiers = { operation_steal_tech_risk operation_risk }
+	outcome_modifiers = { operation_steal_tech_outcome operation_outcome }
+	cost_modifiers = { operation_cost }
+
+	outcome_execute = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = industry_folder
+				bonus = 3.0
+				name = operation_steal_tech_civilian
+				target = FROM
+				dynamic = yes
+				instant = yes
+				uses = 1
+			}
+			remove_operation_token = {
+				tag = FROM
+				token = token_civilian
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+		random_list = {
+			80 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = industry_folder
+
+						bonus = 3.0
+						ahead_reduction = 2
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_civilian
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+			20 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = electronics_folder
+
+						bonus = 3.0
+						ahead_reduction = 1
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_civilian
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+		}	
+	}
+
+	outcome_potential = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = industry_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_civilian
+				target = FROM
+				uses = 1
+			}
+		}
+		custom_effect_tooltip = operation_outcome_consumes_token_tt
+	}
+
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_paradrop = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = { #blueprint theft
+		steal_blueprints_middle_manager = { base = 50 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 50 }
+	}
+}
+
+operation_steal_tech_elec_civilian = { ### 12 3/35
+	icon = GFX_operations_steal_blueprints
+	map_icon = GFX_operations_steal_blueprints_map
+	name = operation_steal_tech_elec_civilian
+	desc = operation_steal_tech_elec_civilian_desc
+	priority = 12
+
+	days = 90
+	network_strength = 60
+	operatives = 3
+	cost_multiplier = 0.05
+
+	visible = {
+		num_of_operatives > 0
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		has_operation_token = {
+			tag = FROM
+			token = token_civilian
+		}
+	}
+
+	equipment = {
+	
+	}
+
+	required_tokens = {
+		token_civilian
+	}
+	risk_chance = 0.2
+	experience = 2
+	outcome_extra_chance = 0.25
+	risk_modifiers = { operation_steal_tech_risk operation_risk }
+	outcome_modifiers = { operation_steal_tech_outcome operation_outcome }
+	cost_modifiers = { operation_cost }
+
+	outcome_execute = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = electronics_folder
+				bonus = 3.0
+				name = operation_steal_tech_civilian
+				target = FROM
+				dynamic = yes
+				instant = yes
+				uses = 1
+			}
+			remove_operation_token = {
+				tag = FROM
+				token = token_civilian
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+		random_list = {
+			80 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+
+						folder = electronics_folder
+						bonus = 3.0
+						ahead_reduction = 2
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_civilian
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+			20 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = industry_folder
+
+						bonus = 3.0
+						ahead_reduction = 1
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_civilian
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+		}	
+	}
+
+	outcome_potential = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = electronics_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_civilian
+				target = FROM
+				uses = 1
+			}
+		}
+		custom_effect_tooltip = operation_outcome_consumes_token_tt
+	}
+
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_paradrop = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = { #blueprint theft
+		steal_blueprints_middle_manager = { base = 50 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 50 }
+	}
+}
+
+operation_steal_tech_armour_army = { ### 16 3/55
+	icon = GFX_operations_steal_blueprints
+	map_icon = GFX_operations_steal_blueprints_map
+	name = operation_steal_tech_armour_army
+	desc = operation_steal_tech_armour_army_desc
+	priority = 16
+
+	days = 90
+	network_strength = 70
+	operatives = 3
+	cost_multiplier = 0.05
+
+	visible = {
+		num_of_operatives > 1
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		has_operation_token = {
+			tag = FROM
+			token = token_army
+		}
+	}
+
+	equipment = {
+		
+	}
+
+	required_tokens = {
+		token_army
+	}
+	risk_chance = 0.2
+	experience = 2
+	risk_modifiers = { operation_steal_tech_risk operation_risk }
+	outcome_extra_chance = 0.25
+	outcome_modifiers = { operation_steal_tech_outcome operation_outcome }
+	cost_modifiers = { operation_cost }
+	outcome_execute = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = armour_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_army
+				target = FROM
+				uses = 1
+			}
+			remove_operation_token = {
+				tag = FROM
+				token = token_army
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+		random_list = {
+			33 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = armour_folder
+
+						bonus = 3.0
+						ahead_reduction = 2
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_army
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+			67 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = armour_folder
+
+						bonus = 3.0
+						dynamic = yes
+						instant = yes
+						ahead_reduction = 1
+						name = operation_steal_tech_army
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+		}
+	}
+
+	outcome_potential = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = armour_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_army
+				target = FROM
+				uses = 1
+			}
+		}
+		custom_effect_tooltip = operation_outcome_consumes_token_tt
+	}
+
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_paradrop = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = { #blueprint theft
+		steal_blueprints_middle_manager = { base = 50 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 50 }
+	}
+}
+
+
+operation_steal_tech_artillery_army = { ### 16 3/55
+	icon = GFX_operations_steal_blueprints
+	map_icon = GFX_operations_steal_blueprints_map
+	name = operation_steal_tech_artillery_army
+	desc = operation_steal_tech_artillery_army_desc
+	priority = 16
+
+	days = 90
+	network_strength = 70
+	operatives = 3
+	cost_multiplier = 0.05
+
+	visible = {
+		num_of_operatives > 1
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		has_operation_token = {
+			tag = FROM
+			token = token_army
+		}
+	}
+
+	equipment = {
+		
+	}
+
+	required_tokens = {
+		token_army
+	}
+	risk_chance = 0.2
+	experience = 2
+	risk_modifiers = { operation_steal_tech_risk operation_risk }
+	outcome_extra_chance = 0.25
+	outcome_modifiers = { operation_steal_tech_outcome operation_outcome }
+	cost_modifiers = { operation_cost }
+	outcome_execute = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_army
+				target = FROM
+				uses = 1
+			}
+			remove_operation_token = {
+				tag = FROM
+				token = token_army
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+		random_list = {
+			33 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+
+						bonus = 3.0
+						ahead_reduction = 2
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_army
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+			67 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+
+						bonus = 3.0
+						dynamic = yes
+						instant = yes
+						ahead_reduction = 1
+						name = operation_steal_tech_army
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+		}
+	}
+
+	outcome_potential = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_army
+				target = FROM
+				uses = 1
+			}
+		}
+
+		custom_effect_tooltip = operation_outcome_consumes_token_tt
+	}
+
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_paradrop = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = { #blueprint theft
+		steal_blueprints_middle_manager = { base = 50 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 50 }
+	}
+}
+
+
+operation_steal_tech_infantryandsupport_army = { ### 16 3/55
+	icon = GFX_operations_steal_blueprints
+	map_icon = GFX_operations_steal_blueprints_map
+	name = operation_steal_tech_infantryandsupport_army
+	desc = operation_steal_tech_infantryandsupport_army_desc
+	priority = 16
+
+	days = 90
+	network_strength = 70
+	operatives = 3
+	cost_multiplier = 0.05
+
+	visible = {
+		num_of_operatives > 1
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		has_operation_token = {
+			tag = FROM
+			token = token_army
+		}
+	}
+
+	equipment = {
+		
+	}
+
+	required_tokens = {
+		token_army
+	}
+	risk_chance = 0.2
+	experience = 2
+	risk_modifiers = { operation_steal_tech_risk operation_risk }
+	outcome_extra_chance = 0.25
+	outcome_modifiers = { operation_steal_tech_outcome operation_outcome }
+	cost_modifiers = { operation_cost }
+	outcome_execute = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = infantry_folder
+				# folder = support_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_army
+				target = FROM
+				uses = 1
+			}
+			remove_operation_token = {
+				tag = FROM
+				token = token_army
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+		random_list = {
+			33 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = infantry_folder
+						# folder = support_folder
+
+						bonus = 3.0
+						ahead_reduction = 2
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_army
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+			67 = {
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = infantry_folder
+						# folder = support_folder
+
+						bonus = 3.0
+						dynamic = yes
+						instant = yes
+						ahead_reduction = 1
+						name = operation_steal_tech_army
+						target = FROM
+						uses = 1
+					}
+				}
+			}
+		}
+	}
+
+	outcome_potential = {
+		ROOT = {
+			steal_random_tech_bonus = {
+				folder = infantry_folder
+				# folder = support_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_army
+				target = FROM
+				uses = 1
+			}
+		}
+		custom_effect_tooltip = operation_outcome_consumes_token_tt
+	}
+
+	phases = { #infiltration
+		infiltration_border = { base = 50 }
+		infiltration_paradrop = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	phases = { #blueprint theft
+		steal_blueprints_middle_manager = { base = 50 }
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = { 
+			base = 50 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0
+			}
+		}
+		exfiltration_border = { base = 50 }
+	}
+}

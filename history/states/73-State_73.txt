@@ -1,16 +1,29 @@
 state={
 	id=73
 	name="STATE_73"
+	resources={
+		resources_cm = 30
+		resources_rm = 10
+		resources_ec = 10
+		resources_mm = 2
+		resources_pm = 20
+		resources_fe = 5
+	}
 	provinces={
 		1069 5496 11473 11498 11520 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
 		owner = VAL
 		add_core_of=VAL
 		victory_points = {1069 15}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=157050
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

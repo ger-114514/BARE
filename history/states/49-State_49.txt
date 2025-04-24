@@ -5,12 +5,17 @@ state={
 		2227 4552 5982 8057 11725 
 	}
 	history={
-		owner=D02
-		add_core_of=D02
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		owner=A37
+		add_core_of=A37
 		victory_points = {2227 15}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=106000
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -5,12 +5,16 @@ state={
 		6016 427 9315 
 	}
 	history = {
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+		}
 		owner = CEN
 		add_core_of=CEN
 		victory_points = {6016 30}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=526800
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

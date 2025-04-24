@@ -1,412 +1,159 @@
-#这个文件主要实现议会席位生成，不涉及重新计算席位，除非要进行图像分布修改，请勿随意修改
+#刷新权力平衡界面
+TRI_BOP_init_parliament = {
+	TRI_senators_init_BOP_seats = yes
+	TRI_house_init_BOP_seats = yes
+	TRI_BOP_generate_faction_pie = yes
+	BA_TRI_generate_focus_modifier = yes
+}
+TRI_senators_init_BOP_seats = { #上议院
+	clear_array = TRI_BOP_senators_grid_box_array
 
-TRI_house_init_parliament = { #上议院
+	if = {
+		limit = { has_country_flag = TRI_senate_detail_ignored }
+		resize_array = {
+			array = TRI_BOP_senators_grid_box_array
+			value = 4
+			size = var:total_seats@BA_TRI_senate_seat
+		}
+	}
+	else = {
+		# Generate partial sums t1 = (P1), t2 = (P1 + P2), t3 = (P1 + P2 + P3)
+		# so that we can use resize_array to fill our array with the right number of seats for each party
+		set_temp_variable = { t1 = BOP_hardliner@BA_TRI_senate_seat }
+		set_temp_variable = { t2 = BOP_conservative@BA_TRI_senate_seat }
+		set_temp_variable = { t3 = BOP_moderate@BA_TRI_senate_seat }
+		set_temp_variable = { t4 = BOP_none@BA_TRI_senate_seat }
+
+		add_to_temp_variable = { t2 = t1 }
+		add_to_temp_variable = { t3 = t2 }
+		add_to_temp_variable = { t4 = t3 }
+
+		# Resize array to t1 seats, setting P1 frame numbers to 1 (Party 1 color)
+		resize_array = {
+			array = TRI_BOP_senators_grid_box_array
+			value = 1
+			size = t1
+		}
+		# Resize array to t2 seats, setting P2 frame numbers to 2 (Party 2 color)
+		resize_array = {
+			array = TRI_BOP_senators_grid_box_array
+			value = 2
+			size = t2
+		}
+		# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
+		resize_array = {
+			array = TRI_BOP_senators_grid_box_array
+			value = 3
+			size = t3
+		}
+		resize_array = {
+			array = TRI_BOP_senators_grid_box_array
+			value = 4
+			size = t4
+		}
+	}
 	
-	TRI_BOP_house_party_seats = yes
-
-	# Generate partial sums t1 = (P1), t2 = (P1 + P2), t3 = (P1 + P2 + P3)
-	# so that we can use resize_array to fill our array with the right number of seats for each party
-	set_temp_variable = { t1 = House_support_num }
-	set_temp_variable = { t2 = House_centrist_num }
-	set_temp_variable = { t3 = House_opposition_num }
-
-	add_to_temp_variable = { t2 = t1 }
-	add_to_temp_variable = { t3 = t2 }
-
-	clear_array = TRI_house_grid_box_array
-
-	# Resize array to t1 seats, setting P1 frame numbers to 1 (Party 1 color)
-	resize_array = {
-		array = TRI_house_grid_box_array
-		value = 1
-		size = t1
-	}
-	# Resize array to t2 seats, setting P2 frame numbers to 2 (Party 2 color)
-	resize_array = { #黄色点为4号
-		array = TRI_house_grid_box_array
-		value = 4
-		size = t2
-	}
-	# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
-	resize_array = { #红色点为3号
-		array = TRI_house_grid_box_array
-		value = 2
-		size = t3
-	}
-
-	# Setup positions (ideally only done once in a history file or game-start event, this is inefficient)
-	House_parliament_gui_positions = yes
 }
 
-House_parliament_gui_positions = {	
-	clear_array = TRI_house_x_array
-	clear_array = TRI_house_y_array
+TRI_house_init_BOP_seats = { #下议院
+	clear_array = TRI_BOP_house_grid_box_array
+	if = {
+		limit = { has_country_flag = TRI_house_detail_ignored }
+		resize_array = {
+			array = TRI_BOP_house_grid_box_array
+			value = 4
+			size = var:total_seats@BA_TRI_house_seat
+		}
+	}
+	else = {
+		# Generate partial sums t1 = (P1), t2 = (P1 + P2), t3 = (P1 + P2 + P3)
+		# so that we can use resize_array to fill our array with the right number of seats for each party
+		set_temp_variable = { t1 = BOP_hardliner@BA_TRI_house_seat }
+		set_temp_variable = { t2 = BOP_conservative@BA_TRI_house_seat }
+		set_temp_variable = { t3 = BOP_moderate@BA_TRI_house_seat }
+		set_temp_variable = { t4 = BOP_none@BA_TRI_house_seat }
 
-	add_to_array = { TRI_house_x_array = 0 }
-	add_to_array = { TRI_house_y_array = 67 }
-	add_to_array = { TRI_house_x_array = 16 }
-	add_to_array = { TRI_house_y_array = 67 }
-	add_to_array = { TRI_house_x_array = 32 }
-	add_to_array = { TRI_house_y_array = 67 }
-	add_to_array = { TRI_house_x_array = 4 }
-	add_to_array = { TRI_house_y_array = 50 }
-	add_to_array = { TRI_house_x_array = 21 }
-	add_to_array = { TRI_house_y_array = 50 }
-	add_to_array = { TRI_house_x_array = 13 }
-	add_to_array = { TRI_house_y_array = 35 }
-	add_to_array = { TRI_house_x_array = 40 }
-	add_to_array = { TRI_house_y_array = 51 }
-	add_to_array = { TRI_house_x_array = 32 }
-	add_to_array = { TRI_house_y_array = 36 }
-	add_to_array = { TRI_house_x_array = 24 }
-	add_to_array = { TRI_house_y_array = 22 }
-	add_to_array = { TRI_house_x_array = 38 }
-	add_to_array = { TRI_house_y_array = 13 }
-	add_to_array = { TRI_house_x_array = 46 }
-	add_to_array = { TRI_house_y_array = 26 }
-	add_to_array = { TRI_house_x_array = 54 }
-	add_to_array = { TRI_house_y_array = 40 }
-	add_to_array = { TRI_house_x_array = 54 }
-	add_to_array = { TRI_house_y_array = 7 }
-	add_to_array = { TRI_house_x_array = 63 }
-	add_to_array = { TRI_house_y_array = 21 }
-	add_to_array = { TRI_house_x_array = 71 }
-	add_to_array = { TRI_house_y_array = 36 }
-	add_to_array = { TRI_house_x_array = 71 }
-	add_to_array = { TRI_house_y_array = 5 }
-	add_to_array = { TRI_house_x_array = 80 }
-	add_to_array = { TRI_house_y_array = 21 }
-	add_to_array = { TRI_house_x_array = 88 }
-	add_to_array = { TRI_house_y_array = 7 }
-	add_to_array = { TRI_house_x_array = 89 }
-	add_to_array = { TRI_house_y_array = 40 }
-	add_to_array = { TRI_house_x_array = 97 }
-	add_to_array = { TRI_house_y_array = 26 }
-	add_to_array = { TRI_house_x_array = 104 }
-	add_to_array = { TRI_house_y_array = 13 }
-	add_to_array = { TRI_house_x_array = 119 }
-	add_to_array = { TRI_house_y_array = 22 }
-	add_to_array = { TRI_house_x_array = 111 }
-	add_to_array = { TRI_house_y_array = 36 }
-	add_to_array = { TRI_house_x_array = 103 }
-	add_to_array = { TRI_house_y_array = 51 }
-	add_to_array = { TRI_house_x_array = 130 }
-	add_to_array = { TRI_house_y_array = 35 }
-	add_to_array = { TRI_house_x_array = 121 }
-	add_to_array = { TRI_house_y_array = 50 }
-	add_to_array = { TRI_house_x_array = 138 }
-	add_to_array = { TRI_house_y_array = 50 }
-	add_to_array = { TRI_house_x_array = 111 }
-	add_to_array = { TRI_house_y_array = 67 }
-	add_to_array = { TRI_house_x_array = 127 }
-	add_to_array = { TRI_house_y_array = 67 }
-	add_to_array = { TRI_house_x_array = 143 }
-	add_to_array = { TRI_house_y_array = 67 }
+		add_to_temp_variable = { t2 = t1 }
+		add_to_temp_variable = { t3 = t2 }
+		add_to_temp_variable = { t4 = t3 }
+
+
+
+		# Resize array to t1 seats, setting P1 frame numbers to 1 (Party 1 color)
+		resize_array = {
+			array = TRI_BOP_house_grid_box_array
+			value = 1
+			size = t1
+		}
+		# Resize array to t2 seats, setting P2 frame numbers to 2 (Party 2 color)
+		resize_array = { #黄色点为2号
+			array = TRI_BOP_house_grid_box_array
+			value = 2
+			size = t2
+		}
+		# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
+		resize_array = { #蓝色点为3号
+			array = TRI_BOP_house_grid_box_array
+			value = 3
+			size = t3
+		}
+		resize_array = {
+			array = TRI_BOP_house_grid_box_array
+			value = 4
+			size = t4
+		}
+	}
 }
-
-TRI_senators_init_parliament = { #下议院
+#产生主导派系并绘制饼图
+TRI_BOP_generate_faction_pie = {
+	set_temp_variable = { TRI_BOP_hardliner_weight_1 = BOP_hardliner@BA_TRI_senate_seat }
+	set_temp_variable = { TRI_BOP_hardliner_weight_2 = BOP_hardliner@BA_TRI_house_seat }
+	set_temp_variable = { TRI_BOP_conservative_weight_1 = BOP_conservative@BA_TRI_senate_seat }
+	set_temp_variable = { TRI_BOP_conservative_weight_2 = BOP_conservative@BA_TRI_house_seat }
+	set_temp_variable = { TRI_BOP_moderate_weight_1 = BOP_moderate@BA_TRI_senate_seat }
+	set_temp_variable = { TRI_BOP_moderate_weight_2 = BOP_moderate@BA_TRI_house_seat }
+	#每个上议院席位10分
+	multiply_temp_variable = { TRI_BOP_hardliner_weight_1 = 10 }
+	multiply_temp_variable = { TRI_BOP_conservative_weight_1 = 10 }
+	multiply_temp_variable = { TRI_BOP_moderate_weight_1 = 10 }
+	#每个下议院席位3分
+	multiply_temp_variable = { TRI_BOP_hardliner_weight_2 = 3 }
+	multiply_temp_variable = { TRI_BOP_conservative_weight_2 = 3 }
+	multiply_temp_variable = { TRI_BOP_moderate_weight_2 = 3 }
+	#两院得分加和
+	add_to_temp_variable = { TRI_BOP_hardliner_weight_1 = TRI_BOP_hardliner_weight_2 }
+	add_to_temp_variable = { TRI_BOP_conservative_weight_1 = TRI_BOP_conservative_weight_2 }
+	add_to_temp_variable = { TRI_BOP_moderate_weight_1 = TRI_BOP_moderate_weight_2 }
+	#计算权重差
+	set_variable = { TRI_BOP_weight_difference = TRI_BOP_hardliner_weight_1 }
+	subtract_from_variable = { TRI_BOP_weight_difference = TRI_BOP_moderate_weight_1 }
 	
-	TRI_BOP_senators_party_seats = yes
-
-	# Generate partial sums t1 = (P1), t2 = (P1 + P2), t3 = (P1 + P2 + P3)
-	# so that we can use resize_array to fill our array with the right number of seats for each party
-	set_temp_variable = { t1 = Senators_support_num }
-	set_temp_variable = { t2 = Senators_centrist_num }
-	set_temp_variable = { t3 = Senators_opposition_num }
-
-	add_to_temp_variable = { t2 = t1 }
-	add_to_temp_variable = { t3 = t2 }
-
-
-	clear_array = TRI_senators_grid_box_array
-
-	# Resize array to t1 seats, setting P1 frame numbers to 1 (Party 1 color)
-	resize_array = {
-		array = TRI_senators_grid_box_array
-		value = 1
-		size = t1
+	#确定饼图份额
+	set_variable = { TRI_BOP_faction_weight_pie_frame_1 = TRI_BOP_hardliner_weight_1 }
+	set_variable = { TRI_BOP_faction_weight_pie_frame_2 = TRI_BOP_conservative_weight_1 }
+	set_variable = { TRI_BOP_faction_weight_pie_frame_3 = TRI_BOP_moderate_weight_1 }
+	add_to_variable = { TRI_BOP_faction_weight_pie_frame_2 = TRI_BOP_hardliner_weight_1 }
+	add_to_variable = { TRI_BOP_faction_weight_pie_frame_3 = TRI_BOP_faction_weight_pie_frame_2 }
+	#确定主导派系，要求过400分
+	set_variable = { TRI_BOP_main_faction = token:BOP_none }
+	if = {
+		limit = { check_variable = { TRI_BOP_hardliner_weight_1 > 400 } }
+		set_variable = { TRI_BOP_main_faction = token:BOP_hardliner }
 	}
-	# Resize array to t2 seats, setting P2 frame numbers to 2 (Party 2 color)
-	resize_array = { #黄色点为4号
-		array = TRI_senators_grid_box_array
-		value = 4
-		size = t2
+	else_if = {
+		limit = { check_variable = { TRI_BOP_conservative_weight_1 > 400 } }
+		set_variable = { TRI_BOP_main_faction = token:BOP_conservative }
 	}
-	# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
-	resize_array = { #红色点为3号
-		array = TRI_senators_grid_box_array
-		value = 2
-		size = t3
+	else_if = {
+		limit = { check_variable = { TRI_BOP_moderate_weight_1 > 400 } }
+		set_variable = { TRI_BOP_main_faction = token:BOP_moderate }
 	}
-
-	# Setup positions (ideally only done once in a history file or game-start event, this is inefficient)
-	Senators_parliament_gui_positions = yes
-}
-
-Senators_parliament_gui_positions = {	
-	clear_array = TRI_senators_x_array
-	clear_array = TRI_senators_y_array
-
-	add_to_array = { TRI_senators_x_array = 0 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 16 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 31 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 47 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 63 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 79 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 3 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 19 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 35 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 51 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 8 }
-	add_to_array = { TRI_senators_y_array = 96 }
-	add_to_array = { TRI_senators_x_array = 67 }
-	add_to_array = { TRI_senators_y_array = 115 }
-	add_to_array = { TRI_senators_x_array = 25 }
-	add_to_array = { TRI_senators_y_array = 96 }
-	add_to_array = { TRI_senators_x_array = 41 }
-	add_to_array = { TRI_senators_y_array = 97 }
-	add_to_array = { TRI_senators_x_array = 84 }
-	add_to_array = { TRI_senators_y_array = 117 } 
-	add_to_array = { TRI_senators_x_array = 15 }
-	add_to_array = { TRI_senators_y_array = 79 }
-	add_to_array = { TRI_senators_x_array = 59 }
-	add_to_array = { TRI_senators_y_array = 97 }
-	add_to_array = { TRI_senators_x_array = 33 }
-	add_to_array = { TRI_senators_y_array = 78 }
-	add_to_array = { TRI_senators_x_array = 76 }
-	add_to_array = { TRI_senators_y_array = 99 }
-	add_to_array = { TRI_senators_x_array = 50 }
-	add_to_array = { TRI_senators_y_array = 81 }
-	add_to_array = { TRI_senators_x_array = 25 }
-	add_to_array = { TRI_senators_y_array = 63 }
-	add_to_array = { TRI_senators_x_array = 45 }
-	add_to_array = { TRI_senators_y_array = 63 }
-	add_to_array = { TRI_senators_x_array = 93 }
-	add_to_array = { TRI_senators_y_array = 103 }
-	add_to_array = { TRI_senators_x_array = 70 }
-	add_to_array = { TRI_senators_y_array = 81 }
-	add_to_array = { TRI_senators_x_array = 37 }
-	add_to_array = { TRI_senators_y_array = 48 }
-	add_to_array = { TRI_senators_x_array = 62 }
-	add_to_array = { TRI_senators_y_array = 67 }
-	add_to_array = { TRI_senators_x_array = 88 }
-	add_to_array = { TRI_senators_y_array = 86 }
-	add_to_array = { TRI_senators_x_array = 58 }
-	add_to_array = { TRI_senators_y_array = 49 }
-	add_to_array = { TRI_senators_x_array = 51 }
-	add_to_array = { TRI_senators_y_array = 35 }
-	add_to_array = { TRI_senators_x_array = 84 }
-	add_to_array = { TRI_senators_y_array = 69 }
-	add_to_array = { TRI_senators_x_array = 77 }
-	add_to_array = { TRI_senators_y_array = 55 }
-	add_to_array = { TRI_senators_x_array = 106 }
-	add_to_array = { TRI_senators_y_array = 92 }
-	add_to_array = { TRI_senators_x_array = 74 }
-	add_to_array = { TRI_senators_y_array = 38 }
-	add_to_array = { TRI_senators_x_array = 66 }
-	add_to_array = { TRI_senators_y_array = 25 }
-	add_to_array = { TRI_senators_x_array = 103 }
-	add_to_array = { TRI_senators_y_array = 76 }
-	add_to_array = { TRI_senators_x_array = 93 }
-	add_to_array = { TRI_senators_y_array = 46 }
-	add_to_array = { TRI_senators_x_array = 101 }
-	add_to_array = { TRI_senators_y_array = 59 }
-	add_to_array = { TRI_senators_x_array = 83 }
-	add_to_array = { TRI_senators_y_array = 16 }
-	add_to_array = { TRI_senators_x_array = 91 }
-	add_to_array = { TRI_senators_y_array = 29 }
-	add_to_array = { TRI_senators_x_array = 121 }
-	add_to_array = { TRI_senators_y_array = 85 }
-	add_to_array = { TRI_senators_x_array = 101 }
-	add_to_array = { TRI_senators_y_array = 10 }
-	add_to_array = { TRI_senators_x_array = 110 }
-	add_to_array = { TRI_senators_y_array = 39 }
-	add_to_array = { TRI_senators_x_array = 120 }
-	add_to_array = { TRI_senators_y_array = 69 }
-	add_to_array = { TRI_senators_x_array = 109 }
-	add_to_array = { TRI_senators_y_array = 24 }
-	add_to_array = { TRI_senators_x_array = 119 }
-	add_to_array = { TRI_senators_y_array = 53 }
-	add_to_array = { TRI_senators_x_array = 119 }
-	add_to_array = { TRI_senators_y_array = 6 }
-	add_to_array = { TRI_senators_x_array = 128 }
-	add_to_array = { TRI_senators_y_array = 36 }
-	add_to_array = { TRI_senators_x_array = 128 }
-	add_to_array = { TRI_senators_y_array = 21 }
-	add_to_array = { TRI_senators_x_array = 138 }
-	add_to_array = { TRI_senators_y_array = 83 }
-	add_to_array = { TRI_senators_x_array = 138 }
-	add_to_array = { TRI_senators_y_array = 67 }
-	add_to_array = { TRI_senators_x_array = 138 }
-	add_to_array = { TRI_senators_y_array = 51 }
-	add_to_array = { TRI_senators_x_array = 138 }
-	add_to_array = { TRI_senators_y_array = 5 }
-	add_to_array = { TRI_senators_x_array = 147 }
-	add_to_array = { TRI_senators_y_array = 21 }
-	add_to_array = { TRI_senators_x_array = 147 }
-	add_to_array = { TRI_senators_y_array = 36 }
-	add_to_array = { TRI_senators_x_array = 156 }
-	add_to_array = { TRI_senators_y_array = 6 }
-	add_to_array = { TRI_senators_x_array = 157 }
-	add_to_array = { TRI_senators_y_array = 53 }
-	add_to_array = { TRI_senators_x_array = 166 }
-	add_to_array = { TRI_senators_y_array = 24 }
-	add_to_array = { TRI_senators_x_array = 156 }
-	add_to_array = { TRI_senators_y_array = 69 }
-	add_to_array = { TRI_senators_x_array = 165 }
-	add_to_array = { TRI_senators_y_array = 39 }
-	add_to_array = { TRI_senators_x_array = 175 }
-	add_to_array = { TRI_senators_y_array = 10 }
-	add_to_array = { TRI_senators_x_array = 154 }
-	add_to_array = { TRI_senators_y_array = 85 }
-	add_to_array = { TRI_senators_x_array = 184 }
-	add_to_array = { TRI_senators_y_array = 29 }
-	add_to_array = { TRI_senators_x_array = 193 }
-	add_to_array = { TRI_senators_y_array = 16 }
-	add_to_array = { TRI_senators_x_array = 175 }
-	add_to_array = { TRI_senators_y_array = 59 }
-	add_to_array = { TRI_senators_x_array = 183 }
-	add_to_array = { TRI_senators_y_array = 46 }
-	add_to_array = { TRI_senators_x_array = 173 }
-	add_to_array = { TRI_senators_y_array = 76 }
-	add_to_array = { TRI_senators_x_array = 209 }
-	add_to_array = { TRI_senators_y_array = 25 }
-	add_to_array = { TRI_senators_x_array = 202 }
-	add_to_array = { TRI_senators_y_array = 38 }
-	add_to_array = { TRI_senators_x_array = 170 }
-	add_to_array = { TRI_senators_y_array = 92 }
-	add_to_array = { TRI_senators_x_array = 199 }
-	add_to_array = { TRI_senators_y_array = 55 }
-	add_to_array = { TRI_senators_x_array = 191 }
-	add_to_array = { TRI_senators_y_array = 69 }
-	add_to_array = { TRI_senators_x_array = 225 }
-	add_to_array = { TRI_senators_y_array = 35 }
-	add_to_array = { TRI_senators_x_array = 217 }
-	add_to_array = { TRI_senators_y_array = 49 }
-	add_to_array = { TRI_senators_x_array = 187 }
-	add_to_array = { TRI_senators_y_array = 86 }
-	add_to_array = { TRI_senators_x_array = 213 }
-	add_to_array = { TRI_senators_y_array = 67 }
-	add_to_array = { TRI_senators_x_array = 238 }
-	add_to_array = { TRI_senators_y_array = 48 }
-	add_to_array = { TRI_senators_x_array = 205 }
-	add_to_array = { TRI_senators_y_array = 81 }
-	add_to_array = { TRI_senators_x_array = 182 }
-	add_to_array = { TRI_senators_y_array = 103 }
-	add_to_array = { TRI_senators_x_array = 231 }
-	add_to_array = { TRI_senators_y_array = 63 }
-	add_to_array = { TRI_senators_x_array = 250 }
-	add_to_array = { TRI_senators_y_array = 63 }
-	add_to_array = { TRI_senators_x_array = 225 }
-	add_to_array = { TRI_senators_y_array = 81 }
-	add_to_array = { TRI_senators_x_array = 200 }
-	add_to_array = { TRI_senators_y_array = 99 }
-	add_to_array = { TRI_senators_x_array = 242 }
-	add_to_array = { TRI_senators_y_array = 78 }
-	add_to_array = { TRI_senators_x_array = 217 }
-	add_to_array = { TRI_senators_y_array = 97 }
-	add_to_array = { TRI_senators_x_array = 260 }
-	add_to_array = { TRI_senators_y_array = 79 }
-	add_to_array = { TRI_senators_x_array = 192 }
-	add_to_array = { TRI_senators_y_array = 117 }
-	add_to_array = { TRI_senators_x_array = 234 }
-	add_to_array = { TRI_senators_y_array = 97 }
-	add_to_array = { TRI_senators_x_array = 251 }
-	add_to_array = { TRI_senators_y_array = 96 }
-	add_to_array = { TRI_senators_x_array = 208 }
-	add_to_array = { TRI_senators_y_array = 115 }
-	add_to_array = { TRI_senators_x_array = 268 }
-	add_to_array = { TRI_senators_y_array = 96 }
-	add_to_array = { TRI_senators_x_array = 224 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 241 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 257 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 273 }
-	add_to_array = { TRI_senators_y_array = 114 }
-	add_to_array = { TRI_senators_x_array = 197 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 213 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 228 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 244 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 260 }
-	add_to_array = { TRI_senators_y_array = 133 }
-	add_to_array = { TRI_senators_x_array = 275 }
-	add_to_array = { TRI_senators_y_array = 133 }
-}
-
-TRI_reload_house_parliament_gui = { #重新计算上议院席位后的显示
-
-	clear_array = TRI_house_grid_box_array
-
-	set_temp_variable = { t1 = House_support_num }
-	set_temp_variable = { t2 = House_centrist_num }
-	set_temp_variable = { t3 = House_opposition_num }
-
-	add_to_temp_variable = { t2 = t1 }
-	add_to_temp_variable = { t3 = t2 }
-
-	resize_array = {
-		array = TRI_house_grid_box_array
-		value = 1
-		size = t1
-	}
-
-	resize_array = {
-		array = TRI_house_grid_box_array
-		value = 4
-		size = t2
-	}
-
-	resize_array = {
-		array = TRI_house_grid_box_array
-		value = 2
-		size = t3
-	}
-
-}
-
-TRI_reload_senators_parliament_gui = { #重新计算下议院席位后的显示
-
-	clear_array = TRI_senators_grid_box_array
-
-	set_temp_variable = { t1 = Senators_support_num }
-	set_temp_variable = { t2 = Senators_centrist_num }
-	set_temp_variable = { t3 = Senators_opposition_num }
-
-	add_to_temp_variable = { t2 = t1 }
-	add_to_temp_variable = { t3 = t2 }
-
-	resize_array = {
-		array = TRI_senators_grid_box_array
-		value = 1
-		size = t1
-	}	
-
-	resize_array = {
-		array = TRI_senators_grid_box_array
-		value = 4
-		size = t2
-	}
-
-	resize_array = {
-		array = TRI_senators_grid_box_array
-		value = 2
-		size = t3
-	}
-
+	TRI_add_main_faction_modifier = yes
+	#计算派系所占百分比
+	divide_temp_variable = { TRI_BOP_hardliner_weight_1 = 600 }
+	divide_temp_variable = { TRI_BOP_conservative_weight_1 = 600 }
+	divide_temp_variable = { TRI_BOP_moderate_weight_1 = 600 }
+	set_variable = { percent@BOP_hardliner = TRI_BOP_hardliner_weight_1 }
+	set_variable = { percent@BOP_conservative = TRI_BOP_conservative_weight_1 }
+	set_variable = { percent@BOP_moderate = TRI_BOP_moderate_weight_1 }
 }

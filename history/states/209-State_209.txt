@@ -4,12 +4,24 @@ state={
 	provinces={
 		52 286 2221 3330 4774 5179 5500 5771 6992 7160 8145 8414 8513 9552 10895 10912 
 	}
+	resources = {
+		resources_ec = 20
+	}
 	history={
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 3
+			electronic_component_factory = 2
+			air_base = 4
+		}
 		owner = CAP
 		add_core_of=CAP
+		add_core_of = ABY
+		victory_points = {5500 5}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=216700
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

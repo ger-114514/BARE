@@ -4,12 +4,21 @@ state={
 	provinces={
 		56 985 1146 2745 5555 6917 6924 7582 8041 8308 12244 12249 12253 12254 12255 12259 12262 12269 
 	}
+	resources = {
+		resources_fe = 10
+	}
 	history = {
-		owner = TRI
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		owner = A05
+		add_core_of=A05
 		add_core_of=TRI
     }
-	manpower=1
-	state_category = pastoral
+	manpower=73199
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -4,12 +4,18 @@ state={
 	provinces={
 		65 799 833 1336 1596 1753 2236 2933 2977 3307 3519 4259 5486 5573 5858 6387 6471 7465 7595 8227 8370 8375 8459 8953 10456 10458 10483 10500 10520 10522 
 	}
+	resources = {
+		resources_cm = 60
+		resources_rm = 40
+	}
 	history = {
-		owner = GEH
+		owner = A08
+		add_core_of=A08
 		add_core_of=GEH
     }
-	impassble = yes
-	manpower=0
+	impassable = yes
+	manpower=145000
+	state_category = wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

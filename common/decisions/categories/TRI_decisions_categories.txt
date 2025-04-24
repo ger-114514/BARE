@@ -1,11 +1,143 @@
-TRI_BOP_decisions_categories = {
-	icon = tri_BOP
+TRI_debug_decisions = {
+	priority = 1001
+	allowed = {
+		original_tag = TRI
+	}
 	visible = {
+		is_debug = yes
+	}
+}
+#偏执度
+TRI_paranoia_system = {
+
+	priority = 1001
+
+	icon = generic
+
+	scripted_gui = TRI_paranoia_system_ui
+
+	allowed = {
 		original_tag = TRI
 	}
 
-	scripted_gui = TRI_BOP_decision_ui
+	visible = {
+		has_country_flag = TRI_paranoia_system_active
+	}
+
+	visible_when_empty = yes
+}
+#花子的抉择
+TRI_hanako_decisions = {
+	priority = 1001
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+		has_country_flag = TRI_hanako_decisions
+	}
+}
+#特殊调查
+TRI_church_investigation = {
+	icon = generic
+	priority = 1001
+	allowed = {
+		original_tag = TRI
+	}
+}
+TRI_mika_investigation = {
+	icon = generic
+	priority = 1001
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+		has_country_flag = TRI_mika_investigation_available
+	}
+}
+#焦点
+TRI_parliament_decisions_categories = {
+	icon = tri_parliament
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+		#has_variable = TRI_parliament_focus
+	}
+
+	#scripted_gui = TRI_parliament_decision_ui
+
+	priority = 1002
+	visible_when_empty = yes
+}
+#法案
+TRI_bill_voting_decisions_categories = {
+	icon = tri_parliament
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+		has_variable = TRI_debated_bill
+	}
+
+	priority = 1001
+}
+#权力平衡
+TRI_BOP_system = {
 
 	priority = 100
+	icon = generic
+
+	#scripted_gui = TRI_BOP_decision_ui
+
+	allowed = {
+		original_tag = TRI
+	}
+
 	visible_when_empty = yes
+}
+#大区互动
+TRI_region_interaction_decisions_category = {
+	icon = generic
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+	}
+}
+#团结度
+TRI_unity_system = {
+
+	priority = 99
+	icon = generic
+
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+		has_country_flag = TRI_unity_system_visible
+	}
+	visible_when_empty = yes
+}
+#调查
+###AI无法使用GUI，所以用决议替代###
+TRI_ai_bukebu_inv_decisions_categories = {
+	icon = tri_BOP
+	allowed = {
+		original_tag = TRI
+	}
+	visible = {
+		is_ai = yes
+		has_country_flag = TRI_investigate_available
+	}
+
+	priority = 99
+	visible_when_empty = yes
+}
+#灾后重建津贴
+TRI_rebuilding_subsidy_decisions = {
+	icon = generic
+	visible = {
+		original_tag = TRI
+		has_completed_focus = TRI_rebuilding_subsidy
+	}
 }

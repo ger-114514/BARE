@@ -1,14 +1,22 @@
 state={
 	id=467
 	name="STATE_467"
+	resources={
+		resources_cm = 25 
+	}
 	provinces={
 		282 646 723 1119 1220 1222 1734 1811 1888 1930 3010 5336 5578 5752 5998 6118 6166 6339 6719 7940 8107 8406 9079 9098 10069 10101 10129 
 	}
 	history = {
+		buildings = {
+			infrastructure = 1
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points = {723 1}
     }
-	manpower=0
+	manpower=25700
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

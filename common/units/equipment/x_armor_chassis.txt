@@ -1,107 +1,116 @@
-duplicate_archetypes = {
+# duplicate_archetypes = {
 
 
-	apc_aa_chassis = {
-		archetype = apc_chassis
-		type = { armor anti_air }
-	}
+# 	apc_aa_chassis = {
+# 		archetype = apc_chassis
+# 		type = { armor anti_air }
+# 	}
 
-	apc_artillery_chassis = {
-		archetype = apc_chassis
-		type = { armor artillery }
-	}
+# 	apc_artillery_chassis = {
+# 		archetype = apc_chassis
+# 		type = { armor artillery }
+# 	}
 
-	apc_destroyer_chassis = {
-		archetype = apc_chassis
-		type = { armor anti_tank }
-	}
-
-	apc_amphibious_chassis = {
-		archetype = apc_chassis
-		type = { armor amphibious }
-	}
-
-	apc_flame_chassis = {
-		archetype = apc_chassis
-		type = { armor flame }
-	}
+# 	apc_destroyer_chassis = {
+# 		archetype = apc_chassis
+# 		type = { armor anti_tank }
+# 	}
 
 
 
-	ifv_aa_chassis = {
-		archetype = ifv_chassis
-		type = { armor anti_air }
-	}
 
-	ifv_artillery_chassis = {
-		archetype = ifv_chassis
-		type = { armor artillery }
-	}
+# 	ifv_aa_chassis = {
+# 		archetype = ifv_chassis
+# 		type = { armor anti_air }
+# 	}
 
-	ifv_destroyer_chassis = {
-		archetype = ifv_chassis
-		type = { armor anti_tank }
-	}
+# 	ifv_artillery_chassis = {
+# 		archetype = ifv_chassis
+# 		type = { armor artillery }
+# 	}
 
-	ifv_amphibious_chassis = {
-		archetype = ifv_chassis
-		type = { armor amphibious }
-	}
-
-	ifv_flame_chassis = {
-		archetype = ifv_chassis
-		type = { armor flame }
-	}
+# 	ifv_destroyer_chassis = {
+# 		archetype = ifv_chassis
+# 		type = { armor anti_tank }
+# 	}
 
 
-	mbt_aa_chassis = {
-		archetype = mbt_chassis
-		type = { armor anti_air }
-	}
+# 	mbt_aa_chassis = {
+# 		archetype = mbt_chassis
+# 		type = { armor anti_air }
+# 	}
 
-	mbt_artillery_chassis = {
-		archetype = mbt_chassis
-		type = { armor artillery }
-	}
+# 	mbt_artillery_chassis = {
+# 		archetype = mbt_chassis
+# 		type = { armor artillery }
+# 	}
 
-	mbt_destroyer_chassis = {
-		archetype = mbt_chassis
-		type = { armor anti_tank }
-	}
-
-	mbt_amphibious_chassis = {
-		archetype = mbt_chassis
-		type = { armor amphibious }
-	}
-
-	mbt_flame_chassis = {
-		archetype = mbt_chassis
-		type = { armor flame }
-	}
+# 	mbt_destroyer_chassis = {
+# 		archetype = mbt_chassis
+# 		type = { armor anti_tank }
+# 	}
 
 
-	bm_aa_chassis = {
-		archetype = bm_chassis
-		type = { armor anti_air }
-	}
+# 	light_bm_aa_chassis = {
+# 		archetype = light_bm_chassis
+# 		type = { armor anti_air }
+# 	}
 
-	bm_artillery_chassis = {
-		archetype = bm_chassis
-		type = { armor artillery }
-	}
+# 	light_bm_artillery_chassis = {
+# 		archetype = light_bm_chassis
+# 		type = { armor artillery }
+# 	}
 
-	bm_destroyer_chassis = {
-		archetype = bm_chassis
-		type = { armor anti_tank }
-	}
+# 	light_bm_tank_destroyer_chassis = {
+# 		archetype = light_bm_chassis
+# 		type = { armor anti_tank }
+# 	}
 
-	bm_amphibious_chassis = {
-		archetype = bm_chassis
-		type = { armor amphibious }
-	}
 
-	bm_flame_chassis = {
-		archetype = bm_chassis
-		type = { armor flame }
-	}
-}
+# 	medium_bm_aa_chassis = {
+# 		archetype = medium_bm_chassis
+# 		type = { armor anti_air }
+# 	}
+
+# 	medium_bm_artillery_chassis = {
+# 		archetype = medium_bm_chassis
+# 		type = { armor artillery }
+# 	}
+
+# 	medium_bm_tank_destroyer_chassis = {
+# 		archetype = medium_bm_chassis
+# 		type = { armor anti_tank }
+# 	}
+
+
+# 	heavy_bm_aa_chassis = {
+# 		archetype = heavy_bm_chassis
+# 		type = { armor anti_air }
+# 	}
+
+# 	heavy_bm_artillery_chassis = {
+# 		archetype = heavy_bm_chassis
+# 		type = { armor artillery }
+# 	}
+
+# 	heavy_bm_tank_destroyer_chassis = {
+# 		archetype = heavy_bm_chassis
+# 		type = { armor anti_tank }
+# 	}
+
+# 	super_heavy_bm_aa_chassis = {
+# 		archetype = super_heavy_bm_chassis
+# 		type = { armor anti_air }
+# 	}
+
+# 	super_heavy_bm_artillery_chassis = {
+# 		archetype = super_heavy_bm_chassis
+# 		type = { armor artillery }
+# 	}
+
+# 	super_heavy_bm_tank_destroyer_chassis = {
+# 		archetype = super_heavy_bm_chassis
+# 		type = { armor anti_tank }
+# 	}
+
+# }

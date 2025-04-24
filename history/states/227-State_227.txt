@@ -5,12 +5,18 @@ state={
 		503 953 1772 2000 2442 6424 6442 9287 10670 10700 10720 10740 
 	}
 	history = {
-		owner = D11
-		add_core_of=D11
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 2
+		}
+		owner = A46
+		add_core_of=A46
 		victory_points = {6424 15}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=487000
+	state_category = megalopolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -5,10 +5,15 @@ state={
 		773 2027 3181 4214 4578 4807 6010 6163 6498 7155 7433 7739 7929 9324 10696 10719 10729 10762 10772 
 	}
 	history={
+		buildings = {
+			infrastructure = 3
+		}
 		owner = CAP
 		add_core_of=CAP
+		add_core_of = ABY
 	}
-	manpower=0
+	manpower=24980
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

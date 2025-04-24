@@ -14,11 +14,11 @@ equipments = {
 		
 		interface_category = interface_category_land
 		
-		maximum_speed = 4
+		maximum_speed = 16
 		reliability = 0.8
 		hardness = 0.1
 
-
+		active = no
 		#Space taken in convoy
 		lend_lease_cost = 5
 

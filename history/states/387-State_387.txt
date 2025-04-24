@@ -4,6 +4,9 @@ state={
 	name="STATE_387"
 
 	history={
+		buildings = {
+			infrastructure = 4
+		}
 		owner = GEH
 		add_core_of=GEH
 
@@ -12,7 +15,8 @@ state={
 	provinces={
 		2414 3171 4028 4302 5059 5319 5704 6682 7357 7773 8211 8395 8544 8827 8957 9234 10650 10661 10746 10755 
 	}
-	manpower=0
+	manpower=17900
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

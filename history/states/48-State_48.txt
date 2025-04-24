@@ -5,12 +5,17 @@ state={
 		173 781 2399 2701 4284 5565 6923 7093 7276 7688 7791 7935 11796 11819 11843 
 	}
 	history = {
-		owner = TRI
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
+		owner = A04
+		add_core_of=A04
 		add_core_of=TRI
 		victory_points = {11819 10}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=185000
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

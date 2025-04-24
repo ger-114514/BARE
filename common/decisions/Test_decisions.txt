@@ -62,4 +62,85 @@ Test_time_decisions_categories = {
 			}
 		}
 	}
+	Test_log_11 = {
+		complete_effect = {
+			BARE_SuperEvent_1_effect_1 = yes
+		}
+	}
+	Test_log_21 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_1 = yes
+		}
+	}
+	Test_log_22 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_2 = yes
+		}
+	}
+	Test_log_23 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_3 = yes
+		}
+	}
+	Test_log_24 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_4 = yes
+		}
+	}
+	Test_log_25 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_5 = yes
+		}
+	}
+	Test_nuke = {
+		complete_effect = {
+			ARI = {
+				launch_nuke = {
+					province = 5612
+					use_nuke = no
+				}
+			}
+		}
+	}
+	Test_log = {
+		complete_effect = {
+
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 0
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			log = "BARE_Combat_Readiness_left[?BARE_Combat_Readiness_left]"
+			#这是游戏里产生新国家的人力范例
+			1 = {
+				transfer_state_to = SRT
+			}
+			
+
+			every_state = {
+				BARE_Combat_Readiness_count_State = yes
+			}
+			every_country = {
+				BARE_Combat_Readiness_count_Country = yes
+			}
+
+			SRT = {
+				set_temp_variable = {
+					BARE_Combat_Readinness_Remain_temp = BARE_Combat_Readinness_Remain
+				}
+				multiply_temp_variable = {
+					BARE_Combat_Readinness_Remain_temp = 1000
+				}
+
+				add_manpower = BARE_Combat_Readinness_Remain_temp
+				load_oob = SRT_2019
+			}
+		}
+	}
 } 

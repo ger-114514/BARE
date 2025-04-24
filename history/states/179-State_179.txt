@@ -5,11 +5,18 @@ state={
 		934 1217 1651 2209 2830 2858 7592 8313 10840 10876 
 	}
 	history = {
-		owner = GEH
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 5
+		}
+		owner = A11
+		add_core_of=A11
 		add_core_of=GEH
+		victory_points = {7592 5}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=348000
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -1,15 +1,23 @@
 state={
 	id=470
 	name="STATE_470"
+	resources={
+		resources_cm = 10 
+	}
 	provinces={
 		2170 2298 2459 2992 3335 4711 5571 6932 8984 11022 11078 11079 11093 
 	}
 	history = {
-		owner = ABY
+		buildings = {
+			infrastructure = 2
+		}
+		owner = A25
+		add_core_of=A25
 		add_core_of=ABY
 		victory_points = {4711 5}
     }
-	manpower=0
+	manpower=32000
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

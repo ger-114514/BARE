@@ -5,11 +5,15 @@ state={
 		1571 1662 2168 2315 3530 3608 4419 5101 5183 5189 5343 6631 6793 7100 7366 11885 11944 11996 
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+		}
 		owner = CAE
 		add_core_of=CAE
 		victory_points = {11944 15}
     }
-	manpower=0
+	manpower=8900
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

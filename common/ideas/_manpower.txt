@@ -1,14 +1,89 @@
+# ideas = {
+
+# 	mobilization_laws = {
+# 		law = yes
+# 		use_list_view = yes
+
+# 		volunteer_only = {
+
+# 			cost = 150
+# 			removal_cost = -1
+# 			level = 6
+
+# 			available = {
+# 			}
+
+# 			ai_will_do = {
+#    				factor = 1
+# 			}
+
+# 			modifier = {
+
+
+# 				can_use_combat_readiness_percentage = 0.1 #可动员战备比例
+# 				free_cost_combat_readiness_percentage = 0.05 #免费战备比例
+# 				conscription_factor = 0.1
+# 				free_cost_combat_readiness = 2 #免惩罚占用战备
+
+# 				combat_readiness_recovery_percentage = 0.2 #战备恢复速度比例
+# 				combat_readiness_recovery = 2 #战备恢复速度
+# 			}
+
+# 			default = yes
+
+# 			cancel_if_invalid = no
+# 		}
+
+
+# 		Arius_mobilization_laws = {
+
+# 			cost = 150
+# 			removal_cost = -1
+# 			level = 6
+
+# 			available = {
+# 			}
+
+# 			ai_will_do = {
+#    				factor = 1
+# 			}
+
+# 			allowed = {
+# 				always = no
+# 			}
+# 			allowed_to_remove = {
+# 				always = no
+# 			}
+
+# 			modifier = {
+# 				can_use_combat_readiness_percentage = 0.03
+# 				free_cost_combat_readiness_percentage = 20
+# 			}
+
+# 			default = no
+
+# 			cancel_if_invalid = no
+# 		}
+# 	}
+# }
+
+
+
 ideas = {
 
+	#人力法案系列
 	mobilization_laws = {
 		law = yes
 		use_list_view = yes
 
-		volunteer_only = {
 
+		#防务外包
+		millaws_defense_outsourcing = {
 			cost = 150
 			removal_cost = -1
-			level = 6
+			level = 7
+			default = yes
+			cancel_if_invalid = no
 
 			available = {
 			}
@@ -18,12 +93,233 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.1
+				conscription_factor = 0.05 #战备系数
+				can_use_combat_readiness_percentage = 0.01 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.01 #常备战备比例
+				free_cost_combat_readiness = 20 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.2 #战备恢复速度
+				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+
+				army_org_factor = 0.2
+				army_org_regain = 0.1
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+
+		#精挑细选
+		millaws_choose_carefully = {
+			cost = 150
+			removal_cost = -1
+			level = 6
+			cancel_if_invalid = no
+
+			available = {
 			}
 
-			default = yes
+			ai_will_do = {
+   				factor = 1
+			}
 
+			modifier = {
+				conscription_factor = 0.1 #战备系数
+				can_use_combat_readiness_percentage = 0.1 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.05 #常备战备比例
+				free_cost_combat_readiness = 2 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.2 #战备恢复速度
+				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+
+				army_org_factor = 0.2
+				army_org_regain = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				air_mission_xp_gain_factor = 0.1
+			}
+		}
+
+
+		#自愿优先
+		millaws_volunteer_first = {
+			cost = 150
+			removal_cost = -1
+			level =v5
 			cancel_if_invalid = no
+
+			available = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+
+			modifier = {
+				conscription_factor = 0.15 #战备系数
+				can_use_combat_readiness_percentage = 0.1 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.05 #常备战备比例
+				free_cost_combat_readiness = 2 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.2 #战备恢复速度
+				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+			}
+		}
+
+
+		#实战任务
+		millaws_battlefield_mission = {
+			cost = 150
+			removal_cost = -1
+			level = 4
+			cancel_if_invalid = no
+
+			available = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+
+			modifier = {
+				conscription_factor = 0.2 #战备系数
+				can_use_combat_readiness_percentage = 0.15 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.1 #常备战备比例
+				free_cost_combat_readiness = 2 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.15 #战备恢复速度
+				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+
+				army_org_factor = 0.1
+			}
+		}
+
+
+		#课程要求
+		millaws_class_requirements = {
+			cost = 150
+			removal_cost = -1
+			level = 3
+			cancel_if_invalid = no
+
+			available = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+
+			modifier = {
+				conscription_factor = 0.25 #战备系数
+				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.1 #常备战备比例
+				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.1 #战备恢复速度
+				combat_readiness_recovery = 3 #每月额外恢复战备值（k）
+
+				army_org_regain = -0.1
+			}
+		}
+
+
+		#大规模任务
+		millaws_massive_mission = {
+			cost = 150
+			removal_cost = -1
+			level = 2
+			cancel_if_invalid = no
+
+			available = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+
+			modifier = {
+				conscription_factor = 0.3 #战备系数
+				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.15 #常备战备比例
+				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.05 #战备恢复速度
+				combat_readiness_recovery = 1 #每月额外恢复战备值（k）
+
+				army_org_factor = -0.1
+				army_org_regain = -0.15
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+
+		#学生义务
+		millaws_student_duty = {
+			cost = 150
+			removal_cost = -1
+			level = 1
+			cancel_if_invalid = no
+
+			available = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+
+			modifier = {
+				conscription_factor = 0.4 #战备系数
+				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.2 #常备战备比例
+				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.03 #战备恢复速度
+				combat_readiness_recovery = 1 #每月额外恢复战备值（k）
+
+				army_org_factor = -0.3
+				army_org_regain = -0.15
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+
+		###特殊征兵法案###
+		#夫人之意
+		millaws_beatrice_order = {
+			cost = 150
+			removal_cost = -1
+			level = 1
+			cancel_if_invalid = no
+
+			available = {
+				original_tag = ARI
+			}
+
+			visible = {
+				original_tag = ARI
+			}
+
+			allowed = {
+				always = no
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+
+			modifier = {
+				conscription_factor = 0.4 #战备系数
+				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
+				free_cost_combat_readiness_percentage = 0.2 #常备战备比例
+				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.03 #战备恢复速度
+				combat_readiness_recovery = 3 #每月额外恢复战备值（k）
+
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+			}
 		}
 	}
+
 }

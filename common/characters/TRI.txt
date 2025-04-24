@@ -22,23 +22,38 @@ characters={
 			traits = {
 				obscure_prophet
 			}
+			#菲利乌斯派支持度+20%
+       		#TODO：随机给予预言
+			on_add = {
+				set_temp_variable = { association = token:TRI_parliament_association_1 }
+				set_temp_variable = { loyalty_change = 0.2 }
+				TRI_parliament_loyalty_change = yes
+				set_country_flag = TRI_seia_prophecy
+			}
+			on_remove = {
+				set_temp_variable = { association = token:TRI_parliament_association_1 }
+				set_temp_variable = { loyalty_change = -0.2 }
+				TRI_parliament_loyalty_change = yes
+				clr_country_flag = TRI_seia_prophecy
+			}
 			ai_will_do = {
 				factor = 1.000
 			}
         }
 
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+        corps_commander = {
+			traits = {trait_cautious infantry_officer inflexible_strategist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
 			logistics_skill = 1
 		}
 
 	}
 
-    TRI_nagisa ={ 
+    TRI_nagisa = { 
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -48,19 +63,37 @@ characters={
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { mild_leader }
 			expire = "-1.1.1.1"
 			id = -1
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {bearer_of_artillery brilliant_strategist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+
+	}
+	TRI_missing_nagisa = { 
+		name=TRI_nagisa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_missing_nagisa
+				small=GFX_portrait_TRI_nagisa_small
+			}	
+		}
+
+        country_leader = {
+			ideology = no_ideology_type
+			traits = { missing_leader }
+			expire = "-1.1.1.1"
+			id = -1
 		}
 
 	}
@@ -86,18 +119,30 @@ characters={
 			traits = {
 				innocent_princess
 			}
+			#帕特尔派支持度+20%
+			on_add = {
+				set_temp_variable = { association = token:TRI_parliament_association_0 }
+				set_temp_variable = { loyalty_change = 0.2 }
+				TRI_parliament_loyalty_change = yes
+			}
+			on_remove = {
+				set_temp_variable = { association = token:TRI_parliament_association_0 }
+				set_temp_variable = { loyalty_change = -0.2 }
+				TRI_parliament_loyalty_change = yes
+			}
 			ai_will_do = {
 				factor = 1.000
 			}
         }
 
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+        corps_commander = {
+			traits = {trait_reckless war_hero fortress_buster infantry_officer
+			}
+			skill = 3
+			attack_skill = 4
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -129,12 +174,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
 			attack_skill = 1
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
 		}
 
 	}
@@ -215,18 +261,29 @@ characters={
 			traits = {
 				white_flash_of_trinity
 			}
+			on_add = {
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = 0.05 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}
+			on_remove = {
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = -0.05 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}
 			ai_will_do = {
 				factor = 1.000
 			}
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {infantry_officer trait_engineer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -259,11 +316,12 @@ characters={
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {trait_engineer infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -278,28 +336,29 @@ characters={
 			}	
 		}
 
-		advisor = {
-			slot = political_advisor
-			idea_token = TRI_hifumi_pa
-			allowed = {
-				original_tag = TRI
-			}
-			available = {
-				original_tag = TRI
-			} 
-			traits = {
-				ordinary_girl
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-        }
+		# advisor = {
+		# 	slot = political_advisor
+		# 	idea_token = TRI_hifumi_pa
+		# 	allowed = {
+		# 		original_tag = TRI
+		# 	}
+		# 	available = {
+		# 		original_tag = TRI
+		# 	} 
+		# 	traits = {
+		# 		ordinary_girl
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1.000
+		# 	}
+        # }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {armor_officer politically_connected
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
 		}
@@ -315,31 +374,32 @@ characters={
 			}	
 		}
 
-        advisor = {
-			slot = army_chief
-			idea_token = TRI_azusa_ac
-			allowed = {
-				original_tag = TRI
-			}
-			available = {
-				original_tag = TRI
-			}
-			traits = {
-				slience_guerrilla_warfare_master
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
+        # advisor = {
+		# 	slot = army_chief
+		# 	idea_token = TRI_azusa_ac
+		# 	allowed = {
+		# 		original_tag = TRI
+		# 	}
+		# 	available = {
+		# 		original_tag = TRI
+		# 	}
+		# 	traits = {
+		# 		slience_guerrilla_warfare_master
+		# 	}
+		# 	cost = 100
+		# 	ai_will_do = {
+		# 		factor = 1.000
+		# 	}
+		# }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {infantry_officer guerilla_fighte camouflage_expert adaptable
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
 		}
 
 	}
@@ -354,19 +414,20 @@ characters={
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { h_loved_sage }
 			expire = "-1.1.1.1"
 			id = -1
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer career_officer politically_connected
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 4
+			logistics_skill = 2
 		}
 
 	}
@@ -387,10 +448,27 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = has_completed_focus_tt
+						FOCUS = TRI_restrain_the_disaster
+					}
+					has_country_flag = TRI_koharu_advisor_available
+				}
 			} 
 			traits = {
 				cute_baka_of_trinity
+			}
+			#正义委支持率+10%
+			on_add = {
+				set_temp_variable = { association = token:TRI_parliament_association_3 }
+				set_temp_variable = { loyalty_change = 0.1 }
+				TRI_parliament_loyalty_change = yes
+			}
+			on_remove = {
+				set_temp_variable = { association = token:TRI_parliament_association_3 }
+				set_temp_variable = { loyalty_change = -0.1 }
+				TRI_parliament_loyalty_change = yes
 			}
 			ai_will_do = {
 				factor = 1.000
@@ -398,12 +476,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {politically_connected infantry_officer 
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -429,17 +508,29 @@ characters={
 			traits = {
 				savior_at_any_cost
 			}
+			#救护骑士团支持度+15%
+			on_add = {
+				set_temp_variable = { association = token:TRI_parliament_association_5 }
+				set_temp_variable = { loyalty_change = 0.15 }
+				TRI_parliament_loyalty_change = yes
+			}
+			on_remove = {
+				set_temp_variable = { association = token:TRI_parliament_association_5 }
+				set_temp_variable = { loyalty_change = -0.15 }
+				TRI_parliament_loyalty_change = yes
+			}
 			ai_will_do = {
 				factor = 1.000
 			}
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			traits = {armor_officer trait_cautious
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 4
 			logistics_skill = 1
 		}
 
@@ -472,12 +563,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -491,30 +583,31 @@ characters={
 			}	
 		}
 
-		advisor = {
-			slot = political_advisor
-			idea_token = TRI_serina_pa
-			allowed = {
-				original_tag = TRI
-			}
-			available = {
-				original_tag = TRI
-			} 
-			traits = {
-				sweet_nurse
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-        }
+		# advisor = {
+		# 	slot = political_advisor
+		# 	idea_token = TRI_serina_pa
+		# 	allowed = {
+		# 		original_tag = TRI
+		# 	}
+		# 	available = {
+		# 		has_completed_focus = TRI_restart_domestic_struggle
+		# 	} 
+		# 	traits = {
+		# 		sweet_nurse
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1.000
+		# 	}
+        # }
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {infantry_officer camouflage_expert
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
 
 	}
@@ -528,31 +621,32 @@ characters={
 			}	
 		}
 
-        advisor = {
-			slot = army_chief
-			idea_token = TRI_tsurugi_ac
-			allowed = {
-				original_tag = TRI
-			}
-			available = {
-				original_tag = TRI
-			}
-			traits = {
-				screaming_death
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
+        # advisor = {
+		# 	slot = army_chief
+		# 	idea_token = TRI_tsurugi_ac
+		# 	allowed = {
+		# 		original_tag = TRI
+		# 	}
+		# 	available = {
+		# 		original_tag = TRI
+		# 	}
+		# 	traits = {
+		# 		screaming_death
+		# 	}
+		# 	cost = 100
+		# 	ai_will_do = {
+		# 		factor = 1.000
+		# 	}
+		# }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {trait_cautious career_officer war_hero harsh_leader
+			}
+			skill = 3
+			attack_skill = 5
+			defense_skill = 4
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -566,31 +660,32 @@ characters={
 			}	
 		}
 
-        advisor = {
-			slot = army_chief
-			idea_token = TRI_hasumi_ac
-			allowed = {
-				original_tag = TRI
-			}
-			available = {
-				original_tag = TRI
-			}
-			traits = {
-				serious_vice_chairman
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
+        # advisor = {
+		# 	slot = army_chief
+		# 	idea_token = TRI_hasumi_ac
+		# 	allowed = {
+		# 		original_tag = TRI
+		# 	}
+		# 	available = {
+		# 		has_completed_focus = TRI_restart_domestic_struggle
+		# 	}
+		# 	traits = {
+		# 		serious_vice_chairman
+		# 	}
+		# 	cost = 100
+		# 	ai_will_do = {
+		# 		factor = 1.000
+		# 	}
+		# }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {trait_cautious infantry_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 3
 		}
 
 	}
@@ -623,11 +718,12 @@ characters={
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer commando
+			}
+			skill = 2
+			attack_skill = 4
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -661,12 +757,13 @@ characters={
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {infantry_officer skilled_staffer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
 		}
 
 	}
@@ -699,12 +796,13 @@ characters={
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
 		}
 
 	}
@@ -736,12 +834,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -773,11 +872,12 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -810,12 +910,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
 
 	}
@@ -848,12 +949,13 @@ characters={
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {bearer_of_artillery
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -874,10 +976,29 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = has_completed_focus_tt
+						FOCUS = TRI_calling_for_sisterhood
+					}
+					has_country_flag = TRI_mari_advisor_available
+				}
 			} 
 			traits = {
 				hightly_welcomed_sister
+			}
+			#修女会支持度+5%，所有社团支持度+5%
+			on_add = {
+				set_temp_variable = { association = token:TRI_parliament_association_4 }
+				set_temp_variable = { loyalty_change = 0.05 }
+				TRI_parliament_loyalty_change = yes
+				TRI_parliament_all_loyalty_change = yes
+			}
+			on_remove = {
+				set_temp_variable = { association = token:TRI_parliament_association_4 }
+				set_temp_variable = { loyalty_change = -0.05 }
+				TRI_parliament_loyalty_change = yes
+				TRI_parliament_all_loyalty_change = yes
 			}
 			ai_will_do = {
 				factor = 1.000
@@ -885,12 +1006,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer skilled_staffer
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
 		}
 
 	}
@@ -934,19 +1056,39 @@ characters={
 			traits = {
 				devout_secret_keeper
 			}
+			#修女会支持度+20%
+			on_add = {
+				set_temp_variable = { association = token:TRI_parliament_association_4 }
+				set_temp_variable = { loyalty_change = 0.2 }
+				TRI_parliament_loyalty_change = yes
+			}
+			on_remove = {
+				set_temp_variable = { association = token:TRI_parliament_association_4 }
+				set_temp_variable = { loyalty_change = -0.2 }
+				TRI_parliament_loyalty_change = yes
+			}
 			ai_will_do = {
 				factor = 1.000
 			}
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {infantry_officer politically_connected
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
 		}
 
+	}
+	TRI_commission_of_air_ground = {
+		name=TRI_commission_of_air_ground_name 
+		portraits={
+			civilian={
+				small=GFX_portrait_TRI_commission_of_air_ground_small
+			}	
+		}
 	}
 }

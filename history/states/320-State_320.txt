@@ -5,11 +5,17 @@ state={
 		1522 2210 3175 3771 5435 5485 8715 
 	}
 	history = {
-		owner = MIL
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = A03
+		add_core_of=A03
 		add_core_of=MIL
     }
-	manpower=1
-	state_category = pastoral
+	manpower=645000
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -1,15 +1,26 @@
 state={
 	id=210
 	name="STATE_210"
+	resources={
+		resources_cm = 20
+	}
 	provinces={
 		899 2524 3973 4096 7607 7924 9466 10882 10902 10921 10940 
 	}
 	history={
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			rare_metal_processing_plant = 1
+			arms_factory = 3
+		}
 		owner = CAP
 		add_core_of=CAP
+		add_core_of = ABY
+		victory_points = {2524 5}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=165800
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

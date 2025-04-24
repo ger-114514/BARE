@@ -1,16 +1,25 @@
 state={
 	id=11
 	name="STATE_11"
+	resources={
+		resources_cm = 10
+		resources_rm = 8
+	}
 	provinces={
 		152 2230 4116 5002 6393 7925 8307 9302 
 	}
 	history={
-		owner = D03
-		add_core_of=D03
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		owner = A38
+		add_core_of=A38
 		victory_points = {7925 15}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower= 310000
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

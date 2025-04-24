@@ -201,7 +201,7 @@ branch_operation = {
 		}
 	
 		available = {
-			has_tech = radio
+			# has_tech = radio
 		}
 
 		modifiers_during_progress = {
@@ -352,8 +352,9 @@ branch_operative = {
 		}
 		
 		level = {
-			modifier = {			
-				operation_coordinated_strike_outcome = 1	
+			modifier = {	
+				#似有bug		
+				#operation_coordinated_strike_outcome = 1	
 				commando_trait_chance_factor = 1 # +100%
 				target_sabotage_factor = 0.25
 			}
@@ -500,7 +501,7 @@ branch_crypto = {
 		
 		available = {
 			has_done_agency_upgrade = upgrade_decryption_boost
-			has_tech = mechanical_computing
+			# has_tech = mechanical_computing
 		}
 		
 		modifiers_during_progress = {
@@ -563,7 +564,7 @@ branch_crypto = {
 		
 		available = {
 			has_done_agency_upgrade = upgrade_crypto_strength
-			has_tech = mechanical_computing
+			# has_tech = mechanical_computing
 		}
 		
 		modifiers_during_progress = {

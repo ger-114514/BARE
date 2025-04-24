@@ -5,10 +5,15 @@ state={
 		265 566 616 663 983 1645 2006 2167 2859 2976 4317 4876 4912 5129 5246 5984 6139 7205 7289 7636 7760 8570 9441 10659 10682 10685 10728 10732 
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+		}
 		owner = GEH
 		add_core_of=GEH
+		victory_points = {7205 5}
     }
-	manpower=0
+	manpower=45870
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -454,7 +454,7 @@
  category_nav_bomber: "海军轰炸机"
  category_tac_bomber: "战术轰炸机"
  category_strat_bomber: "战略轰炸机"
- category_anti_air: "防空营"
+ category_anti_air: "防空单位"
  TRANSPORT_ALREADY_ACTIVE: "我们已经在海运途中"
  TRANSPORT_NO_NAVAL_BASE: "无法海运至没有海军基地的地方"
  TRANSPORT_NO_FROM_NAVAL_BASE: "无法从没有海军基地的地方进行海运"
@@ -635,3 +635,19 @@
  long_range_patrol_support_desc: "擅长侦察和摧毁任务的精英步兵队。"
  category_cavalry: "马背骑兵"
  category_support_artillery: "火炮支援连"
+
+
+
+
+category_bm: "战斗机甲"
+category_mech: "装甲骑兵"
+category_mech_art: "支援步战车"
+category_mech_aa: "防空步战车"
+category_mech_at: "反甲步战车"
+category_attack_heil: "攻击直升机"
+category_assist_heil: "空中突击部队"
+category_self_propelled_anti_air: "装甲防空单位"
+category_tank_destroyers: "重型反装甲单位"
+category_self_propelled_artillery: "装甲火力支援单位"
+category_assist_vehicles: "突击载具"
+

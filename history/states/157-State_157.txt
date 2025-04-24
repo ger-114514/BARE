@@ -5,11 +5,15 @@ state={
 		2869 3242 7587 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
 		owner = SHA
 		add_core_of=SHA
     }
-	manpower=1
-	state_category = pastoral
+	manpower=118060
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

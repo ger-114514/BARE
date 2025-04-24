@@ -5,12 +5,16 @@ state={
 		682 8120 11361 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
 		owner = ABY
 		add_core_of=ABY
 		victory_points = {8120 20}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=206000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

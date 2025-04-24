@@ -5,11 +5,16 @@ state={
 		877 1611 3637 9551 11383 
 	}
 	history = {
-		owner = SHA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		owner = A17
+		add_core_of=A17
 		add_core_of=SHA
     }
-	manpower=1
-	state_category = pastoral
+	manpower=257300
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

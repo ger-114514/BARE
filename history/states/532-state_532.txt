@@ -1,15 +1,24 @@
 state={
 	id=532
 	name="STATE_532"
+	resources={
+		resources_cm = 10
+	}
 	provinces={
 		272 902 2879 3473 3647 4690 6035 6704 7253 8574 11046 11133 
 	}
 	history={
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 2
+		}
 		owner = ARI
 		add_core_of=ARI
 		victory_points = {3473 15}
 	}
-	manpower=0
+	manpower=631000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

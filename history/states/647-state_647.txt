@@ -5,12 +5,16 @@ state={
 		2091 3838 4700 7633 8879 8905 9356 11593 11646 
 	}
 	history={
-		owner = D05
-		add_core_of=D05
-		victory_points = {8905 20}
+		buildings = {
+			infrastructure = 5
+		}
+		owner = A40
+		add_core_of=A40
+		victory_points = {8905 10}
 
 	}
-	manpower=0
+	manpower=18400
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

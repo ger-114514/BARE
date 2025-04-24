@@ -5,10 +5,15 @@ state={
 		1142 3148 3837 4378 4668 4748 6905 7620 8021 9497 9574 10996 11023 11041 11051 11054 11094 11103 11156 
 	}
 	history = {
-		owner = SHA
+		buildings = {
+			infrastructure = 4
+		}
+		owner = A17
+		add_core_of=A17
 		add_core_of=SHA
     }
-	manpower=0
+	manpower=10000
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -1,14 +1,20 @@
 state={
 	id=399
 	name="STATE_399"
+	resources={
+		resources_rm = 20
+		resources_cm = 40
+	}
 	provinces={
 		465 609 2242 2257 2336 2593 3043 3357 3981 4068 4097 4899 4921 6299 7268 7458 7484 7641 7930 8835 8863 10326 10340 10391 10406 10431 
 	}
 	history = {
-		owner = GEH
+		owner = A09
+		add_core_of=A09
 		add_core_of=GEH
     }
-	manpower=0
+	manpower=12900
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

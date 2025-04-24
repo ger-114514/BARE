@@ -1,1 +1,49 @@
-﻿
+adjacency_rule =
+{
+	name = "ARIUS_IN"
+
+	
+	contested =
+	{
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy =
+	{
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend =
+	{
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+
+	required_provinces = { 6360 5612 3358 5968 2755 }
+
+	is_disabled = {
+		not = {
+			tag = ARI
+			has_global_flag = ARIUS_IN_DISABLED
+		}
+		
+		
+		tooltip = ARIUS_IN_tt
+	}
+
+	icon = 6360
+	offset = { 0 0 0 }
+}

@@ -1,172 +1,519 @@
 technologies = {
-	test_unit_tech = {
+	# test_unit_tech = {
+	# 	enable_equipments = { 
+	# 		infantry_equipment_0 
+	# 		special_infantry_equipment_0 
+	# 		special_infantry_equipment_1 
+	# 		special_infantry_equipment_2 
+	# 		special_infantry_equipment_3 
+	# 		special_infantry_equipment_4
+	# 		light_fire_support_equipment_0
+	# 		light_fire_support_equipment_1
+	# 		heavy_fire_support_equipment_0
+	# 		heavy_fire_support_equipment_1
+	# 		apc_chassis_1
+	# 		apc_destroyer_chassis_1
+	# 		apc_aa_chassis_1
+	# 		apc_artillery_1
+	# 		apc_chassis_2
+	# 		apc_destroyer_chassis_2
+	# 		apc_aa_chassis_2
+	# 		apc_artillery_2
+	# 		apc_chassis_3
+	# 		apc_destroyer_chassis_3
+	# 		apc_aa_chassis_3
+	# 		apc_artillery_3
+	# 		apc_chassis_4
+	# 		apc_destroyer_chassis_4
+	# 		apc_aa_chassis_4
+	# 		apc_artillery_4
+
+
+	# 		motorized_equipment_1
+
+	# 		infantry_anti_air_equipment_1
+	# 		infantry_anti_air_equipment_2
+	# 		infantry_anti_air_equipment_3
+
+	# 		ifv_chassis_1
+	# 		ifv_destroyer_chassis_1
+	# 		ifv_aa_chassis_1
+	# 		ifv_artillery_1
+	# 		ifv_chassis_2
+	# 		ifv_destroyer_chassis_2
+	# 		ifv_aa_chassis_2
+	# 		ifv_artillery_2
+	# 		ifv_chassis_3
+	# 		ifv_destroyer_chassis_3
+	# 		ifv_aa_chassis_3
+	# 		ifv_artillery_3
+	# 		ifv_chassis_4
+	# 		ifv_destroyer_chassis_4
+	# 		ifv_aa_chassis_4
+	# 		ifv_artillery_4
+
+
+
+	# 		mbt_chassis_1
+	# 		mbt_tank_destroyer_chassis_1
+	# 		mbt_tank_aa_chassis_1
+	# 		mbt_tank_artillery_1
+	# 		mbt_amphibious_chassis_1
+	# 		mbt_flame_chassis_1
+
+	# 		light_bm_chassis_1
+	# 		light_bm_destroyer_chassis_1
+	# 		light_bm_aa_chassis_1
+	# 		light_bm_artillery_1
+	# 		light_bm_chassis_2
+	# 		light_bm_destroyer_chassis_2
+	# 		light_bm_aa_chassis_2
+	# 		light_bm_artillery_2
+	# 		light_bm_chassis_3
+	# 		light_bm_destroyer_chassis_3
+	# 		light_bm_aa_chassis_3
+	# 		light_bm_artillery_3
+	# 		light_bm_chassis_4
+	# 		light_bm_destroyer_chassis_4
+	# 		light_bm_aa_chassis_4
+	# 		light_bm_artillery_4
+	# 		# medium_bm_chassis_1
+	# 		# medium_bm_chassis_2
+	# 		# medium_bm_chassis_3
+	# 		# medium_bm_chassis_4
+	# 		# heavy_bm_chassis_1
+	# 		# heavy_bm_chassis_2
+	# 		# heavy_bm_chassis_3
+	# 		# heavy_bm_chassis_4
+	# 		# super_heavy_bm_chassis_1
+
+	# 		railway_gun_equipment_1 
+	# 		railway_gun_equipment_2
+
+	# 		auto_mech_1
+
+	# 		air_ship_airframe_1
+	# 		air_ship_airframe_2
+
+	# 		uav_airframe_1
+	# 		uav_airframe_2
+
+	# 		helicopter_airframe_1
+	# 		helicopter_airframe_2
+
+			
+	# 	}
+
+	# 	enable_subunits = {
+	# 		recon
+	# 		apc_recon
+	# 		mbt_recon
+	# 		helicopter_recon
+	# 		engineer
+	# 		logistics_company
+	# 		maintenance_company
+	# 		military_police
+	# 		signal_company
+	# 		field_hospital
+	# 		helicopter_logistics_company
+	# 	}
+
+	# 	enable_equipment_modules = {
+
+	# 		ifv_mg_main_1
+	# 		ifv_mg_main_2
+	# 		ifv_mg_main_3
+	# 		ifv_recoilless_gun_1
+	# 		ifv_recoilless_gun_2
+	# 		ifv_recoilless_gun_3
+
+	# 		ifv_machine_cannon_1
+	# 		ifv_machine_cannon_2
+	# 		ifv_machine_cannon_3
+			
+
+	# 		ifv_main_cannon_1
+	# 		ifv_main_cannon_2
+	# 		ifv_main_cannon_3
+	# 		ifv_main_cannon_4
+
+	# 		ifv_atgm_main_1
+	# 		ifv_atgm_main_2
+	# 		ifv_atgm_main_3
+	# 		ifv_artillery_1
+	# 		ifv_artillery_2
+	# 		ifv_artillery_3
+	# 		ifv_artillery_4
+	# 		ifv_anit_air_gun_1 
+	# 		ifv_anit_air_gun_2 
+	# 		ifv_anit_air_missies_1
+	# 		ifv_anit_air_missies_2
+	# 		ifv_atgm_sub_1
+	# 		ifv_atgm_sub_2
+	# 		ifv_mg_sub_1
+	# 		ifv_mg_sub_2
+	# 		ifv_mg_sub_3
+	# 		ifv_anit_air_sub_1
+	# 		ifv_anit_air_sub_2
+	# 		ifv_armor_al
+	# 		ifv_armor_fe
+	# 		ifv_armor_era
+	# 		ifv_armor_shield
+
+
+	# 		ifv_engine_oil_1
+	# 		ifv_engine_oil_2
+	# 		ifv_engine_oil_3
+	# 		ifv_engine_oil_4
+	# 		ifv_engine_ele_1
+	# 		ifv_engine_ele_2
+	# 		ifv_engine_ele_3
+
+	# 		ifv_engine_opaz_1
+	# 		ifv_engine_opaz_2 
+
+	# 		ifv_special_gunport
+	# 		ifv_special_armor_1
+	# 		ifv_special_armor_2
+	# 		ifv_special_armor_3
+	# 		ifv_special_armor_4
+
+	# 		ifv_special_smoke 
+	# 		ifv_special_smoke_r
+	# 		ifv_special_rwr
+	# 		ifv_special_aps
+	# 		ifv_special_extra_ammo
+	# 		ifv_special_extra_oil
+	# 		ifv_special_reliability
+	# 		ifv_engine_governor
+	# 		ifv_radio_1
+	# 		ifv_radio_2
+	# 		ifv_radio_3
+
+	# 		ifv_size_small
+	# 		ifv_size_medium
+	# 		ifv_size_big
+
+	# 		mbt_l_gun_1
+	# 		mbt_h_gun_1
+	# 		mbt_sp_gun_1
+	# 		mbt_engine_oil
+	# 		mbt_armor_h
+	# 		mbt_armor_sp
+	# 		mbt_4x_suspension
+	# 		mbt_armor_role_lahd
+	# 		mbt_armor_role_hahd
+	# 		mbt_armor_role_sahd
+	# 		mbt_armor_role_lasd
+	# 		mbt_armor_role_hasd
+	# 		mbt_armor_role_sasd
+
+	# 		bm_auto_cannon_1
+	# 		# bm_auto_cannon_2
+	# 		# bm_auto_cannon_3
+	# 		# bm_small_cannon_1
+	# 		# bm_small_cannon_2
+	# 		# bm_small_cannon_3
+	# 		# bm_small_cannon_4
+	# 		# bm_small_anit_tank_1
+	# 		# bm_small_anit_tank_2
+	# 		# bm_small_anit_tank_3
+	# 		# bm_small_anit_tank_4
+	# 		# bm_small_artillery_1
+	# 		# bm_small_artillery_2
+	# 		# bm_small_artillery_3
+	# 		# bm_small_anit_air_1
+	# 		# bm_small_anit_air_2
+	# 		# bm_small_anit_air_3
+	# 		bm_small_grenade_1
+	# 		# bm_small_grenade_2
+	# 		# bm_small_grenade_3
+	# 		# bm_small_grenade_4
+	# 		# bm_small_electric_arc_1
+	# 		# bm_small_electric_arc_2
+	# 		# bm_small_electric_arc_3
+	# 		# bm_caterpillar_track
+	# 		# bm_bipedal_walking
+	# 		# bm_multilegged_walking
+	# 		# bm_bipedal_walking_jet
+
+
+	# 		air_ship_engine_1
+	# 		air_ship_bomb_bay_1
+	# 		air_ship_heavy_aam_1
+	# 		air_ship_gunship_gun_1
+	# 		air_hmg_defense_turret 
+
+	# 		uav_engine_1
+	# 		uav_gun_1
+	# 		uav_light_aam_1
+	# 		uav_agm_1
+	# 		uav_recon_camera
+
+	# 		helicopter_engine_1
+	# 		helicopter_fast_engine_1
+	# 		helicopter_crew_carrying_1
+	# 		helicopter_crew_carrying_aromr_1
+	# 		helicopter_long_range_atgm_1_2x
+	# 		helicopter_atgm_1_4x
+	# 		helicopter_atgm_1_2x
+	# 		helicopter_aam_1_4x
+	# 		helicopter_heavy_gun_1
+	# 		helicopter_light_gun_1
+	# 		helicopter_rl_1
+	# 		helicopter_fueltank
+	# 		helicopter_hdgun_hmg_1
+	# 		helicopter_hdgun_lmg_1
+	# 		helicopter_equipment_armor
+	# 		helicopter_equipment_lb
+
+	# 	}
+	# 	research_cost = 1
+	# 	ai_will_do = { factor = 1 }
+	# }
+
+	test_temp_tech = {
 		enable_equipments = { 
-			infantry_equipment_0 
-			special_infantry_equipment_0 
-			special_infantry_equipment_1 
-			special_infantry_equipment_2 
-			special_infantry_equipment_3 
+
+
+			infantry_equipment_0
+			infantry_equipment_1
+			infantry_equipment_2
+			infantry_equipment_3
+			infantry_equipment_4
+
+			special_infantry_equipment_0
+			special_infantry_equipment_1
+			special_infantry_equipment_2
+			special_infantry_equipment_3
 			special_infantry_equipment_4
-			light_fire_support_equipment_0
-			light_fire_support_equipment_1
-			heavy_fire_support_equipment_0
-			heavy_fire_support_equipment_1
-			apc_chassis_1
-			apc_tank_destroyer_chassis_1
-			apc_tank_aa_chassis_1
-			apc_tank_artillery_1
-			apc_amphibious_chassis_1
-			apc_flame_chassis_1
-			motorized_equipment_1
 
 			infantry_anti_air_equipment_1
 			infantry_anti_air_equipment_2
 			infantry_anti_air_equipment_3
 
-			ifv_chassis_1
-			ifv_tank_destroyer_chassis_1
-			ifv_tank_aa_chassis_1
-			ifv_tank_artillery_1
-			ifv_amphibious_chassis_1
-			ifv_flame_chassis_1
-
-
-			mbt_chassis_1
-			mbt_tank_destroyer_chassis_1
-			mbt_tank_aa_chassis_1
-			mbt_tank_artillery_1
-			mbt_amphibious_chassis_1
-			mbt_flame_chassis_1
-
-			bm_chassis_1
-			bm_tank_destroyer_chassis_1
-			bm_tank_aa_chassis_1
-			bm_tank_artillery_1
-			bm_amphibious_chassis_1
-			bm_flame_chassis_1
-
-			railway_gun_equipment_1 
-			railway_gun_equipment_2
+			motorized_equipment_1
 
 			auto_mech_1
+			auto_mech_2
 
-			air_ship_airframe_1
-			air_ship_airframe_2
+			train_equipment_1
 
-			uav_airframe_1
-			uav_airframe_2
+			light_fire_support_equipment_0
+			light_fire_support_equipment_1
+			light_fire_support_equipment_2
 
-			helicopter_airframe_1
-			helicopter_airframe_2
+			heavy_fire_support_equipment_0
+			heavy_fire_support_equipment_1
+			heavy_fire_support_equipment_2
+
+			special_fire_support_equipment_0
+			special_fire_support_equipment_1
+			special_fire_support_equipment_2
+
+			support_equipment_1 
+			support_engineer_equipment_1
+			support_logistics_equipment_1
+			support_security_equipment_1
+
+
 
 			
+			ifv_equipment_1
+			ifv_equipment_2
+			ifv_equipment_3
+			ifv_equipment_4
+			ifv_aa_equipment_1
+			ifv_aa_equipment_2
+			ifv_aa_equipment_3
+			ifv_aa_equipment_4
+			ifv_at_equipment_1
+			ifv_at_equipment_2
+			ifv_at_equipment_3
+			ifv_at_equipment_4
+			ifv_artillery_equipment_1
+			ifv_artillery_equipment_2
+			ifv_artillery_equipment_3
+			ifv_artillery_equipment_4
+
+			apc_equipment_1
+			apc_equipment_2
+			apc_equipment_3
+			apc_equipment_4
+			apc_aa_equipment_1
+			apc_aa_equipment_2
+			apc_aa_equipment_3
+			apc_aa_equipment_4
+			apc_at_equipment_1
+			apc_at_equipment_2
+			apc_at_equipment_3
+			apc_at_equipment_4
+			apc_artillery_equipment_1
+			apc_artillery_equipment_2
+			apc_artillery_equipment_3
+			apc_artillery_equipment_4
+
+			light_tank_equipment_1
+			light_tank_equipment_2
+			light_tank_equipment_3
+			light_tank_equipment_4
+			light_tank_artillery_equipment_1
+			light_tank_artillery_equipment_2
+			light_tank_artillery_equipment_3
+			light_tank_artillery_equipment_4
+			light_tank_destroyer_equipment_1
+			light_tank_destroyer_equipment_2
+			light_tank_destroyer_equipment_3
+			light_tank_destroyer_equipment_4
+			light_tank_aa_equipment_1
+			light_tank_aa_equipment_2
+			light_tank_aa_equipment_3
+			light_tank_aa_equipment_4
+
+			medium_tank_equipment_1
+			medium_tank_equipment_2
+			medium_tank_equipment_3
+			medium_tank_equipment_4
+			medium_tank_artillery_equipment_1
+			medium_tank_artillery_equipment_2
+			medium_tank_artillery_equipment_3
+			medium_tank_artillery_equipment_4
+			medium_tank_destroyer_equipment_1
+			medium_tank_destroyer_equipment_2
+			medium_tank_destroyer_equipment_3
+			medium_tank_destroyer_equipment_4
+			medium_tank_aa_equipment_1
+			medium_tank_aa_equipment_2
+			medium_tank_aa_equipment_3
+			medium_tank_aa_equipment_4
+
+			heavy_tank_equipment_1
+			heavy_tank_equipment_2
+			heavy_tank_equipment_3
+			heavy_tank_equipment_4
+			heavy_tank_artillery_equipment_1
+			heavy_tank_artillery_equipment_2
+			heavy_tank_artillery_equipment_3
+			heavy_tank_artillery_equipment_4
+			heavy_tank_destroyer_equipment_1
+			heavy_tank_destroyer_equipment_2
+			heavy_tank_destroyer_equipment_3
+			heavy_tank_destroyer_equipment_4
+			heavy_tank_aa_equipment_1
+			heavy_tank_aa_equipment_2
+			heavy_tank_aa_equipment_3
+			heavy_tank_aa_equipment_4
+
+
+
+
+			light_bm_equipment_1
+			light_bm_equipment_2
+			light_bm_equipment_3
+			light_bm_equipment_4
+			light_bm_artillery_equipment_1
+			light_bm_artillery_equipment_2
+			light_bm_artillery_equipment_3
+			light_bm_artillery_equipment_4
+			light_bm_destroyer_equipment_1
+			light_bm_destroyer_equipment_2
+			light_bm_destroyer_equipment_3
+			light_bm_destroyer_equipment_4
+			light_bm_aa_equipment_1
+			light_bm_aa_equipment_2
+			light_bm_aa_equipment_3
+			light_bm_aa_equipment_4
+
+			medium_bm_equipment_1
+			medium_bm_equipment_2
+			medium_bm_equipment_3
+			medium_bm_equipment_4
+			medium_bm_artillery_equipment_1
+			medium_bm_artillery_equipment_2
+			medium_bm_artillery_equipment_3
+			medium_bm_artillery_equipment_4
+			medium_bm_destroyer_equipment_1
+			medium_bm_destroyer_equipment_2
+			medium_bm_destroyer_equipment_3
+			medium_bm_destroyer_equipment_4
+			medium_bm_aa_equipment_1
+			medium_bm_aa_equipment_2
+			medium_bm_aa_equipment_3
+			medium_bm_aa_equipment_4
+
+			heavy_bm_equipment_1
+			heavy_bm_equipment_2
+			heavy_bm_equipment_3
+			heavy_bm_equipment_4
+			heavy_bm_artillery_equipment_1
+			heavy_bm_artillery_equipment_2
+			heavy_bm_artillery_equipment_3
+			heavy_bm_artillery_equipment_4
+			heavy_bm_destroyer_equipment_1
+			heavy_bm_destroyer_equipment_2
+			heavy_bm_destroyer_equipment_3
+			heavy_bm_destroyer_equipment_4
+			heavy_bm_aa_equipment_1
+			heavy_bm_aa_equipment_2
+			heavy_bm_aa_equipment_3
+			heavy_bm_aa_equipment_4
+
+
+			helicopter_equipment_1 
+			helicopter_equipment_2
+			helicopter_equipment_3
+			helicopter_equipment_4
+
+			attack_helicopter_equipment_1
+			attack_helicopter_equipment_2
+			attack_helicopter_equipment_3
+			attack_helicopter_equipment_4
+
+			small_uav_equipment_1
+			small_uav_equipment_2
+			small_uav_equipment_3
+			small_uav_equipment_4
+
+			small_uav_cas_equipment_1
+			small_uav_cas_equipment_2
+			small_uav_cas_equipment_3
+			small_uav_cas_equipment_4
+
+			small_uav_recon_equipment_1
+			small_uav_recon_equipment_2
+			small_uav_recon_equipment_4
+			small_uav_recon_equipment_4
+
+
+			medium_uav_equipment_1
+			medium_uav_equipment_2
+			medium_uav_equipment_3
+			medium_uav_equipment_4
+
+			medium_uav_cas_equipment_1
+			medium_uav_cas_equipment_2
+			medium_uav_cas_equipment_3
+			medium_uav_cas_equipment_4
+
+
+			heavy_uav_equipment_1
+			heavy_uav_equipment_2
+			heavy_uav_equipment_3
+			heavy_uav_equipment_4
+
+			heavy_uav_cas_equipment_1
+			heavy_uav_cas_equipment_2
+			heavy_uav_cas_equipment_3
+			heavy_uav_cas_equipment_4
+
+			transport_plane_equipment_1
+			transport_plane_equipment_2
+			transport_plane_equipment_3
+			transport_plane_equipment_4
 		}
 
 		enable_subunits = {
-			recon
-			apc_recon
-			mbt_recon
-			helicopter_recon
 			engineer
-			logistics_company
-			maintenance_company
-			military_police
-			signal_company
-			field_hospital
-			helicopter_logistics_company
-		}
-
-		enable_equipment_modules = {
-			apc_l_gun_1
-			apc_h_gun_1
-			apc_sp_gun_1
-			apc_engine_oil
-			apc_armor_l
-			apc_armor_sp
-			apc_4x_suspension
-			apc_armor_role_lald
-			apc_armor_role_hald
-			apc_armor_role_sald
-			apc_armor_role_lasd
-			apc_armor_role_hasd
-			apc_armor_role_sasd
-
-
-			ifv_l_gun_1
-			ifv_h_gun_1
-			ifv_sp_gun_1
-			ifv_engine_oil
-			ifv_armor_h
-			ifv_armor_sp
-			ifv_4x_suspension
-			ifv_armor_role_lahd
-			ifv_armor_role_hahd
-			ifv_armor_role_sahd
-			ifv_armor_role_lasd
-			ifv_armor_role_hasd
-			ifv_armor_role_sasd
-
-
-			mbt_l_gun_1
-			mbt_h_gun_1
-			mbt_sp_gun_1
-			mbt_engine_oil
-			mbt_armor_h
-			mbt_armor_sp
-			mbt_4x_suspension
-			mbt_armor_role_lahd
-			mbt_armor_role_hahd
-			mbt_armor_role_sahd
-			mbt_armor_role_lasd
-			mbt_armor_role_hasd
-			mbt_armor_role_sasd
-
-			bm_l_gun_1
-			bm_h_gun_1
-			bm_sp_gun_1
-			bm_engine_oil
-			bm_armor_l
-			bm_armor_sp
-			bm_4x_suspension
-			bm_armor_role_lald
-			bm_armor_role_hald
-			bm_armor_role_sald
-			bm_armor_role_lasd
-			bm_armor_role_hasd
-			bm_armor_role_sasd
-
-
-			air_ship_engine_1
-			air_ship_bomb_bay_1
-			air_ship_heavy_aam_1
-			air_ship_gunship_gun_1
-			air_hmg_defense_turret 
-
-			uav_engine_1
-			uav_gun_1
-			uav_light_aam_1
-			uav_agm_1
-			uav_recon_camera
-
-			helicopter_engine_1
-			helicopter_fast_engine_1
-			helicopter_crew_carrying_1
-			helicopter_crew_carrying_aromr_1
-			helicopter_long_range_atgm_1_2x
-			helicopter_atgm_1_4x
-			helicopter_atgm_1_2x
-			helicopter_aam_1_4x
-			helicopter_heavy_gun_1
-			helicopter_light_gun_1
-			helicopter_rl_1
-			helicopter_fueltank
-			helicopter_hdgun_hmg_1
-			helicopter_hdgun_lmg_1
-			helicopter_equipment_armor
-			helicopter_equipment_lb
-
-
-
 		}
 		research_cost = 1
 		ai_will_do = { factor = 1 }

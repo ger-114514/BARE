@@ -1,16 +1,26 @@
 state={
 	id=439
 	name="STATE_439"
+	resources={
+		resources_cm = 5
+		resources_ec = 10
+	}
 	provinces={
 		3386 3977 4075 4253 8293 10238 10273 
 	}
 	history = {
-		owner = HYA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		owner = A16
+		add_core_of=A16
 		add_core_of=HYA
 		victory_points = {8293 10}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=198000
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

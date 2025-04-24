@@ -1,31 +1,82 @@
 sub_units = {
-	uav = {
+	small_uav = {
 		sprite = light_plane
 		priority = 5
 		active = yes
 		type = fighter
-		need = { uav_airframe = 1 }
+		need = { small_uav_airframe = 1 }
 		categories = { category_fighter }
-		land_air_wing_size = 16
+		land_air_wing_size = 100
 	}
 
-	uav_cas = {
+	small_uav_cas = {
 		sprite = light_plane
 		priority =2
 		active = yes
 		type = cas
-		need = { uav_cas_airframe = 1 }
+		need = { small_uav_cas_airframe = 1 }
 		categories = {category_cas }
-		land_air_wing_size = 16
+		land_air_wing_size = 100
 	}
 
-	uav_recon = {
+	small_uav_recon = {
 		sprite = light_plane
 		priority = 1
 		active = yes
 		type = scout_plane
-		need = { uav_recon_airframe = 1 }
+		need = { small_uav_recon_airframe = 1 }
 		categories = { category_scout_plane }
-		land_air_wing_size =16
+		land_air_wing_size =100
+	}
+
+
+	medium_uav = {
+		sprite = light_plane
+		priority = 5
+		active = yes
+		type = fighter
+		need = { medium_uav_airframe = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 100
+	}
+
+	medium_uav_cas = {
+		sprite = light_plane
+		priority =2
+		active = yes
+		type = cas
+		need = { medium_uav_cas_airframe = 1 }
+		categories = {category_cas }
+		land_air_wing_size = 100
+	}
+
+	heavy_uav = {
+		sprite = light_plane
+		priority = 5
+		active = yes
+		type = fighter
+		need = {heavy_uav_airframe = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 25
+	}
+
+	heavy_uav_cas = {
+		sprite = light_plane
+		priority =2
+		active = yes
+		type = cas
+		need = { heavy_uav_cas_airframe = 1 }
+		categories = {category_cas }
+		land_air_wing_size = 25
+	}
+
+
+	transport_plane = {
+		sprite = heavy_plane
+		priority = 6
+		active = yes
+		type = air_transport
+		need = { transport_plane_equipment = 1 }
+		land_air_wing_size = 25
 	}
 }

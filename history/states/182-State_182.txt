@@ -1,15 +1,23 @@
 state={
 	id=182
 	name="STATE_182"
+	resources={
+	}
 	provinces={
 		1410 1463 1546 3180 8138 8320 10766 
 	}
 	history = {
-		owner = GEH
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		owner = A11
+		add_core_of=A11
 		add_core_of=GEH
     }
-	manpower=1
-	state_category = pastoral
+	manpower=264000
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

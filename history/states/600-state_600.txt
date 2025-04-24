@@ -5,10 +5,15 @@ state={
 		255 1005 1045 1228 1305 1561 1932 2407 3543 3601 4165 4729 4752 4989 5510 6221 6522 6784 6962 7330 7362 7586 8141 8241 8714 8773 8807 9135 9693 9699 9703 9710 9765 9792 
 	}
 	history={
-		owner = RWT
-		add_core_of=RWT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		owner = A26
+		add_core_of=A26
+		victory_points = {8807 1}
 	}
-	manpower=0
+	manpower=49800
 	state_category=wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000

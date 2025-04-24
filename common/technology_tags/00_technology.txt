@@ -3,16 +3,68 @@
 
 technology_categories = {
 	infantry_weapons
+	electronics
+	industry
+	construction_tech
+	synth_resources
+	excavation_tech
+	power_development
+	bd
 
-	rank_I_tech
-	rank_II_tech
-	rank_III_tech
-	rank_IV_tech
-	rank_V_tech
+	uav
+	fight_uav
+	cas_uav
+	small_uav
+	meidum_uav
+	heavy_uav
+	uav_upgrade
+
+
+	armor
+	tank
+	bm
+	armor_upgrade
+	light_tank
+	medium_tank
+	heavy_tank
+	light_bm
+	medium_bm
+	heavy_bm
+
+
+	motorized
+	apc
+	ifv
+	mech_upgrade
+	helicopter
+	helicopter_upgrade
+
+
+	support_all
+	support
+	fire_support
+
+	
+
+
+	land_doctrine
+	air_doctrine
+	cat_superior_firepower
+	cat_mobile_warfare
+	cat_grand_battle_plan
+	cat_mass_assault
+
+	mystical
 }
 
 technology_folders = {
 	infantry_folder = {
+		ledger = army
+	}
+	support_folder = {
+		ledger = army
+	}
+	ifv_folder = {
 		ledger = army
 	}
 	armour_folder = {
@@ -23,6 +75,16 @@ technology_folders = {
 	}
 	industry_folder = {
 		ledger = civilian
+	}
+	industry_resource_folder = {
+		ledger = civilian
+	}
+	#BD#
+	bd_folder = {
+		ledger = civilian
+	}
+	breakthrough_folder = {
+		ledger = army
 	}
 	electronics_folder = {
 		ledger = civilian
@@ -67,8 +129,20 @@ technology_folders = {
 		ledger = all
 		#available = { tag = MIL }
 	}
+	# cae_special_folder = {
+	# 	ledger = all
+	# }
 	school_special_folder = {
 		ledger = all
+	}
+
+	land_doctrine_folder = {
+		ledger = army
+		doctrine = yes
+	}
+	air_doctrine_folder = {
+		ledger = air
+		doctrine = yes
 	}
 }
 

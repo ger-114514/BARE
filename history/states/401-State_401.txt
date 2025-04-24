@@ -1,14 +1,20 @@
 state={
 	id=401
 	name="STATE_401"
+	resources={
+		resources_cm = 30
+		resources_fe = 10
+	}
 	provinces={
 		711 758 824 943 1343 1745 2228 2729 2825 3311 4114 4305 4824 5051 5126 6305 6558 6842 8266 8583 8646 8803 8825 9001 9125 9129 9499 10407 10421 10453 10487 10497 10508 10517 
 	}
 	history = {
-		owner = GEH
+		owner = A10
+		add_core_of=A10
 		add_core_of=GEH
     }
-	manpower=0
+	manpower=165400
+	state_category = wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -95,23 +95,23 @@ technologies = {
 			name = school_special_folder
 			position = { x = 0 y = 0 }
 		}
-		path = { leads_to_tech = tech_rank_II_token }
+		path = { leads_to_tech = tech_rankT2_token }
 		allow = { always = no }
 	}
-	tech_rank_II_token = {
+	tech_rankT2_token = {
 		on_research_complete = {
-			add_ideas = tech_rank_II_idea
+			add_ideas = tech_rankT2_idea
 		}
 		folder = {
 			name = school_special_folder
 			position = { x = 2 y = 0 }
 		}
-		path = { leads_to_tech = tech_rank_III_token }
+		path = { leads_to_tech = tech_rankT3_token }
 		allow = { always = no }
 	}
-	tech_rank_III_token = {
+	tech_rankT3_token = {
 		on_research_complete = {
-			add_ideas = tech_rank_III_idea
+			add_ideas = tech_rankT3_idea
 		}
 		folder = {
 			name = school_special_folder
@@ -148,29 +148,29 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		research_cost = 3
-		path = { leads_to_tech = tech_CIV_rank_II_token }
+		path = { leads_to_tech = tech_CIV_rankT2_token }
 		dependencies = { tech_rank_I_token = 1 }
 		allow = { has_country_flag = tech_CIV_rank_I_available }
 	}
-	tech_CIV_rank_II_token = {
+	tech_CIV_rankT2_token = {
 		folder = {
 			name = school_special_folder
 			position = { x = 2 y = 0 }
 		}
 		research_cost = 3
-		path = { leads_to_tech = tech_CIV_rank_III_token }
-		dependencies = { tech_rank_II_token = 1 }
-		allow = { has_country_flag = tech_CIV_rank_II_available }
+		path = { leads_to_tech = tech_CIV_rankT3_token }
+		dependencies = { tech_rankT2_token = 1 }
+		allow = { has_country_flag = tech_CIV_rankT2_available }
 	}
-	tech_CIV_rank_III_token = {
+	tech_CIV_rankT3_token = {
 		folder = {
 			name = school_special_folder
 			position = { x = 4 y = 0 }
 		}
 		research_cost = 3
 		path = { leads_to_tech = tech_CIV_rank_IV_token }
-		dependencies = { tech_rank_III_token = 1 }
-		allow = { has_country_flag = tech_CIV_rank_III_available }
+		dependencies = { tech_rankT3_token = 1 }
+		allow = { has_country_flag = tech_CIV_rankT3_available }
 	}
 	tech_CIV_rank_IV_token = {
 		folder = {
@@ -198,29 +198,29 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		research_cost = 3
-		path = { leads_to_tech = tech_MIL_rank_II_token }
+		path = { leads_to_tech = tech_MIL_rankT2_token }
 		dependencies = { tech_rank_I_token = 1 }
 		allow = { has_country_flag = tech_MIL_rank_I_available }
 	}
-	tech_MIL_rank_II_token = {
+	tech_MIL_rankT2_token = {
 		folder = {
 			name = school_special_folder
 			position = { x = 2 y = 0 }
 		}
 		research_cost = 3
-		path = { leads_to_tech = tech_MIL_rank_III_token }
-		dependencies = { tech_rank_II_token = 1 }
-		allow = { has_country_flag = tech_MIL_rank_II_available }
+		path = { leads_to_tech = tech_MIL_rankT3_token }
+		dependencies = { tech_rankT2_token = 1 }
+		allow = { has_country_flag = tech_MIL_rankT2_available }
 	}
-	tech_MIL_rank_III_token = {
+	tech_MIL_rankT3_token = {
 		folder = {
 			name = school_special_folder
 			position = { x = 4 y = 0 }
 		}
 		research_cost = 3
 		path = { leads_to_tech = tech_MIL_rank_IV_token }
-		dependencies = { tech_rank_III_token = 1 }
-		allow = { has_country_flag = tech_MIL_rank_III_available }
+		dependencies = { tech_rankT3_token = 1 }
+		allow = { has_country_flag = tech_MIL_rankT3_available }
 	}
 	tech_MIL_rank_IV_token = {
 		folder = {
@@ -248,20 +248,20 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		research_cost = 3
-	 #	path = { leads_to_tech = tech_MYS_rank_II_token }
-	 	path = { leads_to_tech = tech_MYS_rank_III_token }
+	 #	path = { leads_to_tech = tech_MYS_rankT2_token }
+	 	path = { leads_to_tech = tech_MYS_rankT3_token }
 		dependencies = { tech_rank_I_token = 1 }
 		allow = { has_country_flag = tech_MYS_rank_I_available }
 	}
-	tech_MYS_rank_II_token = {
+	tech_MYS_rankT2_token = {
 		folder = {
 			name = school_special_folder
 			position = { x = 2 y = 0 }
 		}
-		path = { leads_to_tech = tech_MYS_rank_III_token }
+		path = { leads_to_tech = tech_MYS_rankT3_token }
 		allow = { always = no }
 	}
-	tech_MYS_rank_III_token = {
+	tech_MYS_rankT3_token = {
 		folder = {
 			name = school_special_folder
 			position = { x = 4 y = 0 }
@@ -269,8 +269,8 @@ technologies = {
 		research_cost = 3
 	 #	path = { leads_to_tech = tech_MYS_rank_IV_token }
 	 	path = { leads_to_tech = tech_MYS_rank_V_token }
-		dependencies = { tech_rank_III_token = 1 }
-		allow = { has_country_flag = tech_MYS_rank_III_available }
+		dependencies = { tech_rankT3_token = 1 }
+		allow = { has_country_flag = tech_MYS_rankT3_available }
 	}
 	tech_MYS_rank_IV_token = {
 		folder = {

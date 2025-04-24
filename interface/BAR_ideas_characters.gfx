@@ -1,75 +1,552 @@
 spriteTypes = {
 
-	### ABY
+### ABY 梦、黑白子无肖像
 	spriteType = {
 		name = "GFX_portrait_ABY_hoshino"
 		texturefile = "gfx/leaders/ABY/hoshino.dds"
 	}
-	
-	### ARI
+	spriteType = {
+		name = "GFX_portrait_ABY_shiroko"
+		texturefile = "gfx/leaders/ABY/shiroko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ABY_ayane"
+		texturefile = "gfx/leaders/ABY/ayane.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ABY_nonomi"
+		texturefile = "gfx/leaders/ABY/nonomi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ABY_serika"
+		texturefile = "gfx/leaders/ABY/serika.dds"
+	}
+
+### ARI 夫人无肖像
 	spriteType = {
 		name = "GFX_portrait_ARI_atsuko"
 		texturefile = "gfx/leaders/ARI/atsuko.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_ARI_saori"
+		texturefile = "gfx/leaders/ARI/saori.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ARI_misaki"
+		texturefile = "gfx/leaders/ARI/misaki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ARI_hiyori"
+		texturefile = "gfx/leaders/ARI/hiyori.dds"
+	}
+###凯撒无肖像
+
+### CEN
+	spriteType = {
+		name = "GFX_portrait_CEN_rin"
+		texturefile = "gfx/leaders/CEN/rin.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CEN_momoka"
+		texturefile = "gfx/leaders/CEN/momoka.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CEN_ayumu"
+		texturefile = "gfx/leaders/CEN/ayumu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CEN_aoi"
+		texturefile = "gfx/leaders/CEN/aoi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CEN_kaya"
+		texturefile = "gfx/leaders/CEN/kaya.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CEN_kaijo"
+		texturefile = "gfx/leaders/CEN/kaijo.dds"
+	}
 	
-	### GEH
+### GEH
 	spriteType = {
 		name = "GFX_portrait_GEH_hina"
 		texturefile = "gfx/leaders/GEH/hina.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_GEH_ako"
+		texturefile = "gfx/leaders/GEH/ako.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_iori"
+		texturefile = "gfx/leaders/GEH/iori.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_chinatsu"
+		texturefile = "gfx/leaders/GEH/chinatsu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_makoto"
+		texturefile = "gfx/leaders/GEH/makoto.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_iroha"
+		texturefile = "gfx/leaders/GEH/iroha.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_ibuki"
+		texturefile = "gfx/leaders/GEH/ibuki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_satsuki"
+		texturefile = "gfx/leaders/GEH/satsuki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_aru"
+		texturefile = "gfx/leaders/GEH/aru.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_mutsuki"
+		texturefile = "gfx/leaders/GEH/mutsuki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_kayoko"
+		texturefile = "gfx/leaders/GEH/kayoko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_haruka"
+		texturefile = "gfx/leaders/GEH/haruka.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_fuuka"
+		texturefile = "gfx/leaders/GEH/fuuka.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_juri"
+		texturefile = "gfx/leaders/GEH/juri.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_haruna"
+		texturefile = "gfx/leaders/GEH/haruna.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_izumi"
+		texturefile = "gfx/leaders/GEH/izumi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_junko"
+		texturefile = "gfx/leaders/GEH/junko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_akari"
+		texturefile = "gfx/leaders/GEH/akari.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_sena"
+		texturefile = "gfx/leaders/GEH/sena.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_megu"
+		texturefile = "gfx/leaders/GEH/megu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_kasumi"
+		texturefile = "gfx/leaders/GEH/kasumi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_erika"
+		texturefile = "gfx/leaders/GEH/erika.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_GEH_kirara"
+		texturefile = "gfx/leaders/GEH/kirara.dds"
+	}
 	
-	### MIL
+### MIL
+	spriteType = {
+		name = "GFX_portrait_MIL_rio"
+		texturefile = "gfx/leaders/MIL/rio.dds"
+	}
 	spriteType = {
 		name = "GFX_portrait_MIL_yuuka"
 		texturefile = "gfx/leaders/MIL/yuuka.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_MIL_noa"
+		texturefile = "gfx/leaders/MIL/noa.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_koyuki"
+		texturefile = "gfx/leaders/MIL/koyuki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_chihiro"
+		texturefile = "gfx/leaders/MIL/chihiro.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_maki"
+		texturefile = "gfx/leaders/MIL/maki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_hare"
+		texturefile = "gfx/leaders/MIL/hare.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_kotama"
+		texturefile = "gfx/leaders/MIL/kotama.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_himari"
+		texturefile = "gfx/leaders/MIL/himari.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_eimi"
+		texturefile = "gfx/leaders/MIL/eimi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_yuzu"
+		texturefile = "gfx/leaders/MIL/yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_alice"
+		texturefile = "gfx/leaders/MIL/alice.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_momoi"
+		texturefile = "gfx/leaders/MIL/momoi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_hibiki"
+		texturefile = "gfx/leaders/MIL/hibiki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_utaha"
+		texturefile = "gfx/leaders/MIL/utaha.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_kotori"
+		texturefile = "gfx/leaders/MIL/kotori.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_neru"
+		texturefile = "gfx/leaders/MIL/neru.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_karin"
+		texturefile = "gfx/leaders/MIL/karin.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_akane"
+		texturefile = "gfx/leaders/MIL/akane.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_asuna"
+		texturefile = "gfx/leaders/MIL/asuna.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_toki"
+		texturefile = "gfx/leaders/MIL/toki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_sumire"
+		texturefile = "gfx/leaders/MIL/sumire.dds"
+	}
 	
-	### TRI
+### TRI
 	spriteType = {
 		name = "GFX_portrait_TRI_nagisa"
 		texturefile = "gfx/leaders/TRI/nagisa.dds"
 	}
+	frameAnimatedSpriteType = {
+		name = "GFX_portrait_TRI_missing_nagisa"
+		texturefile = "gfx/leaders/TRI/missing_nagisa.png"
+		noOfFrames = 3
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_seia"
+		texturefile = "gfx/leaders/TRI/seia.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_mika"
+		texturefile = "gfx/leaders/TRI/mika.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_shimiko"
+		texturefile = "gfx/leaders/TRI/shimiko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_ui"
+		texturefile = "gfx/leaders/TRI/ui.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_suzumi"
+		texturefile = "gfx/leaders/TRI/suzumi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_reisa"
+		texturefile = "gfx/leaders/TRI/reisa.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_hifumi"
+		texturefile = "gfx/leaders/TRI/hifumi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_azusa"
+		texturefile = "gfx/leaders/TRI/azusa.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_hanako"
+		texturefile = "gfx/leaders/TRI/hanako.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_koharu"
+		texturefile = "gfx/leaders/TRI/koharu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_mine"
+		texturefile = "gfx/leaders/TRI/mine.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_hanae"
+		texturefile = "gfx/leaders/TRI/hanae.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_serina"
+		texturefile = "gfx/leaders/TRI/serina.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_tsurugi"
+		texturefile = "gfx/leaders/TRI/tsurugi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_hasumi"
+		texturefile = "gfx/leaders/TRI/hasumi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_mashiro"
+		texturefile = "gfx/leaders/TRI/mashiro.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_ichika"
+		texturefile = "gfx/leaders/TRI/ichika.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_natsu"
+		texturefile = "gfx/leaders/TRI/natsu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_airi"
+		texturefile = "gfx/leaders/TRI/airi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_yoshimi"
+		texturefile = "gfx/leaders/TRI/yoshimi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_kazusa"
+		texturefile = "gfx/leaders/TRI/kazusa.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_hinata"
+		texturefile = "gfx/leaders/TRI/hinata.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_mari"
+		texturefile = "gfx/leaders/TRI/mari.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_sakurako"
+		texturefile = "gfx/leaders/TRI/sakurako.dds"
+	}
 	
-	### VAL
+### VAL
 	spriteType = {
 		name = "GFX_portrait_VAL_kanna"
 		texturefile = "gfx/leaders/VAL/kanna.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_VAL_fubuki"
+		texturefile = "gfx/leaders/VAL/fubuki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_VAL_kirino"
+		texturefile = "gfx/leaders/VAL/kirino.dds"
+	}
 	
-	### SRT
+### SRT
 	spriteType = {
 		name = "GFX_portrait_SRT_miyako"
 		texturefile = "gfx/leaders/SRT/miyako.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_SRT_saki"
+		texturefile = "gfx/leaders/SRT/saki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SRT_miyu"
+		texturefile = "gfx/leaders/SRT/miyu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SRT_moe"
+		texturefile = "gfx/leaders/SRT/moe.dds"
+	}
 	
-	### SCH
+### SCH 超炮、初音无肖像，空有肖像无角色设置
 	spriteType = {
 		name = "GFX_portrait_SCH_arona"
 		texturefile = "gfx/leaders/SCH/arona.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_SCH_sensei"
+		texturefile = "gfx/leaders/SCH/sensei.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SCH_purana"
+		texturefile = "gfx/leaders/SCH/purana.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SCH_sora"
+		texturefile = "gfx/leaders/SCH/sora.dds"
+	}
 	
-	### RWT
+### RWT 三善贵音、荒槙八云有肖像无角色设置
 	spriteType = {
 		name = "GFX_portrait_RWT_cherino"
 		texturefile = "gfx/leaders/RWT/cherino.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_RWT_marina"
+		texturefile = "gfx/leaders/RWT/marina.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_tomoe"
+		texturefile = "gfx/leaders/RWT/tomoe.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_nodoka"
+		texturefile = "gfx/leaders/RWT/nodoka.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_shigure"
+		texturefile = "gfx/leaders/RWT/shigure.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_minori"
+		texturefile = "gfx/leaders/RWT/minori.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_meru"
+		texturefile = "gfx/leaders/RWT/meru.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_momiji"
+		texturefile = "gfx/leaders/RWT/momiji.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_takane"
+		texturefile = "gfx/leaders/RWT/takane.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_RWT_yakumo"
+		texturefile = "gfx/leaders/RWT/yakumo.dds"
+	}
 	
-	### HYA
+### HYA 紫、莲华、桔梗无肖像
 	spriteType = {
 		name = "GFX_portrait_HYA_niya"
 		texturefile = "gfx/leaders/HYA/niya.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_HYA_nagusa"
+		texturefile = "gfx/leaders/HYA/nagusa.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_chise"
+		texturefile = "gfx/leaders/HYA/chise.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_kaho"
+		texturefile = "gfx/leaders/HYA/kaho.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_tsubaki"
+		texturefile = "gfx/leaders/HYA/tsubaki.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_mimori"
+		texturefile = "gfx/leaders/HYA/mimori.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_kaede"
+		texturefile = "gfx/leaders/HYA/kaede.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_izuna"
+		texturefile = "gfx/leaders/HYA/izuna.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_michiru"
+		texturefile = "gfx/leaders/HYA/michiru.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_tsukuyo"
+		texturefile = "gfx/leaders/HYA/tsukuyo.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_umika"
+		texturefile = "gfx/leaders/HYA/umika.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_pina"
+		texturefile = "gfx/leaders/HYA/pina.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_shizuko"
+		texturefile = "gfx/leaders/HYA/shizuko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_wakamo"
+		texturefile = "gfx/leaders/HYA/wakamo.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_HYA_kuzuha"
+		texturefile = "gfx/leaders/HYA/kuzuha.dds"
+	}
 	
-	### SHA
+### SHA
 	spriteType = {
 		name = "GFX_portrait_SHA_kisaki"
 		texturefile = "gfx/leaders/SHA/kisaki.dds"
 	}
-	
-	### CEN
 	spriteType = {
-		name = "GFX_portrait_CEN_rin"
-		texturefile = "gfx/leaders/CEN/rin.dds"
+		name = "GFX_portrait_SHA_mina"
+		texturefile = "gfx/leaders/SHA/mina.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SHA_reijou"
+		texturefile = "gfx/leaders/SHA/reijou.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SHA_rumi"
+		texturefile = "gfx/leaders/SHA/rumi.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SHA_shun"
+		texturefile = "gfx/leaders/SHA/shun.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SHA_kokona"
+		texturefile = "gfx/leaders/SHA/kokona.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SHA_saya"
+		texturefile = "gfx/leaders/SHA/saya.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SHA_kai"
+		texturefile = "gfx/leaders/SHA/kai.dds"
 	}
 	
 }

@@ -33,7 +33,7 @@ equipments = {
 	
 		archetype = auto_mech
 		active = no
-		priority = 05
+		priority = 5
 		visual_level = 0
 	}
 	auto_mech_2 = {
@@ -44,11 +44,17 @@ equipments = {
 
 		defense = 3
 		breakthrough = 2
+		hardness = 0.05
 
-		build_cost_ic = 0.25
+		build_cost_ic = 0.28
 		active = no
-		priority = 05
+		priority = 5
 		visual_level = 1
+
+		resources = {
+			resources_cm = 1
+			resources_ec = 1
+		}
 	}
 
 }

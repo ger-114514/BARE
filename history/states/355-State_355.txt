@@ -5,11 +5,14 @@ state={
 		2307 3143 4461 6474 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+		}
 		owner = ABY
 		add_core_of=ABY
     }
-	manpower=1
-	state_category = pastoral
+	manpower=161000
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

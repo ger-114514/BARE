@@ -5,11 +5,16 @@ state={
 		2383 4598 11275 11278 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
 		owner = SHA
 		add_core_of=SHA
+		victory_points = {4598 5}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=124000
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -8,9 +8,10 @@ phases = { # phase = no is the standard phase
 	tactical_withdrawal
 	seize_bridge
 	hold_bridge
+	street_fighting
 }
 
-tactic_basic_attack = {
+tactic_artillery_11 = {
 
 	is_attacker = yes
 	trigger = { # combined scope for both country and combatant
@@ -18,25 +19,847 @@ tactic_basic_attack = {
 		phase = no
 	}
 	
-	active = yes
+	active = no
 
-	base =  { factor = 4 }
+	base =  {
+		factor = 4
+
+	}
+
 	picture = attack
 
-	attacker = 0.05
+	combat_width = 0.5	
+	attacker = 0.1
 }
 
-tactic_basic_defend = {
+tactic_artillery_12 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = encircle
+	attacker_org_damage_modifier = 0.05
+	attacker = 0.1
+}
+
+tactic_artillery_13 = {
+
 	is_attacker = no
-	trigger = {
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = no
+		OR = {
+			has_unit_type = engineer
+			has_unit_type = pioneer_support
+		}
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_urban_defense
+
+	attacker = -0.2
+}
+
+tactic_artillery_21 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_barrage
+	attacker = 0.1
+	defender = -0.2
+}
+
+tactic_artillery_22 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
 		is_attacker = no
 		phase = no
 	}
 	
-	active = yes
+	active = no
+
+	base =  {
+		factor = 2
+	}
+	
+	picture = tactic_overwhelming_fire
+
+	attacker = -0.1
+	defender = 0.1
+}
+
+tactic_artillery_23 = {
+
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill_advantage > 0
+			has_trait = trickster
+		}
+	}
+	
+	active = no
+	
+	base =  {
+		factor = 4
+	}
+	picture = withdraw
+	
+	phase = tactical_withdrawal
+	
+	combat_width = -0.25
+	attacker = -0.25
+	defender = -0.05
+}
+
+tactic_artillery_31 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_barrage
+	attacker = 0.15
+	defender = -0.1
+}
+
+tactic_artillery_32 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = close_combat
+		has_artillery_ratio > 0.2
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = attack
+	phase = tactical_withdrawal
+	attacker = -0.1
+	defender = -0.2
+}
+
+tactic_artillery_33 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = no
+
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = trait_engineer
+		}
+
+	}
+	
+	picture = encircle
+	defender = 0.3
+	defender_org_damage_modifier = 0.1
+}
+
+tactic_infantry_11 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = assault
+
+	attacker_movement_speed = 0.1
+	attacker = 0.1
+}
+
+tactic_infantry_12 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = delay
+	attacker_movement_speed = -0.25
+	defender = -0.1
+}
+
+tactic_infantry_13 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+		has_trait = infantry_leader
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_human_wave_tactics
+	combat_width = 0.5	
+	attacker = 0.2
+	defender = 0.1
+}
+
+tactic_infantry_21 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = trait_engineer
+		}
+	}
+	
+	picture = tactic_infantry_charge
+	countered_by = tactic_artillery_22
+	phase = close_combat
+
+	combat_width = -0.25	
+	attacker = 0.1
+	defender = -0.05
+}
+
+tactic_infantry_22 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = close_combat
+		OR = {
+			skill > 2
+			has_trait = trickster
+		}
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = veteran_guerrilla_fighter
+		}
+	}
+	
+	picture = cc_storm
+
+	attacker = 0.3
+	defender = -0.2
+}
+
+tactic_infantry_23 = {
+
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill > 2
+			has_trait = trickster
+		}
+	}
+	
+	active = no
+	
+	base =  {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = veteran_guerrilla_fighter
+		}
+	}
+	countered_by = tactic_artillery_31
+	picture = tactic_guerrilla_tactics
+	
+	combat_width = -0.5
+	attacker = -0.7
+	defender = -0.6
+}
+
+
+tactic_infantry_32 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = close_combat
+		hardness < 0.5
+		skill > 1
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = cc_withdraw
+
+	attacker = 0.2
+	defender = -0.4
+}
+
+tactic_infantry_33 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+		hardness < 0.2
+		skill_advantage > 0
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = attack
+	attacker = 0.5
+}
+
+tactic_tank_11 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	countered_by = tactic_artillery_12
+	picture = ambush
+	attacker = -0.05
+	defender = 0.1
+}
+
+tactic_tank_12 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+        hardness > 30
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_relentless_assault
+	countered_by = tactic_infantry_12
+	attacker_movement_speed = 0.2
+	attacker = 0.15
+	defender = 0.05
+}
+
+tactic_tank_13 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+		OR = {
+			hardness > 50
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_unexpected_thrust
+	attacker_movement_speed = 0.15
+	attacker = 0.15
+}
+
+tactic_tank_21 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			has_trait = panzer_leader
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 2
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	
+	picture = blitz
+	countered_by = tactic_tank_31
+	combat_width = 0.25	
+	attacker_movement_speed = 0.2
+	attacker = 0.15
+	defender = -0.15
+}
+
+tactic_tank_22 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			has_trait = panzer_leader
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 2
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	
+	picture = SOV_tank_desant_blitz
+	countered_by = tactic_tank_31
+	combat_width = 0.25	
+	attacker_movement_speed = 0.5
+	attacker = 0.2
+	defender = -0.2
+}
+
+tactic_tank_23 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 4
+	}
+	
+	picture = breakthrough
+	countered_by = tactic_robot_31
+	combat_width = 0.25	
+	attacker_movement_speed = 0.5
+	attacker = 0.25
+	defender = -0.15
+}
+
+tactic_tank_31 = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			has_trait = panzer_expert
+			has_trait = defensive_doctrine
+			skill > 2
+		}
+	}
+	
+	active = no
+	
+	base =  {
+		factor = 4
+	}
+	picture = elastic_defence
+	
+	attacker_movement_speed = -0.25
+	attacker = -0.2
+	defender = 0.10
+}
+
+tactic_tank_32 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 4
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	
+	picture = tactic_banzai_charge
+
+	combat_width = 0.5	
+	attacker_movement_speed = 0.2
+	attacker = 0.3
+	defender = -0.1
+}
+
+tactic_tank_33 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 4
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	
+	picture = tactic_human_wave_tactics
+
+	combat_width = 0.5	
+	attacker_movement_speed = 0.5
+	attacker_org_damage_modifier = 0.05
+	defender_org_damage_modifier = -0.1
+	attacker = 0.2
+}
+
+
+tactic_robot_11 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = close_combat
+        hardness > 50
+	}
+	
+	active = no
+
+	base =  {
+        factor = 4
+	}
+	
+	picture = cc_local_strong_point
+    countered_by = tactic_infantry_22
+	countered_by = tactic_robot_32
+	attacker = -0.15
+	defender = 0.05
+}
+
+tactic_robot_12 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+        hardness > 60
+	}
+	
+	active = no
+
+	base =  {
+		factor = 2
+		modifier = {
+			add = 4
+            hardness > 80
+		}
+	}
+	
+	picture = tactic_relentless_assault
+
+    countered_by = tactic_artillery_22
+	attacker_movement_speed = 0.2
+	attacker = 0.25
+}
+
+tactic_robot_13 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_planned_attack
+	attacker = 0.15
+}
+
+tactic_robot_21 = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = close_combat
+        hardness > 60
+	}
+	
+	active = no
+
+	base =  {
+		factor = 2
+		modifier = {
+			add = 2
+			has_trait = trait_engineer
+		}
+		modifier = {
+			add = 2
+			hardness > 80
+		}
+	}
+	
+	picture = tw_defend
+	attacker = 1
+	defender = 1
+}
+
+tactic_robot_22 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+        hardness > 60
+	}
+	
+	active = no
+
+	base =  {
+		factor = 2
+		modifier = {
+			add = 2
+			has_trait = trait_engineer
+		}
+		modifier = {
+			add = 2
+			hardness > 80
+		}
+	}
+	
+	picture = tactic_banzai_charge
+    countered_by = tactic_artillery_22
+	phase = close_combat
+	attacker = 0.5
+	defender = 0.3
+}
+
+tactic_robot_23 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+        hardness > 50
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tw_attack
+    countered_by = tactic_robot_31
+	phase = close_combat
+	attacker_movement_speed = 0.25
+	attacker = 0.15
+	defender = -0.15
+}
+
+tactic_robot_31 = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill > 3
+			AND = {
+				has_trait = defensive_doctrine
+				skill > 2
+			}
+		}
+	}
+	
+	active = no
 	
 	base =  { factor = 4 }
-	picture = defend
+	picture = backhand_blow
 	
-	defender = 0.05
+	attacker_movement_speed = -0.3
+	attacker = -0.2
+	defender = 0.25
+}
+
+tactic_robot_32 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = close_combat
+        hardness > 50
+		has_unit_type = engineer
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+		modifier = {
+			add = 4
+			has_trait = trait_ambusher
+		}
+	}
+	
+	picture = tw_chase
+	attacker_movement_speed = 0.2
+	attacker = 0.3
+	defender = -0.2
+}
+
+tactic_robot_33 = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+        hardness > 80
+		skill_advantage > 0
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = shock
+	attacker = 0.3
+	defender = -0.3
 }

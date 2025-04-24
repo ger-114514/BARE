@@ -5,11 +5,15 @@ state={
 		28 298 2358 2589 5158 5406 5423 9955 9961 9981 10019 3453 7442 7905 9919 9979 
 	}
 	history={
+		buildings = {
+			infrastructure = 5
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points = {28 5}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=24100
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

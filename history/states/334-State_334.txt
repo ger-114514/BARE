@@ -5,11 +5,14 @@ state={
 		452 1565 3130 6358 11719 11754 11766 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+		}
 		owner = MIL
 		add_core_of=MIL
     }
-	manpower=1
-	state_category = pastoral
+	manpower=85100
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

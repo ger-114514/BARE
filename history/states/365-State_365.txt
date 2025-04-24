@@ -5,10 +5,16 @@ state={
 		4 499 1617 1769 2756 2934 2959 3377 3378 3457 4031 4316 4646 4709 4818 4853 5230 5366 6342 6824 7493 7856 8845 8880 9060 11815 11827 11833 11834 11854 11858 11894 11901 11912 11916 11921 11922 
 	}
 	history = {
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+		}
 		owner = TRI
 		add_core_of=TRI
     }
-	manpower=0
+	manpower=24700
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

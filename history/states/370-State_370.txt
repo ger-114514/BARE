@@ -5,11 +5,16 @@ state={
 		478 961 1100 3188 3191 3339 3451 3552 3768 3916 3994 4121 5043 5602 5641 5723 6938 7055 7534 8371 8657 9437 11230 11239 11252 11255 11282 11309 11337 11349 
 	}
 	history = {
-		owner = TRI
+		owner = A02
+		add_core_of=A02
 		add_core_of=TRI
+		buildings = {
+			infrastructure = 1
+		}
 		victory_points = {11282 5}
     }
-	manpower=0
+	manpower=69728
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

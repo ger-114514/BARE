@@ -5,11 +5,16 @@ state={
 		3301 11019 
 	}
 	history = {
-		owner = D07
-		add_core_of=D07
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = A42
+		add_core_of=A42
     }
-	manpower=1
-	state_category = pastoral
+	manpower=112300
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

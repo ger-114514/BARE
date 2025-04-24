@@ -4,12 +4,23 @@ state={
 	provinces={
 		3306 5617 6791 12182 
 	}
+	resources={
+		resources_ec = 40
+		resources_rm = 10
+	}
 	history = {
-		owner = MIL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = A03
+		add_core_of=A03
 		add_core_of=MIL
+		victory_points = {12182 1}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=98000
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

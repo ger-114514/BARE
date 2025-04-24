@@ -1,15 +1,16 @@
-    ###千禧年MIL 开始###
+
+characters = {###千禧年MIL 开始###
     MIL_rio ={ 
 		name=MIL_rio_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_rio
-				small=GFX_portrait_mil_rio_small
+				large=GFX_portrait_MIL_rio
+				small=GFX_portrait_MIL_rio_small
 			}	
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { master_of_seminar }
 			expire = "-1.1.1.1"
 			id = -1
@@ -21,13 +22,13 @@
 		name=MIL_yuuka_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_yuuka
-				small=GFX_portrait_mil_yuuka_small
+				large=GFX_portrait_MIL_yuuka
+				small=GFX_portrait_MIL_yuuka_small
 			}	
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { cold_calculator }
 			expire = "-1.1.1.1"
 			id = -1
@@ -50,13 +51,14 @@
 			}
         }
 
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+        crops_commander = {
+			traits = {infantry_officer trait_cautious
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
 		}
 
 	}
@@ -65,8 +67,8 @@
 		name=MIL_noa_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_noa
-				small=GFX_portrait_mil_noa_small
+				large=GFX_portrait_MIL_noa
+				small=GFX_portrait_MIL_noa_small
 			}	
 		}
 
@@ -88,12 +90,13 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {bearer_of_artillery trait_cautious skilled_staffer 
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
 		}
 
 	}
@@ -102,8 +105,8 @@
 		name=MIL_koyuki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_koyuki
-				small=GFX_portrait_mil_koyuki_small
+				large=GFX_portrait_MIL_koyuki
+				small=GFX_portrait_MIL_koyuki_small
 			}	
 		}
 
@@ -125,12 +128,13 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {trait_reckless infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -139,8 +143,8 @@
 		name=MIL_chihiro_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_chihiro
-				small=GFX_portrait_mil_chihiro_small
+				large=GFX_portrait_MIL_chihiro
+				small=GFX_portrait_MIL_chihiro_small
 			}	
 		}
 
@@ -167,8 +171,8 @@
 		name=MIL_maki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_maki
-				small=GFX_portrait_mil_maki_small
+				large=GFX_portrait_MIL_maki
+				small=GFX_portrait_MIL_maki_small
 			}	
 		}
 
@@ -190,28 +194,29 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer career_officer
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
 		}
 
 	}
 
-    MIL_haru ={ 
-		name=MIL_haru_name 
+    MIL_hare ={ 
+		name=MIL_hare_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_haru
-				small=GFX_portrait_mil_haru_small
+				large=GFX_portrait_MIL_hare
+				small=GFX_portrait_MIL_hare_small
 			}	
 		}
 
 		advisor = {
 			slot = political_advisor
-			idea_token = MIL_haru_pa
+			idea_token = MIL_hare_pa
 			allowed = {
 				original_tag = MIL
 			}
@@ -227,11 +232,12 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {career_officer bearer_of_artillery
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 3
 			logistics_skill = 1
 		}
 
@@ -241,8 +247,8 @@
 		name=MIL_kotama_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_kotama
-				small=GFX_portrait_mil_kotama_small
+				large=GFX_portrait_MIL_kotama
+				small=GFX_portrait_MIL_kotama_small
 			}	
 		}
 
@@ -264,11 +270,12 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer
+			}
 			skill = 1
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			defense_skill = 2
+			planning_skill = 3
 			logistics_skill = 1
 		}
 
@@ -278,8 +285,8 @@
 		name=MIL_himari_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_himari
-				small=GFX_portrait_mil_himari_small
+				large=GFX_portrait_MIL_himari
+				small=GFX_portrait_MIL_himari_small
 			}	
 		}
 
@@ -301,12 +308,13 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {politically_connected armor_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 3
 		}
 
 	}
@@ -315,8 +323,8 @@
 		name=MIL_eimi_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_eimi
-				small=GFX_portrait_mil_eimi_small
+				large=GFX_portrait_MIL_eimi
+				small=GFX_portrait_MIL_eimi_small
 			}	
 		}
 
@@ -338,10 +346,11 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {infantry_officer winter_specialist
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 1
 		}
@@ -352,8 +361,8 @@
 		name=MIL_yuzu_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_yuzu
-				small=GFX_portrait_mil_yuzu_small
+				large=GFX_portrait_MIL_yuzu
+				small=GFX_portrait_MIL_yuzu_small
 			}	
 		}
 
@@ -375,11 +384,12 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {bearer_of_artillery
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -390,8 +400,8 @@
 		name=MIL_alice_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_alice
-				small=GFX_portrait_mil_alice_small
+				large=GFX_portrait_MIL_alice
+				small=GFX_portrait_MIL_alice_small
 			}	
 		}
 
@@ -414,28 +424,29 @@
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {bearer_of_artillery media_personality
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
 
-    MIL_momoe ={ 
-		name=MIL_momoe_name 
+    MIL_momoi ={ 
+		name=MIL_momoi_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_momoe
-				small=GFX_portrait_mil_momoe_small
+				large=GFX_portrait_MIL_momoi
+				small=GFX_portrait_MIL_momoi_small
 			}	
 		}
 
 		advisor = {
 			slot = political_advisor
-			idea_token = MIL_momoe_pa
+			idea_token = MIL_momoi_pa
 			allowed = {
 				original_tag = MIL
 			}
@@ -443,7 +454,7 @@
 				original_tag = MIL
 			} 
 			traits = {
-				game_developer_momoe
+				game_developer_momoi
 			}
 			ai_will_do = {
 				factor = 1.000
@@ -451,12 +462,13 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer 
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
@@ -465,8 +477,8 @@
 		name=MIL_midori_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_midori
-				small=GFX_portrait_mil_midori_small
+				large=GFX_portrait_MIL_midori
+				small=GFX_portrait_MIL_midori_small
 			}	
         }
 
@@ -488,9 +500,10 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer 
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
@@ -502,8 +515,8 @@
 		name=MIL_hibiki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_hibiki
-				small=GFX_portrait_mil_hibiki_small
+				large=GFX_portrait_MIL_hibiki
+				small=GFX_portrait_MIL_hibiki_small
 			}	
 		}
 
@@ -526,11 +539,12 @@
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {bearer_of_artillery trait_cautious
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -540,8 +554,8 @@
 		name=MIL_utaha_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_utaha
-				small=GFX_portrait_mil_utaha_small
+				large=GFX_portrait_MIL_utaha
+				small=GFX_portrait_MIL_utaha_small
 			}	
 		}
 
@@ -564,11 +578,12 @@
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {armor_officer
+			}
 			skill = 1
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			defense_skill = 2
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -578,8 +593,8 @@
 		name=MIL_kotori_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_kotori
-				small=GFX_portrait_mil_kotori_small
+				large=GFX_portrait_MIL_kotori
+				small=GFX_portrait_MIL_kotori_small
 			}	
 		}
 
@@ -602,10 +617,11 @@
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			attack_skill = 2
+			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
 		}
@@ -616,8 +632,8 @@
 		name=MIL_neru_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_neru
-				small=GFX_portrait_mil_neru_small
+				large=GFX_portrait_MIL_neru
+				small=GFX_portrait_MIL_neru_small
 			}	
 		}
 
@@ -640,12 +656,13 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer trickster
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
@@ -654,8 +671,8 @@
 		name=MIL_karin_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_karin
-				small=GFX_portrait_mil_karin_small
+				large=GFX_portrait_MIL_karin
+				small=GFX_portrait_MIL_karin_small
 			}	
 		}
 
@@ -677,9 +694,10 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {trickster
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
@@ -691,8 +709,8 @@
 		name=MIL_akane_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_akane
-				small=GFX_portrait_mil_akane_small
+				large=GFX_portrait_MIL_akane
+				small=GFX_portrait_MIL_akane_small
 			}	
 		}
 
@@ -715,12 +733,13 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {skilled_staffer
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
@@ -729,8 +748,8 @@
 		name=MIL_asuna_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_asuna
-				small=GFX_portrait_mil_asuna_small
+				large=GFX_portrait_MIL_asuna
+				small=GFX_portrait_MIL_asuna_small
 			}	
 		}
 
@@ -753,12 +772,13 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {infantry_officer trait_reckless guerilla_fighter adaptable
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -767,8 +787,8 @@
 		name=MIL_toki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_toki
-				small=GFX_portrait_mil_toki_small
+				large=GFX_portrait_MIL_toki
+				small=GFX_portrait_MIL_toki_small
 			}	
 		}
 
@@ -791,11 +811,12 @@
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer trait_cautious
+			}
 			skill = 1
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			defense_skill = 2
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -805,8 +826,8 @@
 		name=MIL_sumire_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_mil_sumire
-				small=GFX_portrait_mil_sumire_small
+				large=GFX_portrait_MIL_sumire
+				small=GFX_portrait_MIL_sumire_small
 			}	
 		}
 
@@ -829,13 +850,15 @@
 		}
 
         field_marshal = {
-			traits = {}
+			traits = {trait_cautious infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			attack_skill = 2
+			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 1
 		}
 
 	}
     ###千禧年MIL 结束###
+}

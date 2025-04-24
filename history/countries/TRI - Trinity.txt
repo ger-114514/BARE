@@ -1,5 +1,5 @@
-capital = 16
-oob = "standard_templates"
+capital = 118
+oob = "TRI_2019"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -7,92 +7,451 @@ set_research_slots = 4
 set_fuel_ratio = 0.5
 set_convoys = 20
 starting_train_buffer = 0.5
-starting_truck_buffer = 0.5
 
+	add_to_array = { TRI_politics_tabs = token:TRI_politics_tab_regions }
+	add_to_array = { TRI_politics_selected_tab = token:TRI_politics_tab_regions }
+	set_variable = { selected@TRI_politics_tab_regions = 2 }
 #圣三一权力平衡变量
+##上议院图像坐标
+	add_to_array = { TRI_senators_x_array = 0 }
+	add_to_array = { TRI_senators_y_array = 67 }
+	add_to_array = { TRI_senators_x_array = 16 }
+	add_to_array = { TRI_senators_y_array = 67 }
+	add_to_array = { TRI_senators_x_array = 32 }
+	add_to_array = { TRI_senators_y_array = 67 }
+	add_to_array = { TRI_senators_x_array = 4 }
+	add_to_array = { TRI_senators_y_array = 50 }
+	add_to_array = { TRI_senators_x_array = 21 }
+	add_to_array = { TRI_senators_y_array = 50 }
+	add_to_array = { TRI_senators_x_array = 13 }
+	add_to_array = { TRI_senators_y_array = 35 }
+	add_to_array = { TRI_senators_x_array = 40 }
+	add_to_array = { TRI_senators_y_array = 51 }
+	add_to_array = { TRI_senators_x_array = 32 }
+	add_to_array = { TRI_senators_y_array = 36 }
+	add_to_array = { TRI_senators_x_array = 24 }
+	add_to_array = { TRI_senators_y_array = 22 }
+	add_to_array = { TRI_senators_x_array = 38 }
+	add_to_array = { TRI_senators_y_array = 13 }
+	add_to_array = { TRI_senators_x_array = 46 }
+	add_to_array = { TRI_senators_y_array = 26 }
+	add_to_array = { TRI_senators_x_array = 54 }
+	add_to_array = { TRI_senators_y_array = 40 }
+	add_to_array = { TRI_senators_x_array = 54 }
+	add_to_array = { TRI_senators_y_array = 7 }
+	add_to_array = { TRI_senators_x_array = 63 }
+	add_to_array = { TRI_senators_y_array = 21 }
+	add_to_array = { TRI_senators_x_array = 71 }
+	add_to_array = { TRI_senators_y_array = 36 }
+	add_to_array = { TRI_senators_x_array = 71 }
+	add_to_array = { TRI_senators_y_array = 5 }
+	add_to_array = { TRI_senators_x_array = 80 }
+	add_to_array = { TRI_senators_y_array = 21 }
+	add_to_array = { TRI_senators_x_array = 88 }
+	add_to_array = { TRI_senators_y_array = 7 }
+	add_to_array = { TRI_senators_x_array = 89 }
+	add_to_array = { TRI_senators_y_array = 40 }
+	add_to_array = { TRI_senators_x_array = 97 }
+	add_to_array = { TRI_senators_y_array = 26 }
+	add_to_array = { TRI_senators_x_array = 104 }
+	add_to_array = { TRI_senators_y_array = 13 }
+	add_to_array = { TRI_senators_x_array = 119 }
+	add_to_array = { TRI_senators_y_array = 22 }
+	add_to_array = { TRI_senators_x_array = 111 }
+	add_to_array = { TRI_senators_y_array = 36 }
+	add_to_array = { TRI_senators_x_array = 103 }
+	add_to_array = { TRI_senators_y_array = 51 }
+	add_to_array = { TRI_senators_x_array = 130 }
+	add_to_array = { TRI_senators_y_array = 35 }
+	add_to_array = { TRI_senators_x_array = 121 }
+	add_to_array = { TRI_senators_y_array = 50 }
+	add_to_array = { TRI_senators_x_array = 138 }
+	add_to_array = { TRI_senators_y_array = 50 }
+	add_to_array = { TRI_senators_x_array = 111 }
+	add_to_array = { TRI_senators_y_array = 67 }
+	add_to_array = { TRI_senators_x_array = 127 }
+	add_to_array = { TRI_senators_y_array = 67 }
+	add_to_array = { TRI_senators_x_array = 143 }
+	add_to_array = { TRI_senators_y_array = 67 }
+##
 
-set_variable = { House_change_num = 0 }#上议会变化总数
+##下议院图像坐标
+	add_to_array = { TRI_house_x_array = 0 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 16 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 31 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 47 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 63 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 79 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 3 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 19 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 35 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 51 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 8 }
+	add_to_array = { TRI_house_y_array = 96 }
+	add_to_array = { TRI_house_x_array = 67 }
+	add_to_array = { TRI_house_y_array = 115 }
+	add_to_array = { TRI_house_x_array = 25 }
+	add_to_array = { TRI_house_y_array = 96 }
+	add_to_array = { TRI_house_x_array = 41 }
+	add_to_array = { TRI_house_y_array = 97 }
+	add_to_array = { TRI_house_x_array = 84 }
+	add_to_array = { TRI_house_y_array = 117 } 
+	add_to_array = { TRI_house_x_array = 15 }
+	add_to_array = { TRI_house_y_array = 79 }
+	add_to_array = { TRI_house_x_array = 59 }
+	add_to_array = { TRI_house_y_array = 97 }
+	add_to_array = { TRI_house_x_array = 33 }
+	add_to_array = { TRI_house_y_array = 78 }
+	add_to_array = { TRI_house_x_array = 76 }
+	add_to_array = { TRI_house_y_array = 99 }
+	add_to_array = { TRI_house_x_array = 50 }
+	add_to_array = { TRI_house_y_array = 81 }
+	add_to_array = { TRI_house_x_array = 25 }
+	add_to_array = { TRI_house_y_array = 63 }
+	add_to_array = { TRI_house_x_array = 45 }
+	add_to_array = { TRI_house_y_array = 63 }
+	add_to_array = { TRI_house_x_array = 93 }
+	add_to_array = { TRI_house_y_array = 103 }
+	add_to_array = { TRI_house_x_array = 70 }
+	add_to_array = { TRI_house_y_array = 81 }
+	add_to_array = { TRI_house_x_array = 37 }
+	add_to_array = { TRI_house_y_array = 48 }
+	add_to_array = { TRI_house_x_array = 62 }
+	add_to_array = { TRI_house_y_array = 67 }
+	add_to_array = { TRI_house_x_array = 88 }
+	add_to_array = { TRI_house_y_array = 86 }
+	add_to_array = { TRI_house_x_array = 58 }
+	add_to_array = { TRI_house_y_array = 49 }
+	add_to_array = { TRI_house_x_array = 51 }
+	add_to_array = { TRI_house_y_array = 35 }
+	add_to_array = { TRI_house_x_array = 84 }
+	add_to_array = { TRI_house_y_array = 69 }
+	add_to_array = { TRI_house_x_array = 77 }
+	add_to_array = { TRI_house_y_array = 55 }
+	add_to_array = { TRI_house_x_array = 106 }
+	add_to_array = { TRI_house_y_array = 92 }
+	add_to_array = { TRI_house_x_array = 74 }
+	add_to_array = { TRI_house_y_array = 38 }
+	add_to_array = { TRI_house_x_array = 66 }
+	add_to_array = { TRI_house_y_array = 25 }
+	add_to_array = { TRI_house_x_array = 103 }
+	add_to_array = { TRI_house_y_array = 76 }
+	add_to_array = { TRI_house_x_array = 93 }
+	add_to_array = { TRI_house_y_array = 46 }
+	add_to_array = { TRI_house_x_array = 101 }
+	add_to_array = { TRI_house_y_array = 59 }
+	add_to_array = { TRI_house_x_array = 83 }
+	add_to_array = { TRI_house_y_array = 16 }
+	add_to_array = { TRI_house_x_array = 91 }
+	add_to_array = { TRI_house_y_array = 29 }
+	add_to_array = { TRI_house_x_array = 121 }
+	add_to_array = { TRI_house_y_array = 85 }
+	add_to_array = { TRI_house_x_array = 101 }
+	add_to_array = { TRI_house_y_array = 10 }
+	add_to_array = { TRI_house_x_array = 110 }
+	add_to_array = { TRI_house_y_array = 39 }
+	add_to_array = { TRI_house_x_array = 120 }
+	add_to_array = { TRI_house_y_array = 69 }
+	add_to_array = { TRI_house_x_array = 109 }
+	add_to_array = { TRI_house_y_array = 24 }
+	add_to_array = { TRI_house_x_array = 119 }
+	add_to_array = { TRI_house_y_array = 53 }
+	add_to_array = { TRI_house_x_array = 119 }
+	add_to_array = { TRI_house_y_array = 6 }
+	add_to_array = { TRI_house_x_array = 128 }
+	add_to_array = { TRI_house_y_array = 36 }
+	add_to_array = { TRI_house_x_array = 128 }
+	add_to_array = { TRI_house_y_array = 21 }
+	add_to_array = { TRI_house_x_array = 138 }
+	add_to_array = { TRI_house_y_array = 83 }
+	add_to_array = { TRI_house_x_array = 138 }
+	add_to_array = { TRI_house_y_array = 67 }
+	add_to_array = { TRI_house_x_array = 138 }
+	add_to_array = { TRI_house_y_array = 51 }
+	add_to_array = { TRI_house_x_array = 138 }
+	add_to_array = { TRI_house_y_array = 5 }
+	add_to_array = { TRI_house_x_array = 147 }
+	add_to_array = { TRI_house_y_array = 21 }
+	add_to_array = { TRI_house_x_array = 147 }
+	add_to_array = { TRI_house_y_array = 36 }
+	add_to_array = { TRI_house_x_array = 156 }
+	add_to_array = { TRI_house_y_array = 6 }
+	add_to_array = { TRI_house_x_array = 157 }
+	add_to_array = { TRI_house_y_array = 53 }
+	add_to_array = { TRI_house_x_array = 166 }
+	add_to_array = { TRI_house_y_array = 24 }
+	add_to_array = { TRI_house_x_array = 156 }
+	add_to_array = { TRI_house_y_array = 69 }
+	add_to_array = { TRI_house_x_array = 165 }
+	add_to_array = { TRI_house_y_array = 39 }
+	add_to_array = { TRI_house_x_array = 175 }
+	add_to_array = { TRI_house_y_array = 10 }
+	add_to_array = { TRI_house_x_array = 154 }
+	add_to_array = { TRI_house_y_array = 85 }
+	add_to_array = { TRI_house_x_array = 184 }
+	add_to_array = { TRI_house_y_array = 29 }
+	add_to_array = { TRI_house_x_array = 193 }
+	add_to_array = { TRI_house_y_array = 16 }
+	add_to_array = { TRI_house_x_array = 175 }
+	add_to_array = { TRI_house_y_array = 59 }
+	add_to_array = { TRI_house_x_array = 183 }
+	add_to_array = { TRI_house_y_array = 46 }
+	add_to_array = { TRI_house_x_array = 173 }
+	add_to_array = { TRI_house_y_array = 76 }
+	add_to_array = { TRI_house_x_array = 209 }
+	add_to_array = { TRI_house_y_array = 25 }
+	add_to_array = { TRI_house_x_array = 202 }
+	add_to_array = { TRI_house_y_array = 38 }
+	add_to_array = { TRI_house_x_array = 170 }
+	add_to_array = { TRI_house_y_array = 92 }
+	add_to_array = { TRI_house_x_array = 199 }
+	add_to_array = { TRI_house_y_array = 55 }
+	add_to_array = { TRI_house_x_array = 191 }
+	add_to_array = { TRI_house_y_array = 69 }
+	add_to_array = { TRI_house_x_array = 225 }
+	add_to_array = { TRI_house_y_array = 35 }
+	add_to_array = { TRI_house_x_array = 217 }
+	add_to_array = { TRI_house_y_array = 49 }
+	add_to_array = { TRI_house_x_array = 187 }
+	add_to_array = { TRI_house_y_array = 86 }
+	add_to_array = { TRI_house_x_array = 213 }
+	add_to_array = { TRI_house_y_array = 67 }
+	add_to_array = { TRI_house_x_array = 238 }
+	add_to_array = { TRI_house_y_array = 48 }
+	add_to_array = { TRI_house_x_array = 205 }
+	add_to_array = { TRI_house_y_array = 81 }
+	add_to_array = { TRI_house_x_array = 182 }
+	add_to_array = { TRI_house_y_array = 103 }
+	add_to_array = { TRI_house_x_array = 231 }
+	add_to_array = { TRI_house_y_array = 63 }
+	add_to_array = { TRI_house_x_array = 250 }
+	add_to_array = { TRI_house_y_array = 63 }
+	add_to_array = { TRI_house_x_array = 225 }
+	add_to_array = { TRI_house_y_array = 81 }
+	add_to_array = { TRI_house_x_array = 200 }
+	add_to_array = { TRI_house_y_array = 99 }
+	add_to_array = { TRI_house_x_array = 242 }
+	add_to_array = { TRI_house_y_array = 78 }
+	add_to_array = { TRI_house_x_array = 217 }
+	add_to_array = { TRI_house_y_array = 97 }
+	add_to_array = { TRI_house_x_array = 260 }
+	add_to_array = { TRI_house_y_array = 79 }
+	add_to_array = { TRI_house_x_array = 192 }
+	add_to_array = { TRI_house_y_array = 117 }
+	add_to_array = { TRI_house_x_array = 234 }
+	add_to_array = { TRI_house_y_array = 97 }
+	add_to_array = { TRI_house_x_array = 251 }
+	add_to_array = { TRI_house_y_array = 96 }
+	add_to_array = { TRI_house_x_array = 208 }
+	add_to_array = { TRI_house_y_array = 115 }
+	add_to_array = { TRI_house_x_array = 268 }
+	add_to_array = { TRI_house_y_array = 96 }
+	add_to_array = { TRI_house_x_array = 224 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 241 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 257 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 273 }
+	add_to_array = { TRI_house_y_array = 114 }
+	add_to_array = { TRI_house_x_array = 197 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 213 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 228 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 244 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 260 }
+	add_to_array = { TRI_house_y_array = 133 }
+	add_to_array = { TRI_house_x_array = 275 }
+	add_to_array = { TRI_house_y_array = 133 }
+##
+##初始化上议院和下议院中的社团
+	#上议院
+	add_to_array = { BA_TRI_senators_association = token:TRI_parliament_association_0 }
+	add_to_array = { BA_TRI_senators_association = token:TRI_parliament_association_1 }
+	add_to_array = { BA_TRI_senators_association = token:TRI_parliament_association_2 }
+	set_variable = { status@TRI_parliament_association_0 = token:BA_TRI_senate_seat }
+	set_variable = { status@TRI_parliament_association_1 = token:BA_TRI_senate_seat }
+	set_variable = { status@TRI_parliament_association_2 = token:BA_TRI_senate_seat }
+	set_variable = { total_seats@BA_TRI_senate_seat = 30 }
+	set_country_flag = TRI_senate_detail_ignored
+	#下议院
+	add_to_array = { BA_TRI_house_association = token:TRI_parliament_association_3 }
+	add_to_array = { BA_TRI_house_association = token:TRI_parliament_association_4 }
+	add_to_array = { BA_TRI_house_association = token:TRI_parliament_association_5 }
+	add_to_array = { BA_TRI_house_association = token:TRI_parliament_association_6 }
+	set_variable = { status@TRI_parliament_association_3 = token:BA_TRI_house_seat }
+	set_variable = { status@TRI_parliament_association_4 = token:BA_TRI_house_seat }
+	set_variable = { status@TRI_parliament_association_5 = token:BA_TRI_house_seat }
+	set_variable = { status@TRI_parliament_association_6 = token:BA_TRI_house_seat }
+	set_variable = { total_seats@BA_TRI_house_seat = 100 }
+	set_country_flag = TRI_house_detail_ignored
+	#总体
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_0 }
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_1 }
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_2 }
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_3 }
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_4 }
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_5 }
+	add_to_array = { TRI_parliament_association = token:TRI_parliament_association_6 }
+	for_each_loop = {
+		array = TRI_parliament_association
+		value = v
+		set_variable = { loyalty@var:v = 1 }
+		#正面影响修正
+		set_variable = { positive_modifier@var:v = 1 }
+		#负面影响修正
+		set_variable = { negative_modifier@var:v = 1 }
+		set_variable = { no_faction@var:v = 0 }
+		set_variable = { detail_ignored@var:v = 1 }
+	}
+	#社团领袖
+	set_variable = { leader@TRI_parliament_association_0 = token:TRI_mika }
+	set_variable = { leader@TRI_parliament_association_1 = token:TRI_nagisa }
+	set_variable = { leader@TRI_parliament_association_2 = token:TRI_seia }
+	set_variable = { leader@TRI_parliament_association_3 = token:TRI_tsurugi }
+	set_variable = { leader@TRI_parliament_association_4 = token:TRI_sakurako }
+	set_variable = { leader@TRI_parliament_association_5 = token:TRI_mine }
+	set_variable = { leader@TRI_parliament_association_6 = token:TRI_ui }
+	#修女会无反应
+	set_variable = { no_faction@TRI_parliament_association_4 = 1 }
+	set_variable = { conservative@TRI_parliament_association_4 = 1 }
+	#议会派系席位
+	#帕特尔派初始值
+	set_variable = { hardliner@TRI_parliament_association_0 = 0.8 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_0 = 0.1 } #温和派席位
+	#菲利乌斯派初始值
+	set_variable = { hardliner@TRI_parliament_association_1 = 0.1 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_1 = 0.2 } #温和派席位
+	#圣库特斯派初始值
+	set_variable = { hardliner@TRI_parliament_association_2 = 0 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_2 = 0.9 } #温和派席位
+	#正义实现委员会
+	set_variable = { hardliner@TRI_parliament_association_3 = 0.7 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_3 = 0.05 } #温和派席位
+	#修女会
+	set_variable = { hardliner@TRI_parliament_association_4 = 0 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_4 = 0 } #温和派席位
+	#救护骑士团
+	set_variable = { hardliner@TRI_parliament_association_5 = 0.25 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_5 = 0.25 } #温和派席位
+	#其他社团
+	set_variable = { hardliner@TRI_parliament_association_6 = 0.2 } #强硬派席位
+	set_variable = { moderate@TRI_parliament_association_6 = 0.5 } #温和派席位
+	#派系支持度
+	set_variable = { support@BOP_hardliner = 0.6 }
+	set_variable = { support@BOP_conservative = 0.8 }
+	set_variable = { support@BOP_moderate = 0.7 }
+	#社团席位总数
+	set_variable = { seatNumber@TRI_parliament_association_0 = 10 }
+	set_variable = { seatNumber@TRI_parliament_association_1 = 10 }
+	set_variable = { seatNumber@TRI_parliament_association_2 = 10 }
+	#决议“委派更多权利”初始效果因数
+	set_variable = { TRI_BOP_transfer_right_effect_factor = 0.5 }
+	#整活用
+	#set_temp_variable = { TRI_focus = token:TRI_parliament_focus_0 }
+	#BA_TRI_set_parliament_focus = yes
+	#选中社团
+	set_variable = { TRI_BOP_selected_association = token:TRI_parliament_association_1 }
+	set_variable = { TRI_BOP_selected_association_leader_name = token:TRI_nagisa_name }
+	set_variable = { TRI_BOP_selected_association_leader_desc = token:TRI_nagisa_description }
+	set_variable = { TRI_BOP_selected_association_leader_portrait = token:TRI_nagisa_parliament_leader_portrait }
+	set_variable = { TRI_BOP_selected_association_desc = token:TRI_parliament_association_1_desc }
+#特殊调查
+	add_to_array = { TRI_investigation_character = token:TRI_koharu }
+	add_to_array = { TRI_investigation_character = token:TRI_hanako }
+	add_to_array = { TRI_investigation_character = token:TRI_azusa }
+	add_to_array = { TRI_investigation_character = token:TRI_hifumi }
+	add_to_array = { TRI_investigation_character_portrait_x = 305 }
+	add_to_array = { TRI_investigation_character_portrait_y = 145 }
+	add_to_array = { TRI_investigation_character_portrait_x = 955 }
+	add_to_array = { TRI_investigation_character_portrait_y = 145 }
+	add_to_array = { TRI_investigation_character_portrait_x = 305 }
+	add_to_array = { TRI_investigation_character_portrait_y = 535 }
+	add_to_array = { TRI_investigation_character_portrait_x = 955 }
+	add_to_array = { TRI_investigation_character_portrait_y = 535 }
 
-set_variable = { Senators_change_num = 0 }#下议会变化总数
+	add_to_array = { TRI_investigation_decisions = token:TRI_koharu_inv1 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_koharu_inv2 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_koharu_inv3 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_koharu_inv4 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hanako_inv1 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hanako_inv2 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hanako_inv3 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hanako_inv4 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_azusa_inv1 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_azusa_inv2 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_azusa_inv3 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_azusa_inv4 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hifumi_inv1 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hifumi_inv2 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hifumi_inv3 }
+	add_to_array = { TRI_investigation_decisions = token:TRI_hifumi_inv4 }
 
-#帕特尔派初始值
-set_variable = { Patel_house_seatNumber = 10 } #帕特尔派席位总数
-set_variable = { Patel_house_seatNum_support = 1 } #帕特尔派支持席位
-set_variable = { Patel_house_seatNum_opposition = 8 } #帕特尔派反对派席位
-set_variable = { Patel_house_seatNum_centrist = 1 } #帕特尔派中间派席位
+	add_to_array = { TRI_investigation_decisions_x = 300 }
+	add_to_array = { TRI_investigation_decisions_y = 75 }
+	add_to_array = { TRI_investigation_decisions_x = 235 }
+	add_to_array = { TRI_investigation_decisions_y = 125 }
+	add_to_array = { TRI_investigation_decisions_x = 365 }
+	add_to_array = { TRI_investigation_decisions_y = 75 }
+	add_to_array = { TRI_investigation_decisions_x = 235 }
+	add_to_array = { TRI_investigation_decisions_y = 195 }
 
-set_variable = { Patel_change_num = 0 }#席位变化值
+	add_to_array = { TRI_investigation_decisions_x = 940 }
+	add_to_array = { TRI_investigation_decisions_y = 75 }
+	add_to_array = { TRI_investigation_decisions_x = 1005 }
+	add_to_array = { TRI_investigation_decisions_y = 75 }
+	add_to_array = { TRI_investigation_decisions_x = 1085 }
+	add_to_array = { TRI_investigation_decisions_y = 125 }
+	add_to_array = { TRI_investigation_decisions_x = 1085 }
+	add_to_array = { TRI_investigation_decisions_y = 195 }
 
-set_country_flag = { #派系立场标记0代表支持,1为中立,2为反对
-	flag = TRI_Patel_position
-	value = 2
-}
+	add_to_array = { TRI_investigation_decisions_x = 235 }
+	add_to_array = { TRI_investigation_decisions_y = 570 }
+	add_to_array = { TRI_investigation_decisions_x = 235 }
+	add_to_array = { TRI_investigation_decisions_y = 640 }
+	add_to_array = { TRI_investigation_decisions_x = 290 }
+	add_to_array = { TRI_investigation_decisions_y = 705 }
+	add_to_array = { TRI_investigation_decisions_x = 365 }
+	add_to_array = { TRI_investigation_decisions_y = 705 }
 
-#菲利乌斯派初始值
-set_variable = { Filius_house_seatNumber = 10 } 
-set_variable = { Filius_house_seatNum_support = 2 }
-set_variable = { Filius_house_seatNum_opposition = 1 }
-set_variable = { Filius_house_seatNum_centrist = 7 }
+	add_to_array = { TRI_investigation_decisions_x = 1085 }
+	add_to_array = { TRI_investigation_decisions_y = 570 }
+	add_to_array = { TRI_investigation_decisions_x = 1085 }
+	add_to_array = { TRI_investigation_decisions_y = 640 }
+	add_to_array = { TRI_investigation_decisions_x = 1025 }
+	add_to_array = { TRI_investigation_decisions_y = 705 }
+	add_to_array = { TRI_investigation_decisions_x = 950 }
+	add_to_array = { TRI_investigation_decisions_y = 705 }
+	set_variable = { event@TRI_koharu_inv1 = 210 }
+	set_variable = { event@TRI_koharu_inv2 = 211 }
+	set_variable = { event@TRI_koharu_inv3 = 212 }
+	set_variable = { event@TRI_koharu_inv4 = 213 }
+	set_variable = { event@TRI_azusa_inv1 = 220 }
+	set_variable = { event@TRI_azusa_inv2 = 221 }
+	set_variable = { event@TRI_azusa_inv3 = 222 }
+	set_variable = { event@TRI_azusa_inv4 = 223 }
+	set_variable = { event@TRI_hanako_inv1 = 230 }
+	set_variable = { event@TRI_hanako_inv2 = 231 }
+	set_variable = { event@TRI_hanako_inv3 = 232 }
+	set_variable = { event@TRI_hanako_inv4 = 233 }
+	set_variable = { event@TRI_hifumi_inv1 = 240 }
+	set_variable = { event@TRI_hifumi_inv2 = 241 }
+	set_variable = { event@TRI_hifumi_inv3 = 242 }
+	set_variable = { event@TRI_hifumi_inv4 = 243 }
 
-set_variable = { Filius_change_num = 0 }
-
-set_country_flag = {
-	flag = TRI_Filius_posiion
-	value = 1
-}
-
-#圣库特斯派初始值
-set_variable = { Cootes_house_seatNumber = 10 }
-set_variable = { Cootes_house_seatNum_support = 9 }
-set_variable = { Cootes_house_seatNum_opposition = 0 }
-set_variable = { Cootes_house_seatNum_centrist = 1 }
-
-set_variable = { Cootes_change_num = 0 }
-
-set_country_flag = {
-	flag = TRI_Cootes_position
-	value = 0
-}
-
-TRI_house_init_parliament = yes
-
-#下议院
-
-#正义实现委员会
-set_variable = { Justice_senators_seatNumber = 20 }
-set_variable = { Justice_senators_seatNum_support = 1 }
-set_variable = { Justice_senators_seatNum_opposition = 14 }
-set_variable = { Justice_senators_seatNum_centrist = 5 }
-
-#修女会
-set_variable = { Teresa_senators_seatNumber = 20 }
-set_variable = { Teresa_senators_seatNum_support = 0 }
-set_variable = { Teresa_senators_seatNum_opposition = 0 }
-set_variable = { Teresa_senators_seatNum_centrist = 20 }
-
-#救护骑士团
-set_variable = { Knight_senators_seatNumber = 20 }
-set_variable = { Knight_senators_seatNum_support = 5 }
-set_variable = { Knight_senators_seatNum_opposition = 5 }
-set_variable = { Knight_senators_seatNum_centrist = 10 }
-
-#其他社团
-set_variable = { Others_senators_seatNumber = 40 }
-set_variable = { Others_senators_seatNum_support = 20 }
-set_variable = { Others_senators_seatNum_opposition = 8 }
-set_variable = { Others_senators_seatNum_centrist = 12 }
-
-#主要下议院派系标记
-set_country_flag = { #0代表正义，1代表修女会，2代表救护骑士团，3代表其他社团	
-	flag = TRI_main_senators_party
-	value = 0
-}
-
-TRI_senators_init_parliament = yes
-
-#桐藤渚政治偏执度设计
-set_variable = { TRI_nagisa_paranoia_total = 0 } #偏执度总计，上限为100，用于计算数值范围触发事件
-set_variable = { TRI_nagisa_paranoia_modifier_increase = 2 } #每周偏执度
 
 #【《伊甸条约》方针】全部民族精神变量
 set_variable = { eden_daily_power_gain = -0.75 }
@@ -160,25 +519,160 @@ set_variable = { tim_civ_to_mil_cost = 0 }
 set_variable = { tim_mil_to_civ_cost = 0 }
 set_variable = { tim_production_lack = 0 }
 
-# Starting tech
+#【圣三一军备】民族精神变量
+set_variable = { TRI_trinity_military_land_doctrine_cost_factor = 0.5 }
+set_variable = { TRI_trinity_military_army_org_factor = -0.1 }
+set_variable = { TRI_trinity_military_industrial_capacity_factory = -0.1 }
+add_dynamic_modifier = { modifier = TRI_trinity_military }
+
+set_variable = { TRI_senate_decision_effect_factor = 1 }
+set_variable = { TRI_house_decision_effect_factor = 1 }
 set_technology = {
-}
+	#光荣悠久的圣三一
 
+	#突破
+	T1_infantry_weapon = 1
+	T2_infantry_weapon = 1
+	T3_infantry_weapon = 1
+	T1_mobile_vehicle = 1
+	T2_mobile_vehicle = 1
+	#T3_mobile_vehicle = 1
+	T1_assult_vehicle = 1
+	T2_assult_vehicle = 1
+	#T3_assult_vehicle = 1
+	T1_drone = 1
+	#T2_drone = 1
+	T1_electronic = 1
+	T2_electronic = 1
+	T1_production = 1
+	T2_production = 1
+
+	#BD
+	bd_level_T1 = 1
+	bd_level_T2 = 1
+	bd_level_T3 = 1
+	bd_history = 1
+	bd_politics = 1
+	bd_art = 1
+
+	#工程学（电子学electronics）
+	Personal_Computer_T1 = 1
+	Personal_Computer_T2 = 1
+	Digital_control_system_T1 = 1
+	Industrial_Robots_T1 = 1
+	Communications_radar_T1 = 1
+	Communications_radar_T2 = 1
+	Communication_Network_T1 = 1
+	Communication_Network_T2 = 1
+
+	#工业资源
+	industrial_complex_T1 = 1
+	industrial_complex_T2 = 1
+	#Opaz_Power_Generation_T1 = 1
+	Power_Development_T2 = 1
+	Metal_Refining_T1 = 1
+	Metal_Refining_T2 = 1
+	Electronic_technology_upgrade_T1 = 1
+	Rare_metal_smelting_T1 = 1
+	Oil_Processing_T1 = 1
+	#Opaz_smelting_T1 = 1
+
+	#工业
+	Industrial_construction_T1 = 1
+	Industrial_construction_T2 = 1
+	Heavy_industry_T1 = 1
+	Infrastructure_construction_T1 = 1
+	Infrastructure_construction_T2 = 1
+	Train_T1 = 1
+
+	#空军（无人机）
+	recon_drone = 1
+	light_fighting_drone = 1
+	light_attack_drone = 1
+	fighting_drone = 1
+	attack_drone = 1
+
+	#装甲车辆（坦克）
+	light_tank_MK1 = 1
+	light_tank_artillery_MK1 = 1
+	medium_tank_MK1 = 1
+	heavy_tank_MK1 = 1
+
+	#机动载具
+	civilian_car_equipment_T1 = 1
+	Civilian_helicopter_T1 = 1
+	attack_helicopter_T2 = 1
+	General_helicopter_T2 = 1
+	Infantry_fighting_vehicle_T1 = 1
+	Armored_Vehicles_T1 = 1
+
+	#支援装备
+	fire_support_weapons_T1 = 1
+	fire_support_weapons_upgrade_1_T2 = 1
+	fire_support_weapons_upgrade_2_T2 = 1
+	fire_support_weapons_upgrade_4_T2 = 1
+	light_fire_support_weapons_T3 = 1
+	heavy_fire_support_weapons_T3 = 1
+	support_equipment_T1 = 1
+	support_logistics_T2 = 1
+	support_security_T2 = 1
+	air_defense_weapons_T1 = 1
+	air_defense_weapons_T21 = 1
+	air_defense_weapons_T22 = 1
+
+	#步兵装备
+	infantry_weapons_T1 = 1
+	infantry_weapons_T2 = 1
+	
+
+	infantry_weapons_upgrade_uniform_T1 = 1
+	infantry_weapons_upgrade_uniform_T2 = 1
+	
+	infantry_weapons_upgrade_armor_T2 = 1
+	infantry_weapons_upgrade_carrying_gear_T2 = 1
+	troop_training_T1 = 1
+	#troop_training_T2 = 1
+	infantry_weapons_upgrade_communication_T1 = 1
+	infantry_weapons_upgrade_communication_T2 = 1
+	infantry_weapons_upgrade_suppressive_weapon_T1 = 1
+	infantry_weapons_upgrade_suppressive_weapon_T2 = 1
+	infantry_weapons_upgrade_sighting_T1 = 1
+}
 add_ideas = {
-
+	BARE_Combat_Readiness_Start_Idea
+	BARE_Global_College_Autonomous_Region
 }
-
 recruit_character = TRI_nagisa
+recruit_character = TRI_seia
+recruit_character = TRI_mika
+recruit_character = TRI_shimiko
+recruit_character = TRI_ui
+recruit_character = TRI_reisa
+recruit_character = TRI_suzumi
+recruit_character = TRI_hifumi
+recruit_character = TRI_azusa
+recruit_character = TRI_hanako
+recruit_character = TRI_koharu
+recruit_character = TRI_mine
+recruit_character = TRI_hanae
+recruit_character = TRI_serina
+recruit_character = TRI_tsurugi
+recruit_character = TRI_hasumi
+recruit_character = TRI_mashiro
+recruit_character = TRI_ichika
+recruit_character = TRI_natsu
+recruit_character = TRI_airi
+recruit_character = TRI_yoshimi
+recruit_character = TRI_kazusa
+recruit_character = TRI_hinata
+recruit_character = TRI_sakurako
+recruit_character = TRI_mari
+recruit_character = TRI_commission_of_air_ground
+recruit_character = TRI_missing_nagisa
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = yes
+	ruling_party = no_ideology
 }
 set_popularities = {
-	democratic = 100
-	fascism = 0
-	communism = 0
-	neutrality = 0
+	no_ideology = 100
 }

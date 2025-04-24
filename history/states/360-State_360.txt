@@ -5,10 +5,20 @@ state={
 		650 1058 1082 1129 1771 1828 2541 3633 3721 4260 5229 5466 5861 6195 6434 6722 7291 7696 8734 12203 12209 12215 12222 12235 12245 12247 12250 
 	}
 	history = {
-		owner = TRI
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+		}
+		owner = A05
+		add_core_of=A05
 		add_core_of=TRI
+		victory_points = {1129 5}
+		victory_points = {650 5}
     }
-	manpower=0
+	manpower=24050
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

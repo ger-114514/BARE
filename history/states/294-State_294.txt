@@ -5,12 +5,19 @@ state={
 		6335 6580 9200 10556 
 	}
 	history = {
-		owner = HYA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 2
+			air_base = 1
+		}
+		owner = A16
+		add_core_of=A16
 		add_core_of=HYA
 		victory_points = {6335 10}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=178000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

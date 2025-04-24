@@ -1,5 +1,5 @@
-capital = 24
-oob = "standard_templates"
+capital = 187
+oob = "GEH_2019"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -7,27 +7,148 @@ set_research_slots = 4
 set_fuel_ratio = 0.5
 set_convoys = 20
 starting_train_buffer = 0.5
-starting_truck_buffer = 0.5
 
 # Starting tech
 set_technology = {
+	#无敌的格黑娜，拥有恐怖的T3装甲
+
+	#突破
+	T1_infantry_weapon = 1
+	T2_infantry_weapon = 1
+	T3_infantry_weapon = 1
+	T1_mobile_vehicle = 1
+	T2_mobile_vehicle = 1
+	#T3_mobile_vehicle = 1
+	T1_assult_vehicle = 1
+	T2_assult_vehicle = 1
+	T3_assult_vehicle = 1
+	T1_drone = 1
+	#T2_drone = 1
+	T1_electronic = 1
+	T2_electronic = 1
+	T1_production = 1
+	T2_production = 1
+
+	#BD
+	bd_level_T1 = 1
+	bd_level_T2 = 1
+	bd_chemistry = 1
+	bd_sports = 1
+
+	#工程学（电子学electronics）
+	Personal_Computer_T1 = 1
+	Personal_Computer_T2 = 1
+	Digital_control_system_T1 = 1
+	Industrial_Robots_T1 = 1
+	Communications_radar_T1 = 1
+	Communications_radar_T2 = 1
+	Communication_Network_T1 = 1
+	Communication_Network_T2 = 1
+
+	#工业资源
+	industrial_complex_T1 = 1
+	industrial_complex_T2 = 1
+	#Opaz_Power_Generation_T1 = 1
+	Power_Development_T2 = 1
+	Metal_Refining_T1 = 1
+	Electronic_technology_upgrade_T1 = 1
+	Rare_metal_smelting_T1 = 1
+	Oil_Processing_T1 = 1
+	#Opaz_smelting_T1 = 1
+
+	#工业
+	Industrial_construction_T1 = 1
+	Industrial_construction_T2 = 1
+	Heavy_industry_T1 = 1
+	Infrastructure_construction_T1 = 1
+	Infrastructure_construction_T2 = 1
+	Train_T1 = 1
+	Train_T2 = 1
+
+	#空军（无人机）
+	recon_drone = 1
+	light_fighting_drone = 1
+	light_attack_drone = 1
+	#fighting_drone = 1
+	#attack_drone = 1
+
+	#装甲车辆（坦克）
+	light_tank_MK1 = 1
+	medium_tank_MK1 = 1
+	medium_tank_MK2 = 1
+	heavy_tank_MK1 = 1
+	assault_vehicle_attack_upgrade1 = 1
+	assault_vehicle_defence_upgrade1 = 1
+
+	#机动载具
+	civilian_car_equipment_T1 = 1
+	Civilian_helicopter_T1 = 1
+	#attack_helicopter_T2 = 1
+	General_helicopter_T2 = 1
+	Infantry_fighting_vehicle_T1 = 1
+	Armored_Vehicles_T1 = 1
+
+	#支援装备
+	fire_support_weapons_T1 = 1
+	support_equipment_T1 = 1
+	support_engineer_T2 = 1
+	#support_logistics_T2 = 1
+	#support_security_T2 = 1
+	air_defense_weapons_T1 = 1
+
+	#步兵装备
+	infantry_weapons_T1 = 1
+	infantry_weapons_T2 = 1
+	
+
+	infantry_weapons_upgrade_uniform_T1 = 1
+	infantry_weapons_upgrade_uniform_T2 = 1
+	
+	infantry_weapons_upgrade_armor_T2 = 1
+	infantry_weapons_upgrade_carrying_gear_T2 = 1
+	troop_training_T1 = 1
+	#troop_training_T2 = 1
+	infantry_weapons_upgrade_communication_T1 = 1
+	infantry_weapons_upgrade_communication_T2 = 1
+	infantry_weapons_upgrade_suppressive_weapon_T1 = 1
+	infantry_weapons_upgrade_suppressive_weapon_T2 = 1
+	infantry_weapons_upgrade_sighting_T1 = 1
 }
 
 add_ideas = {
-
+	BARE_Combat_Readiness_Start_Idea #计算开局人力用
+	GEH_factory_management_in_chaos #混乱的工厂
+	BARE_Global_College_Autonomous_Region
 }
 
 recruit_character = GEH_hina
+recruit_character = GEH_ako
+recruit_character = GEH_iori
+recruit_character = GEH_chinatsu
+recruit_character = GEH_makoto
+recruit_character = GEH_iroha
+recruit_character = GEH_ibuki
+recruit_character = GEH_satsuki
+recruit_character = GEH_aru
+recruit_character = GEH_mutsuki
+recruit_character = GEH_kayoko
+recruit_character = GEH_haruka
+recruit_character = GEH_fuuka
+recruit_character = GEH_juri
+recruit_character = GEH_haruna
+recruit_character = GEH_izumi
+recruit_character = GEH_junko
+recruit_character = GEH_akari
+recruit_character = GEH_sena
+recruit_character = GEH_megu
+recruit_character = GEH_kasumi
+recruit_character = GEH_erika
+recruit_character = GEH_kirara
 
 set_politics = {
-	ruling_party = democratic
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = yes
+	ruling_party = no_ideology
+
 }
 set_popularities = {
-	democratic = 100
-	fascism = 0
-	communism = 0
-	neutrality = 0
+	no_ideology = 100
 }

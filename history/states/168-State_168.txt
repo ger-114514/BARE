@@ -1,15 +1,23 @@
 state={
 	id=168
 	name="STATE_168"
+	resources={
+	}
 	provinces={
 		123 5706 7384 10941 10943 
 	}
 	history = {
-		owner = GEH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = A11
+		add_core_of=A11
 		add_core_of=GEH
     }
-	manpower=1
-	state_category = pastoral
+	manpower=165000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

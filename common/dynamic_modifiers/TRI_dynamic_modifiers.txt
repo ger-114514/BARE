@@ -150,20 +150,50 @@ eden_treaty_step_5_modifier = { #【逐渐稳定的《伊甸条约》】
 	#科技方面
 	research_speed_factor = eden_broken_research_speed
 }
-
+TRI_devastated_by_arius = {
+	icon = "GFX_idea_unknown"
+	stability_weekly = TRI_devastated_by_arius_stability_weekly
+	political_power_gain = TRI_devastated_by_arius_political_power_gain
+	industrial_capacity_factory = TRI_devastated_by_arius_industrial_capacity_factory
+	consumer_goods_factor = TRI_devastated_by_arius_consumer_goods_factor
+	army_org_factor = TRI_devastated_by_arius_army_org_factor
+	army_attack_factor = TRI_devastated_by_arius_army_attack_factor
+	army_defence_factor = TRI_devastated_by_arius_army_defence_factor
+	disabled_ideas = TRI_devastated_by_arius_disabled_ideas
+}
 #混乱的前线
-TRI_chaotic_frontline = { #【混乱的前线】
+TRI_chaotic_frontline = {
 
 	icon = "GFX_idea_unknown"
 	enable = { always = yes }
 
 	army_org_factor = cf_army_org_factor
 	army_org_regain = cf_army_org_regain
+	army_strength_factor = cf_army_strength_factor
+	breakthrough_factor = cf_breakthrough_factor
 	land_reinforce_rate = cf_land_reinforce_rate
 	training_time_factor = cf_training_time_factor
 	army_core_attack_factor = cf_army_core_attack_factor
 	army_core_defence_factor = cf_army_core_defence_factor
 	experience_gain_army_factor = 	cf_experience_gain_army_factor
+}
+#携手并肩的前线
+TRI_chaotic_frontline_2 = {
+
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	army_org_factor = cf_army_org_factor
+	army_org_regain = cf_army_org_regain
+	army_strength_factor = cf_army_strength_factor
+	breakthrough_factor = cf_breakthrough_factor
+	land_reinforce_rate = cf_land_reinforce_rate
+	training_time_factor = cf_training_time_factor
+	army_core_attack_factor = cf_army_core_attack_factor
+	army_core_defence_factor = cf_army_core_defence_factor
+	experience_gain_army_factor = 	cf_experience_gain_army_factor
+	minimum_training_level = cf_minimum_training_level
+	weekly_manpower = cf_weekly_manpower
 }
 
 #特别调查部
@@ -263,4 +293,104 @@ trinity_industry_modifier_alt = {#添加装备增益后的动态民族精神
 	conversion_cost_civ_to_mil_factor = tim_civ_to_mil_cost
 	conversion_cost_mil_to_civ_factor = tim_mil_to_civ_cost
 
+}
+#团结度修正
+TRI_unity_modifier = {
+	
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+	
+	political_power_gain = TRI_unity_power_gain
+	command_power_gain_mult = TRI_unity_command_power_gain_mult
+	max_command_power_mult = TRI_unity_max_command_power_mult
+	stability_factor = TRI_unity_stability
+	army_core_attack_factor = TRI_unity_army_core_factor
+	army_core_defence_factor = TRI_unity_army_core_factor
+	army_org_factor = TRI_unity_army_org_factor
+	army_org_regain = TRI_unity_army_org_regain
+	land_reinforce_rate = TRI_unity_land_reinforce_rate
+	consumer_goods_factor = TRI_unity_consumer_goods_factor
+	industrial_capacity_factory = TRI_unity_industrial_capacity_factory
+}
+#焦点修正
+TRI_parliament_focus_modifier = {
+	icon = "GFX_idea_unknown"
+	enable = { has_variable = TRI_parliament_focus }
+	consumer_goods_factor = TRI_focus_consumer_goods_factor
+	stability_weekly = TRI_focus_stability_weekly
+	war_support_factor = TRI_focus_war_support_factor
+}
+#地区稳定度
+TRI_state_region_stability_modifier = {
+	icon = GFX_decision_hol_inundate_water_lines
+	local_manpower = region_local_manpower
+	state_resources_factor = region_state_resources_factor
+	state_production_speed_buildings_factor = region_state_production_speed_factor
+}
+TRI_rebuilding_subsidy_modifier = {
+	icon = "GFX_idea_unknown"
+	state_repair_speed_industrial_complex_factor = 0.2
+	state_repair_speed_arms_factory_factor = 0.2
+	state_repair_speed_infrastructure_factor = 0.2
+	state_production_speed_buildings_factor = 0.15
+}
+#物资减少
+TRI_state_less_material = {
+	icon = "GFX_idea_unknown"
+	state_production_speed_buildings_factor = -0.25
+	army_speed_factor_for_controller = -0.2
+}
+#额外物资调配
+TRI_state_more_material = {
+	icon = "GFX_idea_unknown"
+	state_production_speed_buildings_factor = 0.25
+}
+#圣三一军备
+TRI_trinity_military = {
+	icon = "GFX_idea_unknown"
+	mobilization_speed = TRI_trinity_military_mobilization_speed
+	consumer_goods_factor = TRI_trinity_military_consumer_goods_factor
+	combat_readiness_recovery_percentage = TRI_trinity_military_combat_readiness_recovery_percentage
+	can_use_combat_readiness_percentage = TRI_trinity_military_can_use_combat_readiness_percentage
+	land_doctrine_cost_factor = TRI_trinity_military_land_doctrine_cost_factor
+	army_org_factor = TRI_trinity_military_army_org_factor
+	army_org_regain = TRI_trinity_military_army_org_regain
+	experience_loss_factor = TRI_trinity_military_experience_loss_factor
+	training_time_factor = TRI_trinity_military_training_time_factor
+	minimum_training_level = TRI_trinity_military_minimum_training_level
+	army_infantry_attack_factor = TRI_trinity_military_army_infantry_attack_factor
+	army_attack_factor = TRI_trinity_military_army_attack_factor
+	army_defence_factor = TRI_trinity_military_army_defence_factor
+	army_leader_start_attack_level = TRI_trinity_military_army_leader_start_attack_level
+	planning_speed = TRI_trinity_military_planning_speed
+	command_power_gain_mult = TRI_trinity_military_command_power_gain_mult
+	max_command_power = TRI_trinity_military_max_command_power
+	research_speed_factor = TRI_trinity_military_research_speed_factor
+	industrial_capacity_factory = TRI_trinity_military_industrial_capacity_factory
+}
+#受到动摇的信任
+TRI_shaked_nagisa_belief_1 = {
+	icon = "GFX_idea_unknown"
+	stability_weekly = TRI_shaked_nagisa_belief_stability_weekly
+	political_advisor_cost_factor = TRI_shaked_nagisa_belief_political_advisor_cost_factor
+	political_power_cost = TRI_shaked_nagisa_belief_political_power_cost
+	TRI_nagisa_paranoia_modifier_increase = TRI_shaked_nagisa_belief_paranoia_modifier_increase
+	TRI_unity_weekly_modifier = TRI_shaked_nagisa_belief_unity_weekly_modifier
+	Eden_treaty_weights_modifier = TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier
+	production_speed_buildings_factor = TRI_shaked_nagisa_belief_production_speed_buildings_factor
+	consumer_goods_factor = TRI_shaked_nagisa_belief_consumer_goods_factor
+	line_change_production_efficiency_factor = TRI_shaked_nagisa_belief_line_change_production_efficiency_factor
+}
+#守任堪信
+TRI_shaked_nagisa_belief_2 = {
+	icon = "GFX_idea_unknown"
+	stability_weekly = TRI_shaked_nagisa_belief_stability_weekly
+	political_advisor_cost_factor = TRI_shaked_nagisa_belief_political_advisor_cost_factor
+	political_power_cost = TRI_shaked_nagisa_belief_political_power_cost
+	TRI_nagisa_paranoia_modifier_increase = TRI_shaked_nagisa_belief_paranoia_modifier_increase
+	TRI_unity_weekly_modifier = TRI_shaked_nagisa_belief_unity_weekly_modifier
+	Eden_treaty_weights_modifier = TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier
+	production_speed_buildings_factor = TRI_shaked_nagisa_belief_production_speed_buildings_factor
+	consumer_goods_factor = TRI_shaked_nagisa_belief_consumer_goods_factor
+	line_change_production_efficiency_factor = TRI_shaked_nagisa_belief_line_change_production_efficiency_factor
 }

@@ -1,14 +1,24 @@
 state={
 	id=535
 	name="STATE_535"
+	resources={
+		resources_pm = 10
+	}
 	provinces={
 		142 351 829 847 1378 2902 3083 3739 3772 4256 4514 5410 5764 6197 7325 7345 7421 7816 8360 9516 10889 10929 11016 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
 		owner = CAO
 		add_core_of=CAO
+		victory_points = {3083 1}
     }
-	manpower=0
+	manpower=146000
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

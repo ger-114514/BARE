@@ -5,10 +5,15 @@ state={
 		325 381 774 998 2099 2166 2204 2299 2598 2849 3389 3443 3879 4373 4760 5088 5375 5392 5739 6182 6449 7648 8169 9484 9572 9737 9754 9761 9776 9777 9784 9791 9798 9799 9803 9818 
 	}
 	history={
+		buildings = {
+			infrastructure = 3
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points ={5088 5}
 	}
-	manpower=0
+	manpower=45800
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

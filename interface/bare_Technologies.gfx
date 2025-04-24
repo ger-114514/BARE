@@ -11,4 +11,52 @@ spriteTypes = {
 		name = "GFX_helicopter_airframe_2_medium"
 		texturefile = "gfx/interface/technologies/balp_helicopter_srt.dds"
 	}
+
+	spriteType = {
+		name = "GFX_infantry_equipment_medium"
+		texturefile = "gfx/interface/technologies/次等步兵装备_标准.png"
+	}
+
+	spriteType = {
+		name = "GFX_infantry_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/次等步兵装备_标准.png"
+	}
+	spriteType = {
+		name = "GFX_infantry_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/标准步兵装备.dds"
+	}
+	spriteType = {
+		name = "GFX_infantry_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/制式步兵装备.dds"
+	}
+	spriteType = {
+		name = "GFX_infantry_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/高级步兵装备.dds"
+	}
+	spriteType = {
+		name = "GFX_infantry_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/先进步兵装备.dds"
+	}
+
+	#科技
+	spriteType = {
+		name = "GFX_infantry_weapons_T1_medium"
+		texturefile = "gfx/interface/technologies/次等步兵装备_标准.png"
+	}
+	spriteType = {
+		name = "GFX_infantry_weapons_T2_medium"
+		texturefile = "gfx/interface/technologies/标准步兵装备.dds"
+	}
+	spriteType = {
+		name = "GFX_infantry_weapons_T3_medium"
+		texturefile = "gfx/interface/technologies/制式步兵装备.dds"
+	}
+	spriteType = {
+		name = "GFX_infantry_weapons_T4_medium"
+		texturefile = "gfx/interface/technologies/高级步兵装备.dds"
+	}
+	spriteType = {
+		name = "GFX_infantry_weapons_T5_medium"
+		texturefile = "gfx/interface/technologies/先进步兵装备.dds"
+	}
 }

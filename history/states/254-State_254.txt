@@ -5,11 +5,18 @@ state={
 		1044 1138 3612 3889 4069 4749 4953 7318 7884 7985 10202 10232 10240 10272 
 	}
 	history={
-		owner = RWT
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 5
+		}
+		owner = A34
+		add_core_of=A34
 		add_core_of=RWT
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=287000
+	state_category = megalopolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

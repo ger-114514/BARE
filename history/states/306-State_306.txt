@@ -4,12 +4,21 @@ state={
 	provinces={
 		1433 1626 1776 3329 3604 4747 5465 8692 10576 10586 10596 
 	}
+	resources = {
+		resources_rm = 20
+	}
 	history = {
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			anti_air_building = 3
+			heavy_arms_factory = 4
+		}
 		owner = GEH
 		add_core_of=GEH
     }
-	manpower=1
-	state_category = pastoral
+	manpower=747900
+	state_category = megalopolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

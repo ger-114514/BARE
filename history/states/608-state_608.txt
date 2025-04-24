@@ -5,11 +5,16 @@ state={
 		171 492 608 1124 1269 1674 1836 1890 2533 2554 2568 4125 4180 4254 4476 4522 4624 4848 4990 5248 5265 5277 5656 5932 6374 6436 6481 6710 7057 7230 8756 9225 10381 10400 10416 10445 10513 
 	}
 	history={
-		owner = RWT
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+		}
+		owner = A33
+		add_core_of=A33
 		add_core_of=RWT
 	}
-	manpower=0
-	state_category=wasteland
+	manpower=41000
+	state_category=city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -1,14 +1,34 @@
-    SRT_miyako  ={ 
+characters = {
+   SRT_kairo ={
+   	name=CEN_kairo_name
+   	portraits={
+   		civilian={
+   			large=GFX_portrait_CEN_kaijo
+   			small=GFX_portrait_CEN_kaijo_small
+   		}
+   	}
+
+       country_leader = {
+   		ideology = no_ideology_type
+   		traits = { srt_unknow_leader }
+   		expire = "-1.1.1.1"
+   		id = -1
+   	}
+
+   }
+
+
+	SRT_miyako  ={ 
 		name=SRT_miyako_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_srt_miyako 
-				small=GFX_portrait_srt_miyako_small
+				large=GFX_portrait_SRT_miyako 
+				small=GFX_portrait_SRT_miyako_small
 			}	
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { rabbit_of_kabano }
 			expire = "-1.1.1.1"
 			id = -1
@@ -32,13 +52,14 @@
 			}
 		}
 
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+        corps_commanders = {
+			traits = {offensive_doctrine  trickster
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
 		}
 
 	}
@@ -47,8 +68,8 @@
 		name=SRT_saki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_srt_saki 
-				small=GFX_portrait_srt_saki_small
+				large=GFX_portrait_SRT_saki 
+				small=GFX_portrait_SRT_saki_small
 			}	
 		}
 
@@ -71,12 +92,13 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer harsh_leader 
+			}
+			skill = 2
+			attack_skill = 4
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
 
 	}
@@ -85,8 +107,8 @@
 		name=SRT_miyu_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_srt_miyu 
-				small=GFX_portrait_srt_miyu_small
+				large=GFX_portrait_SRT_miyu 
+				small=GFX_portrait_SRT_miyu_small
 			}	
 		}
 
@@ -109,12 +131,13 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {infantry_officer camouflage_expert
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
@@ -123,8 +146,8 @@
 		name=SRT_moe_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_srt_moe 
-				small=GFX_portrait_srt_moe_small
+				large=GFX_portrait_SRT_moe 
+				small=GFX_portrait_SRT_moe_small
 			}	
 		}
 
@@ -147,12 +170,14 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {bearer_of_artillery trait_engineer
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
+}

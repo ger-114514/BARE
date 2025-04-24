@@ -28,11 +28,23 @@ sub_unit_categories = {
 	category_bus
 
 	category_normlly_infantry #普通步兵
-	category_special_infantry #普通步兵
+	category_special_infantry #神秘步兵
 	category_student_unit#学生单位
 	category_civ_unit#学生单位
 	category_light_artillery#爆发火力支援单位
 	category_heavy_artillery#贯穿火力支援单位
 	category_special_artillery#神秘火力支援单位
 
+	category_bm#战斗机甲
+	category_mech#步战车
+	category_mech_art
+	category_mech_at
+	category_mech_aa
+	category_attack_heil
+	category_assist_heil
+
+	category_self_propelled_anti_air
+	category_tank_destroyers
+	category_self_propelled_artillery
+	category_assist_vehicles
 }

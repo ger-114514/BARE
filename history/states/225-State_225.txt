@@ -5,12 +5,18 @@ state={
 		210 9462 10873 
 	}
 	history = {
-		owner = D10
-		add_core_of=D10
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 2
+		}
+		owner = A45
+		add_core_of=A45
 		victory_points = {9462 15}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=368700
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

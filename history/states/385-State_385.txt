@@ -4,12 +4,16 @@ state={
 	provinces={
 		1540 4541 4629 5038 6745 7182 7746 10450 10464 
 	}
+	resources = {
+		resources_fe = 10
+	}
 	history = {
-		owner = GEH
+		owner = A09
+		add_core_of=A09
 		add_core_of=GEH
     }
-	manpower=1
-	state_category = pastoral
+	manpower=10000
+	state_category = wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

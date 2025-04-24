@@ -1,14 +1,25 @@
 state={
 	id=418
 	name="STATE_418"
+	resources={
+		resources_rm = 6
+	}
 	provinces={
 		947 1101 2715 3218 4948 5000 5103 6151 6500 6838 6970 7349 7427 7671 9089 9341 11327 11357 11367 11387 11429 11431 11461 
 	}
 	history = {
-		owner = SHA
+		buildings = {
+			infrastructure = 2
+		}
+		owner = A18
+		add_core_of=A18
 		add_core_of=SHA
+		victory_points = {
+			11387 5
+		}
     }
-	manpower=0
+	manpower=14650
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

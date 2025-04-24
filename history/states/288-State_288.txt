@@ -5,12 +5,18 @@ state={
 		450 1520 1798 2989 3257 3820 4184 4928 7061 7531 7836 10137 10158 
 	}
 	history = {
-		owner = HYA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		owner = A15
+		add_core_of=A15
 		add_core_of=HYA
 		victory_points = {3257 15}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=561000
+	state_category = megalopolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

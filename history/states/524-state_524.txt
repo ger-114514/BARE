@@ -5,10 +5,15 @@ state={
 		236 239 1549 1692 3449 4590 6603 6766 7562 9115 10917 10972 11000 11043 11061 11062 
 	}
 	history = {
-		owner = D12
-		add_core_of=D12
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A47
+		add_core_of=A47
+		victory_points = {6766 5}
     }
-	manpower=0
+	manpower=24600
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

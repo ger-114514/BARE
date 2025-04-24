@@ -1,40 +1,229 @@
 ideas = {
 
+	#经济法案系列
 	economy = {
 		law = yes
 		use_list_view = yes
 
-		civilian_economy = {
-
-
+		#经济优先
+		ecolaws_civilian_economy = {
 			cost = 150
 			removal_cost = -1
+			default = yes
+			cancel_if_invalid = no
 
 			modifier = {
-				consumer_goods_factor = 0.35
-				production_speed_industrial_complex_factor = -0.3
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = 0.3
 				production_speed_arms_factory_factor = -0.3
-				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = 0.3
-				max_fuel_factor = -0.25
-				fuel_gain_factor = -0.4
+				production_speed_infrastructure_factor = 0.1
+				production_speed_fuel_silo_factor = 0.2
+				production_speed_synthetic_refinery_factor = 0.2
+				research_speed_factor = 0.05
+				stability_weekly = 0.01
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+
+		#科研第一
+		ecolaws_research_first = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = -0.2
+				production_speed_infrastructure_factor = 0.05
+				research_speed_factor = 0.15
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		#补给优先
+		ecolaws_supply_first = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			available = {
 			}
 
-			default = yes
-
-			cancel_if_invalid = no
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_infrastructure_factor = 0.2
+				production_speed_air_base_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				production_cost_rail_way_factor = -0.5
+				production_cost_supply_node_factor = -0.3
+				research_speed_factor = 0.05
+				stability_weekly = 0.01
+			}
 		}
+
+
+		#军备建设
+		ecolaws_army_first = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			available = {
+				has_war_support > 0.39
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = 0.3
+				production_speed_infrastructure_factor = -0.05
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.2
+			}
+		}
+
+
+		#战时学园
+		ecolaws_war_economy = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			available = {
+				OR = {
+					has_war_support > 0.79
+					has_war = yes
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = 0.05
+				production_speed_air_base_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.2
+				stability_weekly = -0.01
+				war_support_weekly = 0.02
+			}
+		}
+
+
+		###特殊经济法案###
+		#战时学园
+		ecolaws_geh_special_war_economy = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			visible = {
+				original_tag = GEH
+				#TODO：战争结束后自动消失，无法再次解锁
+				#TODO：补全国策
+				#has_completed_focus = 非常措施
+			}
+
+			available = {
+				#TODO：战争结束后自动消失，无法再次解锁
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = -0.05
+				production_speed_air_base_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				research_speed_factor = -0.1
+				industrial_capacity_factory = 0.4
+				stability_weekly = 0.01
+				war_support_weekly = 0.03
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+
+		#夫人控制
+		ecolaws_ari_controlled_by_beatrice = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			visible = {
+				original_tag = ARI
+			}
+
+			available = {
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_fuel_silo_factor = 0.2
+				production_speed_synthetic_refinery_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+				production_speed_air_base_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+
+		#一切为了科研
+		ecolaws_mil_all_for_research = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			visible = {
+				original_tag = MIL
+			}
+
+			available = {
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_fuel_silo_factor = -0.2
+				production_speed_synthetic_refinery_factor = -0.2
+				production_speed_infrastructure_factor = 0.1
+				production_speed_air_base_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				research_speed_factor = 0.25
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+
 	}
 
+
+	#贸易政策大类
 	trade_laws = {
 		law = yes
 		use_list_view = yes
 
-		closed_economy = {
-
+		#封闭经济
+		tralaws_closed_economy = {
 			cost = 150
 			removal_cost = -1
-			default = yes
+			cancel_if_invalid = no
+
+			rule = {
+				can_access_market = no
+				desc = can_not_access_market_closed_economy
+			}
 
 			modifier = {
 				min_export = 0
@@ -45,11 +234,115 @@ ideas = {
 				custom_effect_tooltip = closed_economy_TT
 			}
 
-			cancel_if_invalid = no
+			allowed_to_remove = {
+				NOT = { original_tag = ARI } #阿里乌斯不可切换
+			}
 
 			ai_will_do = {
    				factor = 1
    			}
 		}
+
+
+		#常规交易
+		tralaws_normal_trade = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+			default = yes
+
+			modifier = {
+				min_export = 0.2
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 10.0
+			}
+
+			on_add = {
+			}
+
+			allowed_to_remove = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+
+		#大规模常规交易
+		tralaws_massive_normal_trade = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				min_export = 0.35
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.1
+				civilian_intel_to_others = 20.0
+			}
+
+			on_add = {
+			}
+
+			allowed_to_remove = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+
+		#广泛交易
+		tralaws_massive_trade = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				min_export = 0.5
+				production_speed_buildings_factor = 0.25
+				research_speed_factor = 0.15
+				civilian_intel_to_others = 30.0
+			}
+
+			on_add = {
+			}
+
+			allowed_to_remove = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+
+		#自由贸易
+		tralaws_free_trade = {
+			cost = 150
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				min_export = 0.8
+				production_speed_buildings_factor = 0.35
+				research_speed_factor = 0.2
+				civilian_intel_to_others = 50.0
+			}
+
+			on_add = {
+			}
+
+			allowed_to_remove = {
+			}
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
 	}
 }

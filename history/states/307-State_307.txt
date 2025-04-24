@@ -2,14 +2,20 @@ state={
 	id=307
 	name="STATE_307"
 	provinces={
-		244 274 471 4179 6237 6355 7414 8330 8634 8717 11260 11283 11293 11311 11336 
+		244 274 471 4179 6237 6355 7414 8330 8634 8717 11260 11283 11293 11311 11336
 	}
 	history = {
-		owner = SHA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		owner = A17
+		add_core_of=A17
 		add_core_of=SHA
+		victory_points = {7414 5}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=168700
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

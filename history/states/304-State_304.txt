@@ -5,11 +5,15 @@ state={
 		2064 7039 7290 10537 
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
 		owner = GEH
 		add_core_of=GEH
     }
-	manpower=1
-	state_category = pastoral
+	manpower=871600
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

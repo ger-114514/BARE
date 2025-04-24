@@ -1,96 +1,286 @@
-characters = { #红冬角色
-	RWT_momiji = { #秋泉红叶		
-		name = RWT_momiji_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_momiji"
-				small = "GFX_idea_advisor_RWT_momiji"
-			}
-	}
-
-	RWT_meru = { #姬木爱瑠
-		name = RWT_meru_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_meru"
-				small = "GFX_idea_advisor_RWT_meru"
-			}
-	}
-
-	RWT_marina = { #池仓真里奈,a
-		name = RWT_marina_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_marina"
-				small = "GFX_idea_advisor_RWT_marina"
-			}
-		advisor = {
-			slot =  political_advisor
-			idea_token = RWT_marina_idea
-			allowed  = {
-					original_tag  = RWT
-				}
-				traits  = {
-				}				
-			}
-	}
-
-	RWT_tomoe = { #佐城巴,a
-		name = RWT_tomoe_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_tomoe"
-				small = "GFX_idea_advisor_RWT_tomoe"
-			}
-		advisor = {
-			slot =  political_advisor
-			idea_token = RWT_tomoe_idea
-			allowed  = {
-					original_tag  = RWT
-				}
-				traits  = {
-				}				
-			}
-	}
-
-	RWT_cherino = { #连河切里诺,l,g
+characters = {
+	RWT_cherino = {
 		name = RWT_cherino_name
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_RWT_cherino"
-				small = "GFX_idea_advisor_RWT_cherino"
+				large = GFX_portrait_RWT_cherino
+				small = GFX_portrait_RWT_cherino_small
 			}
+		}
 		country_leader = {
-			#ideology = communism
-			traits = { }
+			ideology = no_ideology_type
+			traits = {
+				forever_chairman
+			}
 			expire = "-1.1.1.1"
 			id = -1
 		}
-		field_marshal = {
-			traits = { }
-			skills = 1
-			attack_skill = 1
+		# advisor = {
+		# 	slot = army_chief
+		# 	idea_token = RWT_cherino_ac
+		# 	allowed = {
+		# 		original_tag = RWT
+		# 	}
+		# 	available = {
+		# 		original_tag = RWT
+		# 	}
+		# 	traits = {
+		# 		great_general_of_redwinter
+		# 	}
+		# 	cost = 100
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+		corps_commander = {
+			traits = {infantry_officer media_personality politically_connected media_personality harsh_leader
+			}
+			skill = 3
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skil = 1
-		}
- 	}
-
-	RWT_merino = { #安守实里,l,g
-		name = RWT_merino_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_merino"
-				small = "GFX_idea_advisor_RWT_merino"
-			}
-		country_leader = {
-			#ideology = communism
-			traits = { }
-			expire = "-1.1.1.1"
-			id = -1
+			planning_skill = 5
+			logistics_skill = 2
 		}
 	}
-
+	RWT_marina = {
+		name = RWT_marina_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_marina
+				small = GFX_portrait_RWT_marina_small
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = RWT_marina_ac
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				red_warrior_leader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {harsh_leader infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	RWT_tomoe = {
+		name = RWT_tomoe_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_tomoe
+				small = GFX_portrait_RWT_tomoe_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_tomoe_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				chief_secretary
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {skilled_staffer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	RWT_nodoka = {
+		name = RWT_nodoka_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_nodoka
+				small = GFX_portrait_RWT_nodoka_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_nadoka_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				far_away_watcher
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {infantry_officer winter_expert
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	RWT_shigure = {
+		name = RWT_shigure_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_shigure
+				small = GFX_portrait_RWT_shigure_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_shigure_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				alchhol_and_morotov
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {winter_expert bearer_of_artillery
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	RWT_minori = {
+		name = RWT_minori_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_minori
+				small = GFX_portrait_RWT_minori_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_minori_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				leader_of_labour_frontier
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {infantry_officer winter_expert logistics_wizard thorough_planner brilliant_strategist
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	RWT_meru = {
+		name = RWT_meru_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_meru
+				small = GFX_portrait_RWT_meru_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_meru_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				leader_of_liberity_frontier
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {winter_expert media_personality
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	RWT_momiji = {
+		name = RWT_momiji_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RWT_momiji
+				small = GFX_portrait_RWT_momiji_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_momiji_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				comic_lover
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {bearer_of_artillery winter_expert
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
 	RWT_takane = { #三善贵音
 		name = RWT_takane_name
 		portraits = {
@@ -98,6 +288,23 @@ characters = { #红冬角色
 				large = "GFX_portrait_RWT_takane"
 				small = "GFX_idea_advisor_RWT_takane"
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_takane_pa
+			allowed = {
+				original_tag = RWT
+			}
+			available = {
+				original_tag = RWT
+			}
+			traits = {
+				great_writer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 	RWT_yakumo = { #荒槙八云
@@ -107,22 +314,22 @@ characters = { #红冬角色
 				large = "GFX_portrait_RWT_yakumo"
 				small = "GFX_idea_advisor_RWT_yakumo"
 			}
-	}
-
-	RWT_shigure = { #间宵时雨
-		name = RWT_shigure_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_shigure"
-				small = "GFX_idea_advisor_RWT_shigure"
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RWT_yakumo_pa
+			allowed = {
+				original_tag = RWT
 			}
-	}
-
-	RWT_nodoka = { #天见和香
-		name = RWT_nodoka_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_nodoka"
-				small = "GFX_idea_advisor_RWT_nodoka"
+			available = {
+				original_tag = RWT
 			}
+			traits = {
+				rw_sponsor_of_books
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
+}

@@ -1,28 +1,29 @@
-
+characters = {
     ###山海经SHA 开始###
     SHA_kisaki ={ 
 		name=SHA_kisaki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_kisaki
-				small=GFX_portrait_sha_kisaki_small
+				large=GFX_portrait_SHA_kisaki
+				small=GFX_portrait_SHA_kisaki_small
 			}	
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { black_monarch }
 			expire = "-1.1.1.1"
 			id = -1
 		}
 
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+        corps_commander = {
+			traits = {expert_delegator thorough_planner  inflexible_strategist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
 		}
 
 	}
@@ -31,8 +32,8 @@
 		name=SHA_mina_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_mina
-				small=GFX_portrait_sha_mina_small
+				large=GFX_portrait_SHA_mina
+				small=GFX_portrait_SHA_mina_small
 			}	
 		}
 
@@ -55,29 +56,30 @@
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {old_guard infantry_officer
+			}
+			skill = 3
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
 		}
 
 	}
 
     #鹿山丽情
-    SHA_reiju ={ 
-		name=SHA_reiju_name 
+    SHA_reijou ={ 
+		name=SHA_reijou_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_reiju
-				small=GFX_portrait_sha_reiju_small
+				large=GFX_portrait_SHA_reijou
+				small=GFX_portrait_SHA_reijou_small
 			}	
 		}
 
 		advisor = {
 			slot = political_advisor
-			idea_token = SHA_reiju_pa
+			idea_token = SHA_reijou_pa
 			allowed = {
 				original_tag = SHA
 			}
@@ -93,12 +95,13 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer trait_engineer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -107,8 +110,8 @@
 		name=SHA_rumi_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_rumi
-				small=GFX_portrait_sha_rumi_small
+				large=GFX_portrait_SHA_rumi
+				small=GFX_portrait_SHA_rumi_small
 			}	
 		}
 
@@ -130,12 +133,13 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
@@ -144,8 +148,8 @@
 		name=SHA_shun_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_shun
-				small=GFX_portrait_sha_shun_small
+				large=GFX_portrait_SHA_shun
+				small=GFX_portrait_SHA_shun_small
 			}	
 		}
 
@@ -165,14 +169,32 @@
 				factor = 1.000
 			}
         }
+        advisor = {
+			slot = high_command
+			idea_token = SHA_shun_ac
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			}
+			traits = {
+				strict_trainer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			traits = {infantry_officer skilled_staffer
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
 
     }
@@ -181,8 +203,8 @@
 		name=SHA_kokona_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_kokona
-				small=GFX_portrait_sha_kokona_small
+				large=GFX_portrait_SHA_kokona
+				small=GFX_portrait_SHA_kokona_small
 			}	
 		}
 
@@ -204,28 +226,29 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer trait_cautious
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
     
-    SHA_saye ={ 
-		name=SHA_saye_name 
+    SHA_saya ={ 
+		name=SHA_saya_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_saye
-				small=GFX_portrait_sha_saye_small
+				large=GFX_portrait_SHA_saya
+				small=GFX_portrait_SHA_saya_small
 			}	
 		}
 
         advisor = {
 			slot = army_chief
-			idea_token = SHA_saye_ac
+			idea_token = SHA_saya_ac
 			allowed = {
 				original_tag = SHA
 			}
@@ -243,7 +266,7 @@
 
 		advisor = {
 			slot = political_advisor
-			idea_token = SHA_saye_pa
+			idea_token = SHA_saya_pa
 			allowed = {
 				original_tag = SHA
 			}
@@ -251,7 +274,7 @@
 				original_tag = SHA
 			} 
 			traits = {
-				avatar_of_anubis_pa
+				great_alchemy_master
 			}
 			ai_will_do = {
 				factor = 1.000
@@ -259,12 +282,13 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {bearer_of_artillery 
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 4
 		}
 
 	}
@@ -274,19 +298,21 @@
 		name=SHA_kai_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sha_kai
-				small=GFX_portrait_sha_kai_small
+				large=GFX_portrait_SHA_kai
+				small=GFX_portrait_SHA_kai_small
 			}	
 		}
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {infantry_officer organizer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
 		}
 
 	}
     ###山海经SHA 结束###
+}

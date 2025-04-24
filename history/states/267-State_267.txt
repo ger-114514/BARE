@@ -5,11 +5,17 @@ state={
 		8910 560 642 2588 4670 9861 
 	}
 	history={
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points ={8190 15}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=687000
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

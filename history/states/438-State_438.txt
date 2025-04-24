@@ -5,11 +5,18 @@ state={
 		79 245 529 933 969 1563 1889 2831 2973 3974 4087 4865 4943 5012 5161 5194 5331 5389 5694 6435 7042 7517 7619 7727 8329 8965 9189 9193 9283 9878 9905 9925 9956 9959 9970 
 	}
 	history = {
-		owner = HYA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 2
+		}
+		owner = A15
+		add_core_of=A15
 		add_core_of=HYA
 		victory_points = {7042 10}
     }
-	manpower=0
+	manpower=68700
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -5,11 +5,15 @@ state={
 		811 1464 3280 4529 10105 10107 
 	}
 	history={
+		buildings = {
+			infrastructure = 3
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points = {3820 1}
 	}
-	manpower=0
-	state_category=wasteland
+	manpower=21000
+	state_category=rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

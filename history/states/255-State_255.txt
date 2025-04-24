@@ -1,15 +1,22 @@
 state={
 	id=255
 	name="STATE_255"
+	resources={
+		resources_pm = 10
+	}
 	provinces={
 		406 5513 6190 8299 9078 
 	}
 	history = {
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
 		owner = CAO
 		add_core_of=CAO
     }
-	manpower=1
-	state_category = pastoral
+	manpower=167000
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

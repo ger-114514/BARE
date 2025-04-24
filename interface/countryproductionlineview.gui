@@ -105,7 +105,7 @@ guiTypes = {
 
 					instanttextboxtype = {
 						name = "resources_fe_value"
-						position = { x = 31 y = 5 }
+						position = { x = 26 y = 5 }
 						texturefile = ""
 						font = "hoi_18mbs"
 						bordersize = {x = 0 y = 0}
@@ -1707,11 +1707,11 @@ guiTypes = {
 
 		gridBoxType = {
 			name = "resources_grid"
-			position = { x = 462 y = 31 }
+			position = { x = 435 y = 31 }
 			size = { width = 40 height = 50 }
-			slotsize = { width = 40 height = 24 }
+			slotsize = { width = 34 height = 24 }
 			max_slots_vertical = 3
-			max_slots_horizontal = 1
+			max_slots_horizontal = 2
 			format = "UPPER_LEFT"
 		}
 
@@ -1758,9 +1758,9 @@ guiTypes = {
 		gridBoxType = {
 			name = "factories_grid"
 			position = { x = 317 y = 33 }
-			size = { width = 150  height = 90 }
+			size = { width = 120  height = 90 }
 			slotsize = { width = 29 height = 23 }
-			max_slots = { x = 5 y = 3 }
+			max_slots = { x = 4 y = 3 }
 			format = "UPPER_LEFT"
 		}
 
@@ -4552,11 +4552,12 @@ guiTypes = {
 
 		gridBoxType = {
 			name = "resources_grid"
-			position = { x = 370 y = 10 }
+			position = { x = 340 y = 10 }
 			size = { width = 48 height = 150 }
 			slotsize = { width = 35 height = 23 }
-			max_slots_vertical = 6
-			max_slots_horizontal = 1
+			max_slots_vertical = 3
+			max_slots_horizontal = 2
+			
 			format = "UPPER_LEFT"
 		}
 
@@ -4846,7 +4847,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 18 y = 5 }
+			position = { x = 13 y = 5 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}

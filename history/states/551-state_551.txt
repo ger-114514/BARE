@@ -1,15 +1,25 @@
 state={
 	id=551
 	name="STATE_551"
+	resources={
+		resources_rm = 35
+		resources_mm = 15
+	}
 	provinces={
 		180 626 1087 1234 1294 1323 2068 2092 2413 2600 2636 2979 3468 3500 3521 3651 3710 3798 3842 4240 5083 5729 5732 5947 7604 8085 8200 8468 8691 9074 9409 9584 9618 9620 9636 9639 9640 9664 9681 9686 
 	}
 	history={
+		buildings = {
+			infrastructure = 2
+			thermal_power_station = 2
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points ={3798 1}
+		victory_points ={2847 10}
 	}
-	manpower=0
-	state_category=wasteland
+	manpower=24000
+	state_category=rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

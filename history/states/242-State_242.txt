@@ -5,11 +5,17 @@ state={
 		1126 1456 2757 4325 5365 7313 7803 10144 10153 10166 10200 10220 10242 
 	}
 	history={
-		owner = RWT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = A31
+		add_core_of=A31
 		add_core_of=RWT
+		victory_points = {10220 5}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=457000
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

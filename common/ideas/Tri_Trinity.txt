@@ -14,6 +14,7 @@ ideas = {
             }
         }
 
+        #为会谈做出的整备
         TRI_2st_eden_pact_modifier = {
             name = TRI_2st_eden_pact_modifier
             picture = unknown
@@ -57,7 +58,7 @@ ideas = {
 
         TRI_SCH_teacher_modifier = {
             name = TRI_SCH_teacher_modifier
-            picture = nuknown
+            picture = unknown
 
             allowed = {
                 original_tag = TRI
@@ -69,33 +70,364 @@ ideas = {
                 attrition = -0.1
             }
         }
-
-
-        hideden_ideas = {
-            TRI_hidden_carryon_package_ns = { #圣三一工业步兵装备增益buff
-                name = trinity_industry_modifier
-                removal_cost = -1
-                picture = SOV_third_five_year_plan_military
-                
-                allowed = {
-                    original_tag = TRI
-                }
-
-                allowed_civil_war = {
-                    always = yes
-                }
-                
-                equipment_bonus = { #注：改动以下数字必须要被Dynamic Modifier custom tooltip应用才生效
-                    infantry_equipment = {
-                        instant = yes
-                        reliability = 0.1
-                    }
+        #筹备会谈
+        TRI_prepare_for_meeting = {
+            picture = unknown
+            modifier = {
+                stability_factor = 0.05
+                political_power_cost = 0.2
+                TRI_unity_weekly_modifier = -1
+            }
+            on_add = {
+                add_to_variable = { TRI_other_unity_modifiers = -1 }
+            }
+            on_remove = {
+                add_to_variable = { TRI_other_unity_modifiers = 1 }
+            }
+        }
+        TRI_prepare_for_meeting_2 = {
+            picture = unknown
+            modifier = {
+                consumer_goods_factor = 0.15
+                production_speed_buildings_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.05
+                stability_factor = 0.05
+                political_power_cost = 0.4
+                TRI_unity_weekly_modifier = -2
+                Eden_treaty_weights_modifier = 3
+            }
+            on_add = {
+                add_to_variable = { TRI_other_unity_modifiers = -2 }
+                add_to_variable = { Eden_treaty_weights_modifier = 3 }
+            }
+            on_remove = {
+                add_to_variable = { TRI_other_unity_modifiers = 2 }
+                add_to_variable = { Eden_treaty_weights_modifier = -3 }
+            }
+        }
+        TRI_prepare_for_meeting_3 = {
+            picture = unknown
+            modifier = {
+                consumer_goods_factor = 0.1
+                production_speed_buildings_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.05
+                stability_factor = 0.05
+                political_power_cost = 0.4
+                TRI_unity_weekly_modifier = -1
+                Eden_treaty_weights_modifier = 4
+            }
+            on_add = {
+                add_to_variable = { TRI_other_unity_modifiers = -1 }
+                add_to_variable = { Eden_treaty_weights_modifier = 4 }
+            }
+            on_remove = {
+                add_to_variable = { TRI_other_unity_modifiers = 1 }
+                add_to_variable = { Eden_treaty_weights_modifier = -4 }
+            }
+        }
+        TRI_prepare_for_meeting_3 = {
+            picture = unknown
+            modifier = {
+                consumer_goods_factor = 0.1
+                production_speed_buildings_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.05
+                stability_factor = 0.2
+                political_power_cost = 0.3
+                Eden_treaty_weights_modifier = 4
+            }
+            on_add = {
+                add_to_variable = { Eden_treaty_weights_modifier = 4 }
+            }
+            on_remove = {
+                add_to_variable = { Eden_treaty_weights_modifier = -4 }
+            }
+        }
+        #茶话会直属炮兵
+        TRI_tea_party_artillery_1 = {
+            picture = unknown
+            modifier = {
+                army_infantry_defence_factor = 0.04
+            }
+            equipment_bonus = {
+                artillery = {
+                    soft_attack = 0.08
                 }
             }
         }
+        TRI_tea_party_artillery_2 = {
+            picture = unknown
+            modifier = {
+                army_infantry_defence_factor = 0.08
+            }
+            equipment_bonus = {
+                artillery = {
+                    soft_attack = 0.16
+                }
+            }
+        }
+        TRI_tea_party_artillery_3 = {
+            picture = unknown
+            modifier = {
+                army_infantry_defence_factor = 0.12
+            }
+            equipment_bonus = {
+                artillery = {
+                    soft_attack = 0.24
+                }
+            }
+        }
+        TRI_tea_party_artillery_4 = {
+            picture = unknown
+            modifier = {
+                army_infantry_defence_factor = 0.16
+            }
+            equipment_bonus = {
+                artillery = {
+                    soft_attack = 0.32
+                }
+            }
+        }
+        TRI_tea_party_artillery_5 = {
+            picture = unknown
+            modifier = {
+                army_infantry_defence_factor = 0.2
+            }
+            equipment_bonus = {
+                artillery = {
+                    soft_attack = 0.4
+                }
+            }
+        }
+        #圣三一航空训练计划
+        TRI_aeronautics_training = {
+            picture = unknown
+            modifier = {
+                experience_gain_air = 0.05
+                experience_gain_air_factor = 0.1
+                air_training_xp_gain_factor = 0.25
+                air_mission_xp_gain_factor = 0.05
+            }
+        }
+        #圣三一空地一体化系统
+        TRI_integrated_air_ground_system = {
+            picture = unknown
+            modifier = {
+                special_forces_cap = 0.1
+            }
+        }
+        #专业化无人机生产集团
+        TRI_professional_UAV_production = {
+            picture = unknown
+            #无人侦察机生产花费-10%，无人战斗机生产花费-10%
+            equipment_bonus = {
+                cas = {
+                    build_cost_ic = -0.1
+                }
+                fighter = {
+                    build_cost_ic = -0.1
+                }
+            }
+        }
+        #圣三一火炮
+        TRI_trinity_artillery = {
+            picture = unknown
+            #牵引式火炮/火箭炮生产花费-15%，可靠性+10%。
+            equipment_bonus = {
+                artillery = {
+                    build_cost_ic = -0.15
+                    reliability_factor = 0.1
+                }
+            }
+        }
+        #先进性装甲
+        TRI_advanced_armour_idea = {
+            picture = unknown
+            #装甲可靠性+5%，装甲对人员杀伤+5%
+            equipment_bonus = {
+                armor = {
+                    reliability_factor = 0.05
+                    soft_attack = 0.05
+                }
+            }
+        }
+        ###2025.2.20 乃爱###
+        #重整旗鼓
+        TRI_bouncing_back_idea = {
+            modifier = {
+                political_advisor_cost_factor = 0.5
+                political_power_cost = 0.2
+                TRI_unity_weekly_modifier = -1
+                Eden_treaty_weights_modifier = -1
+                custom_modifier_tooltip = TRI_bouncing_back_remove_idea_trigger
+            }
+            cancel = {
+                #TODO:所有上议院派系均已完成一次任务
+                always = no
+            }
+            on_remove = {
+                add_to_variable = { TRI_other_unity_modifiers = 1 }
+                add_to_variable = { Eden_treaty_weights_modifier = 1 }
+            }
+        }
+        #物尽其用
+        TRI_making_the_best_use_idea = {
+            modifier = {
+                stability_weekly = -0.003
+                political_advisor_cost_factor = 0.25
+                political_power_cost = 0.2
+                TRI_unity_weekly_modifier = -1
+                Eden_treaty_weights_modifier = -1
+                custom_modifier_tooltip = TRI_making_the_best_use_remove_idea_trigger
+            }
+            cancel = {
+                #TODO:所有下议院派系均已完成一次任务
+                always = no
+            }
+            on_remove = {
+                add_to_variable = { TRI_other_unity_modifiers = 1 }
+                add_to_variable = { Eden_treaty_weights_modifier = 1 }
+            }
+        }
+        #“影子”计划
+        TRI_shadow_scheme_in_progress = {
+            modifier = {
+                production_speed_buildings_factor = -0.05
+                consumer_goods_factor = 0.05
+                line_change_production_efficiency_factor = -0.15
+                custom_modifier_tooltip = TRI_shadow_scheme_in_progress_remove_idea_trigger
+            }
+            cancel = {
+                #向至少4个大区给予重建津贴
+                check_variable = { TRI_rebuilding_subsidy_fire_count > 3 }
+            }
+        }
+        #扫除威胁！
+        TRI_sweep_threat = {
+            picture = unknown
+            modifier = {
+                combat_readiness_recovery_percentage = 1
+            }
+            targeted_modifier = {
+                tag = ARI
+                attack_bonus_against = 0.15
+                defense_bonus_against = 0.15
+            }
+            cancel = {
+                #TODO:阿里乌斯被消灭
+                has_global_flag = Arius_defeated
+            }
+            on_remove = {
+                news_event = TRI_events.1003
+            }
+        }
+        TRI_prepare_for_war = {
+            name = TRI_prepare_for_war
+            picture = unknown
 
+            allowed = {
+                original_tag = TRI
+            }
 
+            modifier = {
+                #TODO:效果为“对派系的许诺”系列决议生效时，将只会出现军事提案
+            }
+        }
 
+        TRI_focus_on_stability = {
+            name = TRI_focus_on_stability
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                #TODO:效果为“对派系的许诺”系列决议生效时，将只会出现经济提案
+            }
+        }
+        #友谊，光荣与未来！
+        TRI_friendship_glory_future = {
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                political_power_gain = 0.5
+                stability_weekly = 0.005
+                research_speed_factor = 0.15
+                industrial_capacity_factory = 0.1
+                production_speed_buildings_factor = 0.1
+                TRI_unity_weekly_modifier = 2
+            }
+            on_add = {
+                add_to_variable = { TRI_other_unity_modifiers = 2 }
+            }
+            on_remove = {
+                add_to_variable = { TRI_other_unity_modifiers = -2 }
+            }
+        }
+        #胜利，信任与团结！
+        TRI_victory_trust_unity = {
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                army_org_factor = 0.1
+                minimum_training_level = -0.5
+                weekly_manpower = 2800
+                experience_gain_army = 0.25
+                #TODO:可训练专有特殊部队上限＋10
+            }
+            on_add = {
+            }
+            on_remove = {
+            }
+        }
+        #进行中的行政重整
+        TRI_reforming_administration_system = {
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                political_power_cost = 0.25
+                stability_factor = -0.15
+                political_advisor_cost_factor = -0.15
+                army_advisor_cost_factor = -0.15
+                air_advisor_cost_factor = -0.15
+                army_chief_cost_factor = -0.15
+                air_chief_cost_factor = -0.15
+            }
+        }
         
+    }
+    hidden_ideas = {
+        TRI_hidden_carryon_package_ns = { #圣三一工业步兵装备增益buff
+            name = trinity_industry_modifier
+            removal_cost = -1
+            picture = SOV_third_five_year_plan_military
+            
+            allowed = {
+                original_tag = TRI
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+            
+            equipment_bonus = { #注：改动以下数字必须要被Dynamic Modifier custom tooltip应用才生效
+                infantry_equipment = {
+                    instant = yes
+                    reliability = 0.1
+                }
+            }
+        }
     }
 } 

@@ -5,11 +5,17 @@ state={
 		398 7259 10378 10394 10402 
 	}
 	history = {
-		owner = GEH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		owner = A09
+		add_core_of=A09
 		add_core_of=GEH
+		victory_points = {10402 5}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=136500
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

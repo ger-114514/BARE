@@ -1,15 +1,26 @@
 state={
 	id=586
 	name="STATE_586"
+	resources={
+		resources_fe = 5
+		resources_pm = 2
+	}
 	provinces={
 		211 475 687 867 1183 1243 1283 1510 2356 2563 3127 3529 4526 4911 4930 5233 5356 5939 6204 6287 6470 6599 7300 7382 7971 8238 8580 8841 8991 9858 9862 9868 9872 9899 9900 9906 9909 9937 
 	}
 	history={
-		owner = RWT
+		buildings = {
+			infrastructure = 1
+		}
+		owner = A28
+		add_core_of=A28
 		add_core_of=RWT
+		victory_points = {1243 1}
+		victory_points = {3529 5}
+		victory_points = {211 15}
 	}
-	manpower=0
-	state_category=wasteland
+	manpower=38400
+	state_category=rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

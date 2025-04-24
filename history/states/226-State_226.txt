@@ -4,13 +4,20 @@ state={
 	provinces={
 		334 3769 6638 7285 7395 7780 8568 10800 10801 10816 
 	}
+	resources={
+		resources_rm = 5
+	}
 	history = {
-		owner = D11
-		add_core_of=D11
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		owner = A46
+		add_core_of=A46
 		victory_points = {6638 15}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=104000
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

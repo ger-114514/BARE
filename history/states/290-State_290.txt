@@ -1,16 +1,26 @@
 state={
 	id=290
 	name="STATE_290"
+	resources={
+		resources_cm = 10 
+		resources_ec = 10
+	}
 	provinces={
 		823 3682 4232 4627 6143 9579 
 	}
 	history = {
-		owner = HYA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = A16
+		add_core_of=A16
 		add_core_of=HYA
 		victory_points = {3682 10}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=168700
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

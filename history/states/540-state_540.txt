@@ -1,14 +1,23 @@
 state={
 	id=540
 	name="STATE_540"
+	resources={
+		resources_cm = 18
+	}
 	provinces={
 		359 393 975 1553 3162 3763 4126 4205 4296 4613 4695 4980 5029 5122 5298 5459 5643 6364 6761 6785 6786 7200 8032 8581 8760 8960 9085 9318 9571 9840 9851 9859 9902 9913 9922 
 	}
 	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
 		owner = RWT
 		add_core_of=RWT
+		victory_points = {393 5}
 	}
-	manpower=0
+	manpower=64000
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

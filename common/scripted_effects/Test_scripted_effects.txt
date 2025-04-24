@@ -233,7 +233,9 @@
         set_variable = { max_manpower_limit = all_core_state_manpower }
         multiply_variable = { max_manpower_limit = modifier@conscription }
         if = {
-            limit = { max_available_manpower < max_manpower_limit }
+            limit = { 
+                check_variable = { max_available_manpower < max_manpower_limit }
+            }
             add_manpower = war_power_gain
         }
     }

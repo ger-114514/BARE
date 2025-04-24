@@ -1,21 +1,22 @@
-    ###格黑娜GEH 开始###
-    GEH_hina ={ 
-		name=GEH_hina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_hina
-				small=GFX_portrait_geh_hina_small
-			}	
+characters = {
+	###格黑娜GEH 开始###
+	GEH_hina = {
+		name = GEH_hina_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_hina
+				small = GFX_portrait_GEH_hina_small
+			}
 		}
-
-        country_leader = {
-			ideology = liberalism
-			traits = { leader_of_fukiinkai_cl }
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				leader_of_fukiinkai_cl
+			}
 			expire = "-1.1.1.1"
 			id = -1
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_hina_ac
 			allowed = {
@@ -24,36 +25,40 @@
 			available = {
 				original_tag = GEH
 			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				leader_of_fukiinkai_ac
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+		corps_commander = {
+			traits = {expert_delegator politically_connected media_personality harsh_leader
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
 		}
-
 	}
 
-    GEH_ako ={ 
-		name=GEH_ako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_ako
-				small=GFX_portrait_geh_ako_small
-			}	
+	GEH_ako = {
+		name = GEH_ako_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_ako
+				small = GFX_portrait_GEH_ako_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_ako_ac
 			allowed = {
@@ -62,15 +67,17 @@
 			available = {
 				original_tag = GEH
 			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				intelligence_supporter
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_ako_pa
@@ -79,36 +86,38 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				left_hand_of_hina
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+		}
+		corps_commander = {
+			traits = {organizer skilled_staffer}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
 		}
-
 	}
-
-    GEH_iori ={ 
-		name=GEH_iori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_iori
-				small=GFX_portrait_geh_iori_small
-			}	
+	GEH_iori = {
+		name = GEH_iori_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_iori
+				small = GFX_portrait_GEH_iori_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_iori_ac
 			allowed = {
@@ -117,36 +126,39 @@
 			available = {
 				original_tag = GEH
 			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				set_the_tune_with_three_firing
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+		field_marshal = {
+			traits = {harsh_leader infantry_officer trickster
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
+			skill = 2
+			attack_skill = 4
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_chinatsu ={ 
-		name=GEH_chinatsu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_chinatsu
-				small=GFX_portrait_geh_chinatsu_small
-			}	
+	GEH_chinatsu = {
+		name = GEH_chinatsu_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_chinatsu
+				small = GFX_portrait_GEH_chinatsu_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_chinatsu_ac
 			allowed = {
@@ -155,43 +167,46 @@
 			available = {
 				original_tag = GEH
 			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				medicial_support_of_fukiinkai
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
+		field_marshal = {
+			traits = {career_officer trait_cautious organizer}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_makoto ={ 
-		name=GEH_makoto_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_makoto
-				small=GFX_portrait_geh_makoto_small
-			}	
+	GEH_makoto = {
+		name = GEH_makoto_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_makoto
+				small = GFX_portrait_GEH_makoto_small
+			}
 		}
-
-        country_leader = {
-			ideology = liberalism
-			traits = { leader_of_gehena_cl }
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				leader_of_gehena_cl
+			}
 			expire = "-1.1.1.1"
 			id = -1
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_makoto_ac
 			allowed = {
@@ -200,36 +215,39 @@
 			available = {
 				original_tag = GEH
 			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				leader_of_gehena_ac
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
+		corps_commander = {
+			traits = {old_guard inflexible_strategist media_personality thorough_planner
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
+			skill = 3
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			defense_skill = 2
+			planning_skill = 4
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_iroha ={ 
-		name=GEH_iroha_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_iroha
-				small=GFX_portrait_geh_iroha_small
-			}	
+	GEH_iroha = {
+		name = GEH_iroha_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_iroha
+				small = GFX_portrait_GEH_iroha_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_iroha_ac
 			allowed = {
@@ -238,15 +256,17 @@
 			available = {
 				original_tag = GEH
 			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			traits = {
 				gehena_armored_general
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_iroha_pa
@@ -255,93 +275,89 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				leisurely_manager
 			}
-			ai_will_do = {
-				factor = 1.000
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
 			}
-        }
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {armor_officer war_hero harsh_leader
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
-
 	}
-
-    GEH_ibuki ={ 
-		name=GEH_ibuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_ibuki
-				small=GFX_portrait_geh_ibuki_small
-			}	
+	GEH_ibuki = {
+		name = GEH_ibuki_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_ibuki
+				small = GFX_portrait_GEH_ibuki_small
+			}
 		}
-
-        country_leader = {
-			ideology = liberalism
-			traits = { mascot_of_gehena }
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				mascot_of_gehena
+			}
 			expire = "-1.1.1.1"
 			id = -1
 		}
-
-        field_marshal = {
-			traits = {}
+		field_marshal = {
+			traits = {media_personality armor_officer
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
-		}        
-
+		}
 	}
-
-    GEH_satsuki ={ 
-		name=GEH_satsuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_satsuki
-				small=GFX_portrait_geh_satsuki_small
-			}	
+	GEH_satsuki = {
+		name = GEH_satsuki_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_satsuki
+				small = GFX_portrait_GEH_satsuki_small
+			}
 		}
-
-        field_marshal = {
-			traits = {}
+		field_marshal = {
+			traits = {bearer_of_artillery 
+			}
+			visible = {
+				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			}
 			skill = 1
 			attack_skill = 1
-			defense_skill = 1
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 3
 		}
-
 	}
-
-
-    GEH_aru ={ 
-		name=GEH_aru_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_aru
-				small=GFX_portrait_geh_aru_small
-			}	
+	GEH_aru = {
+		name = GEH_aru_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_aru
+				small = GFX_portrait_GEH_aru_small
+			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_aru_ac
 			allowed = {
@@ -355,32 +371,28 @@
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+		field_marshal = {
+			traits = {infantry_officer trait_reckless infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
-
-
 	}
-
-    GEH_mutsuki ={ 
-		name=GEH_mutsuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_mutsuki
-				small=GFX_portrait_geh_mutsuki_small
-			}	
+	GEH_mutsuki = {
+		name = GEH_mutsuki_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_mutsuki
+				small = GFX_portrait_GEH_mutsuki_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_mutsuki_ac
 			allowed = {
@@ -394,31 +406,28 @@
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+		field_marshal = {
+			traits = {infantry_officer commando
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_kayoko ={ 
-		name=GEH_kayoko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_kayoko
-				small=GFX_portrait_geh_kayoko_small
-			}	
+	GEH_kayoko = {
+		name = GEH_kayoko_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_kayoko
+				small = GFX_portrait_GEH_kayoko_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_kayoko_ac
 			allowed = {
@@ -432,30 +441,27 @@
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
+		field_marshal = {
+			traits = {infantry_officer skilled_staffer urban_assault_specialist
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
 		}
-
 	}
-
-    GEH_haruka ={ 
-		name=GEH_haruka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_haruka
-				small=GFX_portrait_geh_haruka_small
-			}	
+	GEH_haruka = {
+		name = GEH_haruka_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_haruka
+				small = GFX_portrait_GEH_haruka_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_haruka_pa
@@ -464,35 +470,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				grass_in_flowerpot
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {trait_reckless trait_engineer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 4
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_fuuka ={ 
-		name=GEH_fuuka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_fuuka
-				small=GFX_portrait_geh_fuuka_small
-			}	
+	GEH_fuuka = {
+		name = GEH_fuuka_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_fuuka
+				small = GFX_portrait_GEH_fuuka_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_fuuka_pa
@@ -501,35 +504,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				top_chef_of_gehena
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {logistics_wizard urban_assault_specialist adaptable
+			}
 			skill = 1
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 5
 		}
-
 	}
-
-    GEH_juri ={ 
-		name=GEH_juri_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_juri
-				small=GFX_portrait_geh_juri_small
-			}	
+	GEH_juri = {
+		name = GEH_juri_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_juri
+				small = GFX_portrait_GEH_juri_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_juri_pa
@@ -538,35 +538,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				cthulu_food
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
-
 	}
-
-    GEH_haruna ={ 
-		name=GEH_haruna_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_haruna
-				small=GFX_portrait_geh_haruna_small
-			}	
+	GEH_haruna = {
+		name = GEH_haruna_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_haruna
+				small = GFX_portrait_GEH_haruna_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_haruna_pa
@@ -575,35 +572,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				seeker_of_real_food
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
-			skill = 1
+		}
+		field_marshal = {
+			traits = {infantry_officer trickster brilliant_strategist
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
 		}
-
 	}
-
-    GEH_izumi ={ 
-		name=GEH_izumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_izumi
-				small=GFX_portrait_geh_izumi_small
-			}	
+	GEH_izumi = {
+		name = GEH_izumi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_izumi
+				small = GFX_portrait_GEH_izumi_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_izumi_pa
@@ -612,35 +606,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				great_eater
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {infantry_officer camouflage_expert
+			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_junko ={ 
-		name=GEH_junko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_junko
-				small=GFX_portrait_geh_junko_small
-			}	
+	GEH_junko = {
+		name = GEH_junko_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_junko
+				small = GFX_portrait_GEH_junko_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_junko_pa
@@ -649,35 +640,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				lovely_little_fire_dragon
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {infantry_officer trait_mountaineer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
-
 	}
-
-    GEH_akari ={ 
-		name=GEH_akari_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_akari
-				small=GFX_portrait_geh_akari_small
-			}	
+	GEH_akari = {
+		name = GEH_akari_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_akari
+				small = GFX_portrait_GEH_akari_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_akari_pa
@@ -686,36 +674,33 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				eat_marrow_and_know_taste
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {infantry_officer harsh_leader
+			}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_sena ={ 
-		name=GEH_sena_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_sena
-				small=GFX_portrait_geh_sena_small
-			}	
+	GEH_sena = {
+		name = GEH_sena_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_sena
+				small = GFX_portrait_GEH_sena_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = GEH_sena_ac
 			allowed = {
@@ -729,30 +714,27 @@
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
+		field_marshal = {
+			traits = {combined_arms_expert war_hero urban_assault_specialist 
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 3
 		}
-
 	}
-
-    GEH_megu ={ 
-		name=GEH_megu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_megu
-				small=GFX_portrait_geh_megu_small
-			}	
+	GEH_megu = {
+		name = GEH_megu_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_megu
+				small = GFX_portrait_GEH_megu_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_megu_pa
@@ -761,35 +743,32 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				giant_fire_dragon
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {infantry_officer trait_engineer fortress_buster
+			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_kasumi ={ 
-		name=GEH_kasumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_kasumi
-				small=GFX_portrait_geh_kasumi_small
-			}	
+	GEH_kasumi = {
+		name = GEH_kasumi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_kasumi
+				small = GFX_portrait_GEH_kasumi_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_kasumi_pa
@@ -798,55 +777,50 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				spring_frenzy
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+		}
+		field_marshal = {
+			traits = {infantry_officer trait_engineer fortress_buster brilliant_strategist
+			}
+			skill = 2
+			attack_skill = 3
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    GEH_marika ={ 
-		name=GEH_marika_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_marika
-				small=GFX_portrait_geh_marika_small
-			}	
+	GEH_erika = {
+		name = GEH_erika_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_erika
+				small = GFX_portrait_GEH_erika_small
+			}
 		}
-
-        field_marshal = {
-			traits = {}
+		field_marshal = {
+			traits = {infantry_officer trait_cautious
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
-
 	}
-
-    GEH_kirara ={ 
-		name=GEH_kirara_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_kirara
-				small=GFX_portrait_geh_kirara_small
-			}	
+	GEH_kirara = {
+		name = GEH_kirara_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_kirara
+				small = GFX_portrait_GEH_kirara_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = GEH_kirara_pa
@@ -855,22 +829,22 @@
 			}
 			available = {
 				original_tag = GEH
-			} 
+			}
 			traits = {
 				sparking_girl
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
+		}
+		field_marshal = {
+			traits = {infantry_officer 
+			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
 			logistics_skill = 1
 		}
-
 	}
+}

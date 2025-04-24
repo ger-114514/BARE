@@ -4,15 +4,22 @@ state={
 	name="STATE_374"
 
 	history={
-		owner = TRI
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A04
+		add_core_of=A04
 		add_core_of=TRI
-
+	    victory_points = {1491 5}
+	    victory_points = {840 5}
 	}
 
 	provinces={
 		840 1148 1339 1491 3147 3580 5415 5451 9405 9567 11850 12028 12045 
 	}
-	manpower=0
+
+	manpower=18000
+	state_category = wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

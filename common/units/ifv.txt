@@ -1,6 +1,5 @@
-sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更正，决定的不是名字而是类型
-#ng为市民部队
-	ifv_lahd = { #黄甲红攻
+sub_units = { #
+	ifv_unit = { #
 		abbreviation = "ifv"
 		sprite = motorized
 		map_icon_category = infantry
@@ -10,7 +9,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 		active = yes
 
 		type = {
-			armor
+			mechanized
 		}
 		
 		group = mobile
@@ -19,6 +18,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 			category_front_line
 			category_all_infantry
 			category_army
+			category_mech
 		}
 		
 		combat_width = 2
@@ -27,928 +27,253 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 		max_strength = 30
 		max_organisation = 60
 		default_morale = 0.3
-		manpower = 1000
+		manpower = 150
 
 		#Misc Abilities
 		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
+		suppression = 2
+		weight = 1
+		supply_consumption = 0.15
 	
 		# this is what moves us and sets speed
-		transport = ifv_chassis
+		transport = ifv_equipment
 	
 		need = {
-			ifv_chassis = 5
+			ifv_equipment = 6
+			infantry_equipment = 100
 		}
 
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
+		
+		forest = {
+			attack = -0.2
 		}
-		mountain = { #山地
+		mountain = {
 			attack = -0.05
-			movement = -0.65
 		}
 		jungle = {
-			attack = -0.1
-			movement = -0.75
+			attack = -0.3
 		}
 		marsh = {
-			attack = -0.05
-			movement = -0.8
+			attack = -0.1
 		}
 		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
+			attack = -0.2
+			defence = -0.05
 		}
 		river = {
-			attack = -0.05
-			movement = -0.1
-		}
-
-		desert = {
-			movement = -0.35
+			attack = -0.2
+			movement = -0.2
 		}
 		amphibious = {
-			attack = -0.1
+			attack = -0.4
 		}
 	}
 
-	ifv_hahd = {#黄甲黄攻
-		abbreviation = "ifva"
-		sprite = motorized
+	ifv_artillery_unit = {
+		abbreviation = "MRT"
+		sprite = artillery
 		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
+		priority = 1198
+		ai_priority = 100
 		active = yes
-
+		
 		type = {
-			armor
+			motorized
 			artillery
 		}
 
-
-		
-		group = mobile
+		group = mobile_combat_support
 		
 		categories = {
-			category_front_line
-			category_all_infantry
 			category_army
+			category_line_artillery
+			category_artillery
+			category_mech_art
 		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
 
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-	
-		# this is what moves us and sets speed
-		transport = ifv_artillery_chassis
-	
+		combat_width = 3
+		manpower = 105
 		need = {
-			ifv_artillery_chassis = 5
+			ifv_artillery_equipment = 6
 		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
+		
+		max_strength = 0.6
+		max_organisation = 3
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.25
+		
+		forest = {
+			attack = -0.3
 			movement = -0.1
 		}
 
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-
-	ifv_lasd = {#神秘甲红攻
-		abbreviation = "ifvaa"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-			anti_air
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-	
-		# this is what moves us and sets speed
-		transport = ifv_aa_chassis
-	
-		need = {
-			ifv_aa_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
 		hills = {
-			movement = -0.5
+
 		}
-		river = {
-			attack = -0.05
+
+		mountain = {
+			movement = -0.15
+		}
+
+		jungle = {
+			attack = -0.3
 			movement = -0.1
 		}
 
-		desert = {
-			movement = -0.35
+		marsh = {
+			attack = -0.2
+			movement = -0.3
 		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
 		amphibious = {
-			attack = -0.1
+			attack = -0.4
 		}
 	}
 
-	ifv_sahd  = { #标准甲神秘攻
-		abbreviation = "ifvd"
-		sprite = motorized
+	ifv_at_unit = {
+		abbreviation = "MAT"
+		sprite = anti_tank
 		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
+		priority = 1197
+		ai_priority = 100
 		active = yes
-
+		
 		type = {
-			armor
+			motorized
 			anti_tank
 		}
 		
-		group = mobile
+		group = mobile_combat_support
 		
 		categories = {
 			category_front_line
-			category_all_infantry
 			category_army
-		}
+			category_line_artillery
+			category_mech_at
+		}		
 		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
+		combat_width = 1.5
 
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-	
-		# this is what moves us and sets speed
-		transport = ifv_destroyer_chassis
-	
 		need = {
-			ifv_destroyer_chassis = 5
+			ifv_at_equipment = 6
 		}
+		manpower = 105
+		max_organisation = 3
+		default_morale = 0.06
+		max_strength = 0.6
+		training_time = 120
+		weight = 0.5
 
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
+		supply_consumption = 0.15
+
+		forest = {
+			attack = -0.2
 			movement = -0.5
 		}
-		river = {
-			attack = -0.05
-			movement = -0.1
+
+		hills = {
+			movement = -0.05
 		}
 
-		desert = {
-			movement = -0.35
+		mountain = {
+			movement = -0.2
 		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.5
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
 		amphibious = {
-			attack = -0.1
+			attack = -0.4
 		}
 	}
 
-	ifv_hasd = { #例外？黄攻神秘甲
-		abbreviation = "bksb"
-		sprite = motorized
-		map_icon_category = infantry
 
-		priority = 599
-		ai_priority = 200
+	ifv_aa_unit = {
+		abbreviation = "MAA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
 		active = yes
 
 		type = {
-			armor
-			flame
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-	
-		# this is what moves us and sets speed
-		transport = ifv_flame_chassis
-	
-		need = {
-			ifv_flame_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
-
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
- 
-	ifv_sasd = {#例外？神秘攻神秘甲
-		abbreviation = "bksb"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-			amphibious
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-	
-		# this is what moves us and sets speed
-		transport = ifv_amphibious_chassis
-	
-		need = {
-			ifv_amphibious_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
-
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-	
-	#############################################
-	ifv_lahd_ng = { #黄甲红攻
-		abbreviation = "ifv"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-
-		# this is what moves us and sets speed
-		transport = ifv_chassis
-
-		need = {
-			ifv_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
-
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-
-	ifv_hahd_ng = {#黄甲黄攻
-		abbreviation = "ifva"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-			artillery
-		}
-
-
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-
-		# this is what moves us and sets speed
-		transport = ifv_artillery_chassis
-
-		need = {
-			ifv_artillery_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
-
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-
-	ifv_lasd_ng = {#神秘甲红攻
-		abbreviation = "ifvaa"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
+			motorized
 			anti_air
 		}
 		
-		group = mobile
+		group = mobile_combat_support
 		
 		categories = {
-			category_front_line
-			category_all_infantry
 			category_army
-		}
+			category_line_artillery
+			category_mech_aa
+		}		
 		
-		combat_width = 2
+		combat_width = 1
 		
 		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
+		max_organisation = 3
+		default_morale = 0.1
+		max_strength = 0.6
+		manpower = 105
 		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-
-		# this is what moves us and sets speed
-		transport = ifv_aa_chassis
+		weight = 0.5
+		
+		supply_consumption = 0.15
 
 		need = {
-			ifv_aa_chassis = 5
+			ifv_aa_equipment = 6
 		}
 
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
+		forest = {
 			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
 			movement = -0.5
 		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
 
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-
-	ifv_sahd_ng  = { #标准甲神秘攻
-		abbreviation = "ifvd"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-			anti_tank
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-
-		# this is what moves us and sets speed
-		transport = ifv_destroyer_chassis
-
-		need = {
-			ifv_destroyer_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
 		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
+			attack = -0.2
 			movement = -0.5
 		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
 
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-
-	ifv_hasd_ng = { #例外？黄攻神秘甲
-		abbreviation = "bksb"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-			flame
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-
-		# this is what moves us and sets speed
-		transport = ifv_flame_chassis
-
-		need = {
-			ifv_flame_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
 		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
-			movement = -0.1
+			attack = -0.2
+			movement = -0.2
 		}
 
-		desert = {
-			movement = -0.35
+		river = {
+			attack = -0.2
+			movement = -0.2
 		}
+
 		amphibious = {
-			attack = -0.1
+			attack = -0.4
 		}
 	}
-
-	ifv_sasd_ng = {#例外？神秘攻神秘甲
-		abbreviation = "bksb"
-		sprite = motorized
-		map_icon_category = infantry
-
-		priority = 599
-		ai_priority = 200
-		active = yes
-
-		type = {
-			armor
-			amphibious
-		}
-		
-		group = mobile
-		
-		categories = {
-			category_front_line
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
-		max_organisation = 60
-		default_morale = 0.3
-		manpower = 1000
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 15
-		weight = 0.75
-		supply_consumption = 0.08
-
-		# this is what moves us and sets speed
-		transport = ifv_amphibious_chassis
-
-		need = {
-			ifv_amphibious_chassis = 5
-		}
-
-		forest = { #丛林
-			attack = -0.05
-			movement = -0.8
-		}
-		mountain = { #山地
-			attack = -0.05
-			movement = -0.65
-		}
-		jungle = {
-			attack = -0.1
-			movement = -0.75
-		}
-		marsh = {
-			attack = -0.05
-			movement = -0.8
-		}
-		urban = {
-			attack = 0.4
-			defence = 0.4
-		}
-		hills = {
-			movement = -0.5
-		}
-		river = {
-			attack = -0.05
-			movement = -0.1
-		}
-
-		desert = {
-			movement = -0.35
-		}
-		amphibious = {
-			attack = -0.1
-		}
-	}
-
 }

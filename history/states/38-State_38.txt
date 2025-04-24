@@ -5,11 +5,16 @@ state={
 		167 579 2088 2252 2324 3027 3550 4583 4622 5516 6880 7800 8620 8929 9526 12115 12178 
 	}
 	history={
-		owner=D01
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner=A36
+		add_core_of = A36
 		victory_points = {4622 15}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=87531
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

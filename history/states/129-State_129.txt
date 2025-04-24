@@ -5,12 +5,17 @@ state={
 		1040 1843 3948 4005 4333 5473 5533 7709 8143 8860 9279 11298 
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
 		owner = TRI
 		add_core_of=TRI
 		victory_points = {4333 10}
+		victory_points = {11298 5}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=183000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

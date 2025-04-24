@@ -5,11 +5,19 @@ state={
 		1598 1681 1918 3094 5601 8625 9778 
 	}
 	history={
-		owner = RWT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+		}
+		owner = A28
+		add_core_of=A28
 		add_core_of=RWT
+		victory_points = {1681 10}
 	}
-	manpower=0
-	state_category=wasteland
+	manpower=87000
+	state_category=large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

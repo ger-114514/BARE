@@ -8,1281 +8,3408 @@ focus_tree = {
 		}
 	}
 	default = no
-
-
-	#focus = {
-	#	id = TRI_mil_focus_step4 #预设模板
-	#	icon = GFX_goal_unknown
-	#   relative_position_id = XXXX #以目标国策为中心确立位置参数的id参数
-	#   cost = n #国策所用时间
-	#   x = n #以relative_position_id为中心发生的x坐标偏移
-	#   y = n #以relative_position_id为中心发生的x坐标偏移
-	#   prerequisite = {  foucs = xxxxx } #关联国策，括弧内填多个为OR关系，多个prerequisite则表示为AND
-	#   mutually_exclusive = { focus = xxxxx } #互斥国策表现关系，多个mutually_exclusive表示多个互斥
-	                                           #注：互斥国策之间必须相互填写各自focus
-	#   search_filters = { FOCUS_FILTER_XXXX } #国策搜索器，详见wiki上寻找参数
-	#   allow_branch = { [bool] } #隐藏国策树,配合mark_focus_tree_layout_dirty = yes 刷新国策树
-
-	#   bypass = { [bool] } #跳过国策树的条件
-	#   completion_reward = { #国策完成效果
-
-	#}
-	#}
-
-
-
-##以下为军事线
-	focus = {
-		id = TRI_reorgnize_teaparty_mob #重整茶话会亲卫队
-		icon = GFX_goal_TRI_reorgnize_teaparty_mob
-		cost = 5
-		x = 2
-		y = 0
-		search_filters = { FOCUS_FILTER_ARMY }
-		completion_reward = {
-			army_experience = 25
-		}			
-	}
-
-
-	focus = {
-		id = TRI_cooperation_with_justice_club #同正义实现委员会的合练
-		icon = GFX_goal_TRI_cooperation_with_justice_club
-		relative_position_id = TRI_reorgnize_teaparty_mob
-		prerequisite = { focus = TRI_reorgnize_teaparty_mob }			
-		mutually_exclusive = { focus = TRI_teaparty_leading }
-
-		cost = 5
-		x = -2
-		y = 1
-		search_filters = { FOCUS_FILTER_ARMY }
-		completion_reward = {
-
-		}			
-	}
-
-
-	focus = {
-		id = TRI_teaparty_leading #维持茶话会主导权
-		icon = GFX_goal_TRI_teaparty_leading
-		relative_position_id = TRI_reorgnize_teaparty_mob
-		prerequisite = { focus = TRI_reorgnize_teaparty_mob }			
-		mutually_exclusive = { focus = TRI_cooperation_with_justice_club }
-
-		cost = 5
-		x = 2
-		y = 1
-		search_filters = { FOCUS_FILTER_ARMY }
-		completion_reward = {
-		
+	#第一阶段政治线：【不拥有任何焦点】 175天
+		focus = { #圣三一治下的团结
+			id = TRI_pax_trinity
+			icon = GFX_goal_TRI_pax_trinity
+			cost = 5
+			x = 8
+			y = 0
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 300
+				country_event = TRI_events.1
 			}		
-	}
-
-
-	focus = {
-		id =TRI_standing_guard #常备之盾
-		icon = GFX_goal_TRI_standing_guard
-		relative_position_id = TRI_cooperation_with_justice_club
-		prerequisite = {
-			focus = TRI_cooperation_with_justice_club
-			focus = TRI_teaparty_leading
-		}			
-
-		cost = 5
-		x = 2
-		y = 1
-		search_filters = { FOCUS_FILTER_ARMY }
-		completion_reward = {
+		}
+		focus = { #第一次《伊甸条约》会谈
+			id = TRI_1st_eden_pact
+			icon = GFX_goal_TRI_1st_eden_pact	
+			relative_position_id = TRI_pax_trinity
+			prerequisite = { focus = TRI_pax_trinity }			
 			
-		}		
-	}
-
-
-	focus = {
-		id = TRI_mil_focus_step4 
-		icon = GFX_goal_unknown
-		relative_position_id = TRI_cooperation_with_justice_club
-		prerequisite = { focus = TRI_cooperation_with_justice_club }
-		prerequisite = { 
-			focus = TRI_cooperation_with_justice_club 
-			focus = TRI_standing_guard 
-		}
-		mutually_exclusive = { focus = TRI_mil_focus_step5 }
-
-		cost = 5
-		x = 0
-		y = 2
-		search_filters = { FOCUS_FILTER_ARMY }
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = TRI_mil_focus_step5
-		icon = GFX_goal_unknown
-		relative_position_id = TRI_teaparty_leading
-		prerequisite = { focus = TRI_teaparty_leading }
-		prerequisite = { 
-			focus = TRI_teaparty_leading 
-			focus = TRI_standing_guard 
-		}
-		mutually_exclusive = { focus = TRI_mil_focus_step4 }
-
-		cost = 5
-		x = 0
-		y = 2
-		search_filters = { FOCUS_FILTER_ARMY }
-		completion_reward = {
-			
-		}
-	}
-	
-	##以下为政治线##
-	#以下为第一阶段政治线：【不拥有任何焦点】
-	focus = {
-		id = TRI_pax_trinity #圣三一治下的团结
-		icon = GFX_goal_TRI_pax_trinity
-
-		#allow_branch = 不拥有任何焦点
-
-		cost = 5
-		x = 10
-		y = 0
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50
-			}		
-	}
-
-	focus = {
-		id = TRI_prepare_for_eden #落实一切的文书
-		icon = GFX_goal_TRI_prepare_for_eden
-		relative_position_id = TRI_pax_trinity
-		prerequisite = { focus = TRI_pax_trinity }			
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			add_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
-		}			
-	}
-	
-	focus = {
-		id = TRI_1st_eden_pact #第一次《伊甸条约》会谈
-		icon = GFX_goal_TRI_1st_eden_pact	
-		relative_position_id = TRI_prepare_for_eden
-		prerequisite = { focus = TRI_prepare_for_eden }			
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 75
-		}			
-	}
-	
-	focus = {
-		id = TRI_calling_for_sisterhood #修女会的传讯
-		icon = GFX_goal_TRI_calling_for_sisterhood	
-		relative_position_id = TRI_1st_eden_pact
-		prerequisite = { focus = TRI_1st_eden_pact }			
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 100
-			#启用政治顾问：伊落玛丽
-		}	
-	}
-	
-	focus = {
-		id = TRI_restart_domestic_struggle #重启院内接触
-		icon = GFX_goal_TRI_restart_domestic_struggle	
-		relative_position_id = TRI_calling_for_sisterhood
-		prerequisite = { focus = TRI_calling_for_sisterhood }	
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50
-			#启用政治顾问：羽川莲见、鹫见芹奈
-			#激活焦点抉择：《伊甸条约》的签订，并于【圣三一的权力平衡】决议组下添加新的决议。
-			#需要在事件effect里将《伊甸条约》签订事件标签 = yes
-			#并且用 mark_focus_tree_layout_dirty = yes 刷新国策树
-		}		
-	}
-	
-	#以下为拥有焦点：【《伊甸条约》的签订】时显示的国策
-	focus = {
-		id = TRI_expand_intellegence #扩展圣三一特殊调查部
-		icon = GFX_goal_TRI_expand_intellegence
-		relative_position_id = TRI_calling_for_sisterhood
-		prerequisite = { focus = TRI_calling_for_sisterhood }
-		allow_branch = {#拥有焦点：《伊甸条约》的签订
-			#has_event_target = #《伊甸条约》签订事件标签
-		}
-		
-		cost = 5
-		x = 2
-		y = 2
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_stability = -0.10
-			#建立间谍机构：【圣三一特殊调查部】
-			create_intelligence_agency = yes
-		}			
-	}
-	focus = {
-		id = TRI_authorize_dove_faction #铸剑为犁
-		icon = GFX_goal_TRI_authorize_dove_faction	
-		relative_position_id = TRI_restart_domestic_struggle
-		prerequisite = { focus = TRI_restart_domestic_struggle }		
-		mutually_exclusive = { focus = TRI_authorize_eagle_faction }
-		
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_stability = 0.05
-
-			add_to_variable = { eden_war_support = -0.10 }
-			add_to_variable = { eden_research_speed = 0.05 }
-			custom_effect_tooltip = eden_step_0_authorize_dove
-			add_timed_idea = {
-				idea = TRI_authorize_dove
-				days = 90
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 75
+				country_event = TRI_events.2
+				set_global_flag = BA_1st_eden_pact_begin
 			}
-		}			
-	}
-	
-	focus = {
-		id = TRI_authorize_eagle_faction #以武止戈
-		icon = GFX_goal_TRI_authorize_eagle_faction	
-		relative_position_id = TRI_restart_domestic_struggle
-		prerequisite = { focus = TRI_restart_domestic_struggle }		
-		mutually_exclusive = { focus = TRI_authorize_dove_faction }
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.10
-
-			hidden_effect = {
-				add_to_variable = { eden_stability = -0.05 }
-				add_to_variable = { eden_conscription_factor = 0.10 }
-			}
-			custom_effect_tooltip = eden_step_0_authorize_eagle
+		}
+		focus = { #落实一切的文书
+			id = TRI_prepare_for_eden
+			icon = GFX_goal_TRI_prepare_for_eden
+			relative_position_id = TRI_1st_eden_pact
+			prerequisite = { focus = TRI_1st_eden_pact }			
 			
-			add_timed_idea = {
-				idea = TRI_authorize_eagle
-				days = 120
-			}
-			
-			#圣三一下议会+6支持席位
-			set_variable = { Senators_change_num = 6 }
-			
-			if = { 
-				limit = {
-					check_variable = { Senators_centrist_num > Senators_change_num }
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 50
+				add_stability = 0.05
+				add_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
+				country_event = TRI_events.3
+			}			
+		}
+		focus = { #修女会的传讯
+			id = TRI_calling_for_sisterhood
+			icon = GFX_goal_TRI_calling_for_sisterhood	
+			relative_position_id = TRI_1st_eden_pact
+			prerequisite = { focus = TRI_1st_eden_pact }
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 100
+				#启用政治顾问：伊落玛丽
+				set_country_flag = TRI_mari_advisor_available
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_mari_name
+					JOB = political_advisor
 				}
-				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
-				add_to_variable = { Senators_support_num = Senators_change_num }
-				
-				custom_effect_tooltip = TRI_Senators_party_change_oppo
-				TRI_reload_senators_parliament_gui = yes
+				country_event = TRI_events.4
 			}
+		}
+		focus = { #重启院内接触
+			id = TRI_restart_domestic_struggle
+			icon = GFX_goal_TRI_restart_domestic_struggle	
+			relative_position_id = TRI_calling_for_sisterhood
+			prerequisite = { focus = TRI_calling_for_sisterhood }
+			prerequisite = { focus = TRI_prepare_for_eden }	
 			
-			#上议院+4支持席位
-			set_variable = { House_change_num = 4 }
-			if = {
-				limit = {
-					check_variable = { House_centrist_num > House_change_num }
+			cost = 10
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 50
+				#启用政治顾问：羽川莲见、鹫见芹奈
+				add_advisor_role = {
+					character = TRI_serina
+					activate = no
+					advisor = { 
+						slot = political_advisor
+						idea_token = TRI_serina_pa
+						traits = {
+							sweet_nurse
+						}
+						ai_will_do = {
+							base = 1
+						}
+					}
+				}
+				add_advisor_role = {
+					character = TRI_hasumi
+					activate = no
+					advisor = { 
+						slot = army_chief
+						idea_token = TRI_hasumi_ac
+						traits = {
+							serious_vice_chairman
+						}
+						ai_will_do = {
+							base = 1
+						}
+					}
+				}
+				custom_effect_tooltip = TRI_restart_domestic_struggle_tt
+				#激活焦点抉择：《伊甸条约》的签订
+				#需要在事件effect里将《伊甸条约》签订事件标签 = yes
+				country_event = TRI_events.5
+				add_to_array = { TRI_politics_tabs = token:TRI_politics_tab_parliament }
+			}
+		}
+}
+focus_tree = {
+	id = TRI_focus_stage_2
+	country = {
+		factor = 0
+	}
+	default = no
+	#拥有焦点：【《伊甸条约》的签订】时显示的国策 595天
+		#筹备部分
+			focus = { #以武止戈
+				id = TRI_authorize_eagle_faction
+				icon = GFX_goal_TRI_authorize_eagle_faction		
+				mutually_exclusive = { focus = TRI_authorize_dove_faction }
+				allow_branch = { #拥有焦点：《伊甸条约》的签订
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
+					#NOT = { has_global_flag = TRI_church_attacked }
+				}
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = BA_content_developing
+						always = no
+					}
+				}
+				cost = 5
+				x = -1
+				y = 0
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					add_war_support = 0.10
+
+					hidden_effect = {
+						add_to_variable = { eden_stability = -0.05 }
+						add_to_variable = { eden_conscription_factor = 0.10 }
+					}
+					custom_effect_tooltip = eden_step_0_authorize_eagle
+					
+					add_timed_idea = {
+						idea = TRI_authorize_eagle
+						days = 120
+					}
+					set_temp_variable = { TRI_policy_change_num = 0.1 }
+					TRI_BOP_change_hardliner_both_parliament = yes
+				}
+			}
+			focus = { #铸剑为犁
+				id = TRI_authorize_dove_faction
+				icon = GFX_goal_TRI_authorize_dove_faction		
+				mutually_exclusive = { focus = TRI_authorize_eagle_faction }
+				allow_branch = { #拥有焦点：《伊甸条约》的签订
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				
-				subtract_from_variable = { House_centrist_num = House_change_num }
-				add_to_variable = { House_support_num = House_change_num }
+				cost = 5
+				x = 1
+				y = 0
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_stability = 0.05
 
-				custom_effect_tooltip = TRI_House_party_change_oppo
-				TRI_reload_house_parliament_gui = yes
+					add_to_variable = { eden_war_support = -0.10 }
+					add_to_variable = { eden_research_speed = 0.05 }
+					custom_effect_tooltip = eden_step_0_authorize_dove
+					add_timed_idea = {
+						idea = TRI_authorize_dove
+						days = 90
+					}
+					set_temp_variable = { TRI_policy_change_num = 0.05 }
+					TRI_BOP_change_moderate_both_parliament = yes
+				}
 			}
-		}			
-	}
-	
-	focus = {
-		id = TRI_restart_inschool_debate #重启《伊甸条约》院内章程
-		icon = GFX_goal_TRI_restart_inschool_debate	
-		relative_position_id = TRI_expand_intellegence
-		prerequisite = {
-			focus = TRI_authorize_dove_faction
-			focus = TRI_authorize_eagle_faction
-		}					
-		prerequisite = { focus = TRI_expand_intellegence }
-
-		cost = 10
-		x = -2
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 10
-						include_locked = yes
+			focus = { #召开圣三一联合会议	
+				id = TRI_calling_for_convention
+				icon = GFX_goal_TRI_calling_for_convention	
+				relative_position_id = TRI_authorize_dove_faction
+				prerequisite = { focus = TRI_authorize_dove_faction }
+				prerequisite = { focus = TRI_turncoat_in_trinity }
+				
+				cost = 10
+				x = 0
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 70
+						}
+					}
+					add_political_power = 75
+					country_event = TRI_events.9
+					#所有派系激进度-10%（对立派系效果翻倍）
+					set_temp_variable = { radicalism_change = -0.2 }
+					TRI_parliament_against_radicalism_change = yes
+					set_temp_variable = { radicalism_change = -0.1 }
+					TRI_parliament_non_against_radicalism_change = yes
+					#桐藤渚偏执度-10%
+					TRI_paranoia_decrease_10 = yes
+					#圣三一下议会+10支持席位
+					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+					set_temp_variable = { loyalty_change = 0.1 }
+					TRI_parliament_loyalty_change_parliament = yes
+				}			
+			}
+			focus = { #举杯邀议	
+				id = TRI_invitation_for_discussion
+				icon = 	GFX_goal_TRI_invitation_for_discussion
+				relative_position_id = TRI_calling_for_convention
+				prerequisite = { focus = TRI_calling_for_convention }
+				
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					custom_effect_tooltip = eden_step_0_to_1_desc
+					hidden_effect = {
+						remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
+						add_to_variable = { eden_daily_power_gain = 0.15 }
+						add_to_variable = { eden_stability = 0.05 }
+						add_to_variable = { eden_goods_factor = -0.10 }
+						add_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
+					}
+					custom_effect_tooltip = TRI_invitation_for_discussion_tt
+				}			
+			}
+			focus = { #开诚布公法案	
+				id = TRI_Bill_of_disclosure
+				icon = GFX_goal_TRI_Bill_of_disclosure
+				relative_position_id = TRI_invitation_for_discussion
+				prerequisite = { focus = TRI_invitation_for_discussion }
+				
+				cost = 5
+				x = 0
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					set_temp_variable = { bill = token:TRI_Bill_of_disclosure }
+					TRI_submit_the_bill = yes
+					effect_tooltip = {
+						add_tech_bonus = {
+							category = industry
+							bonus = 0.5
+						}
+						unlock_decision_category_tooltip = TRI_unity_system
+						custom_effect_tooltip = TRI_Bill_of_disclosure_tt
+					}
+					custom_effect_tooltip = TRI_need_detail_tt
+				}			
+			}
+			focus = { #纳听宣策	
+				id = TRI_hear_and_command
+				icon = GFX_goal_TRI_hear_and_command
+				relative_position_id = TRI_Bill_of_disclosure
+				prerequisite = { focus = TRI_Bill_of_disclosure }
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = TRI_has_passed_bill_tt
+							BILL = TRI_Bill_of_disclosure
+						}
+						is_in_array = {
+							array = TRI_passed_bills
+							value = token:TRI_Bill_of_disclosure
+						}
 					}
 				}
 				
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
+				cost = 5
+				x = -2
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}	
+					}
+					set_country_flag = TRI_hear_and_command
+				}			
 			}
-			
-			custom_effect_tooltip = eden_step_0_to_1_desc
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
-				add_to_variable = { eden_daily_power_gain = 0.15 }
-				add_to_variable = { eden_stability = 0.05 }
-				add_to_variable = { eden_goods_factor = -0.10 }
-				add_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
-			}
-		}			
-	}
-	
-	focus = {
-		id = TRI_turncoat_in_trinity #潜藏于圣三一的叛徒
-		icon = GFX_goal_TRI_turncoat_in_trinity	
-		relative_position_id = TRI_restart_inschool_debate
-		prerequisite = { focus = TRI_restart_inschool_debate }
-		
-		available = {
-			TRI_nagisa = { is_country_leader = yes }
-		}
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		
-		select_effect = {
-			#通过触发事件使桐藤渚获得特质
-			#桐藤渚获得特质——追根溯源:每6日偏执度+2%,稳定度+5%,改善关系-40%
-		}
-		
-		completion_reward = {
-			#桐藤渚获得特质描述
-			custom_effect_tooltip = TRI_focus_select_effect_tt
-			add_country_leader_trait = TRI_nagisa_Find_the_root
-			#桐藤渚偏执度-5
-			add_to_variable = { TRI_nagisa_paranoia_total = -5 }
-			
-			add_dynamic_modifier = { modifier = TRI_special_services_investigations }
-		}			
-	}
-	
-	focus = {
-		id = TRI_calling_for_convention #召开圣三一联合会议	
-		icon = GFX_goal_TRI_calling_for_convention	
-		relative_position_id = TRI_turncoat_in_trinity
-		prerequisite = { focus = TRI_turncoat_in_trinity }			
-		mutually_exclusive = { focus = TRI_calling_for_Schale }
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 75
-			#TODO:所有派系激进度-10%（对立派系效果翻倍）
-			
-			#TODO:桐藤渚偏执度-10%
-			add_to_variable = { TRI_nagisa_paranoia_total = -10 }
-			
-			#圣三一下议会+10支持席位
-			set_variable = { Senators_change_num = 10 }
-			if = { 
-				limit = {
-					check_variable = { Senators_centrist_num > Senators_change_num }
+			focus = { #重建议会沟通渠道	
+				id = TRI_rebuild_communication_channel
+				icon = GFX_goal_TRI_rebuild_communication_channel
+				relative_position_id = TRI_Bill_of_disclosure
+				prerequisite = { focus = TRI_Bill_of_disclosure }
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = TRI_has_passed_bill_tt
+							BILL = TRI_Bill_of_disclosure
+						}
+						is_in_array = {
+							array = TRI_passed_bills
+							value = token:TRI_Bill_of_disclosure
+						}
+					}
 				}
 				
-				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
-				add_to_variable = { Senators_support_num = Senators_change_num }
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					add_stability = 0.05
+					set_country_flag = TRI_rebuild_communication_channel
+					unlock_decision_tooltip = TRI_BOP_transfer_right
+					unlock_decision_tooltip = TRI_BOP_strengthen_control
+					unlock_decision_tooltip = TRI_BOP_ensure_propaganda
+					unlock_decision_tooltip = TRI_BOP_resource_distribution
+					custom_effect_tooltip = eden_step_1_to_2_desc
+					hidden_effect = {
+						remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
+						add_to_variable = { eden_daily_power_gain = 0.20 }
+						add_to_variable = { eden_war_support = 0.10 }
+						add_to_variable = { eden_goods_factor = -0.10 }
+						add_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
+					}
+				}
+			}
+			focus = { #会晤前的筹备
+				id = TRI_choosing_pact_place
+				icon = GFX_goal_TRI_choosing_pact_place	
+				relative_position_id = TRI_rebuild_communication_channel
+				prerequisite = { focus = TRI_rebuild_communication_channel }				
+				available = {
+					custom_override_tooltip = {
+						tooltip = TRI_choosing_pact_place_trigger_tt
+						has_country_flag = TRI_mika_arrested
+					}
+				}
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					add_political_power = 100
+					add_stability = 0.05
+					country_event = TRI_events.13
+					#桐藤渚偏执度-10%
+					TRI_paranoia_decrease_10 = yes
+					add_ideas = TRI_prepare_for_meeting
+					hidden_effect = {
+						country_event = TRI_events.50
+					}
+				}			
+			}
+			focus = { #筹备物资调配
+				id = TRI_deploy_materials
+				icon = GFX_goal_TRI_deploy_materials
+				relative_position_id = TRI_choosing_pact_place
+				prerequisite = { focus = TRI_choosing_pact_place }
 				
-				custom_effect_tooltip = TRI_Senators_party_change_oppo
-				TRI_reload_senators_parliament_gui = yes
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					TRI_paranoia_decrease_10 = yes
+					add_timed_idea = {
+						idea = TRI_2st_eden_pact_modifier
+						days = 120
+					}
+					swap_ideas = {
+						remove_idea = TRI_prepare_for_meeting
+						add_idea = TRI_prepare_for_meeting_2
+					}
+				}
 			}
-		}			
-	}
-	
-	focus = {
-		id = TRI_calling_for_Schale #拨通联邦学生会/夏莱的电话 此处可能处理成动态国策
-		icon = GFX_goal_TRI_calling_for_Schale	
-		relative_position_id = TRI_turncoat_in_trinity
-		prerequisite = { focus = TRI_turncoat_in_trinity }		
-		mutually_exclusive = { focus = TRI_calling_for_convention }
-		
-		available = {
-			SCH = {
-				exists = yes
+			focus = { #宣传，精确，完美
+				id = TRI_precise_and_perfect_compaign
+				icon = GFX_goal_TRI_precise_and_perfect_compaign
+				relative_position_id = TRI_choosing_pact_place
+				prerequisite = { focus = TRI_choosing_pact_place }
+				
+				cost = 5
+				x = -2
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					#电子科技100%加速卡x1
+					add_tech_bonus = {
+						category = electronics
+						bonus = 1
+					}
+					TRI_paranoia_decrease_10 = yes
+					set_temp_variable = { loyalty_change = 0.03 }
+					TRI_parliament_all_loyalty_change = yes
+					swap_ideas = {
+						remove_idea = TRI_prepare_for_meeting_2
+						add_idea = TRI_prepare_for_meeting_3
+					}
+					#在议会决议栏中添加宣传决议组：效果为一次性花费pp和电话，提升稳定度，社团团结度或支持度。
+					set_country_flag = TRI_compaign_for_meeting
+					unlock_decision_tooltip = TRI_compaign_for_meeting
+				}
 			}
-		}
-		
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-			#TODO:所有派系激进度+10%
-			#TODO:桐藤渚偏执度-5%
-			add_to_variable = { TRI_nagisa_paranoia_total = -5 }
-			
-			add_ideas = TRI_SCH_teacher_modifier
-		}			
-	}
-	
-	focus = {
-		id = TRI_investigation_in_care #详勘细查，防微杜渐
-		icon = GFX_goal_TRI_investigation_in_care	
-		relative_position_id = TRI_calling_for_Schale
-		prerequisite = {
-			focus = TRI_calling_for_Schale
-			focus = TRI_calling_for_convention
-		}
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { ssi_political_power_gain = -0.10 }
-				add_to_variable = { ssi_stability = 0.05 }
+			focus = { #平稳航行
+				id = TRI_steady_as_she_goes
+				icon = GFX_goal_TRI_steady_as_she_goes
+				relative_position_id = TRI_deploy_materials
+				prerequisite = { focus = TRI_deploy_materials }
+				
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					#获取工业加速卡50%x1
+					add_tech_bonus = {
+						category = industry
+						bonus = 0.5
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+					}
+				}
 			}
-			
-			custom_effect_tooltip = TRI_investigation_in_care_ns_tt
-			#TODO:于决议组下添加GUI：【圣三一特殊事务调查部】并启用决议组：【对内部的调查】
-		}			
-	}
-	
-	focus = {
-		id = TRI_examination_for_training_club #对补习部的考试
-		icon = GFX_goal_TRI_examination_for_training_club	
-		relative_position_id = TRI_investigation_in_care
-		prerequisite = { focus = TRI_investigation_in_care }
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50
-			#TODO:于决议组：【圣三一特殊事务调查部】下追加决议组：【对补习部的调查】
-			#TODO:桐藤渚偏执度-10%
-			add_to_variable = { TRI_nagisa_paranoia_total = -10 }
-		}			
-	}
-	
-	focus = {
-		id = TRI_reunion_of_trinity #圣三一再联合
-		icon = GFX_goal_TRI_reunion_of_trinity	
-		relative_position_id = TRI_examination_for_training_club
-		prerequisite = { focus = TRI_examination_for_training_club }
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 100
-			#TODO:桐藤渚偏执度-20%
-			add_to_variable = { TRI_nagisa_paranoia_total = -20 }
-			
-			#TODO:于GUI【圣三一的团结】支持度中添加20%的基础支持度
-			#TODO:于GUI【圣三一的团结】中添加:所有社团的激进程度-15%
-		}			
-	}
-	
-	focus = {
-		id = TRI_chooseing_pact_place #会晤前的筹备
-		icon = GFX_goal_TRI_chooseing_pact_place	
-		relative_position_id = TRI_reunion_of_trinity
-		prerequisite = { focus = TRI_reunion_of_trinity }				
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.05
-			#TODO:桐藤渚偏执度-10%
-			add_to_variable = { TRI_nagisa_paranoia_total = -10 }
-			
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
-				add_to_variable = { eden_daily_power_gain = 0.20 }
-				add_to_variable = { eden_war_support = 0.10 }
-				add_to_variable = { eden_goods_factor = -0.10 }
-				add_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
+		#补习部部分
+			focus = { #扩展圣三一情报局
+				id = TRI_expand_intellegence
+				icon = GFX_goal_TRI_expand_intellegence
+				allow_branch = { #拥有焦点：《伊甸条约》的签订
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
+				}
+				
+				cost = 5
+				x = 8
+				y = 0
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_stability = -0.10
+					#建立间谍机构：【圣三一特殊调查部】
+					create_intelligence_agency = yes
+					country_event = TRI_events.6
+					set_temp_variable = { loyalty_change = -0.06 }
+					TRI_parliament_all_loyalty_change = yes
+				}			
 			}
-			
-			custom_effect_tooltip = eden_step_1_to_2_desc
-		}			
-	}
-	
-	focus = {
-		id = TRI_2st_eden_pact #第二次《伊甸条约》会谈
-		icon = GFX_goal_TRI_2st_eden_pact	
-		relative_position_id = TRI_chooseing_pact_place
-		prerequisite = { focus = TRI_chooseing_pact_place }			
-		
-		bypass = {
-			#TODO:如果超事件－第二次《伊甸条约》会谈已被触发：则该国策将会被跳过
-		}
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#TODO:触发超事件第二次《伊甸条约》会谈
-			add_political_power = 100
-			add_timed_idea = {
-				idea = TRI_2st_eden_pact_modifier
-				days = 120
+			focus = { #潜藏于圣三一的叛徒
+				id = TRI_turncoat_in_trinity
+				icon = GFX_goal_TRI_turncoat_in_trinity	
+				relative_position_id = TRI_expand_intellegence
+				prerequisite = { focus = TRI_expand_intellegence }
+				
+				available = {
+					TRI_nagisa = { is_country_leader = yes }
+				}
+				
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				
+				select_effect = {
+					#启用偏执度系统
+					BA_TRI_initialize_paranoia_system = yes
+					#通过触发事件使桐藤渚获得特质
+					#桐藤渚获得特质——追根溯源:每周偏执度+2%,稳定度+5%,改善关系-40%
+				}
+				
+				completion_reward = {
+					#桐藤渚偏执度-5
+					set_temp_variable = { TRI_paranoia_change = -5 }
+					TRI_change_paranoia = yes
+					TRI_unity_decrease_5 = yes
+					country_event = TRI_events.8
+					add_dynamic_modifier = { modifier = TRI_special_services_investigations }
+					#桐藤渚获得特质描述
+					custom_effect_tooltip = focus_select_effect_tt
+					effect_tooltip = { BA_TRI_initialize_paranoia_system = yes }
+					#初始化自动国策线
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_in_care }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_calling_for_Schale }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_azusa }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_koharu }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_hanako }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_hifumi }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_establish_hoshubu }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_guide_of_hoshubu }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_love_for_students }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_examination_for_training_club }
+					add_to_array = { TRI_hoshubu_focus_line = token:TRI_buy_time }
+					activate_shine_on_focus = TRI_investigation_in_care
+					set_variable = { TRI_auto_focus_days = 35 }
+					hidden_effect = {
+						country_event = {
+							id = TRI_autofocus.1
+							days = 35
+						}
+					}
+				}
 			}
-			
-			#TODO:如果超事件－第二次《伊甸条约》会谈已被触发：则该国策将会被跳过,并且上议院席位朝着反对玩家的方向移动2个席位,下议院朝着反对玩家的方向移动2个席位,并使得桐藤渚的偏执度+30%。
-		}			
-	}
-	
-	focus = {
-		id = TRI_dissonance #失谐奏鸣
-		icon = GFX_goal_TRI_dissonance	
-		relative_position_id = TRI_chooseing_pact_place
-		prerequisite = { focus = TRI_chooseing_pact_place }
-		
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_dynamic_modifier = { modifier = TRI_dissonance_modifier }
-		}		
-	}
-	
-	focus = {
-		id = TRI_Unintentional_windfall #无心插柳
-		icon = GFX_goal_TRI_Unintentional_windfall	
-		relative_position_id = TRI_2st_eden_pact
-		prerequisite = { focus = TRI_2st_eden_pact }		
-		prerequisite = { focus = TRI_dissonance }
-		
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-			hidden_effect = { #不谐之音效果修改
-				add_to_variable = { dissonance_stability = -0.05 }
-				add_to_variable = { dissonance_factory_output = -0.05 }
-				add_to_variable = { dissonance_training_time = 0.20 }
+			focus = { #详勘细查，防微杜渐
+				id = TRI_investigation_in_care
+				icon = GFX_goal_TRI_investigation_in_care	
+				relative_position_id = TRI_turncoat_in_trinity
+				prerequisite = { focus = TRI_turncoat_in_trinity }
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = -1
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					hidden_effect = {
+						add_to_variable = { ssi_political_power_gain = -0.10 }
+						add_to_variable = { ssi_stability = 0.05 }
+					}
+					TRI_unity_decrease_5 = yes
+					custom_effect_tooltip = TRI_investigation_in_care_ns_tt
+					#于决议组下添加GUI：【圣三一特殊事务调查部】并启用决议组：【对内部的调查】
+					custom_effect_tooltip = TRI_paranoia_new_investigation_decisions_tt
+				}
 			}
-			
-			custom_effect_tooltip = TRI_dissonance_modifier_ns_tt
-			hidden_effect = {
-				add_to_variable = { ssi_operative_slot = 1 }
-				#TODO:获得间谍：获得间谍：白洲梓
-				#在间谍机构【圣三一特殊事务调查部】中添加任务：对茶话会的渗透
-				#TODO:启用军事顾问：白洲梓
-				#当白洲梓成为军事顾问时，接下来的国策事件组带来的负面影响将会降低；当白洲梓执行任务“对茶话会的渗透”时，该任务不会失败。
+			focus = { #调查白洲梓
+				id = TRI_investigation_focus_azusa
+				icon = GFX_goal_TRI_investigation_focus_azusa
+				relative_position_id = TRI_investigation_in_care
+				prerequisite = { focus = TRI_investigation_in_care }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = -3
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					country_event = TRI_events.202
+				}
 			}
-			
-			custom_effect_tooltip = TRI_investigation_in_care_alt_ns_tt
-		}			
-	}
-	
-	focus = {
-		id = TRI_conspiracy_against_conspiracy #密谋，挫败阴谋
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_Unintentional_windfall
-		prerequisite = { focus = TRI_Unintentional_windfall }		
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 50
-			#启用政治顾问：阿慈谷日富美、下江小春
-			#触发事件移除桐藤渚特质【追根溯源】
-		}			
-	}
-	
-	focus = {
-		id = TRI_sweet_dream_in_one_night #一夕安寝
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_conspiracy_against_conspiracy
-		prerequisite = { focus = TRI_conspiracy_against_conspiracy }		
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			remove_dynamic_modifier = { modifier = TRI_dissonance_modifier }
-			add_ideas = TRI_dissonance_modifier_alt
-			
-			#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一特殊调查部】；②将【补习部调查】决议组移除出GUI【圣三一特殊调查部】
-		}			
-	}
-	
-	focus = {
-		id = TRI_lesson_from_training_club #补习部的教训
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_sweet_dream_in_one_night
-		prerequisite = { focus = TRI_sweet_dream_in_one_night }		
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 100
-			#桐藤渚添加特质【温和的统领】(雇佣政治顾问和军事顾问的花费-25%)
-			remove_country_leader_trait = TRI_nagisa_Mild_leader
-			add_country_leader_trait = TRI_nagisa_Mild_leader_alt
-		}			
-	}
-	
-	focus = {
-		id = TRI_meeting_for_the_future #面向未来的会议 
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_sweet_dream_in_one_night
-		prerequisite = { focus = TRI_sweet_dream_in_one_night }		
-		
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 200
-			#暂时锁定GUI【圣三一的团结】的数值
-		}			
-	}
-	
-	focus = {
-		id = TRI_Congress_for_ending_all_conflict #正式的会议 假国策，激活30天后会触发事件，强制切换到另一条国策线
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_meeting_for_the_future
-		prerequisite = { focus = TRI_meeting_for_the_future }		
-		prerequisite = { focus = TRI_lesson_from_training_club }
-		
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
+			focus = { #调查下江小春
+				id = TRI_investigation_focus_koharu
+				icon = GFX_goal_TRI_investigation_focus_koharu
+				relative_position_id = TRI_investigation_in_care
+				prerequisite = { focus = TRI_investigation_in_care }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = -1
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					country_event = TRI_events.200
+				}
+			}
+			focus = { #调查浦和花子
+				id = TRI_investigation_focus_hanako
+				icon = GFX_goal_TRI_investigation_focus_hanako
+				relative_position_id = TRI_investigation_in_care
+				prerequisite = { focus = TRI_investigation_in_care }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 1
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					country_event = TRI_events.201
+				}
+			}
+			focus = { #调查阿慈谷日富美
+				id = TRI_investigation_focus_hifumi
+				icon = GFX_goal_TRI_investigation_focus_hifumi
+				relative_position_id = TRI_investigation_in_care
+				prerequisite = { focus = TRI_investigation_in_care }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 3
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					country_event = TRI_events.203
+				}
+			}
+			focus = { #成立补习部
+				id = TRI_establish_hoshubu
+				icon = GFX_goal_TRI_establish_hoshubu
+				relative_position_id = TRI_investigation_focus_koharu
+				prerequisite = { focus = TRI_investigation_focus_azusa }
+				prerequisite = { focus = TRI_investigation_focus_koharu }
+				prerequisite = { focus = TRI_investigation_focus_hanako }
+				prerequisite = { focus = TRI_investigation_focus_hifumi }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 1
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					set_temp_variable = { TRI_paranoia_change = -15 }
+					TRI_change_paranoia = yes
+					#于决议组：【圣三一特殊事务调查部】下追加决议组：【对补习部的调查】
+					custom_effect_tooltip = TRI_hoshubu_available_tt
+					set_country_flag = TRI_investigate_available
+				}
+			}
+			focus = { #对补习部的考试
+				id = TRI_examination_for_training_club
+				icon = GFX_goal_TRI_examination_for_training_club	
+				relative_position_id = TRI_establish_hoshubu
+				prerequisite = { focus = TRI_establish_hoshubu }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					#桐藤渚偏执度-15%
+					set_temp_variable = { TRI_paranoia_change = -15 }
+					TRI_change_paranoia = yes
+					set_country_flag = TRI_investigation_perfect_ending_enter
+				}			
+			}
 
-			remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
-			add_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
-			custom_effect_tooltip = eden_step_2_to_3
-			#30天后触发事件
+			focus = { #拿起电话
+				id = TRI_calling_for_Schale
+				icon = GFX_goal_TRI_calling_for_Schale	
+				relative_position_id = TRI_turncoat_in_trinity
+				prerequisite = { focus = TRI_turncoat_in_trinity }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				
+				cost = 5
+				x = 4
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					set_temp_variable = {
+						radicalism_change = 0.1
+					}
+					TRI_parliament_all_radicalism_change = yes
+					if = {
+						limit = { SCH = { exists = yes } }
+						country_event = TRI_events.11
+					}
+					else = {
+						country_event = TRI_events.10
+					}
+
+					
+				}			
+			}
+			focus = { #接任补习部指导
+				id = TRI_guide_of_hoshubu
+				#icon = 
+				relative_position_id = TRI_calling_for_Schale
+				prerequisite = { focus = TRI_calling_for_Schale }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 0
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					country_event = TRI_events.12
+					TRI_paranoia_decrease_20 = yes
+					custom_effect_tooltip = TRI_hoshubu_progress_tt
+				}
+			}
+			focus = { #培悯授爱
+				id = TRI_love_for_students
+				#icon = 
+				relative_position_id = TRI_guide_of_hoshubu
+				prerequisite = { focus = TRI_guide_of_hoshubu }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 0
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 100
+					TRI_paranoia_increase_10 = yes
+					custom_effect_tooltip = TRI_hoshubu_progress_tt
+				}			
+			}
+			focus = { #争取时间
+				id = TRI_buy_time
+				#icon = 
+				relative_position_id = TRI_love_for_students
+				prerequisite = { focus = TRI_love_for_students }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 5
+				x = 0
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					TRI_unity_decrease_5 = yes
+					TRI_nagisa = {
+						swap_ruler_traits = {
+							remove = TRI_nagisa_Find_the_root
+							add = TRI_nagisa_Find_the_root_2
+						}
+					}
+					add_to_variable = {
+						TRI_nagisa_paranoia_modifier_increase = 1
+					}
+					#判定路线
+					if = {
+						limit = { has_country_flag = TRI_investigation_perfect_ending_enter }
+						clr_country_flag = TRI_investigation_perfect_ending_enter
+						set_country_flag = TRI_investigation_perfect_ending
+
+						#锁定政变圣三一胜利路线
+						set_temp_variable = {
+							ART_coup_effect_lock_Tri_var = 1
+						}
+						hidden_effect = {
+							ARI = {
+								country_event = ARI_coup.11
+							}
+						}
+						#主动开始政变事件
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_silence }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_unexpected_one }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_daring_plan_meticulous_action }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_lure_the_enemy }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
+						activate_shine_on_focus = TRI_silence
+						country_event = {
+							id = TRI_autofocus.1
+							days = 7
+						}
+					}
+					else = {
+						set_country_flag = TRI_investigation_normal_ending
+						#确定国策线，由阿里乌斯开始推动
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_dissonance }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_the_story_of_girls }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_Unintentional_windfall }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_conspiracy_against_conspiracy }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_sweet_dream_in_one_night }
+					}
+					ARITRI_coup_effect_lock = yes
+					set_variable = { TRI_auto_focus_days = 7 }
+				}
+			}
+
+			focus = { #失谐奏鸣
+				id = TRI_dissonance
+				icon = GFX_goal_TRI_dissonance	
+				relative_position_id = TRI_examination_for_training_club
+				prerequisite = { focus = TRI_examination_for_training_club }
+				
+				allow_branch = {
+					has_country_flag = TRI_investigation_normal_ending
+				}
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					country_event = TRI_coup.1
+					TRI_paranoia_increase_10 = yes
+					#圣三一上议会所有社团支持度-5%
+					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+					set_temp_variable = { loyalty_change = -0.05 }
+					TRI_parliament_loyalty_change_parliament = yes
+					add_dynamic_modifier = { modifier = TRI_dissonance_modifier }
+				}		
+			}
+			focus = { #少女们的故事
+				id = TRI_the_story_of_girls
+				#icon = 
+				relative_position_id = TRI_examination_for_training_club
+				prerequisite = { focus = TRI_examination_for_training_club }
+				
+				allow_branch = {
+					has_country_flag = TRI_investigation_normal_ending
+				}
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 2
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					country_event = {
+						id = TRI_events.44
+						days = 14
+					}
+				}		
+			}
+			focus = { #无心插柳
+				id = TRI_Unintentional_windfall
+				icon = GFX_goal_TRI_Unintentional_windfall	
+				relative_position_id = TRI_dissonance	
+				prerequisite = { focus = TRI_dissonance }
+				prerequisite = { focus = TRI_the_story_of_girls }
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					country_event = TRI_coup.2
+				}
+				completion_reward = {
+					
+					hidden_effect = { #不谐之音效果修改
+						add_to_variable = { dissonance_stability = -0.05 }
+						add_to_variable = { dissonance_factory_output = -0.05 }
+						add_to_variable = { dissonance_training_time = 0.20 }
+					}
+					#启用军事顾问：白洲梓
+					#TODO:当白洲梓成为军事顾问时，接下来的国策事件组带来的负面影响将会降低；当白洲梓执行任务“对茶话会的渗透”时，该任务不会失败。
+					add_advisor_role = {
+						character = TRI_azusa
+						activate = no
+						advisor = { 
+							slot = army_chief
+							idea_token = TRI_azusa_ac
+							traits = {
+								slience_guerrilla_warfare_master
+							}
+							cost = 100
+							ai_will_do = {
+								base = 1
+							}
+						}
+					}
+					country_event = TRI_events.43
+					
+					custom_effect_tooltip = TRI_investigation_in_care_alt_ns_tt
+				}			
+			}
+			focus = { #密谋，挫败阴谋
+				id = TRI_conspiracy_against_conspiracy
+				##icon = GFX_goal_unknown
+				relative_position_id = TRI_Unintentional_windfall
+				prerequisite = { focus = TRI_Unintentional_windfall }
+				cancelable = no	
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					add_political_power = 50
+					country_event = TRI_coup.4
+					#启用政治顾问：阿慈谷日富美
+					add_advisor_role = {
+						character = TRI_hifumi
+						activate = no
+						advisor = { 
+							slot = political_advisor
+							idea_token = TRI_hifumi_pa
+							traits = {
+								ordinary_girl
+							}
+							ai_will_do = {
+								base = 1
+							}
+						}
+					}
+					#触发事件移除桐藤渚特质【追根溯源】
+					effect_tooltip = { 
+						custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
+						remove_country_leader_trait = TRI_nagisa_Find_the_root 
+					}
+				}
+			}
+
+			focus = { #暗调潜声
+				id = TRI_silence
+				#icon = 
+				relative_position_id = TRI_examination_for_training_club
+				prerequisite = { focus = TRI_examination_for_training_club }
+				allow_branch = {
+					has_country_flag = TRI_investigation_perfect_ending
+				}
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					country_event = TRI_coup.20
+				}
+			}
+			focus = { #意外之人
+				id = TRI_unexpected_one
+				#icon = 
+				relative_position_id = TRI_silence
+				prerequisite = { focus = TRI_silence }
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					country_event = TRI_coup.21
+					
+				}
+			}
+			focus = { #大胆谋划，悉心行动
+				id = TRI_daring_plan_meticulous_action
+				#icon = 
+				relative_position_id = TRI_unexpected_one
+				prerequisite = { focus = TRI_unexpected_one }
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					country_event = TRI_coup.24
+				}
+			}
+			focus = { #诱敌深入
+				id = TRI_lure_the_enemy
+				#icon = 
+				relative_position_id = TRI_daring_plan_meticulous_action
+				prerequisite = { focus = TRI_daring_plan_meticulous_action }
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					
+				}
+			}
+		
+			focus = { #困兽犹斗
+				id = TRI_desperate_fight
+				##icon = GFX_goal_unknown
+				relative_position_id = TRI_conspiracy_against_conspiracy
+				prerequisite = { 
+					focus = TRI_conspiracy_against_conspiracy 
+					focus = TRI_lure_the_enemy 
+				}
+				prerequisite = { focus = TRI_buy_time }
+				cancelable = no	
+				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 2
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					TRI_unity_increase_10 = yes
+					remove_dynamic_modifier = { modifier = TRI_dissonance_modifier }
+					add_ideas = TRI_dissonance_modifier_alt
+					set_temp_variable = { association = token:TRI_paranoia_association_0 }
+					set_temp_variable = { loyalty_change = 0.1 }
+					TRI_parliament_loyalty_change = yes
+					if = {
+						limit = { has_country_flag = TRI_investigation_perfect_ending }
+						country_event = TRI_coup.30
+					}
+					else = {
+						country_event = TRI_coup.5
+					}
+				}
+			}
+
+			focus = { #一夕安寝
+				id = TRI_sweet_dream_in_one_night
+				##icon = GFX_goal_unknown
+				relative_position_id = TRI_desperate_fight
+				prerequisite = { focus = TRI_desperate_fight }		
+				allow_branch = {
+					has_country_flag = TRI_investigation_normal_ending
+				}
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = autonomous_focus_trigger_tt
+							ORIGINATOR = TRI_hoshubu
+						}
+						always = no
+					}
+				}
+				cost = 1
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					TRI_unity_increase_5 = yes
+					add_political_power = 100
+					country_event = TRI_events.22
+					set_country_flag = TRI_sweet_dream_in_one_night_completed
+					
+					#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一特殊调查部】；②将【补习部调查】决议组移除出GUI【圣三一特殊调查部】
+				}			
+			}
+			focus = { #补习部的教训
+				id = TRI_lesson_from_training_club
+				##icon = GFX_goal_unknown
+				relative_position_id = TRI_steady_as_she_goes
+				prerequisite = { focus = TRI_steady_as_she_goes }
+				prerequisite = { focus = TRI_sweet_dream_in_one_night }		
+				
+				cost = 5
+				x = 0
+				y = 3
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				select_effect = {
+					}
+					completion_reward = {
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					if = {
+						limit = { has_country_flag = TRI_paranoia_system_active }
+						add_to_variable = {
+							TRI_political_focus_duration = 35
+						}
+					}
+					add_political_power = 100
+					country_event = TRI_events.25
+					#桐藤渚添加特质【温和的统领】(雇佣政治顾问和军事顾问的花费-25%)
+					TRI_nagisa = {
+						swap_country_leader_traits = {
+							remove = TRI_nagisa_Mild_leader
+							add = TRI_nagisa_Mild_leader_alt
+						}
+					}
+					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+					set_temp_variable = { loyalty_change = 0.06 }
+					TRI_parliament_loyalty_change_parliament = yes
+					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+					set_temp_variable = { loyalty_change = 0.04 }
+					TRI_parliament_loyalty_change_parliament = yes
+					
+				}			
+			}
+			
+			focus = { #夜月落，朝阳升
+				id = TRI_moon_fall_sun_rise
+				##icon = GFX_goal_unknown
+				relative_position_id = TRI_steady_as_she_goes
+				prerequisite = { focus = TRI_desperate_fight }
+				prerequisite = { focus = TRI_steady_as_she_goes }
+				allow_branch = {
+					has_country_flag = TRI_investigation_perfect_ending
+				}
+				cost = 5
+				x = 0
+				y = 2
+				search_filters = { FOCUS_FILTER_POLITICAL }
+				completion_reward = {
+					
+				}
+			}
+	#拥有焦点：【对现任茶话会领袖的支持】时显示的国策
+		focus = { #修复信任
+			id = TRI_repair_trust
+			##icon = GFX_goal_unknown	
+			allow_branch = {
+				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_trust_on_current_leader }
+			}
+			cost = 5
+			x = 1
+			y = 0
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				add_stability = 0.1
+				custom_effect_tooltip = when_completed_if_tt
+				custom_effect_tooltip = {
+					localization_key = TRI_focus_support_trigger
+					PARLIAMENT = BA_TRI_senate_seat
+					SUPPORT = "22"
+				}
+				effect_tooltip = {
+					complete_national_focus = TRI_threading_a_needle
+				}
+				custom_effect_tooltip = {
+					localization_key = TRI_focus_support_trigger
+					PARLIAMENT = BA_TRI_house_seat
+					SUPPORT = "80"
+				}
+				effect_tooltip = {
+					complete_national_focus = TRI_return_a_favor
+				}
+				hidden_effect = {
+					if = {
+						limit = { check_variable = { position_support@BA_TRI_senate_seat > 22 } }
+						complete_national_focus = TRI_threading_a_needle
+					}
+					if = {
+						limit = { check_variable = { position_support@BA_TRI_house_seat > 80 } }
+						complete_national_focus = TRI_return_a_favor
+					}
+				}
+				unlock_decision_tooltip = {
+					decision = TRI_prepare_counters
+					show_effect_tooltip = yes
+					show_modifiers = yes
+				}
+			}			
 		}
-	}
-	
+		focus = { #探寻真相
+			id = TRI_exploring_the_truth
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_repair_trust
+			prerequisite = { focus = TRI_repair_trust }		
+			
+			cost = 5
+			x = 4
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 100
+				#于GUI：【圣三一情报局】中添加【对圣原未花的调查】页面，允许玩家对圣原未花的动机进行调查。
+				set_country_flag = TRI_mika_investigation_available
+			}			
+		}
+		focus = { #穿针引线
+			id = TRI_threading_a_needle
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_repair_trust
+			prerequisite = { focus = TRI_repair_trust }		
+			
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				add_political_power = 100
+				random_controlled_state = {
+					limit = {
+						TRI_is_tea_party_state = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}	
+				}
+				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				set_temp_variable = { loyalty_change = 0.1 }
+				TRI_parliament_loyalty_change_parliament = yes
+
+				custom_effect_tooltip = when_completed_if_tt
+				custom_effect_tooltip = {
+					localization_key = TRI_focus_support_trigger
+					PARLIAMENT = BA_TRI_senate_seat
+					SUPPORT = "24"
+				}
+				effect_tooltip = {
+					complete_national_focus = TRI_bouncing_back
+				}
+				hidden_effect = {
+					if = {
+						limit = { check_variable = { position_support@BA_TRI_senate_seat > 24 } }
+						complete_national_focus = TRI_bouncing_back
+					}
+				}
+				#TODO:于议会中添加“对派系的许诺”决议，解锁玩家选择接受上议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
+			}
+		}
+		focus = { #重整旗鼓
+			id = TRI_bouncing_back
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_threading_a_needle
+			prerequisite = { focus = TRI_threading_a_needle }		
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_focus_support_trigger
+						PARLIAMENT = BA_TRI_senate_seat
+						SUPPORT = "24"
+					}
+					check_variable = { position_support@BA_TRI_senate_seat > 24 }
+				}
+			}
+			cost = 5
+			x = 0
+			y = 2
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				add_war_support = 0.1
+				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				set_temp_variable = { loyalty_change = 0.15 }
+				TRI_parliament_loyalty_change_parliament = yes
+				#使上议院对法案：“重获信任”通过的支持度提高，这将提升该法案的通过率；
+				custom_effect_tooltip = {
+					localization_key = TRI_get_temp_bill_support
+					BILL = TRI_Bill_of_regaining_trust
+					SENATE = "3"
+					HOUSE = "10"
+				}
+				#TODO:若所有上议院派系均已完成一次任务，则向民族精神：“受到动摇的信任”中添加效果：“更改或任命政治顾问花费－50％，pp消耗－0.2，每月团结度＋1％，每月向决议：第二次《伊甸条约》会谈筹备中添加1点筹备度。
+				add_to_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = -0.5 }
+				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
+				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
+				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+				add_ideas = TRI_bouncing_back_idea
+			}
+		}
+		focus = { #桃来李答
+			id = TRI_return_a_favor
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_repair_trust
+			prerequisite = { focus = TRI_repair_trust }		
+			
+			cost = 5
+			x = 2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				add_political_power = 100
+				random_controlled_state = {
+					limit = {
+						TRI_is_tea_party_state = no
+						free_building_slots = {
+							building = resource_distribution_center
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = resource_distribution_center
+						level = 1
+						instant_build = yes
+					}	
+				}
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = 0.1 }
+				TRI_parliament_loyalty_change_parliament = yes
+				custom_effect_tooltip = when_completed_if_tt
+				custom_effect_tooltip = {
+					localization_key = TRI_focus_support_trigger
+					PARLIAMENT = BA_TRI_house_seat
+					SUPPORT = "80"
+				}
+				effect_tooltip = {
+					complete_national_focus = TRI_making_the_best_use
+				}
+				hidden_effect = {
+					if = {
+						limit = { check_variable = { position_support@BA_TRI_house_seat > 80 } }
+						complete_national_focus = TRI_making_the_best_use
+					}
+				}
+				#TODO:于议会中添加“对派系的许诺”决议，解锁玩家选择接受下议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
+			}			
+		}
+		focus = { #物尽其用
+			id = TRI_making_the_best_use
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_return_a_favor
+			prerequisite = { focus = TRI_return_a_favor }		
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_focus_support_trigger
+						PARLIAMENT = BA_TRI_house_seat
+						SUPPORT = "80"
+					}
+					check_variable = { position_support@BA_TRI_house_seat > 80 }
+				}
+			}
+			cost = 5
+			x = 0
+			y = 2
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				add_stability = 0.15
+				custom_effect_tooltip = TRI_making_the_best_use_tt
+				add_to_variable = { TRI_shaked_nagisa_belief_stability_weekly = 0.003 }
+				add_to_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = -0.25 }
+				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
+				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
+				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+				add_ideas = TRI_making_the_best_use_idea
+			}			
+		}
+		focus = { #灾后重建津贴
+			id = TRI_rebuilding_subsidy
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_threading_a_needle
+			prerequisite = { focus = TRI_threading_a_needle }
+			prerequisite = { focus = TRI_return_a_favor }
+			
+			cost = 5
+			x = 2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				set_country_flag = TRI_rebuilding_subsidy
+				custom_effect_tooltip = TRI_rebuilding_subsidy_tt
+			}
+
+		}
+		focus = { #“影子”计划
+			id = TRI_shadow_scheme
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_rebuilding_subsidy
+			prerequisite = { focus = TRI_rebuilding_subsidy }		
+			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				#工业加成卡100％x1
+				add_tech_bonus = {
+					category = industry
+					bonus = 1
+				}
+				custom_effect_tooltip = TRI_shadow_scheme_tt
+				add_to_variable = { TRI_shaked_nagisa_belief_production_speed_buildings_factor = 0.05 }
+				add_to_variable = { TRI_shaked_nagisa_belief_consumer_goods_factor = -0.05 }
+				add_to_variable = { TRI_shaked_nagisa_belief_line_change_production_efficiency_factor = 0.15 }
+				add_ideas = TRI_shadow_scheme_in_progress
+				hidden_effect = {
+					set_temp_variable = { i = 6 }
+					while_loop_effect = {
+						limit = { 
+							check_variable = { i > 0 } 
+							any_controlled_state = {
+								has_state_flag = TRI_rebuilding_subsidy_fired
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								has_state_flag = TRI_rebuilding_subsidy_fired
+								OR = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+									}
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+									}
+									free_building_slots = {
+										building = heavy_arms_factory
+										size > 0
+									}
+									free_building_slots = {
+										building = resource_distribution_center
+										size > 0
+									}
+								}
+							}
+							random_list = {
+								2 = {
+									modifier = {
+										free_building_slots = {
+											building = industrial_complex
+											size = 0
+										}
+										factor = 0
+									}
+									add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+									}
+									add_extra_state_shared_building_slots = 1
+								}
+								2 = {
+									modifier = {
+										free_building_slots = {
+											building = arms_factory
+											size = 0
+										}
+										factor = 0
+									}
+									add_building_construction = {
+										type = arms_factory
+										level = 1
+										instant_build = yes
+									}
+									add_extra_state_shared_building_slots = 1
+								}
+								1 = {
+									modifier = {
+										free_building_slots = {
+											building = heavy_arms_factory
+											size = 0
+										}
+										factor = 0
+									}
+									add_building_construction = {
+										type = heavy_arms_factory
+										level = 1
+										instant_build = yes
+									}
+									add_extra_state_shared_building_slots = 1
+								}
+								1 = {
+									modifier = {
+										free_building_slots = {
+											building = resource_distribution_center
+											size = 0
+										}
+										factor = 0
+									}
+									add_building_construction = {
+										type = resource_distribution_center
+										level = 1
+										instant_build = yes
+									}
+									add_extra_state_shared_building_slots = 1
+								}
+							}
+						}
+					}
+				}
+				
+			}			
+		}
+		focus = { #“重获信任”法案
+			id = TRI_Bill_of_regaining_trust
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_shadow_scheme
+			prerequisite = { focus = TRI_bouncing_back }
+			prerequisite = { focus = TRI_shadow_scheme }
+			prerequisite = { focus = TRI_making_the_best_use }	
+			available = {
+				NOT = {
+					has_idea = TRI_bouncing_back_idea
+					has_idea = TRI_making_the_best_use_idea
+					has_idea = TRI_shadow_scheme_in_progress
+				}
+			}
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				set_temp_variable = { bill = token:TRI_Bill_of_regaining_trust }
+				TRI_submit_the_bill = yes
+				effect_tooltip = {
+					country_event = TRI_events.52
+				}
+			}			
+		}
+		focus = { #接续进取
+			id = TRI_enterprising
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_Bill_of_regaining_trust
+			prerequisite = { focus = TRI_Bill_of_regaining_trust }
+			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				add_political_power = 100
+				#暂时锁定GUI【圣三一的团结】的数值
+				set_country_flag = TRI_unity_unchangeable
+				custom_effect_tooltip = TRI_unity_unchangeable_tt
+			}			
+		}
+
+		focus = { #召开第二次《伊甸条约》会议 假国策，激活30天后会触发事件，强制切换到另一条国策线
+			id = TRI_Congress_for_ending_all_conflict
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_enterprising
+			prerequisite = { focus = TRI_enterprising }
+			cancelable = no
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				country_event = TRI_events.26
+				hidden_effect = {
+					news_event = {
+						id = TRI_events.1002
+						days = 24
+					}
+				}
+				}
+				completion_reward = {
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					add_to_variable = {
+						TRI_political_focus_duration = 35
+					}
+				}
+				effect_tooltip = {
+					remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
+					add_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
+					custom_effect_tooltip = eden_step_2_to_3
+					#30天后触发事件
+				}
+			}
+		}
 	#以下为触发超事件【古圣堂遭受袭击！】后的国策树
-	focus = {
-		id = TRI_unexpected_accident #烽烟骤起
-		icon = GFX_goal_unknown	
+		focus = { #烽烟骤起
+			id = TRI_unexpected_accident
+			##icon = GFX_goal_unknown
+			#事件：【古圣堂遭受袭击！】已发生
+			allow_branch = { #拥有焦点：《伊甸条约》的威胁
+				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat }
+			}
+			cancelable = no
+			
+			cost = 5
+			x = 0
+			y = 0
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				custom_effect_tooltip = TRI_unity_changeable_tt
+				clr_country_flag = TRI_unity_unchangeable
+				set_temp_variable = { TRI_unity_change = -30 }
+				TRI_change_unity = yes
+				country_event = TRI_events.27
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
+					add_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
+				}
+				#TODO:若机制：古圣堂突袭筹备中，阿里乌斯取得了最大成功
+				if = {
+					limit = { has_global_flag = TRI_church_attacked_worst }
+					set_variable = { TRI_devastated_by_arius_stability_weekly = -0.003 }
+					set_variable = { TRI_devastated_by_arius_political_power_gain = -0.5 }
+					set_variable = { TRI_devastated_by_arius_industrial_capacity_factory = -0.2 }
+					set_variable = { TRI_devastated_by_arius_consumer_goods_factor = 0.3 }
+					set_variable = { TRI_devastated_by_arius_army_org_factor = -0.1 }
+					set_variable = { TRI_devastated_by_arius_army_attack_factor = -0.15 }
+					set_variable = { TRI_devastated_by_arius_army_defence_factor = -0.15 }
+					set_variable = { TRI_devastated_by_arius_disabled_ideas = 1 }
+					add_dynamic_modifier = {
+						modifier = TRI_devastated_by_arius
+					}
+				}
+				#补国策本地化效果
+				custom_effect_tooltip = eden_step_3_to_4_desc
+				
+				#添加民族精神:混乱的前线
+				add_dynamic_modifier = { modifier = TRI_chaotic_frontline }
+				
+				#民族精神【圣三一的团结】增加效果:支持席位超过50%时,每席位带来的稳定度提升降低0.5%
+				custom_effect_tooltip = TRI_unexpected_accident_tt
+			}		
+		}
+		focus = { #先遣勘探
+			id = TRI_advance_exploration
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_unexpected_accident
+			prerequisite = { focus = TRI_unexpected_accident }		
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				#TODO:激活地区决议，用以寻找失踪的核心成员并解锁该地区的“消除未经计划的攻势”
+			}
+		}
+		focus = { #唤醒职责
+			id = TRI_awareness_of_responsibility
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_advance_exploration
+			prerequisite = { focus = TRI_advance_exploration }
+			bypass = {
+				NOT = {
+					custom_override_tooltip = {
+						tooltip = TRI_church_attacked_worst
+						has_dynamic_modifier = { modifier = TRI_devastated_by_arius }
+					}
+				}
+			}
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				#TODO:通过添加新的决议组，消耗各种不同的点数来消除【毁灭性打击】中政治debuff
+				if = {
+					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
+					
+				}
+				else = {
+					custom_effect_tooltip = TRI_not_church_attacked_worst
+				}
+			}
+		}
+		focus = { #绘制蓝图
+			id = TRI_draw_a_blueprint
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_advance_exploration
+			prerequisite = { focus = TRI_advance_exploration }
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				#TODO:可以在已经探索过的地区使用进一步的地区决议，用以消除该地区的“未经计划的攻势”
+			}
+		}
+		focus = { #紧急救援
+			id = TRI_emergency_rescue
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_awareness_of_responsibility
+			prerequisite = { focus = TRI_awareness_of_responsibility }
+			prerequisite = { focus = TRI_draw_a_blueprint }
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				#TODO:必须先对所有地区执行【探索地区决议】才可以激活，营救原剧情中对应的学生，使其在30天后可以再次被任命为将领或者顾问并消除【毁灭性打击】中军事debuff
+			}
+		}
+		focus = { #越过禁忌的边界
+			id = TRI_across_the_border
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_unexpected_accident
+			prerequisite = { focus = TRI_unexpected_accident }		
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_focus_support_trigger
+						PARLIAMENT = BA_TRI_senate_seat
+						SUPPORT = "12"
+					}
+					check_variable = { position_support@BA_TRI_senate_seat > 12 }
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_focus_support_trigger
+						PARLIAMENT = BA_TRI_house_seat
+						SUPPORT = "25"
+					}
+					check_variable = { position_support@BA_TRI_house_seat > 25 }
+				}
+			}	
+			cost = 5
+			x = 2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				country_event = TRI_events.31
+				#替换国家领袖“桐藤渚”为“浦和花子”。
+				#为浦和花子添加特质:【临危受命】,效果:(指挥点数获取-50%,指挥点数上限-50%。核心领土攻防+10%)
+				#添加特质：【修女会的摄政】，效果：（在花子执政期间，修女会的成员不受其他影响，在议会中将完全支持）
+				#添加特质:【绯言慎行的智者】,效果:(稳定度+5%,每日政治点数获取+0.2。)
+				promote_character = TRI_hanako
+				TRI_hanako = {
+					add_country_leader_trait = entrusted_in_emergency
+					add_country_leader_trait = regency_of_sisterhood
+				}
+				set_variable = { fully_support@TRI_parliament_association_4 = 1 }
+			}
+		}
+		focus = { #动荡下的砥石
+			id = TRI_mainstay_in_the_collapse
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_across_the_border
+			prerequisite = { focus = TRI_across_the_border }
+			mutually_exclusive = { focus = TRI_torchbearer_in_the_storm }
+			available = {
+				custom_override_tooltip = {
+					tooltip = focus_completed_by_event
+					always = no
+				}
+			}
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_to_variable = { army_strength_factor = 0.05 }
+				add_to_variable = { cf_army_org_regain = 0.1 }
+				add_to_variable = { cf_land_reinforce_rate = 0.02 }
+				add_to_variable = { cf_army_core_attack_factor = 0.05 }
+				add_to_variable = { cf_army_core_defence_factor = 0.05 }
+				custom_effect_tooltip = TRI_mainstay_in_the_collapse_tt
+				#在焦点决议栏下解锁决议：允许玩家通过地区决议于下议院派系占优的地区招募下议院派系的民兵并少量提升稳定度。
+				#①如果国策【全面准备】已完成，则该决议招募的民兵编制与等级将被提升。
+				#②执行决议的非下议院优势地区的议员将会向着支持玩家的方向移动。
+				custom_effect_tooltip = TRI_mobilize_guardians_tt
+				set_country_flag = TRI_mobilize_guardians
+			}
+		}
+		focus = { #风暴中的炬手
+			id = TRI_torchbearer_in_the_storm
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_across_the_border
+			prerequisite = { focus = TRI_across_the_border }
+			mutually_exclusive = { focus = TRI_mainstay_in_the_collapse }
+			available = {
+				custom_override_tooltip = {
+					tooltip = focus_completed_by_event
+					always = no
+				}
+			}
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_to_variable = { cf_breakthrough_factor = 0.05 }
+				add_to_variable = { cf_army_org_factor = 0.1 }
+				add_to_variable = { cf_training_time_factor = -0.1 }
+				add_to_variable = { cf_experience_gain_army_factor = 0.1 }
+				custom_effect_tooltip = TRI_torchbearer_in_the_storm_tt
+				#在焦点决议栏下解锁决议：允许玩家通过地区决议于上议院派系占优的地区招募少量精锐单位。
+				#①如果国策【精编锐制】已完成，则该决议招募的数量将被提升。
+				#②执行决议的非上议院优势地区的议员将会向着支持玩家的方向移动。
+				custom_effect_tooltip = TRI_mobilize_elites_tt
+				set_country_flag = TRI_mobilize_elites
+			}
+		}
+		focus = { #重树旗帜
+			id = TRI_set_up_the_flag
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_mainstay_in_the_collapse
+			prerequisite = {
+				focus = TRI_mainstay_in_the_collapse
+				focus = TRI_torchbearer_in_the_storm
+			}
+			bypass = {
+				NOT = {
+					custom_override_tooltip = {
+						tooltip = TRI_church_attacked_worst
+						has_dynamic_modifier = { modifier = TRI_devastated_by_arius }
+					}
+				}
+			}
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				if = {
+					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
+					custom_effect_tooltip = TRI_set_up_the_flag_tt
+					add_to_variable = { TRI_devastated_by_arius_consumer_goods_factor = -0.1 }
+					add_to_variable = { TRI_devastated_by_arius_army_org_factor = 0.03 }
+					add_to_variable = { TRI_devastated_by_arius_army_attack_factor = 0.05 }
+					add_to_variable = { TRI_devastated_by_arius_army_defence_factor = 0.05 }
 
-		#allow_branch = 事件：【古圣堂遭受袭击！】已发生
+				}
+				else = {
+					custom_effect_tooltip = TRI_not_church_attacked_worst
+				}
+			}
+		}
+		focus = { #临时指战委员会
+			id = TRI_temporary_comission_of_command
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_set_up_the_flag
+			prerequisite = { focus = TRI_set_up_the_flag }
+			prerequisite = { focus = TRI_emergency_rescue }
+			bypass = {
+				NOT = {
+					custom_override_tooltip = {
+						tooltip = TRI_church_attacked_worst
+						has_dynamic_modifier = { modifier = TRI_devastated_by_arius }
+					}
+				}
+			}
+			cost = 10
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				if = {
+					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
+					remove_dynamic_modifier = {
+						modifier = TRI_devastated_by_arius
+					}
+				}
+				else = {
+					custom_effect_tooltip = TRI_not_church_attacked_worst
+				}
+			}
+		}
 		
-		cost = 5
-		x = 20
-		y = 0
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
-				add_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
-			}
-			
-			#补国策本地化效果
-			custom_effect_tooltip = eden_step_3_to_4_desc
-			
-			#添加民族精神:混乱的前线
-			add_dynamic_modifier = { modifier = TRI_chaotic_frontline }
-			
-			#TODO:民族精神【圣三一的团结】增加效果:支持席位超过50%时,每席位带来的稳定度提升降低0.5%
-		}		
-	}
+		focus = { #“紧急事态动议”法案
+			id = TRI_Bill_of_emergent_motion
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_temporary_comission_of_command
+			prerequisite = { focus = TRI_temporary_comission_of_command }			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				country_event = TRI_events.33
+				set_temp_variable = { loyalty_change = 0.06 }
+				TRI_parliament_all_loyalty_change = yes
+				# #将国家领袖浦和花子的特质【临危受命】添加效果:(指挥点数获取+30%,指挥点数上限+60%,计划上限+10%)
+				TRI_hanako = {
+					swap_country_leader_traits = {
+						remove = entrusted_in_emergency
+						add = entrusted_in_emergency_2
+					}
+				}
+				set_temp_variable = { bill = token:TRI_Bill_of_emergent_motion }
+				TRI_submit_the_bill = yes
+				custom_effect_tooltip = eden_step_4_to_5_desc
+			}			
+		}
+		focus = { #重铸前线
+			id = TRI_reinforce_the_frontline
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_Bill_of_emergent_motion
+			prerequisite = { focus = TRI_Bill_of_emergent_motion }				
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				TRI_unity_increase_5 = yes
+				country_event = TRI_events.37
+				#TODO:在古圣堂边界获得6支缺乏装备的王牌部队。它们分别来自：茶话会x2，正义实现委员会x2，修女会x2
+				#替换民族精神【混乱的前线】为【携手并肩的前线】，效果替换为：（组织度＋25％，组织度恢复＋10％，增员率＋4％，部队最小训练程度－50％，陆军经验获取＋30％，战备每日恢复＋100）
+				remove_dynamic_modifier = { modifier = TRI_chaotic_frontline }
+				add_to_variable = { cf_army_org_factor = 0.25 }
+				add_to_variable = { cf_army_org_regain = 0.1 }
+				add_to_variable = { cf_land_reinforce_rate = 0.04 }
+				add_to_variable = { cf_minimum_training_level = -0.5 }
+				add_to_variable = { cf_experience_gain_army_factor = 0.3 }
+				add_to_variable = { cf_weekly_manpower = 100 }
+				add_dynamic_modifier = { modifier = TRI_chaotic_frontline_2 }
+			}			
+		}
+		# focus = { #善意的假面
+		# 	id = TRI_smile_under_mask
+		# 	##icon = GFX_goal_unknown
+		# 	relative_position_id = TRI_sun_rise_again
+		# 	prerequisite = {
+		# 		focus = TRI_sun_rise_again
+		# 	}		
+		# 	cost = 5
+		# 	x = 1
+		# 	y = 1
+		# 	search_filters = { FOCUS_FILTER_POLITICAL }
+		# 	completion_reward = {
+		# 		country_event = TRI_events.36
+		# 		add_political_power = 100
+				
+		# 		#为政治顾问：阿慈谷日富美添加效果：每日政治点数获取+10%,稳定度+10%
 	
-	focus = {
-		id = TRI_school_without_leader #群龙无首
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_unexpected_accident
-		prerequisite = {
-			focus = TRI_unexpected_accident
-		}			
-		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#暂时移除领袖桐藤渚的所有效果
-			#为领袖：桐藤渚添加特质：【失踪的领袖】效果：（无法切换政治顾问、军事顾问和任何法案）
-
-		}			
-	}
-	
-	
-	focus = {
-		id = TRI_across_the_border #越过禁忌的边界
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_school_without_leader
-		prerequisite = {
-			focus = TRI_school_without_leader
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#替换国家领袖“桐藤渚”为“浦和花子”。
-			#为浦和花子添加特质:【临危受命】,效果:(指挥点数获取-50%,指挥点数上限-50%。核心领土攻防+10%)
-			#添加特质：【修女会的摄政】，效果：（在花子执政期间，修女会的成员不受其他影响，在议会中将完全支持）
-			#添加特质:【绯言慎行的智者】,效果:(稳定度+5%,每日政治点数获取+0.2。)
-		}			
-    }
-	focus = {
-		id = TRI_emergent_situation #紧急事态
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_across_the_border
-		prerequisite = {
-			focus = TRI_across_the_border
-		}			
-		cost = 10
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-			#将国家领袖浦和花子的特质【临危受命】添加效果:(指挥点数获取+30%,指挥点数上限+60%,计划上限+10%)
-
-			
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
-				add_to_variable = { eden_broken_daily_power_gain = 0.4 }
-				add_to_variable = { eden_broken_factory_output = 0.1 }
-				add_to_variable = { eden_broken_advisor_cost = -0.5 }
-				add_to_variable = { eden_broken_army_chief_cost = -0.5 }
-				add_to_variable = { eden_broken_air_chief_cost = -0.5 }
-				add_to_variable = { eden_broken_economy_cost = -0.5 }
-				add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
-				add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
-				add_dynamic_modifier = { modifier = eden_treaty_step_5_modifier }
+		# 	}			
+		# }
+		focus = { #雨破天晴
+			id = TRI_after_the_storm
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_Bill_of_emergent_motion
+			allow_branch = { #拥有焦点：《伊甸条约》的威胁
+				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat }
 			}
-
-			custom_effect_tooltip = eden_step_4_to_5_desc
-		}			
-    }
-	focus = {
-		id = TRI_sun_rise_again #幽而复明
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_emergent_situation
-		prerequisite = {
-			focus = TRI_emergent_situation
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-			add_political_power = 200
-
-			hidden_effect = {
-				add_to_variable = { eden_broken_daily_power_gain = 0.1 }
-				add_to_variable = { eden_broken_factory_output = 0.15 }
-				add_to_variable = { eden_broken_advisor_cost = -0.5 }
-				add_to_variable = { eden_broken_army_chief_cost = -0.5 }
-				add_to_variable = { eden_broken_air_chief_cost = -0.5 }
-				add_to_variable = { eden_broken_economy_cost = -0.5 }
-				add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
-				add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
-			}
-
-			custom_effect_tooltip = eden_treaty_step_5_add_modifier_1
-		}			
-    }
-	focus = {
-		id = TRI_reinforce_the_frontline #重铸前线
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_sun_rise_again
-		prerequisite = {
-			focus = TRI_sun_rise_again
-		}				
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#在古圣堂边界获得6支缺乏装备的部队。它们分别来自：茶话会x2，正义实现委员会x2，修女会x2
-			#替换民族精神【混乱的前线】为【携手并肩的前线】，效果替换为：（组织度＋5％，组织度恢复速度－10％，增员率－2％。战备每日恢复＋100）
-		}			
-    }
-	focus = {
-		id = TRI_smile_under_mask #善意的假面
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_sun_rise_again
-		prerequisite = {
-			focus = TRI_sun_rise_again
-		}		
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-			add_political_power = 100
-			
-			#为政治顾问：阿慈谷日富美添加效果：每日政治点数获取+10%,稳定度+10%
-
-		}			
-    }
-	focus = {
-		id = TRI_after_the_storm #雨破天晴
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_smile_under_mask
-		prerequisite = {
-			focus = TRI_reinforce_the_frontline
-		}		
-		prerequisite = {
-			focus = TRI_smile_under_mask
-		}	
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			hidden_effect = {
+			cost = 5
+			x = 4
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				#所有社团支持度+30%
+				set_temp_variable = { loyalty_change = 0.3 }
+				TRI_parliament_all_loyalty_change = yes
+				country_event = TRI_events.38
+				custom_effect_tooltip = eden_treaty_step_5_add_modifier_2
 				add_to_variable = { eden_broken_daily_power_gain = 0.3 }
 				add_to_variable = { eden_broken_stability = 0.05 }
 			}
-
-			custom_effect_tooltip = eden_treaty_step_5_add_modifier_2
-
-			#立刻使上议院的议员朝着支持《伊甸条约》的方向移动10个席位
-			#立刻使下议院的议员朝着支持《伊甸条约》的方向移动30个席位
-		}			
-    }
-	focus = {
-		id = TRI_restrain_the_disaster #遏灾制祸
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_after_the_storm
-		prerequisite = {
-			focus = TRI_after_the_storm
-		}		
-		cost = 10
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-			#获得民族精神：【扫除威胁!】效果：(对【阿里乌斯】的战斗获得15%的攻击和防御加成;战备恢复速度+100%)——直到阿里乌斯被消灭。
-			#替换国家领袖：“浦和花子”为“桐藤渚”。
-			#解锁政治顾问：浦和花子
-			#获得任务：最后的阻碍：消灭阿里乌斯。当阿里乌斯被消灭后,30天,将会触发一个奖励事件(使得桐藤渚的特质得到提升。)
-		}			
-    }
-	focus = {
-		id = TRI_answer_for_thecreed #对古则的解答
-		icon = GFX_goal_unknown	
-		relative_position_id = TRI_restrain_the_disaster
-		prerequisite = {
-			focus = TRI_restrain_the_disaster
-		}		
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-
-			add_political_power = 150
-			hidden_effect = {
+		}
+		focus = { #对古则的解答
+			id = TRI_answer_for_thecreed
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_Bill_of_emergent_motion
+			prerequisite = { focus = TRI_Bill_of_emergent_motion }		
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_political_power = 150
+				custom_effect_tooltip = eden_treaty_step_5_add_modifier_3
 				add_to_variable = { eden_broken_daily_power_gain = 0.20 }
 				add_to_variable = { eden_broken_stability = 0.15 }
 				add_to_variable = { eden_broken_research_speed = 0.10 }
-			}
-
-			custom_effect_tooltip = eden_treaty_step_5_add_modifier_3
-		}			
-    }
-
-
-
-##以下为工业线
-	focus = {
-		id = TRI_welfare_cutting  #遏制无节制福利开支
-		icon = GFX_goal_TRI_welfare_cutting
-
-		cost = 5
-		x = 26
-		y = 0
-		search_filters = { FOCUS_FILTER_ECO }
-		completion_reward = {
-			#custom_effect_tooltip = TRI_main_party_change
-
-			add_dynamic_modifier = { modifier = material_allocation_modifier }
-			
-			#圣三一下议会+2反对席位
-			set_variable = { Senators_change_num = 2 }
-
-			if = { 
-				limit = {
-					OR = {
-						check_variable = { Senators_centrist_num > Senators_change_num }
-						check_variable = { Senators_centrist_num = Senators_change_num }
-					}
+				country_event = TRI_events.35
+				country_event = TRI_events.40
+			}			
+		}
+		focus = { #遏灾制祸
+			id = TRI_restrain_the_disaster
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_reinforce_the_frontline
+			prerequisite = { focus = TRI_reinforce_the_frontline }
+			prerequisite = { focus = TRI_answer_for_thecreed }		
+			prerequisite = { focus = TRI_after_the_storm }
+			cancelable = no
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			select_effect = {
+				country_event = {
+					id = TRI_events.41
+					days = 14
 				}
-				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
-				add_to_variable = { Senators_opposition_num = Senators_change_num }
-
-				custom_effect_tooltip = TRI_Senators_party_change
-				TRI_reload_senators_parliament_gui = yes
 			}
-			
-
-		}		
-	}
-
-	focus = {
-		id = TRI_weapons_nomalization #规范化热武器出厂流程
-		icon = GFX_goal_TRI_weapons_nomalization	
-		cost = 5
-		x = 28
-		y = 0
-		search_filters = { FOCUS_FILTER_ECO }
-		completion_reward = {
-			add_dynamic_modifier = { modifier = trinity_industry_modifier }
-
-			#上议院+1反对席位
-			set_variable = { House_change_num = 1 }
-
-			if = {
-				limit = {
-					check_variable = { House_centrist_num > House_change_num }
-				}
-				
-				subtract_from_variable = { House_centrist_num = House_change_num }
-				add_to_variable = { House_opposition_num = House_change_num }
-
-				custom_effect_tooltip = TRI_House_party_change
-				TRI_reload_house_parliament_gui = yes
-			}
-
-			#下为对议会系统计算席位的详细步骤，上为粗略版本
-			#custom_effect_tooltip = TRI_House_party_change
-			#set_variable = { Patel_change_num = 1 }
-
-			#TRI_Patel_add_opposition_seats = yes
-			#TRI_BOP_house_party_seats = yes
-			#TRI_reload_house_parliament_gui = yes
-
-		}		
-	}
-
-	focus = {
-		id = TRI_production_specialization #生产管理专业化
-		icon = GFX_goal_TRI_production_specialization	
-		relative_position_id = TRI_welfare_cutting
-		prerequisite = { focus = TRI_welfare_cutting }	
-		prerequisite = { focus = TRI_weapons_nomalization }	
-
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
-		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { ma_stability = 0.025 }
-				add_to_variable = { ma_building_speed = 0.05 }
-				add_to_variable = { tim_arms_factory_building_speed = 0.05 }
-				add_to_variable = { tim_civ_to_mil_cost = -0.25 }
-				add_to_variable = { tim_mil_to_civ_cost = -0.25 }
-			}
-			#add_tech_bouns = {
-			#	name = TRI_production_specialization
-			#	bouns = 0.5
-			#	uses = 1
-			#	category = industry
-			#看了眼工业科技部分并没有写category，所以这里全注释掉
-			#}
-			custom_effect_tooltip = TRI_production_specialization_ns_tt	
-		}		
-	}
-
-	focus = {
-		id = TRI_carryon_package_facilitation #便携式随身武器包
-		icon = GFX_goal_TRI_carryon_package_facilitation	
-		relative_position_id = TRI_production_specialization
-		prerequisite = { focus = TRI_production_specialization }	
-
-		cost = 5
-		x = -3
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
-		completion_reward = {
-			add_political_power = 75
-			
-			hidden_effect = {
-				add_to_variable = { tim_production_efficiency_gain = 0.05 }
-				add_ideas = TRI_hidden_carryon_package_ns
-			}
-			
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = trinity_industry_modifier }
-				add_dynamic_modifier = { modifier = trinity_industry_modifier_alt }
-			}
-			#注：装备系统尚未完成，加成能显示但并不生效
-			
-			custom_effect_tooltip = TRI_carryon_package_effect_tt
-			
-			add_tech_bonus = {
-				name =  TRI_carryon_package_facilitation_tech_bonus_name
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-			}
-		}		
-	}
+			completion_reward = {
 	
-	focus = {
-		id = TRI_sufficient_sweets_supply #保证充分甜品配给
-		icon = GFX_goal_TRI_sufficient_sweets_supply	
-		relative_position_id = TRI_production_specialization
-		prerequisite = { focus = TRI_production_specialization }
-
-		cost = 5
-		x = 3
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
-
-		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { ma_stability = 0.025 }
-				add_to_variable = { ma_goods_factor = 0.05 }
-				add_to_variable = { ma_daily_power_gain = 0.25 }
-				add_to_variable = { ma_economy_cost = -0.2 }
-			}
-			
-			custom_effect_tooltip = TRI_sufficient_sweets_supply_ns_tt
-			
-			#下议院支持人数+2
-			set_variable = { Senators_change_num = 2 }
-
-			if = { 
-				limit = {
-					check_variable = { Senators_centrist_num > Senators_change_num }
+				#获得民族精神：【扫除威胁!】效果：(对【阿里乌斯】的战斗获得15%的攻击和防御加成;战备恢复速度+100%)——直到阿里乌斯被消灭。
+				add_ideas = TRI_sweep_threat
+				#替换国家领袖：“浦和花子”为“桐藤渚”。
+				promote_character = TRI_nagisa
+				set_variable = { fully_support@TRI_parliament_association_4 = 0 }
+				#解锁政治顾问：浦和花子、下江小春
+				add_advisor_role = {
+					character = TRI_hanako
+					activate = no
+					advisor = { 
+						slot = political_advisor
+						idea_token = TRI_hanako_pa
+						traits = {
+							h_loved_sage
+						}
+						ai_will_do = {
+							base = 1
+						}
+					}
 				}
+				set_country_flag = TRI_koharu_advisor_available
+				#获得任务：最后的阻碍：消灭阿里乌斯。当阿里乌斯被消灭后,30天,将会触发一个奖励事件(使得桐藤渚的特质得到提升。)
+			}			
+		}
+		focus = { #光耀之途
+			id = TRI_the_way_to_glory
+			##icon = GFX_goal_unknown
+			allow_branch = { #拥有焦点：胜利签订的《伊甸条约》
+				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_successfully_signed_Eden }
+			}
+			cost = 5
+			x = 0
+			y = 0
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				remove_dynamic_modifier = { modifier = eden_treaty_step_5_modifier }
+				remove_dynamic_modifier = { modifier = TRI_chaotic_frontline_2 }
+				add_ideas = TRI_friendship_glory_future
+				add_ideas = TRI_victory_trust_unity
+				#TRI_set_focus_successful_Eden = yes
+			}
+		}
+		focus = { #阿里乌斯之殇
+			id = TRI_fatal_strike_of_arius
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_the_way_to_glory
+			prerequisite = { focus = TRI_the_way_to_glory }
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				#TODO:
+				#触发事件：【阿里乌斯之殇】，通过选项以及先前重要事件的结果，玩家可以选择对阿里乌斯的态度：
+				#①直接吞并阿里乌斯作为非核心领土（可以通过国策获得核心）
+				#②使得阿里乌斯成为附庸国
+				#③使得阿里乌斯独立（if线内容，demo不展示）
+			}			
+		}
+		focus = { #叛乱的余波
+			id = TRI_aftermath_of_rebellion
+			##icon = GFX_goal_unknown
+			relative_position_id = TRI_the_way_to_glory
+			prerequisite = { focus = TRI_the_way_to_glory }
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				add_ideas = TRI_reforming_administration_system
+			}			
+		}
+		
+	##军事线
+		focus = { #“铜橄榄”法案
+			id = TRI_Bill_of_copper_olive
+			icon = GFX_goal_TRI_Bill_of_copper_olive
+			cost = 5
+			x = -9
+			y = 0
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				set_temp_variable = { target_faction = token:BOP_moderate }
+				set_temp_variable = { loyalty_change = -0.03 }
+				TRI_parliament_loyalty_change_faction = yes
+				add_war_support = 0.05
+				set_temp_variable = { bill = token:TRI_Bill_of_copper_olive }
+				TRI_submit_the_bill = yes
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = TRI_Bill_of_copper_olive_factory
+						days = 180
+					}
+					army_experience = 75
+					add_doctrine_cost_reduction = {
+						cost_reduction = 0.5
+						category = land_doctrine
+					}
+				}
+			}
+		}
+		focus = { #重整茶话会亲卫队
+			id = TRI_reorgnize_teaparty_mob
+			icon = GFX_goal_TRI_reorgnize_teaparty_mob
+			relative_position_id = TRI_Bill_of_copper_olive
+			prerequisite = { focus = TRI_Bill_of_copper_olive }
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_passed_bill_tt
+						BILL = TRI_Bill_of_copper_olive
+					}
+					is_in_array = {
+						array = TRI_passed_bills
+						value = token:TRI_Bill_of_copper_olive
+					}
+				}
+			}
+			cost = 5
+			x = 3
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				custom_effect_tooltip = TRI_reorgnize_teaparty_mob_tt
+				add_to_variable = { TRI_trinity_military_land_doctrine_cost_factor = -0.25 }
+				add_to_variable = { TRI_trinity_military_training_time_factor = 0.25 }
+				add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
+				#圣三一下议会所有社团支持度-2%
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = -0.02 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}			
+		}
+		focus = { #社团自备
+			id = TRI_association_autonomy
+			icon = GFX_goal_TRI_association_autonomy
+			relative_position_id = TRI_reorgnize_teaparty_mob
+			prerequisite = { focus = TRI_reorgnize_teaparty_mob }
 
+			cost = 5
+			x = -3
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#于【团结度】栏目下添加决议：①消耗50pp，10指挥点数与相当于1支7步3炮部队的装备，使得被占领地区的抵抗度增长＋100％，顺从度增长－25％，持续180天；并获得5％团结度；②消耗25pp，15指挥点数与10团结度，可以获取相当于2支5步1炮规模的战备和装备。
+				add_stability = 0.05
+				unlock_decision_tooltip = TRI_resistance_movement
+				unlock_decision_tooltip = TRI_raise_association
+				custom_effect_tooltip = TRI_association_autonomy_tt
+				set_country_flag = TRI_association_autonomy
+				hidden_effect = {
+					country_event = {
+						id = TRI_region.0
+						days = 7
+					}
+				}
+			}
+		}
+		focus = { #同正义实现委员会的合练
+			id = TRI_cooperation_with_justice_club
+			icon = GFX_goal_TRI_cooperation_with_justice_club
+			relative_position_id = TRI_reorgnize_teaparty_mob
+			prerequisite = { focus = TRI_reorgnize_teaparty_mob }			
+			mutually_exclusive = { focus = TRI_teaparty_leading }
+
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					category = land_doctrine
+				}
+				add_stability = -0.05
+				#启用军事顾问：剑先鹤城
+				add_advisor_role = {
+					character = TRI_tsurugi
+					activate = no
+					advisor = { 
+						slot = army_chief
+						idea_token = TRI_tsurugi_ac
+						traits = {
+							screaming_death
+						}
+						cost = 100
+						ai_will_do = {
+							base = 1
+						}
+					}
+				}
+				custom_effect_tooltip = TRI_cooperation_with_justice_club_tt
+				add_to_variable = { TRI_trinity_military_army_infantry_attack_factor = 0.1 }
+				add_to_variable = { TRI_trinity_military_training_time_factor = -0.15 }
+				add_to_variable = { TRI_trinity_military_army_org_regain = -0.05 }
+
+				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				set_temp_variable = { loyalty_change = -0.1 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}			
+		}
+		focus = { #维持茶话会主导权
+			id = TRI_teaparty_leading
+			icon = GFX_goal_TRI_teaparty_leading
+			relative_position_id = TRI_reorgnize_teaparty_mob
+			prerequisite = { focus = TRI_reorgnize_teaparty_mob }			
+			mutually_exclusive = { focus = TRI_cooperation_with_justice_club }
+
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_political_power = 100
+				add_war_support = 0.05
+				add_stability = 0.05
+				set_temp_variable = { association = token:TRI_parliament_association_tea_party }
+				set_temp_variable = { influence_change = 5 }
+				for_each_loop = {
+					array = TRI_regions
+					TRI_change_region_association_influence = yes
+				}
+				custom_effect_tooltip = TRI_teaparty_leading_tt
+				add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
+				add_to_variable = { TRI_trinity_military_army_org_regain = -0.05 }
+				add_to_variable = { TRI_trinity_military_combat_readiness_recovery_percentage = 0.1 }
+				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				set_temp_variable = { loyalty_change = 0.15 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}		
+		}
+		focus = { #常备之盾
+			id =TRI_standing_guard
+			icon = GFX_goal_TRI_standing_guard
+			relative_position_id = TRI_cooperation_with_justice_club
+			prerequisite = {
+				focus = TRI_cooperation_with_justice_club
+				focus = TRI_teaparty_leading
+			}			
+
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				set_country_flag = TRI_standing_guard
+				add_to_variable = { TRI_tea_party_artillery_recruiting_use = 7 }
+				custom_effect_tooltip = TRI_standing_guard_tt
+				effect_tooltip = {
+					add_ideas = TRI_tea_party_artillery_5
+				}
+			}		
+		}
+		focus = { #全面准备
+			id = TRI_mass_army
+			icon = GFX_goal_TRI_mass_army
+			relative_position_id = TRI_cooperation_with_justice_club
+			prerequisite = { focus = TRI_cooperation_with_justice_club }
+			prerequisite = { focus = TRI_standing_guard }
+
+			cost = 5
+			x = 0
+			y = 2
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				custom_effect_tooltip = TRI_mass_army_tt
+				add_to_variable = { TRI_trinity_military_can_use_combat_readiness_percentage = 0.05 }
+				add_to_variable = { TRI_trinity_military_combat_readiness_recovery_percentage = 0.1 }
+				add_to_variable = { TRI_trinity_military_training_time_factor = -0.1 }
+				add_to_variable = { TRI_house_decision_effect_factor = 0.25 }
+				#圣三一下议会所有社团支持度+3%
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = 0.03 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}
+		}
+		focus = { #精编锐制
+			id = TRI_elite_army
+			icon = GFX_goal_TRI_elite_army
+			relative_position_id = TRI_teaparty_leading
+			prerequisite = { focus = TRI_teaparty_leading }
+			prerequisite = { focus = TRI_standing_guard }
+
+			cost = 5
+			x = 0
+			y = 2
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				custom_effect_tooltip = TRI_elite_army_tt
+				add_to_variable = { TRI_trinity_military_can_use_combat_readiness_percentage = -0.1 }
+				add_to_variable = { TRI_trinity_military_army_org_regain = 0.1 }
+				add_to_variable = { TRI_trinity_military_training_time_factor = 0.2 }
+				add_to_variable = { TRI_trinity_military_minimum_training_level = 0.15 }
+				add_to_variable = { TRI_trinity_military_army_attack_factor = 0.05 }
+				add_to_variable = { TRI_trinity_military_army_defence_factor = 0.05 }
+
+				add_to_variable = { TRI_senate_decision_effect_factor = 0.25 }
+			}
+		}
+		focus = { #扩展作训场地
+			id = TRI_expand_training_area 
+			icon = GFX_goal_TRI_expand_training_area 
+			relative_position_id = TRI_mass_army
+			prerequisite = { 
+				focus = TRI_mass_army
+				focus = TRI_elite_army
+			}
+
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#允许玩家在至多5个不同的已执行过决议【茶话会直属炮兵部队建设】的地区无视条件再执行1次该决议。
+				add_to_variable = { TRI_tea_party_artillery_recruiting_use = 5 }
+				#减少1.0年的超前惩罚并获得100%研究加成，对下2次研究火炮科技时有效。
+				add_tech_bonus = {
+					category = fire_support
+					bonus = 1
+					ahead_reduction = 1
+					uses = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						check_variable = { state_region = token:TRI_industrial_park_region }
+						free_building_slots = {
+							building = stronghold_network
+							size = 1
+						}
+					}
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						check_variable = { state_region = token:TRI_industrial_park_region }
+						free_building_slots = {
+							building = stronghold_network
+							size = 1
+						}
+					}
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						check_variable = { state_region = token:TRI_southern_campus_region }
+						free_building_slots = {
+							building = stronghold_network
+							size = 1
+						}
+					}
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						check_variable = { state_region = token:TRI_southern_campus_region }
+						free_building_slots = {
+							building = stronghold_network
+							size = 1
+						}
+					}
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+					}
+				}
+				every_unit_leader = {
+					add_attack = 1
+				}
+				custom_effect_tooltip = TRI_expand_training_area_tt
+				add_to_variable = { TRI_trinity_military_consumer_goods_factor = 0.025 }
+				add_to_variable = { TRI_trinity_military_training_time_factor = -0.1 }
+				add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
+				add_to_variable = { TRI_trinity_military_army_attack_factor = 0.05 }
+				add_to_variable = { TRI_trinity_military_army_leader_start_attack_level = 1 }
 				
-				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
-				add_to_variable = { Senators_support_num = Senators_change_num }
+			}
+		}
+		
+		focus = { #有条件的军事准备
+			id = TRI_limited_military_preparation
+			icon = GFX_goal_TRI_limited_military_preparation
+			relative_position_id = TRI_Bill_of_copper_olive
+			prerequisite = { focus = TRI_Bill_of_copper_olive }
+			cost = 5
+			x = -4
+			y = 1
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_passed_bill_tt
+						BILL = TRI_Bill_of_copper_olive
+					}
+					is_in_array = {
+						array = TRI_passed_bills
+						value = token:TRI_Bill_of_copper_olive
+					}
+				}
+			}
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				country_event = TRI_events.100
+			}			
+		}
+		focus = { #有序动员
+			id = TRI_orderly_mobilization
+			icon = GFX_goal_TRI_orderly_mobilization
+			relative_position_id = TRI_limited_military_preparation
+			prerequisite = { focus = TRI_limited_military_preparation }
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#获得支援装备-后勤研究加速卡50%x1
+				add_tech_bonus = {
+					technology = support_logistics_T2
+					technology = support_logistics_T3
+					technology = support_logistics_T4
+					technology = support_logistics_T5
+					bonus = 0.5
+				}
+				custom_effect_tooltip = TRI_orderly_mobilization_tt
+				add_to_variable = { TRI_trinity_military_can_use_combat_readiness_percentage = 0.05 }
+				add_to_variable = { TRI_trinity_military_mobilization_speed = 0.05 }
+			}			
+		}
+		focus = { #工事特训
+			id = TRI_fortifications_building
+			icon =  GFX_goal_TRI_fortifications_building
+			relative_position_id = TRI_orderly_mobilization
+			prerequisite = { focus = TRI_orderly_mobilization }
 
-				custom_effect_tooltip = TRI_Senators_party_change_oppo
-				TRI_reload_senators_parliament_gui = yes
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#获得支援装备-工程研究加速卡50%x2
+				add_tech_bonus = {
+					technology = support_engineer_T2
+					technology = support_engineer_T3
+					technology = support_engineer_T4
+					technology = support_engineer_T5
+					bonus = 0.5
+					uses = 2
+				}
+			}			
+		}
+		focus = { #鲜花，茶点与火炮的硝烟
+			id = TRI_flower_tea_artillery
+			icon = GFX_goal_TRI_flower_tea_artillery
+			relative_position_id = TRI_fortifications_building
+			prerequisite = { focus = TRI_fortifications_building }
+
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#减少1级火炮科技的超前研究惩罚并获得50%的研究加成，对下一次研究火炮支援连科技时有效。
+				add_tech_bonus = {
+					category = fire_support
+					bonus = 0.5
+					ahead_reduction = 1
+					uses = 1
+				}
+				add_ideas = TRI_trinity_artillery
+				random_controlled_state = {
+					limit = {
+						TRI_is_tea_party_state = yes
+						free_building_slots = {
+							building = heavy_arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = heavy_arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		focus = { #多社团联合演习
+			id = TRI_multi_association_exercise
+			icon = GFX_goal_TRI_multi_association_exercise
+			relative_position_id = TRI_orderly_mobilization
+			prerequisite = { focus = TRI_orderly_mobilization }
+
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				activate_mission = TRI_joint_exercise
+			}			
+		}
+		focus = { #精工研发小组
+			id = TRI_refining_research
+			icon = GFX_goal_TRI_refining_research
+			relative_position_id = TRI_multi_association_exercise
+			prerequisite = { focus = TRI_multi_association_exercise }
+			prerequisite = { focus = TRI_production_specialization }
+
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_research_slot = 1
+				custom_effect_tooltip = TRI_refining_research_tt
+				add_to_variable = { TRI_trinity_military_research_speed_factor = 0.05 }
+			}			
+		}
+		focus = { #先进性装甲
+			id = TRI_advanced_armour
+			icon =  GFX_goal_TRI_advanced_armour
+			relative_position_id = TRI_refining_research
+			prerequisite = { focus = TRI_refining_research }
+			prerequisite = { focus = TRI_flower_tea_artillery }
+
+			cost = 5
+			x = 2
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				army_experience = 20
+				#减少1级主战坦克科技的超前研究惩罚并获得100%的研究加成，对下一次研究主战坦克科技时有效。
+				add_tech_bonus = {
+					category = tank
+					bonus = 0.5
+					ahead_reduction = 1
+					uses = 1
+				}
+				add_ideas = TRI_advanced_armour_idea
+			}			
+		}
+		#空军
+			focus = { #远端航空训练计划
+				id = TRI_long_distance_aeronautics
+				icon = GFX_goal_TRI_long_distance_aeronautics
+				relative_position_id = TRI_orderly_mobilization
+				prerequisite = { focus = TRI_orderly_mobilization }
+
+				cost = 5
+				x = 2
+				y = 1
+				search_filters = { FOCUS_FILTER_ARMY }
+				select_effect = {
+					set_variable = { TRI_political_focus_duration = 0 }
+				}
+				completion_reward = {
+					add_ideas = TRI_aeronautics_training
+				}			
+			}
+			focus = { #圣三一空地一体化系统
+				id = TRI_air_ground_integration
+				icon = GFX_goal_TRI_air_ground_integration
+				relative_position_id = TRI_long_distance_aeronautics
+				prerequisite = { focus = TRI_long_distance_aeronautics }
+
+				cost = 5
+				x = 2
+				y = 1
+				search_filters = { FOCUS_FILTER_ARMY }
+				select_effect = {
+					set_variable = { TRI_political_focus_duration = 0 }
+				}
+				completion_reward = {
+					add_ideas = TRI_integrated_air_ground_system
+					add_advisor_role = {
+						character = TRI_commission_of_air_ground
+						activate = no
+						advisor = { 
+							slot = army_chief
+							idea_token = TRI_commission_of_air_ground_ac
+							traits = {
+								army_commando_3
+							}
+							ai_will_do = {
+								base = 1
+							}
+						}
+					}
+				}			
+			}
+			focus = { #重整空中力量投射
+				id = TRI_air_force_projection
+				icon = GFX_goal_TRI_air_force_projection
+				relative_position_id = TRI_long_distance_aeronautics
+				prerequisite = { focus = TRI_long_distance_aeronautics }
+
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_ARMY }
+				select_effect = {
+					set_variable = { TRI_political_focus_duration = 0 }
+				}
+				completion_reward = {
+					random_owned_controlled_state = {
+						limit = {
+							check_variable = { state_region = token:TRI_center_campus_region }
+							free_building_slots = {
+								building = air_base
+								size = 1
+							}
+						}
+						add_building_construction = {
+							type = air_base
+							level = 1
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							any_neighbor_state = {
+								NOT = { is_controlled_by = TRI }
+							}
+							free_building_slots = {
+								building = air_base
+								size = 1
+							}
+						}
+						add_building_construction = {
+							type = air_base
+							level = 1
+						}
+					}
+					#1x100%的研究加成：无人战斗机,1x50%的研究加成：无人侦察机
+					add_tech_bonus = {
+						category = fight_uav
+						bonus = 1
+					}
+					add_tech_bonus = {
+						technology = recon_drone
+						technology = recon_drone_MK2
+						technology = recon_fighting_drone_MK3
+						technology = recon_fighting_drone_MK4
+						bonus = 0.5
+					}
+				}			
+			}
+			focus = { #无人机管制司令部
+				id = TRI_UAV_control
+				icon = GFX_goal_TRI_UAV_control
+				relative_position_id = TRI_air_force_projection
+				prerequisite = { focus = TRI_air_force_projection }
+
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_ARMY }
+				select_effect = {
+					set_variable = { TRI_political_focus_duration = 0 }
+				}
+				completion_reward = {
+					air_experience = 25
+					#1x100%的研究加成：无人炮艇机
+					add_tech_bonus = {
+						technology = gunship_drone_MK3
+						technology = gunship_drone_MK4
+						bonus = 1
+					}
+					add_doctrine_cost_reduction = {
+						cost_reduction = 0.5
+						category = air_doctrine
+					}
+				}			
+			}
+			focus = { #专业无人机生产集团
+				id = TRI_UAV_production
+				icon = GFX_goal_TRI_UAV_production
+				relative_position_id = TRI_UAV_control
+				prerequisite = { focus = TRI_UAV_control }
+
+				cost = 5
+				x = 0
+				y = 1
+				search_filters = { FOCUS_FILTER_ARMY }
+				select_effect = {
+					set_variable = { TRI_political_focus_duration = 0 }
+				}
+				completion_reward = {
+					add_ideas = TRI_professional_UAV_production
+				}			
+			}
+		focus = { #参谋长委员会
+				id = TRI_commission_of_staffs
+				icon = GFX_goal_TRI_commission_of_staffs
+				relative_position_id = TRI_UAV_control
+				prerequisite = { focus = TRI_UAV_control }
+				prerequisite = { focus = TRI_expand_training_area }
+
+				cost = 5
+				x = 3
+				y = 1
+				search_filters = { FOCUS_FILTER_ARMY }
+				select_effect = {
+					set_variable = { TRI_political_focus_duration = 0 }
+				}
+				completion_reward = {
+					army_experience = 20
+					air_experience = 20
+					custom_effect_tooltip = TRI_commission_of_staffs_tt
+					add_to_variable = { TRI_trinity_military_planning_speed = 0.1 }
+					add_to_variable = { TRI_trinity_military_max_command_power = 20 }
+					add_to_variable = { TRI_trinity_military_command_power_gain_mult = 0.1 }
+				}			
 			}
 
-		}		
-	}
-
-	focus = {
-		id = TRI_vast_land #广土袤赠
-		icon = GFX_goal_TRI_vast_land	
-		relative_position_id = TRI_production_specialization
-		prerequisite = {
-			focus = TRI_production_specialization
-		}	
-
-		mutually_exclusive = {
-			focus = TRI_expand_reproduction
+	##工业线
+		focus = { #“胡萝卜蛋糕”法案
+			id = TRI_Bill_of_carrot_cake
+			icon = GFX_goal_TRI_Bill_of_carrot_cake
+			cost = 5
+			x = -20
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				set_temp_variable = { bill = token:TRI_Bill_of_carrot_cake }
+				TRI_submit_the_bill = yes
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = TRI_Bill_of_carrot_cake_factory
+						days = 180
+					}
+					add_tech_bonus = {
+						name = TRI_Bill_of_carrot_cake
+						category = industry
+						bonus = 0.5
+						uses = 1
+					}
+				}
+			}		
 		}
+		focus = {  #遏制无节制福利开支
+			id = TRI_welfare_cutting
+			icon = GFX_goal_TRI_welfare_cutting
+			relative_position_id = TRI_Bill_of_carrot_cake
+			prerequisite = { focus = TRI_Bill_of_carrot_cake }
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_passed_bill_tt
+						BILL = TRI_Bill_of_carrot_cake
+					}
+					is_in_array = {
+						array = TRI_passed_bills
+						value = token:TRI_Bill_of_carrot_cake
+					}
+				}
+			}
+			
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#custom_effect_tooltip = TRI_main_party_change
 
-		bypass = {
-			#custom_trigger_tooltip = {
-			#	tooltip = construction_effort_tt
-			#	all_owned_state = {
-			#		free_building_slots = {
-			#			building = industrial_complex
-			#			size < 1
-			#			include_locked = yes
-			#		}
-			#	}
-			#}
+				add_dynamic_modifier = { modifier = material_allocation_modifier }
+				
+				#圣三一下议会所有社团支持度-2%
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = -0.02 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}		
 		}
+		focus = { #规范化热武器出厂流程
+			id = TRI_weapons_nomalization
+			icon = GFX_goal_TRI_weapons_nomalization	
+			relative_position_id = TRI_Bill_of_carrot_cake
+			prerequisite = { focus = TRI_Bill_of_carrot_cake }
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_passed_bill_tt
+						BILL = TRI_Bill_of_carrot_cake
+					}
+					is_in_array = {
+						array = TRI_passed_bills
+						value = token:TRI_Bill_of_carrot_cake
+					}
+				}
+			}
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_dynamic_modifier = { modifier = trinity_industry_modifier }
 
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
+				#圣三一上议会所有社团支持度-3%
+				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				set_temp_variable = { loyalty_change = -0.03 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}		
+		}
+		focus = { #生产管理专业化
+			id = TRI_production_specialization
+			icon = GFX_goal_TRI_production_specialization	
+			relative_position_id = TRI_welfare_cutting
+			prerequisite = { focus = TRI_welfare_cutting }	
+			prerequisite = { focus = TRI_weapons_nomalization }	
 
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				hidden_effect = {
+					add_to_variable = { ma_stability = 0.025 }
+					add_to_variable = { ma_building_speed = 0.05 }
+					add_to_variable = { tim_arms_factory_building_speed = 0.05 }
+					add_to_variable = { tim_civ_to_mil_cost = -0.25 }
+					add_to_variable = { tim_mil_to_civ_cost = -0.25 }
+				}
+				add_tech_bonus = {
+					name = TRI_production_specialization
+					category = industry
+					bonus = 0.5
+					uses = 1
+				}
+				custom_effect_tooltip = TRI_production_specialization_ns_tt	
+			}		
+		}
+		focus = { #便携式随身武器包
+			id = TRI_carryon_package_facilitation
+			icon = GFX_goal_TRI_carryon_package_facilitation	
+			relative_position_id = TRI_production_specialization
+			prerequisite = { focus = TRI_production_specialization }	
+
+			cost = 5
+			x = -3
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_political_power = 75
+				
+				hidden_effect = {
+					add_to_variable = { tim_production_efficiency_gain = 0.05 }
+					add_ideas = TRI_hidden_carryon_package_ns
+				}
+				
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = trinity_industry_modifier }
+					add_dynamic_modifier = { modifier = trinity_industry_modifier_alt }
+				}
+				#注：装备系统尚未完成，加成能显示但并不生效
+				
+				custom_effect_tooltip = TRI_carryon_package_effect_tt
+				
+				add_tech_bonus = {
+					name =  TRI_carryon_package_facilitation_tech_bonus_name
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}		
+		}
+		focus = { #保证充分甜品配给
+			id = TRI_sufficient_sweets_supply
+			icon = GFX_goal_TRI_sufficient_sweets_supply	
+			relative_position_id = TRI_production_specialization
+			prerequisite = { focus = TRI_production_specialization }
+
+			cost = 5
+			x = 3
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				hidden_effect = {
+					add_to_variable = { ma_stability = 0.025 }
+					add_to_variable = { ma_goods_factor = 0.05 }
+					add_to_variable = { ma_daily_power_gain = 0.25 }
+					add_to_variable = { ma_economy_cost = -0.2 }
+				}
+				
+				custom_effect_tooltip = TRI_sufficient_sweets_supply_ns_tt
+				
+				#圣三一下议会所有社团支持度+2%
+				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				set_temp_variable = { loyalty_change = 0.02 }
+				TRI_parliament_loyalty_change_parliament = yes
+			}		
+		}
+		focus = { #广土袤赠
+			id = TRI_vast_land
+			icon = GFX_goal_TRI_vast_land	
+			relative_position_id = TRI_production_specialization
+			prerequisite = {
+				focus = TRI_production_specialization
 			}	
-		}
 
-		completion_reward = {
-
-			custom_effect_tooltip = TRI_vast_land_effect
-
-			#TODO:为靠近大树海的一个随机地块增加一个随机的【特殊资源】产出
-			random_owned_controlled_state = {
-				limit = {
-					num_owned_neighbour_states = {
-						owner = D06
-						count > 0
-					}
-				}
-
-				add_resource = {
-					type = resources_cm
-					amount = 5
-				}
+			mutually_exclusive = {
+				focus = TRI_expand_reproduction
 			}
 
-			#写错了，写成加工厂了
-			random_owned_controlled_state = {
-				limit = {
-					num_owned_neighbour_states = {
-						owner = D06
-						count > 0
-					}
-				}
+			bypass = {
+				#custom_trigger_tooltip = {
+				#	tooltip = construction_effort_tt
+				#	all_owned_state = {
+				#		free_building_slots = {
+				#			building = industrial_complex
+				#			size < 1
+				#			include_locked = yes
+				#		}
+				#	}
+				#}
+			}
+
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			complete_tooltip = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
+				}	
+			}
+
+			completion_reward = {
+
+				custom_effect_tooltip = TRI_vast_land_effect
+
+				#为靠近大树海的一个随机地块增加一个随机的【特殊资源】产出
+				##由于地图变动改为神圣森林
+				random_owned_controlled_state = {
+					limit = {
+						num_owned_neighbour_states = {
+							owner = A02
+							count > 0
+						}
+					}
+
+					add_resource = {
+						type = resources_cm
+						amount = 5
+					}
 				}
+
+				#写错了，写成加工厂了
+				random_owned_controlled_state = {
+					limit = {
+						num_owned_neighbour_states = {
+							owner = A02
+							count > 0
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				#50％勘探特殊资源科技卡x1
+				add_tech_bonus = {
+					name = TRI_vast_land
+					category = excavation_tech
+					bonus = 0.5
+					uses = 1
+				}
+			}		
+		}
+		focus = { #精选细酌
+			id = TRI_expand_reproduction
+			icon = GFX_goal_TRI_expand_reproduction	
+			relative_position_id = TRI_production_specialization
+			prerequisite = {
+				focus = TRI_production_specialization
+			}	
+			mutually_exclusive = {
+				focus = TRI_vast_land
 			}
-		}		
-	}
 
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				#解锁一个决议【圣三一再生产运动】：消耗50pp，在接下来180天内获得全特殊物资产出＋2；这个决议有60天的冷却时间。
+				unlock_decision_tooltip = TRI_reproduction_movement
+				hidden_effect = {
+					add_to_variable = { tim_production_lack = -0.20 }
+					add_to_variable = { tim_civ_to_mil_cost = -0.40 }
+					add_to_variable = { tim_mil_to_civ_cost = -0.40 }
+				}
 
-	focus = {
-		id = TRI_expand_reproduction #精选细酌
-		icon = GFX_goal_TRI_expand_reproduction	
-		relative_position_id = TRI_production_specialization
-		prerequisite = {
-			focus = TRI_production_specialization
-		}	
-		mutually_exclusive = {
-			focus = TRI_vast_land
+				custom_effect_tooltip = TRI_expand_reproduction_ns_tt
+			}		
 		}
-
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
-
-		completion_reward = {
-			#TODO:解锁一个决议【圣三一再生产运动】：消耗50pp，在接下来180天内获得全特殊物资产出＋2；这个决议有60天的冷却时间。
-			hidden_effect = {
-				add_to_variable = { tim_production_lack = -0.20 }
-				add_to_variable = { tim_civ_to_mil_cost = -0.40 }
-				add_to_variable = { tim_mil_to_civ_cost = -0.40 }
+		focus = { #惹人称羡
+			id = TRI_amazing
+			icon = GFX_goal_TRI_amazing	
+			relative_position_id = TRI_vast_land
+			prerequisite = { focus = TRI_vast_land }
+			prerequisite = { 
+				focus = TRI_carryon_package_facilitation 
+				focus = TRI_sufficient_sweets_supply 
 			}
 
-			custom_effect_tooltip = TRI_expand_reproduction_ns_tt
-		}		
-	}
 
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_to_variable = { tim_industrial_building_speed = -0.05 }
+				add_to_variable = { tim_arms_factory_building_speed = 0.1 }
+				add_to_variable = { tim_production_efficiency_cap = 0.15 }
+				add_to_variable = { tim_production_efficiency_gain = -0.05 }
 
-	focus = {
-		id = TRI_amazing #惹人称羡
-		icon = GFX_goal_TRI_amazing	
-		relative_position_id = TRI_vast_land
-		prerequisite = { focus = TRI_vast_land }
-		prerequisite = { 
-			focus = TRI_carryon_package_facilitation 
-			focus = TRI_sufficient_sweets_supply 
+				custom_effect_tooltip = TRI_amazing_ns_tt_default
+
+				add_tech_bonus = {
+					name = TRI_production_specialization
+					bonus = 1
+					uses = 1
+					category = industry
+				}
+			}		
 		}
+		focus = { #优雅绝伦
+			id = TRI_gorgeous
+			icon = GFX_goal_TRI_gorgeous	
+			relative_position_id = TRI_expand_reproduction
+			prerequisite = { focus = TRI_expand_reproduction }	
+			prerequisite = {
+				focus = TRI_carryon_package_facilitation 
+				focus = TRI_sufficient_sweets_supply 
+			}
 
-
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
-
-		completion_reward = {
-			add_to_variable = { tim_industrial_building_speed = -0.05 }
-			add_to_variable = { tim_arms_factory_building_speed = 0.1 }
-			add_to_variable = { tim_production_efficiency_cap = 0.15 }
-			add_to_variable = { tim_production_efficiency_gain = -0.05 }
-
-			custom_effect_tooltip = TRI_amazing_ns_tt_default
-
-			#add_tech_bouns = {
-			#	name = TRI_production_specialization
-			#	bouns = 1
-			#	uses = 1
-			#	category = industry
-			#看了眼工业科技部分并没有写category,所以这里全注释掉
-			#}
-		}		
-	}
-
-	focus = {
-		id = TRI_gorgeous #优雅绝伦
-		icon = GFX_goal_TRI_gorgeous	
-		relative_position_id = TRI_expand_reproduction
-		prerequisite = { focus = TRI_expand_reproduction }	
-		prerequisite = {
-			focus = TRI_carryon_package_facilitation 
-			focus = TRI_sufficient_sweets_supply 
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			select_effect = {
+				set_variable = { TRI_political_focus_duration = 0 }
+			}
+			completion_reward = {
+				add_to_variable = { tim_building_speed = 0.05 }
+				#add_to_variable = {所有产品生产花费-5.0%}我亏你想得出来
+				add_to_variable = { tim_production_efficiency_gain = 0.10 }
+				add_to_variable = { tim_line_change_efficiency = 0.3 }
+				add_tech_bonus = {
+					name = TRI_gorgeous
+					ahead_reduction = 1
+					uses = 1
+				}
+				custom_effect_tooltip = TRI_amazing_ns_tt_alt
+			}		
 		}
-
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_ECO }
-
-		completion_reward = {
-			add_to_variable = { tim_building_speed = 0.05 }
-			#add_to_variable = {所有产品生产花费-5.0%}我亏你想得出来
-			add_to_variable = { tim_production_efficiency_gain = 0.10 }
-			add_to_variable = { tim_line_change_efficiency = 0.3 }
-
-			custom_effect_tooltip = TRI_amazing_ns_tt_alt
-		}		
-	}
+	
 }
-
-
-

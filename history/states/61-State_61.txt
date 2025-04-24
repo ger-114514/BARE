@@ -5,12 +5,17 @@ state={
 		851 3118 5327 7736 7841 8019 9505 11557 
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
 		owner = VAL
 		add_core_of=VAL
 		victory_points = {7736 15}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=567000
+	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

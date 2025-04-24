@@ -4,15 +4,19 @@ state={
 	name="STATE_525"
 
 	history={
-		owner = D12
-		add_core_of=D12
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A47
+		add_core_of=A47
 
 	}
 
 	provinces={
 		1109 2028 3741 9271 9489 10933 10785 
 	}
-	manpower=0
+	manpower=18900
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

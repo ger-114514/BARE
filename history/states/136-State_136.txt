@@ -4,13 +4,23 @@ state={
 	provinces={
 		3564 3983 4221 4839 9094 11036 
 	}
+	resources = {
+		resources_rm =10
+		resources_mm = 2
+	}
 	history={
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			anti_air_building = 3
+            heavy_arms_factory = 2
+		}
 		owner = ARI
 		add_core_of=ARI
 		victory_points = {3983 25}
 	}
-	manpower=1
-	state_category = pastoral
+	manpower=135000
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

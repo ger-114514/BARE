@@ -29,7 +29,7 @@ sub_units = {
 		need = {
 			light_fire_support_equipment = 12
 		}
-		manpower = 300
+		manpower = 30
 		max_organisation = 0
 		default_morale = 0.1
 		max_strength = 0.2
@@ -77,7 +77,7 @@ sub_units = {
 		need = {
 			heavy_fire_support_equipment = 12
 		}
-		manpower = 300
+		manpower = 30
 		max_organisation = 0
 		default_morale = 0.1
 		max_strength = 0.2
@@ -126,7 +126,7 @@ sub_units = {
 		need = {
 			special_fire_support_equipment = 12
 		}
-		manpower = 300
+		manpower = 30
 		max_organisation = 0
 		default_morale = 0.1
 		max_strength = 0.2

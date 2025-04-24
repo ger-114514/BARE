@@ -1,16 +1,26 @@
 state={
 	id=276
 	name="STATE_276"
+	resources={
+		resources_cm = 40
+		recources_rm = 30
+		recources_mm = 25
+	}
 	provinces={
 		1605 2205 2285 2349 2889 2924 6160 7151 7740 8934 10203 10223 10275 206 1473 4033 8347 
 	}
 	history = {
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			anti_air_building = 2
+		}
 		owner = HYA
 		add_core_of=HYA
 		victory_points = {8934 20}
     }
-	manpower=1
-	state_category = pastoral
+	manpower=364000
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -2,8 +2,8 @@ sub_units = {
 	####################################################
 	#学生#
 	####################################################
-	fire_support_team_lald = {
-		abbreviation = "FSTLL"
+	fire_support_team_la = {
+		abbreviation = "FSTL"
 		sprite = artillery
 		map_icon_category = infantry
 		priority = 1198
@@ -20,17 +20,16 @@ sub_units = {
 			category_light_artillery
 		}
 		combat_width = 3
-		manpower = 500
+		manpower = 80
 		need = {
 			light_fire_support_equipment = 36
 		}
 		max_strength = 0.6
 		max_organisation = 0
 		default_morale = 0.1
-		training_time = 120
+		training_time = 90
 		weight = 0.5
 		supply_consumption = 0.21
-		hardness = -1
 		#Line artillery bonuses
 		# soft_attack = 0.25
 		forest = {
@@ -62,8 +61,9 @@ sub_units = {
 			attack = -0.4
 		}
 	}
-	fire_support_team_lahd = {
-		abbreviation = "FSTLH"
+	
+	fire_support_team_ha = {
+		abbreviation = "FSTH"
 		sprite = artillery
 		map_icon_category = infantry
 		priority = 1198
@@ -76,143 +76,23 @@ sub_units = {
 		group = combat_support
 		categories = {
 			category_army
-			category_artillery
-			category_light_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			light_fire_support_equipment = 36
-		}
-		max_strength = 0.6
-		max_organisation = 0
-		default_morale = 0.1
-		training_time = 120
-		weight = 0.5
-		supply_consumption = 0.21
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		hardness = 100
-		forest = {
-			attack = -0.2
-			movement = -0.2
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
-		marsh = {
-			attack = -0.2
-			movement = -0.3
-		}
-		fort = {
-			attack = 0.1
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	fire_support_team_hald = {
-		abbreviation = "FSTHL"
-		sprite = artillery
-		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
-		active = yes
-		type = {
-			infantry
-			artillery
-		}
-		group = combat_support
-		categories = {
-			category_army
+			category_line_artillery
 			category_artillery
 			category_heavy_artillery
 		}
-		combat_width = 3
-		manpower = 500
+		combat_width = 2
+		manpower = 80
 		need = {
 			heavy_fire_support_equipment = 36
 		}
 		max_strength = 0.6
 		max_organisation = 0
 		default_morale = 0.1
-		training_time = 120
-		weight = 0.5
-		supply_consumption = 0.21
-		hardness = -1
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		forest = {
-			attack = -0.2
-			movement = -0.2
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
-		marsh = {
-			attack = -0.2
-			movement = -0.3
-		}
-		fort = {
-			attack = 0.1
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	fire_support_team_hahd = {
-		abbreviation = "FSTHH"
-		sprite = artillery
-		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
-		active = yes
-		type = {
-			infantry
-			artillery
-		}
-		group = combat_support
-		categories = {
-			category_army
-			category_artillery
-			category_heavy_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			heavy_fire_support_equipment = 36
-		}
-		max_strength = 0.6
-		max_organisation = 0
-		default_morale = 0.1
-		training_time = 120
+		training_time = 90
 		weight = 0.5
 		supply_consumption = 0.21
 		#Line artillery bonuses
 		# soft_attack = 0.25
-		hardness = 100
 		forest = {
 			attack = -0.2
 			movement = -0.2
@@ -256,23 +136,21 @@ sub_units = {
 		group = combat_support
 		categories = {
 			category_army
+			category_line_artillery
 			category_artillery
 			category_special_artillery
 		}
 		combat_width = 3
-		manpower = 500
+		manpower = 80
 		need = {
 			special_fire_support_equipment = 36
 		}
 		max_strength = 0.6
 		max_organisation = 0
 		default_morale = 0.1
-		training_time = 120
+		training_time = 90
 		weight = 0.5
 		supply_consumption = 0.21
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		hardness = 50
 		forest = {
 			attack = -0.2
 			movement = -0.2
@@ -302,315 +180,65 @@ sub_units = {
 			attack = -0.4
 		}
 	}
-	####################################################
-	#平民#
-	####################################################
-	fire_support_team_lald_ng = {
-		abbreviation = "FSTLL"
-		sprite = artillery
+	
+
+	fire_support_team_aa  = {
+		abbreviation = "FSTA"
+		sprite = infantry
 		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
+		priority = 301
+		ai_priority = 10
 		active = yes
+
 		type = {
 			infantry
-			artillery
+			anti_air
 		}
+		
 		group = combat_support
+		
 		categories = {
 			category_army
-			category_artillery
-			category_light_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			light_fire_support_equipment = 30
-		}
-		soft_attack = -0.25
-		hard_attack = -0.25
-		max_strength = 0.6
+			category_line_artillery
+			category_anti_air
+		}		
+		
+		combat_width = 1
+		
+		#Size Definitions
 		max_organisation = 0
 		default_morale = 0.1
-		training_time = 120
+		max_strength = 0.6
+		manpower = 80
+		training_time = 90
 		weight = 0.5
-		supply_consumption = 0.21
-		hardness = -1
-		#Line artillery bonuses
-		# soft_attack = 0.25
+		
+		supply_consumption = 0.14
+
+		need = {
+			infantry_anti_air_equipment = 36
+		}
+
 		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+
+		jungle = {
 			attack = -0.2
 			movement = -0.2
 		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
+
 		marsh = {
 			attack = -0.2
-			movement = -0.3
+			movement = -0.2
 		}
-		fort = {
-			attack = 0.1
-		}
+
 		river = {
 			attack = -0.2
 			movement = -0.2
 		}
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	fire_support_team_lahd_ng = {
-		abbreviation = "FSTLH"
-		sprite = artillery
-		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
-		active = yes
-		type = {
-			infantry
-			artillery
-		}
-		group = combat_support
-		categories = {
-			category_army
-			category_artillery
-			category_light_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			light_fire_support_equipment = 30
-		}
-		soft_attack = -0.25
-		hard_attack = -0.25
-		max_strength = 0.6
-		max_organisation = 0
-		default_morale = 0.1
-		training_time = 120
-		weight = 0.5
-		supply_consumption = 0.21
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		hardness = 100
-		forest = {
-			attack = -0.2
-			movement = -0.2
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
-		marsh = {
-			attack = -0.2
-			movement = -0.3
-		}
-		fort = {
-			attack = 0.1
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	fire_support_team_hald_ng = {
-		abbreviation = "FSTHL"
-		sprite = artillery
-		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
-		active = yes
-		type = {
-			infantry
-			artillery
-		}
-		group = combat_support
-		categories = {
-			category_army
-			category_artillery
-			category_heavy_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			heavy_fire_support_equipment = 30
-		}
-		soft_attack = -0.25
-		hard_attack = -0.25
-		max_strength = 0.6
-		max_organisation = 0
-		default_morale = 0.1
-		training_time = 120
-		weight = 0.5
-		supply_consumption = 0.21
-		hardness = -1
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		forest = {
-			attack = -0.2
-			movement = -0.2
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
-		marsh = {
-			attack = -0.2
-			movement = -0.3
-		}
-		fort = {
-			attack = 0.1
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	fire_support_team_hahd_ng = {
-		abbreviation = "FSTHH"
-		sprite = artillery
-		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
-		active = yes
-		type = {
-			infantry
-			artillery
-		}
-		group = combat_support
-		categories = {
-			category_army
-			category_artillery
-			category_heavy_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			heavy_fire_support_equipment = 30
-		}
-		soft_attack = -0.25
-		hard_attack = -0.25
-		max_strength = 0.6
-		max_organisation = 0
-		default_morale = 0.1
-		training_time = 120
-		weight = 0.5
-		supply_consumption = 0.21
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		hardness = 100
-		forest = {
-			attack = -0.2
-			movement = -0.2
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
-		marsh = {
-			attack = -0.2
-			movement = -0.3
-		}
-		fort = {
-			attack = 0.1
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
-		amphibious = {
-			attack = -0.4
-		}
-	}
-	fire_support_team_sp_ng = {
-		abbreviation = "FSTSPNG"
-		sprite = artillery
-		map_icon_category = infantry
-		priority = 1198
-		ai_priority = 100
-		active = yes
-		type = {
-			infantry
-			artillery
-		}
-		group = combat_support
-		categories = {
-			category_army
-			category_artillery
-			category_special_artillery
-		}
-		combat_width = 3
-		manpower = 500
-		need = {
-			special_fire_support_equipment = 30
-		}
-		soft_attack = -0.25
-		hard_attack = -0.25
-		max_strength = 0.6
-		max_organisation = 0
-		default_morale = 0.1
-		training_time = 120
-		weight = 0.5
-		supply_consumption = 0.21
-		#Line artillery bonuses
-		# soft_attack = 0.25
-		hardness = 50
-		forest = {
-			attack = -0.2
-			movement = -0.2
-		}
-		hills = {
-			movement = -0.05
-		}
-		mountain = {
-			movement = -0.2
-		}
-		jungle = {
-			attack = -0.25
-			movement = -0.2
-		}
-		marsh = {
-			attack = -0.2
-			movement = -0.3
-		}
-		fort = {
-			attack = 0.1
-		}
-		river = {
-			attack = -0.2
-			movement = -0.2
-		}
+
 		amphibious = {
 			attack = -0.4
 		}

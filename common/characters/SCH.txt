@@ -1,14 +1,15 @@
-    SCH_sensei ={ 
+characters = {
+	SCH_sensei ={ 
 		name=SCH_sensei_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_sensei
-				small=GFX_portrait_sch_sensei_small
+				large=GFX_portrait_SCH_sensei
+				small=GFX_portrait_SCH_sensei_small
 			}	
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { responsebility_of_adult }
 			expire = "-1.1.1.1"
 			id = -1
@@ -20,8 +21,8 @@
 		name=SCH_arona_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_arona
-				small=GFX_portrait_sch_arona_small
+				large=GFX_portrait_SCH_arona
+				small=GFX_portrait_SCH_arona_small
 			}	
 		}
 
@@ -43,12 +44,13 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {infantry_officer organizer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 3
 		}
 
 	}
@@ -57,8 +59,8 @@
 		name=SCH_purana_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_purana
-				small=GFX_portrait_sch_purana_small
+				large=GFX_portrait_SCH_purana
+				small=GFX_portrait_SCH_purana_small
 			}	
 		}
 
@@ -80,12 +82,13 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer organizer
+			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
 		}
 
 	}
@@ -94,8 +97,8 @@
 		name=SCH_miku_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_miku
-				small=GFX_portrait_sch_miku_small
+				large=GFX_portrait_SCH_miku
+				small=GFX_portrait_SCH_miku_small
 			}	
 		}
 
@@ -117,12 +120,13 @@
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {media_personality brilliant_strategist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
 		}
 
 
@@ -132,8 +136,8 @@
 		name=SCH_mikoto_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_mikoto
-				small=GFX_portrait_sch_mikoto_small
+				large=GFX_portrait_SCH_mikoto
+				small=GFX_portrait_SCH_mikoto_small
 			}	
 		}
 
@@ -155,9 +159,10 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
@@ -169,8 +174,8 @@
 		name=SCH_ruiko_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_ruiko
-				small=GFX_portrait_sch_ruiko_small
+				large=GFX_portrait_SCH_ruiko
+				small=GFX_portrait_SCH_ruiko_small
 			}	
 		}
 
@@ -192,11 +197,12 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer
+			}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 1
 		}
 
@@ -206,8 +212,8 @@
 		name=SCH_misaki_name 
 		portraits={
 			civilian={
-				large=GFX_portrait_sch_misaki
-				small=GFX_portrait_sch_misaki_small
+				large=GFX_portrait_SCH_misaki
+				small=GFX_portrait_SCH_misaki_small
 			}	
 		}
 
@@ -229,12 +235,14 @@
         }
 
         field_marshal = {
-			traits = {}
+			traits = {infantry_officer
+			}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
+}

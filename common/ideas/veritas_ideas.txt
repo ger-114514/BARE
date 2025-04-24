@@ -1,0 +1,66 @@
+ideas = {
+	hidden_ideas = {
+		BARE_Combat_Readiness_Start_Idea = { #你们只需要上一天班
+            allowed = {
+                always = no
+            }
+			modifier = {
+                conscription = 1
+            }
+		}
+		BARE_Combat_Readiness_Mid_Idea = { #然后就给我滚回家
+			allowed = {
+				always = no
+			}
+			modifier = {
+				mobilization_speed = 2100000
+			}
+		}
+	}
+
+
+	country = {
+		BARE_Global_College_Autonomous_Region = { #学园自治区
+			picture = unknown
+            allowed = {
+                always = no
+            }
+		}
+
+		BARE_Global_Unacknowledged_College_Autonomous_Region = { #不被承认的学园自治区
+			picture = unknown
+            allowed = {
+                always = no
+            }
+		}
+
+		BARE_Global_Trusteeship_Area = { #托管地区
+			picture = unknown
+            allowed = {
+                always = no
+            }
+		}
+
+		BARE_Global_Extrajudicial_Trusteeship_Area = { #法外托管地区
+			picture = unknown
+            allowed = {
+                always = no
+            }
+		}
+
+
+		BARE_Global_Suburban	= { #郊区
+			picture = unknown
+			allowed = {
+				always = no
+			}
+		}
+
+		BARE_Global_Blockade_Zone	= { #封锁地区
+			picture = unknown
+			allowed = {
+				always = no
+			}
+		}
+	}
+}

@@ -1,36 +1,78 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			set_variable = { global.Time_minutes = 0 }
-			set_variable = { global.Time_hours = 2 }
-			set_variable = { global.Time_days = 1 }
-			set_variable = { global.Time_months = 1 }
-			set_variable = { global.Time_years = 2019 }
-			set_variable = { global.days_token = 1 }
-			every_possible_country = {
-				country_event = TimeTest.2
-				max_manpower_count = yes
-			}
+
+			# set_variable = { global.Time_minutes = 0 }
+			# set_variable = { global.Time_hours = 2 }
+			# set_variable = { global.Time_days = 1 }
+			# set_variable = { global.Time_months = 1 }
+			# set_variable = { global.Time_years = 2019 }
+			# set_variable = { global.days_token = 1 }
+			# every_possible_country = {
+			# 	# country_event = TimeTest.2
+			# 	max_manpower_count = yes
+			# }
 			random_country = {
 				limit = {
 					owns_state = 1
 				}
-				country_event = TimeTest.1
-				every_possible_country = {
-					resources_stat_initialize = yes
-					resources_stat = yes
-					add_dynamic_modifier = { modifier = resources_stat_modifiers }
-				}
+
+				BARE_Combat_Readiness_Init = yes
+				# country_event = TimeTest.1
+				# every_possible_country = {
+				# 	resources_stat_initialize = yes
+				# 	resources_stat = yes
+				# 	add_dynamic_modifier = { modifier = resources_stat_modifiers }
+				# }
 			}
 		}
 	}
 	on_daily = {
 		effect = {
+			#通用所有的计算
+			if = {
+				limit = {
+					owns_state = 1
+				}
+				
+				every_state = {
+					BARE_Combat_Readiness_count_State = yes
+				}
+				every_country = {
+					BARE_Combat_Readiness_count_Country = yes
+				}
+			}
 		}
 	}
 	on_weekly = {
 		effect = {
 			resources_stat = yes
+			if = {
+				limit = {
+					not = {
+						has_global_flag = BARE_Week_Is_Pass
+					}
+				}
+				set_global_flag = BARE_Week_Is_Pass
+			}
+			
+		}
+	}
+	on_monthly = {
+		effect = {
+			BARE_Combat_Readiness_Get_Manpower = yes
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			log = "change effect"
+			every_state = {
+				BARE_Combat_Readiness_count_State = yes
+			}
+			every_country = {
+				BARE_Combat_Readiness_count_Country = yes
+			}
 		}
 	}
 }

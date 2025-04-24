@@ -10,7 +10,7 @@ characters={
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { chairman_of_tasakui }
 			expire = "-1.1.1.1"
 			id = -1
@@ -51,13 +51,14 @@ characters={
 			}
 		}
 
-		field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+		corps_commander = {
+			traits = {brilliant_strategist infantry_officer organizer aggressive_assaulter desert_fox trait_reckless
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 3
 		}
 
 	}
@@ -107,12 +108,13 @@ characters={
 		}
 
 		field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+			traits = {infantry_officer trickster desert_fox expert_improviser
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 
 	}
@@ -127,7 +129,7 @@ characters={
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { chairman_of_abydos_student_union }
 			expire = "-1.1.1.1"
 			id = -1
@@ -169,12 +171,13 @@ characters={
 		}
 
 		field_marshal = {
-			traits = {}
-			skill = 1
+			traits = {trait_cautious organizer desert_fox
+			}
+			skill = 2
 			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
 
@@ -222,12 +225,13 @@ characters={
 		}
 
 		field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {desert_fox media_personality bearer_of_artillery
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
 		}
         
 	}
@@ -277,12 +281,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
+			traits = {desert_fox infantry_officer
+			}
 			skill = 1
-			attack_skill = 1
+			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 2
 		}
 	}
 
@@ -300,6 +305,7 @@ characters={
 			idea_token = ABY_yume_pa
 			allowed = {
 				original_tag = ABY
+				always = no
 			}
 			available = {
 				original_tag = ABY
@@ -324,7 +330,7 @@ characters={
 		}
 
         country_leader = {
-			ideology = liberalism
+			ideology = no_ideology_type
 			traits = { avatar_of_anubis }
 			expire = "-1.1.1.1"
 			id = -1
@@ -366,12 +372,13 @@ characters={
         }
 
         field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			traits = {brilliant_strategist guerilla_fighter adaptable scavenger infantry_officer
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
 		}
 
 	}

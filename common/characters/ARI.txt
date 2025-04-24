@@ -1,37 +1,40 @@
-    ARI_beatrice ={ 
-		name=ARI_beatrice_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_beatrice
-				small=GFX_portrait_ari_beatrice_small
-			}	
+characters = {
+	ARI_beatrice = {
+		name = ARI_beatrice_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ARI_beatrice
+				small = GFX_portrait_ARI_beatrice_small
+			}
 		}
-
-        country_leader = {
-			ideology = liberalism
-			traits = { bloody_mary }
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				bloody_mary
+			}
 			expire = "-1.1.1.1"
 			id = -1
 		}
-
 	}
-
-    ARI_atsuko ={ 
-		name=ARI_atsuko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_atsuko
-				small=GFX_portrait_ari_atsuko_small
-			}	
+	ARI_atsuko = {
+		name = ARI_atsuko_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ARI_atsuko
+				small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_portrait_ARI_atsuko
+			}
 		}
-
-        country_leader = {
-			ideology = liberalism
-			traits = { flower_in_wars }
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				flower_in_wars
+			}
 			expire = "-1.1.1.1"
 			id = -1
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ARI_atsuko_pa
@@ -40,36 +43,33 @@
 			}
 			available = {
 				original_tag = ARI
-			} 
+			}
 			traits = {
 				princess_of_arius
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
 		}
-
+		corps_commander = {
+			traits = {brilliant_strategist infantry_officer urban_assault_specialist logistics_wizard
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 3
+		}
 	}
-
-    ARI_saori ={ 
-		name=ARI_saori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_saori
-				small=GFX_portrait_ari_saori_small
-			}	
+	ARI_saori = {
+		name = ARI_saori_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ARI_saori
+				small = GFX_portrait_ARI_saori_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = ARI_saori_ac
 			allowed = {
@@ -83,31 +83,28 @@
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
+		field_marshal = {
+			traits = {guerilla_fighter camouflage_expert scavenger adaptable infantry_officer trickster
+			}
+			skill = 3
+			attack_skill = 5
+			defense_skill = 4
 			planning_skill = 1
-			logistics_skill = 1
+			logistics_skill = 4
 		}
-
 	}
-
-    ARI_misaki ={ 
-		name=ARI_misaki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_misaki
-				small=GFX_portrait_ari_misaki_small
-			}	
+	ARI_misaki = {
+		name = ARI_misaki_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ARI_misaki
+				small = GFX_portrait_ARI_misaki_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = ARI_misaki_ac
 			allowed = {
@@ -121,30 +118,27 @@
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
+		field_marshal = {
+			traits = {trickster adaptable guerilla_fighter
+			}
+			skill = 3
+			attack_skill = 4
 			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
 		}
-
 	}
-
-    ARI_hiyuri  ={ 
-		name=ARI_hiyuri_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_hiyuri 
-				small=GFX_portrait_ari_hiyuri_small
-			}	
+	ARI_hiyori = {
+		name = ARI_hiyori_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ARI_hiyori
+				small = GFX_portrait_ARI_hiyuri_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = ARI_hiyuri_pa
@@ -153,22 +147,103 @@
 			}
 			available = {
 				original_tag = ARI
-			} 
+			}
 			traits = {
 				master_of_massive_bombing
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
 		}
-
+		field_marshal = {
+			traits = {guerilla_fighter adaptable trait_engineer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
 	}
+
+
+	#代号01
+	ARI_code_01 = {
+		name = ARI_code_01_name
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_code_01_ac
+			traits = { arbitrary_supervisor }
+			cost = 100
+			visible = {
+				
+			}
+			available = {
+				has_completed_focus = ARI_meeting_with_farmers
+			}
+		}
+	}
+
+	#代号02
+	ARI_code_02 = {
+		name = ARI_code_02_name
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_code_02_ac
+			traits = { local_ruler }
+			cost = 100
+			visible = {
+				
+			}
+			available = {
+				has_completed_focus = ARI_meeting_with_farmers
+			}
+		}
+	}
+
+	#代号00
+	ARI_code_00 = {
+		name = ARI_code_00_name
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_code_00_ac
+			traits = { positive_collaborator }
+			cost = 100
+			visible = {
+				
+			}
+			available = {
+				has_completed_focus = ARI_recruit_informants
+			}
+		}
+	}
+
+	#代号07
+	ARI_code_07 = {
+		name = ARI_code_07_name
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_code_07_ac
+			traits = { secret_agent }
+			cost = 100
+			visible = {
+				
+			}
+			available = {
+				has_completed_focus = ARI_recruit_informants
+			}
+		}
+	}
+
+	#代号14
+	ARI_code_14 = {
+		name = ARI_code_14_name
+		advisor = {
+			slot = army_chief
+			idea_token = ARI_code_14_ac
+			traits = { armor_leader }
+			cost = 100
+		}
+	}
+
+}

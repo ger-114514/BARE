@@ -5,11 +5,17 @@ state={
 		1827 2266 2371 2401 2479 3333 3855 5710 5735 6140 7134 7576 7748 8530 8564 8766 12198 12210 12216 12226 12227 3064
 	}
 	history = {
-		owner = MIL
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+		}
+		owner = A03
+		add_core_of=A03
 		add_core_of=MIL
 		victory_points = {3064 5}
     }
-	manpower=0
+	manpower=5700
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

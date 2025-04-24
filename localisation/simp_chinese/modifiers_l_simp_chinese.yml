@@ -1893,3 +1893,11 @@
  special_forces_mountaineers_organization_tt: "$modifier_army_sub_unit_mountaineers_max_org_factor$：$RIGHT|+=0%$"
  special_forces_marines_organization_tt: "$modifier_army_sub_unit_marines_max_org_factor$：$RIGHT|+=0%$"
  SWE_royal_visit_modifier: "$POL_growing_monarchist_sentiment$"
+
+
+
+can_use_combat_readiness_percentage: "可转化战备比例" #原版适役人口，原来用的修正固定为0
+free_cost_combat_readiness_percentage: "常备战备比例" #将获得一部分战备上限转化为常备战备比例，常备战备可以抵消当前拥有部队对战备上限的惩罚
+free_cost_combat_readiness: "额外常备战备值(K)" #上面的数值版，单位是千
+combat_readiness_recovery_percentage: "战备恢复速度" #每个月恢复的战备值的修正，基础值是最大战备上限的1%加战备缺口的8%
+combat_readiness_recovery: "每月额外恢复战备值(K)" #上面的数值版，单位是千
