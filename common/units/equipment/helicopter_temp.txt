@@ -1,0 +1,324 @@
+equipments = {
+	helicopter_equipment = {
+		year = 2019
+	
+		is_archetype = yes
+		picture = archetype_motorized_equipment
+		is_buildable = no
+		type = {
+			motorized
+		}
+	
+		upgrades = {
+			heil_armor_upgrade
+			heil_opaz_upgrade
+			heil_reliability_upgrade
+			heil_gun_upgrade
+			heil_engine_upgrade
+		}
+		group_by = archetype
+	
+		interface_category = interface_category_land
+	
+		#Misc Abilities
+		maximum_speed = 28
+		reliability = 0.8
+	
+		#Defensive Abilities
+		defense = 16
+		breakthrough = 6
+		hardness = 0.1
+		armor_value = 2
+	
+		#Offensive Abilities
+		soft_attack = 4
+		hard_attack = 0.5
+	
+		ap_attack = 8
+		air_attack = 0
+	
+		#Space taken in convoy
+		lend_lease_cost = 5
+	
+		build_cost_ic = 14
+		resources = {
+			resources_cm = 2
+			resources_pm = 2
+			resources_hic = 1
+		}
+	
+		fuel_consumption = 3
+		supply_truck = no
+	}
+	
+	
+	helicopter_equipment_1 = {
+		year = 2019
+	
+		archetype = helicopter_equipment
+		priority = 40
+		visual_level = 0
+	
+	
+	
+	}
+	
+	helicopter_equipment_2 = {
+		year = 2019
+	
+		archetype = helicopter_equipment
+		priority = 40
+		visual_level = 1
+		parent = helicopter_equipment_1
+	
+	
+		defense = 20
+		breakthrough = 8
+		hardness = 0.12
+		armor_value = 3
+	
+		soft_attack = 6
+		hard_attack = 0.75
+	
+		ap_attack = 11
+		maximum_speed = 31
+	
+	
+		build_cost_ic = 15
+		resources = {
+			resources_cm = 2
+			resources_pm = 2
+			resources_ec = 1
+			resources_hic = 1
+		}
+	}
+	
+	helicopter_equipment_3 = {
+		year = 2019
+	
+		archetype = helicopter_equipment
+		priority = 40
+		visual_level = 2
+	
+		parent = helicopter_equipment_2
+	
+	
+		defense = 24
+		breakthrough = 10
+		hardness = 0.14
+		armor_value = 4
+	
+		soft_attack = 8
+		hard_attack = 4
+	
+		ap_attack = 33
+		maximum_speed = 34
+	
+	
+		build_cost_ic = 16.5
+		resources = {
+			resources_cm = 3
+			resources_pm = 2
+			resources_ec = 2
+			resources_hic = 1
+		}
+	}
+	
+	helicopter_equipment_4 = {
+		year = 2019
+	
+		archetype = helicopter_equipment
+		priority = 40
+		visual_level = 3
+		parent = helicopter_equipment_3
+		defense = 28
+		breakthrough = 12
+		hardness = 0.18
+		armor_value = 5
+	
+		soft_attack = 10
+		hard_attack = 5
+	
+		ap_attack = 40
+		maximum_speed = 37
+	
+	
+		build_cost_ic = 17
+		resources = {
+			resources_cm = 3
+			resources_pm = 3
+			resources_ec = 2
+			resources_hic = 1
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	attack_helicopter_equipment = {
+		year = 2019
+	
+		is_archetype = yes
+		picture = archetype_motorized_equipment
+		is_buildable = no
+		type = {
+			motorized
+		}
+	
+		upgrades = {
+			heil_armor_upgrade
+			heil_opaz_upgrade
+			heil_reliability_upgrade
+			heil_gun_upgrade
+			heil_engine_upgrade
+		}
+		group_by = archetype
+	
+		interface_category = interface_category_land
+	
+		#Misc Abilities
+		maximum_speed = 28
+		reliability = 0.8
+	
+		#Defensive Abilities
+		defense = 2
+		breakthrough = 1
+		hardness = 0.12
+		armor_value = 3
+	
+		#Offensive Abilities
+		soft_attack = 20
+		hard_attack = 16
+	
+		ap_attack = 60
+		air_attack = 0
+	
+		#Space taken in convoy
+		lend_lease_cost = 5
+	
+		build_cost_ic = 14
+		resources = {
+			resources_cm = 2
+			resources_pm = 2
+			resources_ec = 1
+			resources_hic = 1
+		}
+	
+		fuel_consumption = 3
+		supply_truck = no
+	}
+	
+	
+	attack_helicopter_equipment_1 = {
+		year = 2019
+	
+		archetype = attack_helicopter_equipment
+		priority = 40
+		visual_level = 0
+	
+	
+	}
+	
+	attack_helicopter_equipment_2 = {
+		year = 2019
+	
+		archetype = attack_helicopter_equipment
+		priority = 40
+		visual_level = 1
+		parent = attack_helicopter_equipment_1
+	
+	
+		#Defensive Abilities
+		defense = 3
+		breakthrough = 1.5
+		hardness = 0.15
+		armor_value = 4
+	
+		#Offensive Abilities
+		soft_attack = 28
+		hard_attack = 22
+	
+		ap_attack = 75
+		air_attack = 2
+	
+		#Space taken in convoy
+		lend_lease_cost = 5
+	
+		build_cost_ic = 15
+		resources = {
+			resources_cm = 2
+			resources_pm = 2
+			resources_ec = 2
+			resources_hic = 1
+		}
+	}
+	
+	attack_helicopter_equipment_3 = {
+		year = 2019
+	
+		archetype = attack_helicopter_equipment
+		priority = 40
+		visual_level = 2
+	
+		parent = attack_helicopter_equipment_2
+	
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.18
+		armor_value = 5
+	
+		#Offensive Abilities
+		soft_attack = 36
+		hard_attack = 28
+	
+		ap_attack = 90
+		air_attack = 8
+	
+		#Space taken in convoy
+		lend_lease_cost = 5
+	
+		build_cost_ic = 17
+		resources = {
+			resources_cm = 3
+			resources_pm = 2
+			resources_ec = 2
+			resources_hic = 1
+		}
+	}
+	
+	attack_helicopter_equipment_4 = {
+		year = 2019
+	
+		archetype = attack_helicopter_equipment
+		priority = 40
+		visual_level = 3
+		parent = attack_helicopter_equipment_3
+		#Defensive Abilities
+		defense = 5
+		breakthrough = 2.5
+		hardness = 0.21
+		armor_value = 6
+	
+		#Offensive Abilities
+		soft_attack = 44
+		hard_attack = 34
+	
+		ap_attack = 115
+		air_attack = 8
+	
+		#Space taken in convoy
+		lend_lease_cost = 5
+	
+		build_cost_ic = 18
+		resources = {
+			resources_cm = 3
+			resources_pm = 2
+			resources_ec = 2
+			resources_hic = 1
+		}
+	}
+}

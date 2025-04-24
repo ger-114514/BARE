@@ -1,0 +1,314 @@
+add_namespace = ARI_action
+
+country_event = { # 参与佣兵作战 成功
+    id = ARI_action.11
+    title = ARI_action.11.t
+    desc = ARI_action.11.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.11.a
+    }
+}
+
+country_event = { # 参与佣兵作战 大成功
+    id = ARI_action.12
+    title = ARI_action.12.t
+    desc = ARI_action.12.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.12.a
+    }
+}
+
+country_event = { # 谣言传播成功！
+    id = ARI_action.13
+    title = ARI_action.13.t
+    desc = ARI_action.13.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.13.a
+    }
+}
+
+country_event = { # 谣言传播失败！
+    id = ARI_action.14
+    title = ARI_action.14.t
+    desc = ARI_action.14.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.14.a
+    }
+}
+
+
+country_event = { # 暗处的流言
+    id = ARI_action.15
+    title = ARI_action.15.t
+    desc = ARI_action.15.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.15.a
+    }
+}
+
+country_event = { # 绑架计划成功！
+    id = ARI_action.16
+    title = ARI_action.16.t
+    desc = ARI_action.16.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.16.a
+    }
+}
+
+country_event = { # 绑架计划失败！
+    id = ARI_action.17
+    title = ARI_action.17.t
+    desc = ARI_action.17.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.17.a
+    }
+}
+
+country_event = { # 意料之外的失败
+    id = ARI_action.18
+    title = ARI_action.18.t
+    desc = ARI_action.18.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.18.a
+    }
+}
+
+country_event = { # 学生被绑架！
+    id = ARI_action.19
+    title = ARI_action.19.t
+    desc = ARI_action.19.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.19.a
+    }
+}
+
+country_event = { # 设施袭击成功！
+    id = ARI_action.20
+    title = ARI_action.20.t
+    desc = ARI_action.20.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.12.a
+    }
+}
+
+country_event = { # 设施袭击失败！
+    id = ARI_action.21
+    title = ARI_action.21.t
+    desc = ARI_action.21.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.21.a
+    }
+}
+
+country_event = { # 设施遇袭！
+    id = ARI_action.22
+    title = ARI_action.22.t
+    desc = ARI_action.22.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.22.a
+    }
+}
+
+country_event = { # 袭击阴谋被挫败！
+    id = ARI_action.23
+    title = ARI_action.23.t
+    desc = ARI_action.23.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.23.a
+    }
+}
+
+country_event = { # 另一次会面
+    id = ARI_action.24
+    title = ARI_action.24.t
+    desc = ARI_action.24.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.24.a
+    }
+}
+
+country_event = { # 师徒关系 
+    id = ARI_action.25
+    title = ARI_action.25.t
+    desc = ARI_action.25.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.25.a
+    }
+}
+
+country_event = { # 风纪委压制成功！
+    id = ARI_action.26
+    title = ARI_action.26.t
+    desc = ARI_action.26.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.26.a
+    }
+}
+
+country_event = { # 风纪委压制失败！
+    id = ARI_action.27
+    title = ARI_action.27.t
+    desc = ARI_action.27.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.27.a
+    }
+}
+
+country_event = { # 针对风纪委的袭击
+    id = ARI_action.28
+    title = ARI_action.28.t
+    desc = ARI_action.28.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.28.a
+    }
+}
+
+country_event = { # 假旗行动成功！
+    id = ARI_action.29
+    title = ARI_action.29.t
+    desc = ARI_action.29.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.29.a
+    }
+}
+
+country_event = { # 假旗行动部分成功
+    id = ARI_action.30
+    title = ARI_action.30.t
+    desc = ARI_action.30.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.30.a
+    }
+}
+
+country_event = { # 边境冲突！
+    id = ARI_action.31
+    title = ARI_action.31.t
+    desc = ARI_action.31.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.31.a
+    }
+}
+
+country_event = { # 小规模边境冲突增加
+    id = ARI_action.32
+    title = ARI_action.32.t
+    desc = ARI_action.32.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.32.a
+    }
+}
+
+country_event = { # 废墟的馈赠
+    id = ARI_action.33
+    title = ARI_action.33.t
+    desc = ARI_action.33.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.12.a
+    }
+}
+
+country_event = { # 废墟的新据点 
+    id = ARI_action.34
+    title = ARI_action.34.t
+    desc = ARI_action.34.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.34.a
+    }
+}
+
+country_event = { # 情报交流 
+    id = ARI_action.35
+    title = ARI_action.35.t
+    desc = ARI_action.35.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.35.a
+    }
+}
+
+country_event = { # 训练项目结束
+    id = ARI_action.36
+    title = ARI_action.36.t
+    desc = ARI_action.36.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_action.36.a
+    }
+}

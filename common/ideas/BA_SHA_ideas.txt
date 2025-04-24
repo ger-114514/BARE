@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+		SHA_ShanHaiJing = { #山海经
+			picture = unkown
+
+			modifier = {
+				stability_factor = 0.1 #稳定度
+				opinion_gain_monthly_factor = -0.2 #改善关系速度
+				surrender_limit = 0.1 #投降界限
+				research_speed_factor = -0.05 #科研速度
+				org_loss_at_low_org_factor = -0.1 #低组织度损失
+			}
+		}
+		SHA_YuanYuanLiuChangDeGuoQu = { #源远流长的过去
+			picture = unkown
+
+			modifier = {
+				production_speed_buildings_factor = 0.05 #建造速度
+				industrial_capacity_factory = 0.05 #工厂产出
+			}
+		}
+
+		SHA_GeWuPingShengDeXianZhuang = { #歌舞升平的现状
+			picture = unkown
+
+			modifier = {
+				custom_modifier_tooltip = SHA_GeWuPingShengDeXianZhuang_R
+			}
+		}
+
+		SHA_MiWuZhongDeWeiLai = { #迷雾之中的未来
+			picture = unkown
+
+			modifier = {
+				political_power_factor = -0.1 #政治点数加成%
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+state={
+	id=652
+	name="STATE_652"
+	provinces={
+		2243 4094 4113 5937 6395 7007 8098 12012 
+	}
+	resources={
+		resources_cm = 20 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=8400
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,189 @@
+#确定团结度等级和对应buff
+TRI_generate_unity_rank = {
+	if = {
+		limit = { check_variable = { TRI_unity < 20 } }
+		set_variable = { TRI_unity_rank = 0 }
+		set_variable = { TRI_unity_power_gain = -1 }
+		set_variable = { TRI_unity_command_power_gain_mult = -0.8 }
+		set_variable = { TRI_unity_max_command_power_mult = -0.9 }
+		set_variable = { TRI_unity_stability = -0.4 }
+		set_variable = { TRI_unity_army_core_factor = -0.4 }
+		set_variable = { TRI_unity_army_org_factor = -0.3 }
+		set_variable = { TRI_unity_army_org_regain = -0.4 }
+		set_variable = { TRI_unity_land_reinforce_rate = -0.04 }
+		set_variable = { TRI_unity_consumer_goods_factor = 0.35 }
+		set_variable = { TRI_unity_industrial_capacity_factory = -0.15 }
+	}
+	else_if = {
+		limit = { check_variable = { TRI_unity < 40 } }
+		set_variable = { TRI_unity_rank = 1 }
+		set_variable = { TRI_unity_power_gain = -0.6 }
+		set_variable = { TRI_unity_command_power_gain_mult = -0.6 }
+		set_variable = { TRI_unity_max_command_power_mult = -0.7 }
+		set_variable = { TRI_unity_stability = -0.15 }
+		set_variable = { TRI_unity_army_core_factor = -0.15 }
+		set_variable = { TRI_unity_army_org_factor = -0.1 }
+		set_variable = { TRI_unity_army_org_regain = -0.2 }
+		set_variable = { TRI_unity_land_reinforce_rate = -0.02 }
+		set_variable = { TRI_unity_consumer_goods_factor = 0.2 }
+		set_variable = { TRI_unity_industrial_capacity_factory = -0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { TRI_unity < 60 } }
+		set_variable = { TRI_unity_rank = 2 }
+		set_variable = { TRI_unity_power_gain = -0.25 }
+		set_variable = { TRI_unity_command_power_gain_mult = -0.1 }
+		set_variable = { TRI_unity_max_command_power_mult = -0.2 }
+		set_variable = { TRI_unity_stability = 0 }
+		set_variable = { TRI_unity_army_core_factor = 0 }
+		set_variable = { TRI_unity_army_org_factor = 0 }
+		set_variable = { TRI_unity_army_org_regain = 0 }
+		set_variable = { TRI_unity_land_reinforce_rate = 0 }
+		set_variable = { TRI_unity_consumer_goods_factor = 0.1 }
+		set_variable = { TRI_unity_industrial_capacity_factory = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { TRI_unity < 80 } }
+		set_variable = { TRI_unity_rank = 3 }
+		set_variable = { TRI_unity_power_gain = 0.5 }
+		set_variable = { TRI_unity_command_power_gain_mult = 0.3 }
+		set_variable = { TRI_unity_max_command_power_mult = 0.4 }
+		set_variable = { TRI_unity_stability = 0.1 }
+		set_variable = { TRI_unity_army_core_factor = 0.1 }
+		set_variable = { TRI_unity_army_org_factor = 0.1 }
+		set_variable = { TRI_unity_army_org_regain = 0 }
+		set_variable = { TRI_unity_land_reinforce_rate = 0.02 }
+		set_variable = { TRI_unity_consumer_goods_factor = 0 }
+		set_variable = { TRI_unity_industrial_capacity_factory = 0.05 }
+	}
+	else = {
+		set_variable = { TRI_unity_rank = 4 }
+		set_variable = { TRI_unity_power_gain = 0.8 }
+		set_variable = { TRI_unity_command_power_gain_mult = 0.6 }
+		set_variable = { TRI_unity_max_command_power_mult = 0.75 }
+		set_variable = { TRI_unity_stability = 0.25 }
+		set_variable = { TRI_unity_army_core_factor = 0.25 }
+		set_variable = { TRI_unity_army_org_factor = 0.2 }
+		set_variable = { TRI_unity_army_org_regain = 0.3 }
+		set_variable = { TRI_unity_land_reinforce_rate = 0.03 }
+		set_variable = { TRI_unity_consumer_goods_factor = -0.15 }
+		set_variable = { TRI_unity_industrial_capacity_factory = 0.1 }
+	}
+	#【烽烟骤起】国策效果
+	if = {
+		limit = {
+			has_completed_focus = TRI_unexpected_accident
+			check_variable = { TRI_parliament_teaparty_approval_rating > 0.5 }
+			check_variable = { TRI_parliament_other_approval_rating > 0.5 }
+			check_variable = { TRI_unity_stability > 0 }
+		}
+		set_temp_variable = { support_seats_factor = 200 }
+		subtract_from_temp_variable = { support_seats_factor = position_support@BA_TRI_senate_seat }
+		subtract_from_temp_variable = { support_seats_factor = position_support@BA_TRI_house_seat }
+		divide_temp_variable = { support_seats_factor = 200 }
+		multiply_variable = { TRI_unity_stability = support_seats_factor }
+	}
+}
+#自定义团结度增长
+TRI_change_unity = {
+	if = { #需要没有锁定团结度变化
+		limit = { NOT = { has_country_flag = TRI_unity_unchangeable } }
+		add_to_variable = { TRI_unity = TRI_unity_change }
+		custom_effect_tooltip = TRI_unity_change
+		clamp_variable = {
+			var = TRI_unity
+			min = 0
+			max = 100
+		}
+		TRI_generate_unity_rank = yes
+	}
+	else = {
+		custom_effect_tooltip = TRI_unity_unchangeable_tt
+	}
+}
+#团结度加减10/5
+TRI_unity_increase_10 = {
+	set_temp_variable = { TRI_unity_change = 10 }
+	TRI_change_unity = yes
+}
+TRI_unity_decrease_10 = {
+	set_temp_variable = { TRI_unity_change = -10 }
+	TRI_change_unity = yes
+}
+TRI_unity_increase_5 = {
+	set_temp_variable = { TRI_unity_change = 5 }
+	TRI_change_unity = yes
+}
+TRI_unity_decrease_5 = {
+	set_temp_variable = { TRI_unity_change = -5 }
+	TRI_change_unity = yes
+}
+#计算每周团结度变化量
+TRI_generate_unity_modifier = {
+	set_variable = { TRI_unity_weekly_modifier = 0 }
+	for_each_loop = {
+		array = TRI_parliament_association
+		value = association
+		index = i
+
+		set_temp_variable = { unity_modifier_factor = 0 }
+		if = {
+			limit = { check_variable = { loyalty@var:association < 0.9 } }
+			#支持度小于25%
+			if = {
+				limit = { check_variable = { loyalty@var:association < 0.75 } }
+				set_temp_variable = { unity_modifier = -1 }
+			}
+			#支持度小于50%
+			else = {
+				set_temp_variable = { unity_modifier = -0.5 }
+			}
+			#激进度影响
+			add_to_temp_variable = { unity_modifier_factor = radicalism@var:association }
+		}
+		else = {
+			#大于125%
+			if = {
+				limit = { check_variable = { loyalty@var:association > 1.25 } }
+				set_temp_variable = { unity_modifier = 0.8 }
+			}
+			#大于110%
+			else_if = {
+				limit = { check_variable = { loyalty@var:association > 1.1 } }
+			}
+			else = {
+				set_temp_variable = { unity_modifier = 0.3 }
+			}
+			#激进度影响
+			subtract_from_temp_variable = { unity_modifier_factor = radicalism@var:association }
+		}
+		divide_temp_variable = { unity_modifier_factor = 2 }
+		add_to_temp_variable = { unity_modifier_factor = 1 }
+		multiply_temp_variable = { unity_modifier = unity_modifier_factor }
+		#负面影响修正
+		if = {
+			limit = { check_variable = { unity_modifier < 0 } }
+			multiply_temp_variable = { unity_modifier = negative_modifier@var:association }
+		}
+		#正面影响修正
+		else = {
+			multiply_temp_variable = { unity_modifier = positive_modifier@var:association }
+		}
+		add_to_variable = { TRI_unity_weekly_modifier = unity_modifier }
+	}
+	add_to_variable = { TRI_unity_weekly_modifier = TRI_other_unity_modifiers }
+	#鸽派主导的修正
+	if = {
+		limit = { has_idea = TRI_main_faction_BOP_moderate_3 }
+		add_to_variable = { TRI_unity_weekly_modifier = 7 }
+	}
+	else_if = {
+		limit = { has_idea = TRI_main_faction_BOP_moderate_2 }
+		add_to_variable = { TRI_unity_weekly_modifier = 4.2 }
+	}
+	else_if = {
+		limit = { has_idea = TRI_main_faction_BOP_moderate_1 }
+		add_to_variable = { TRI_unity_weekly_modifier = 2.8 }
+	}
+	round_variable = TRI_unity_weekly_modifier
+}

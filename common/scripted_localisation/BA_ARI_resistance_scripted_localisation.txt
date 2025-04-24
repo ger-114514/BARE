@@ -1,0 +1,290 @@
+ARI_get_concealment_from_infl_rank = {
+	name = ARI_get_concealment_from_infl_rank
+	text = {
+		trigger = {
+			check_variable = { ARI_concealment_from_infl_rank < 0 }
+		}
+		localization_key = ARI_get_concealment_from_infl_rank
+	}
+}
+
+
+ARI_get_concealment_rank = {
+	name = ARI_get_concealment_rank
+	text = {
+		trigger = {
+			check_variable = { ARI_concealment_rank = 1 }
+		}
+		localization_key = ARI_concealment_rank_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { ARI_concealment_rank = 2 }
+	}
+		localization_key = ARI_concealment_rank_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { ARI_concealment_rank = 3 }
+		}
+		localization_key = ARI_concealment_rank_3
+	}
+}
+ARI_get_concealment_rank_tt = {
+	name = ARI_get_concealment_rank_tt
+	text = {
+		trigger = { 
+			check_variable = { ARI_concealment_rank = 1 }
+		}
+		localization_key = ARI_concealment_rank_tt_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { ARI_concealment_rank = 2 }
+		}
+		localization_key = ARI_concealment_rank_tt_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { ARI_concealment_rank = 3 }
+		}
+		localization_key = ARI_concealment_rank_tt_3
+	}
+}
+ARI_get_concealment_consensus = {
+	name = ARI_get_concealment_consensus
+	text = {
+		trigger = {
+			check_variable = { ARI_concealment_from_consensus > 0 }
+		}
+		localization_key = ARI_concealment_consensus
+	}
+}
+ARI_get_state_window_button = {
+	name = ARI_get_state_window_button
+	text = {
+		trigger = { check_variable = { i = 0 } }
+		localization_key = ARI_state_info_button
+	}
+	text = {
+		trigger = { check_variable = { i = 1 } }
+		localization_key = ARI_state_influence_button
+	}
+	text = {
+		trigger = { check_variable = { i = 2 } }
+		localization_key = ARI_state_modifier_button
+	}
+}
+ARI_get_state_window_selected_tab = {
+	name = ARI_get_state_window_selected_tab
+	text = {
+		trigger = { check_variable = { tab_id = 0 } }
+		localization_key = ARI_state_info_tab
+	}
+	text = {
+		trigger = { check_variable = { tab_id = 1 } }
+		localization_key = ARI_state_influence_tab
+	}
+	text = {
+		trigger = { check_variable = { tab_id = 2 } }
+		localization_key = ARI_state_modifier_tab
+	}
+}
+ARI_get_selected_state_influence_rank_title = {
+	name = ARI_get_selected_state_influence_rank_title
+	
+	text = {
+		trigger = { NOT = { has_country_flag = ARI_player_B } }
+		localization_key = ALR_resistance_selected_state_influence_rank_title_R
+	}
+}
+ARI_get_selected_state_influence_rank = {
+	name = ARI_get_selected_state_influence_rank
+	text = {
+		trigger = { var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 1 } } }
+		localization_key = ARI_state_influence_rank_1
+	}
+	text = {
+		trigger = { var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 2 } } }
+		localization_key = ARI_state_influence_rank_2
+	}
+	text = {
+		trigger = { var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 3 } } }
+		localization_key = ARI_state_influence_rank_3
+	}
+}
+ARI_get_selected_state_influence_rank_tt = {
+	name = ARI_get_selected_state_influence_rank_tt
+	text = {
+		trigger = {
+			var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 1 } }
+		}
+		localization_key = ALR_resistance_selected_state_influence_rank_1
+	}
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 2 } }
+		}
+		localization_key = ALR_resistance_selected_state_influence_rank_2
+	}
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 3 } }
+		}
+		localization_key = ALR_resistance_selected_state_influence_rank_3
+	}
+}
+ARI_get_base_influence = {
+	name = ARI_get_base_influence
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { has_state_flag = ALR_resistance_base } 
+		}
+		localization_key = ARI_get_base_influence
+	}
+}
+
+
+ARI_get_state_modifier_name = {
+	name = ARI_get_state_modifier_name
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 0 }
+		}
+		localization_key = ARI_state_modifier_name_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 1 }
+		}
+		localization_key = ARI_state_modifier_name_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 2 }
+		}
+		localization_key = ARI_state_modifier_name_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 3 }
+		}
+		localization_key = ARI_state_modifier_name_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 4 }
+		}
+		localization_key = ARI_state_modifier_name_4
+	}
+}
+ARI_get_state_modifier_effects = {
+	name = ARI_get_state_modifier_effects
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 0 } 
+		}
+		localization_key = ARI_state_modifier_effects_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 1 }
+		}
+		localization_key = ARI_state_modifier_effects_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 2 } 
+		}
+		localization_key = ARI_state_modifier_effects_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 3 } 
+		}
+		localization_key = ARI_state_modifier_effects_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { modifier_id = 4 } 
+		}
+		localization_key = ARI_state_modifier_effects_4
+	}
+}
+ARI_get_concealment_consensus_modifier = {
+	name = ARI_get_concealment_consensus_modifier
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 1 } } 
+			has_country_flag = ARI_concealment_consensus
+		}
+		localization_key = ARI_concealment_consensus_modifier_1
+	}
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 2 } } 
+			has_country_flag = ARI_concealment_consensus
+		}
+		localization_key = ARI_concealment_consensus_modifier_2
+	}
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 3 } } 
+			has_country_flag = ARI_concealment_consensus
+		}
+		localization_key = ARI_concealment_consensus_modifier_3
+	}
+}
+ARI_get_cognitive_bias_modifier = {
+	name = ARI_get_cognitive_bias_modifier
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { 
+				check_variable = { ARI_state_influence_rank = 1 }
+				has_state_flag = ARI_cognitive_bias
+			} 
+		}
+		localization_key = ARI_cognitive_bias_modifier_1
+	}
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { 
+				check_variable = { ARI_state_influence_rank = 2 }
+				has_state_flag = ARI_cognitive_bias
+			} 
+		}
+		localization_key = ARI_cognitive_bias_modifier_2
+	}
+	text = {
+		trigger = { 
+			var:ARI_map_selected_state = { 
+				check_variable = { ARI_state_influence_rank = 3 }
+				has_state_flag = ARI_cognitive_bias
+			} 
+		}
+		localization_key = ARI_cognitive_bias_modifier_3
+	}
+}
+ALR_get_state_interaction = {
+	name = ALR_get_state_interaction
+	text = {
+		trigger = {
+			var:state_id = {
+				check_variable = { ROOT.ALR_base_level < ALR_state_interaction_available_rank }
+			}
+		}
+		localization_key = ALR_state_interaction_unavailable
+	}
+	text = {
+		localization_key = ARI_select_state_tt
+	}
+}
+ALR_get_focus_locked = {
+	name = ALR_get_focus_locked
+	text = {
+		trigger = {
+			check_variable = { unlocked@var:focus = 1 }
+		}
+		localization_key = ALR_focus_locked_tt
+	}
+}

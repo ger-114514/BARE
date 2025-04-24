@@ -1,0 +1,53 @@
+
+scripted_gui = {
+	BARE_SuperEvent_1_SG = {
+		context_type = player_context
+		window_name = "BARE_SuperEvent_1"
+
+		triggers = {
+			
+		}
+		visible = {
+			is_ai = no
+			has_variable =  BARE_SuperEvent_1_var
+		}
+
+		properties = {
+			
+		}
+
+		properties = {
+			BARE_SuperEvent_1_Photo = { image = "[BARE_SuperEvent_1_GetSuperEventImage]" }
+		}
+		effects = {
+			BARE_SuperEvent_1_Close_click = {
+				clear_variable = BARE_SuperEvent_1_var
+			}
+		}
+
+
+	}
+
+	BARE_SuperEvent_2_SG = {
+		context_type = player_context
+		window_name = "BARE_SuperEvent_2"
+
+		visible = {
+			is_ai = no
+			has_variable =  BARE_SuperEvent_2_var
+		}
+		
+		properties = {
+			BARE_SuperEvent_2_image = { image = "[BARE_SuperEvent_2_GetSuperEventImage]" }
+		}
+		
+		effects = {
+			close_button_click = {
+				clear_variable = BARE_SuperEvent_2_var
+				clear_variable = random_hour 
+				clear_variable = random_minite
+			}
+		}
+
+	}
+}	

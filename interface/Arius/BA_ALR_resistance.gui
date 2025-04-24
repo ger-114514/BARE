@@ -1,0 +1,182 @@
+# guiTypes = {
+# 	##地区抵抗gui
+# 	containerWindowType = {
+# 		name = "ALR_resistance_window"
+# 		size = { width = 500 height = 360 }
+# 		instantTextBoxType = {
+# 			name = "ALR_resistance_title"
+# 			position = { x = 0 y = -10 }
+# 			maxWidth = 500
+# 			maxHeight = 30
+# 			format = center
+# 			font = "hoi_24header"
+# 			text = ALR_resistance_title
+# 		}
+# 		##地图界面
+# 		containerWindowType = {
+# 			name = "ALR_resistance_map_main"
+# 			size = { width = 400 height = 200 }
+# 			position = { x = 50 y = 20 }
+# 			gridboxtype = {
+# 				name = "ALR_states"
+# 				position = { x = 0 y = 0 }
+# 			}
+			
+# 			iconType = {
+# 				name = "ALR_resistance_state_bg"
+# 				position = { x = 0 y = 0 }
+# 				spriteType = "ARI_resistance_state_bg"
+# 				alwaystransparent = yes
+# 			}
+# 		}
+# 		containerWindowType = {
+# 			name = "ALR_resistance_state_info"
+# 			size = { width = 500 height = 200 }
+# 			position = { x = 0 y = 200 }
+# 			instantTextBoxType = {
+# 				name = "ALR_resistance_state_name"
+# 				position = { x = 0 y = 5 }
+# 				maxWidth = 490
+# 				maxHeight = 24
+# 				format = center
+# 				font = "hoi_24header"
+# 				text = "ARI_suppression_state_name"
+# 			}
+# 			instantTextBoxType = {
+# 				name = "ALR_state_influence"
+# 				position = { x = 100 y = 25 }
+# 				maxWidth = 300
+# 				maxHeight = 20
+# 				format = center
+# 				font = "hoi_20b"
+# 				text = "ALR_state_influence_text"
+# 			}
+# 			iconType = {
+# 				name = "ALR_state_influence_bar"
+# 				position = { x = 95 y = 45 }
+# 				spriteType = "ALR_state_influence_bar"
+# 			}
+# 			iconType = {
+# 				name = "ALR_state_max_influence_rank_bar"
+# 				position = { x = 95 y = 75 }
+# 			 	spriteType = "ALR_state_max_influence_rank_bar"
+# 			}
+# 			iconType = {
+# 			 	name = "ALR_state_influence_rank_bar"
+# 			 	position = { x = 95 y = 75 }
+# 			 	spriteType = "ALR_state_influence_rank_bar"
+# 			}
+# 			instantTextBoxType = {
+# 				name = "ALR_state_max_influence_rank"
+# 				position = { x = 100 y = 100 }
+# 				maxWidth = 300
+# 				maxHeight = 20
+# 				format = center
+# 				font = "hoi_20b"
+# 				text = "ALR_state_max_influence_rank_text"
+# 			}
+# 		}
+
+# 	}
+# 	containerWindowType = {
+# 		name = "ALR_state_button_container"
+# 		position = { x = 0 y = 0 }
+# 		buttonType = {
+# 			name = "ALR_state_button"
+# 			spriteType = "ARI_resistance_state_136"
+# 			position = { x = 0 y = 0 }
+# 			pdx_tooltip = ALR_state_button_tt
+# 		}
+# 	}
+
+# 	##基地建设gui
+# 	containerWindowType = {
+# 		name = "ALR_base_construction_window"
+# 		size = { width = 500 height = 400 }
+		
+# 		##TODO:基地界面
+# 		containerWindowType = {
+# 			name = "ALR_base_illustration_main"
+# 			size = { width = 400 height = 200 }
+# 			position = { x = 50 y = 20 }
+# 			gridboxtype = {
+# 				name = "ALR_base_illustration_parts"
+# 				position = { x = 0 y = 0 }
+# 			}
+			
+# 		}
+# 		instantTextBoxType = {
+# 			name = "ALR_base_level"
+# 			position = { x = 0 y = 205 }
+# 			maxWidth = 500
+# 			maxHeight = 20
+# 			format = center
+# 			font = "hoi_20b"
+# 			text = ALR_base_level_text
+# 		}
+# 		iconType = {
+# 			name = "ALR_base_supply_bar"
+# 			position = { x = 75 y = 230 }
+# 			spriteType = "BA_ALR_base_resource_bar"
+# 			pdx_tooltip = "ALR_base_supply_tt"
+# 		}
+# 		instantTextBoxType = {
+# 			name = "ALR_base_supply"
+# 			position = { x = 75 y = 260 }
+# 			maxWidth = 150
+# 			maxHeight = 40
+# 			format = center
+# 			font = "hoi_20b"
+# 			text = "ALR_base_supply_text"
+# 			pdx_tooltip = "ALR_base_supply_tt"
+# 		}
+# 		iconType = {
+# 			name = "ALR_base_weapon_bar"
+# 			position = { x = 275 y = 230 }
+# 			spriteType = "BA_ALR_base_resource_bar"
+# 			text = "ALR_base_weapon_text"
+# 			pdx_tooltip = "ALR_base_weapon_tt"
+# 		}
+# 		instantTextBoxType = {
+# 			name = "ALR_base_weapon"
+# 			position = { x = 275 y = 260 }
+# 			maxWidth = 150
+# 			maxHeight = 40
+# 			format = center
+# 			font = "hoi_20b"
+# 			text = "ALR_base_weapon_text"
+# 			pdx_tooltip = "ALR_base_weapon_tt"
+# 		}
+# 		gridboxtype = {
+# 			name = "ALR_focuses"
+# 			position = { x = 105 y = 300 }
+# 			slotsize = { width = 50 height = 40 }
+# 			add_horizontal = yes
+# 		}
+# 		instantTextBoxType = {
+# 			name = "ALR_focus"
+# 			position = { x = 0 y = 350 }
+# 			maxWidth = 500
+# 			maxHeight = 30
+# 			format = center
+# 			font = "hoi_20b"
+# 			text = ALR_focus_text
+# 		}
+# 	}
+# 	containerWindowType = {
+# 		name = "ALR_focuses_button_container"
+# 		position = { x = 0 y = 0 }
+# 		iconType = {
+# 			name = "ALR_focuses_icon"
+# 			spriteType = "BA_ALR_focus_seek_supply_icon"
+# 			position = { x = 0 y = 0 }
+# 		}
+# 		buttonType = {
+# 			name = "ALR_focuses_button"
+# 			spriteType = "BA_ARI_button_with_check"
+# 			position = { x = 0 y = 0 }
+# 			pdx_tooltip = ALR_focuses_button_tt
+# 		}
+# 	}
+
+# }

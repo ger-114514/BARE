@@ -1,0 +1,65 @@
+spriteTypes = {	
+    spriteType = {
+        name = "TRI_paranoia_icon"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_icon.png"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_paranoia_meter"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_meter.dds"
+        noOfFrames = 21
+    }
+    spriteType = {
+        name = "TRI_paranoia_needle"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_needle.dds"
+        noOfFrames = 21
+    }
+    spriteType = {
+        name = "TRI_paranoia_bg"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_bg.png"
+    }
+    spriteType = {
+        name = "TRI_paranoia_nagisa"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_nagisa.png"
+        noOfFrames = 3
+    }
+    spriteType = {
+        name = "TRI_paranoia_nagisa_handwrite_1"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_nagisa_handwrite_1.png"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_paranoia_nagisa_handwrite_2"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_nagisa_handwrite_2.png"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_paranoia_nagisa_handwrite_3"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_nagisa_handwrite_3.png"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_paranoia_association_button_crack"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_association_crack.png"
+    }
+    spriteType = {
+        name = "TRI_paranoia_association_button_0"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_association_0.png"
+    }
+    spriteType = {
+        name = "TRI_paranoia_association_button_1"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_association_1.png"
+    }
+    spriteType = {
+        name = "TRI_paranoia_association_button_2"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_association_2.png"
+    }
+    spriteType = {
+        name = "TRI_paranoia_association_button_3"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_association_3.png"
+    }
+    spriteType = {
+        name = "TRI_paranoia_association_button_4"
+        texturefile = "gfx/interface/Trinity/TRI_paranoia/TRI_paranoia_association_4.png"
+    }
+}

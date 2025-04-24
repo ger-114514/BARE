@@ -1,0 +1,75 @@
+﻿l_simp_chinese: 
+#超事件1
+#  step1: "准备好超事件图片，放在gfx/interface/SuperEvent/SuperEvent_1/SuperEventPictures，注册为“GFX_BARE_SuperEvent_1_(名称大写)”。"
+#  step2: "在common/ideas/BAR_Super_Events.txt中写进4个新的空白hidden_idea，“BARE_SuperEvent_1_(名称大写，超事件标题)”、“BARE_SuperEvent_1_(名称大写，超事件名言)_QT”、“BARE_SuperEvent_1_(名称大写，超事件名言作者)_QN”、“BARE_SuperEvent_1_(名称大写,超事件说明)_T，“BARE_SuperEvent_1_(名称大写，超事件图片名称)_PT:BARE_SuperEvent_1_（名称大写，超事件章节名称）_NT，BARE_SuperEvent_1_（名称大写，超事件导读）_IT””并在本文件本地化。"
+
+
+# BARE_SuperEvent_1_Introduction_Text: "§b本章导读§!"
+# BARE_SuperEvent_1_No_Text: "§b第三章§!"
+# BARE_SuperEvent_1_Title_Text: "§b第二次伊甸条约的签订§!"
+
+# BARE_SuperEvent_1_Quotes_Text: "§r“这是属于我们的，学园与青春的故事！§!”"
+# BARE_SuperEvent_1_Quotes_Name_Text: "§r“——阿慈宫日富美，在古圣堂废墟的演讲”§!"
+
+# BARE_SuperEvent_1_Text: "§b在一系列难以置信的变故后，圣三一和格黑娜这一原先的仇敌在仇恨带来的废墟上结成了同盟，如今，她们抛开了以往分歧，共同对抗阿里乌斯这一扭曲的仇恨带来的怪物。§!"
+# BARE_SuperEvent_1_Photo_Text: "§T3.1 补习授业部在废墟上演讲§!"
+
+
+
+BARE_SuperEvent_1_SECOND_EDEN_TREATY: "§b第二次伊甸条约的签订§"
+BARE_SuperEvent_1_SECOND_EDEN_TREATY_QT: "§r“这是属于我们的，学园与青春的故事！§!”"
+BARE_SuperEvent_1_SECOND_EDEN_TREATY_QN: "§r“——阿慈宫日富美，在古圣堂废墟的演讲”§!"
+BARE_SuperEvent_1_SECOND_EDEN_TREATY_T: "§b在一系列难以置信的变故后，圣三一和格黑娜这一原先的仇敌在仇恨带来的废墟上结成了同盟，如今，她们抛开了以往分歧，共同对抗阿里乌斯这一扭曲的仇恨带来的怪物。§!"
+BARE_SuperEvent_1_SECOND_EDEN_TREATY_PT: "§T3.1 补习授业部在废墟上演讲§!"
+
+BARE_SuperEvent_1_SECOND_EDEN_TREATY_IT: "§b本章导读§!"
+BARE_SuperEvent_1_SECOND_EDEN_TREATY_NT: "§b第3章§!"
+
+
+
+
+#超事件2
+
+
+#  step1: "准备好超事件图片，放在gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures，注册为“GFX_BARE_SuperEvent_2_(名称大写)”。"
+#  step2: "在common/ideas/BAR_Super_Events.txt中写进4个新的空白hidden_idea，“BARE_SuperEvent_2_(名称大写，超事件标题)”、“BARE_SuperEvent_2_(名称大写，超事件地点)_A”、“BARE_SuperEvent_2_(名称大写，超时间名言)_D”、“BARE_SuperEvent_2_(名称大写,超事件评论)_M，“””并在本文件本地化。"
+#  step3: "使用时，set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_(名称大写) }，再BAR_fire_super_event = yes。"
+
+
+
+
+
+
+BARE_SuperEvent_2_SuperEventTime: "[?BARE_SuperEvent_2_random_hour]:[?BARE_SuperEvent_2_random_minite]"
+
+
+ BARE_SuperEvent_2_EDEN_TREATY_NORMAL: "伊甸条约签署"
+ BARE_SuperEvent_2_EDEN_TREATY_NORMAL_A: "伊甸会场"
+ BARE_SuperEvent_2_EDEN_TREATY_NORMAL_D: "在漫长的商讨后，圣三一与格黑娜之间的争端暂告段落"
+ BARE_SuperEvent_2_EDEN_TREATY_NORMAL_M: "我们要适应时代的变化，坚持不变的原则。 —— 吉米·卡特"
+ 
+ BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME: "伊甸条约签署"
+ BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME_A: "圣三一会场"
+ BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME_D: "在漫长的商讨后，圣三一与格黑娜之间的争端暂告段落"
+ BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME_M: "这是我们这个时代的和平。 —— 桐藤渚"
+ 
+ BARE_SuperEvent_2_DOUBLE_TWELVE_COUP: "联邦学生会长交接"
+ BARE_SuperEvent_2_DOUBLE_TWELVE_COUP_A: "联邦学生大楼"
+ BARE_SuperEvent_2_DOUBLE_TWELVE_COUP_D: "联邦学生会长代理七神凛卸任，不知火花耶防卫科长将接任"
+ BARE_SuperEvent_2_DOUBLE_TWELVE_COUP_M: "所以，她是谁？ ——SuperBell"
+ 
+ BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR: "和平！赤冬！布丁！"
+ BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR_A: "赤冬联邦"
+ BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR_D: "以劳工部为首的赤反对派喊出了反抗学生会的口号，赤冬或发生内战？！"
+ BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR_M: "布丁超出食用期限请勿食用！ —— 救护骑士团宣"
+ 
+ BARE_SuperEvent_2_CAESAR_COUP_FAILED: "凯撒的政变计划被挫败！"
+ BARE_SuperEvent_2_CAESAR_COUP_FAILED_A: "夏莱大楼"
+ BARE_SuperEvent_2_CAESAR_COUP_FAILED_D: "尽管一度控制了D.U特区，在夏莱和瓦尔基里的干预下，政变最终以失败告终"
+ BARE_SuperEvent_2_CAESAR_COUP_FAILED_M: "联邦学生会会很尴尬的。 —— ShotStar417"
+
+
+ BARE_SuperEvent_2_MIKA_COUP_ARI: "圣三一政变未遂"
+ BARE_SuperEvent_2_MIKA_COUP_ARI_A: "政变影像回放"
+ BARE_SuperEvent_2_MIKA_COUP_ARI_D: "茶会成员圣园未花伙同阿里乌斯发动政变，但政变宣告失败。"
+ BARE_SuperEvent_2_MIKA_COUP_ARI_M: "阿里乌斯？那是什么？ —— 一般路过圣三一学生"

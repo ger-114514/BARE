@@ -1,0 +1,75 @@
+GEH_bp_between_chaos_and_order = {
+	initial_value = 0.3 #初始位置
+	left_side = GEH_bp_order #左侧名称
+	right_side = GEH_bp_chaos #右侧名称
+	decision_category = GEH_bpp_decision_category #下面决议的大类别，决议和普通决议一样
+	range = { #中间点范围
+		id = GEH_bp_mid
+		min = -0.2
+		max = 0.2
+		modifier = {
+			#power_balance_weekly = 0.01
+			power_balance_weekly = 0.0025
+		}
+	}
+	side = { #秩序（左）
+		id = GEH_bp_order
+		icon = GEH_bp_order_pic
+		range = {
+			id = GEH_bp_completely_order
+			min = -1
+			max = -0.6
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				power_balance_weekly = 0.01
+				consumer_goods_factor = -0.05
+				custom_modifier_tooltip = GEH_bp_goodevents_2
+			}
+		}
+
+		range = {
+			id = GEH_bp_someways_order
+			min = -0.6
+			max = -0.2
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				power_balance_weekly = 0.005
+				custom_modifier_tooltip = GEH_bp_goodevents_1
+			}
+		}
+	}
+	side = { #混乱（右）
+		id = GEH_bp_chaos
+		icon = GEH_bp_chaos_pic
+		range = {
+			id = GEH_bp_someways_chaos
+			min = 0.2
+			max = 0.6
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				power_balance_weekly = -0.005
+				custom_modifier_tooltip = GEH_bp_badevents_1
+			}
+		}
+
+		range = {
+			id = GEH_bp_completely_chaos
+			min = 0.6
+			max = 1
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				power_balance_weekly = -0.01
+				consumer_goods_factor = 0.05
+				custom_modifier_tooltip = GEH_bp_badevents_2
+			}
+		}
+	}
+}

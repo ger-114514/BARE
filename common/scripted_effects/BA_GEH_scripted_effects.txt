@@ -1,0 +1,23 @@
+#消除部队混乱buff
+GEH_degrade_debuff_of_troop = {
+	if = {
+		limit = { has_idea = GEH_army_in_chaos }
+		remove_ideas = GEH_army_in_chaos
+	}
+
+	if = {
+		limit = { has_idea = GEH_army_in_chaos_2 }
+		swap_ideas = {
+			remove_idea = GEH_army_in_chaos_2 
+			add_idea = GEH_army_in_chaos
+		}
+	}
+
+	if = {
+		limit = { has_idea = GEH_army_in_chaos_3 }
+		swap_ideas = {
+			remove_idea = GEH_army_in_chaos_3 
+			add_idea = GEH_army_in_chaos_2
+		}
+	}
+}

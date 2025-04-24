@@ -1,0 +1,97 @@
+TRI_unity_system = {
+	#每周团结度变化
+	TRI_unity_weekly_change = {
+		priority = 1000
+		is_good = no
+		available = { always = no }
+		activation = {
+			has_variable = TRI_unity_weekly_modifier
+			has_variable = TRI_parliament_focus
+			hidden_trigger = {
+				is_in_array = {
+					array = TRI_passed_bills
+					value = token:TRI_Bill_of_disclosure
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = { has_variable = TRI_unity_weekly_modifier }
+				NOT = { has_variable = TRI_parliament_focus }
+			}
+		}
+		timeout_effect = {
+			TRI_generate_unity_modifier = yes
+			set_temp_variable = { TRI_unity_change = TRI_unity_weekly_modifier }
+			TRI_change_unity = yes
+			activate_mission = TRI_unity_weekly_change
+		}
+		days_mission_timeout = 7
+	}
+	#组织抵抗运动
+	TRI_resistance_movement = {
+		visible = {
+			has_country_flag = TRI_association_autonomy
+		}
+		available = {
+			any_owned_state = {
+				NOT = {
+					is_controlled_by = TRI
+				}
+			}
+			command_power > 9.9
+			has_equipment = { infantry_equipment > 699 }
+			has_equipment = { light_fire_support_equipment > 99 }
+		}
+		cost = 50
+		days_remove = 180
+		modifier = {
+			compliance_growth_on_our_occupied_states = -0.25
+			resistance_growth_on_our_occupied_states = 1
+		}
+		complete_effect = {
+			TRI_unity_increase_5 = yes
+			add_command_power = -10
+			#相当于1支7步3炮部队的装备
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -700
+			}
+			add_equipment_to_stockpile = {
+				type = light_fire_support_equipment
+				amount = -108
+			}
+		}
+	}
+	#征用社团物资
+	TRI_raise_association = {
+		visible = {
+			has_country_flag = TRI_association_autonomy
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "10"
+				}
+				check_variable = { TRI_unity > 9.9 }
+			}
+			command_power > 14.9
+		}
+		cost = 25
+		complete_effect = {
+			TRI_unity_decrease_10 = yes
+			add_command_power = -15
+			#获取相当于2支5步1炮规模的战备和装备。
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = light_fire_support_equipment
+				amount = 72
+			}
+			add_manpower = 1160
+		}
+	}
+}

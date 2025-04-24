@@ -1,0 +1,78 @@
+
+
+#超事件2
+BARE_SuperEvent_2_fire_super_event = {
+	hidden_effect = {
+		set_variable_to_random = {
+			var = BARE_SuperEvent_2_random_hour
+			min = 8
+			max = 23
+			integer = yes
+		}
+		set_variable_to_random = {
+			var = BARE_SuperEvent_2_random_minite
+			min = 10
+			max = 59
+			integer = yes
+		}
+		log = "BARE_SuperEvent_2_temp_var [?BARE_SuperEvent_2_temp_var]"
+		set_variable = { BARE_SuperEvent_2_var = BARE_SuperEvent_2_temp_var }
+	}
+}
+
+
+BARE_SuperEvent_1_effect_1 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_1_temp_var = token:BARE_SuperEvent_1_SECOND_EDEN_TREATY }
+		set_variable = { BARE_SuperEvent_1_var = BARE_SuperEvent_1_temp_var }
+	}
+}
+
+BARE_SuperEvent_2_effect_1 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_NORMAL }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}
+
+BARE_SuperEvent_2_effect_2 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}
+
+BARE_SuperEvent_2_effect_3 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_DOUBLE_TWELVE_COUP }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}
+
+BARE_SuperEvent_2_effect_4 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}
+
+BARE_SuperEvent_2_effect_5 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_CAESAR_COUP_FAILED }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}
+
+BARE_SuperEvent_2_effect_6 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_MIKA_COUP_ARI }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}

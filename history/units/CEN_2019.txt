@@ -1,0 +1,64 @@
+
+
+division_template = {
+	name = "联邦学生会守卫部队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		maintenance_company = {
+			x = 0
+			y = 0
+		}
+	}
+}
+
+
+units = {
+	division= {
+		name = "联邦学生会第1“彼得”守卫部队"
+		location = 6016
+		division_template = "联邦学生会守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "联邦学生会第2“安德烈”守卫部队"
+		location = 6326
+		division_template = "联邦学生会守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "联邦学生会第3“雅各”守卫部队"
+		location = 3730
+		division_template = "联邦学生会守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "联邦学生会第4“约翰”守卫部队"
+		location = 8667
+		division_template = "联邦学生会守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "联邦学生会第5“腓力”守卫部队"
+		location = 11953
+		division_template = "联邦学生会守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

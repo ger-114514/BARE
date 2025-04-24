@@ -1,0 +1,337 @@
+#初始化偏执度系统
+BA_TRI_initialize_paranoia_system = {
+	custom_effect_tooltip = BA_TRI_initialize_paranoia_system_tt
+	add_country_leader_trait = TRI_nagisa_Find_the_root
+	hidden_effect = {
+		set_country_flag = TRI_paranoia_system_active
+		#桐藤渚政治偏执度设计
+		set_variable = { TRI_nagisa_paranoia_total = 50 } #偏执度总计，上限为100，用于计算数值范围触发事件
+		set_variable = { TRI_nagisa_paranoia_rank = 2 }
+		set_variable = { TRI_nagisa_paranoia_modifier_increase = 2 } #每周偏执度
+		#开始累积负面事件概率
+		country_event = {
+			id = TRI_paranoia.100
+			days = 14
+		}
+		add_to_array = { TRI_paranoia_association = token:TRI_paranoia_association_0 }
+		add_to_array = { TRI_paranoia_association = token:TRI_paranoia_association_1 }
+		add_to_array = { TRI_paranoia_association = token:TRI_paranoia_association_2 }
+		add_to_array = { TRI_paranoia_association = token:TRI_paranoia_association_3 }
+		add_to_array = { TRI_paranoia_association = token:TRI_paranoia_association_4 }
+		set_variable = { TRI_inspected_assosiation = token:TRI_paranoia_association_0 }
+		BA_TRI_generate_paranoia_frame = yes
+	}
+	
+}
+#自定义偏执度变化量，需要先设置临时变量
+TRI_change_paranoia = {
+	add_to_variable = { TRI_nagisa_paranoia_total = TRI_paranoia_change }
+	custom_effect_tooltip = TRI_paranoia_change_tt
+	#偏执度溢出时改变等级
+	while_loop_effect = {
+		limit = {
+			check_variable = { TRI_nagisa_paranoia_total > 99 }
+			check_variable = { TRI_nagisa_paranoia_rank < 5 }
+		}
+		subtract_from_variable = { TRI_nagisa_paranoia_total = 100 }
+		TRI_paranoia_rank_up = yes
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = { TRI_nagisa_paranoia_total < 0 }
+			check_variable = { TRI_nagisa_paranoia_rank > 1 }
+		}
+		add_to_variable = { TRI_nagisa_paranoia_total = 100 }
+		TRI_paranoia_rank_down = yes
+	}
+	clamp_variable = {
+		var = TRI_nagisa_paranoia_total
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = TRI_nagisa_paranoia_rank
+		min = 1
+		max = 5
+	}
+	BA_TRI_generate_paranoia_frame = yes
+}
+TRI_paranoia_rank_up = {
+	custom_effect_tooltip = TRI_paranoia_rank_up_tt
+	add_to_variable = { TRI_nagisa_paranoia_rank = 1 }
+	add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 1 }
+}
+TRI_paranoia_rank_down = {
+	custom_effect_tooltip = TRI_paranoia_rank_down_tt
+	subtract_from_variable = { TRI_nagisa_paranoia_rank = 1 }
+	add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -1 }
+}
+#偏执度增减30/20/10
+TRI_paranoia_increase_30 = {
+	set_temp_variable = { TRI_paranoia_change = 30 }
+	TRI_change_paranoia = yes
+}
+TRI_paranoia_decrease_30 = {
+	set_temp_variable = { TRI_paranoia_change = -30 }
+	TRI_change_paranoia = yes
+}
+TRI_paranoia_increase_20 = {
+	set_temp_variable = { TRI_paranoia_change = 20 }
+	TRI_change_paranoia = yes
+}
+TRI_paranoia_decrease_20 = {
+	set_temp_variable = { TRI_paranoia_change = -20 }
+	TRI_change_paranoia = yes
+}
+TRI_paranoia_increase_10 = {
+	set_temp_variable = { TRI_paranoia_change = 10 }
+	TRI_change_paranoia = yes
+}
+TRI_paranoia_decrease_10 = {
+	set_temp_variable = { TRI_paranoia_change = -10 }
+	TRI_change_paranoia = yes
+}
+#刷新界面
+BA_TRI_generate_paranoia_frame = {
+	set_variable = { TRI_paranoia_dial_frame = TRI_nagisa_paranoia_total }
+	divide_variable = { TRI_paranoia_dial_frame = 5 }
+	round_variable = TRI_paranoia_dial_frame
+	add_to_variable = { TRI_paranoia_dial_frame = 1 }
+	if = {
+		limit = { check_variable = { TRI_nagisa_paranoia_total < 26 } }
+		set_variable = { TRI_paranoia_nagisa_state = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { TRI_nagisa_paranoia_total < 76 } }
+		set_variable = { TRI_paranoia_nagisa_state = 2 }
+	}
+	else = {
+		set_variable = { TRI_paranoia_nagisa_state = 3 }
+	}
+}
+#弹出清洗行政系统事件
+TRI_purge_administration = {
+	random_list = {
+		1 = { #需要有可以清洗的人员
+			modifier = {
+				factor = 0
+				NOT = {
+					any_character = {
+						OR = {
+							is_character_slot = political_advisor
+							is_character_slot = theorist
+						}
+						BA_TRI_character_can_be_purged = yes
+					}
+				}
+			}
+			random_character = {
+				limit = {
+					OR = {
+						is_character_slot = political_advisor
+						is_character_slot = theorist
+					}
+					BA_TRI_character_can_be_purged = yes
+				}
+				TRI = { set_variable = { TRI_purge_event_target = PREV } }
+			}
+			country_event = TRI_paranoia.1
+		}
+		1 = { #需要没有“受到审查的行政机构”
+			modifier = {
+				factor = 0
+				has_idea = TRI_inspected_administration
+			}
+			country_event = TRI_paranoia.2
+		}
+		1 = { #需要渚没有“风声鹤唳”
+			modifier = {
+				factor = 0
+				TRI_nagisa = { has_trait = BA_TRI_nagisa_paranoid }
+			}
+			country_event = TRI_paranoia.3
+		}
+	}
+	set_country_flag = { flag = TRI_paranoia_random_purge_cooldown days = 14 }
+	set_variable = { TRI_purge_chance_time_accumulation = 0 }
+	set_variable = { TRI_political_focus_duration = 0 }
+}
+#清洗陆军
+TRI_purge_army = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				NOT = {
+					any_army_leader = {
+						BA_TRI_character_can_be_purged = yes
+					}
+				}
+			}
+			random_army_leader = {
+				limit = { BA_TRI_character_can_be_purged = yes }
+				TRI = { set_variable = { TRI_purge_event_target = PREV } }
+				unit_leader_event = TRI_paranoia.11
+			}
+			
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				NOT = {
+					any_character = {
+						OR = {
+							is_character_slot = army_chief
+							is_character_slot = high_command
+							is_character_slot = air_chief
+						}
+						BA_TRI_character_can_be_purged = yes
+					}
+				}
+			}
+			random_character = {
+				limit = {
+					OR = {
+						is_character_slot = army_chief
+						is_character_slot = high_command
+						is_character_slot = air_chief
+					}
+					BA_TRI_character_can_be_purged = yes
+				}
+				set_character_flag = BA_TRI_targeted_for_purge
+				TRI = { set_variable = { TRI_purge_event_target = PREV } }
+			}
+			country_event = TRI_paranoia.1
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				has_idea = TRI_inspected_army
+			}
+			country_event = TRI_paranoia.12
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				has_idea = TRI_training_activities_curtailed
+			}
+			country_event = TRI_paranoia.13
+		}
+	}
+	set_country_flag = { flag = TRI_paranoia_random_purge_cooldown days = 14 }
+	set_variable = { TRI_purge_chance_time_accumulation = 0 }
+	set_variable = { TRI_political_focus_duration = 0 }
+}
+#清洗空军
+TRI_purge_airforce = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				has_idea = TRI_inspected_airforce
+			}
+			country_event = TRI_paranoia.22
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				has_idea = TRI_training_activities_curtailed
+			}
+			country_event = TRI_paranoia.23
+		}
+	}
+	set_country_flag = { flag = TRI_paranoia_random_purge_cooldown days = 14 }
+	set_variable = { TRI_purge_chance_time_accumulation = 0 }
+	set_variable = { TRI_political_focus_duration = 0 }
+}
+TRI_purge_character = {
+	var:TRI_purge_event_target = {
+		hidden_effect = {
+			set_character_flag = TRI_character_arrested
+		}
+	}
+	custom_effect_tooltip = TRI_character_arrested_tt
+	clear_variable = TRI_purge_event_target
+	TRI_paranoia_check_association_state = yes
+	TRI_paranoia_decrease_20 = yes
+}
+#检查社团是否有被捕人员
+TRI_paranoia_check_association_state = {
+	if = {
+		limit = {
+			OR = {
+				TRI_mashiro = { has_character_flag = TRI_character_arrested }
+				TRI_ichika = { has_character_flag = TRI_character_arrested }
+			}
+		}
+		set_variable = { TRI_paranoia_association_state@TRI_paranoia_association_0 = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				TRI_hanae = { has_character_flag = TRI_character_arrested }
+				TRI_serina = { has_character_flag = TRI_character_arrested }
+			}
+		}
+		set_variable = { TRI_paranoia_association_state@TRI_paranoia_association_1 = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				TRI_hinata = { has_character_flag = TRI_character_arrested }
+				TRI_mari = { has_character_flag = TRI_character_arrested }
+			}
+		}
+		set_variable = { TRI_paranoia_association_state@TRI_paranoia_association_2 = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				TRI_natsu = { has_character_flag = TRI_character_arrested }
+				TRI_airi = { has_character_flag = TRI_character_arrested }
+				TRI_yoshimi = { has_character_flag = TRI_character_arrested }
+				TRI_kazusa = { has_character_flag = TRI_character_arrested }
+			}
+		}
+		set_variable = { TRI_paranoia_association_state@TRI_paranoia_association_3 = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				TRI_ui = { has_character_flag = TRI_character_arrested }
+				TRI_shimiko = { has_character_flag = TRI_character_arrested }
+			}
+		}
+		set_variable = { TRI_paranoia_association_state@TRI_paranoia_association_4 = 1 }
+	}
+}
+#移除偏执度系统
+BA_TRI_remove_paranoia_system = {
+	custom_effect_tooltip = BA_TRI_remove_paranoia_system_tt
+	hidden_effect = {
+		clear_array = TRI_paranoia_association
+		clr_country_flag = TRI_paranoia_system_active
+		clear_variable = TRI_paranoia_change
+		clear_variable = TRI_nagisa_paranoia_total
+		clear_variable = TRI_paranoia_dial_frame
+		clear_variable = TRI_paranoia_nagisa_state
+		every_character = {
+			if = {
+				limit = { has_character_flag = TRI_character_arrested }
+				clr_character_flag = TRI_character_arrested
+			}
+		}
+		TRI_nagisa = {
+			if = {
+				limit = { has_trait = BA_TRI_nagisa_paranoid }
+				remove_trait = { trait = BA_TRI_nagisa_paranoid }
+			}
+		}
+		remove_ideas = TRI_inspected_administration
+		remove_ideas = TRI_inspected_army
+		remove_ideas = TRI_training_activities_curtailed
+		remove_ideas = TRI_inspected_airforce
+		remove_ideas = TRI_training_activities_curtailed
+	}
+	
+}

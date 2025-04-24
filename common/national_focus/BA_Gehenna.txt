@@ -1,0 +1,1711 @@
+focus_tree = {
+	id = gehenna_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GEH
+		}
+	}
+	default = no
+
+	#focus = {
+	#	id = TRI_mil_focus_step4 #预设模板
+	#	#icon = GFX_goal_unknown
+	#   relative_position_id = XXXX #以目标国策为中心确立位置参数的id参数
+	#   cost = n #国策所用时间
+	#   x = n #以relative_position_id为中心发生的x坐标偏移
+	#   y = n #以relative_position_id为中心发生的x坐标偏移
+	#   prerequisite = {  focus = xxxxx } #关联国策，括弧内填多个为OR关系，多个prerequisite则表示为AND
+	#   mutually_exclusive = { focus = xxxxx } #互斥国策表现关系，多个mutually_exclusive表示多个互斥
+	                                           #注：互斥国策之间必须相互填写各自focus
+	#   search_filters = { FOCUS_FILTER_XXXX } #国策搜索器，详见wiki上寻找参数
+
+    #   available = { [trigger类条件] } #满足这里面的条件才允许点国策
+	#   allow_branch = { [bool] } #隐藏国策树,配合mark_focus_tree_layout_dirty = yes 刷新国策树
+
+	#   bypass = { [bool] } #跳过国策树的条件
+	#   completion_reward = { #国策完成效果
+
+	#}
+	#}
+
+
+    #PS:空国策，防止报错的
+    #第一次伊甸条约
+    focus = {
+		id = GEH_fisrt_eden_treaty
+        cost = 5
+        x = 30
+        y = 0
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+
+        }
+	}
+
+    #政治线
+    #回眼内部
+    focus = {
+		id = GEH_go_back_to_inside
+	    relative_position_id = GEH_fisrt_eden_treaty
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_fisrt_eden_treaty }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        
+
+        completion_reward = {
+            add_political_power = 100
+            add_stability = -0.1
+        }
+	}
+
+    #万魔殿与风纪委之争
+    focus = {
+		id = GEH_battle_between_makoto_and_hina
+	    relative_position_id = GEH_go_back_to_inside
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_go_back_to_inside }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        
+
+        completion_reward = {
+            add_ideas = GEH_severe_inside_contradiction
+            add_political_power = 50
+        }
+	}
+
+    #ALL FOR HINA
+    focus = {
+        id = GEH_add_for_hina
+        relative_position_id = GEH_battle_between_makoto_and_hina
+        cost = 5
+        x = 2
+        y = 2
+        prerequisite = {  focus = GEH_battle_between_makoto_and_hina }
+        mutually_exclusive = { focus = GEH_go_smoothly_forward }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = BA_content_developing
+                always = no
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            
+        }
+    }
+
+    #平稳前行
+    focus = {
+		id = GEH_go_smoothly_forward
+	    relative_position_id = GEH_battle_between_makoto_and_hina
+        cost = 5
+        x = -2
+        y = 2
+        prerequisite = {  focus = GEH_battle_between_makoto_and_hina }
+        mutually_exclusive = { focus = GEH_add_for_hina }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_severe_inside_contradiction
+                add_idea = GEH_mild_inside_contradiction
+            }
+        }
+	}
+
+
+    #再起争端
+    focus = {
+		id = GEH_inside_fight_again
+	    relative_position_id = GEH_go_smoothly_forward
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_go_smoothly_forward }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            set_power_balance = {
+                id = GEH_bp_between_chaos_and_order
+                left_side = GEH_bp_order
+                right_side = GEH_bp_chaos
+            }
+            
+        }
+	}
+
+
+    #真琴的最高指示
+    focus = {
+		id = GEH_highest_order_from_makoto
+	    relative_position_id = GEH_inside_fight_again
+        cost = 4
+        x = -2
+        y = 2
+        prerequisite = {  focus = GEH_inside_fight_again }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value = 0.1
+			}
+            add_stability = -0.1
+            add_war_support = 0.15
+            unlock_decision_tooltip = GEH_bop_use_money_for_production
+            unlock_decision_tooltip = GEH_bop_recruit_temperatory
+        }
+	}
+
+
+    #日奈委员长的决策
+    focus = {
+		id = GEH_decision_from_hina
+	    relative_position_id = GEH_inside_fight_again
+        cost = 4
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_inside_fight_again }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value = -0.1
+			}
+            add_stability = 0.15
+            add_war_support = -0.1
+            unlock_decision_tooltip = GEH_bop_use_money_for_investment
+            unlock_decision_tooltip = GEH_bop_ensure_stability
+        }
+	}
+
+
+    #无人在意
+    focus = {
+		id = GEH_but_nobody_cares
+	    relative_position_id = GEH_inside_fight_again
+        cost = 2
+        x = 2
+        y = 2
+        prerequisite = {  focus = GEH_inside_fight_again }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_political_power = 200
+        }
+	}
+
+
+    #格黒娜在行动
+    focus = {
+		id = GEH_gehinna_is_on_action
+	    relative_position_id = GEH_decision_from_hina
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_highest_order_from_makoto focus = GEH_decision_from_hina focus = GEH_but_nobody_cares}
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_political_power = 100
+            unlock_decision_tooltip = GEH_bop_great_feast
+            unlock_decision_tooltip = GEH_bop_mediate_conflicts
+        }
+	}
+
+
+    #重拾信任
+    focus = {
+		id = GEH_find_the_trust_again
+	    relative_position_id = GEH_gehinna_is_on_action
+        cost = 10
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_gehinna_is_on_action }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        available = {
+            power_balance_value = {
+                id = GEH_bp_between_chaos_and_order
+                value < -0.4
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_mild_inside_contradiction
+                add_idea = GEH_unity_gehennna
+            }
+
+            add_dynamic_modifier = {
+                modifier = GEH_gehenna_daily_life
+            }
+        }
+	}
+
+
+    #伊吕波的抉择
+    focus = {
+		id = GEH_choose_of_iroha
+	    relative_position_id = GEH_find_the_trust_again
+        cost = 4
+        x = -2
+        y = 2
+        prerequisite = {  focus = GEH_find_the_trust_again }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            country_event = {
+                id = GEH_events.1
+            }
+        }
+	}
+
+
+    #伊吹的生日
+    focus = {
+		id = GEH_ibuki_birthday
+	    relative_position_id = GEH_find_the_trust_again
+        cost = 4
+        x = 2
+        y = 2
+        prerequisite = {  focus = GEH_find_the_trust_again }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            country_event = {
+                id = GEH_events.7
+            }
+        }
+	}
+
+
+    #风纪委员会的团建
+    focus = {
+		id = GEH_team_building_of_fukiiinkai
+	    relative_position_id = GEH_find_the_trust_again
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_find_the_trust_again }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_political_power = 100
+            add_power_balance_value = {
+                id = GEH_bp_between_chaos_and_order
+                value = -0.05
+            }
+        }
+	}
+
+
+    #重启伊甸条约会谈
+    focus = {
+		id = GEH_restart_eden_treaty_negotiation
+	    relative_position_id = GEH_team_building_of_fukiiinkai
+        cost = 10
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_choose_of_iroha }
+        prerequisite = {  focus = GEH_ibuki_birthday }
+        prerequisite = {  focus = GEH_team_building_of_fukiiinkai }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        available = {
+            power_balance_value = {
+                id = GEH_bp_between_chaos_and_order
+                value < -0.6
+            }
+        }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                has_global_flag = BA_2st_eden_pact_begin
+                tooltip = GEH_trinity_has_won_dip_race
+            }
+        }
+
+        completion_reward = {
+            #TODO：触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
+            country_event = {
+                id = GEH_dip_events.1000 #我不清楚能不能直接套用三一的，我抄了一遍
+            }
+            add_ideas = GEH_ideas_prepare_for_conference_1
+            add_ideas = GEH_ideas_conference_support_1
+        }
+	}
+
+
+    #与三一的接洽
+    focus = {
+		id = GEH_negotiation_with_trinity
+	    relative_position_id = GEH_restart_eden_treaty_negotiation
+        cost = 5
+        x = -2
+        y = 2
+        prerequisite = {  focus = GEH_restart_eden_treaty_negotiation }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_everything_is_good
+                NOT = { has_country_flag = GEH_fire_was_rising_compeleted }
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_prepare_for_conference_1
+                add_idea = GEH_ideas_prepare_for_conference_2
+            }
+            #TODO:每月向决议：第二次《伊甸条约》会谈筹备中添加2点筹备度
+        }
+	}
+
+
+    #对内宣传
+    focus = {
+		id = GEH_propogenda_in_school
+	    relative_position_id = GEH_restart_eden_treaty_negotiation
+        cost = 5
+        x = 2
+        y = 2
+        prerequisite = {  focus = GEH_restart_eden_treaty_negotiation }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_everything_is_good
+                NOT = { has_country_flag = GEH_fire_was_rising_compeleted }
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_1
+                add_idea = GEH_ideas_conference_support_2
+            }
+            unlock_decision_tooltip = GEH_bop_eden_treaty_propoganda
+        }
+	}
+
+
+    #骚乱？
+    focus = {
+		id = GEH_riot_in_gehennna
+	    relative_position_id = GEH_negotiation_with_trinity
+        cost = 2
+        x = 2
+        y = 2
+        prerequisite = {  focus = GEH_negotiation_with_trinity }
+        prerequisite = {  focus = GEH_propogenda_in_school }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_everything_is_good
+                NOT = { has_country_flag = GEH_fire_was_rising_compeleted }
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_2
+                add_idea = GEH_ideas_conference_support_3
+            }
+            add_stability = -0.05
+        }
+	}
+
+
+    #打击越境不良
+    focus = {
+		id = GEH_fight_rogue_across_board
+	    relative_position_id = GEH_riot_in_gehennna
+        cost = 2
+        x = -2
+        y = 2
+        prerequisite = {  focus = GEH_riot_in_gehennna }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_everything_is_good
+                NOT = { has_country_flag = GEH_fire_was_rising_compeleted }
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_3
+                add_idea = GEH_ideas_conference_support_4
+            }
+            add_stability = 0.1
+            unlock_decision_tooltip = GEH_bop_patrol_in_gehnna
+        }
+	}
+
+
+    #声援茶会
+    focus = {
+		id = GEH_support_tea_party
+	    relative_position_id = GEH_riot_in_gehennna
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {  focus = GEH_riot_in_gehennna }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_everything_is_good
+                NOT = { has_country_flag = GEH_fire_was_rising_compeleted }
+            }
+        }
+
+        completion_reward = {
+            TRI = {
+                country_event = {
+                    id = GEH_dip_events.1
+                }
+            }
+        }
+	}
+    
+
+    #物资筹备
+    focus = {
+		id = GEH_find_the_support_materials
+	    relative_position_id = GEH_riot_in_gehennna
+        cost = 4
+        x = 2
+        y = 2
+        prerequisite = {  focus = GEH_riot_in_gehennna }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_everything_is_good
+                NOT = { has_country_flag = GEH_fire_was_rising_compeleted }
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_prepare_for_conference_2
+                add_idea = GEH_ideas_prepare_for_conference_3
+            }
+        }
+	}
+
+
+    #召开第二次《伊甸条约》会议（假国策）
+    focus = {
+		id = GEH_open_second_eden_treaty_conference
+	    relative_position_id = GEH_support_tea_party
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_fight_rogue_across_board }
+        prerequisite = { focus = GEH_support_tea_party }
+        prerequisite = { focus = GEH_find_the_support_materials }
+
+        allow_branch = {
+            NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+        } 
+        #隐藏国策树,配合mark_focus_tree_layout_dirty = yes 刷新国策树
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            custom_effect_tooltip = GEH_will_sign_2nd_eden_treaty #在无数的准备后，我们将签署这份世纪条约！
+        }
+	}
+
+
+    #烽烟骤起
+    focus = {
+		id = GEH_fire_was_rising
+	    relative_position_id = GEH_support_tea_party
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_fight_rogue_across_board }
+        prerequisite = { focus = GEH_support_tea_party }
+        prerequisite = { focus = GEH_find_the_support_materials }
+
+        allow_branch = {
+            has_global_flag = WOR_ancient_cathedral_has_been_attacked
+        } 
+        #隐藏国策树,配合mark_focus_tree_layout_dirty = yes 刷新国策树
+
+        available = {
+            always = no
+        }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            mark_focus_tree_layout_dirty = yes
+
+            
+            #移除之前会谈筹备的所有精神
+            remove_ideas = GEH_ideas_prepare_for_conference_1
+            remove_ideas = GEH_ideas_prepare_for_conference_2
+            remove_ideas = GEH_ideas_prepare_for_conference_3
+            remove_ideas = GEH_ideas_conference_support_1
+            remove_ideas = GEH_ideas_conference_support_2
+            remove_ideas = GEH_ideas_conference_support_3
+            remove_ideas = GEH_ideas_conference_support_4
+
+            #使用			
+            #visible = {
+			#	NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+			#}
+            #来达成“移除内阁”的效果
+
+            ###TODO：根据不同突袭度上不同debuff,给效果，还有flag（现在都还没做）
+            add_ideas = GEH_army_in_chaos
+            hidden_effect = {
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = -0.5
+                }
+
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = -0.5
+                }
+
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = -0.3
+                }
+
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = -0.2
+                }
+
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = 0.2
+                }
+
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = 0.2
+                }
+
+                set_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = -0.02
+                }
+
+                set_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = -0.3
+                }            
+                add_dynamic_modifier = {
+                modifier = GEH_a_unpredictable_attack
+                }
+            }
+            custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_tt
+
+
+            
+        }
+	}
+
+
+    #非常措施
+    focus = {
+		id = GEH_extraordinary_measures
+	    relative_position_id = GEH_fire_was_rising
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_fire_was_rising }
+
+        allow_branch = {
+            has_country_flag = GEH_worst_things_in_ari_attack
+        } 
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_timed_idea = {
+                idea = GEH_emergency_methods_for_arius
+                days = 360
+            }
+            unlock_decision_category_tooltip = GEH_emergency_time_decision_category
+        }
+	}
+
+
+    #救出关键学生
+    focus = {
+		id = GEH_save_important_student
+	    relative_position_id = GEH_extraordinary_measures
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_extraordinary_measures }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            unlock_decision_tooltip = GEH_save_our_vip_students
+        }
+	}
+
+
+    #重点进攻
+    focus = {
+		id = GEH_attack_key_point
+	    relative_position_id = GEH_save_important_student
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_save_important_student }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            unlock_decision_tooltip = GEH_reorganization_our_troop
+            unlock_decision_tooltip = GEH_reorganization_our_attack
+        }
+	}
+
+
+    #不遗余力
+    focus = {
+		id = GEH_spare_no_effort
+	    relative_position_id = GEH_attack_key_point
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_attack_key_point }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            add_timed_idea = {
+                idea = GEH_fight_to_the_end
+                days = 180
+            }
+        }
+	}
+
+
+    #紧急动员
+    focus = {
+		id = GEH_emergency_mobilization
+	    relative_position_id = GEH_fire_was_rising
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_fire_was_rising }
+
+        allow_branch = {
+            has_country_flag = GEH_mid_things_in_ari_attack
+        } 
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.1
+                }            
+            }
+            custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_2_1_tt       
+        }
+	}
+
+
+    #紧急营救
+    focus = {
+		id = GEH_emergency_rescue
+	    relative_position_id = GEH_emergency_mobilization
+        cost = 3
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_emergency_mobilization }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.1
+                }            
+            }
+            custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_2_2_tt       
+        }
+	}
+
+
+    #结束敌对状态
+    focus = {
+		id = GEH_end_emergency_situation
+	    relative_position_id = GEH_emergency_rescue
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_emergency_rescue }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            white_peace = TRI
+            if = {
+                limit = {
+                    TRI = { is_in_faction = yes } 
+                    TRI = { NOT = { is_in_faction_with = GEH } }
+                }
+                TRI = {
+                    add_to_faction = GEH
+                }
+            }
+            else = {
+                create_faction = Eden_treaty_organization_factiion
+                TRI = {
+                    country_event = {
+                        id = GEH_dip_events.10
+                    }
+                }
+            }
+        }
+	}
+
+
+    #同仇敌忾
+    focus = {
+		id = GEH_we_have_same_enemy
+	    relative_position_id = GEH_end_emergency_situation
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_end_emergency_situation }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            remove_dynamic_modifier = {
+                modifier = GEH_a_unpredictable_attack
+            }
+            add_ideas = GEH_army_factory_cooperation
+            TRI = {
+                add_ideas = GEH_army_factory_cooperation
+            }
+
+        }
+	}
+
+
+    #古圣堂之战
+    focus = {
+		id = GEH_battle_of_ancient_cathedral
+	    relative_position_id = GEH_fire_was_rising
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_fire_was_rising }
+
+        allow_branch = {
+            has_country_flag = GEH_good_things_in_ari_attack
+        } 
+
+        available = {
+            always = no
+            ##事件完成
+        }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.2
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.1
+                }            
+            }
+            custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_1_1_tt       
+        }
+	}
+
+
+    #收拢部队
+    focus = {
+		id = GEH_get_back_our_troops
+	    relative_position_id = GEH_battle_of_ancient_cathedral
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_battle_of_ancient_cathedral }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.2
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.2
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.2
+                }            
+            }
+            custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_1_2_tt       
+        }
+	}
+
+
+    #共同协作
+    focus = {
+		id = GEH_cooperate_tohether
+	    relative_position_id = GEH_get_back_our_troops
+        cost = 3
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_get_back_our_troops }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            remove_dynamic_modifier = {
+                modifier = GEH_a_unpredictable_attack
+            }
+
+            give_military_access = TRI
+            TRI = {
+                give_military_access = GEH
+            }
+            diplomatic_relation = {
+                country = TRI
+                relation = non_aggression_pact
+                active = yes
+            }
+
+        }
+	}
+
+
+    #军工互补
+    focus = {
+		id = GEH_military_industry_complementarity
+	    relative_position_id = GEH_cooperate_tohether
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_cooperate_tohether }
+        
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        available = {
+            TRI = { exists = yes }
+            GEH = { exists = yes }
+        }
+
+        completion_reward = {
+            add_ideas = GEH_army_factory_cooperation
+            TRI = {
+                add_ideas = GEH_army_factory_cooperation
+            }
+
+        }
+	}
+
+
+    #格黒娜屹立于此
+    focus = {
+		id = GEH_gehenna_forever
+	    relative_position_id = GEH_we_have_same_enemy
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = { focus = GEH_spare_no_effort focus = GEH_we_have_same_enemy focus = GEH_military_industry_complementarity}
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        available = {
+            always = no
+        }
+
+        completion_reward = {
+            #＃超事件：“《伊甸条约》的成功签订”触发后才可以被激活。
+            add_ideas = GEH_gehenna_stands_forever
+        }
+	}
+
+
+
+    #经济线
+
+    #建设问题
+    focus = {
+        id = GEH_building_problems
+        icon = GFX_goal_GEH_building_problems
+        cost = 5
+        x = 6
+        y = 0
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = { }
+
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+        }		
+    }
+
+
+    #引进投资
+    focus = {
+        id = GEH_invite_investment
+        icon = GFX_goal_GEH_invite_investment
+        cost = 5
+        x = -4
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_building_problems
+        prerequisite = {  focus = GEH_building_problems }
+
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+        }		
+    }
+
+
+    #产能摸底
+    focus = {
+        id = GEH_investigate_production
+        icon = GFX_goal_GEH_investigate_production
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_invite_investment
+        prerequisite = {  focus = GEH_invite_investment }
+
+        completion_reward = {
+
+            remove_ideas = GEH_factory_management_in_chaos
+            #TODO：启动一个动态的精神：【格黑娜产能利用率】 这个我不会写
+
+        }		
+    }
+
+
+    #直控科研社团
+    focus = {
+        id = GEH_control_research_group
+        icon = GFX_goal_GEH_control_research_group
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_investigate_production
+        prerequisite = {  focus = GEH_investigate_production }
+
+        completion_reward = {
+
+            add_research_slot = 1
+
+        }		
+    }
+
+    #动员产能
+    focus = {
+        id = GEH_mobilize_production
+        icon = GFX_goal_GEH_mobilize_production
+        cost = 5
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_control_research_group
+        prerequisite = {  focus = GEH_control_research_group }
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_trigger_tt_bad_has_happened
+                has_country_flag = GEH_fire_was_rising_compeleted
+            }
+            has_war_support > 0.5
+            
+        }
+
+        completion_reward = {
+
+            add_ideas = GEH_war_industry_modifier
+            #解锁决议： 停止产能动员：需要20PP进行35天，移除此精神
+
+        }		
+    }
+
+
+    #服务战斗
+    focus = {
+        id = GEH_everything_for_war
+        icon = GFX_goal_GEH_everything_for_war
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_mobilize_production
+        prerequisite = {  focus = GEH_mobilize_production }
+
+        available = {
+        }
+
+        completion_reward = {
+
+            swap_ideas = {
+                remove_idea = GEH_war_industry_modifier
+                add_idea = GEH_war_industry_2_modifier
+            }
+
+        }		
+    }
+
+    #重建工程
+    focus = {
+        id = GEH_start_reconstruction
+        icon = GFX_goal_GEH_start_reconstruction
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_everything_for_war
+        prerequisite = {  focus = GEH_everything_for_war }
+
+        available = {
+        }
+
+        completion_reward = {
+
+            remove_idea = GEH_war_industry_modifier
+            remove_idea = GEH_war_industry_2_modifier
+            add_idea = GEH_after_war_reconstrcution_modifier
+
+            random_owned_controlled_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    has_built = {
+                        type = infrastructure
+                        value < 5
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    has_built = {
+                        type = infrastructure
+                        value < 5
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    has_built = {
+                        type = infrastructure
+                        value < 5
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    has_built = {
+                        type = infrastructure
+                        value < 5
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    has_built = {
+                        type = infrastructure
+                        value < 5
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+        }		
+    }
+
+
+    #扩大军备建设
+    focus = {
+        id = GEH_expand_military_building
+        icon = GFX_goal_GEH_expand_military_building
+        cost = 5
+        x = 6
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_building_problems }
+
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }		
+    }
+
+
+    #实验性武器开发
+    focus = {
+        id = GEH_experiment_weapon_research
+        icon = GFX_goal_GEH_experiment_weapon_research
+        cost = 10
+        x = 6
+        y = 2
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_expand_military_building }
+
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+            }
+        }		
+    }
+
+    #融合外来技术
+    focus = {
+        id = GEH_merge_outside_technology
+        icon = GFX_goal_GEH_merge_outside_technology
+        cost = 10
+        x = 6
+        y = 3
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_experiment_weapon_research }
+
+        completion_reward = {
+
+
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = industry  
+            }
+        }		
+    }
+
+    #质量优先
+    focus = {
+        id = GEH_quality_first
+        icon = GFX_goal_GEH_quality_first
+        cost = 5
+        x = 6
+        y = 4
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_merge_outside_technology }
+        mutually_exclusive = { focus = GEH_quantity_first }
+
+        completion_reward = {
+
+            add_ideas = GEH_quality_first_modifier
+        }		
+    }
+
+
+    #先进技术运用
+    focus = {
+        id = GEH_put_advance_tech_in_use
+        icon = GFX_goal_GEH_put_advance_tech_in_use
+        cost = 10
+        x = 6
+        y = 5
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_quality_first }
+        mutually_exclusive = { focus = GEH_quantity_first }
+
+        completion_reward = {
+
+            add_tech_bonus = {
+                bonus = 1
+                uses = 2
+                category = uav
+            }
+        }		
+    }
+
+    #改变战场
+    focus = {
+        id = GEH_change_the_battlefield
+        icon = GFX_goal_GEH_change_the_battlefield
+        cost = 10
+        x = 6
+        y = 6
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_put_advance_tech_in_use }
+
+        completion_reward = {
+
+            add_ideas = GEH_mass_drone_use_modifier
+        }		
+    }
+
+
+    #数量优先
+    focus = {
+        id = GEH_quantity_first
+        icon = GFX_goal_GEH_quantity_first
+        cost = 5
+        x = 8
+        y = 4
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_merge_outside_technology }
+        mutually_exclusive = { focus = GEH_quality_first }
+
+        completion_reward = {
+
+
+            add_ideas = GEH_quantity_first_modifier
+        }		
+    }
+    
+
+    #省材节时
+    focus = {
+        id = GEH_save_time_and_matirial
+        icon = GFX_goal_GEH_save_time_and_matirial
+        cost = 5
+        x = 8
+        y = 5
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_quantity_first }
+
+        completion_reward = {
+
+            add_ideas = GEH_save_time_and_matirial_modifier
+
+        }		
+    }
+
+
+    #适配实战
+    focus = {
+        id = GEH_fit_real_war
+        icon = GFX_goal_GEH_fit_real_war
+        cost = 5
+        x = 8
+        y = 6
+        search_filters = { FOCUS_FILTER_ECO }
+
+        prerequisite = {  focus = GEH_save_time_and_matirial }
+
+        completion_reward = {
+
+
+            
+            add_ideas = GEH_useful_weapon_modifier
+        }		
+    }
+
+
+    #基础建设
+    focus = {
+        id = GEH_infrastructure_built
+        icon = GFX_goal_GEH_infrastructure_built
+        cost = 10
+        x = 4
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_building_problems
+        prerequisite = {  focus = GEH_building_problems }
+
+        completion_reward = {
+            add_stability = 0.05
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }		
+    }
+
+
+    #集中高材生
+    focus = {
+        id = GEH_converge_best_intelligence
+        icon = GFX_goal_GEH_converge_best_intelligence
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_infrastructure_built
+        prerequisite = {  focus = GEH_infrastructure_built }
+
+        completion_reward = {
+            add_stability = -0.05
+            add_research_slot = 1
+        }		
+    }
+
+
+    #改造自然
+    focus = {
+        id = GEH_change_the_nature
+        icon = GFX_goal_GEH_change_the_nature
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_converge_best_intelligence
+        prerequisite = {  focus = GEH_converge_best_intelligence }
+
+        completion_reward = {
+            
+            add_resource = {
+                type = resources_mm
+                amount = 15
+                state = 397
+            
+            }
+
+            A08 = {
+                give_resource_rights = {
+                    receiver = GEH
+                    state = 397
+                    resources = { resources_mm }
+                }
+            }
+
+        }		
+    }
+
+
+    #社团任务
+    focus = {
+        id = GEH_club_missions
+        icon = GFX_goal_GEH_club_missions
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_change_the_nature
+        prerequisite = {  focus = GEH_change_the_nature }
+
+        completion_reward = {
+            #TODO:缺乏效果
+        }		
+    }
+
+
+    #学园翻新
+    focus = {
+        id = GEH_renew_our_academia
+        icon = GFX_goal_GEH_renew_our_academia
+        cost = 10
+        x = 0
+        y = 1
+        search_filters = { FOCUS_FILTER_ECO }
+
+        relative_position_id = GEH_club_missions
+        prerequisite = {  focus = GEH_club_missions }
+
+        completion_reward = {
+            every_core_state = {
+                limit = { is_controlled_by = ROOT }
+                add_extra_state_shared_building_slots = 2
+
+            }
+            random_core_state = {
+                limit = { 
+                    is_controlled_by = ROOT 
+                    infrastructure < 5
+                }
+                set_building_level = {
+                    type = infrastructure
+                    level = 5
+                    instant_build = yes
+                }
+            }
+        }		
+    }
+
+}

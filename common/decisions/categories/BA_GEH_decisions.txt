@@ -1,0 +1,43 @@
+#权力平衡决议组
+GEH_bpp_decision_category = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = GEH
+		has_completed_focus = GEH_inside_fight_again
+	}
+	priority = 1098
+}
+
+
+#紧急措施决议组
+GEH_emergency_time_decision_category = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = GEH
+		has_completed_focus = GEH_extraordinary_measures
+		NOT = { has_war_with = ARI } #和阿里乌斯处于和平
+		#和阿里乌斯的战斗结束后消失
+	}
+	priority = 1098
+}
+
+
+#后大战决议组
+GEH_after_eden_war_decision_category = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = GEH
+		has_completed_focus = GEH_fire_was_rising
+		NOT = { has_war_with = ARI } #和阿里乌斯处于和平
+	}
+	priority = 1098
+}

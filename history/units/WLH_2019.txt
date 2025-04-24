@@ -1,0 +1,60 @@
+
+division_template = {
+	name = "编号步兵连"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+		fire_support_team_la = {x = 2 y = 0}
+	}
+	support = {
+	}
+}
+
+
+
+division_template = {
+	name = "猎兵连"		
+
+	regiments = {
+		infantry_sf = {x = 0 y = 0}
+		infantry_sf = {x = 0 y = 1}
+	}
+	support = {
+		recon = { x=0 y=0 }
+	}
+}
+
+
+units = {
+	division= {
+		name = "第2编号步兵连“约瑟夫”"
+		location = 7406
+		division_template = "编号步兵连" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "第1编号步兵连“里奥”"
+		location = 6935
+		division_template = "编号步兵连" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "第1猎兵连“蒂罗尔”"
+		location = 1536
+		division_template = "猎兵连" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

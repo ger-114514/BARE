@@ -1,0 +1,36 @@
+@tier1 = 15
+leader_traits = {
+    arbitrary_supervisor = { #残酷的监工
+        random = no
+        industrial_capacity_factory = 0.1
+        production_factory_efficiency_gain_factor = 0.05
+        recruitable_population_factor = -0.05
+        resistance_growth = 0.05
+    }
+    local_ruler = { #地方统治者
+        random = no
+        global_building_slots_factor = 0.1
+        production_speed_buildings_factor = 0.1
+    }
+    secret_agent = { #夫人的密探
+        random = no
+        compliance_growth = 0.1
+        resistance_target = -0.05
+        operative_slot = 1
+    }
+    positive_collaborator = { #积极合作者
+        random = no
+        political_power_factor = 0.15
+    }
+    armor_leader = { #装甲部队领导者
+        random = no
+        army_armor_attack_factor = 0.1
+        army_armor_defence_factor = 0.1
+    }
+    infantry_leader = { #步兵总指挥
+        random = no
+        army_infantry_attack_factor = 0.1
+        army_infantry_defence_factor = 0.1
+        custom_modifier_tooltip = infantry_leader_tt
+    }
+}

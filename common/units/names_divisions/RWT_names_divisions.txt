@@ -1,0 +1,245 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+RWT_Inf_01 = {
+	name = "红冬步兵连"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "红冬步兵第%d连"
+
+	ordered =
+	{
+		1 = { "红冬步兵第1“纳塔利娅”连" }
+		2 = { "红冬步兵第2“柳德米拉”连" }
+		3 = { "红冬步兵第3“塔吉亚娜”连" }
+		4 = { "红冬步兵第4“亚历山德拉”连" }
+		5 = { "红冬步兵第5“萝扎”连" }
+		6 = { "红冬步兵第6“尼娜”连" }
+		7 = { "红冬步兵第7“海琳”连" }
+		8 = { "红冬步兵第8“阿内勒”连" }
+	}
+}
+
+RWT_Inf_02 = {
+	name = "红冬合成营"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "红冬合成第%d营"
+
+	ordered =
+	{
+		1 = { "红冬合成第1“老山”营" }
+		2 = { "红冬合成第2“者阴山”营" }
+		3 = { "红冬合成第3“松毛岭”营" }
+		4 = { "红冬合成第4“法卡山”营" }
+	}
+}
+
+
+RWT_Infm_01 = {
+	name = "红冬自治区民兵"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "百红冬自治区民兵第%d连"
+
+	ordered =
+	{
+		1 = { "红冬自治区民兵第1“警戒”连" }
+		2 = { "红冬自治区民兵第2“机敏”连" }
+		3 = { "红冬自治区民兵第3“英勇”连" }
+		4 = { "红冬自治区民兵第4“威武”连" }
+		5 = { "红冬自治区民兵第5“缜密”连" }
+		6 = { "红冬自治区民兵第6“大胆”连" }
+	}
+}
+
+
+RWT_Infs_01 = {
+	name = "事务局近卫红旗空降连"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "事务局近卫红旗空降第%d连"
+
+	ordered =
+	{
+		1 = { "事务局近卫红旗空降第1连" }
+		2 = { "事务局近卫红旗空降第2连" }
+		3 = { "事务局近卫红旗空降第3连" }
+		4 = { "事务局近卫红旗空降第4连" }
+		5 = { "事务局近卫红旗空降第5连" }
+		6 = { "事务局近卫红旗空降第6连" }
+	}
+}
+
+RWT_Infs_02 = {
+	name = "赤冬海军陆战队"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "红冬海步第%d连"
+
+	ordered =
+	{
+		1 = { "红冬海步第1“塞瓦斯托波尔”连" }
+		2 = { "红冬海步第2“涅瓦”连" }
+		3 = { "红冬海步第3“敖德萨”连" }
+		4 = { "红冬海步第4“彼得罗巴甫洛夫斯克”连" }
+		5 = { "红冬海步第5“摩尔曼斯克”连" }
+		6 = { "红冬海步第6“阿尔汉格尔斯克”连" }
+	}
+}
+
+RWT_Infs_03 = {
+	name = "红冬特战分队"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "红冬格鲁乌第%d排"
+
+	ordered =
+	{
+		1 = { "红冬格鲁乌第1“菲利克斯”排" }
+		2 = { "红冬格鲁乌第2“亚历山大”排" }
+		3 = { "红冬格鲁乌第3“弗拉基米尔”排" }
+		4 = { "红冬格鲁乌第4“尤里”排" }
+	}
+}
+
+RWT_Ifv_01 = {
+	name = "红冬机械化步兵连"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "红冬近卫机械化步兵第%d连"
+
+	ordered =
+	{
+		1 = { "红冬近卫机械化步兵第1“柳京守”连" }
+		2 = { "红冬近卫机械化步兵第2“汉城”连" }
+		3 = { "红冬近卫机械化步兵第3“平壤”连" }
+		4 = { "红冬近卫机械化步兵第4“三池渊”连" }
+		5 = { "红冬近卫机械化步兵第5“南浦”连" }
+		6 = { "红冬近卫机械化步兵第6“海州”连" }
+		7 = { "红冬近卫机械化步兵第7“江原”连" }
+		8 = { "红冬近卫机械化步兵第8“清津”连" }
+	}
+}
+
+RWT_LA_01 = {
+	name = "红冬装甲连"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+	fallback_name = "红冬机械化合成第%d连"
+
+	ordered =
+	{
+		1 = { "红冬机械化合成第1“卓娅”连" }
+		2 = { "红冬机械化合成第2“利季娅”连" }
+		3 = { "红冬机械化合成第3“叶卡捷琳娜”连" }
+		4 = { "红冬机械化合成第4“玛丽亚”连" }
+	}
+}
+
+RWT_HA_01 = {
+	name = "红冬近卫坦克连"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "heavy_armor" }
+
+	fallback_name = "红冬近卫坦克第%d连"
+
+	ordered =
+	{
+		1 = { "红冬近卫坦克第1“明斯克”连" }
+		2 = { "红冬近卫坦克第2“阿拉木图”连" }
+		3 = { "红冬近卫坦克第3“莫斯科”连" }
+		4 = { "红冬近卫坦克第4“列宁格勒”连" }
+		5 = { "红冬近卫坦克第5“斯大林格勒”连" }
+		6 = { "红冬近卫坦克第6“基辅”连" }
+	}
+}
+
+RWT_LBM_01 = {
+	name = "红冬机甲连"
+
+	for_countries = { RWT }
+
+	can_use = { always = yes }
+
+	division_types = { "light_bm_unit" }
+
+	fallback_name = "红冬步兵第%d连"
+
+	ordered =
+	{
+		1 = { "红冬机甲第1“铁人”连" }
+		2 = { "红冬机甲第2“法统”连" }
+		3 = { "红冬机甲第3“哪吒”连" }
+		4 = { "红冬机甲第4“飞龙”连" }
+		5 = { "红冬机甲第5“天龙”连" }
+		6 = { "红冬机甲第6“神虎”连" }
+	}
+}

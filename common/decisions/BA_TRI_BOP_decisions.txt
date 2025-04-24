@@ -1,0 +1,1549 @@
+TRI_debug_decisions = {
+	TRI_paranoia_system_active = {
+		complete_effect = {
+			BA_TRI_initialize_paranoia_system = yes
+		}
+	}
+	#设置焦点，测试用
+	TRI_set_focus_signing_Eden = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_set_focus_signing_Eden = yes
+			if = {
+				limit = {
+					NOT = { has_focus_tree = TRI_focus_stage_2 }
+				}
+				load_focus_tree = TRI_focus_stage_2
+			}
+		}
+	}
+	#设置焦点，测试用
+	TRI_set_focus_trust_on_current_leader = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_set_focus_trust_on_current_leader = yes
+			if = {
+				limit = {
+					NOT = { has_focus_tree = TRI_focus_stage_2 }
+				}
+				load_focus_tree = TRI_focus_stage_2
+			}
+		}
+	}
+	#设置焦点，测试用
+	TRI_set_focus_Eden_threat = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_set_focus_Eden_threat = yes
+			if = {
+				limit = {
+					NOT = { has_focus_tree = TRI_focus_stage_2 }
+				}
+				load_focus_tree = TRI_focus_stage_2
+			}
+		}
+	}
+	#设置焦点，测试用
+	TRI_set_focus_successful_Eden = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_set_focus_successful_Eden = yes
+			if = {
+				limit = {
+					NOT = { has_focus_tree = TRI_focus_stage_2 }
+				}
+				load_focus_tree = TRI_focus_stage_2
+			}
+		}
+	}
+	add_hawk_5 = {
+		complete_effect = {
+			set_temp_variable = { TRI_policy_change_num = 0.05 }
+			TRI_BOP_change_hardliner_both_parliament = yes
+		}
+	}
+	add_neutral_5 = {
+		complete_effect = {
+			set_temp_variable = { TRI_policy_change_num = -0.02 }
+			TRI_BOP_change_hardliner_both_parliament = yes
+			TRI_BOP_change_moderate_both_parliament = yes
+		}
+	}
+	add_dove_5 = {
+		complete_effect = {
+			set_temp_variable = { TRI_policy_change_num = 0.05 }
+			TRI_BOP_change_moderate_both_parliament = yes
+		}
+	}
+	TRI_Bill_of_carrot_cake_test = {
+		icon = generic_industry
+		complete_effect = {
+			add_ideas = TRI_Bill_of_carrot_cake
+		}
+	}
+	TRI_Bill_of_copper_olive_test = {
+		icon = generic_industry
+		complete_effect = {
+			add_ideas = TRI_Bill_of_copper_olive
+		}
+	}
+	TRI_Bill_of_disclosure_test = {
+		icon = generic_industry
+		complete_effect = {
+			add_to_array = { TRI_passed_bills = token:TRI_Bill_of_disclosure }
+			set_variable = { pass_date@TRI_Bill_of_disclosure = global.date }
+		}
+	}
+	TRI_Bill_of_regaining_trust_test = {
+		icon = generic_industry
+		complete_effect = {
+			add_to_array = { TRI_passed_bills = token:TRI_Bill_of_regaining_trust }
+			set_variable = { pass_date@TRI_Bill_of_regaining_trust = global.date }
+		}
+	}
+	#加10团结度，测试用
+	add_unity_10 = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_unity_increase_10 = yes
+		}
+	}
+	#减10
+	sub_unity_10 = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_unity_decrease_10 = yes
+		}
+	}
+	add_para = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_paranoia_increase_10 = yes
+		}
+	}
+	sub_para = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			TRI_paranoia_decrease_10 = yes
+		}
+	}
+}
+TRI_BOP_system = {
+	TRI_get_patel_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_0 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_0
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_0 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_get_filius_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_1 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_1
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_1 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_get_cootes_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_2 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_2
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_2 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_get_justice_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_3 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_3
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_3 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_get_sisterhood_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_4 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_4
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_4 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_get_knights_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_5 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_5
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_5 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_get_other_details = {
+		visible = {
+			check_variable = { detail_ignored@TRI_parliament_association_6 = 1 }
+			is_in_array = {
+				array = TRI_passed_bills
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = TRI_has_unity
+					UNITY = "2"
+				}
+				check_variable = {
+					TRI_unity > 1.9
+				}
+			}
+		}
+		cost = 20
+		complete_effect = {
+			custom_effect_tooltip = {
+				localization_key = TRI_know_association_details
+				ASSOCIATION = TRI_parliament_association_6
+			}
+			set_variable = { detail_ignored@TRI_parliament_association_6 = 0 }
+			set_temp_variable = { TRI_unity_change = -2 }
+			TRI_change_unity = yes
+		}
+	}
+	TRI_invest_in_region_factory = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_invest_in_region_factory_tt
+				any_controlled_state = {
+					has_variable = TRI_building_goal
+					OR = {
+						check_variable = { TRI_building_goal = building_level@var:TRI_building_goal_type }
+						check_variable = { TRI_building_goal < building_level@var:TRI_building_goal_type }
+					}
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				has_variable = TRI_building_goal
+			}
+		}
+
+		days_mission_timeout = 200
+		is_good = no
+		activation = {
+			any_controlled_state = {
+				has_variable = TRI_building_goal
+			}
+		}
+		timeout_effect = {
+			hidden_effect = {
+				every_controlled_state = {
+					limit = { has_variable = TRI_building_goal }
+					clear_variable = TRI_building_goal
+					clear_variable = TRI_building_goal_type
+				}
+				clear_variable = TRI_building_goal_type
+			}
+			set_temp_variable = { region = TRI_invest_region }
+			set_temp_variable = { stability_change = -0.1 }
+			TRI_change_region_stability = yes
+
+			set_temp_variable = { association = TRI_invest_association }
+			set_temp_variable = { loyalty_change = -0.1 }
+			TRI_parliament_loyalty_change = yes 
+			set_temp_variable = { radicalism_change = 0.05 }
+			TRI_parliament_radicalism_change = yes 
+
+			add_political_power = -30
+			hidden_effect = {
+				country_event = {
+					id = TRI_region.101
+					days = 90
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_controlled_state = {
+					limit = { has_variable = TRI_building_goal }
+					clear_variable = TRI_building_goal
+				}
+				clear_variable = TRI_building_goal_type
+			}
+			set_temp_variable = { region = TRI_invest_region }
+			set_temp_variable = { stability_change = 0.05 }
+			TRI_change_region_stability = yes
+			
+			set_temp_variable = { association = TRI_invest_association }
+			set_temp_variable = { loyalty_change = 0.1 }
+			TRI_parliament_loyalty_change = yes 
+			set_temp_variable = { radicalism_change = -0.1 }
+			TRI_parliament_radicalism_change = yes 
+
+			add_political_power = 20
+			hidden_effect = {
+				country_event = {
+					id = TRI_region.101
+					days = 90
+				}
+			}
+		}
+	}
+	#委派更多权利
+	TRI_BOP_transfer_right = {
+		# visible = {
+		# 	has_variable = TRI_parliament_focus
+		# }
+		available = {
+			has_country_flag = TRI_rebuild_communication_channel
+		}
+		complete_effect = {
+			if = {
+				limit = { check_variable = { TRI_BOP_transfer_right_effect_factor < 4 } }
+				multiply_variable = { TRI_BOP_transfer_right_effect_factor = 2 }
+			}
+			country_event = TRI_BOP_decision.1
+		}
+	}
+	#确保可控状态
+	TRI_BOP_strengthen_control = {
+		# visible = {
+		# 	has_variable = TRI_parliament_focus
+		# }
+		available = {
+			has_country_flag = TRI_rebuild_communication_channel
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_BOP_strengthen_control_trigger_tt
+				OR = {
+					check_variable = { BOP_conservative@BA_TRI_senate_seat < 16 }
+					check_variable = { BOP_conservative@BA_TRI_house_seat < 51 }
+				}
+			}
+		}
+		complete_effect = {
+			country_event = TRI_BOP_decision.2
+		}
+	}
+	#确保宣传口径
+	TRI_BOP_ensure_propaganda = {
+		visible = {
+			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
+		}
+		available = {
+			has_country_flag = TRI_rebuild_communication_channel
+		}
+		complete_effect = {
+			for_each_loop = {
+				array = BA_TRI_non_against_association
+				value = v
+				if = {
+					limit = { check_variable = { resistance@var:v > 0.4 } }
+					set_temp_variable = { radicalism_change = 0.4 }
+					subtract_from_variable = { radicalism_change = resistance@var:v }
+					clamp_variable = {
+						var = radicalism_change
+						min = -0.05
+						max = 0
+					}
+					TRI_parliament_radicalism_change = yes
+				}
+			}
+			country_event = TRI_BOP_decision.3
+		}
+	}
+	#控制资源分配
+	TRI_BOP_resource_distribution = {
+		visible = {
+			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
+		}
+		available = {
+			has_country_flag = TRI_rebuild_communication_channel
+		}
+		complete_effect = {
+			country_event = TRI_BOP_decision.4
+		}
+	}
+	#圣三一再生产运动
+	TRI_reproduction_movement = {
+		visible = {
+			has_completed_focus = TRI_expand_reproduction
+		}
+		days_re_enable = 60
+		days_remove = 180
+		cost = 50
+		modifier = {
+			country_resource_resources_rm = 5
+		}
+	}
+	#联合演习
+	TRI_joint_exercise = {
+		priority = 1000
+		is_good = yes
+		activation = {
+			has_completed_focus = TRI_multi_association_exercise
+		}
+		available = { 
+			# any_country_division = {
+				
+			# }
+			has_army_experience > 50
+			command_power > 80
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		complete_effect = {
+			army_experience = -50
+			add_command_power = -80
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				category = land_doctrine
+			}
+			#班组火力科研提速卡50%x1
+			add_tech_bonus = {
+				category = fire_support
+				bonus = 0.5
+			}
+			custom_effect_tooltip = TRI_joint_exercise_tt
+			add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
+			add_to_variable = { TRI_trinity_military_experience_loss_factor = -0.1 }
+
+		}
+	}
+}
+TRI_region_interaction_decisions_category = {
+	#灾后重建津贴
+		TRI_switch_rebuilding_subsidy_decision = {
+			visible = {
+				has_country_flag = TRI_rebuilding_subsidy
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_rebuilding_subsidy_visible }
+					clr_country_flag = TRI_rebuilding_subsidy_visible
+				}
+				else = {
+					set_country_flag = TRI_rebuilding_subsidy_visible
+				}
+				
+			}
+		}
+		TRI_rebuilding_subsidy_decision = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {  is_controlled_by = ROOT }
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_rebuilding_subsidy_visible
+				has_country_flag = TRI_rebuilding_subsidy
+				FROM = {
+					NOT = { has_state_flag = TRI_rebuilding_subsidy_fired }
+				}
+			}
+			available = {
+				command_power > 9.9
+			}
+			cost = 25
+			days_remove = 7
+			complete_effect = {
+				add_command_power = -10
+			}
+			remove_effect = {
+				every_controlled_state = {
+					limit = {
+						check_variable = { state_region = PREV.FROM.state_region }
+					}
+					add_dynamic_modifier = {
+						modifier = TRI_rebuilding_subsidy_modifier
+						days = 180
+					}
+					custom_effect_tooltip = TRI_rebuilding_subsidy_decisions_tt
+					effect_tooltip = {
+						add_extra_state_shared_building_slots = 1
+					}
+					set_state_flag = TRI_rebuilding_subsidy_fired
+					hidden_effect = {
+						state_event = {
+							id = TRI_region.200
+							days = 180
+							trigger_for = controller
+						}
+					}
+				}
+				set_temp_variable = { region = FROM.state_region }
+				set_temp_variable = { association = ruling_association@FROM.state_region }
+				set_temp_variable = { influence_change = 3 }
+				TRI_change_region_association_influence = yes
+				add_to_variable = { TRI_rebuilding_subsidy_fire_count = 1 }
+			}
+		}
+	#茶话会直属炮兵部队建设
+		TRI_switch_tea_party_artillery_recruiting = {
+			visible = {
+				has_country_flag = TRI_standing_guard
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_tea_party_artillery_recruiting_visible }
+					clr_country_flag = TRI_tea_party_artillery_recruiting_visible
+				}
+				else = {
+					set_country_flag = TRI_tea_party_artillery_recruiting_visible
+				}
+				
+			}
+		}
+		TRI_tea_party_artillery_recruiting = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {  is_controlled_by = ROOT }
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_tea_party_artillery_recruiting_visible
+				has_country_flag = TRI_standing_guard
+				check_variable = { TRI_tea_party_artillery_recruiting_use > 0 }
+			}
+			available = {
+				num_of_civilian_factories_available_for_projects > 0
+				num_of_military_factories > 0
+				custom_override_tooltip = {
+					tooltip = TRI_tea_party_artillery_recruiting_use_tt
+					check_variable = { TRI_tea_party_artillery_recruiting_use > 0 }
+				}
+			}
+			days_remove = 30
+			modifier = {
+				civilian_factory_use = 1
+				military_factory_donations = -1
+			}
+			complete_effect = {
+				subtract_from_variable = { TRI_tea_party_artillery_recruiting_use = 1 }
+			}
+			remove_effect = {
+				custom_effect_tooltip = TRI_tea_party_artillery_recruiting_tt
+				add_to_variable = { TRI_tea_party_artillery_cap = 2 }
+				add_to_variable = { TRI_tea_party_artillery_recruiting_count = 1 }
+				if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 2 }
+					}
+					add_ideas = TRI_tea_party_artillery_1
+				}
+				else_if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 5 }
+						has_idea = TRI_tea_party_artillery_1
+					}
+					swap_ideas = {
+						remove_idea = TRI_tea_party_artillery_1
+						add_idea = TRI_tea_party_artillery_2
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 8 }
+						has_idea = TRI_tea_party_artillery_2
+					}
+					swap_ideas = {
+						remove_idea = TRI_tea_party_artillery_2
+						add_idea = TRI_tea_party_artillery_3
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 11 }
+						has_idea = TRI_tea_party_artillery_3
+					}
+					swap_ideas = {
+						remove_idea = TRI_tea_party_artillery_3
+						add_idea = TRI_tea_party_artillery_4
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 14 }
+						has_idea = TRI_tea_party_artillery_4
+					}
+					swap_ideas = {
+						remove_idea = TRI_tea_party_artillery_4
+						add_idea = TRI_tea_party_artillery_5
+					}
+				}
+			}
+		}
+	#征募守护者
+		TRI_switch_mobilize_guardians = {
+			visible = {
+				has_country_flag = TRI_mobilize_guardians
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_mobilize_guardians_visible }
+					clr_country_flag = TRI_mobilize_guardians_visible
+				}
+				else = {
+					set_country_flag = TRI_mobilize_guardians_visible
+				}
+				
+			}
+		}
+		TRI_mobilize_guardians = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = { is_controlled_by = ROOT }
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_mobilize_guardians_visible
+				has_country_flag = TRI_mobilize_guardians
+			}
+			available = {
+				if = {
+					limit = { 
+						FROM = { TRI_is_tea_party_state = no }
+					}
+					has_equipment = { infantry_equipment > 3999 }
+					has_equipment = { support_equipment > 499 }
+					has_equipment = { light_fire_support_equipment > 599 }
+				}
+			}
+			cost = 25
+			days_remove = 7
+			days_re_enable = 70
+			complete_effect = {
+				if = {
+					limit = {
+						FROM = { TRI_is_tea_party_state = no }
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -4000
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = -500
+					}
+					add_equipment_to_stockpile = {
+						type = light_fire_support_equipment
+						amount = -600
+					}
+				}
+			}
+			remove_effect = {
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = 0.02 }
+				TRI_parliament_loyalty_change = yes
+				if = {
+					limit = {
+						FROM = { TRI_is_tea_party_state = no }
+					}
+					custom_effect_tooltip = TRI_mobilize_guardians_tt
+					hidden_effect = {
+						if = {
+							limit = { has_completed_focus = TRI_mass_army }
+							if = {
+								limit = { NOT = { has_template = "社团加强卫戍连" } }
+								division_template = {
+									name = "社团加强卫戍连"
+									is_locked = yes
+									force_allow_recruiting = no
+									regiments = {
+										infantry = { x = 0 y = 0 }
+										infantry = { x = 0 y = 1 }
+										infantry = { x = 0 y = 2 }
+										infantry = { x = 0 y = 3 }
+										infantry = { x = 0 y = 4 }
+										infantry = { x = 1 y = 0 }
+										infantry = { x = 1 y = 1 }
+										fire_support_team_la = { x = 2 y = 0 }
+										fire_support_team_la = { x = 2 y = 1 }
+										fire_support_team_la = { x = 2 y = 2 }
+									}
+									support = {
+										field_hospital = { x = 0 y = 0 }
+										recon = { x = 0 y = 1 }
+									}
+								}
+							}
+							FROM = {
+								create_unit = {
+									division = "name = \"社团加强卫戍连\" division_template = \"社团加强卫戍连\" start_experience_factor = 0.6 start_equipment_factor = 0.9 start_manpower_factor = 0.9 "
+									count = 3
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_template = "社团卫戍连" } }
+								division_template = {
+									name = "社团卫戍连"
+									is_locked = yes
+									force_allow_recruiting = no
+									regiments = {
+										infantry = { x = 0 y = 0 }
+										infantry = { x = 0 y = 1 }
+										infantry = { x = 0 y = 2 }
+										infantry = { x = 0 y = 3 }
+										infantry = { x = 0 y = 4 }
+										fire_support_team_la = { x = 1 y = 0 }
+									}
+									support = {
+										field_hospital = { x = 0 y = 0 }
+									}
+								}
+							}
+							FROM = {
+								create_unit = {
+									division = "name = \"社团卫戍连\" division_template = \"社团卫戍连\" start_experience_factor = 0.4 start_equipment_factor = 0.9 start_manpower_factor = 0.9 "
+									count = 3
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = TRI_mobilize_guardians_on_tea_party_tt
+				}
+			}
+		}
+	#集结护校军
+		TRI_switch_mobilize_elites = {
+			visible = {
+				has_country_flag = TRI_mobilize_elites
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_mobilize_elites_visible }
+					clr_country_flag = TRI_mobilize_elites_visible
+				}
+				else = {
+					set_country_flag = TRI_mobilize_elites_visible
+				}
+				
+			}
+		}
+		TRI_mobilize_elites = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = { is_controlled_by = ROOT }
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_mobilize_elites_visible
+				has_country_flag = TRI_mobilize_elites
+			}
+			available = {
+				if = {
+					limit = { 
+						FROM = { TRI_is_tea_party_state = no }
+					}
+					command_power > 74.9
+				}
+			}
+			cost = 50
+			days_remove = 7
+			days_re_enable = 70
+			complete_effect = {
+				if = {
+					limit = {
+						FROM = { TRI_is_tea_party_state = yes }
+					}
+					add_command_power = -75
+				}
+			}
+			remove_effect = {
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = 0.02 }
+				TRI_parliament_loyalty_change = yes
+				if = {
+					limit = {
+						FROM = { TRI_is_tea_party_state = yes }
+					}
+					custom_effect_tooltip = TRI_mobilize_elites_tt
+					hidden_effect = {
+						if = {
+							limit = { NOT = { has_template = "茶会护校军" } }
+							division_template = {
+								name = "茶会护校军"
+								is_locked = yes
+								force_allow_recruiting = no
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 0 y = 3 }
+									infantry = { x = 0 y = 4 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+									fire_support_team_la = { x = 2 y = 0 }
+									fire_support_team_la = { x = 2 y = 1 }
+									fire_support_team_la = { x = 2 y = 2 }
+									fire_support_team_la = { x = 2 y = 3 }
+									medium_sp_artillery_brigade = { x = 3 y = 0 }
+								}
+								support = {
+									logistics_company = { x = 0 y = 0 }
+									recon = { x = 0 y = 1 }
+								}
+							}
+						}
+						if = {
+							limit = { has_completed_focus = TRI_elite_army }
+							FROM = {
+								create_unit = {
+									division = "name = \"茶会护校军\" division_template = \"茶会护校军\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1 "
+									count = 2
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+						else = {
+							FROM = {
+								create_unit = {
+									division = "name = \"茶会护校军\" division_template = \"茶会护校军\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1 "
+									count = 1
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+					}
+				}
+				else = {
+					custom_effect_tooltip = TRI_mobilize_elites_on_association_tt
+				}
+			}
+		}
+	#增派部队
+		TRI_switch_send_more_troops = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_send_more_troops_visible }
+					clr_country_flag = TRI_send_more_troops_visible
+				}
+				else = {
+					set_country_flag = TRI_send_more_troops_visible
+				}
+				
+			}
+		}
+		TRI_send_more_troops = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {  is_controlled_by = ROOT }
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_send_more_troops_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_send_more_troops_ongoing }
+			}
+			available = {
+				has_equipment = { infantry_equipment > 199 }
+				has_manpower > 199
+				command_power > 10
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_send_more_troops_ongoing }
+				}
+			}
+			days_remove = 14
+			complete_effect = {
+				set_country_flag = TRI_send_more_troops_ongoing
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -200
+				}
+				add_manpower = -200
+				add_command_power = -10
+			}
+			remove_effect = {
+				clr_country_flag = TRI_send_more_troops_ongoing
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = -0.1 }
+				TRI_parliament_loyalty_change = yes
+				set_temp_variable = { radicalism_change = -0.2 }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	#减少物资调配
+		TRI_switch_deploy_less_materials = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_deploy_less_materials_visible }
+					clr_country_flag = TRI_deploy_less_materials_visible
+				}
+				else = {
+					set_country_flag = TRI_deploy_less_materials_visible
+				}
+				
+			}
+		}
+		TRI_deploy_less_materials = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = { 
+					is_controlled_by = ROOT
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = TRI_state_less_material
+						}
+					}
+				}
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_deploy_less_materials_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_deploy_less_materials_ongoing }
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_deploy_less_materials_ongoing }
+				}
+			}
+			cost = 25
+			days_remove = 14
+			complete_effect = {
+				set_country_flag = TRI_deploy_less_materials_ongoing
+			}
+			remove_effect = {
+				clr_country_flag = TRI_deploy_less_materials_ongoing
+				every_controlled_state = {
+					limit = {
+						check_variable = { state_region = PREV.FROM.state_region }
+					}
+					add_dynamic_modifier = {
+						modifier = TRI_state_less_material
+						days = 120
+					}
+				}
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = -0.05 }
+				TRI_parliament_loyalty_change = yes
+				set_temp_variable = { radicalism_change = -0.1 }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	#加强地区监控
+		TRI_switch_strengthen_state_monitor = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_strengthen_state_monitor_visible }
+					clr_country_flag = TRI_strengthen_state_monitor_visible
+				}
+				else = {
+					set_country_flag = TRI_strengthen_state_monitor_visible
+				}
+				
+			}
+		}
+		TRI_strengthen_state_monitor = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_strengthen_state_monitor_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_strengthen_state_monitor_ongoing }
+			}
+			available = {
+				command_power > 20
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_strengthen_state_monitor_ongoing }
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_region_stability_lower_than_tt
+						STABILITY = 97.5
+					}
+					OR = {
+						check_variable = { region_stability@var:FROM.state_region < 0.975 }
+						check_variable = { region_stability@var:FROM.state_region = 0.975 }
+					}
+				}
+			}
+			cost = 25
+			days_remove = 14
+			complete_effect = {
+				set_country_flag = TRI_strengthen_state_monitor_ongoing
+			}
+			remove_effect = {
+				clr_country_flag = TRI_strengthen_state_monitor_ongoing
+				add_command_power = -20
+				set_temp_variable = { region = FROM.state_region }
+				set_temp_variable = { stability_change = 0.025 }
+				TRI_change_region_stability = yes
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = -0.05 }
+				TRI_parliament_loyalty_change = yes
+				set_temp_variable = { radicalism_change = -0.1 }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	#增加物资调配
+		TRI_switch_deploy_more_materials = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_deploy_more_materials_visible }
+					clr_country_flag = TRI_deploy_more_materials_visible
+				}
+				else = {
+					set_country_flag = TRI_deploy_more_materials_visible
+				}
+				
+			}
+		}
+		TRI_deploy_more_materials = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = { 
+					is_controlled_by = ROOT
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = TRI_state_more_material
+						}
+					}
+				}
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_deploy_more_materials_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_deploy_more_materials_ongoing }
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_deploy_more_materials_ongoing }
+				}
+			}
+			cost = 50
+			days_remove = 14
+			complete_effect = {
+				set_country_flag = TRI_deploy_more_materials_ongoing
+			}
+			remove_effect = {
+				clr_country_flag = TRI_deploy_more_materials_ongoing
+				every_controlled_state = {
+					limit = {
+						check_variable = { state_region = PREV.FROM.state_region }
+					}
+					add_dynamic_modifier = {
+						modifier = TRI_state_more_material
+						days = 120
+					}
+				}
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = 0.05 }
+				TRI_parliament_loyalty_change = yes
+				set_temp_variable = { radicalism_change = -0.1 }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	#提升地区政治地位
+		TRI_switch_promote_political_status = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_promote_political_status_visible }
+					clr_country_flag = TRI_promote_political_status_visible
+				}
+				else = {
+					set_country_flag = TRI_promote_political_status_visible
+				}
+				
+			}
+		}
+		TRI_promote_political_status = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_promote_political_status_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_promote_political_status_ongoing }
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_unity
+						UNITY = "2"
+					}
+					check_variable = {
+						TRI_unity > 1.9
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_promote_political_status_ongoing }
+				}
+			}
+			cost = 25
+			days_remove = 14
+			complete_effect = {
+				set_country_flag = TRI_promote_political_status_ongoing
+			}
+			remove_effect = {
+				clr_country_flag = TRI_promote_political_status_ongoing
+				set_temp_variable = { TRI_unity_change = -2 }
+				TRI_change_unity = yes
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = 0.05 }
+				TRI_parliament_loyalty_change = yes
+				set_temp_variable = { radicalism_change = -0.1 }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	#为当地社团输送新的装备
+		TRI_switch_send_equipments_to_association = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_send_equipments_to_association_visible }
+					clr_country_flag = TRI_send_equipments_to_association_visible
+				}
+				else = {
+					set_country_flag = TRI_send_equipments_to_association_visible
+				}
+				
+			}
+		}
+		TRI_send_equipments_to_association = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {  is_controlled_by = ROOT }
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_send_equipments_to_association_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_send_equipments_to_association_ongoing }
+			}
+			available = {
+				has_equipment = { infantry_equipment > 749 }
+				has_equipment = { light_fire_support_equipment > 49 }
+				command_power > 14.9
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_send_equipments_to_association_ongoing }
+				}
+			}
+			days_remove = 70
+			complete_effect = {
+				set_country_flag = TRI_send_equipments_to_association_ongoing
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -750
+				}
+				add_equipment_to_stockpile = {
+					type = light_fire_support_equipment
+					amount = -50
+				}
+				add_command_power = -15
+			}
+			remove_effect = {
+				clr_country_flag = TRI_send_equipments_to_association_ongoing
+				
+				set_temp_variable = { loyalty_change = 0.1 }
+				set_temp_variable = { radicalism_change = -0.15 }
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				if = {
+					limit = { check_variable = { association = token:TRI_parliament_association_3 } }
+					add_to_temp_variable = { loyalty_change = 0.05 }
+					add_to_temp_variable = { radicalism_change = -0.05 }
+				}
+				else = {
+					custom_effect_tooltip = TRI_send_equipments_to_association_tt
+				}
+				TRI_parliament_loyalty_change = yes
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	
+	#完善地区医疗设施
+		TRI_switch_improve_medical_facilities = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_improve_medical_facilities_visible }
+					clr_country_flag = TRI_improve_medical_facilities_visible
+				}
+				else = {
+					set_country_flag = TRI_improve_medical_facilities_visible
+				}
+				
+			}
+		}
+		TRI_improve_medical_facilities = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {  is_controlled_by = ROOT }
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_and_decisions_view
+			visible = {
+				has_country_flag = TRI_improve_medical_facilities_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_improve_medical_facilities_ongoing }
+			}
+			available = {
+				has_equipment = { support_equipment > 199 }
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_improve_medical_facilities_ongoing }
+				}
+			}
+			cost = 75
+			days_remove = 70
+			complete_effect = {
+				set_country_flag = TRI_improve_medical_facilities_ongoing
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -200
+				}
+			}
+			remove_effect = {
+				clr_country_flag = TRI_improve_medical_facilities_ongoing
+				add_tech_bonus = {
+					category = support
+					bonus = 1
+				}
+				set_temp_variable = { loyalty_change = 0.1 }
+				set_temp_variable = { radicalism_change = -0.15 }
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				if = {
+					limit = { check_variable = { association = token:TRI_parliament_association_5 } }
+					add_to_temp_variable = { loyalty_change = 0.05 }
+					add_to_temp_variable = { radicalism_change = -0.05 }
+				}
+				else = {
+					custom_effect_tooltip = TRI_improve_medical_facilities_tt
+				}
+				TRI_parliament_loyalty_change = yes
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	#扩建本地教堂
+	TRI_switch_expand_church = {
+		visible = {
+			has_country_flag = TRI_hear_and_command
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TRI_expand_church_visible }
+				clr_country_flag = TRI_expand_church_visible
+			}
+			else = {
+				set_country_flag = TRI_expand_church_visible
+			}
+			
+		}
+	}
+	TRI_expand_church = {
+		state_target = yes
+		target_array = TRI_region_present_state
+		target_trigger = {
+			FROM = {  is_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				check_variable = { state_region = PREV.FROM.state_region }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		visible = {
+			has_country_flag = TRI_expand_church_visible
+			has_country_flag = TRI_hear_and_command
+			NOT = { has_country_flag = TRI_expand_church_ongoing }
+		}
+		available = {
+			has_equipment = { support_equipment > 199 }
+			custom_override_tooltip = {
+				tooltip = only_one_state_same_time
+				NOT = { has_country_flag = TRI_expand_church_ongoing }
+			}
+		}
+		cost = 100
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = TRI_expand_church_ongoing
+		}
+		remove_effect = {
+			clr_country_flag = TRI_expand_church_ongoing
+			random_controlled_state = {
+				limit = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_controlled_state = {
+				limit = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_temp_variable = { loyalty_change = 0.1 }
+			set_temp_variable = { radicalism_change = -0.15 }
+			set_temp_variable = { region = FROM.state_region }
+			TRI_region_get_ruling_association = yes
+			if = {
+				limit = { check_variable = { association = token:TRI_parliament_association_5 } }
+				add_to_temp_variable = { loyalty_change = 0.05 }
+				add_to_temp_variable = { radicalism_change = -0.05 }
+			}
+			else = {
+				custom_effect_tooltip = TRI_expand_church_tt
+			}
+			TRI_parliament_loyalty_change = yes
+			TRI_parliament_radicalism_change = yes
+		}
+	}
+}

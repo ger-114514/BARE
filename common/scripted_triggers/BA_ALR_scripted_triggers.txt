@@ -1,0 +1,89 @@
+ARI_is_arius_state = {
+	OR = {
+		state = 136
+		state = 137
+		state = 138
+		state = 139
+		state = 530
+		state = 531
+		state = 532
+	}
+}
+# ALR_state_influence_rank_2 = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_state_influence_rank_2_tt
+# 		check_variable = { ALR_state_influence_rank > 1 }
+# 	}
+# }
+# ALR_state_influence_rank_3 = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_state_influence_rank_3_tt
+# 		check_variable = { ALR_state_influence_rank > 2 }
+# 	}
+# }
+# ALR_state_influence_rank_4 = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_state_influence_rank_4_tt
+# 		check_variable = { ALR_state_influence_rank > 3 }
+# 	}
+# }
+# ALR_has_5_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_5_supply_tt
+# 		check_variable = { ALR_supply > 4 }
+# 	}
+# }
+# ALR_has_10_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_10_supply_tt
+# 		check_variable = { ALR_supply > 9 }
+# 	}
+# }
+# ALR_has_20_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_20_supply_tt
+# 		check_variable = { ALR_supply > 19 }
+# 	}
+# }
+# ALR_has_40_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_40_supply_tt
+# 		check_variable = { ALR_supply > 39 }
+# 	}
+# }
+# ALR_has_50_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_50_supply_tt
+# 		check_variable = { ALR_supply > 49 }
+# 	}
+# }
+# ALR_has_60_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_60_supply_tt
+# 		check_variable = { ALR_supply > 59 }
+# 	}
+# }
+# ALR_has_100_supply = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_100_supply_tt
+# 		check_variable = { ALR_supply > 99 }
+# 	}
+# }
+# ALR_has_10_weapon = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_10_weapon_tt
+# 		check_variable = { ALR_weapon > 9 }
+# 	}
+# }
+# ALR_has_20_weapon = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_20_weapon_tt
+# 		check_variable = { ALR_weapon > 19 }
+# 	}
+# }
+# ALR_has_100_weapon = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = ALR_has_100_weapon_tt
+# 		check_variable = { ALR_weapon > 99 }
+# 	}
+# }

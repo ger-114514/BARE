@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+		CAP_SiRenJvnShiChengBaoShang = { #私人军事承包商
+			picture = unkown
+
+			modifier = {
+				industrial_capacity_factory = 0.1 #工厂产出
+				consumer_goods_factor = -0.05 #生活消费品系数
+				production_speed_arms_factory_factor = 0.1 #军工建造速度
+				send_volunteer_size = 4 #志愿军数量上限
+			}
+		}
+		CAP_JingRuiGuYongBing = { #精锐雇佣兵
+			picture = unkown
+			
+			modifier = {
+				army_org_factor = 0.15 #陆军组织度
+				special_forces_cap = 0.04 #特种部队上限
+				land_reinforce_rate = 0.02 #增援率
+			}
+		}
+		CAP_ShaMoZhiYang = { #沙漠之疡
+			picture = unkown
+
+			modifier = {
+				stability_factor = -0.05 #稳定度
+				war_support_factor = -0.15 #战争支持度
+			}
+		}
+	}
+}

@@ -1,0 +1,141 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+ARI_Inf_01 = {
+	name = "阿里乌斯突击中队"
+
+	for_countries = { ARI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "阿里乌斯第%d突击中队"
+
+	ordered =
+	{
+		1 = { "阿里乌斯第1“巴扎洛夫”突击中队" }
+		2 = { "阿里乌斯第2“左拉”突击中队" }
+		3 = { "阿里乌斯第3“苏沃林”突击中队" }
+		4 = { "阿里乌斯第4“加缪”突击中队" }
+		5 = { "阿里乌斯第5“库尔特”突击中队" }
+		6 = { "阿里乌斯第6“日落之旗”突击中队" }
+		7 = { "阿里乌斯第7“霍利维尔”突击中队" }
+		8 = { "阿里乌斯第8“帕拉尼克”突击中队" }
+	}
+}
+
+ARI_Ifv_01 = {
+	name = "阿里乌斯机械化中队"
+
+	for_countries = { ARI }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "阿里乌斯机械化第%d杀戮中队"
+
+	ordered =
+	{
+		1 = { "阿里乌斯机械化第1“嗜血者”杀戮中队" }
+		2 = { "阿里乌斯机械化第2“战乱使徒”杀戮中队" }
+		3 = { "阿里乌斯机械化第3“地狱魔刃”杀戮中队" }
+		4 = { "阿里乌斯机械化第4“灵魂猎手”杀戮中队" }
+		5 = { "阿里乌斯机械化第5“复仇之犬”杀戮中队" }
+		6 = { "阿里乌斯机械化第6“狠毒恶魔”杀戮中队" }
+		7 = { "阿里乌斯机械化第7“掠血者”杀戮中队" }
+		8 = { "阿里乌斯机械化第8“血腥之女”杀戮中队" }
+	}
+}
+
+ARI_LA_01 = {
+	name = "阿里乌斯装甲中队"
+
+	for_countries = { ARI }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+	fallback_name = "贝阿朵莉切近卫装甲第%d中队"
+
+	ordered =
+	{
+		1 = { "贝阿朵莉切近卫装甲第1“戈拉尼”中队" }
+		2 = { "贝阿朵莉切近卫装甲第2“吉瓦蒂”中队" }
+		3 = { "贝阿朵莉切近卫装甲第3“纳哈尔”中队" }
+		4 = { "贝阿朵莉切近卫装甲第4“哈雷尔”中队" }
+		5 = { "贝阿朵莉切近卫装甲第5“加沙”中队" }
+		6 = { "贝阿朵莉切近卫装甲第6“西奈”中队" }
+	}
+}
+
+ARI_Infs_01 = {
+	name = "阿里乌斯特战小队"
+
+	for_countries = { ARI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "贝阿朵莉切直属特战第%d小队"
+
+	ordered =
+	{
+		1 = { "贝阿朵莉切直属特战第1“尼利”小队" }
+		2 = { "贝阿朵莉切直属特战第2“辛贝特”小队" }
+		3 = { "贝阿朵莉切直属特战第3“摩萨德”小队" }
+		4 = { "贝阿朵莉切直属特战第4“锡安”小队" }
+		5 = { "贝阿朵莉切直属特战第5“哈加纳”小队" }
+		6 = { "贝阿朵莉切直属特战第6“沙亚”小队" }
+	}
+}
+
+ARI_Infs_02 = {
+	name = "圣徒会大队"
+
+	for_countries = { ARI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "阿里乌斯圣徒会第%d大队"
+
+	ordered =
+	{
+		1 = { "阿里乌斯圣徒会第1“圣思嘉”大队" }
+		2 = { "阿里乌斯圣徒会第2“露德圣母”大队" }
+		3 = { "阿里乌斯圣徒会第3“伯尔都亚”大队" }
+		4 = { "阿里乌斯圣徒会第4“斐尼丝”大队" }
+		5 = { "阿里乌斯圣徒会第5“加大利纳”大队" }
+		6 = { "阿里乌斯圣徒会第6“巴尔巴拉”大队" }
+		7 = { "阿里乌斯圣徒会第7“佳兰”大队" }
+		8 = { "阿里乌斯圣徒会第8“贞德”大队" }
+	}
+}

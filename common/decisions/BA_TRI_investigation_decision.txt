@@ -1,0 +1,164 @@
+#GUI3的AI决议
+TRI_ai_bukebu_inv_decisions_categories = {
+
+	#每7天随机调查
+	TRI_ai_random_bukebu_inv = {
+		icon = generic_industry
+		allowed = {
+			original_tag = TRI
+			is_ai = yes
+			has_country_flag = TRY_investigate_available
+		}
+		fire_only_once = no
+		days_remove = 6 #7-1，因为决议要在下一天才回复
+		cost = 0
+
+		remove_effect = {
+			random_list = {
+				10 = {
+					#调查小春成功，减少偏执度
+					set_country_flag = koharu_invest_success
+				}
+				10 = {
+					#同上
+					set_country_flag = azusa_invest_success
+				}
+				10 = {
+					set_country_flag = hanako_invest_success
+				}
+				10 = {
+					set_country_flag = hifumi_invest_success
+				}
+				10 = {
+					#什么都不发生
+				}
+				10 = {
+					#略微增加偏执度
+				}
+			}
+		}
+
+		#反正AI肯定会点
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}
+TRI_church_investigation = {
+	TRI_church_missile = { #调查导弹技术
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_church_investigation
+		}
+		fire_only_once = yes
+		days_remove = 3
+
+		remove_effect = {
+			set_country_flag = TRI_church_investigation_1
+		}
+	}
+	TRI_church_missile_location = { #调查导弹发射位置
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_church_investigation_1
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			set_country_flag = TRI_church_investigation_2
+			country_event = TRI_events.300
+		}
+	}
+	TRI_church_arrangement = { #重新整理古圣堂袭击事件
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_church_investigation_2
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			country_event = TRI_events.301
+			clr_country_flag = TRI_church_investigation
+			clr_country_flag = TRI_church_investigation_1
+			clr_country_flag = TRI_church_investigation_2
+		}
+	}
+}
+TRI_mika_investigation = {
+	TRI_mika_motivation = { #询问动机
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_mika_arrested
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			country_event = TRI_events.400
+		}
+	}
+	TRI_mika_what_she_did = { #询问圣园未花做了什么
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_mika_investigation_1
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			country_event = TRI_events.401
+		set_country_flag = TRI_mika_investigation_2
+		}
+	}
+	TRI_mika_what_she_would_do = { #询问后续计划
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_mika_investigation_2
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			country_event = TRI_events.402
+			set_country_flag = TRI_mika_investigation_3
+		}
+	}
+	TRI_mika_motivation_2 = { #进一步询问动机
+		ai_will_do = {
+			base = 100
+		}
+
+		visible = {
+			has_country_flag = TRI_mika_investigation_2
+		}
+		fire_only_once = yes
+		days_remove = 2
+
+		remove_effect = {
+			country_event = TRI_events.403
+			clr_country_flag = TRI_mika_investigation_1
+			clr_country_flag = TRI_mika_investigation_2
+		}
+	}
+}

@@ -1,0 +1,184 @@
+# ALR_resistance_decisions = {
+# 	icon = generic_research
+# 	visible = {
+# 		original_tag = ALR
+# 		has_country_flag = ALR_resistance_system_actived
+# 	}
+# 	scripted_gui = ALR_resistance_window	
+# 	priority = 1001
+# 	visible_when_empty = yes
+# }
+# ALR_military_operation_decisions = {
+# 	icon = generic_research
+# 	visible = {
+# 		original_tag = ALR
+# 		has_country_flag = ALR_military_operation_decisions_available
+# 	}
+# 	priority = 1000
+# }
+# ALR_base_construction_decisions = {
+# 	icon = generic_research
+# 	visible = {
+# 		original_tag = ALR
+# 		has_country_flag = ALR_base_construction_system_actived
+# 	}
+# 	scripted_gui = ALR_base_construction_window	
+# 	priority = 999
+# 	visible_when_empty = yes
+# }
+# ALR_education_in_flame_decisions = {
+# 	icon = generic_research
+# 	visible = {
+# 		original_tag = ALR
+# 		has_completed_focus = ALR_base_education_1
+# 	}
+# 	priority = 100
+# }
+ARI_suppression_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+		has_country_flag = ARI_suppression_available
+	}
+	scripted_gui = ARI_suppression_window	
+	priority = 1001
+	visible_when_empty = yes
+}
+ARI_outside_recon = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+	}
+	priority = 101
+}
+ARI_mystic_research_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_royal_blood
+	}
+	priority = 101
+}
+ARI_foreign_operations_decisions = {
+	icon = generic_research
+	visible_when_empty = yes
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_new_guide
+		NOT = { has_country_flag = ARI_lock_foreign_operation }
+	}
+	priority = 100
+}
+ARI_trade_with_Gematria_decisions = {
+	icon = generic_research
+	scripted_gui = BARE_ARI_Resource_SG
+	visible_when_empty = yes
+	visible = {
+		original_tag = ARI
+		has_dynamic_modifier = {
+			modifier = ARI_Gematria_member
+		}
+		has_country_flag = ARI_outside_recon_fired
+		has_completed_focus = ARI_black_suit
+	}
+	priority = 99
+}
+
+ARI_black_market_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+		has_country_flag = ARI_black_market_available
+		has_country_flag = ARI_outside_recon_fired
+	}
+	priority = 98
+}
+ARI_deal_with_shortage_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_deal_with_shortage
+	}
+	priority = 98
+}
+ARI_raw_material_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+	}
+	priority = 98
+}
+ARI_equipments_development_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+	}
+	priority = 98
+}
+ARI_special_training_decisions = {
+	icon = generic_research
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_Sparta_discipline
+	}
+	priority = 98
+}
+
+###力量追求决议组###
+ARI_power_chaser_decisions = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_Sparta_discipline
+	}
+	priority = 1098
+
+}
+
+###旅者行动善后决议组###
+ARI_traveller_operation_caretaking_decisions = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_traveller_operation
+		OR = {
+			has_idea = ARI_catastrophic_traveller_operation
+			has_idea = ARI_lesson_traveller_operation
+		}
+	}
+	priority = 1098
+
+}
+
+###乐园行动准备决议组###
+ARI_preparation_of_operation_eden_decisions = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_prepare_operation_eden
+		NOT = { has_completed_focus = ARI_time_for_final_action }
+	}
+	priority = 1098
+}
+
+###乐园行动参战决议组###
+ARI_suppress_resistance_eden_decisions = {
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = ARI
+		has_completed_focus = ARI_time_for_final_action
+	}
+	priority = 1098
+}

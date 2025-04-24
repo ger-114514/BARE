@@ -1,0 +1,221 @@
+TRI_paranoia_system = {
+	#每周偏执度变化
+	TRI_paranoia_weekly_change = {
+		priority = 1000
+		is_good = no
+		available = { always = no }
+		activation = {
+			hidden_trigger = {
+				has_country_flag = TRI_paranoia_system_active
+				NOT = { has_country_flag = TRI_paranoia_weekly_change_disabled }
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { has_country_flag = TRI_paranoia_system_active }
+					has_country_flag = TRI_paranoia_weekly_change_disabled
+				}
+			}
+		}
+		timeout_effect = {
+			set_temp_variable = { TRI_paranoia_change = TRI_nagisa_paranoia_modifier_increase }
+			TRI_change_paranoia = yes
+			activate_mission = TRI_paranoia_weekly_change
+		}
+		
+		days_mission_timeout = 7
+	}
+	TRI_the_way_to_get_trust = { #取信之道
+		visible = {
+			has_country_flag = TRI_the_way_to_get_trust
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = TRI_the_way_to_get_trust_available_tt
+				check_variable = { TRI_permitted_hoshubu_member = 4 }
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			country_event = TRI_coup.23
+			effect_tooltip = {
+				TRI_nagisa = {
+					swap_ruler_traits = {
+						remove = TRI_nagisa_Find_the_root_2
+						add = TRI_nagisa_Find_the_root_3
+					}
+				}
+			}
+		}
+	}
+	BA_TRI_forge_investigation_reports = { #伪造调查报告
+		priority = 5
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { TRI_nagisa_paranoia_total > 35 }
+			}
+			modifier = {
+				add = 100
+				check_variable = { TRI_nagisa_paranoia_total > 75 }
+			}
+		}
+		available = {
+			
+		}
+		visible = {
+			
+		}
+
+		cost = 20
+		days_re_enable = 180
+		days_remove = 90
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_temp_variable = { TRI_paranoia_change = -20 }
+			TRI_change_paranoia = yes
+		}
+	}
+	TRI_inspection_in_the_administration = { #审查行政机构
+		priority = 4
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_paranoia_administration_purgeable_tt
+				BA_TRI_can_purge_administration = yes
+			}
+			NOT = { has_country_flag = TRI_paranoia_conducting_inspection_flag }
+		}
+
+		visible = {
+			has_country_flag = TRI_paranoia_system_active
+			BA_TRI_can_purge_administration = yes
+		}
+
+		cost = 20
+		days_remove = 7
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = TRI_paranoia_conducting_inspection_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = TRI_paranoia_conducting_inspection_flag
+
+			hidden_effect = {
+				TRI_purge_administration = yes
+			}
+
+			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
+		}
+	}
+
+	TRI_inspection_in_the_army = { #审查陆军
+		priority = 3
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_paranoia_army_purgeable_tt
+				BA_TRI_can_purge_army = yes
+			}
+			NOT = { has_country_flag = TRI_paranoia_conducting_inspection_flag }
+		}
+		visible = {
+			has_country_flag = TRI_paranoia_system_active
+			BA_TRI_can_purge_army = yes
+		}
+		cost = 20
+		days_remove = 7
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = TRI_paranoia_conducting_inspection_flag
+		}
+		remove_effect = {
+			clr_country_flag = TRI_paranoia_conducting_inspection_flag
+			hidden_effect = {
+				TRI_purge_army = yes
+			}
+			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
+		}
+	}
+	TRI_inspection_in_the_airforce = { #审查空军
+		priority = 2
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_paranoia_airforce_purgeable_tt
+				BA_TRI_can_purge_airforce = yes
+			}
+			NOT = { has_country_flag = TRI_paranoia_conducting_inspection_flag }
+		}
+
+		visible = {
+			has_country_flag = TRI_paranoia_system_active
+			BA_TRI_can_purge_airforce = yes
+		}
+
+		cost = 20
+		days_remove = 7
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = TRI_paranoia_conducting_inspection_flag
+		}
+		remove_effect = {
+			clr_country_flag = TRI_paranoia_conducting_inspection_flag
+			hidden_effect = {
+				TRI_purge_airforce = yes
+			}
+			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
+		}
+	}
+	TRI_inspection_in_the_association = { #审查社团
+		priority = 1
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+		}
+		available = {
+			NOT = { has_country_flag = TRI_paranoia_conducting_inspection_flag }
+		}
+
+		visible = {
+			has_country_flag = TRI_paranoia_system_active
+			NOT = { has_country_flag = TRI_paranoia_inspect_association_cooldown }
+		}
+
+		cost = 20
+		days_remove = 7
+
+		complete_effect = {
+			set_country_flag = TRI_paranoia_conducting_inspection_flag
+			set_country_flag = TRI_paranoia_association_inspection_flag
+			set_country_flag = { flag = TRI_paranoia_inspect_association_cooldown days = 180 }
+		}
+		remove_effect = {
+			clr_country_flag = TRI_paranoia_conducting_inspection_flag
+			set_variable = { TRI_paranoia_association_state@var:TRI_inspected_assosiation = 1 }
+			hidden_effect = {
+				country_event = TRI_paranoia.31
+			}
+			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
+		}
+	}
+}

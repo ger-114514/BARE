@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		CEN_LianBangXueShengHuiQuanWei_SuoShengWuJi = { #联邦学生会的权威——所剩无几
+			picture = unkown
+
+			modifier = {
+				political_power_factor = -0.5 #政治点数加成%
+				war_support_factor = -0.5 #战争支持度
+				stability_factor = -0.5 #稳定度
+			}
+		}
+
+		CEN_ShenShengZhiTa = { #神圣之塔
+			picture = unkown
+
+			modifier = {
+				political_power_factor = 0.4 #政治点数加成%
+				war_support_factor = 0.4 #战争支持度
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+
+division_template = {
+	name = "海兰德安保小队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+
+units = {
+	division= {
+		name = "海兰德第1“蒸汽机车”安保小队"
+		location = 512
+		division_template = "海兰德安保小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "海兰德第2“快车”安保小队"
+		location = 8607
+		division_template = "海兰德安保小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "海兰德第3“磁悬浮”安保小队"
+		location = 7754
+		division_template = "海兰德安保小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

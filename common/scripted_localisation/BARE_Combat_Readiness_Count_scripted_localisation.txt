@@ -1,0 +1,396 @@
+#战备计算，陆军名称保存处
+#每添加一个新兵种都需要填写这个(目前废弃)
+# BARE_Combat_Readiness_Count_Land_Unit_Name = {
+# 	name = Get_BARE_Combat_Readiness_Count_Land_Unit_Name
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 0 } 
+# 		}
+# 		localization_key = "infantry"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 1 } 
+# 		}
+# 		localization_key = "infantry_heavy"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 2 } 
+# 		}
+# 		localization_key = "infantry_sp"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 3 } 
+# 		}
+# 		localization_key = "infantry_sf"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 4 } 
+# 		}
+# 		localization_key = "infantry_am"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 5 } 
+# 		}
+# 		localization_key = "infantry_militia"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 6 } 
+# 		}
+# 		localization_key = "ifv_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 7 } 
+# 		}
+# 		localization_key = "ifv_artillery_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 8 } 
+# 		}
+# 		localization_key = "ifv_at_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 9 } 
+# 		}
+# 		localization_key = "ifv_aa_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 10 } 
+# 		}
+# 		localization_key = "apc_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 11 } 
+# 		}
+# 		localization_key = "apc_artillery_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 12 } 
+# 		}
+# 		localization_key = "apc_at_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 13 } 
+# 		}
+# 		localization_key = "apc_aa_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 14 } 
+# 		}
+# 		localization_key = "fire_support_team_la"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 15 } 
+# 		}
+# 		localization_key = "fire_support_team_ha"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 16 } 
+# 		}
+# 		localization_key = "fire_support_team_sp"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 17 } 
+# 		}
+# 		localization_key = "fire_support_team_aa"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 18 } 
+# 		}
+# 		localization_key = "fire_support_team_su_la"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 19 } 
+# 		}
+# 		localization_key = "fire_support_team_su_ha"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 20 } 
+# 		}
+# 		localization_key = "fire_support_team_su_sa"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 21 } 
+# 		}
+# 		localization_key = "light_armor"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 22 } 
+# 		}
+# 		localization_key = "light_sp_artillery_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 23 } 
+# 		}
+# 		localization_key = "light_tank_destroyer_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 24 } 
+# 		}
+# 		localization_key = "light_sp_anti_air_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 25 } 
+# 		}
+# 		localization_key = "medium_armor"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 26 } 
+# 		}
+# 		localization_key = "medium_sp_artillery_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 27 } 
+# 		}
+# 		localization_key = "medium_tank_destroyer_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 28 } 
+# 		}
+# 		localization_key = "medium_sp_anti_air_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 29 } 
+# 		}
+# 		localization_key = "heavy_armor"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 30 } 
+# 		}
+# 		localization_key = "heavy_sp_artillery_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 31 } 
+# 		}
+# 		localization_key = "heavy_tank_destroyer_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 32 } 
+# 		}
+# 		localization_key = "heavy_sp_anti_air_brigade"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 33 } 
+# 		}
+# 		localization_key = "light_bm_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 34 } 
+# 		}
+# 		localization_key = "light_bm_sp_artillery_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 35 } 
+# 		}
+# 		localization_key = "light_bm_tank_destroyer_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 36 } 
+# 		}
+# 		localization_key = "light_bm_sp_anti_air_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 37 } 
+# 		}
+# 		localization_key = "medium_bm_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 38 } 
+# 		}
+# 		localization_key = "medium_bm_sp_artillery_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 39 } 
+# 		}
+# 		localization_key = "medium_bm_tank_destroyer_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 40 } 
+# 		}
+# 		localization_key = "medium_bm_sp_anti_air_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 41 } 
+# 		}
+# 		localization_key = "heavy_bm_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 42 } 
+# 		}
+# 		localization_key = "heavy_bm_sp_artillery_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 43 } 
+# 		}
+# 		localization_key = "heavy_bm_tank_destroyer_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 44 } 
+# 		}
+# 		localization_key = "heavy_bm_sp_anti_air_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 45 } 
+# 		}
+# 		localization_key = "air_assest_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 46 } 
+# 		}
+# 		localization_key = "air_attack_unit"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 47 } 
+# 		}
+# 		localization_key = "recon"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 48 } 
+# 		}
+# 		localization_key = "apc_recon"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 49 } 
+# 		}
+# 		localization_key = "ifv_recon"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 50 } 
+# 		}
+# 		localization_key = "mbt_recon"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 51 } 
+# 		}
+# 		localization_key = "helicopter_recon"
+# 	}
+
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 52} 
+# 		}
+# 		localization_key = "engineer"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 53 } 
+# 		}
+# 		localization_key = "logistics_company"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 54 } 
+# 		}
+# 		localization_key = "motorized_logistics_company"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 55 } 
+# 		}
+# 		localization_key = "helicopter_logistics_company"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 56 } 
+# 		}
+# 		localization_key = "maintenance_company"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 57 } 
+# 		}
+# 		localization_key = "military_police"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 58 } 
+# 		}
+# 		localization_key = "signal_company"
+# 	}
+# 	text = {
+# 		trigger = { 
+# 			check_variable = { BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 59 } 
+# 		}
+# 		localization_key = "field_hospital"
+# 	}
+
+# }
+
+
+
+
+
+
+
+######################################################
+#界面文本
+###########################################################
+Get_BARE_Combat_Readiness_Text_Non_Core = {
+	name = Get_BARE_Combat_Readiness_Text_Non_Core
+	text = {
+		trigger = { 
+			controller = {
+				PREV = {
+					not = {
+						is_core_of = PREV
+					}
+					
+				}
+			}
+		}
+		localization_key = "BARE_Combat_Readiness_Text_Non_Core_Text"
+	}
+	text = {
+		localization_key = ""
+	}
+}

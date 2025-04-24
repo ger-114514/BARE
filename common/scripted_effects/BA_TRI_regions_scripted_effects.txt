@@ -1,0 +1,268 @@
+TRI_region_generate_statistics = {
+	clear_array = TRI_tea_party_regions
+	for_each_loop = {
+		array = TRI_regions
+		value = region
+		#经济情况
+		set_variable = { region_population_k@var:region = 0 }
+		set_variable = { region_industrial_complex@var:region = 0 }
+		set_variable = { region_arms_factory@var:region = 0 }
+		set_variable = { average_infrastructure@var:region = 0 }
+		every_controlled_state = {
+			limit = {
+				check_variable = { state_region = var:region }
+			}
+			add_to_variable = { PREV.region_population_k@var:region = state_population_k }
+			add_to_variable = { PREV.region_industrial_complex@var:region = non_damaged_building_level@industrial_complex }
+			add_to_variable = { PREV.region_arms_factory@var:region = non_damaged_building_level@arms_factory }
+			add_to_variable = { PREV.average_infrastructure@var:region = non_damaged_building_level@infrastructure }
+		}
+		divide_variable = { average_infrastructure@var:region = state_num@var:region }
+		TRI_region_generate_state_modifiers = yes
+		TRI_region_generate_ruling_association = yes
+	}
+	every_owned_state = {
+		set_variable = { tea_party_ruling = 0 }
+	}
+	TRI_region_generate_seats = yes
+}
+TRI_region_generate_seats = {
+	set_temp_variable = { total_population = 0 }
+	for_each_loop = {
+		array = TRI_regions
+		value = region
+		add_to_temp_variable = { total_population = region_population_k@var:region }
+	}
+	for_each_loop = {
+		array = TRI_regions
+		value = region
+		set_variable = { house_seats@var:region = region_population_k@var:region }
+		divide_variable = { house_seats@var:region = total_population }
+		multiply_variable = { house_seats@var:region = 100 }
+		round_variable = house_seats@var:region
+		add_to_temp_variable = { total_seats = house_seats@var:region }
+	}
+	subtract_from_temp_variable = { total_seats = 100 }
+	subtract_from_temp_variable = { house_seats@TRI_center_campus_region = total_seats }
+}
+TRI_region_generate_state_modifiers = {
+	#地区修正
+	every_controlled_state = {
+		limit = {
+			check_variable = { state_region = PREV.var:region }
+		}
+		set_variable = { region_state_resources_factor = PREV.region_stability@var:region }
+		set_variable = { region_local_manpower = PREV.region_stability@var:region }
+		set_variable = { region_state_production_speed_factor = PREV.region_stability@var:region }
+		subtract_from_variable = { region_state_resources_factor = 0.75 }
+		subtract_from_variable = { region_local_manpower = 0.75 }
+		subtract_from_variable = { region_state_production_speed_factor = 0.75 }
+		divide_variable = { region_state_resources_factor = 2 }
+		divide_variable = { region_local_manpower = 2 }
+		divide_variable = { region_state_production_speed_factor = 2 }
+	}
+}
+TRI_region_generate_ruling_association = {
+	#势力分布
+	set_variable = { total_points@var:region = justice@var:region }
+	add_to_variable = { total_points@var:region = sisterhood@var:region }
+	add_to_variable = { total_points@var:region = knights@var:region }
+	
+	set_variable = { justice_percent@var:region = justice@var:region }
+	set_variable = { sisterhood_percent@var:region = sisterhood@var:region }
+	set_variable = { knights_percent@var:region = knights@var:region }
+
+	divide_variable = { justice_percent@var:region = total_points@var:region }
+	divide_variable = { sisterhood_percent@var:region = total_points@var:region }
+	divide_variable = { knights_percent@var:region = total_points@var:region }
+	if = {
+		limit = { check_variable = { tea_party@var:region > total_points@var:region } }
+		add_to_array = { TRI_tea_party_regions = var:region }
+		set_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party }
+	}
+	else_if = {
+		limit = {
+			check_variable = { justice@var:region > sisterhood@var:region }
+			check_variable = { justice@var:region > knights@var:region }
+		}
+		set_variable = { ruling_association@var:region = token:TRI_parliament_association_3 }
+	}
+	else_if = {
+		limit = { 
+			check_variable = { sisterhood@var:region > justice@var:region }
+			check_variable = { sisterhood@var:region > knights@var:region }
+		}
+		set_variable = { ruling_association@var:region = token:TRI_parliament_association_4 }
+	}
+	else_if = {
+		limit = { 
+			check_variable = { knights@var:region > justice@var:region }
+			check_variable = { knights@var:region > sisterhood@var:region } 
+		}
+		set_variable = { ruling_association@var:region = token:TRI_parliament_association_5 }
+	}
+	else = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						check_variable = { justice@var:region < sisterhood@var:region }
+						check_variable = { justice@var:region < knights@var:region }
+					}
+				}
+				set_variable = { ruling_association@var:region = token:TRI_parliament_association_3 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						check_variable = { sisterhood@var:region < justice@var:region }
+						check_variable = { sisterhood@var:region < knights@var:region }
+					}
+				}
+				set_variable = { ruling_association@var:region = token:TRI_parliament_association_4 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						check_variable = { knights@var:region < justice@var:region }
+						check_variable = { knights@var:region < knights@var:region }
+					}
+				}
+				set_variable = { ruling_association@var:region = token:TRI_parliament_association_5 }
+			}
+		}
+	}
+	set_variable = { association_pie_1@var:region = justice_percent@var:region }
+	set_variable = { association_pie_2@var:region = sisterhood_percent@var:region }
+	add_to_variable = { association_pie_2@var:region = association_pie_1@var:region }
+	multiply_variable = { association_pie_1@var:region = 100 }
+	multiply_variable = { association_pie_2@var:region = 100 }
+
+	round_variable = association_pie_1@var:region
+	round_variable = association_pie_2@var:region
+}
+TRI_region_get_ruling_association = {
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party } }
+			random_list = {
+				1 = {
+					set_temp_variable = { association = token:TRI_parliament_association_0 }
+				}
+				1 = {
+					set_temp_variable = { association = token:TRI_parliament_association_1 }
+				}
+				1 = {
+					set_temp_variable = { association = token:TRI_parliament_association_2 }
+				}
+			}
+		}
+		else = {
+			set_variable = { association = ruling_association@var:region }
+		}
+	}
+	
+}
+TRI_change_region_stability = {
+	custom_effect_tooltip = TRI_change_region_stability_tt
+	add_to_variable = { region_stability@var:region = stability_change }
+	hidden_effect = {
+		clamp_variable = {
+			var = region_stability@var:region
+			min = 0
+			max = 1
+		}
+		TRI_region_generate_state_modifiers = yes
+	}
+	
+}
+TRI_change_region_association_influence = {
+	custom_effect_tooltip = TRI_change_region_association_influence_tt
+	if = {
+		limit = { check_variable = { association = token:TRI_parliament_association_tea_party } }
+		add_to_variable = { tea_party@var:region = influence_change }
+	}
+	else_if = {
+		limit = { check_variable = { association = token:TRI_parliament_association_3 } }
+		add_to_variable = { justice@var:region = influence_change }
+	}
+	else_if = {
+		limit = { check_variable = { association = token:TRI_parliament_association_4 } }
+		add_to_variable = { sisterhood@var:region = influence_change }
+	}
+	else_if = {
+		limit = { check_variable = { association = token:TRI_parliament_association_5 } }
+		add_to_variable = { knights@var:region = influence_change }
+	}
+	hidden_effect = {
+		clamp_variable = {
+			var = tea_party@var:region
+			min = 0
+		}
+		clamp_variable = {
+			var = justice@var:region
+			min = 0
+		}
+		clamp_variable = {
+			var = sisterhood@var:region
+			min = 0
+		}
+		clamp_variable = {
+			var = knights@var:region
+			min = 0
+		}
+		TRI_region_generate_ruling_association = yes
+	}
+}
+TRI_parliament_house_election = {
+	set_temp_variable = { total_population = 0 }
+	for_each_loop = {
+		array = TRI_regions
+		value = region
+		add_to_temp_variable = { total_population = region_population_k@var:region }
+
+		set_temp_variable = { total_points@var:region = justice@var:region }
+		add_to_temp_variable = { total_points@var:region = sisterhood@var:region }
+		add_to_temp_variable = { total_points@var:region = knights@var:region }
+
+		set_temp_variable = { justice_weight@var:region = justice@var:region }
+		set_temp_variable = { sisterhood_weight@var:region = sisterhood@var:region }
+		set_temp_variable = { knights_weight@var:region = knights@var:region }
+
+		divide_temp_variable = { justice_weight@var:region = total_points@var:region }
+		divide_temp_variable = { sisterhood_weight@var:region = total_points@var:region }
+		divide_temp_variable = { knights_weight@var:region = total_points@var:region }
+
+		multiply_temp_variable = { justice_weight@var:region = region_population_k@var:region }
+		multiply_temp_variable = { sisterhood_weight@var:region = region_population_k@var:region }
+		multiply_temp_variable = { knights_weight@var:region = region_population_k@var:region }
+
+		add_to_temp_variable = { total_justice_weight = justice_weight@var:region }
+		add_to_temp_variable = { total_sisterhood_weight = sisterhood_weight@var:region }
+		add_to_temp_variable = { total_knights_weight = knights_weight@var:region }
+	}
+	divide_temp_variable = { total_justice_weight = total_population }
+	divide_temp_variable = { total_sisterhood_weight = total_population }
+	divide_temp_variable = { total_knights_weight = total_population }
+
+	multiply_temp_variable = { total_justice_weight = 60 }
+	multiply_temp_variable = { total_sisterhood_weight = 60 }
+	multiply_temp_variable = { total_knights_weight = 60 }
+
+	round_temp_variable = total_justice_weight
+	round_temp_variable = total_sisterhood_weight
+	round_temp_variable = total_knights_weight
+
+	set_variable = { seatNumber@TRI_parliament_association_3 = total_justice_weight }
+	set_variable = { seatNumber@TRI_parliament_association_4 = total_sisterhood_weight }
+	set_variable = { seatNumber@TRI_parliament_association_5 = total_knights_weight }
+
+	set_variable = { seatNumber@TRI_parliament_association_6 = 100 }
+	subtract_from_variable = { seatNumber@TRI_parliament_association_6 = total_justice_weight }
+	subtract_from_variable = { seatNumber@TRI_parliament_association_6 = total_sisterhood_weight }
+	subtract_from_variable = { seatNumber@TRI_parliament_association_6 = total_knights_weight }
+	TRI_BOP_calculate_senate_house_seats = yes
+}

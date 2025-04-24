@@ -1,0 +1,319 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "TRI_politics_windows"
+		size = { width = 1000 height= 730 }
+		position = { x=-600 y=85 }
+		show_position = { x=560 y=85 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 500
+		show_sound = open_sub_window
+		moveable = yes
+
+		background = {
+			name = "background"		
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+		buttonType = {
+			name = "close_button"
+			position = { x = -36 y = 0 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		gridBoxType = {
+			name = "TRI_politics_tab_buttons"
+			add_horizontal = no
+			position = { x = 60 y = 40 }
+			slotsize = { width = 100 height = 35 }
+		}
+		gridBoxType = {
+			name = "TRI_politics_tab"
+			position = { x = 0 y = 10 }
+		}
+	}
+	containerWindowType = {
+		name = "TRI_politics_tab_button_container"
+		buttonType = {
+			name = "TRI_politics_tab_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_sort_button_100x29"
+			font = "hoi_16mbs"
+			buttonText = "[?tab_button.GetTokenLocalizedKey]"
+		}
+	}
+	containerWindowType = {
+		name = "TRI_politics_tab_parliament"
+		containerWindowType = {
+			name = "TRI_BOP_senators_container"
+			position = { x = 0 y = 0 }
+
+			instantTextBoxType = {
+				name = "BOP_senators_name"
+				position = { x = 0 y = 0 }
+				font = "hoi_24header"
+				text = "TRI_parliament_senators_header"
+				format = center
+				maxWidth = 500
+				maxHeight = 24
+			}
+			gridboxtype = {
+				name = "TRI_BOP_senate_diagram"
+				position = { x = 175 y = 25 }
+			}
+			gridboxtype = {
+				name = "TRI_BOP_senate_associations"
+				position = { x = 10 y = 110 }
+				size = { width = 300 height = 100 }
+				slotsize = { width = 100 height = 100 }
+				add_horizontal = yes
+				max_slots_horizontal = 4
+			}
+
+			instantTextBoxType = {
+				name = "BOP_senators_branch_title"
+				position = { x = 0 y = 208 }
+				font = "hoi_18mbs"
+				text = "TRI_BOP_senators_seats_desc"
+				format = center
+				maxWidth = 500
+				maxHeight = 18
+			}
+		}
+		containerWindowType = {
+			name = "TRI_BOP_house_container"
+			position = { x = 0 y = 260 }
+			instantTextBoxType = {
+				name = "BOP_house_name"
+				position = { x = 0 y = 0 }
+				font = "hoi_24header"
+				text = "TRI_parliament_house_header"
+				format = center
+				maxWidth = 500
+				maxHeight = 24
+			}
+			gridboxtype = { #下议院显示图像
+				name = "TRI_BOP_house_diagram"
+				position = { x = 108 y = 25 }
+			}
+			gridboxtype = {
+				name = "TRI_BOP_house_associations"
+				position = { x = -90 y = 176 }
+				size = { width = 400 height = 100 }
+				slotsize = { width = 100 height = 100 }
+				add_horizontal = yes
+				max_slots_horizontal = 4
+			}
+			instantTextBoxType = {
+				name = "BOP_house_branch_title"
+				position = { x = 0 y = 274 }
+				font = "hoi_18mbs"
+				text = "TRI_BOP_house_seats_desc"
+				format = center
+				maxWidth = 500
+				maxHeight = 18
+			}
+		}
+		containerWindowType = {
+			name = "TRI_BOP_faction_weight"
+			position = { x = 150 y = 580 }
+			iconType = {
+				name = "TRI_BOP_faction_weight_pie_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="TRI_BOP_faction_weight_pie_4"
+			}
+			iconType = {
+				name = "TRI_BOP_faction_weight_pie_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="TRI_BOP_faction_weight_pie_3"
+			}
+			iconType = {
+				name = "TRI_BOP_faction_weight_pie_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="TRI_BOP_faction_weight_pie_2"
+			}
+			iconType = {
+				name = "TRI_BOP_faction_weight_pie_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="TRI_BOP_faction_weight_pie_1"
+			}
+			iconType = {
+				name = "TRI_BOP_faction_weight_pie_cover"
+				position = { x = -2 y = -1 }
+				quadTextureSprite ="TRI_BOP_faction_weight_pie_cover"
+			}
+			instantTextBoxType = {
+				name = "TRI_BOP_association_information_seats"
+				position = { x = 110 y = 25 }
+				maxWidth = 140
+				format = left
+				font = "hoi_18mbs"
+				text = "TRI_BOP_association_information_seats"
+			}
+			instantTextBoxType = {
+				name = "TRI_BOP_main_faction"
+				position = { x = 0 y = 102 }
+				maxWidth = 200
+				format = center
+				font = "hoi_24header"
+				text = "TRI_BOP_main_faction"
+			}
+		}
+
+		containerWindowType = {
+			name = "TRI_BOP_association_information_window"
+			size = { width = 450 height = 260 }
+			position = { x = 470 y = 10 }
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_thin_border2"
+			}
+			iconType = {
+				name = "TRI_BOP_association_information_leader_portrait"
+				position = { x = 5 y = 5 }
+				quadTextureSprite ="GFX_portrait_TRI_mika"
+				pdx_tooltip = "TRI_BOP_association_information_leader_portrait_desc"
+			}
+			instantTextBoxType = {
+				name = "TRI_BOP_association_leader_name"
+				position = { x = 5 y = 215 }
+				maxWidth = 156
+				maxHeight = 24
+				format = center
+				font = "hoi_24header"
+				text = "TRI_BOP_association_leader_name"
+			}
+			instantTextBoxType = {
+				name = "TRI_BOP_association_information_name"
+				position = { x = 160 y = 10 }
+				maxWidth = 285
+				maxHeight = 30
+				format = center
+				font = "hoi_30header"
+				text = "TRI_BOP_association_name"
+			}
+			instantTextBoxType = {
+				name = "TRI_BOP_association_information_faction"
+				position = { x = 160 y = 40 }
+				maxWidth = 285
+				maxHeight = 30
+				format = center
+				font = "hoi_18mbs"
+				text = "[TRI_get_association_details]"
+			}
+			instantTextBoxType = {
+				name = "TRI_BOP_association_information_description"
+				position = { x = 165 y = 110 }
+				maxWidth = 275
+				maxHeight = 64
+				format = center
+				font = "hoi_16mbs"
+				text = "TRI_BOP_association_information_description"
+			}
+			
+		}
+		containerWindowType = {
+			name = "TRI_parliament_passed_bills_window"
+			size = { width = 450 height = 270 }
+			position = { x = 470 y = 300 }
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_thin_border2"
+			}
+			instantTextBoxType = {
+				name = "TRI_parliament_passed_bills_title"
+				position = { x = 10 y = 10 }
+				maxWidth = 200
+				maxHeight = 24
+				format = left
+				font = "hoi_24header"
+				text = "TRI_parliament_passed_bills_title"
+			}
+			containerWindowType = {
+				name = "TRI_parliament_passed_bills_list"
+				size = { width = 450 height = 260 }
+				position = { x = 0 y = 30 }
+				background = {
+					name = "Background"
+				}
+				margin = { top = 10 bottom = 10 left = 10 right = 10 }
+				verticalScrollbar = "right_vertical_slider"
+				smooth_scrolling = yes
+				gridBoxType = {
+					name = "TRI_parliament_passed_bills"
+					slotsize = { width = 300 height = 25 }
+					position = { x = 160 y = 0 }
+					add_horizontal = yes
+					max_slots_horizontal = 1
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "TRI_BOP_senate_seat_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 20 height = 20 }
+	
+		iconType = { 
+			name = "TRI_BOP_senate_Seat"
+			quadTextureSprite = "TRI_BOP_Seat"
+		}
+	}
+	containerWindowType = {
+		name = "TRI_BOP_house_seat_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 20 height = 20 }
+		
+		iconType = { 
+			name = "TRI_BOP_house_Seat"
+			quadTextureSprite = "TRI_BOP_Seat"
+		}
+	}
+	containerWindowType = {
+		name = "TRI_BOP_association_button_container"
+		position = { x = 0 y = 0 }
+
+		buttonType = {
+			name = "TRI_BOP_association_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "TRI_parliament_association_0_BOP_icon"
+			pdx_tooltip = TRI_BOP_association_button_tt
+		}
+		instantTextBoxType = {
+			name ="TRI_BOP_association_button_name"
+			position = { x = -10 y = 80 }
+			font = "hoi_16mbs"
+			text = "TRI_association_name"
+			format = center
+			maxWidth = 100
+			maxHeight = 16
+		}
+	}
+	containerWindowType = {
+		name = "TRI_parliament_passed_bill_container"
+		position = { x = 0 y = 0 }
+		size = { width = 300 height = 20 }
+		instantTextBoxType = {
+			name ="TRI_parliament_passed_bill_date"
+			position = { x = 0 y = 0 }
+			font = "hoi_20b"
+			text = "TRI_parliament_passed_bill_date"
+			format = left
+			maxWidth = 80
+			maxHeight = 20
+		}
+		instantTextBoxType = {
+			name ="TRI_parliament_passed_bill_text"
+			position = { x = 70 y = 0 }
+			font = "hoi_20b"
+			text = "TRI_parliament_passed_bill_text"
+			format = left
+			maxWidth = 300
+			maxHeight = 20
+		}
+	}
+}

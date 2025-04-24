@@ -1,0 +1,175 @@
+on_actions = {
+	on_weekly_ARI = {
+		effect = {
+			every_owned_state = {
+				limit = {
+					NOT = { 
+						has_state_flag = ARI_state_absolutely_controlled 
+						has_state_flag = ARI_state_cannot_be_suppressed
+					}
+					check_variable = { ARI_state_guard_rank = 4 }
+					check_variable = { ARI_state_control = 100 }
+				}
+				save_event_target_as = controled_state
+				ARI = { country_event = ARI_beatrice_revolt.1000 }
+				set_state_flag = ARI_state_absolutely_controlled
+			}
+		}
+	}
+	on_monthly_ARI = {
+		effect = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ARI_nihilism
+					}
+				}
+				every_country = {
+					limit = { NOT = { is_puppet_of = ARI } }
+					ARI = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = ARI_nihilism
+						}
+					}
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = ARI_nihilism
+                    }
+				}
+				every_country = {
+					limit = { is_puppet_of = ARI }
+					ARI = {
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = ARI_nihilism
+						}
+					}
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = ARI_nihilism
+                    }
+				}
+			}
+			if = {
+				limit = { has_country_flag = ARI_tax_farming_hic }
+				set_variable = { ARI_tax_farming_resources_hic = resource_produced@resources_hic }
+				multiply_variable = { ARI_tax_farming_resources_hic = 0.4 }
+			}
+			set_temp_variable = { material_change = ARI_materials_monthly_modifier }
+			ARI_change_materials = yes
+
+			#物资结算
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ARI_Gematria_member
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							ARI_materials < BARE_ARI_Resource_Cost_all
+						}
+					}
+					#物资不足，则重置获得数量
+					resize_array = {
+						array = BARE_ARI_Resource_Want_Array
+						size = 6
+					}
+	
+					resize_array = {
+						array = BARE_ARI_Resource_Get_Array
+						size = 6
+					}
+				}else = {
+					#物资充足
+					subtract_from_variable = {
+						ARI_materials = BARE_ARI_Resource_Cost_all
+					}
+					for_each_loop = {
+						array = BARE_ARI_Resource_Want_Array
+						set_variable = {
+							BARE_ARI_Resource_Get_Array^i = v
+						}
+					}
+				}
+			}
+
+		
+		}
+	}
+	on_daily_ARI = {
+		effect = {
+			#决议冷却期的计算
+			every_owned_state = {
+				if = {
+					limit = { check_variable = { ARI_collect_intelligence_cd > 0 } }
+					add_to_variable = { ARI_collect_intelligence_cd = -1 }
+				}
+				if = {
+					limit = { check_variable = { ARI_sweep_state_cd > 0 } }
+					add_to_variable = { ARI_sweep_state_cd = -1 }
+				}
+				if = {
+					limit = { check_variable = { ARI_dispatch_special_team_cd > 0 } }
+					add_to_variable = { ARI_dispatch_special_team_cd = -1 }
+				}
+				if = {
+					limit = { check_variable = { ARI_monitor_system_cd > 0 } }
+					add_to_variable = { ARI_monitor_system_cd = -1 }
+				}
+			}
+			#准备“旅者”行动
+			if = {
+				limit = { 
+					has_country_flag = ARI_prepare_for_traveller_operation
+					check_variable = { ARI_traveller_operation_progress < 1260 }
+				}
+				set_temp_variable = { progress_factor = ARI_intelligence_in_TRI }
+				divide_temp_variable = { progress_factor = 200 } #按照阿里乌斯对圣三一的渗透度来获得额外进度，最多1.5倍
+				add_to_temp_variable = { progress_factor = 1 }
+				if = { #如果圣三一团结度低于50%，按照50到当前团结度的插值来增加增长速度，最多0.5
+					limit = {
+						TRI = { check_variable = { TRI_unity < 50 } }
+					}
+					set_temp_variable = { unity_factor = 50 }
+					subtract_from_temp_variable = { unity_factor = TRI.TRI_unity }
+					divide_temp_variable = { unity_factor = 100 }
+					add_to_temp_variable = { progress_factor = unity_factor }
+				}
+				add_to_temp_variable = { progress_increase = 1 }
+				multiply_temp_variable = { progress_increase = progress_factor }
+				add_to_variable = { ARI_traveller_operation_progress = progress_increase }
+				clamp_variable = {
+					var = ARI_traveller_operation_progress
+					min = 0
+					max = 1260
+				}
+			}
+		}
+	}
+	# on_daily_ALR = {
+	# 	effect = {
+	# 		if = {
+	# 			limit = { check_variable = { ALR_resistance_swap_focus_cd > 0 } }
+	# 			add_to_variable = { ALR_resistance_swap_focus_cd = -1 }
+	# 		}
+	# 		every_state = {
+	# 			limit = { ARI_is_arius_state = yes }
+	# 			if = {
+	# 				limit = { check_variable = { ALR_seek_local_resource_cd > 0 } }
+	# 				add_to_variable = { ALR_seek_local_resource_cd = -1 }
+	# 			}
+	# 			if = {
+	# 				limit = { check_variable = { ALR_infiltrate_state_cd > 0 } }
+	# 				add_to_variable = { ALR_infiltrate_state_cd = -1 }
+	# 			}
+	# 			if = {
+	# 				limit = { check_variable = { ALR_underground_organization_cd > 0 } }
+	# 				add_to_variable = { ALR_underground_organization_cd = -1 }
+	# 			}
+	# 		}
+	# 	}
+	# }
+}

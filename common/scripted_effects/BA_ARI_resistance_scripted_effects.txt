@@ -1,0 +1,455 @@
+# ARI_initialize_map = { #初始化
+# 	136 = { #特鲁大教堂
+# 		set_variable = { ARI_state_weapon = 10 }
+# 		set_variable = { ARI_state_supply = 10 }
+# 		set_variable = { ARI_state_interaction_available_rank = 4 }
+# 	}
+# 	137 = { #阿里乌斯暗影哨所
+# 		set_variable = { ARI_state_weapon = 10 }
+# 		set_variable = { ARI_state_supply = 5 }
+# 		set_variable = { ARI_state_interaction_available_rank = 0 }
+# 	}
+# 	138 = { #阿里乌斯本馆
+# 		set_variable = { ARI_state_weapon = 10 }
+# 		set_variable = { ARI_state_supply = 10 }
+# 		set_variable = { ARI_state_interaction_available_rank = 4 }
+# 	}
+# 	139 = { #阿里乌斯旧商店街
+# 		set_variable = { ARI_state_weapon = 10 }
+# 		set_variable = { ARI_state_supply = 10 }
+# 		set_variable = { ARI_state_interaction_available_rank = 2 }
+# 	}
+# 	530 = { #地下墓穴
+# 		set_variable = { ARI_state_weapon = 200 }
+# 		set_variable = { ARI_state_supply = 200 }
+# 		set_variable = { ARI_state_interaction_available_rank = 2 }
+# 	}
+# 	531 = { #残墟郊地
+# 		set_variable = { ARI_state_weapon = 200 }
+# 		set_variable = { ARI_state_supply = 200 }
+# 		set_variable = { ARI_state_interaction_available_rank = 2 }
+# 	}
+# 	532 = { #废弃居民区
+# 		set_variable = { ARI_state_weapon = 200 }
+# 		set_variable = { ARI_state_supply = 200 }
+# 		set_variable = { ARI_state_interaction_available_rank = 3 }
+# 	}
+	
+# 	every_owned_state = {
+# 		set_variable = { ARI_influence_from_operations_R = 0 }
+# 		set_variable = { ARI_influence_from_operations_B = 0 }
+# 		set_variable = { ARI_state_influence = 0 }
+# 		set_variable = { ARI_state_influence_rank = 1 }
+# 		set_variable = { ARI_state_base_rank = 0 }
+# 		set_variable = { ARI_concealment = 60 }
+# 		set_variable = { ARI_concealment_rank = 1 }
+# 	}
+# 	set_variable = { ARI_map_selected_state = 136 }
+# 	#初始重心
+# 	add_ideas = ALR_resistance_focus_seek_supply
+# 	set_variable = { ALR_resistance_focus = token:ALR_resistance_focus_seek_supply }
+# 	#地区信息面板用
+# 	add_to_array = { ARI_state_window_selected_tab = 0 }
+# 	resize_array = { ARI_state_window_tab = 3 }
+# 	set_variable = { ARI_state_window_tab^0 = 2 }
+# 	add_to_array = { ARI_state_window_button_x = 50 }
+# 	add_to_array = { ARI_state_window_button_x = 200 }
+# 	add_to_array = { ARI_state_window_button_x = 350 }
+# 	ARI_renew = yes
+# }
+# ARI_initialize_state_info_window = {
+# 	set_temp_variable = { ARI_map_previous_selected_state = ARI_map_selected_state }
+# 	set_variable = { ARI_map_selected_state = state_id }
+# 	if = {
+# 		limit = { check_variable = { ARI_map_previous_selected_state = ARI_map_selected_state } }
+# 		clr_country_flag = ARI_state_info_open
+# 		set_variable = { ARI_map_selected_state = 0 }
+# 	}
+# 	else = {
+# 		set_country_flag = ARI_state_info_open
+# 		ARI_renew = yes
+# 		ARI = {
+# 			var:ARI_map_selected_state = {
+# 				set_variable = { PREV.ARI_bar_influence_frame = ARI_state_influence }
+# 			}
+# 			multiply_variable = { ARI_bar_influence_frame = 1000 }
+# 		}
+# 		clear_array = ARI_state_modifiers
+# 		clear_array = ARI_state_modifiers_status
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { has_state_flag = ALR_resistance_base } }
+# 			add_to_array = { ARI_state_modifiers = 0 }
+# 			add_to_array = { ARI_state_modifiers_status = 1 }
+# 		}
+# 		if = {
+# 			limit = { has_country_flag = ARI_concealment_consensus }
+# 			add_to_array = { ARI_state_modifiers = 1 }
+# 			add_to_array = { ARI_state_modifiers_status = 1 }
+# 		}
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { has_state_flag = ARI_cognitive_bias } }
+# 			add_to_array = { ARI_state_modifiers = 2 }
+# 			add_to_array = { ARI_state_modifiers_status = 1 }
+# 		}
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 1 } } }
+# 			add_to_array = { ARI_state_modifiers = 3 }
+# 			add_to_array = { ARI_state_modifiers_status = 2 }
+# 		}
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { check_variable = { ARI_state_influence_rank = 3 } } }
+# 			add_to_array = { ARI_state_modifiers = 4 }
+# 			add_to_array = { ARI_state_modifiers_status = 1 }
+# 		}
+# 	}
+	
+# }
+
+# ALR_resistance_swap_focus = {
+# 	set_variable = { ALR_resistance_focus = temp_focus }
+# 	set_variable = { ALR_resistance_swap_focus_cd = 30 }
+# 	custom_effect_tooltip = ALR_resistance_swap_focus_tt
+# 	meta_effect = {
+# 		text = {
+# 			add_ideas = [FOCUS]
+# 		}
+# 		FOCUS = "[?temp_focus.GetTokenKey]"
+# 	}
+# }
+# #设置抵抗总部
+# ARI_set_resistance_base = {
+# 	set_state_flag = ALR_resistance_base
+# 	set_variable = { ARI_state_influence = 0.4 }
+# 	custom_effect_tooltip = ALR_resistance_base_tt
+# 	hidden_effect = { ARI_renew = yes }
+# }
+# #启用偏差认知
+# ARI_enable_cognitive_bias = {
+# 	set_state_flag = ARI_cognitive_bias
+# 	custom_effect_tooltip = ARI_enable_cognitive_bias_tt
+# }
+# #改变影响力
+# ARI_change_influence = {
+# 	var:effect_target_state = {
+# 		add_to_variable = { ARI_state_influence = influence_change_value }
+# 		custom_effect_tooltip = ARI_change_influence_tt
+# 	}
+# 	ARI_renew = yes
+# }
+# #改变隐蔽度
+# ARI_change_concealment = {
+# 	add_to_variable = { ARI_concealment = concealment_change_value }
+# 	custom_effect_tooltip = ARI_change_concealment_tt
+# 	ARI_renew = yes
+# }
+# #刷新
+# ARI_renew = {
+# 	hidden_effect = {
+# 		ARI_renew_influence = yes
+# 		ARI_renew_concealment = yes
+# 	}
+# }
+# ARI_renew_influence = {
+# 	every_owned_state = {
+# 		#确定影响力等级
+# 		clamp_variable = { 
+# 			var = ARI_state_influence
+# 			min = 0 
+# 			max = 1 
+# 		}
+# 		set_temp_variable = { ARI_original_state_influence_rank = ARI_state_influence_rank }
+# 		set_variable = { ARI_concealment_from_infl_rank = 0 }
+# 		if = { 
+# 			limit = { check_variable = { ARI_state_influence < 0.34 } }
+# 			set_variable = { ARI_state_influence_rank = 1 }
+# 			every_neighbor_state = {
+# 				limit = { is_controlled_by = ARI }
+# 				add_to_variable = { ARI_influence_from_neighbor_states = -0.01 }
+# 			}
+# 			ARI = { add_to_temp_variable = { ARI_states_controled_by_R = -1 } }
+# 		}
+# 		else_if = { 
+# 			limit = { check_variable = { ARI_state_influence < 0.67 } }
+# 			set_variable = { ARI_state_influence_rank = 2 }
+# 			ARI = { add_to_variable = { ARI_concealment_from_infl_rank = -2 } }
+# 		}
+# 		else = { 
+# 			set_variable = { ARI_state_influence_rank = 3 }
+# 			every_neighbor_state = {
+# 				limit = { is_owned_by = ARI }
+# 				add_to_variable = { ARI_influence_from_neighbor_states = 0.01 }
+# 			}
+# 			ARI = { 
+# 				add_to_temp_variable = { ARI_states_controled_by_R = 1 }
+# 			}
+# 		}
+# 		#确定影响力等级
+# 		#如果等级变化，弹出事件
+# 		if = {
+# 			limit = { check_variable = { ARI_original_state_influence_rank < ARI_state_influence_rank } }
+# 			save_event_target_as = target_state
+# 			ARI = { country_event = ARI_state.3 }
+# 		}
+# 		else_if = {
+# 			limit = { check_variable = { ARI_original_state_influence_rank > ARI_state_influence_rank } }
+# 			save_event_target_as = target_state
+# 			ARI = { country_event = ARI_state.4 }
+# 		}
+# 		#如果等级变化，弹出事件
+# 	}
+# 	#计算平均影响力
+# 	set_variable = { ARI_average_influence = 0 }
+# 	every_owned_state = {
+# 		ARI = {
+# 			add_to_variable = { ARI_average_influence = PREV.ARI_state_influence }
+# 		}
+# 	}
+# 	divide_variable = { ARI_average_influence = 7 }
+# 	#计算平均影响力
+# 	ARI_generate_monthly_value_change = yes
+# }
+# ARI_renew_concealment = {
+# 	#改变隐蔽等级
+# 	if = { #降级
+# 		limit = { check_variable = { ARI_concealment < 0 } }
+# 		if = { 
+# 			limit = { check_variable = { ARI_concealment_rank > 1 } }
+# 			subtract_from_variable = { ARI_concealment_rank = 1 }
+# 			add_to_variable = { ARI_concealment = 100 }
+# 			country_event = ARI_state.1
+# 		}
+# 		else = {
+# 			country_event = ALR_resistance.1000
+# 		}
+# 	}
+# 	else_if = { #升级
+# 		limit = { check_variable = { ARI_concealment > 100 } }
+# 		if = { 
+# 			limit = { check_variable = { ARI_concealment_rank < 3 } }
+# 			add_to_variable = { ARI_concealment_rank = 1 }
+# 			subtract_from_variable = { ARI_concealment = 100 }
+# 			country_event = ARI_state.2
+# 		}
+# 		else = {
+# 			set_variable = { ARI_concealment = 100 }
+# 		}
+# 	}
+# 	clamp_variable = { 
+# 		var = ARI_concealment_rank
+# 		min = 1
+# 		max = 3
+# 	}
+# 	#改变隐蔽等级
+# 	ARI_generate_monthly_value_change = yes
+# }
+# #计算每月数值变化
+# ARI_generate_monthly_value_change = {
+# 	ARI = {
+# 		every_owned_state = { 
+# 			set_variable = { ARI_influence_from_neighbor_states = 0 } 
+# 		#计算影响力获取因子
+# 			set_temp_variable = { ARI_influence_gaining_factor = 1 }
+# 			if = {
+# 				limit = { ARI = { check_variable = { ARI_concealment_rank = 3 } } }
+# 				add_to_temp_variable = { ARI_influence_gaining_factor = -0.2 }
+# 			}
+# 			else_if = {
+# 				limit = { ARI = { check_variable = { ARI_concealment_rank = 2 } } }
+# 				add_to_temp_variable = { ARI_influence_gaining_factor = 0.5 }
+				
+# 			}
+# 			else = {
+# 				add_to_temp_variable = { ARI_influence_gaining_factor = 0.25 }
+# 			}
+# 		#计算影响力获取因子	
+# 		}
+
+# ##按影响力等级计算影响
+# 		set_variable = { ARI_concealment_from_infl_rank = 0 }
+# 		set_variable = { ARI_concealment_from_consensus = 0 }
+# 		set_temp_variable = { ARI_states_controled_by_R = 0 }
+# 		every_owned_state = {
+# 			if = { 
+# 				limit = { check_variable = { ARI_state_influence_rank = 1 } }
+# 				#影响力传播
+# 				every_neighbor_state = {
+# 					limit = { is_owned_by = ARI }
+# 					add_to_variable = { ARI_influence_from_neighbor_states = -0.01 }
+# 				}
+# 				#影响力传播
+
+# 				ARI = { add_to_temp_variable = { ARI_states_controled_by_R = -1 } }
+# 			}
+# 			else_if = { 
+# 				limit = { check_variable = { ARI_state_influence_rank = 2 } }
+# 				ARI = { set_temp_variable = { ARI_concealment_from_infl_rank_factor = 1 } }
+# 				if = { #偏差认知
+# 					limit = { has_state_flag = ARI_cognitive_bias }
+# 					ARI = { add_to_temp_variable = { ARI_concealment_from_infl_rank_factor = -0.2 } }
+# 				}
+# 				ARI = {
+# 					set_temp_variable = { ARI_concealment_from_infl_rank_base = -2 }
+# 					multiply_temp_variable = { ARI_concealment_from_infl_rank_base = ARI_concealment_from_infl_rank_factor }
+# 					add_to_variable = { ARI_concealment_from_infl_rank = ARI_concealment_from_infl_rank_base }
+# 					if = { #保密共识
+# 						limit = { has_country_flag  = ARI_concealment_consensus }
+# 						add_to_variable = { ARI_concealment_from_consensus = 1 }
+# 					}
+# 				}
+				
+# 			}
+# 			else = { 
+# 				#影响力传播
+# 				every_neighbor_state = {
+# 					limit = { is_owned_by = ARI }
+# 					set_temp_variable = { ARI_influence_from_neighbor_states_base = 0.01 }
+# 					multiply_temp_variable = { ARI_influence_from_neighbor_states_base = ARI_influence_gaining_factor }
+# 					add_to_variable = { ARI_influence_from_neighbor_states = ARI_influence_from_neighbor_states_base } 
+# 				}
+# 				#影响力传播
+
+# 				ARI = { set_temp_variable = { ARI_concealment_from_infl_rank_factor = 1 } }
+# 				if = { #偏差认知
+# 					limit = { has_state_flag = ARI_cognitive_bias }
+# 					ARI = { add_to_temp_variable = { ARI_concealment_from_infl_rank_factor = -0.5 } }
+# 				}
+# 				ARI = { 
+# 					add_to_temp_variable = { ARI_states_controled_by_R = 1 } 
+# 					set_temp_variable = { ARI_concealment_from_infl_rank_base = -4 }
+# 					multiply_temp_variable = { ARI_concealment_from_infl_rank_base = ARI_concealment_from_infl_rank_factor }
+# 					add_to_variable = { ARI_concealment_from_infl_rank = ARI_concealment_from_infl_rank_base }
+# 					if = { #保密共识
+# 						limit = { has_country_flag  = ARI_concealment_consensus }
+# 						add_to_variable = { ARI_concealment_from_consensus = 2 }
+# 					}
+# 				}
+# 			}
+# 		}
+# 		#比较双方控制地块数
+# 		if = {
+# 			limit = { check_variable = { ARI_states_controled_by_R > 0 } }
+# 			add_to_variable = { ARI_concealment_from_infl_rank = -2 }
+# 		}
+# 		#比较双方控制地块数
+# ##按影响力等级计算影响
+
+# ##计算每月隐蔽度变化
+# 		set_variable = { ARI_monthly_concealment_change = ARI_concealment_from_infl_rank }
+# 		add_to_variable = { ARI_monthly_concealment_change = ARI_concealment_from_consensus }
+# ##计算每月隐蔽度变化
+
+# 		every_owned_state = {
+# ##计算每月影响力变化
+# 			set_variable = { ARI_monthly_influence_change = ARI_influence_from_neighbor_states }
+# 			if = {
+# 				limit = { has_state_flag = ALR_resistance_base }
+# 				add_to_variable = { ARI_monthly_influence_change = 0.04 }
+# 			}
+# 			add_to_variable = { ARI_monthly_influence_change = ARI_influence_from_operations_R }
+# 			add_to_variable = { ARI_monthly_influence_change = ARI_influence_from_operations_B }
+# 			multiply_variable = { ARI_monthly_influence_change = 1000 }
+# 			round_variable = ARI_monthly_influence_change
+# 			divide_variable = { ARI_monthly_influence_change = 1000 }
+# ##计算每月影响力变化
+
+# ##计算每月生活物资消耗
+# 			#基础消耗（算法未定）
+# 			set_variable = { ARI_state_supply_monthly_modifier = ARI_state_influence }
+# 			multiply_variable = { ARI_state_supply_monthly_modifier = 50 }
+# 			set_variable = { ARI_state_supply_monthly_modifier_factor = 1 }
+# 			#隐蔽度效果
+# 			if = {
+# 				limit = { ARI = { check_variable = { ARI_concealment_rank = 1 } } }
+# 				add_to_variable = { ARI_state_supply_monthly_modifier_factor = 0.5 }
+# 			}
+# 			else_if = {
+# 				limit = { ARI = { check_variable = { ARI_concealment_rank = 2 } } }
+# 				add_to_variable = { ARI_state_supply_monthly_modifier_factor = -0.2 }
+# 			}
+# 			else = {
+# 				add_to_variable = { ARI_state_supply_monthly_modifier_factor = -0.1 }
+# 			}
+# 			#隐蔽度效果
+# 			multiply_variable = { ARI_state_supply_monthly_modifier = ARI_state_supply_monthly_modifier_factor }
+# 			round_variable = ARI_state_supply_monthly_modifier
+# ##计算每月生活物资消耗			
+# 		}
+
+# ##计算夫人线变量（仅gui用）
+# 		if = {
+# 			limit = { has_country_flag = ARI_player_B }
+# 			ARI_cauculate_value_B = yes
+# 		}
+# ##计算夫人线变量（仅gui用）
+# 	}
+# }
+
+# ARI_cauculate_value_B = {
+# 	every_owned_state = {
+# 		set_variable = { ARI_state_influence_B = 1 }
+# 		subtract_from_variable = { ARI_state_influence_B = ARI_state_influence }
+# 		set_variable = { ARI_influence_from_neighbor_states_B = 0 }
+# 		set_variable = { ARI_monthly_influence_change_B = 0 }
+# 		set_variable = { ARI_influence_from_operations_R_B = 0 }
+# 		set_variable = { ARI_influence_from_operations_B_B = 0 }
+# 		subtract_from_variable = { ARI_influence_from_neighbor_states_B = ARI_influence_from_neighbor_states }
+# 		subtract_from_variable = { ARI_monthly_influence_change_B = ARI_monthly_influence_change }
+# 		subtract_from_variable = { ARI_influence_from_operations_R_B = ARI_influence_from_operations_R }
+# 		subtract_from_variable = { ARI_influence_from_operations_B_B = ARI_influence_from_operations_B }
+# 	}
+# 	set_variable = { ARI_average_influence_B = 0 }
+# 	subtract_from_variable = { ARI_average_influence_B = ARI_average_influence }
+
+# 	set_variable = { ARI_concealment_B = 100 }
+# 	set_variable = { ARI_monthly_concealment_change_B = 0 }
+# 	set_variable = { ARI_concealment_from_infl_rank_B = 0 }
+# 	set_variable = { ARI_concealment_from_consensus_B = 0 }
+# 	subtract_from_variable = { ARI_concealment_B = ARI_concealment }
+# 	subtract_from_variable = { ARI_monthly_concealment_change_B = ARI_monthly_concealment_change }
+# 	subtract_from_variable = { ARI_concealment_from_infl_rank_B = ARI_concealment_from_infl_rank }
+# 	subtract_from_variable = { ARI_concealment_from_consensus_B = ARI_concealment_from_consensus }
+# }
+# ARI_remove_resistance_system = {
+# 	every_owned_state = {
+# 		clear_variable = ARI_state_influence
+# 		clear_variable = ARI_state_influence_rank
+# 		clear_variable = ARI_state_weapon
+# 		clear_variable = ARI_state_supply
+# 		clear_variable = ARI_influence_from_operations_R
+# 		clear_variable = ARI_influence_from_operations_B
+# 		clear_variable = ARI_influence_from_neighbor_states
+# 		clear_variable = ARI_influence_from_neighbor_states_B
+# 		clear_variable = ARI_monthly_influence_change
+# 		clear_variable = ARI_state_supply_monthly_modifier
+# 		clear_variable = ARI_state_supply_monthly_modifier_factor
+# 		clear_variable = ARI_state_influence_B
+# 		clear_variable = ARI_monthly_influence_change_B
+# 		clear_variable = ARI_influence_from_operations_R_B
+# 		clear_variable = ARI_influence_from_operations_B_B
+# 		clr_state_flag = ARI_cognitive_bias
+# 		clr_state_flag = ALR_resistance_base
+# 	}
+# 	clr_country_flag = ARI_state_info_open
+# 	clr_country_flag = ARI_concealment_consensus
+# 	clear_variable = ARI_map_selected_state
+# 	clear_variable = ARI_concealment
+# 	clear_variable = ARI_concealment_rank
+# 	clear_variable = ARI_monthly_concealment_change
+# 	clear_variable = ARI_concealment_from_consensus
+# 	clear_variable = ARI_concealment_from_infl_rank
+# 	clear_variable = ARI_bar_influence_frame
+# 	clear_variable = ARI_average_influence
+# 	clear_array = ARI_states
+# 	clear_array = ARI_states_x
+# 	clear_array = ARI_states_y
+# 	clear_array = ARI_state_window_selected_tab
+# 	clear_array = ARI_state_window_tab
+# 	clear_array = ARI_state_window_button_x
+# 	clear_array = ARI_state_modifiers
+# 	clear_array = ARI_state_modifiers_status
+# 	clear_variable = ARI_average_influence_B
+# 	clear_variable = ARI_concealment_B
+# 	clear_variable = ARI_monthly_concealment_change_B
+# 	clear_variable = ARI_concealment_from_infl_rank_B
+# 	clear_variable = ARI_concealment_from_consensus_B
+# }

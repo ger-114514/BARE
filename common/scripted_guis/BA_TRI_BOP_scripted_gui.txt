@@ -1,0 +1,271 @@
+scripted_gui = {
+	#圣三一议会ui
+	TRI_parliament_open_ui = {
+		window_name = "TRI_parliament_open_ui"
+		context_type = player_context
+        parent_window_token = top_bar
+
+		visible = {
+			original_tag = TRI
+		}
+		effects = {
+			TRI_parliament_open_button_click = {
+				if = {
+					limit = { 
+						NOT = { has_country_flag = TRI_politics_windows_opened } 
+					}
+					set_country_flag = TRI_politics_windows_opened
+				}
+				else = {
+					clr_country_flag = TRI_politics_windows_opened
+				}
+			}
+		}
+	}
+	TRI_politics_windows = {
+		window_name = "TRI_politics_windows"
+		context_type = player_context
+		visible = {
+			original_tag = TRI
+			has_country_flag = TRI_politics_windows_opened
+		}
+		dynamic_lists = {
+			TRI_politics_tab_buttons = {
+				array = TRI_politics_tabs
+				value = tab_button
+				entry_container = TRI_politics_tab_button_container
+			}
+			TRI_politics_tab = {
+				array = TRI_politics_selected_tab
+				value = tab
+				entry_container = "[?TRI_politics_selected_tab^0.GetTokenKey]"
+			}
+		}
+		effects = {
+			TRI_politics_tab_button_click = {
+				for_each_loop = {
+					array = TRI_politics_tabs
+					value = tab
+					set_variable = { selected@var:tab = 0 }
+				}
+				set_variable = { TRI_politics_selected_tab^0 = var:tab_button }
+				set_variable = { selected@var:tab_button = 2 }
+			}
+			close_button_click = {
+				clr_country_flag = TRI_politics_windows_opened
+			}
+		}
+		properties = {
+			TRI_politics_tab_button = {
+				frame = selected@var:tab_button
+			}
+		}
+	
+		##议会界面
+			dynamic_lists = {
+				#上议院议会席位图像
+				TRI_BOP_senate_diagram = {
+					array = TRI_BOP_senators_grid_box_array
+					entry_container = TRI_BOP_senate_seat_entry
+					index = seat_idx
+					value = v
+				}
+				TRI_BOP_senate_associations = {
+					array = BA_TRI_senators_association
+					value = association
+					entry_container = TRI_BOP_association_button_container
+				}
+				#下议院议会席位图像
+				TRI_BOP_house_diagram = {
+					array = TRI_BOP_house_grid_box_array
+					entry_container = TRI_BOP_house_seat_entry
+					index = seat_idx
+					value = v
+				}
+				TRI_BOP_house_associations = {
+					array = BA_TRI_house_association
+					value = association
+					entry_container = TRI_BOP_association_button_container
+				}
+				TRI_parliament_passed_bills = {
+					array = TRI_passed_bills
+					value = bill
+					entry_container = TRI_parliament_passed_bill_container
+				}
+			}
+			triggers = {
+				TRI_BOP_faction_weight_pie_1_visible = {
+					check_variable = { TRI_BOP_faction_weight_pie_frame_1 > 0 }
+				}
+				TRI_BOP_faction_weight_pie_2_visible = {
+					check_variable = { TRI_BOP_faction_weight_pie_frame_2 > 0 }
+				}
+				TRI_BOP_faction_weight_pie_3_visible = {
+					check_variable = { TRI_BOP_faction_weight_pie_frame_3 > 0 }
+				}
+			}
+
+			properties = {
+				TRI_BOP_senate_Seat = {
+					x = TRI_senators_x_array^seat_idx
+					y = TRI_senators_y_array^seat_idx
+					frame = v
+				}
+				TRI_BOP_house_Seat = {
+					x = TRI_house_x_array^seat_idx
+					y = TRI_house_y_array^seat_idx
+					frame = v
+				}
+				TRI_BOP_association_button = {
+					image = "[?association.GetTokenKey]_BOP_icon"
+				}
+				TRI_BOP_association_information_leader_portrait = {
+					image = "[?TRI_BOP_selected_association_leader_portrait.GetTokenKey]"
+				}
+				TRI_BOP_faction_weight_pie_1 = {
+					frame = TRI_BOP_faction_weight_pie_frame_1
+				}
+				TRI_BOP_faction_weight_pie_2 = {
+					frame = TRI_BOP_faction_weight_pie_frame_2
+				}
+				TRI_BOP_faction_weight_pie_3 = {
+					frame = TRI_BOP_faction_weight_pie_frame_3
+				}
+			}
+			effects = {
+				TRI_BOP_association_button_click = {
+					set_variable = { TRI_BOP_selected_association = var:association }
+					meta_effect = {
+						text = {
+							set_variable = { TRI_BOP_selected_association_leader_name = token:[LEADER]_name }
+							set_variable = { TRI_BOP_selected_association_leader_desc = token:[LEADER]_description }
+							set_variable = { TRI_BOP_selected_association_leader_portrait = token:[LEADER]_parliament_leader_portrait }
+							set_variable = { TRI_BOP_selected_association_desc = token:[ASSOCIATION]_desc }
+						}
+						LEADER = "[?leader@var:association.GetTokenKey]"
+						ASSOCIATION = "[?association.GetTokenKey]"
+					}
+				}
+			}
+		#焦点界面
+			dynamic_lists = {
+				TRI_parliament_position_associations = {
+					array = TRI_parliament_association
+					value = association
+					entry_container = TRI_parliament_association_position_container
+				}
+				#上议院议会席位图像
+				TRI_senators_diagram = {
+					array = TRI_senators_grid_box_array
+					change_scope = no
+					entry_container = TRI_senators_seat_entry
+					index = seat_idx
+					value = v
+				}
+				#下议院议会席位图像
+				TRI_house_diagram = {
+					array = TRI_house_grid_box_array
+					change_scope = no
+					entry_container = TRI_house_seat_entry
+					index = seat_idx
+					value = v
+				}
+			}
+			effects = {
+				TRI_parliament_association_list_button_click = {
+					set_variable = { BA_TRI_parliament_decision_target = var:association }
+				}
+			}
+			triggers = {
+				TRI_parliament_position_frame_visible = {
+					check_variable = { detail_ignored@var:association = 0 }
+				}
+				TRI_parliament_position_icon_visible = {
+					check_variable = { detail_ignored@var:association = 0 }
+				}
+			}
+			properties = {
+				TRI_seat_icon = {
+					x = TRI_senators_x_array^seat_idx
+					y = TRI_senators_y_array^seat_idx
+					frame = v
+				}
+				TRI_house_seat_icon = {
+					x = TRI_house_x_array^seat_idx
+					y = TRI_house_y_array^seat_idx
+					frame = v
+				}
+				TRI_parliament_position_frame = {
+					frame = list_bg@var:association
+					x = focus_position_x@var:association
+					y = focus_position_y@var:association
+				}
+				TRI_parliament_position_icon = {
+					image = "[?association.GetTokenKey]_icon"
+					x = focus_position_x@var:association
+					y = focus_position_y@var:association
+				}
+				TRI_parliament_position_player_arrowhead = {
+					frame = TRI_player_focus_position_frame
+					x = TRI_player_focus_position_x
+				}
+			}
+			#团结度
+				dynamic_lists = {
+					TRI_unity_progress_bar_icons = {
+						array = TRI_unity_progress_bar_icon
+						index = i
+						entry_container = TRI_unity_progress_bar_icon_container
+					}
+				}
+				triggers = {
+					TRI_unity_progress_bar_visible = {
+						has_country_flag = TRI_unity_system_visible
+					}
+					TRI_unity_progress_bar_icon_visible = {
+						check_variable = { TRI_unity_rank = i }
+						has_country_flag = TRI_unity_system_visible
+					}
+					TRI_unity_text_visible = {
+						has_country_flag = TRI_unity_system_visible
+					}
+				}
+				properties = {
+					TRI_unity_progress_bar = {
+						frame = TRI_unity
+					}
+					TRI_unity_progress_bar_icon = {
+						image = "TRI_unity_progress_bar_icon_[?i]"
+					}
+				}
+		##地图界面
+			dynamic_lists = {
+				TRI_regions = {
+					array = TRI_regions
+					entry_container = "TRI_region_button_container"
+					value = region
+				}
+			}
+			properties = {
+				TRI_region_button = {
+					image = "[?region.GetTokenKey]_button"
+					x = region_x@var:region
+					y = region_y@var:region
+				}
+				TRI_regions_knights_pie = {
+					frame = 100
+				}
+				TRI_regions_sisterhood_pie = {
+					frame = association_pie_2@var:TRI_selected_region
+				}
+				TRI_regions_justice_pie = {
+					frame = association_pie_1@var:TRI_selected_region
+				}
+			}
+			effects = {
+				TRI_region_button_click = {
+					set_variable = { TRI_selected_region = region }
+				}
+			}
+	}
+}

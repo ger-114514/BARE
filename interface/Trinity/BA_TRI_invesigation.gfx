@@ -1,0 +1,145 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "TRI_investigation_open_button"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/TRI_investigation_open_button.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_investigation_permission"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/permission.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_koharu"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_koharu_s"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_s3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_azusa_s"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_s3.png"
+	}
+	SpriteType = {
+		name = "GFX_azusa_fadian"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_fadian.png"
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hifumi_s"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_s3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hanako_s"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_s3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_bukebu"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bukebu.png"
+	}
+
+	SpriteType = {
+		name = "GFX_bukebu_s"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bukebu_s.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_azusa_inv1"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_azusa_inv2"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_azusa_inv3"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_azusa_inv4"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hifumi_inv1"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hifumi_inv2"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hifumi_inv3"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hifumi_inv4"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_koharu_inv1"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_koharu_inv2"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_koharu_inv3"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_koharu_inv4"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hanako_inv1"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hanako_inv2"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hanako_inv3"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_TRI_hanako_inv4"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_bg"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bg.png"
+	}
+
+	SpriteType = {
+		name = "GFX_exit"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/exit2.png"
+	}
+
+
+}
+

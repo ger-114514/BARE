@@ -1,0 +1,255 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+GEH_Ifv_01 = {
+	name = "风纪委机械化步兵"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "第%d 风纪委机械化步兵中队"
+
+	ordered =
+	{
+		1 = { "风纪委员会装甲掷弹兵第1“巴耶力”中队" }
+		2 = { "风纪委员会装甲掷弹兵第2“阿加雷斯”中队" }
+		3 = { "风纪委员会装甲掷弹兵第3“瓦沙克”中队" }
+		4 = { "风纪委员会装甲掷弹兵第4“加麦基”中队" }
+		5 = { "风纪委员会装甲掷弹兵第5“玛巴斯”中队" }
+		6 = { "风纪委员会装甲掷弹兵第6“华利弗”中队" }
+		7 = { "风纪委员会装甲掷弹兵第7“亚蒙”中队" }
+		8 = { "风纪委员会装甲掷弹兵第8“巴巴妥司”中队" }
+		9 = { "风纪委员会装甲掷弹兵第9“布耶尔”中队" }
+		10 = { "风纪委员会装甲掷弹兵第10“古辛”中队" }
+	}
+}
+
+GEH_Inf_01 = {
+	name = "风纪委快速反应部队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "第%d 风纪委快反中队"
+
+	ordered =
+	{
+		1 = { "风纪委员会快速反应第1“俾斯麦”中队" }
+		2 = { "风纪委员会快速反应第2“提尔比兹”中队" }
+		3 = { "风纪委员会快速反应第3“沙恩霍斯特”中队" }
+		4 = { "风纪委员会快速反应第4“格莱森瑙”中队" }
+		5 = { "风纪委员会快速反应第5“希佩尔”中队" }
+		6 = { "风纪委员会快速反应第6“布吕歇尔”中队" }
+		7 = { "风纪委员会快速反应第7“欧根亲王”中队" }
+	}
+}
+
+GEH_Inf_02 = {
+	name = "风纪委步兵"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "第%d 风纪委巡逻大队"
+
+	ordered =
+	{
+		1 = { "风纪委员会第1“奥斯特亚”巡逻大队" }
+		2 = { "风纪委员会第2“波西米尔”巡逻大队" }
+		3 = { "风纪委员会第3“汉诺瓦”巡逻大队" }
+		4 = { "风纪委员会第4“德绍”巡逻大队" }
+		5 = { "风纪委员会第5“霍亨索尔”巡逻大队" }
+		6 = { "风纪委员会第6“特默尔”巡逻大队" }
+		7 = { "风纪委员会第7“洛根”巡逻大队" }
+		8 = { "风纪委员会第8“奥尔德堡”巡逻大队" }
+	}
+}
+
+GEH_Inf_03 = {
+	name = "万魔殿议长卫队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "第%d 万魔殿议长卫队"
+
+	ordered =
+	{
+		1 = { "万魔殿议长卫队第1“埃森”中队" }
+		2 = { "万魔殿议长卫队第2“勃兰登堡”中队" }
+		3 = { "万魔殿议长卫队第3“利古里亚”中队" }
+		4 = { "万魔殿议长卫队第4“北方”中队" }
+		5 = { "万魔殿议长卫队第5“斯坎德培”中队" }
+		6 = { "万魔殿议长卫队第6“尼德兰”中队" }
+		7 = { "万魔殿议长卫队第7“托瓦茨基”中队" }
+	}
+}
+
+GEH_LA_01 = {
+	name = "万魔殿机械化中队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+	fallback_name = "第%d 万魔殿机械化中队"
+
+	ordered =
+	{
+		1 = { "万魔殿机械化第1“大选帝侯”中队" }
+		2 = { "万魔殿机械化第2“毛奇”中队" }
+		3 = { "万魔殿机械化第3“腓特烈大帝”中队" }
+		4 = { "万魔殿机械化第4“海因里希亲王”中队" }
+		5 = { "万魔殿机械化第5“边境总督”中队" }
+		6 = { "万魔殿机械化第6“勃兰登堡枪骑”中队" }
+		7 = { "万魔殿机械化第7“吕佐夫”中队" }
+	}
+}
+
+GEH_Inf_04 = {
+	name = "供给部后勤小队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "第%d 供给部后勤小队"
+
+	ordered =
+	{
+		1 = { "格赫娜供给部第1“博登”后勤小队" }
+		2 = { "格赫娜供给部第2“维拉塔尔”后勤小队" }
+		3 = { "格赫娜供给部第3“基姆”后勤小队" }
+		4 = { "格赫娜供给部第4“施坦贝尔格”后勤小队" }
+	}
+}
+
+GEH_Inf_05 = {
+	name = "救急医学部大队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "第%d 救急医学部大队"
+
+	ordered =
+	{
+		1 = { "救急医学部第1“夏里特”医疗大队" }
+		2 = { "救急医学部第2“海德堡”医疗大队" }
+		3 = { "救急医学部第3“慕尼黑”医疗大队" }
+		4 = { "救急医学部第4“伊萨尔河畔”医疗大队" }
+		5 = { "救急医学部第5“埃彭多夫”医疗大队" }
+	}
+}
+
+GEH_Infm_01 = {
+	name = "自治区防卫民兵"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "第%d 自治区防卫民兵中队"
+
+	ordered =
+	{
+		1 = { "格赫娜自治区防卫第1“捷克”中队" }
+		2 = { "格赫娜自治区防卫第2“匈牙利”中队" }
+		3 = { "格赫娜自治区防卫第3“奥皇”中队" }
+		4 = { "格赫娜自治区防卫第4“查尔斯大公”中队" }
+		5 = { "格赫娜自治区防卫第5“乌兰”中队" }
+		6 = { "格赫娜自治区防卫第6“骠骑兵团”中队" }
+		7 = { "格赫娜自治区防卫第7“费迪南大公”中队" }
+		8 = { "格赫娜自治区防卫第8“西里西亚”中队" }
+	}
+}
+
+GEH_Infs_01 = {
+	name = "情报部山地猎兵部队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "第%d 情报部山地猎兵中队"
+
+	ordered =
+	{
+		1 = { "情报部山地猎兵第1“雪绒花”中队" }
+		2 = { "情报部山地猎兵第2“欧根亲王”中队" }
+		3 = { "情报部山地猎兵第3“阿尔卑斯”中队" }
+		4 = { "情报部山地猎兵第4“厄尔士”中队" }
+		5 = { "情报部山地猎兵第5“黑森”中队" }
+		6 = { "情报部山地猎兵第6“哈尔茨”中队" }
+	}
+}
+
+GEH_Infhs_01 = {
+	name = "温泉开发部重装部队"
+
+	for_countries = { GEH }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_heavy" }
+
+	fallback_name = "第%d 温泉开发部作业大队"
+
+	ordered =
+	{
+		1 = { "温泉开发部第1“草津”作业大队" }
+		2 = { "温泉开发部第2“由布院”作业大队" }
+		3 = { "温泉开发部第3“下吕”作业大队" }
+		4 = { "温泉开发部第4“别府八汤”作业大队" }
+		5 = { "温泉开发部第5“登别”作业大队" }
+		6 = { "温泉开发部第6“道后”作业大队" }
+		7 = { "温泉开发部第7“黑川”作业大队" }
+		8 = { "温泉开发部第8“指宿”作业大队" }
+	}
+}

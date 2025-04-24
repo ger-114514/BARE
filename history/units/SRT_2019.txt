@@ -1,0 +1,79 @@
+division_template = {
+	name = "SRT特战小组"		
+
+	regiments = {
+		infantry_sf = { x = 0 y = 0 }
+		infantry_sf = { x = 0 y = 1 }
+		infantry_sf = { x = 1 y = 0 }
+		infantry_sf = { x = 1 y = 1 }
+	}
+	support = {
+		recon = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "SRT空中突击小队"		
+
+	regiments = {
+		air_assest_unit = { x = 0 y = 0 }
+		air_assest_unit = { x = 0 y = 1 }
+		air_assest_unit = { x = 1 y = 0 }
+		air_assest_unit = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division= {
+		name = "SRT特战第1“RABBIT”小队"
+		location = 11605
+		division_template = "SRT特战小组" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "SRT特战第2“FOX”小队"
+		location = 8609
+		division_template = "SRT特战小组" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "SRT特战第3“GIRAFFE”小队"
+		location = 2648
+		division_template = "SRT特战小组" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "SRT特战第4“OTTER”小队"
+		location = 3572
+		division_template = "SRT特战小组" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {
+		name = "SRT空中突击第1“朱鹮”小队"
+		location = 8609
+		division_template = "SRT空中突击小队" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "SRT空中突击第2“白鹳”小队"
+		location = 3572
+		division_template = "SRT空中突击小队" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

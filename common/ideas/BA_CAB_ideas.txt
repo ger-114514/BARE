@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		CAB_ZiBenZhiXin = { #资本之心
+			picture = unkown
+
+			modifier = {
+				stability_factor = -0.05 #稳定度
+				consumer_goods_factor = -0.2 #生活消费品
+			}
+		}
+
+		CAB_JvanZengMinYongGongChang = { #捐赠民用工厂
+			picture = unkown
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15 #民工建造速度加成
+				industrial_factory_donations = 4 #流亡政府民工捐赠
+			}
+		}
+
+		CAB_WuJinDeFanRong = { #无尽的繁荣
+			picture = unkown
+
+			modifier = {
+				custom_modifier_tooltip = CAB_WuJinDeFanRong_R
+			}
+		}
+	}
+}

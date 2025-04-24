@@ -1,0 +1,320 @@
+# ALR_initialize_resistance_system = { #初始化gui1
+# 	set_country_flag = ALR_resistance_system_actived
+# 	136 = { #特鲁大教堂
+# 		set_variable = { ALR_state_interaction_available_rank = 4 }
+# 		set_variable = { ALR_state_max_influence_rank = 2 }
+# 	}
+# 	137 = { #阿里乌斯暗影哨所
+# 		set_variable = { ALR_state_interaction_available_rank = 2 }
+# 		set_variable = { ALR_state_max_influence_rank = 3 }
+# 	}
+# 	138 = { #阿里乌斯本馆
+# 		set_variable = { ALR_state_interaction_available_rank = 4 }
+# 		set_variable = { ALR_state_max_influence_rank = 2 }
+# 	}
+# 	139 = { #阿里乌斯旧商店街
+# 		set_variable = { ALR_state_interaction_available_rank = 0 }
+# 		set_variable = { ALR_state_max_influence_rank = 4 }
+# 	}
+# 	530 = { #地下墓穴
+# 		set_variable = { ALR_state_interaction_available_rank = 2 }
+# 		set_variable = { ALR_state_max_influence_rank = 3 }
+# 	}
+# 	531 = { #残墟郊地
+# 		set_variable = { ALR_state_interaction_available_rank = 2 }
+# 		set_variable = { ALR_state_max_influence_rank = 3 }
+# 	}
+# 	532 = { #废弃居民区
+# 		set_variable = { ALR_state_interaction_available_rank = 3 }
+# 		set_variable = { ALR_state_max_influence_rank = 3 }
+# 	}
+# 	every_state = {
+# 		limit = { ARI_is_arius_state = yes }
+# 		set_variable = { ALR_state_influence = 0 }
+# 		set_variable = { ALR_state_influence_weekly_modifier = 0 }
+# 		set_variable = { ALR_state_influence_rank = 1 }
+# 		set_variable = { ALR_state_frame = ALR_state_influence_rank }
+# 	}
+# 	set_variable = { ARI_map_selected_state = 139 }
+# 	# #地区信息面板用
+# 	# add_to_array = { ALR_state_window_selected_tab = 0 }
+# 	# resize_array = { ALR_state_window_tab = 3 }
+# 	# set_variable = { ALR_state_window_tab^0 = 2 }
+# 	# add_to_array = { ALR_state_window_button_x = 50 }
+# 	# add_to_array = { ALR_state_window_button_x = 200 }
+# 	# add_to_array = { ALR_state_window_button_x = 350 }
+# }
+# ARI_initialize_state_info_window = {
+# 	set_temp_variable = { ARI_map_previous_selected_state = ARI_map_selected_state }
+# 	set_variable = { ARI_map_selected_state = state_id }
+# 	if = {
+# 		limit = { check_variable = { ARI_map_previous_selected_state = ARI_map_selected_state } }
+# 		clr_country_flag = ALR_state_info_open
+# 		set_variable = { ARI_map_selected_state = 0 }
+# 	}
+# 	else = {
+# 		set_country_flag = ALR_state_info_open
+# 		ARI_renew = yes
+# 		ARI = {
+# 			var:ARI_map_selected_state = {
+# 				set_variable = { PREV.ARI_bar_influence_frame = ALR_state_influence }
+# 			}
+# 			multiply_variable = { ARI_bar_influence_frame = 1000 }
+# 		}
+# 		clear_array = ALR_state_modifiers
+# 		clear_array = ALR_state_modifiers_status
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { has_state_flag = ALR_resistance_base } }
+# 			add_to_array = { ALR_state_modifiers = 0 }
+# 			add_to_array = { ALR_state_modifiers_status = 1 }
+# 		}
+# 		if = {
+# 			limit = { has_country_flag = ARI_concealment_consensus }
+# 			add_to_array = { ALR_state_modifiers = 1 }
+# 			add_to_array = { ALR_state_modifiers_status = 1 }
+# 		}
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { has_state_flag = ARI_cognitive_bias } }
+# 			add_to_array = { ALR_state_modifiers = 2 }
+# 			add_to_array = { ALR_state_modifiers_status = 1 }
+# 		}
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { check_variable = { ALR_state_influence_rank = 1 } } }
+# 			add_to_array = { ALR_state_modifiers = 3 }
+# 			add_to_array = { ALR_state_modifiers_status = 2 }
+# 		}
+# 		if = {
+# 			limit = { var:ARI_map_selected_state = { check_variable = { ALR_state_influence_rank = 3 } } }
+# 			add_to_array = { ALR_state_modifiers = 4 }
+# 			add_to_array = { ALR_state_modifiers_status = 1 }
+# 		}
+# 	}
+	
+# }
+# #改变反抗度
+# ALR_increase_influence_30 = {
+# 	set_temp_variable = { influence_change_value = 30 }
+# 	ALR_change_influence = yes
+# }
+# ALR_increase_influence_50 = {
+# 	set_temp_variable = { influence_change_value = 50 }
+# 	ALR_change_influence = yes
+# }
+# ALR_change_influence = {
+# 	add_to_variable = { ALR_state_influence = influence_change_value }
+# 	custom_effect_tooltip = ALR_change_influence_tt
+# 	set_temp_variable = { ALR_state_influence_rank_original = ALR_state_influence_rank }
+# 	while_loop_effect = {
+# 		limit = { check_variable = { ALR_state_influence < 0 } }
+# 		add_to_variable = { ALR_state_influence = 100 }
+# 		add_to_variable = { ALR_state_influence_rank = -1 }
+# 	}
+# 	while_loop_effect = {
+# 		limit = { check_variable = { ALR_state_influence > 99 } }
+# 		add_to_variable = { ALR_state_influence = -100 }
+# 		add_to_variable = { ALR_state_influence_rank = 1 }
+# 	}
+# 	if = {
+# 		limit = { check_variable = { ALR_state_influence_rank < 1 } }
+# 		set_variable = { ALR_state_influence_rank = 1 }
+# 		set_variable = { ALR_state_influence = 0 }
+# 	}
+# 	else_if = {
+# 		limit = { check_variable = { ALR_state_influence_rank > ALR_state_max_influence_rank } }
+# 		set_variable = { ALR_state_influence_rank = ALR_state_max_influence_rank }
+# 		set_variable = { ALR_state_influence = 100 }
+# 	}
+# 	set_variable = { ALR_state_frame = ALR_state_influence_rank }
+# 	if = {
+# 		limit = { 
+# 			state = 139
+# 			check_variable = { ALR_state_influence_rank = 4 }
+# 			ALR = { NOT = { has_idea = ALR_capital_influence_rank_4 } }
+# 		}
+# 		ALR = { add_ideas = ALR_capital_influence_rank_4 }
+# 		set_variable = { ALR_state_frame = 3 }
+# 	}
+# 	else_if = {
+# 		limit = { 
+# 			state = 139
+# 			check_variable = { ALR_state_influence_rank < 4 }
+# 			ALR = { has_idea = ALR_capital_influence_rank_4 }
+# 		}
+# 		ALR = { remove_ideas = ALR_capital_influence_rank_4 }
+# 	}
+# }
+# ALR_increase_influence_weekly_modifier_10 = {
+# 	set_temp_variable = { influence_weekly_modifier_change_value = 10 }
+# 	ALR_change_influence_weekly_modifier = yes
+# }
+# ALR_change_influence_weekly_modifier = {
+# 	add_to_variable = { ALR_state_influence_weekly_modifier = influence_weekly_modifier_change_value }
+# 	custom_effect_tooltip = ALR_change_influence_weekly_modifier_tt
+# }
+# ALR_raise_base_level = {
+# 	hidden_effect = {
+# 		meta_effect = {
+# 			text = {
+# 				remove_ideas = ALR_base_level_[LEVEL]
+# 			}
+# 			LEVEL = "[?ALR_base_level|0]"
+# 		}
+# 		add_to_variable = { ALR_base_level = 1 }
+# 		meta_effect = {
+# 			text = {
+# 				add_ideas = ALR_base_level_[LEVEL]
+# 			}
+# 			LEVEL = "[?ALR_base_level|0]"
+# 		}
+# 	}
+# 	custom_effect_tooltip = ALR_raise_base_level_tt
+# }
+# ALR_initialize_base_construction_system = { #初始化gui2
+# 	set_country_flag = ALR_base_construction_system_actived
+# 	set_variable = { ALR_base_level = 0 }
+# 	add_to_variable = { ALR_supply = 40 }
+# 	add_to_variable = { ALR_weapon = 10 }
+# 	set_variable = { ALR_supply_weekly_modifier = 0 }
+# 	set_variable = { ALR_weapon_weekly_modifier = 0 }
+# 	add_ideas = ALR_base_level_0
+# 	add_to_array = { ALR_focuses = token:ALR_focus_seek_supply }
+# 	add_to_array = { ALR_focuses = token:ALR_focus_repair_weapon }
+# 	add_to_array = { ALR_focuses = token:ALR_focus_large_scale_manufacturing }
+# 	add_to_array = { ALR_focuses = token:ALR_focus_political_consultation }
+# 	add_to_array = { ALR_focuses = token:ALR_focus_stability }
+# 	add_to_array = { ALR_focuses = token:ALR_focus_guerrilla_warfare }
+# 	add_to_array = { ALR_focuses = token:ALR_focus_farmlands }
+# 	set_variable = { required_focus@ALR_focus_seek_supply = 				token:ALR_base_supply_1 }
+# 	set_variable = { required_focus@ALR_focus_repair_weapon = 				token:ALR_base_weapon_1 }
+# 	set_variable = { required_focus@ALR_focus_large_scale_manufacturing = 	token:ALR_base_weapon_3 }
+# 	set_variable = { required_focus@ALR_focus_political_consultation = 		token:ALR_base_facility_1 }
+# 	set_variable = { required_focus@ALR_focus_stability = 					token:ALR_base_facility_1 }
+# 	set_variable = { required_focus@ALR_focus_guerrilla_warfare = 			token:ALR_base_construction_4 }
+# 	set_variable = { required_focus@ALR_focus_farmlands = 					token:ALR_base_supply_3 }
+# 	for_each_loop = {
+# 		array = ALR_focuses
+# 		value = focus
+# 		set_variable = { unlocked@var:focus = 1 }
+# 	}
+# 	#初始重心
+# 	add_ideas = ALR_focus_none
+# 	set_variable = { ALR_resistance_focus = token:ALR_focus_none }
+# 	set_variable = { ALR_swap_focus_switch = 1 }
+# }
+# ALR_add_supply_10 = {
+# 	set_temp_variable = { supply_value = 10 }
+# 	ALR_change_supply = yes
+# }
+# ALR_add_supply_20 = {
+# 	set_temp_variable = { supply_value = 20 }
+# 	ALR_change_supply = yes
+# }
+# ALR_add_supply_50 = {
+# 	set_temp_variable = { supply_value = 50 }
+# 	ALR_change_supply = yes
+# }
+# ALR_sub_supply_5 = {
+# 	set_temp_variable = { supply_value = -5 }
+# 	ALR_change_supply = yes
+# }
+# ALR_sub_supply_10 = {
+# 	set_temp_variable = { supply_value = -10 }
+# 	ALR_change_supply = yes
+# }
+# ALR_sub_supply_20 = {
+# 	set_temp_variable = { supply_value = -20 }
+# 	ALR_change_supply = yes
+# }
+# ALR_sub_supply_40 = {
+# 	set_temp_variable = { supply_value = -40 }
+# 	ALR_change_supply = yes
+# }
+# ALR_change_supply = {
+# 	add_to_variable = { ALR_supply = supply_value }
+# 	custom_effect_tooltip = ALR_change_supply_tt
+# 	if = {
+# 		limit = { check_variable = { ALR_supply > 1000 } }
+# 		set_temp_variable = { pp_from_supply = ALR_supply }
+# 		subtract_from_temp_variable = { pp_from_supply = 1000 }
+# 		set_variable = { ALR_supply = 1000 }
+# 		custom_effect_tooltip = ALR_supply_to_pp_tt
+# 		add_political_power = pp_from_supply
+# 	}
+# }
+# ALR_add_weapon_10 = {
+# 	set_temp_variable = { weapon_value = 10 }
+# 	ALR_change_weapon = yes
+# }
+# ALR_add_weapon_20 = {
+# 	set_temp_variable = { weapon_value = 20 }
+# 	ALR_change_weapon = yes
+# }
+# ALR_sub_weapon_10 = {
+# 	set_temp_variable = { weapon_value = -10 }
+# 	ALR_change_weapon = yes
+# }
+# ALR_sub_weapon_20 = {
+# 	set_temp_variable = { weapon_value = -20 }
+# 	ALR_change_weapon = yes
+# }
+# ALR_change_weapon = {
+# 	add_to_variable = { ALR_weapon = weapon_value }
+# 	custom_effect_tooltip = ALR_change_weapon_tt
+# 	if = {
+# 		limit = { check_variable = { ALR_weapon > 1000 } }
+# 		set_temp_variable = { army_experience_from_weapon = ALR_weapon }
+# 		subtract_from_temp_variable = { army_experience_from_weapon = 1000 }
+# 		set_variable = { ALR_weapon = 1000 }
+# 		custom_effect_tooltip = ALR_weapon_to_army_experience_tt
+# 		army_experience = army_experience_from_weapon
+# 	}
+# }
+# ALR_change_supply_weekly_modifier = {
+# 	add_to_variable = { ALR_supply_weekly_modifier = supply_weekly_modifier_value }
+# 	custom_effect_tooltip = ALR_change_supply_weekly_modifier_tt
+# }
+# ALR_change_weapon_weekly_modifier = {
+# 	add_to_variable = { ALR_weapon_weekly_modifier = weapon_weekly_modifier_value }
+# 	custom_effect_tooltip = ALR_change_weapon_weekly_modifier_tt
+# }
+# ALR_unlock_focus = {
+# 	set_variable = { unlocked@var:unlocked_focus = 2 }
+# 	custom_effect_tooltip = ALR_unlock_focus_tt
+# }
+# ALR_swap_focus = {
+# 	hidden_effect = {
+# 		meta_effect = {
+# 			text = {
+# 				swap_ideas = {
+# 					remove_idea = [OLDFOCUS]
+# 					add_idea = [FOCUS]
+# 				}
+				
+# 			}
+# 			OLDFOCUS = "[?ALR_resistance_focus.GetTokenKey]"
+# 			FOCUS = "[?ALR_selected_focus.GetTokenKey]"
+# 		}
+# 	}
+# 	set_variable = { ALR_resistance_focus = ALR_selected_focus }
+# }
+# ALR_remove_resistance_system = {
+# 	every_owned_state = {
+# 		clear_variable = ALR_state_influence
+# 		clear_variable = ALR_state_influence_rank
+# 		clear_variable = ARI_influence_from_neighbor_states
+# 		clear_variable = ARI_monthly_influence_change
+# 		clr_state_flag = ARI_cognitive_bias
+# 		clr_state_flag = ALR_resistance_base
+# 	}
+# 	clr_country_flag = ALR_state_info_open
+# 	clr_country_flag = ARI_concealment_consensus
+# 	clear_variable = ARI_map_selected_state
+# 	clear_variable = ARI_bar_influence_frame
+# 	clear_variable = ARI_average_influence
+# 	clear_array = ARI_states
+# 	clear_array = ARI_states_x
+# 	clear_array = ARI_states_y
+# 	clear_array = ALR_state_window_selected_tab
+# 	clear_array = ALR_state_window_tab
+# 	clear_array = ALR_state_window_button_x
+# }

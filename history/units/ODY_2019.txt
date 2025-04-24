@@ -1,0 +1,70 @@
+division_template = {
+	name = "奥德赛防卫小队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "奥德赛海上猎兵"		
+
+	regiments = {
+		infantry_sf = { x = 0 y = 0 }
+		infantry_sf = { x = 0 y = 1 }
+	}
+	support = {
+	}
+}
+
+#TODO:没这个学院
+
+units = {
+	division= {
+		name = "奥德赛第1“忒勒马科斯”防卫小队"
+		location = 1
+		division_template = "奥德赛防卫小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "奥德赛第2“佩涅罗佩”防卫小队"
+		location = 1
+		division_template = "奥德赛防卫小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "奥德赛第3“欧墨鲁斯”防卫小队"
+		location = 1
+		division_template = "奥德赛防卫小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "奥德赛第4“波吕斐摩斯”防卫小队"
+		location = 1
+		division_template = "奥德赛防卫小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {
+		name = "奥德赛第1“奥德修斯”海上猎兵小队"
+		location = 1
+		division_template = "奥德赛海上猎兵" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

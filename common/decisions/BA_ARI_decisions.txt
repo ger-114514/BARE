@@ -1,0 +1,2735 @@
+ARI_suppression_decisions = {
+	#每周数值变化
+	ARI_state_weekly_modifier = {
+		priority = 1000
+		is_good = no
+		available = { always = no }
+		activation = {
+			hidden_trigger = {
+				has_country_flag = ARI_suppression_available
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = { has_country_flag = ARI_suppression_available }
+			}
+		}
+		timeout_effect = {
+			hidden_effect = {
+				every_owned_state = {
+					limit = { NOT = { has_state_flag = ARI_state_absolutely_controlled } }
+					set_temp_variable = { control_change_value = ARI_weekly_control_modifier }
+					if = {
+						limit = { check_variable = { ARI_state_guard_rank > 2 } }
+						add_to_temp_variable = { control_change_value = 2 }
+					}
+					ARI_change_control = yes
+					set_temp_variable = { guard_change_value = ARI_weekly_guard_modifier }
+					ARI_change_guard = yes
+				}
+				activate_mission = ARI_state_weekly_modifier
+			}
+			
+		}
+		
+		days_mission_timeout = 7
+	}
+	ARI_collect_intelligence = { #收集地区情报
+		visible = {
+			var:ARI_map_selected_state = {
+				NOT = { has_state_flag = ARI_state_absolutely_controlled }
+				check_variable = { ARI_state_guard_rank = 1 }
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARI_collect_intelligence_cd
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_collect_intelligence_cd = 0 }
+				}
+			}
+		}
+		cost = 30
+		complete_effect = {
+			var:ARI_map_selected_state = {
+				ARI_guard_increase_20 = yes
+				set_variable = { ARI_collect_intelligence_cd = 20 }
+			}
+			custom_effect_tooltip = ARI_state_decision_cd_20d
+		}
+	}
+	ARI_sweep_state = { #地区扫荡
+		visible = {
+			var:ARI_map_selected_state = {
+				NOT = { has_state_flag = ARI_state_absolutely_controlled }
+				check_variable = { ARI_state_guard_rank = 1 }
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARI_sweep_state_cd
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_sweep_state_cd = 0 }
+				}
+			}
+			has_equipment = { infantry_equipment > 29 }
+			has_completed_focus = ARI_arrest_rebels
+		}
+		cost = 20
+		complete_effect = {
+			var:ARI_map_selected_state = {
+				set_temp_variable = { control_change_value = 5 }
+				ARI_change_control = yes
+				set_variable = { ARI_sweep_state_cd = 10 }
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -30
+			}
+			add_manpower = -100
+			custom_effect_tooltip = ARI_state_decision_cd_10d
+		}
+	}
+	ARI_dispatch_special_team = { #特战小队清剿
+		visible = {
+			var:ARI_map_selected_state = {
+				NOT = { has_state_flag = ARI_state_absolutely_controlled }
+				check_variable = { ARI_state_guard_rank > 1 }
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARI_dispatch_special_team_cd
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_dispatch_special_team_cd = 0 }
+				}
+			}
+			has_equipment = { infantry_equipment > 49 }
+		}
+		cost = 10
+		complete_effect = {
+			var:ARI_map_selected_state = {
+				ARI_control_increase_20 = yes
+				set_variable = { ARI_dispatch_special_team_cd = 20 }
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50
+			}
+			add_manpower = -200
+			custom_effect_tooltip = ARI_state_decision_cd_20d
+		}
+	}
+	ARI_monitor_system = { #严密监控体系
+		visible = {
+			var:ARI_map_selected_state = {
+				NOT = { has_state_flag = ARI_state_absolutely_controlled }
+				check_variable = { ARI_state_guard_rank > 1 }
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARI_monitor_system_cd
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_monitor_system_cd = 0 }
+				}
+			}
+		}
+		cost = 50
+		complete_effect = {
+			var:ARI_map_selected_state = {
+				set_temp_variable = { guard_change_value = 40 }
+				ARI_change_guard = yes
+				ARI_guard_modifier_increase_2 = yes
+				set_variable = { ARI_monitor_system_cd = 30 }
+			}
+			add_manpower = -200
+			custom_effect_tooltip = ARI_state_decision_cd_30d
+		}
+	}
+	ARI_direct_manage = { #夫人直接管理
+		visible = {
+			var:ARI_map_selected_state = {
+				NOT = { 
+					has_state_flag = ARI_state_absolutely_controlled 
+					has_state_flag = ARI_direct_manage_fired 
+				}
+				check_variable = { ARI_state_guard_rank > 1 }
+			}
+		}
+		available = {
+			has_completed_focus = ARI_suppress_resistance
+		}
+		cost = 40
+		days_remove = 50
+		complete_effect = {
+			set_variable = { ARI_direct_manage_target = ARI_map_selected_state }
+		}
+		remove_effect = {
+			var:ARI_direct_manage_target = {
+				set_temp_variable = { control_change_value = 10 }
+				ARI_change_control = yes
+				set_temp_variable = { guard_change_value = 10 }
+				ARI_change_guard = yes
+				ARI_guard_modifier_increase_5 = yes
+				set_state_flag = ARI_direct_manage_fired
+			}
+			clear_variable = ARI_direct_manage_target
+			custom_effect_tooltip = ARI_state_decision_only_once
+		}
+	}
+	ARI_complete_suppression_task = { #确立绝对掌控
+		priority = 1000
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARI_complete_suppression_task_trigger
+				all_owned_state = { has_state_flag = ARI_state_absolutely_controlled }
+			}
+		}
+		complete_effect = {
+			ARI_remove_suppression_system = yes
+			custom_effect_tooltip = ARI_complete_suppression_task_tt
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}
+# ARI_outside_recon = {
+# 	ARI_outside_recon = { #勘探外界
+# 		available = {
+# 			has_equipment = { infantry_equipment > 499 }
+# 			has_manpower > 999
+# 			num_of_available_civilian_factories > 0
+# 			has_completed_focus = ARI_new_guide
+# 		}
+# 		fire_only_once = yes
+# 		days_remove = 35
+# 		modifier = {
+# 			civilian_factory_use = 1
+# 		}
+# 		complete_effect = {
+# 			add_manpower = -1000
+# 			add_equipment_to_stockpile = {
+# 				type = infantry_equipment
+# 				amount = -500
+# 			}
+# 		}
+# 		remove_effect = {
+# 			add_political_power = 25
+# 			add_equipment_to_stockpile = {
+# 				type = infantry_equipment
+# 				amount = 400
+# 			}
+# 			army_experience = 15
+# 			set_country_flag = ARI_outside_recon_fired
+# 		}
+# 		ai_will_do = {
+# 			factor = 1000
+# 		}
+# 	}
+# }
+# ARI_mystic_research_decisions = {
+# 	ARI_research_royal_blood = { #皇室血脉研究
+# 		days_remove = 60
+# 		remove_effect = {
+# 			set_temp_variable = { mystic_progress_change = 5 }
+# 			ARI_change_mystic_progress = yes
+# 		}
+# 		ai_will_do = {
+# 			factor = 1000
+# 		}
+# 	}
+# 	ARI_research_ancient_books = { #研究阿里乌斯古书
+# 		fire_only_once = yes
+# 		cost = 50
+# 		days_remove = 90
+# 		remove_effect = {
+# 			#TODO:力量渴望者修正 研究速度+5%
+# 		}
+# 		ai_will_do = {
+# 			factor = 1000
+# 		}
+# 	}
+# }
+ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
+	#黑服的资源交易
+	ARI_black_suit_trade = {
+		visible = {
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "10"
+				}
+				check_variable = { ARI_materials > 9 }
+			}
+			has_completed_focus = ARI_black_suit
+		}
+		days_re_enable = 30
+		complete_effect = {
+			#
+		}
+	}
+	#巨匠的神秘造物
+	ARI_Maesutoro_trade = {
+		visible = {
+			check_variable = { ARI_mystic_progress < 100 }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "200"
+				}
+				check_variable = { ARI_materials > 199 }
+			}
+			has_completed_focus = ARI_Maesutoro
+		}
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			set_temp_variable = { material_change = -200 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = ARI_Maesutoro_trade_fired } }
+				custom_effect_tooltip = ARI_decision_first_fired_tt
+				set_temp_variable = { material_change = 200 }
+				ARI_change_materials = yes
+				set_country_flag = ARI_Maesutoro_trade_fired
+			}
+			set_temp_variable = { mystic_progress_change = 10 }
+			ARI_change_mystic_progress = yes
+			# add_to_variable = {
+			# 	mystic_progress_change = 10
+			# }
+		}
+	}
+	#部署集束炸弹
+	ARI_Gorukosoda_cluster_bomb = {
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "600"
+				}
+				check_variable = { ARI_materials > 599 }
+			}
+			has_completed_focus = ARI_Gorukosoda
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -600 }
+			ARI_change_materials = yes
+			custom_effect_tooltip = ARI_Gorukosoda_cluster_bomb_tt
+			add_to_variable = { ARI_forbidden_weapons_army_artillery_attack_factor = 0.05 }
+			add_to_variable = { ARI_forbidden_weapons_army_artillery_defence_factor = 0.05 }
+		}
+	}
+	#先进麻醉气体
+	ARI_Gorukosoda_anaesthetic_gas = {
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "600"
+				}
+				check_variable = { ARI_materials > 599 }
+			}
+			has_completed_focus = ARI_Gorukosoda
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -600 }
+			ARI_change_materials = yes
+			custom_effect_tooltip = ARI_Gorukosoda_anaesthetic_gas_tt
+			add_to_variable = { ARI_forbidden_weapons_breakthrough_factor = 0.05 }
+		}
+	}
+	#实验性光环压制装置
+	ARI_Gorukosoda_halo_depression_device = {
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "600"
+				}
+				check_variable = { ARI_materials > 599 }
+			}
+			has_completed_focus = ARI_Gorukosoda
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -600 }
+			ARI_change_materials = yes
+			custom_effect_tooltip = ARI_Gorukosoda_halo_depression_device_tt
+			add_to_variable = { ARI_forbidden_weapons_army_attack_factor = 0.05 }
+			add_to_variable = { ARI_forbidden_weapons_army_org_regain = -0.05 }
+		}
+	}
+	#神秘强化装置
+	ARI_Gorukosoda_mystery_strengthen_device = {
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "600"
+				}
+				check_variable = { ARI_materials > 599 }
+			}
+			has_completed_focus = ARI_Gorukosoda
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -600 }
+			ARI_change_materials = yes
+			custom_effect_tooltip = ARI_Gorukosoda_mystery_strengthen_device_tt
+			add_to_variable = { ARI_forbidden_weapons_army_org_regain = 0.1 }
+		}
+	}
+	#补充反光环炸弹
+	ARI_Gorukosoda_anti_halo_bomb = {
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "600"
+				}
+				check_variable = { ARI_materials > 599 }
+			}
+			has_completed_focus = ARI_Gorukosoda
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -600 }
+			ARI_change_materials = yes
+			custom_effect_tooltip = ARI_Gorukosoda_anti_halo_bomb_tt
+			add_to_variable = { ARI_forbidden_weapons_stability_factor = 0.1 }
+		}
+	}
+}
+ARI_foreign_operations_decisions = {
+	ARI_outside_recon = { #勘探外界
+		available = {
+			has_equipment = { infantry_equipment > 499 }
+			has_manpower > 999
+			num_of_available_civilian_factories > 0
+			has_completed_focus = ARI_new_guide
+		}
+		fire_only_once = yes
+		days_remove = 35
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+		remove_effect = {
+
+			if = {
+				limit = { NOT = { has_country_flag = ARI_outside_recon_fired} }
+				custom_effect_tooltip = ARI_first_time_back_cost
+				add_manpower = 1000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+				}
+			}
+
+			add_political_power = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 400
+			}
+			army_experience = 15
+			set_country_flag = ARI_outside_recon_fired
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	ARI_explore_ruins = { #探索废墟
+		visible = {
+			has_completed_focus = ARI_new_guide
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_equipment = { infantry_equipment > 1999 }
+			has_manpower > 2999
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+		}
+		remove_effect = {
+			country_event = ARI_beatrice_operations.1
+			set_temp_variable = { material_change = 150 }
+			ARI_change_materials = yes
+			if = {
+				limit = { NOT = { has_country_flag = ARI_explore_ruins_fired } }
+				custom_effect_tooltip = ARI_decision_first_fired_tt
+				add_manpower = 3000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+				}
+				add_political_power = 25
+				set_country_flag = ARI_explore_ruins_fired
+			}
+		}
+	}
+	ARI_stronghold_on_the_ground = { #建立地面据点
+		visible = {
+			has_completed_focus = ARI_new_guide
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_equipment = { infantry_equipment > 1499 }
+			has_equipment = { support_equipment > 99 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "120"
+				}
+				check_variable = { ARI_materials > 119 }
+			}
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 120
+		complete_effect = {
+			set_temp_variable = { material_change = -120 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			country_event = ARI_beatrice_operations.2
+			set_temp_variable = { material_monthly_modifier_change = 30 }
+			ARI_change_materials_monthly_modifier = yes
+		}
+	}
+	ARI_intelligence_Trinity_branch = { #建立圣三一分部
+		visible = {
+			has_completed_focus = ARI_Trinity_operation
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_completed_focus = ARI_Trinity_operation
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			set_variable = { ARI_intelligence_in_TRI = 0 }
+			set_variable = { ARI_min_intelligence_in_TRI = 0 }
+			add_ideas = ARI_intelligence_in_TRI_0
+			set_country_flag = ARI_intelligence_Trinity_branch_established
+		}
+	}
+	ARI_intelligence_Gehenna_branch = { #建立格赫娜分部
+		visible = {
+			has_completed_focus = ARI_Gehenna_operation
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_completed_focus = ARI_Gehenna_operation
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			set_variable = { ARI_intelligence_in_GEH = 0 }
+			set_variable = { ARI_min_intelligence_in_GEH = 0 }
+			add_ideas = ARI_intelligence_in_GEH_0
+			set_country_flag = ARI_intelligence_Gehenna_branch_established
+		}
+	}
+	ARI_spread_rumours_TRI = { #散布不实谣言（圣三一）
+		highlight_states = {
+			highlight_states_trigger = {
+				is_controlled_by = TRI
+				any_neighbor_state = {
+					is_controlled_by = ARI
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ARI_black_market_intelligence_net
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "75"
+				}
+				check_variable = { ARI_materials > 74 }
+			}
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			set_temp_variable = { material_change = -75 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			random_list = {
+				4 = {
+					country_event = ARI_beatrice_operations.6
+					TRI = {
+						country_event = ARI_beatrice_operations.10
+						add_stability = -0.01
+					}
+					set_temp_variable = { revenge_progress_change = 5 }
+					ARI_change_revenge_progress = yes
+					set_temp_variable = { intelligence_change = 5 }
+					ARI_traveller_operation_prepare_progress_update_effect = yes
+					ARI_change_intelligence_in_TRI = yes
+					country_event = ARI_action.13
+				}
+				1 = {
+					country_event = ARI_beatrice_operations.7
+					set_temp_variable = { material_change = 25 }
+					ARI_change_materials = yes
+					country_event = ARI_action.14
+				}
+			}
+		}
+	}
+	ARI_spread_rumours_GEH = { #散布不实谣言（格赫娜）
+		highlight_states = {
+			highlight_states_trigger = {
+				is_controlled_by = GEH
+				any_neighbor_state = {
+					is_controlled_by = ARI
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ARI_black_market_intelligence_net
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "75"
+				}
+				check_variable = { ARI_materials > 74 }
+			}
+			has_country_flag = ARI_intelligence_Gehenna_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			set_temp_variable = { material_change = -75 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			random_list = {
+				4 = {
+					country_event = ARI_beatrice_operations.8
+					GEH = {
+						country_event = ARI_beatrice_operations.10
+						add_stability = -0.01
+					}
+					set_temp_variable = { revenge_progress_change = 5 }
+					ARI_change_revenge_progress = yes
+					set_temp_variable = { intelligence_change = 5 }
+					ARI_change_intelligence_in_GEH = yes
+					country_event = ARI_action.13
+				}
+				1 = {
+					country_event = ARI_beatrice_operations.9
+					set_temp_variable = { material_change = 25 }
+					ARI_change_materials = yes
+					country_event = ARI_action.14
+				}
+			}
+		}
+	}
+	ARI_kidnap_Trinity_students = { #绑架圣三一学生
+		highlight_states = {
+			highlight_states_trigger = {
+				is_controlled_by = TRI
+				any_neighbor_state = {
+					is_controlled_by = ARI
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ARI_take_the_initiative
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_equipment = { infantry_equipment > 2999 }
+			has_manpower > 1499
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 90
+		complete_effect = {
+			add_manpower = -1500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+			}
+		}
+		remove_effect = {
+			random_list = {
+				6 = {
+					country_event = ARI_beatrice_operations.11
+					set_temp_variable = { revenge_progress_change = 10 }
+					ARI_change_revenge_progress = yes
+					set_temp_variable = { intelligence_change = 5 }
+					ARI_change_intelligence_in_TRI = yes
+					ARI_traveller_operation_prepare_progress_update_effect = yes
+					set_temp_variable = { material_change = 150 }
+					ARI_change_materials = yes
+					TRI = {
+						country_event = ARI_beatrice_operations.14
+					}
+				}
+				3 = {
+					modifier = {
+						TRI = {
+							NOT = { has_completed_focus = TRI_establish_hoshubu }
+						}
+						add = 1
+					}
+					country_event = ARI_beatrice_operations.12
+					add_manpower = -500
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -1000
+					}
+				}
+				1 = {
+					modifier = {
+						TRI = {
+							NOT = { has_completed_focus = TRI_establish_hoshubu }
+						}
+						factor = 0
+					}
+					country_event = ARI_beatrice_operations.13
+					add_manpower = -500
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -1000
+					}
+				}
+			}
+		}
+	}
+	ARI_attack_Trinity_facilities = { #攻击圣三一设施
+		highlight_states = {
+			highlight_states_trigger = {
+				is_controlled_by = TRI
+				any_neighbor_state = {
+					is_controlled_by = ARI
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ARI_take_the_initiative
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_equipment = { infantry_equipment > 2999 }
+			has_equipment = { support_equipment > 99 }
+			has_manpower > 1999
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 120
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+			}
+		}
+		remove_effect = {
+			random_list = {
+				3 = {
+					country_event = ARI_beatrice_operations.15
+					set_temp_variable = { revenge_progress_change = 25 }
+					ARI_change_revenge_progress = yes
+					army_experience = 25
+					TRI = {
+						random_state = {
+							limit = {
+								non_damaged_building_level = {
+									building = industrial_complex
+									level > 0
+								}
+							}
+							damage_building = {
+								type = industrial_complex
+								damage = 1
+							}
+						}
+						country_event = ARI_beatrice_operations.17
+					}
+				}
+				1 = {
+					country_event = ARI_beatrice_operations.16
+					set_temp_variable = { revenge_progress_change = 5 }
+					ARI_change_revenge_progress = yes
+					TRI = {
+						country_event = ARI_beatrice_operations.18
+					}
+				}
+			}
+		}
+	}
+	ARI_connect_with_mika = { #与未花的接触
+		highlight_states = {
+			highlight_states_trigger = {
+				is_capital = yes
+				is_controlled_by = TRI
+			}
+		}
+		visible = {
+			has_completed_focus = ARI_collaborator_in_Trinity
+			has_country_flag = ARI_outside_recon_fired
+			TRI = {
+				NOT = {
+					has_country_flag = TRI_mika_arrested
+				}
+			}
+		}
+		available = {
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 150
+		remove_effect = {
+			country_event = ARI_beatrice_operations.19
+			set_temp_variable = { material_change = 300 }
+			ARI_change_materials = yes
+			set_temp_variable = { revenge_progress_change = -10 }
+			ARI_change_revenge_progress = yes
+			set_temp_variable = { intelligence_change = 20 }
+			ARI_traveller_operation_prepare_progress_update_effect = yes
+			ARI_change_intelligence_in_TRI = yes
+		}
+	}
+	ARI_Trinity_intelligence_net = { #加强圣三一情报网络
+		visible = {
+			has_completed_focus = ARI_collaborator_in_Trinity
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+			has_manpower > 499
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "50"
+				}
+				check_variable = { ARI_materials > 49 }
+			}
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			add_manpower = -500
+			set_temp_variable = { material_change = -50 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			country_event = ARI_beatrice_operations.20
+			set_temp_variable = { intelligence_change = 10 }
+			ARI_traveller_operation_prepare_progress_update_effect = yes
+			ARI_change_intelligence_in_TRI = yes
+		}
+	}
+	ARI_monitoring_station = { #建立圣三一情报监听站
+		visible = {
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			num_of_available_civilian_factories > 1
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			136 = {
+				add_building_construction = {
+					type = radar_station
+					level = 3
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				category = electronics
+			}
+		}
+	}
+	ARI_Pandemonium_students_training = { #训练万魔殿学生
+		visible = {
+			has_completed_focus = ARI_secret_cooperation_with_Pandemonium
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_manpower > 999
+			has_equipment = { infantry_equipment > 999 }
+			has_army_experience > 25
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_revenge_progress
+					PROGRESS = 5
+				}
+				check_variable = { ARI_revenge_progress > 5 }
+			}
+			has_country_flag = ARI_intelligence_Gehenna_branch_established
+		}
+		days_remove = 60
+		days_re_enable = 60
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			army_experience = -25
+			set_temp_variable = { revenge_progress_change = -5 }
+			ARI_change_revenge_progress = yes
+		}
+		remove_effect = {
+			country_event = ARI_beatrice_operations.29
+			set_temp_variable = { material_change = 200 }
+			ARI_change_materials = yes
+			set_temp_variable = { intelligence_change = 10 }
+			ARI_change_intelligence_in_GEH = yes
+		}
+	}
+	ARI_suppress_Prefect_Team = { #压制风纪委员会
+		visible = {
+			has_completed_focus = ARI_secret_cooperation_with_Pandemonium
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_manpower > 1499
+			has_equipment = { infantry_equipment > 1499 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "50"
+				}
+				check_variable = { ARI_materials > 49 }
+			}
+			has_country_flag = ARI_intelligence_Gehenna_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			add_manpower = -1500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1500
+			}
+			set_temp_variable = { material_change = -50 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			random_list = {
+				3 = {
+					country_event = ARI_beatrice_operations.21
+					set_temp_variable = { intelligence_change = 10 }
+					ARI_change_intelligence_in_GEH = yes
+					set_temp_variable = { revenge_progress_change = 15 }
+					ARI_change_revenge_progress = yes
+					GEH = {
+						country_event = ARI_beatrice_operations.23
+					}
+				}
+				1 = {
+					country_event = ARI_beatrice_operations.22
+					set_temp_variable = { revenge_progress_change = 5 }
+					ARI_change_revenge_progress = yes
+					GEH = {
+						country_event = ARI_beatrice_operations.24
+					}
+				}
+			}
+			
+		}
+	}
+	ARI_operation_fake_flag_decision = { #假旗行动
+		visible = {
+			has_country_flag = ARI_outside_recon_fired
+			has_completed_focus = ARI_fake_flag_operation
+		}
+		available = {
+			has_manpower > 1999
+			has_equipment = { infantry_equipment > 3999 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_TRI_intelligence
+					PROGRESS = 2.5
+				}
+				check_variable = { ARI_intelligence_in_TRI > 2.5 }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_GEH_intelligence
+					PROGRESS = 2.5
+				}
+				check_variable = { ARI_intelligence_in_GEH > 2.5 }
+			}
+			has_country_flag = ARI_intelligence_Trinity_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 90
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -4000
+			}
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+			set_temp_variable = { intelligence_change = -2.5 }
+			ARI_change_intelligence_in_TRI = yes
+			ARI_change_intelligence_in_GEH = yes
+		}
+		remove_effect = {
+			TRI = {
+				TRI_unity_decrease_5 = yes
+				set_temp_variable = { loyalty_change = -0.03 }
+				TRI_parliament_all_loyalty_change = yes
+			}
+			random_list = {
+				2 = {
+					country_event = ARI_beatrice_operations.25
+					set_temp_variable = { revenge_progress_change = 40 }
+					ARI_change_revenge_progress = yes
+					TRI = {
+						country_event = ARI_beatrice_operations.27
+					}
+					GEH = {
+						country_event = ARI_beatrice_operations.27
+					}
+				}
+				1 = {
+					country_event = ARI_beatrice_operations.26
+					set_temp_variable = { revenge_progress_change = 30 }
+					ARI_change_revenge_progress = yes
+					TRI = {
+						country_event = ARI_beatrice_operations.28
+					}
+					GEH = {
+						country_event = ARI_beatrice_operations.28
+					}
+				}
+			}
+			
+		}
+	}
+
+	#建立安全屋
+	ARI_build_safe_home	= {
+		visible = {
+			has_completed_focus = ARI_revise_our_operation_plan
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { support_equipment > 49 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "75"
+				}
+				check_variable = { ARI_materials > 74 }
+			}
+		}
+		days_remove = 30
+		days_re_enable = 120
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -50
+			}
+			set_temp_variable = { material_change = -75 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			set_temp_variable = { intelligence_change = 10 }
+			ARI_change_intelligence_in_TRI = yes
+
+			#TODO:一次安全屋抵消一次反渗透
+			add_to_variable = {
+				var = ARI_safety_home_use_time
+				value = 2
+			}
+		}
+	}
+
+	#部署外派特战部队
+	ARI_send_sf_to_trinity	= {
+		visible = {
+			has_completed_focus = ARI_revise_our_operation_plan
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_manpower > 1999
+			has_equipment = { infantry_equipment > 999 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+		}
+		days_remove = 30
+		days_re_enable = 120
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			set_temp_variable = { intelligence_change = 10 }
+			ARI_change_intelligence_in_TRI = yes
+		}
+	}
+
+	#牵制圣三一边境巡逻队
+	ARI_control_trinity_border = {
+		visible = {
+			has_completed_focus = ARI_relax_operation_restrictions
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_manpower > 1499
+			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { light_fire_support_equipment > 11 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "50"
+				}
+				check_variable = { ARI_materials > 49 }
+			}
+			has_country_flag = ARI_intelligence_Gehenna_branch_established
+		}
+		days_remove = 30
+		days_re_enable = 90
+		complete_effect = {
+			add_manpower = -1500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = light_fire_support_equipment
+				amount = -12
+			}
+			set_temp_variable = { material_change = -50 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			random_list = {
+				1 = {
+					set_temp_variable = { intelligence_change = 10 }
+					ARI_change_intelligence_in_TRI = yes
+					army_experience = 25
+					set_temp_variable = { revenge_progress_change = 20 }
+					ARI_change_revenge_progress = yes
+				}
+
+				1 = {
+					set_temp_variable = { revenge_progress_change = 5 }
+					ARI_change_revenge_progress = yes
+				}
+			}
+		}
+	}
+
+	#伪装会谈筹备者
+	ARI_disguise_conference_preparer = {
+		visible = {
+			has_completed_focus = ARI_relax_operation_restrictions
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_revenge_progress
+					PROGRESS = 5
+				}
+				check_variable = { ARI_revenge_progress > 4 }
+			}
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 90
+		complete_effect = {
+			set_temp_variable = { revenge_progress_change = 5 }
+			ARI_change_revenge_progress = yes
+		}
+		remove_effect = {
+			set_temp_variable = { intelligence_change = 5 }
+			ARI_change_intelligence_in_TRI = yes
+			add_intel = {
+				target = TRI
+				civilian_intel = 10
+			}
+		}
+	}
+
+
+	#万魔殿秘密物资交换
+	ARI_pandaemonium_secret_material_change = {
+		visible = {
+			has_completed_focus = ARI_further_strengthen_cooperation
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			num_of_military_factories > 4
+		}
+		modifier = {
+			military_factory_donations = -5
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			set_temp_variable = { intelligence_change = 10 }
+			ARI_change_intelligence_in_GEH = yes			
+			set_temp_variable = { material_change = 200 }
+			ARI_change_materials = yes
+
+			GEH = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = ARI
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 50
+					producer = ARI
+				}
+			}
+		}
+	}
+
+	#格黑娜游学之旅
+	ARI_a_trip_to_gehenna = {
+		visible = {
+			has_completed_focus = ARI_further_strengthen_cooperation
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			num_of_available_civilian_factories > 2
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 90
+		remove_effect = {
+			set_temp_variable = { intelligence_change = 15 }
+			ARI_change_intelligence_in_GEH = yes
+		}
+	}
+
+	#参与温泉部发掘行动
+	ARI_join_spring_club_activity = {
+		visible = {
+			has_completed_focus = ARI_join_gehenna_club_fake
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			has_equipment = { support_equipment > 199 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "50"
+				}
+				check_variable = { ARI_materials > 49 }
+			}
+		}
+		cost = 50
+		days_remove = 60
+		days_re_enable = 90
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+			}
+			set_temp_variable = { material_change = -50 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			random_list = {
+				3 = {
+					#触发对应事件
+					country_event = {
+						id = ARI_action.20
+						days = 3
+					}
+
+					GEH = {
+						country_event = {
+							id = ARI_action.22
+							days = 3
+						}
+					}
+				}
+
+				1 = {
+					#触发对应事件
+					country_event = {
+						id = ARI_action.21
+						days = 3
+					}
+					
+					GEH = {
+						country_event = {
+							id = ARI_action.23
+							days = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#参与温泉部发掘行动
+	ARI_join_food_seminar_club_activity = {
+		visible = {
+			has_completed_focus = ARI_join_gehenna_club_fake
+			has_country_flag = ARI_outside_recon_fired
+		}
+		available = {
+			
+		}
+		cost = 100
+		days_remove = 60
+		days_re_enable = 90
+		remove_effect = {
+			random_list = {
+				3 = {
+					#触发对应事件
+					country_event = {
+						id = ARI_action.37
+						days = 3
+					}
+
+					GEH = {
+						country_event = {
+							id = ARI_action.39
+							days = 3
+						}
+					}
+				}
+
+				1 = {
+					#触发对应事件
+					country_event = {
+						id = ARI_action.38
+						days = 3
+					}
+					
+					GEH = {
+						country_event = {
+							id = ARI_action.40
+							days = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+ARI_black_market_decisions = {
+	ARI_black_market_guns_in = { #黑市武器交易（步枪买入）
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+		}
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4000
+			}
+		}
+	}
+	ARI_black_market_guns_out = { #黑市武器交易（步枪卖出）
+		available = {
+			has_equipment = { infantry_equipment > 7999 }
+		}
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -8000
+			}
+		}
+		remove_effect = {
+			set_temp_variable = { material_change = 100 }
+			ARI_change_materials = yes
+		}
+	}
+	ARI_black_market_support_in = { #黑市武器交易（支援装备买入）
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+		}
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+		}
+	}
+	ARI_black_market_support_out = { #黑市武器交易（支援装备卖出）
+		available = {
+			has_equipment = { support_equipment > 999 }
+		}
+		days_remove = 30
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+		remove_effect = {
+			set_temp_variable = { material_change = 100 }
+			ARI_change_materials = yes
+		}
+	}
+	ARI_intelligence_exchange = { #黑市情报交流
+		visible = {
+			has_completed_focus = ARI_black_market_intelligence_net
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "50"
+				}
+				check_variable = { ARI_materials > 49 }
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			country_event = ARI_beatrice_operations.3
+			add_political_power = 50
+			army_experience = 30
+			set_temp_variable = { material_change = -50 }
+			ARI_change_materials = yes
+		}
+	}
+	ARI_engage_in_mercenaries = { #参与佣兵作战
+		visible = {
+			has_completed_focus = ARI_black_market_mercenaries
+		}
+		available = {
+			has_equipment = { infantry_equipment > 3999 }
+			has_equipment = { support_equipment > 299 }
+			has_manpower > 2999
+		}
+		days_remove = 90
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -4000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -300
+			}
+			add_manpower = -3000
+			random_list = {
+				
+				75 = {
+					country_event = ARI_beatrice_operations.4
+					army_experience = 50
+					set_temp_variable = { material_change = 200 }
+					ARI_change_materials = yes
+				}
+				25 = {
+					country_event = ARI_beatrice_operations.5
+					army_experience = 75
+					set_temp_variable = { material_change = 300 }
+					ARI_change_materials = yes
+				}
+			}
+		}
+	}
+}
+ARI_deal_with_shortage_decisions = {
+	ARI_spread_production_technologies = { #生产技术下发
+		cost = 25
+		fire_only_once = yes
+		days_remove = 60
+		modifier = {
+			research_speed_factor = -0.1
+		}
+		remove_effect = {
+			subtract_from_variable = { ARI_deal_with_shortage_decisions_count = 1 }
+			add_tech_bonus = {
+				bonus = 1
+				#category = 
+			}
+			custom_effect_tooltip = ARI_spread_production_technologies_tt
+			add_to_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = 0.1 }
+			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
+		}
+	}
+	ARI_emergency_allocation = { #紧急配给政策
+		cost = 25
+		fire_only_once = yes
+		days_remove = 60
+		modifier = {
+			stability_factor = -0.1
+			industrial_capacity_factory = -0.2
+			conscription_factor = -0.2
+		}
+		remove_effect = {
+			subtract_from_variable = { ARI_deal_with_shortage_decisions_count = 1 }
+			custom_effect_tooltip = ARI_emergency_allocation_tt
+			add_to_variable = { ARI_broken_provisioning_system_stability_factor = 0.05 }
+			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
+			add_to_variable = { ARI_broken_provisioning_system_conscription_factor = 0.1 }
+		}
+	}
+	ARI_earn_Trinity_supply = { #争取更多圣三一补给
+		available = {
+			if = {
+				limit = { NOT = { has_country_flag = ARI_intelligence_Trinity_branch_established } }
+				custom_override_tooltip = {
+					tooltip = ARI_earn_Trinity_supply_trigger_tt
+					has_political_power > 100
+				}
+			}
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			subtract_from_variable = { ARI_deal_with_shortage_decisions_count = 1 }
+			if = {
+				limit = { NOT = { has_country_flag = ARI_intelligence_Trinity_branch_established } }
+				add_political_power = -75
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			custom_effect_tooltip = ARI_earn_Trinity_supply_tt
+			add_to_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = 0.05 }
+			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
+			add_to_variable = { ARI_broken_provisioning_system_conscription_factor = 0.05 }
+		}
+	}
+}
+ARI_raw_material_decisions = {
+	ARI_processing_factories = { #建设加工厂
+		visible = {
+			has_completed_focus = ARI_raw_material
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = rare_metal_processing_plant
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rare_metal_processing_plant
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = electronic_component_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = electronic_component_factory
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = metal_processing_plant
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = metal_processing_plant
+					level = 1
+				}
+			}
+		}
+	}
+	ARI_power_station = { #建设发电站
+		visible = {
+			has_completed_focus = ARI_raw_material
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			136 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = thermal_power_station
+					level = 1
+				}
+			}
+			138 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = thermal_power_station
+					level = 1
+				}
+			}
+		}
+	}
+	ARI_explore_ruins_ooparts = { #废墟区探索
+		visible = {
+			has_completed_focus = ARI_ooparts_technology
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			531 = {
+				add_resource = {
+					type = resources_mm
+					amount = 16
+				}
+			}
+			#TODO:神秘科技加速卡*1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				#category = 
+			}
+		}
+	}
+}
+ARI_equipments_development_decisions = {
+	ARI_assault_rifle = { #阿里乌斯制式突击步枪
+		visible = {
+			has_completed_focus = ARI_individual_effectiveness
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			#1*100%步兵武器加成卡
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			add_ideas = ARI_assault_rifle_idea
+		}
+	}
+	ARI_light_support_equipment = { #轻装支援火力
+		visible = {
+			has_completed_focus = ARI_individual_effectiveness
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			#TODO:支援武器（火炮）加成卡100*2
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				#category =
+			}
+			add_ideas = ARI_light_support_equipment_idea
+		}
+	}
+	ARI_logistics_teams = { #行动后勤保障小组
+		visible = {
+			has_completed_focus = ARI_individual_effectiveness
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			#TODO:支援部队加成卡100*1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				#category =
+			}
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_logistics_teams_tt
+			add_to_variable = { ARI_armed_students_modifier_supply_consumption_factor = -0.1 }
+		}
+	}
+	ARI_old_production_line = { #重启旧生产线
+		visible = {
+			has_completed_focus = ARI_anti_riot_squads
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = heavy_arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = heavy_arms_factory
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = ARI_merkava_main_battle_tank
+				add_idea = ARI_merkava_main_battle_tank_1
+			}
+		}
+	}
+	ARI_new_generation_of_merkava = { #新一代“驰车”
+		visible = {
+			has_idea = ARI_merkava_main_battle_tank_1
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		remove_effect = {
+			#TODO:2*100*装甲卡
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				#category = 
+			}
+			swap_ideas = {
+				remove_idea = ARI_merkava_main_battle_tank_1
+				add_idea = ARI_merkava_main_battle_tank_2
+			}
+		}
+	}
+
+}
+ARI_special_training_decisions = {
+	ARI_night_infiltration_warfare = { #夜间渗透特训
+		available = {
+			NOT = { has_country_flag = ARI_special_training_ongoing }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = ARI_special_training_ongoing
+		}
+		remove_effect = {
+			clr_country_flag = ARI_special_training_ongoing
+			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
+			army_experience = 25
+			custom_effect_tooltip = ARI_night_infiltration_warfare_tt
+			add_to_variable = { ARI_special_force_land_night_attack = 0.2 }
+		}
+	}
+	ARI_ambush_warfare = { #伏击特化训练
+		available = {
+			NOT = { has_country_flag = ARI_special_training_ongoing }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = ARI_special_training_ongoing
+		}
+		remove_effect = {
+			clr_country_flag = ARI_special_training_ongoing
+			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
+			army_experience = 25
+			custom_effect_tooltip = ARI_ambush_warfare_tt
+			add_to_variable = { ARI_special_force_equipment_capture_factor = 0.05 }
+			add_to_variable = { ARI_special_force_max_dig_in_factor = 0.1 }
+			add_to_variable = { ARI_special_force_dig_in_speed_factor = 0.1 }
+		}
+	}
+	ARI_assault_warfare = { #强袭特化训练
+		available = {
+			NOT = { has_country_flag = ARI_special_training_ongoing }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = ARI_special_training_ongoing
+		}
+		remove_effect = {
+			clr_country_flag = ARI_special_training_ongoing
+			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
+			army_experience = 25
+			custom_effect_tooltip = ARI_assault_warfare_tt
+			add_to_variable = { ARI_special_force_army_speed_factor = 0.05 }
+			add_to_variable = { special_forces_attack_factor = 0.1 }
+		}
+	}
+	ARI_CQB_training = { #CQB特训
+		available = {
+			NOT = { has_country_flag = ARI_special_training_ongoing }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = ARI_special_training_ongoing
+		}
+		remove_effect = {
+			clr_country_flag = ARI_special_training_ongoing
+			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
+			army_experience = 25
+			custom_effect_tooltip = ARI_CQB_training_tt
+			set_technology = {
+				ARI_CQB_training = 1
+			}
+		}
+	}
+	ARI_wilderness_survival = { #野外生存训练标准化
+		available = {
+			NOT = { has_country_flag = ARI_special_training_ongoing }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = ARI_special_training_ongoing
+		}
+		remove_effect = {
+			clr_country_flag = ARI_special_training_ongoing
+			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
+			custom_effect_tooltip = ARI_wilderness_survival_tt
+			add_to_variable = { ARI_special_force_out_of_supply_factor = -0.15 }
+			add_to_variable = { ARI_special_force_no_supply_grace = 48 }
+		}
+	}
+}
+
+
+
+###追求力量决议组###
+ARI_power_chaser_decisions = {
+
+	ARI_to_next_stage = { #进入下个阶段
+		visible = {
+			has_completed_focus = ARI_desire_of_power
+			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key =  ARI_has_mystic_progress
+					PROGRESS = "100"
+				}
+				check_variable = { ARI_mystic_progress = 100 }
+			}
+			if = {
+				limit = {
+					check_variable = {
+						ARI_mystic_rank = 2	
+					}
+				}
+				has_completed_focus = ARI_research_trinity_books
+			}
+		}
+
+		remove_effect = {
+			ARI_upgrade_mystery_tech = yes
+
+			add_to_variable = {
+				var = ARI_mystic_rank
+				value = 1
+			}
+
+			set_variable = {
+				var = ARI_mystic_progress
+				value = 0
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+						var = ARI_mystic_rank
+						value = 4
+						compare = greater_than_or_equals
+					}
+				}
+				set_country_flag = ARI_rank3_achieved
+			}
+		}
+	}
+
+	ARI_final_ascension = { #飞升
+		visible = {
+			has_country_flag = ARI_rank3_achieved
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key =  ARI_has_mystic_progress
+					PROGRESS = "100"
+				}
+				check_variable = { ARI_mystic_progress = 100 }
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = ARI_the_time_has_come
+		}
+
+	}
+
+	ARI_research_the_royal_blood = { #研究皇室血统
+		visible = {
+			has_completed_focus = ARI_royal_blood
+			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
+		}
+
+		available = {
+			has_character = ARI_atsuko
+		}
+
+		days_remove = 60
+		remove_effect = {
+			set_temp_variable = { mystic_progress_change = 5 }
+			ARI_change_mystic_progress = yes
+		}
+	}
+
+	ARI_read_trinity_old_book = { #阅读圣三一古书
+		visible = {
+			has_completed_focus = ARI_research_trinity_books
+			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
+		}
+		cost = 30
+		days_remove = 90
+		remove_effect = {
+			set_temp_variable = { mystic_progress_change = 10 }
+			ARI_change_mystic_progress = yes
+		}
+	}
+
+	ARI_more_communication_with_gamatia = { #进一步的交流
+		visible = {
+			has_completed_focus = ARI_share_highest_knowledge
+			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
+		}
+		cost = 30
+		days_remove = 60
+
+		modifier = {
+			research_speed_factor = -0.1
+		}
+
+		remove_effect = {
+			set_temp_variable = { mystic_progress_change = 10 }
+			ARI_change_mystic_progress = yes
+		}
+	}
+
+	ARI_find_memory_of_past = { #探索圣徒会的记忆
+		visible = {
+			has_completed_focus = ARI_share_highest_knowledge
+			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
+		}
+
+		available = {
+			has_equipment = {
+				special_infantry_equipment > 750
+			}
+		}
+
+		days_remove = 60
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = special_infantry_equipment
+				amount = -750
+			}
+		}
+
+		remove_effect = {
+			set_temp_variable = { mystic_progress_change = 10 }
+			ARI_change_mystic_progress = yes
+		}
+	}
+
+	ARI_new_weapons_for_projections = { #给投影生产新武器
+		visible = {
+			has_completed_focus = ARI_research_trinity_books
+			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
+				##不触发超过五次
+				NOT = {
+					check_variable = { 
+						var = ARI_new_weapon_for_projection_count
+						value = 5
+						compare = greater_than_or_equals
+					}
+				}
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+
+				custom_override_tooltip = {
+					tooltip = ARI_newweapons_nomore_for_5times_tt
+
+					##不触发超过五次
+					NOT = {
+						check_variable = { 
+							var = ARI_new_weapon_for_projection_count
+							value = 5
+							compare = greater_than_or_equals
+						}
+					}
+				}
+		}
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		days_remove = 90
+		remove_effect = {
+			set_temp_variable = { mystic_progress_change = 5 }
+			ARI_change_mystic_progress = yes
+			custom_effect_tooltip = ARI_power_chaser_effect_change_11
+			hidden_effect = {
+				add_to_variable = { ARI_new_weapon_for_projection_count = 1 }
+
+				ARI_upgrade_mystery_weapon_buff = yes
+
+				add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.03 }
+				add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_attack_factor = 0.03 }
+			}
+		}
+	}
+}
+###“旅者”行动决议组###
+ARI_traveller_operation_caretaking_decisions = {
+
+	ARI_get_back_special_force_de = { #撤回特战队
+		visible = {
+			has_completed_focus = ARI_get_back_special_force
+			custom_override_tooltip = {
+				tooltip = ARI_get_back_special_force_count_nomore_for_5times_tt
+				##不触发超过五次
+				NOT = {
+					check_variable = { 
+						var = ARI_get_back_special_force_count
+						value = 5
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+
+		available = {
+			has_manpower > 999
+			has_equipment = { infantry_equipment > 499 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "100"
+				}
+				check_variable = { ARI_materials > 99 }
+			}
+
+			custom_override_tooltip = {
+				tooltip = ARI_get_back_special_force_count_nomore_for_5times_tt
+
+				##不触发超过五次
+				NOT = {
+					check_variable = { 
+						var = ARI_get_back_special_force_count
+						value = 5
+						compare = greater_than_or_equals
+					}
+				}
+			}
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			set_temp_variable = { material_change = -100 }
+			ARI_change_materials = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_2
+			hidden_effect = {
+				add_to_variable = { ARI_get_back_special_force_count = 1 }
+
+				add_to_variable = { ARI_catastrophic_traveller_operation_army_attack_factor = 0.05 }
+				add_to_variable = { ARI_catastrophic_traveller_operation_army_defence_factor = 0.05 }
+
+				ARI_check_if_traveller_idea_replaced = yes
+			}
+		}
+	}
+
+	ARI_get_back_revenge_spirit_de = { #重申复仇理想
+		visible = {
+			has_completed_focus = ARI_get_back_revenge_spirit
+		}
+
+		available = {
+			has_manpower > 2999
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = -3000
+
+			custom_effect_tooltip = ARI_foreign_operation_can_see
+
+			hidden_effect = {
+				clr_country_flag = ARI_lock_foreign_operation
+				ARI_check_if_traveller_idea_replaced = yes
+			}
+		}
+	}
+
+	ARI_fix_our_supply = { #弥补物资缺口
+		visible = {
+			has_completed_focus = ARI_solve_supply_shorting
+			NOT = { has_country_flag = ARI_have_skiped_solve_supply_shorting } #如果跳过了国策就不用出现
+		}
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "500"
+				}
+				check_variable = { ARI_materials > 499 }
+			}
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		remove_effect = {
+			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_3
+			hidden_effect = {
+				add_to_variable = { ARI_power_chaser_industrial_capacity_factory = 0.25 }
+				add_to_variable = { ARI_power_chaser_goods_factor = -0.25 }
+			}
+		}
+	}
+
+	ARI_deal_with_traitor_de = { #处理“叛徒”
+		visible = {
+			has_completed_focus = ARI_solve_supply_shorting
+		}
+
+		available = {
+			has_manpower > 1999
+			has_equipment = { infantry_equipment > 499 }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_4
+			hidden_effect = {
+				#TODO:出现事件：审查
+				#event = { id =  }
+				add_to_variable = { ARI_lesson_traveller_operation_war_support_factor = 0.2 }
+				add_to_variable = { ARI_lesson_traveller_operation_stability = 0.2 }
+			}
+		}
+	}
+
+
+}
+
+###乐园行动决议组###
+ARI_preparation_of_operation_eden_decisions = {
+
+	#誓言计划
+	ARI_oath_operation = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+			##不触发超过3次
+			NOT = {
+				check_variable = { 
+					var = ARI_oath_operation_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_TRI_intelligence
+					PROGRESS = 25
+				}
+				check_variable = { ARI_intelligence_in_TRI > 24 }
+			}
+		}
+		days_remove = 15
+		complete_effect = {
+			set_temp_variable = { intelligence_change = -25 }
+			ARI_change_intelligence_in_TRI = yes
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 5
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = ARI_oath_operation_count
+					value = 1
+				}
+			}
+		}
+	}
+
+	#净空计划
+	ARI_clear_sky_operation = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+			##不触发超过3次
+			NOT = {
+				check_variable = { 
+					var = ARI_clear_sky_operation_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_TRI_intelligence
+					PROGRESS = 25
+				}
+				check_variable = { ARI_intelligence_in_TRI > 24 }
+			}
+		}
+		days_remove = 15
+		complete_effect = {
+			set_temp_variable = { intelligence_change = -25 }
+			ARI_change_intelligence_in_TRI = yes
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 5
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = ARI_clear_sky_operation_count
+					value = 1
+				}
+			}
+		}
+	}
+
+	#馈赠计划
+	ARI_giving_operation = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+			##不触发超过3次
+			NOT = {
+				check_variable = { 
+					var = ARI_giving_operation_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_GEH_intelligence
+					PROGRESS = 25
+				}
+				check_variable = { ARI_intelligence_in_GEH > 24 }
+			}
+		}
+		days_remove = 15
+		complete_effect = {
+			set_temp_variable = { intelligence_change = -25 }
+			ARI_change_intelligence_in_GEH = yes
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 5
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = ARI_giving_operation_count
+					value = 1
+				}
+			}
+		}
+		
+	}
+
+	#猎魔计划
+	ARI_devil_hunting_operation = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+			##不触发超过3次
+			NOT = {
+				check_variable = { 
+					var = ARI_devil_hunting_operation_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_must_finish_first_three_eden_oparation
+				check_variable = { ARI_devil_hunting_operation_count = 3 }
+				check_variable = { ARI_clear_sky_operation_count = 3 }
+				check_variable = { ARI_oath_operation_count = 3 }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_GEH_intelligence
+					PROGRESS = 30
+				}
+				check_variable = { ARI_intelligence_in_GEH > 29 }
+			}
+		}
+		days_remove = 15
+		complete_effect = {
+			set_temp_variable = { intelligence_change = -30 }
+			ARI_change_intelligence_in_GEH = yes
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 5
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = ARI_devil_hunting_operation_count
+					value = 1
+				}
+			}
+		}
+	}
+
+	#狂想计划
+	ARI_delusion_operation = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+			##不触发超过3次
+			NOT = {
+				check_variable = { 
+					var = ARI_delusion_operation_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_must_finish_first_three_eden_oparation
+				check_variable = { ARI_delusion_operation_count = 3 }
+				check_variable = { ARI_clear_sky_operation_count = 3 }
+				check_variable = { ARI_oath_operation_count = 3 }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_TRI_intelligence
+					PROGRESS = 15
+				}
+				check_variable = { ARI_intelligence_in_TRI > 14 }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_GEH_intelligence
+					PROGRESS = 15
+				}
+				check_variable = { ARI_intelligence_in_GEH > 14 }
+			}
+		}
+		days_remove = 15
+		complete_effect = {
+			set_temp_variable = { intelligence_change = -15 }
+			ARI_change_intelligence_in_TRI = yes
+			set_temp_variable = { intelligence_change = -15 }
+			ARI_change_intelligence_in_GEH = yes
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 5
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = ARI_delusion_operation_count
+					value = 1
+				}
+			}
+		}
+	}	
+
+
+	#做好决战计划
+	ARI_prepare_final_war_plan = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_must_finish_first_three_eden_oparation
+				check_variable = { ARI_delusion_operation_count = 3 }
+				check_variable = { ARI_clear_sky_operation_count = 3 }
+				check_variable = { ARI_oath_operation_count = 3 }
+			}
+			has_manpower > 2999
+			has_equipment = { infantry_equipment > 1999 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "500"
+				}
+				check_variable = { ARI_materials > 499 }
+			}
+		}
+		days_remove = 15
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			set_temp_variable = { material_change = -500 }
+			ARI_change_materials = yes
+
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 20
+			}
+		}
+	}
+
+
+	#准备后备计划
+	ARI_prepare_backup_plan = {
+		visible = {
+			has_completed_focus = ARI_prepare_operation_eden
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_must_finish_first_three_eden_oparation
+				check_variable = { ARI_delusion_operation_count = 3 }
+				check_variable = { ARI_clear_sky_operation_count = 3 }
+				check_variable = { ARI_oath_operation_count = 3 }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_materials
+					AMOUNT = "1000"
+				}
+				check_variable = { ARI_materials > 999 }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+		complete_effect = {
+			set_temp_variable = { material_change = -1000 }
+			ARI_change_materials = yes
+
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ARI_preparation_for_eden
+				value = 10
+			}
+		}
+	}
+	
+}
+
+
+###乐园行动参战决议组###
+ARI_suppress_resistance_eden_decisions = {
+
+	#压制残余抵抗
+	ARI_suppress_resistance_eden_decision = {
+		visible = {
+			has_completed_focus = ARI_suppress_resistance_eden_operation
+			NOT = { has_idea = ARI_eden_action_chaos }
+			NOT = { has_idea = ARI_eden_action_chaos_2 }
+		}
+		available = {
+			has_army_experience > 25
+			has_equipment = { infantry_equipment > 999 }
+		}
+
+		fire_only_once = yes
+
+		days_remove = 15
+
+		complete_effect = {
+			army_experience = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = { has_idea = ARI_eden_action_chaos }
+				swap_ideas = {
+					remove_idea = ARI_eden_action_chaos
+					add_idea = ARI_eden_action_chaos_2
+				}
+			}
+			else = {
+				remove_idea = ARI_eden_action_chaos_2
+			}
+		}
+	}
+
+	#加强契约力量
+	ARI_enhance_contract_power_eden_decision = {
+		visible = {
+			NOT = { has_idea = ARI_eden_mystery_infantry_debuff_1 }
+			NOT = { has_idea = ARI_eden_mystery_infantry_debuff_2 }
+			NOT = { has_idea = ARI_eden_mystery_infantry_debuff_3 }
+			NOT = { has_idea = ARI_eden_mystery_infantry_debuff_4 }
+			has_completed_focus =  ARI_enhance_contract_power
+		}
+		available = {
+			has_equipment = {
+				special_infantry_equipment > 499
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = special_infantry_equipment
+				amount = -500
+			}
+		}
+
+		remove_effect = {
+			ARI_cut_down_sp_infrantry_debuff = yes
+
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 12
+				}
+			}
+		}
+	}
+
+
+	#进一步加强契约力量
+	ARI_enhance_contract_power_infinity_decision = {
+		visible = {
+			has_completed_focus = ARI_put_evenything_on_bet
+		}
+		available = {
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+		cost = 50
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 4
+				}
+			}
+		}
+	}
+}

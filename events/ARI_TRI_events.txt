@@ -1,0 +1,696 @@
+add_namespace = ARI_coup
+add_namespace = TRI_coup
+##阿里乌斯部分成功
+country_event = { #逐渐强烈的杂音
+    id = TRI_coup.1
+    title = TRI_coup.1.t
+    desc = TRI_coup.1.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.1.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #冲击
+    id = TRI_coup.2
+    title = TRI_coup.2.t
+    desc = TRI_coup.2.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.2.a
+
+        hidden_effect = {
+            country_event = TRI_coup.3
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #独行，以及反叛
+    id = TRI_coup.3
+    title = TRI_coup.3.t
+    desc = TRI_coup.3.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.3.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #行动时刻
+    id = ARI_coup.1
+    title = ARI_coup.1.t
+    desc = ARI_coup.1.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.1.a
+
+    }
+}
+country_event = { #激战
+    id = TRI_coup.4
+    title = TRI_coup.4.t
+    desc = TRI_coup.4.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.4.a
+
+        custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
+        remove_country_leader_trait = TRI_nagisa_Find_the_root
+		add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -2 }
+        hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_coup.2
+					days = 3
+				}
+			}
+            #set_country_flag = TRI_paranoia_weekly_change_disabled
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #猫和老鼠
+    id = ARI_coup.2
+    title = ARI_coup.2.t
+    desc = ARI_coup.2.desc
+    #picture =
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.2.a
+        hidden_effect = {
+            country_event = {
+                id = ARI_coup.3
+                days = 3
+            }
+        }
+    }
+}
+country_event = { #意外之敌
+    id = ARI_coup.3
+    title = ARI_coup.3.t
+    desc = ARI_coup.3.desc
+    #picture =
+    immediate = {
+        hidden_effect = {
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.3.a
+    }
+}
+country_event = { #幕后的真凶（mika暴露）
+    id = TRI_coup.5
+    title = TRI_coup.5.t
+    desc = TRI_coup.5.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.5.a
+        hidden_effect = {
+            country_event = { id = TRI_coup.6 days = 1 }
+        }
+        set_country_flag = TRY_event_enable_mika_problem_decision
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #死斗
+    id = TRI_coup.6
+    title = TRI_coup.6.t
+    desc = TRI_coup.6.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.6.a
+
+        hidden_effect = {
+            country_event = { id = TRI_coup.7 days = 1 }
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #死斗·其二
+    id = TRI_coup.7
+    title = TRI_coup.7.t
+    desc = TRI_coup.7.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.7.a
+
+        hidden_effect = {
+            country_event = { id = TRI_coup.8 days = 1 }
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #死斗·其三
+    id = TRI_coup.8
+    title = TRI_coup.8.t
+    desc = TRI_coup.8.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.8.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #一夕安寝
+    id = TRI_coup.9
+    title = TRI_coup.9.t
+    desc = TRI_coup.9.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.9.a
+        TRI_mika = { 
+            custom_effect_tooltip = TRI_mika_arrested_tt
+        }
+        set_variable = { leader@TRI_parliament_association_0 = token:TRI_mika_arrested }
+        hidden_effect = {
+            country_event = {
+                id = TRI_coup.10
+                days = 7
+            }
+			ARI = {
+				country_event = {
+					id = ARI_coup.4
+					days = 3
+				}
+			}
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #急转直下
+    id = ARI_coup.4
+    title = ARI_coup.4.t
+    desc = ARI_coup.4.desc
+    #picture =
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.4.a
+        hidden_effect = {
+            country_event = {
+                id =ARI_coup.5
+                days = 3
+            }
+        }
+    }
+}
+country_event = { #旅者”行动总结-部分成功
+    id = ARI_coup.5
+    title = ARI_coup.5.t
+    desc = ARI_coup.5.desc
+    #picture =
+
+    immediate = {
+        hidden_effect = {
+            set_variable = {
+                ARI_lesson_traveller_operation_war_support_factor = -0.2
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_stability = -0.2
+            }
+
+            set_variable = {
+                ARI_lesson_traveller_operation_goods_factor = -0.25
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
+            }
+            add_dynamic_modifier = {
+                modifier = ARI_lesson_traveller_operation
+            }
+        }
+    }
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.5.a
+        effect_tooltip = {
+            set_variable = {
+                ARI_lesson_traveller_operation_war_support_factor = -0.2
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_stability = -0.2
+            }
+
+            set_variable = {
+                ARI_lesson_traveller_operation_goods_factor = -0.25
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
+            }
+            add_dynamic_modifier = {
+                modifier = ARI_lesson_traveller_operation
+            }
+        }
+    }
+}
+country_event = { #十万火急
+    id = TRI_coup.10
+    title = TRI_coup.10.t
+    desc = TRI_coup.10.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.10.a
+
+        custom_effect_tooltip = TRY_event_add_mika_to_survey
+        set_country_flag = TRI_mika_arrested
+
+        hidden_effect = {
+            country_event = { id = TRI_coup.11 days = 1 }
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+country_event = { #完美落幕
+    id = TRI_coup.11
+    title = TRI_coup.11.t
+    desc = TRI_coup.11.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_coup.11.a
+
+        custom_effect_tooltip = TRY_event_remove_hoshubu_to_survey
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+#阿里乌斯失败
+country_event = { #见机行事
+    id = ARI_coup.11
+    title = ARI_coup.11.t
+    desc = ARI_coup.11.desc
+    #picture =
+    immediate = {
+        
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.11.a
+    }
+}
+country_event = { #动摇
+    id = TRI_coup.20
+    title = TRI_coup.20.t
+    desc = TRI_coup.20.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.20.a
+    }
+}
+country_event = { #说者有心
+    id = TRI_coup.21
+    title = TRI_coup.21.t
+    desc = TRI_coup.21.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.21.a
+        country_event = TRI_coup.22
+    }
+}
+country_event = { #可疑的邀约
+    id = TRI_coup.22
+    title = TRI_coup.22.t
+    desc = TRI_coup.22.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.22.a
+        #TODO:于【GUI：圣三一情报局】下添加一个决议任务：【取信之道】，该决议需要调查完补习部全部4名学生之后才可以激活，激活后持续7天，然后激活事件：【离巢】，通过选项对桐藤渚特质【追根溯源】追加效果：每周偏执度－2％并移除该决议。
+        #在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
+        set_country_flag = TRI_the_way_to_get_trust
+        unlock_decision_tooltip = {
+            decision = TRI_the_way_to_get_trust
+            show_effect_tooltip = yes
+        }
+    }
+}
+country_event = { #离巢
+    id = TRI_coup.23
+    title = TRI_coup.23.t
+    desc = TRI_coup.23.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.23.a
+        TRI_nagisa = {
+            swap_ruler_traits = {
+                remove = TRI_nagisa_Find_the_root_2
+                add = TRI_nagisa_Find_the_root_3
+            }
+        }
+        subtract_from_variable = { TRI_nagisa_paranoia_modifier_increase = 2 }
+    }
+}
+country_event = { #示之假寐
+    id = TRI_coup.24
+    title = TRI_coup.24.t
+    desc = TRI_coup.24.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.24.a
+        #选项激活后，将于GUI：渚的偏执度中以每周4%的速度添加偏执度，当偏执度超过40%时必将触发一次特殊的负面事件，但仅扣除20点政治点数而不产生其他任何负面效果。
+        #该效果将在触发3次特殊负面事件后被移除。
+        custom_effect_tooltip = TRI.coup.24.tt
+        custom_effect_tooltip = {
+            localization_key = TRI_nagisa_paranoia_modifier_increase_add_tt
+            ADD = "4"
+        }
+        add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 4 }
+    }
+}
+country_event = { #负面事件1
+    id = TRI_coup.25
+    title = TRI_coup.25.t
+    desc = TRI_coup.25.desc
+    #picture =
+    trigger = {
+        check_variable = { TRI_nagisa_paranoia_total > 40 }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+    fire_only_once = yes
+    option = {
+        name = TRI_coup.25.a
+        add_political_power = -20
+        set_country_flag = TRI_negative_paranoia_event_1
+        set_temp_variable = { TRI_paranoia_change = -40 }
+        TRI_change_paranoia = yes
+    }
+}
+country_event = { #负面事件2
+    id = TRI_coup.26
+    title = TRI_coup.26.t
+    desc = TRI_coup.26.desc
+    #picture =
+    trigger = {
+        check_variable = { TRI_nagisa_paranoia_total > 40 }
+        has_country_flag = TRI_negative_paranoia_event_1
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+    fire_only_once = yes
+    option = {
+        name = TRI_coup.26.a
+        add_political_power = -20
+        set_country_flag = TRI_negative_paranoia_event_2
+        set_temp_variable = { TRI_paranoia_change = -40 }
+        TRI_change_paranoia = yes
+    }
+}
+country_event = { #负面事件3
+    id = TRI_coup.27
+    title = TRI_coup.27.t
+    desc = TRI_coup.27.desc
+    #picture =
+    trigger = {
+        check_variable = { TRI_nagisa_paranoia_total > 40 }
+        has_country_flag = TRI_negative_paranoia_event_2
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+    fire_only_once = yes
+    option = {
+        name = TRI_coup.27.a
+        add_political_power = -20
+        set_temp_variable = { TRI_paranoia_change = -40 }
+        TRI_change_paranoia = yes
+        country_event = {
+            id = TRI_coup.28
+            days = 3
+        }
+    }
+}
+country_event = { #措以惑敌
+    id = TRI_coup.28
+    title = TRI_coup.28.t
+    desc = TRI_coup.28.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.28.a
+        set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+        set_temp_variable = { loyalty_change = -0.1 }
+        TRI_parliament_loyalty_change_parliament = yes
+        add_dynamic_modifier = { modifier = TRI_dissonance_modifier }
+        #立即激活阿里乌斯提前发动政变的事件链或是国策
+        hidden_effect = {
+            ARITRI_coup_effect = yes
+        }
+    }
+}
+country_event = { #一切顺利？
+    id = ARI_coup.6
+    title = ARI_coup.6.t
+    desc = ARI_coup.6.desc
+    #picture =
+
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id =ARI_coup.7
+                days = 3
+            }
+        }
+    }
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.6.a
+
+    }
+}
+country_event = { #羊入虎口
+    id = ARI_coup.7
+    title = ARI_coup.7.t
+    desc = ARI_coup.7.desc
+    #picture =
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id =ARI_coup.8
+                days = 3
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.7.a
+    }
+}
+country_event = { #对决
+    id = ARI_coup.8
+    title = ARI_coup.8.t
+    desc = ARI_coup.8.desc
+    #picture =
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id =ARI_coup.9
+                days = 3
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.8.a
+    }
+}
+country_event = { #突出重围
+    id = ARI_coup.9
+    title = ARI_coup.9.t
+    desc = ARI_coup.9.desc
+    #picture =
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id = ARI_coup.10
+                days = 3
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.9.a
+    }
+}
+country_event = { #“旅者”行动总结-基本失败
+    id = ARI_coup.10
+    title = ARI_coup.10.t
+    desc = ARI_coup.10.desc
+    #picture =
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = ARI_lesson_traveller_operation_stop_operation_flag
+            set_variable = {
+                ARI_lesson_traveller_operation_war_support_factor = -0.4
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_stability = -0.4
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_army_attack_factor = -0.5
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_army_defence_factor = -0.5
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_army_org_factor = -0.2
+            }
+
+            set_variable = {
+                ARI_lesson_traveller_operation_goods_factor = -0.25
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
+            }
+            add_dynamic_modifier = {
+                modifier = ARI_lesson_traveller_operation
+            }
+        }
+    }
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.10.a
+        effect_tooltip = {
+            set_variable = {
+                ARI_lesson_traveller_operation_war_support_factor = -0.2
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_stability = -0.2
+            }
+
+            set_variable = {
+                ARI_lesson_traveller_operation_goods_factor = -0.25
+            }
+            set_variable = {
+                ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
+            }
+            add_dynamic_modifier = {
+                modifier = ARI_catastrophic_traveller_operation
+            }
+        }
+    }
+}
+
+country_event = { #空巢行动
+    id = TRI_coup.29
+    title = TRI_coup.29.t
+    desc = TRI_coup.29.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.29.a
+    }
+}
+country_event = { #暗处涌流
+    id = TRI_coup.30
+    title = TRI_coup.30.t
+    desc = TRI_coup.30.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.30.a
+    }
+}

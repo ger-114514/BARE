@@ -1,0 +1,193 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+SHA_Inf_01 = {
+	name = "京剧部演剧班"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "京剧部演剧第%d班"
+
+	ordered =
+	{
+		1 = { "京剧部演剧第1“霸王别姬”班" }
+		2 = { "京剧部演剧第2“贵妃醉酒”班" }
+		3 = { "京剧部演剧第3“七擒孟获”班" }
+		4 = { "京剧部演剧第4“大闹天宫”班" }
+		5 = { "京剧部演剧第5“定军山”班" }
+		6 = { "京剧部演剧第6“宝莲灯”班" }
+		7 = { "京剧部演剧第7“海瑞罢官”班" }
+		8 = { "京剧部演剧第8“断密涧”班" }
+	}
+}
+
+SHA_Inf_02 = {
+	name = "炼丹师协会步兵组"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "炼丹师协会第%d组"
+
+	ordered =
+	{
+		1 = { "炼丹师协会第1“惊香”组" }
+		2 = { "炼丹师协会第2“石脂”组" }
+		3 = { "炼丹师协会第3“桃胶”组" }
+		4 = { "炼丹师协会第4“茱英”组" }
+		5 = { "炼丹师协会第5“茯苓”组" }
+		6 = { "炼丹师协会第6“琅玕”组" }
+		7 = { "炼丹师协会第7“琼浆”组" }
+		8 = { "炼丹师协会第8“内息”组" }
+	}
+}
+
+SHA_Inf_03 = {
+	name = "玄龙门步兵组"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "玄龙门第%d组"
+
+	ordered =
+	{
+		1 = { "玄龙门第1“曳影”组" }
+		2 = { "玄龙门第2“腾空”组" }
+		3 = { "玄龙门第3“定光”组" }
+		4 = { "玄龙门第4“照胆”组" }
+		5 = { "玄龙门第5“龙渊”组" }
+		6 = { "玄龙门第6“赤霄”组" }
+		7 = { "玄龙门第7“昆吾”组" }
+		8 = { "玄龙门第8“定秦”组" }
+	}
+}
+
+SHA_Inf_04 = {
+	name = "梅花园培育支持小队"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "梅花园培育支持第%d组"
+
+	ordered =
+	{
+		1 = { "梅花园培育支持第1“行知”组" }
+		2 = { "梅花园培育支持第2“明德”组" }
+		3 = { "梅花园培育支持第3“育才”组" }
+		4 = { "梅花园培育支持第4“澄衷”组" }
+		5 = { "梅花园培育支持第5“豫才”组" }
+		6 = { "梅花园培育支持第6“少云”组" }
+	}
+}
+
+SHA_Inf_05 = {
+	name = "玄武商会步兵班"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "玄武商会第%d班"
+
+	ordered =
+	{
+		1 = { "玄武商会第1“伊尹”班" }
+		2 = { "玄武商会第2“狄牙”班" }
+		3 = { "玄武商会第3“太和公”班" }
+		4 = { "玄武商会第4“膳祖”班" }
+		5 = { "玄武商会第5“梵正”班" }
+		6 = { "玄武商会第6“刘娘子”班" }
+		7 = { "玄武商会第7“宋五嫂”班" }
+		8 = { "玄武商会第8“董小宛”班" }
+	}
+}
+
+SHA_Inf_06 = {
+	name = "山海经合成连"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "山海经合成第%d连"
+
+	ordered =
+	{
+		1 = { "山海经合成第1“四平”连" }
+		2 = { "山海经合成第2“塔山”连" }
+		3 = { "山海经合成第3“金沙江”连" }
+		4 = { "山海经合成第4“大渡河”连" }
+		5 = { "山海经合成第5“临江”连" }
+		6 = { "山海经合成第6“赤水”连" }
+		7 = { "山海经合成第7“遵义”连" }
+		8 = { "山海经合成第8“娄山关”连" }
+	}
+}
+
+SHA_Infm_01 = {
+	name = "山海经自治区民兵"
+
+	for_countries = { SHA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "山海经自治区民兵第%d连"
+
+	ordered =
+	{
+		1 = { "山海经自治区民兵第1“鄱阳”连" }
+		2 = { "山海经自治区民兵第2“洞庭”连" }
+		3 = { "山海经自治区民兵第3“太湖”连" }
+		4 = { "山海经自治区民兵第4“洪泽”连" }
+		5 = { "山海经自治区民兵第5“纳木错”连" }
+		6 = { "山海经自治区民兵第6“天池”连" }
+		7 = { "山海经自治区民兵第7“博斯腾”连" }
+		8 = { "山海经自治区民兵第8“呼伦”连" }
+		9 = { "山海经自治区民兵第9“抚仙”连" }
+		10 = { "山海经自治区民兵第10“太平”连" }
+	}
+}

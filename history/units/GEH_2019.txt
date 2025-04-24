@@ -1,0 +1,320 @@
+division_template = {
+	name = "风纪委巡逻部队"		
+
+	regiments = {
+		infantry = {x = 0 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 1 y = 1}
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+	
+}
+
+division_template = {
+	name = "风纪委快速响应纵队"		
+
+	regiments = {
+		apc_unit = {x = 0 y = 0}
+		apc_unit = {x = 0 y = 1}
+		apc_unit = {x = 0 y = 2}
+		apc_unit = {x = 0 y = 3}
+		apc_unit = {x = 1 y = 0}
+		apc_unit = {x = 1 y = 1}
+		apc_unit = {x = 1 y = 2}
+		apc_unit = {x = 1 y = 3}
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+		fire_support_team_su_ha = {x = 0 y = 1}
+	}
+	
+}
+
+division_template = {
+	name = "风纪委机动支援纵队"		
+
+	regiments = {
+		apc_unit = {x = 0 y = 0}
+		apc_unit = {x = 0 y = 1}
+		apc_unit = {x = 0 y = 2}
+		apc_unit = {x = 0 y = 3}
+		apc_unit = {x = 1 y = 0}
+		apc_unit = {x = 1 y = 1}
+		apc_unit = {x = 1 y = 2}
+		apc_artillery_unit = {x = 2 y = 0}
+		apc_artillery_unit = {x = 2 y = 1}
+	}
+	support = {
+		fire_support_team_su_ha = {x = 0 y = 0}
+	}
+	
+}
+
+
+division_template = {
+	name = "格黑娜边防大队"		
+
+	regiments = {
+		infantry = {x = 0 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+	}
+	support = {
+	}
+	
+}
+
+
+division_template = {
+	name = "万魔殿装甲集群"		
+
+	regiments = {
+		heavy_armor  = {x = 0 y = 0}
+		heavy_armor  = {x = 0 y = 1}
+		medium_armor = {x = 0 y = 2}
+		medium_armor = {x = 0 y = 3}
+		light_armor = {x = 1 y = 0}
+		light_armor = {x = 1 y = 1}
+		light_armor = {x = 1 y = 2}
+		light_armor = {x = 1 y = 3}
+		apc_unit = {x = 2 y = 0}
+		apc_unit = {x = 2 y = 1}
+		apc_unit = {x = 2 y = 2}
+		apc_unit = {x = 2 y = 3}
+	}
+	support = {
+		fire_support_team_su_ha = {x = 0 y = 0}
+	}
+	
+}
+
+
+division_template = {
+	name = "万魔殿守备部队"		
+
+	regiments = {
+		infantry = {x = 0 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 2 y = 0}
+		infantry = {x = 2 y = 1}
+		infantry = {x = 2 y = 2}
+		fire_support_team_la = {x = 3 y = 0}
+		fire_support_team_la = {x = 3 y = 1}
+		fire_support_team_la = {x = 3 y = 2}
+	}
+	support = {
+		fire_support_team_su_ha = {x = 0 y = 0}
+		apc_recon = {x = 0 y = 1}
+	}
+	
+}
+
+
+
+units = {
+	division= {	 #一个师
+		name = "风纪委员会治安巡逻a队“安娜”"
+		location = 1815
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委治安巡逻b队“拉琴斯卡娅”"
+		location = 10936
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委员会治安巡逻c队“梅森”"
+		location = 10930
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委员会治安巡逻d队“海德堡”"
+		location = 535
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委员会治安巡逻e队“哥德尔”"
+		location = 5096
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委员会治安巡逻e队“安格拉”"
+		location = 10557
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委员会治安巡逻e队“杨斯特”"
+		location = 2064
+		division_template = "风纪委巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.25 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "风纪委第一快速响应纵队“涡流”"
+		location = 8438
+		division_template = "风纪委快速响应纵队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委第二快速响应大队“脉搏”"
+		location = 3129
+		division_template = "风纪委快速响应纵队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委第三快速响应大队“谷浪”"
+		location = 4747
+		division_template = "风纪委快速响应纵队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "风纪委第一机动支援纵队“闪电”"
+		location = 3604
+		division_template = "风纪委机动支援纵队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "风纪委第二机动支援纵队“雷鸣”"
+		location = 9402
+		division_template = "风纪委机动支援纵队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "格黑娜边防第一大队“黄鸭”"
+		location = 2660
+		division_template = "格黑娜边防大队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "格黑娜边防第二大队“豹猫”"
+		location = 453
+		division_template = "格黑娜边防大队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "格黑娜边防第三大队“甜筒”"
+		location = 6187
+		division_template = "格黑娜边防大队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "格黑娜边防第四大队“枣糕”"
+		location = 1645
+		division_template = "格黑娜边防大队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "格黑娜边防第五大队“蜘蛛”"
+		location = 6208
+		division_template = "格黑娜边防大队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "格黑娜装甲战斗群A“诗梅尔”"
+		location = 8438
+		division_template = "万魔殿装甲集群" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "格黑娜装甲战斗群B“罗兰”"
+		location = 1361
+		division_template = "万魔殿装甲集群" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "万魔殿守备部队第一大队“康乃馨”"
+		location = 8385
+		division_template = "万魔殿守备部队" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "万魔殿守备部队第二大队“郁金香”"
+		location = 
+		division_template = "万魔殿守备部队" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "万魔殿守备部队第三大队“金合欢”"
+		location = 9402
+		division_template = "万魔殿守备部队" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "万魔殿守备部队第四大队“牵牛花”"
+		location = 7073
+		division_template = "万魔殿守备部队" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+}

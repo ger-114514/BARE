@@ -1,0 +1,422 @@
+division_template = {
+	name = "研讨会安保分队"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "研讨会核心卫护中队"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+		infantry = {x = 2 y = 1}
+		infantry = {x = 2 y = 2}
+		infantry = {x = 2 y = 0}
+	}
+	support = {
+		fire_support_team_su_la = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "C&C特战小队"		
+
+	regiments = {
+		infantry_sf  = {x = 1 y = 1}
+		infantry_sf  = {x = 1 y = 0}
+		infantry_sf  = {x = 0 y = 1}
+		infantry_sf  = {x = 0 y = 0}
+	}
+	support = {
+		recon = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "自动机巡逻队"		
+
+	regiments = {
+		infantry_am = {x = 0 y = 0}
+		infantry_am = {x = 0 y = 1}
+		infantry_am = {x = 0 y = 2}
+		infantry_am = {x = 1 y = 0}
+		infantry_am = {x = 1 y = 1}
+		infantry_am = {x = 1 y = 2}
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "装甲战斗小组"		
+
+	regiments = {
+		ifv_unit  = {x = 1 y = 1}
+		ifv_unit  = {x = 1 y = 0}
+		medium_armor  = {x = 0 y = 1}
+		medium_armor  = {x = 0 y = 0}
+		medium_armor  = {x = 0 y = 2}
+	}
+	support = {
+		fire_support_team_su_la = {x=0 y=0}
+		engineer = {x=0 y=1}
+	}
+}
+
+
+division_template = {
+	name = "机甲战斗小组"		
+
+	regiments = {
+		ifv_unit = {x = 1 y = 1}
+		ifv_unit = {x = 1 y = 0}
+		light_bm_unit = {x = 0 y = 1}
+		light_bm_unit = {x = 0 y = 0}
+		light_bm_unit = {x = 0 y = 2}
+	}
+	support = {
+		fire_support_team_su_la = {x=0 y=0}
+		engineer = {x=0 y=1}
+	}
+}
+
+
+division_template = {
+	name = "治安中队"		
+
+	regiments = {
+		infantry_militia  = {x = 1 y = 1}
+		infantry_militia  = {x = 1 y = 0}
+		infantry_militia  = {x = 1 y = 2}
+		infantry_militia  = {x = 0 y = 1}
+		infantry_militia  = {x = 0 y = 0}
+		infantry_militia  = {x = 0 y = 2}
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "治安小队"		
+
+	regiments = {
+		infantry_militia  = {x = 1 y = 1}
+		infantry_militia  = {x = 1 y = 0}
+		infantry_militia  = {x = 0 y = 1}
+		infantry_militia  = {x = 0 y = 0}
+	}
+	support = {
+	}
+}
+
+
+
+
+units = {
+	division= {
+		name = "千年第1“方片”研讨会安保分队"
+		location = 4790
+		division_template = "研讨会安保分队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第2“红桃”研讨会安保分队"
+		location = 375
+		division_template = "研讨会安保分队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第3“梅花”研讨会安保分队"
+		location = 2243
+		division_template = "研讨会安保分队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第4“黑桃”研讨会安保分队"
+		location = 6769
+		division_template = "研讨会安保分队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "千年第1“水晶”研讨会核心卫护中队"
+		location = 2637
+		division_template = "研讨会核心卫护中队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第2“玛瑙”研讨会核心卫护中队"
+		location = 11949
+		division_template = "研讨会核心卫护中队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "千年第1治安小队"
+		location = 347
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第2治安小队"
+		location = 11920
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第3治安小队"
+		location = 12009
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第4治安小队"
+		location = 9043
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第5治安小队"
+		location = 6311
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第6治安小队"
+		location = 7092
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第7治安小队"
+		location = 718
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第8治安小队"
+		location = 7643
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第9治安小队"
+		location = 2826
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第10治安小队"
+		location = 11973
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第11治安小队"
+		location = 1599
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第12治安小队"
+		location = 670
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第13治安小队"
+		location = 908
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第14治安小队"
+		location = 5147
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第15治安小队"
+		location = 11766
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "千年第1治安中队"
+		location = 11860
+		division_template = "治安中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第2治安中队"
+		location = 8345
+		division_template = "治安中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第3治安中队"
+		location = 11983
+		division_template = "治安中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第4治安中队"
+		location = 12003
+		division_template = "治安中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第5治安中队"
+		location = 11890
+		division_template = "治安中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "C&C第1特战小队“海豹”"
+		location = 7082
+		division_template = "C&C特战小队" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "C&C第2特战小队“猎犬”"
+		location = 7979
+		division_template = "C&C特战小队" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "千年第1“螺栓”自动机巡逻队"
+		location = 7643
+		division_template = "自动机巡逻队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第2“钢管”自动机巡逻队"
+		location = 6975
+		division_template = "自动机巡逻队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第3“螺帽”自动机巡逻队"
+		location = 1211
+		division_template = "自动机巡逻队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "千年第1“发动机”装甲战斗小组"
+		location = 4295
+		division_template = "装甲战斗小组" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "千年第2“炮塔”装甲战斗小组"
+		location = 2450
+		division_template = "装甲战斗小组" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "千年第1“铁拳”机甲小队"
+		location = 3078
+		division_template = "机甲战斗小组" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+}

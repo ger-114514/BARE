@@ -1,0 +1,517 @@
+ideas = {
+	country = {
+		#缺乏目标
+		ARI_unclear_target = {
+			#picture = unkown
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.3
+			}
+		}
+		#夫人的历史课
+		ARI_history_education = {
+			modifier = {
+				stability_factor = 0.05
+				org_loss_at_low_org_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		#神秘追寻者
+		ARI_mystery_reseacher = {
+			research_bonus = {
+				mystical = 0.1
+			}
+		}
+
+		#神秘追寻者2
+		ARI_mystery_reseacher_2 = {
+			research_bonus = {
+				mystical = 0.2
+			}
+		}
+
+		#圣三一渗透度
+		ARI_intelligence_in_TRI_0 = {
+			
+		}
+		ARI_intelligence_in_TRI_1 = {
+			modifier = {
+				army_org_factor = 0.025
+				industrial_capacity_factory = 0.025
+				ARI_materials_monthly_modifier = 10
+			}
+			targeted_modifier = {
+				tag = TRI
+				attack_bonus_against = 0.05
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 10 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 10 }
+			}
+		}
+		ARI_intelligence_in_TRI_2 = {
+			modifier = {
+				army_org_factor = 0.05
+				industrial_capacity_factory = 0.05
+				ARI_materials_monthly_modifier = 20
+			}
+			targeted_modifier = {
+				tag = TRI
+				attack_bonus_against = 0.1
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 20 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 20 }
+			}
+		}
+		ARI_intelligence_in_TRI_3 = {
+			modifier = {
+				army_org_factor = 0.075
+				industrial_capacity_factory = 0.075
+				ARI_materials_monthly_modifier = 35
+			}
+			targeted_modifier = {
+				tag = TRI
+				attack_bonus_against = 0.15
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 35 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 35 }
+			}
+		}
+		ARI_intelligence_in_TRI_4 = {
+			modifier = {
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.1
+				ARI_materials_monthly_modifier = 50
+			}
+			targeted_modifier = {
+				tag = TRI
+				attack_bonus_against = 0.2
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 50 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 50 }
+			}
+		}
+		ARI_experience_in_Trinity_modifier = {
+			modifier = {
+				recon_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = TRI
+				defense_bonus_against = 0.05
+			}
+		}
+		#格黑娜渗透度
+		ARI_intelligence_in_GEH_0 = {
+			
+		}
+		ARI_intelligence_in_GEH_1 = {
+			modifier = {
+				army_org_regain = 0.025
+				production_factory_efficiency_gain_factor = 0.025
+				ARI_materials_monthly_modifier = 10
+			}
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.05
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 10 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 10 }
+			}
+		}
+		ARI_intelligence_in_GEH_2 = {
+			modifier = {
+				army_org_regain = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				ARI_materials_monthly_modifier = 20
+			}
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.1
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 20 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 20 }
+			}
+		}
+		ARI_intelligence_in_GEH_3 = {
+			modifier = {
+				army_org_regain = 0.075
+				production_factory_efficiency_gain_factor = 0.075
+				ARI_materials_monthly_modifier = 35
+			}
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.15
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 35 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 35 }
+			}
+		}
+		ARI_intelligence_in_GEH_4 = {
+			modifier = {
+				army_org_regain = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				ARI_materials_monthly_modifier = 50
+			}
+			targeted_modifier = {
+				tag = GEH
+				attack_bonus_against = 0.2
+			}
+			on_add = {
+				add_to_variable = { ARI_materials_monthly_modifier = 50 }
+			}
+			on_remove = {
+				subtract_from_variable = { ARI_materials_monthly_modifier = 50 }
+			}
+		}
+		#黑市佣兵团
+		ARI_mercenaries_in_black_market = {
+			modifier = {
+				send_volunteer_size = 4
+				custom_modifier_tooltip = ARI_black_market_mercenaries_modifier_tt
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+		#合作愉快
+		ARI_Pleasant_cooperation = {
+			#picture = unkown
+			modifier = {
+				industrial_capacity_factory = 0.25
+			}
+		}
+		#改进奖惩方法
+		ARI_improving_reward_and_punishment = {
+			#picture = unkown
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		#强化复仇教育
+		ARI_revanchism_education = {
+			#picture = unkown
+			modifier = {
+				research_speed_factor = -0.1
+			}
+		}
+		#阿里乌斯制式突击步枪
+		ARI_assault_rifle_idea = {
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		#轻装支援火力
+		ARI_light_support_equipment_idea = {
+			equipment_bonus = {
+				light_fire_support_equipment = {
+					maximum_speed = 0.1
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		#驰车式主战坦克
+		ARI_merkava_main_battle_tank = {
+			picture = unkown
+			modifier = {
+				army_armor_defence_factor = -0.1
+			}
+			equipment_bonus = {
+				armor = {
+					reliability_factor = 0.1
+					ap_attack = 0.15
+					armor_value = 0.15
+					instant = yes
+				}
+			}
+		}
+		ARI_merkava_main_battle_tank_1 = {
+			picture = unkown
+			modifier = {
+				army_armor_defence_factor = -0.1
+			}
+			equipment_bonus = {
+				armor = {
+					reliability_factor = 0.1
+					ap_attack = 0.15
+					armor_value = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		ARI_merkava_main_battle_tank_2 = {
+			picture = unkown
+			modifier = {
+				army_armor_defence_factor = -0.1
+			}
+			equipment_bonus = {
+				armor = {
+					reliability_factor = 0.1
+					ap_attack = 0.25
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = 0.25
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		ARI_air_force_0 = {
+			modifier = {
+				experience_gain_air_factor = 0.15
+			}
+		}
+		ARI_air_force_1 = {
+			modifier = {
+				experience_gain_air_factor = 0.15
+			}
+			equipment_bonus = {
+				small_uav = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		#阿里乌斯掌握程度
+		ARI_control_rank_1 = {
+			picture = unkown
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+			on_add = {
+				every_controlled_state = {
+					limit = {
+						check_variable = { ARI_state_control < 100 }
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_low_control_rank_state
+					}
+				}
+			}
+			on_remove = {
+				every_controlled_state = {
+					remove_dynamic_modifier = {
+						modifier = ARI_low_control_rank_state
+					}
+				}
+			}
+		}
+		ARI_control_rank_2 = {
+			picture = unkown
+			
+		}
+		ARI_control_rank_3 = {
+			picture = unkown
+			modifier = {
+				stability_factor = 0.2
+			}
+			on_add = {
+				every_owned_state = {
+					limit = {
+						check_variable = { ARI_state_control < 100 }
+					}
+					add_dynamic_modifier = { modifier = ARI_low_control_rank_state }
+				}
+			}
+			on_remove = {
+				every_owned_state = {
+					remove_dynamic_modifier = { modifier = ARI_low_control_rank_state }
+				}
+			}
+		}
+		
+		#数秘术成员
+		# ARI_Gematria_member = {
+		# 	picture = unkown
+		# 	modifier = {
+		# 		research_speed_factor = 0.05
+		# 		custom_modifier_tooltip = ARI_Gematria_member_tt
+		# 	}
+		# }
+		#红冬炮火压制
+		ARI_red_winter_overwhelming_fire = {
+			picture = unkown
+			allowed = {
+				RWT = { exists = yes }
+			}
+			modifier = {
+				army_artillery_attack_factor = -0.2
+				army_artillery_defence_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				custom_modifier_tooltip = ARI_red_winter_overwhelming_fire_tt
+			}
+		}
+		#被不对称作战袭扰
+		ARI_asymmetric_warfare = {
+			picture = unkown
+			allowed = {
+				ALR = { exists = yes }
+			}
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.1
+				army_armor_defence_factor = -0.1
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				custom_modifier_tooltip = ARI_red_winter_overwhelming_fire_tt
+			}
+		}
+		#官僚系统受损
+		ARI_broken_administration = {
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+
+
+			#“旅者”行动的教训
+		ARI_a_lesson_from_traveller_operation = {
+			modifier = {
+				political_power_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		#行动的混乱
+		ARI_eden_action_chaos = {
+			modifier = {
+				land_reinforce_rate = -0.01
+				army_org_factor = -0.15
+				army_org_regain = -0.15
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+		ARI_eden_action_chaos_2 = {
+			modifier = {
+				army_org_factor = -0.05
+				army_org_regain = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+			}
+		}
+
+		##被削弱的投影
+		ARI_eden_mystery_infantry_debuff_4 = {
+			modifier = {
+				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.2
+				modifier_army_sub_unit_category_special_infantry_defence_factor = -0.2
+			}
+		}
+
+		ARI_eden_mystery_infantry_debuff_3 = {
+			modifier = {
+				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.15
+				modifier_army_sub_unit_category_special_infantry_defence_factor = -0.15
+			}
+		}
+
+		ARI_eden_mystery_infantry_debuff_2 = {
+			modifier = {
+				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.1
+				modifier_army_sub_unit_category_special_infantry_defence_factor = -0.1
+			}
+		}
+
+		ARI_eden_mystery_infantry_debuff_1 = {
+			modifier = {
+				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.05
+				modifier_army_sub_unit_category_special_infantry_defence_factor = -0.05
+			}
+		}
+	}
+	
+	hidden_ideas = {
+		ALR_resistance_state = {}
+		ARI_suppression_state_guard = {}
+
+		ARI_mystery_weapon_buff_1 = {
+
+			equipment_bonus = {
+				special_infantry_equipment = {
+					build_cost_ic = -0.02
+					instant = yes
+				}
+			}
+
+		}
+
+		ARI_mystery_weapon_buff_2 = {
+
+			equipment_bonus = {
+				special_infantry_equipment = {
+					build_cost_ic = -0.04
+					instant = yes
+				}
+			}
+
+		}
+
+		ARI_mystery_weapon_buff_3 = {
+
+			equipment_bonus = {
+				special_infantry_equipment = {
+					build_cost_ic = -0.06
+					instant = yes
+				}
+			}
+
+		}
+
+		ARI_mystery_weapon_buff_4 = {
+
+			equipment_bonus = {
+				special_infantry_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+			}
+
+		}
+
+		ARI_mystery_weapon_buff_5 = {
+
+			equipment_bonus = {
+				special_infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+		}
+
+	}
+}

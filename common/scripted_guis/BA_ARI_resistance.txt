@@ -1,0 +1,211 @@
+scripted_gui = {
+
+	# ALR_resistance_window = {
+	#     context_type = decision_category
+	# 	window_name = "ALR_resistance_window"
+		
+	# 	dynamic_lists = {
+	# 		ALR_states = {
+	# 			array = ARI_states
+	# 			value = state_id
+	# 			index = i
+	# 			entry_container = ALR_state_button_container
+	# 		}
+	# 	}
+	# 	triggers = {
+	# 		ALR_state_button_click_enabled = { 
+	# 			var:state_id = {
+	# 				NOT = {
+	# 					check_variable = { ROOT.ALR_base_level < ALR_state_interaction_available_rank }
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	effects = {
+	# 		ALR_state_button_click = { 
+	# 			set_variable = { ARI_map_selected_state = state_id }
+	# 		}
+	# 	}
+	# 	properties = {
+	# 		ALR_state_button = {
+	# 			image = "ALR_resistance_state_[?state_id]"
+	# 			frame = var:state_id:ALR_state_frame
+	# 			x = ARI_states_x^i
+	# 			y = ARI_states_y^i
+	# 		}
+	# 		ALR_state_influence_bar = {
+	# 			frame = var:ARI_map_selected_state:ALR_state_influence
+	# 		}
+	# 		ALR_state_max_influence_rank_bar = {
+	# 			frame = var:ARI_map_selected_state:ALR_state_max_influence_rank
+	# 		}
+	# 		ALR_state_influence_rank_bar = {
+	# 			frame = var:ARI_map_selected_state:ALR_state_influence_rank
+	# 		}
+	# 	}
+		
+	# }
+	# ALR_state_window = {
+	# 	context_type = player_context
+	# 	window_name = "ALR_state_window"
+
+	# 	visible = {
+	# 		has_country_flag = ALR_state_info_open
+	# 	}
+	# 	dynamic_lists = {
+	# 		ALR_state_window_buttons = {
+	# 			array = ALR_state_window_tab
+	# 			index = i
+	# 			entry_container = ALR_state_window_button_container
+	# 		}
+	# 		ALR_state_window_selected_tab = {
+	# 			array = ALR_state_window_selected_tab
+	# 			value = tab_id
+	# 			entry_container = [ARI_get_state_window_selected_tab]
+	# 		}
+	# 		ALR_state_modifier_gridbox = {
+	# 			array = ALR_state_modifiers
+	# 			value = modifier_id
+	# 			index = modifiers_index
+	# 			entry_container = ALR_state_modifier_container
+	# 		}
+	# 	}
+	# 	triggers = {
+	# 		ARI_selected_state_resources_visible = { 
+	# 			NOT = { has_country_flag = ARI_player_B }
+	# 		}
+	# 		ARI_selected_state_supply_alarming_visible = { 
+	# 			NOT = { has_country_flag = ARI_player_B }
+	# 			var:ARI_map_selected_state = {
+	# 				check_variable = { ALR_state_supply_monthly_modifier > ALR_state_supply }
+	# 			}
+	# 		}
+	# 	}
+	# 	effects = {
+	# 		ALR_state_window_close_button_click = {
+	# 			clr_country_flag = ALR_state_info_open
+	# 			set_variable = { ARI_map_selected_state = 0 }
+	# 		}
+	# 		ALR_state_window_button_click = {
+	# 			set_variable = { ALR_state_window_selected_tab^0 = i }
+	# 			clear_array = ALR_state_window_tab
+	# 			resize_array = { ALR_state_window_tab = 3 }
+	# 			set_variable = { ALR_state_window_tab^i = 2 }
+	# 		}
+	# 	}
+		
+	# 	properties = {
+	# 		ALR_state_window_button = {
+	# 			x = ALR_state_window_button_x^i
+	# 			frame = ALR_state_window_tab^i
+	# 		}
+	# 		ARI_selected_state_bar_influence = {
+	# 			frame = ARI_bar_influence_frame
+	# 		}
+	# 		ARI_selected_state_map = {
+	# 			image = "ALR_resistance_state_[?ARI_map_selected_state.GetID]_big"
+	# 		}
+	# 		ALR_state_modifier_framework = {
+	# 			frame = ALR_state_modifiers_status^modifiers_index
+	# 		}
+	# 	}
+	# }
+	# ALR_base_construction_window = {
+	# 	context_type = decision_category
+	# 	window_name = "ALR_base_construction_window"
+	# 	dynamic_lists = {
+	# 		ALR_focuses = {
+	# 			array = ALR_focuses
+	# 			value = focus
+	# 			index = i
+	# 			entry_container = ALR_focuses_button_container
+	# 		}
+	# 	}
+	# 	effects = {
+	# 		ALR_focuses_button_click = {
+	# 			set_variable = { ALR_selected_focus = focus }
+	# 		}
+	# 	}
+	# 	properties = {
+	# 		ALR_focuses_icon = {
+	# 			image = "[?focus.GetTokenKey]_icon"
+	# 		}
+	# 		ALR_focuses_button = {
+	# 			frame = unlocked@var:focus
+	# 		}
+	# 		ALR_base_supply_bar = {
+	# 			frame = ALR_supply
+	# 		}
+	# 		ALR_base_weapon_bar = {
+	# 			frame = ALR_weapon
+	# 		}
+	# 	}
+	# }
+	ARI_suppression_window = {
+	    context_type = decision_category
+		window_name = "ARI_suppression_window"
+
+		visible = {
+			has_country_flag = ARI_suppression_available
+		}
+		
+		dynamic_lists = {
+			ARI_suppression_states = {
+				array = ARI_states
+				value = state_id
+				index = i
+				entry_container = ARI_state_button_container
+			}
+		}
+		triggers = {
+			ARI_state_button_visible = {
+				var:state_id = { NOT = { has_state_flag = ARI_state_absolutely_controlled } }
+			}
+		}
+		effects = {
+			ARI_state_button_click = { 
+				set_variable = { ARI_map_selected_state = var:state_id }
+			}
+			ARI_suppression_map_mode_control_button_click = {
+				set_variable = { ARI_suppression_map_mode_control = 2 }
+				set_variable = { ARI_suppression_map_mode_guard = 1 }
+				set_variable = { ARI_suppression_map_mode = token:ALR_resistance_state }
+				every_owned_state = {
+					set_variable = { ARI_state_button_frame = ARI_state_control_rank }
+				}
+			}
+			ARI_suppression_map_mode_guard_button_click = {
+				set_variable = { ARI_suppression_map_mode_control = 1 }
+				set_variable = { ARI_suppression_map_mode_guard = 2 }
+				set_variable = { ARI_suppression_map_mode = token:ARI_suppression_state_guard }
+				every_owned_state = {
+					set_variable = { ARI_state_button_frame = ARI_state_guard_rank }
+				}
+			}
+		}
+		properties = {
+			ARI_state_button = {
+				image = "[?ARI_suppression_map_mode.GetTokenKey]_[?state_id.GetID]"
+				frame = var:state_id:ARI_state_button_frame
+				x = ARI_states_x^i
+				y = ARI_states_y^i
+			}
+			ARI_suppression_control_bar = {
+				frame = var:ARI_map_selected_state:ARI_state_control
+			}
+			ARI_suppression_map_mode_control_button = {
+				frame = var:ARI_suppression_map_mode_control
+			}
+			ARI_suppression_guard_bar = {
+				frame = var:ARI_map_selected_state:ARI_state_guard
+			}
+			ARI_suppression_guard_rank_bar = {
+				frame = var:ARI_map_selected_state:ARI_state_guard_rank
+			}
+			ARI_suppression_map_mode_guard_button = {
+				frame = var:ARI_suppression_map_mode_guard
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,582 @@
+#设置焦点：《伊甸条约》的签订
+TRI_set_focus_signing_Eden = {
+	set_temp_variable = { TRI_focus = token:TRI_parliament_focus_signing_Eden }
+	BA_TRI_set_parliament_focus = yes
+}
+#设置焦点：对现任茶话会领袖的支持
+TRI_set_focus_trust_on_current_leader = {
+	set_temp_variable = { TRI_focus = token:TRI_parliament_focus_trust_on_current_leader }
+	BA_TRI_set_parliament_focus = yes
+}
+#设置焦点：《伊甸条约》的威胁
+TRI_set_focus_Eden_threat = {
+	set_temp_variable = { TRI_focus = token:TRI_parliament_focus_Eden_threat }
+	BA_TRI_set_parliament_focus = yes
+	BA_TRI_generate_focus_modifier = yes
+}
+#设置焦点：胜利签订的《伊甸条约》
+TRI_set_focus_successful_Eden = {
+	set_temp_variable = { TRI_focus = token:TRI_parliament_focus_successfully_signed_Eden }
+	BA_TRI_set_parliament_focus = yes
+}
+#投资稳定度
+TRI_focus_2_invest_stability = {
+	#增加投资花费精神
+	meta_effect = {
+		text = {
+			add_timed_idea = {
+				idea = TRI_BOP_school_stability_[INVEST_RANK]
+				days = 30
+			}
+		}
+		INVEST_RANK = temp_var:invest_rank
+	}
+	#指挥点、政治点花费
+	set_temp_variable = { invest_cost = -30 }
+	multiply_temp_variable = { invest_cost = invest_rank }
+	add_political_power = invest_cost
+	add_command_power = invest_cost
+	custom_effect_tooltip = TRI_focus_2_invest_stability_tt
+	#增加投资等级
+	add_to_variable = { TRI_focus_2_invest_rank_stability = invest_rank }
+	BA_TRI_generate_focus_modifier = yes
+	#反对派不满机制还没做#
+}
+#投资战争支持度
+TRI_focus_2_invest_war_support = {
+	#增加投资花费精神
+	meta_effect = {
+		text = {
+			add_timed_idea = {
+				idea = TRI_BOP_school_stability_[INVEST_RANK]
+				days = 30
+			}
+		}
+		INVEST_RANK = temp_var:invest_rank
+	}
+	#指挥点、政治点花费
+	set_temp_variable = { invest_cost = -30 }
+	multiply_temp_variable = { invest_cost = invest_rank }
+	add_political_power = invest_cost
+	add_command_power = invest_cost
+	custom_effect_tooltip = TRI_focus_2_invest_war_support_tt
+	#增加投资等级
+	add_to_variable = { TRI_focus_2_invest_rank_war_support = invest_rank }
+	BA_TRI_generate_focus_modifier = yes
+	#反对派不满机制还没做#
+}
+#计算焦点：《伊甸条约》的威胁的修正
+BA_TRI_generate_focus_modifier = {
+	if = {
+		limit = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat } }
+		#基础值
+		clear_variable = TRI_focus_consumer_goods_factor
+		set_variable = { TRI_focus_war_support_factor = 0 }
+		set_variable = { TRI_focus_stability_weekly = -0.035 }
+		#席位差加成
+		TRI_BOP_generate_faction_pie = yes
+		while_loop_effect = {
+			limit = { check_variable = { TRI_BOP_weight_difference > 19 } }
+			add_to_variable = { TRI_focus_war_support_factor = 0.05 }
+			subtract_from_variable = { TRI_BOP_weight_difference = 20 }
+		}
+		while_loop_effect = {
+			limit = { check_variable = { TRI_BOP_weight_difference < -19 } }
+			add_to_variable = { TRI_focus_stability_weekly = 0.007 }
+			add_to_variable = { TRI_BOP_weight_difference = 20 }
+		}
+		#投资加成
+		set_temp_variable = { stab_from_invest = TRI_focus_2_invest_rank_stability }
+		multiply_temp_variable = { stab_from_invest = 0.014 }
+		add_to_variable = { TRI_focus_stability_weekly = stab_from_invest }
+		set_temp_variable = { wars_from_invest = TRI_focus_2_invest_rank_war_support }
+		multiply_temp_variable = { wars_from_invest = 0.05 }
+		add_to_variable = { TRI_focus_war_support_factor = wars_from_invest }
+	}
+}
+#设置焦点
+BA_TRI_set_parliament_focus = {
+	#先结算政治点
+	if = {
+		limit = { has_variable = TRI_parliament_focus }
+		BA_TRI_generate_focus_pp_gain = yes
+	}
+	#文字提示
+	custom_effect_tooltip = BA_TRI_set_parliament_focus_tt
+	#启用对团结度的周期性持续影响
+	clear_array = TRI_unity_association
+	for_each_loop = {
+		array = TRI_parliament_association
+		value = association
+		add_to_array = { TRI_unity_association = var:association }
+	}
+	#设置当前焦点
+	hidden_effect = { 
+		set_variable = { TRI_parliament_focus = TRI_focus }
+		add_ideas = var:TRI_focus 
+		TRI_init_senate_house = yes
+	}
+	add_dynamic_modifier = {
+		modifier = TRI_parliament_focus_modifier
+	}
+	custom_effect_tooltip = TRI_add_main_faction_modifier_tt
+	#初始化焦点决议对象
+	set_variable = { BA_TRI_parliament_decision_target = token:TRI_paranoia_association_0 }
+	TRI_BOP_generate_faction_pie = yes
+	mark_focus_tree_layout_dirty = yes
+}
+#焦点变化时，获得或支付政治点
+BA_TRI_generate_focus_pp_gain = {
+	set_temp_variable = { TRI_focus_pp_gain = TRI_parliament_teaparty_agree_difference }
+	add_to_temp_variable = { TRI_focus_pp_gain = TRI_parliament_other_agree_difference }
+	multiply_temp_variable = { TRI_focus_pp_gain = 2 }
+	hidden_effect = {
+		add_political_power = TRI_focus_pp_gain
+	}
+	custom_effect_tooltip = TRI_focus_pp_gain_tt
+}
+#清除焦点
+BA_TRI_clear_parliament_focus = {
+	#先结算政治点
+	BA_TRI_generate_focus_pp_gain = yes
+	#移除团结度周期变化
+	clear_array = TRI_unity_association
+	clear_variable = TRI_unity_weekly_modifier
+	#移除焦点及其影响
+	clear_variable = TRI_parliament_focus
+	remove_dynamic_modifier = {
+		modifier = TRI_parliament_focus_modifier
+	}
+	clear_variable = TRI_parliament_teaparty_approval_rating
+	clear_variable = TRI_parliament_other_approval_rating
+	clear_variable = TRI_parliament_teaparty_agree_difference
+	clear_variable = TRI_parliament_other_agree_difference
+}
+#这个脚本主要进行圣三一的议会席位运算
+TRI_parliament_party_seats = {
+	#两院的支持反对中立席位的计算
+	set_variable = { position_support@BA_TRI_senate_seat = 0 }
+	set_variable = { position_support@BA_TRI_house_seat = 0 }
+	clear_array = TRI_against_association
+	clear_array = TRI_non_against_association
+	#总计支持、中立、反对的席位
+	for_each_loop = {
+		array = TRI_parliament_association
+		value = v
+		set_variable = { focus_position@var:v = moderate@var:v }
+		subtract_from_variable = { focus_position@var:v = hardliner@var:v }
+		set_variable = { focus_position_x@var:v = focus_position@var:v }
+		multiply_variable = { focus_position_x@var:v = 200 }
+
+		set_variable = { focus_position_distance@var:v = TRI_player_focus_position }
+		subtract_from_variable = { focus_position_distance@var:v = focus_position@var:v }
+		if = {
+			limit = { check_variable = { focus_position_distance@var:v > 1 } }
+			set_variable = { view@var:v = token:view_against }
+			set_variable = { list_bg@var:v = 2 }
+			add_to_array = { TRI_against_association = var:v }
+		}
+		else = {
+			set_variable = { view@var:v = token:view_non_against }
+			set_variable = { list_bg@var:v = 1 }
+			add_to_array = { TRI_non_against_association = var:v }
+		}
+		if = {
+			limit = { check_variable = { fully_support@var:v = 1 } }
+			add_to_variable = { position_support@var:status@var:v = seatNumber@var:v }
+		}
+		else_if = {
+			limit = { check_variable = { no_faction@var:v = 0 } }
+			set_temp_variable = { focus_support@var:v = 2 }
+			subtract_from_temp_variable = { focus_support@var:v = focus_position_distance@var:v }
+			divide_temp_variable = { focus_support@var:v = 2 }
+			set_temp_variable = { support_modifier = 1 }
+			multiply_temp_variable = { support_modifier = loyalty@var:v }
+			subtract_from_temp_variable = { support_modifier = radicalism@var:v }
+			multiply_temp_variable = { focus_support@var:v = support_modifier }
+
+			clamp_variable = {
+				var = focus_support@var:v
+				min = 0
+				max = 1
+			}
+			multiply_temp_variable = { focus_support@var:v = seatNumber@var:v }
+			add_to_variable = { position_support@var:status@var:v = focus_support@var:v }
+		}
+		else = {
+			set_variable = { focus_position_x@var:v = 0 }
+			set_variable = { focus_position_y@var:v = 0 }
+		}
+	}
+	round_variable = position_support@BA_TRI_senate_seat
+	round_variable = position_support@BA_TRI_house_seat
+	#计算支持率
+	set_variable = { TRI_parliament_teaparty_approval_rating = position_support@BA_TRI_senate_seat }
+	set_variable = { TRI_parliament_other_approval_rating = position_support@BA_TRI_house_seat }
+	divide_variable = { TRI_parliament_teaparty_approval_rating = valid_seats@BA_TRI_senate_seat }
+	divide_variable = { TRI_parliament_other_approval_rating = valid_seats@BA_TRI_house_seat }
+	#计算支持反对差
+	set_variable = { TRI_parliament_teaparty_agree_difference = position_support@BA_TRI_senate_seat }
+	set_variable = { TRI_parliament_other_agree_difference = position_support@BA_TRI_house_seat }
+	multiply_variable = { TRI_parliament_teaparty_agree_difference = 2 }
+	multiply_variable = { TRI_parliament_other_agree_difference = 2 }
+	subtract_from_variable = { TRI_parliament_teaparty_agree_difference = valid_seats@BA_TRI_senate_seat }
+	subtract_from_variable = { TRI_parliament_other_agree_difference = valid_seats@BA_TRI_house_seat }
+
+	#计算对团结度影响
+	TRI_generate_unity_modifier = yes
+	if = {
+		limit = { has_variable = TRI_debated_bill }
+		TRI_parliament_get_bill_positions = yes
+	}
+}
+#主导派系修正
+TRI_add_main_faction_modifier = {
+	hidden_effect = {
+		remove_ideas = TRI_main_faction_BOP_hardliner_1
+		remove_ideas = TRI_main_faction_BOP_hardliner_2
+		remove_ideas = TRI_main_faction_BOP_hardliner_3
+		remove_ideas = TRI_main_faction_BOP_conservative_1
+		remove_ideas = TRI_main_faction_BOP_conservative_2
+		remove_ideas = TRI_main_faction_BOP_conservative_3
+		remove_ideas = TRI_main_faction_BOP_moderate_1
+		remove_ideas = TRI_main_faction_BOP_moderate_2
+		remove_ideas = TRI_main_faction_BOP_moderate_3
+		if = {
+			limit = { 
+				NOT = { check_variable = { TRI_BOP_main_faction = token:BOP_none } } 
+				has_variable = TRI_parliament_focus
+				check_variable = { TRI_parliament_teaparty_approval_rating > 0.5 }
+				check_variable = { TRI_parliament_other_approval_rating > 0.5 }
+			}
+			set_temp_variable = { support_rank = 1 }
+			if = {
+				limit = { 
+					check_variable = { TRI_parliament_teaparty_approval_rating > 0.8 }
+					check_variable = { TRI_parliament_other_approval_rating > 0.8 }
+				}
+				set_temp_variable = { support_rank = 3 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { TRI_parliament_teaparty_approval_rating > 0.6 }
+					check_variable = { TRI_parliament_other_approval_rating > 0.6 }
+				}
+				set_temp_variable = { support_rank = 2 }
+			}
+			meta_effect = {
+				text = {
+					add_ideas = TRI_main_faction_[FACTION]_[RANK]
+				}
+				FACTION = "[?TRI_BOP_main_faction.GetTokenKey]"
+				RANK = temp_var:support_rank
+			}
+		}
+	}
+}
+
+#法案
+	#设置法案
+	TRI_submit_the_bill = {
+		if = {
+			limit = { TRI_can_submit_a_bill = yes }
+			custom_effect_tooltip = TRI_submit_the_bill_tt
+			hidden_effect = {
+				set_variable = { TRI_debated_bill = bill }
+				set_variable = { temp_support@BA_TRI_senate_seat = 0 }
+				set_variable = { temp_support@BA_TRI_house_seat = 0 }
+				activate_mission = TRI_vote_for_the_bill
+				add_ideas = var:bill
+				TRI_parliament_get_bill_positions = yes
+			}
+		}
+		else = {
+			custom_effect_tooltip = TRI_not_submit_the_bill_tt
+			hidden_effect = {
+				if = {
+					limit = { 
+						NOT = {
+							is_in_array = {
+								array = TRI_bills_to_be_passed
+								value = var:bill
+							}
+						} 
+					}
+					add_to_array = { TRI_bills_to_be_passed = var:bill }
+				}
+			}
+		}
+	}
+	TRI_parliament_get_bill_positions = {
+		#两院的支持反对中立席位的计算
+		set_variable = { bill_support@BA_TRI_senate_seat = 0 }
+		set_variable = { bill_support@BA_TRI_house_seat = 0 }
+		#总计支持、中立、反对的席位
+		for_each_loop = {
+			array = TRI_parliament_association
+			value = v
+			if = {
+				limit = { check_variable = { fully_support@var:v = 1 } }
+				add_to_variable = { bill_support@var:status@var:v = seatNumber@var:v }
+			}
+			else = {
+				set_temp_variable = { hardliner_support@var:v = hardliner@var:v }
+				set_temp_variable = { conservative_support@var:v = conservative@var:v }
+				set_temp_variable = { moderate_support@var:v = moderate@var:v }
+		
+				multiply_temp_variable = { hardliner_support@var:v = hardliner_support@var:TRI_debated_bill }
+				multiply_temp_variable = { conservative_support@var:v = conservative_support@var:TRI_debated_bill }
+				multiply_temp_variable = { moderate_support@var:v = moderate_support@var:TRI_debated_bill }
+		
+				set_temp_variable = { support@var:v = hardliner_support@var:v }
+				add_to_temp_variable = { support@var:v = conservative_support@var:v }
+				add_to_temp_variable = { support@var:v = moderate_support@var:v }
+				multiply_temp_variable = { support@var:v = loyalty@var:v }
+				clamp_variable = {
+					var = support@var:v
+					min = 0
+					max = 1
+				}
+				multiply_temp_variable = { support@var:v = seatNumber@var:v }
+				if = {
+					limit = { 
+						check_variable = { need_detail@var:TRI_debated_bill = 1 }
+						check_variable = { view@var:association = token:view_against }
+					}
+					multiply_variable = { support@var:v = 0.5 }
+				}
+				add_to_variable = { bill_support@var:status@var:v = support@var:v }
+			}
+		}
+		round_variable = bill_support@BA_TRI_senate_seat
+		round_variable = bill_support@BA_TRI_house_seat
+		add_to_variable = { bill_support@BA_TRI_senate_seat = temp_support@BA_TRI_senate_seat }
+		add_to_variable = { bill_support@BA_TRI_senate_seat = temp_support@BA_TRI_house_seat }
+		clamp_variable = {
+			var = bill_support@BA_TRI_senate_seat
+			min = 0
+			max = valid_seats@BA_TRI_senate_seat
+		}
+		clamp_variable = {
+			var = bill_support@BA_TRI_house_seat
+			min = 0
+			max = valid_seats@BA_TRI_house_seat
+		}
+	}
+	TRI_pass_the_bill = {
+		hidden_effect = {
+			add_to_array = { TRI_passed_bills = var:TRI_debated_bill }
+			remove_from_array = { TRI_bills_to_be_passed = var:TRI_debated_bill }
+			set_variable = { pass_date@var:TRI_debated_bill = global.date }
+			set_temp_variable = { TRI_bill_come_into_effect = 1 }
+			remove_ideas = var:TRI_debated_bill
+			clear_variable = TRI_debated_bill
+		}
+	}
+##支持度
+	#所有社团
+	TRI_parliament_all_loyalty_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_tt
+			TARGET = TRI_parliament
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { check_variable = { no_faction@var:association = 0 } }
+					TRI_parliament_loyalty_change = yes
+				}
+			}
+		}
+	}
+	#对立社团
+	TRI_parliament_against_loyalty_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_tt
+			TARGET = view_against
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_against_association
+				value = association
+				if = {
+					limit = { check_variable = { no_faction@var:association = 0 } }
+					TRI_parliament_loyalty_change = yes
+				}
+			}
+		}
+	}
+	#非对立社团
+	TRI_parliament_non_against_loyalty_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_tt
+			TARGET = view_non_against
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = BA_TRI_non_against_association
+				value = association
+				if = {
+					limit = { check_variable = { no_faction@var:association = 0 } }
+					TRI_parliament_loyalty_change = yes
+				}
+			}
+		}
+	}
+	#指定议院社团
+	TRI_parliament_loyalty_change_parliament = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_tt
+			TARGET = "[?target_parliament.GetTokenLocalizedKey]"
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { 
+						check_variable = { status@var:association = var:target_parliament } 
+					}
+					TRI_parliament_loyalty_change = yes
+				}
+			}
+		}
+	}
+	#指定派系社团
+	TRI_parliament_loyalty_change_faction = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_tt
+			TARGET = "[?target_faction.GetTokenLocalizedKey]"
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { 
+						check_variable = { faction@var:association = var:target_faction } 
+					}
+					TRI_parliament_loyalty_change = yes
+				}
+			}
+		}
+	}
+	#单个社团
+	TRI_parliament_loyalty_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_tt
+			TARGET = "[?association.GetTokenLocalizedKey]"
+		}
+		add_to_variable = { loyalty@var:association = loyalty_change }
+		clamp_variable = {
+			var = loyalty@var:association
+			min = 0
+		}
+		set_variable = { focus_position_y@var:association = loyalty@var:association }
+		subtract_from_variable = { focus_position_y@var:association = 1 }
+		multiply_variable = { focus_position_y@var:association = -300 }
+		clamp_variable = {
+			var = focus_position_y@var:association
+			min = -150
+			max = 150
+		}
+		TRI_parliament_party_seats = yes
+	}
+##激进度
+	#所有社团
+	TRI_parliament_all_radicalism_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_radicalism_change_tt
+			TARGET = TRI_parliament
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { check_variable = { no_faction@var:association = 0 } }
+					TRI_parliament_radicalism_change = yes
+				}
+			}
+		}
+	}
+	#对立社团
+	TRI_parliament_against_radicalism_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_radicalism_change_tt
+			TARGET = view_against
+		}
+		for_each_loop = {
+			array = TRI_against_association
+			value = association
+			if = {
+				limit = { check_variable = { no_faction@var:association = 0 } }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	}
+	#非对立社团
+	TRI_parliament_non_against_radicalism_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_radicalism_change_tt
+			TARGET = view_non_against
+		}
+		for_each_loop = {
+			array = BA_TRI_non_against_association
+			value = association
+			if = {
+				limit = { check_variable = { no_faction@var:association = 0 } }
+				TRI_parliament_radicalism_change = yes
+			}
+		}
+	}
+	#指定派系社团
+	TRI_parliament_radicalism_change_faction = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_radicalism_change_tt
+			TARGET = "[?target_faction.GetTokenLocalizedKey]"
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { 
+						check_variable = { faction@var:association = var:target_faction } 
+					}
+					TRI_parliament_radicalism_change = yes
+				}
+			}
+		}
+	}
+	#单个社团
+	TRI_parliament_radicalism_change = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_radicalism_change_tt
+			TARGET = "[?association.GetTokenLocalizedKey]"
+		}
+		add_to_variable = { radicalism@var:association = radicalism_change }
+		clamp_variable = {
+			var = radicalism@var:association
+			min = 0
+		}
+		TRI_parliament_party_seats = yes
+	}
+#改变玩家焦点立场
+	TRI_change_player_focus_position = {
+		custom_effect_tooltip = [TRI_get_player_position_change]
+		add_to_variable = { TRI_player_focus_position = position_change }
+		clamp_variable = {
+			var = TRI_player_focus_position
+			min = -1
+			max = 1
+		}
+		set_variable = { TRI_player_focus_position_x = TRI_player_focus_position }
+		multiply_variable = { TRI_player_focus_position_x = 200 }
+		set_variable = { TRI_player_focus_position_frame = TRI_player_focus_position }
+		round_variable = TRI_player_focus_position_frame
+		add_to_variable = { TRI_player_focus_position_frame = 2 }
+		TRI_init_senate_house = yes
+	}

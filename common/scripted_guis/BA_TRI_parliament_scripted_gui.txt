@@ -1,0 +1,65 @@
+scripted_gui = {
+	TRI_parliament_decision_ui = {
+		window_name = "TRI_parliament_container_windows"
+		context_type = decision_category
+
+		visible = {
+			original_tag = TRI
+		}
+
+		dynamic_lists = {
+			TRI_party_senators_view_list = {
+				array = BA_TRI_senators_association
+				value = association
+				entry_container = TRI_parliament_association_list_container
+			}
+			TRI_party_house_view_list = {
+				array = BA_TRI_house_association
+				value = association
+				entry_container = TRI_parliament_association_list_container
+			}
+			#上议院议会席位图像
+			TRI_senators_diagram = {
+				array = TRI_senators_grid_box_array
+				change_scope = no
+				entry_container = TRI_senators_seat_entry
+				index = seat_idx
+				value = v
+			}
+			#下议院议会席位图像
+			TRI_house_diagram = {
+				array = TRI_house_grid_box_array
+				change_scope = no
+				entry_container = TRI_house_seat_entry
+				index = seat_idx
+				value = v
+			}
+		}
+		effects = {
+			TRI_parliament_association_list_button_click = {
+				set_variable = { BA_TRI_parliament_decision_target = var:association }
+			}
+		}
+
+		properties = {
+			TRI_seat_icon = {
+				x = TRI_senators_x_array^seat_idx
+				y = TRI_senators_y_array^seat_idx
+				frame = v
+			}
+			TRI_house_seat_icon = {
+				x = TRI_house_x_array^seat_idx
+				y = TRI_house_y_array^seat_idx
+				frame = v
+			}
+			TRI_parliament_association_seats_bg = {
+				frame = list_bg@var:association
+			}
+			TRI_parliament_association_list_icon = {
+				image = "[?association.GetTokenKey]_icon"
+			}
+		}
+
+		
+	}
+}

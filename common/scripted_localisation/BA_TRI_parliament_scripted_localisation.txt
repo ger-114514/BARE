@@ -1,0 +1,102 @@
+TRI_get_support_text = {
+	name = TRI_get_support_text
+	text = {
+		trigger = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden } }
+		localization_key = TRI_support_text_1
+	}
+	text = {
+		trigger = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat } }
+		localization_key = TRI_support_text_2
+	}
+}
+TRI_get_centrist_text = {
+	name = TRI_get_centrist_text
+	text = {
+		trigger = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden } }
+		localization_key = TRI_centrist_text_1
+	}
+	text = {
+		trigger = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat } }
+		localization_key = TRI_centrist_text_2
+	}
+}
+TRI_get_opposition_text = {
+	name = TRI_get_opposition_text
+	text = {
+		trigger = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden } }
+		localization_key = TRI_opposition_text_1
+	}
+	text = {
+		trigger = { check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat } }
+		localization_key = TRI_opposition_text_2
+	}
+}
+TRI_get_region_house_seats = {
+	name = TRI_get_region_house_seats
+	text = {
+		localization_key = TRI_region_house_seats
+	}
+	text = {
+		localization_key = TRI_region_no_voting
+	}
+}
+TRI_get_association_details = {
+	name = TRI_get_association_details
+	text = {
+		trigger = { 
+			check_variable = { detail_ignored@var:TRI_BOP_selected_association = 1 }
+		}
+		localization_key = TRI_BOP_association_detail_ignored
+	}
+	text = {
+		trigger = { 
+			check_variable = { no_faction@var:TRI_BOP_selected_association = 1 }
+		}
+		localization_key = TRI_BOP_association_no_faction
+	}
+	text = {
+		trigger = { 
+			check_variable = { fully_support@var:TRI_BOP_selected_association = 1 }
+		}
+		localization_key = TRI_BOP_association_fully_support
+	}
+	text = {
+		localization_key = TRI_BOP_association_information_faction
+	}
+}
+TRI_get_senate_details = {
+	name = TRI_get_senate_details
+	text = {
+		trigger = { 
+			has_country_flag = TRI_senate_detail_ignored
+		}
+		localization_key = TRI_BOP_parliament_detail_ignored
+	}
+	text = {
+		localization_key = TRI_BOP_senators_seats
+	}
+}
+TRI_get_house_details = {
+	name = TRI_get_house_details
+	text = {
+		trigger = { 
+			has_country_flag = TRI_house_detail_ignored
+		}
+		localization_key = TRI_BOP_parliament_detail_ignored
+	}
+	text = {
+		localization_key = TRI_BOP_house_seats
+	}
+}
+TRI_get_player_position_change = {
+	name = TRI_get_player_position_change
+	text = {
+		trigger = { 
+			check_variable = { position_change < 0 }
+		}
+		localization_key = TRI_player_position_change_to_hardliner
+	}
+	text = {
+		localization_key = TRI_player_position_change_to_moderate
+	}
+}

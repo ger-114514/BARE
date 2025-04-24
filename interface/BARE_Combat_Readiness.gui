@@ -1,0 +1,45 @@
+guiTypes = {
+
+
+	containerWindowType = { 
+		name = "BARE_Combat_Readiness"
+		position = {x =318 y =0%}
+		size = { width =27 height = 27 }
+
+		iconType ={
+			name ="combat_readiness_value_bg"
+			spriteType = "GFX_bare_emtry_box_27"
+			position = { x = 0 y = 5 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = BARE_Combat_Readiness_Tooltip
+		}
+
+
+		iconType ={
+			name ="combat_readiness_block"
+			spriteType = "GFX_bare_Combat_Readiness_block"
+			position = { x = 0 y = 3 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = BARE_Combat_Readiness_Block_Tooltip
+		}
+
+		
+
+	}
+
+
+	containerWindowType = { 
+		name = "BARE_Combat_Readiness_State"
+		position = {x =2% y =30%}
+		size = { width = 27 height = 27 }
+
+		iconType ={
+			name ="combat_readiness_value_bg"
+			spriteType = "GFX_bare_emtry_box_36"
+			position = { x = 0 y = 5 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = BARE_Combat_Readiness_State_Tooltip
+		}
+
+	}
+}

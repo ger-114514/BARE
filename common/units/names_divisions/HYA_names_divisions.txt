@@ -1,0 +1,146 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+HYA_Inf_01 = {
+	name = "百花缭乱步兵"
+
+	for_countries = { HYA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "百花缭乱第%d中队"
+
+	ordered =
+	{
+		1 = { "百花缭乱第1“三日月宗近”中队" }
+		2 = { "百花缭乱第2“数珠丸恒次”中队" }
+		3 = { "百花缭乱第3“大典太光世”中队" }
+		4 = { "百花缭乱第4“鬼丸国纲”中队" }
+		5 = { "百花缭乱第5“萤丸”中队" }
+		6 = { "百花缭乱第6“千子村正”中队" }
+		7 = { "百花缭乱第7“宗三左文字”中队" }
+		8 = { "百花缭乱第8“小豆长光”中队" }
+	}
+}
+
+HYA_Inf_02 = {
+	name = "庆典运营部后勤部队"
+
+	for_countries = { HYA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "庆典运营部第%d后勤小队"
+
+	ordered =
+	{
+		1 = { "庆典运营部第1“四季山水”后勤小队" }
+		2 = { "庆典运营部第2“洛中洛外”后勤小队" }
+		3 = { "庆典运营部第3“唐狮子”后勤小队" }
+		4 = { "庆典运营部第4“松林图”后勤小队" }
+		5 = { "庆典运营部第5“瓢鲇”后勤小队" }
+		6 = { "庆典运营部第6“智积院枫”后勤小队" }
+	}
+}
+
+HYA_Infm_01 = {
+	name = "百鬼夜行自治区民兵"
+
+	for_countries = { HYA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "百鬼夜行自治区民兵第%d中队"
+
+	ordered =
+	{
+		1 = { "百鬼夜行自治区民兵第1“鸟取”中队" }
+		2 = { "百鬼夜行自治区民兵第2“松岛”中队" }
+		3 = { "百鬼夜行自治区民兵第3“八郎湖”中队" }
+		4 = { "百鬼夜行自治区民兵第4“月山”中队" }
+		5 = { "百鬼夜行自治区民兵第5“出云”中队" }
+		6 = { "百鬼夜行自治区民兵第6“樱岛”中队" }
+		7 = { "百鬼夜行自治区民兵第7“高野山”中队" }
+		8 = { "百鬼夜行自治区民兵第8“阿苏山”中队" }
+	}
+}
+
+
+HYA_Infs_01 = {
+	name = "忍术研究部小队"
+
+	for_countries = { HYA }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "忍术研究部第%d忍者小队"
+
+	ordered =
+	{
+		1 = { "忍术研究部第1“飞雷神”忍者小队" }
+		2 = { "忍术研究部第2“神威”忍者小队" }
+		3 = { "忍术研究部第3“黄泉比良坂”忍者小队" }
+		4 = { "忍术研究部第4“百机操演”忍者小队" }
+		5 = { "忍术研究部第5“六赤阳阵”忍者小队" }
+		6 = { "忍术研究部第6“木叶旋风”忍者小队" }
+		7 = { "忍术研究部第7“里莲华”忍者小队" }
+		8 = { "忍术研究部第8“八卦空掌”忍者小队" }
+		9 = { "忍术研究部第9“月读”忍者小队" }
+		10 = { "忍术研究部第10“魂身别离”忍者小队" }
+	}
+}
+
+HYA_Ifv_01 = {
+	name = "阴阳部机械化部队"
+
+	for_countries = { HYA }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "阴阳部机械化第%d中队"
+
+	ordered =
+	{
+		1 = { "阴阳部机械化第1“松风”中队" }
+		2 = { "阴阳部机械化第2“放生月毛”中队" }
+		3 = { "阴阳部机械化第3“帝释栗毛”中队" }
+		4 = { "阴阳部机械化第4“百段”中队" }
+		5 = { "阴阳部机械化第5“白石”中队" }
+		6 = { "阴阳部机械化第6“星崎”中队" }
+		7 = { "阴阳部机械化第7“近江黑”中队" }
+		8 = { "阴阳部机械化第8“小云雀”中队" }
+	}
+}

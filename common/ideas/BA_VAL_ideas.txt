@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		VAL_NinDeDunPai = { #您的盾牌
+			picture = unkown
+
+			modifier = {
+				conscription_factor = 0.2 #战备上限
+				land_reinforce_rate = 0.05 #增援率
+				army_strength_factor = 0.1 #陆军生命值
+				stability_factor = 1 #稳定度
+			}
+		}
+
+		VAL_RenShouJinQue = { #人手不足
+			picture = unkown
+
+			modifier = {
+				custom_modifier_tooltip = VAL_RenShouJinQue_Y
+			}
+		}
+
+		VAL_YouXinWuLi = { #有心无力
+			picture = unkown
+
+			modifier = {
+				army_speed_factor = -0.1 #陆军速度
+				army_attack_factor = -0.05 #陆军攻击
+				army_defence_factor = -0.05 #陆军防御
+			}
+		}
+	}
+}

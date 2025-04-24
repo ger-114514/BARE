@@ -1,0 +1,735 @@
+# #第二阶段-抵抗组织
+# focus_tree = {
+# 	id = Arius_stage_2_resistance
+# 	country = {
+# 		factor = 0
+# 		modifier = {
+# 			add = 10
+# 			tag = ALR
+# 		}
+# 	}
+# 	default = no
+# 	focus = { #一线生机
+# 		id = ALR_glimmer_of_life
+# 		#icon = 
+# 		x = 16
+# 		y = 0
+# 		completion_reward = {
+			
+# 		}
+# 	}
+
+# 	focus = { #落荒而逃
+# 		id = ALR_run_away
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_glimmer_of_life
+# 		prerequisite = { focus = ALR_glimmer_of_life }
+# 		cost = 3
+# 		x = 0
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			country_event = ALR_resistance.1
+# 		}
+# 	}
+# 	focus = { #旧校舍的落脚点
+# 		id = ALR_foothold
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_run_away
+# 		prerequisite = { focus = ALR_run_away }
+# 		cost = 3
+# 		x = 0
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			country_event = ALR_resistance.2
+# 			custom_effect_tooltip = ALR_initialize_resistance_system_tt
+# 			hidden_effect = {
+# 				ALR_initialize_resistance_system = yes
+# 			}
+# 		}
+# 	}
+# #组织部分
+# 	focus = { #绘制旗帜，展望未来
+# 		id = ALR_new_flag_new_future
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_foothold
+# 		prerequisite = { focus = ALR_foothold }
+# 		cost = 3
+# 		x = -1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			country_event = ALR_resistance.3
+# 		}
+# 	}
+# 	focus = { #阿里乌斯联合抵抗阵线
+# 		id = ALR_united_front
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_new_flag_new_future
+# 		prerequisite = { focus = ALR_new_flag_new_future }
+# 		prerequisite = { focus = ALR_explore_old_hall }
+# 		cost = 3
+# 		x = 1
+# 		y = 2
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			custom_effect_tooltip = ALR_united_front_tt
+# 			set_country_flag = ALR_military_operation_decisions_available
+# 		}
+# 	}
+# 	focus = { #其名为马夫狄
+# 		id = ALR_resistance_organization_1
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		cost = 3
+# 		x = -3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			army_experience = 20
+# 			ALR_add_weapon_20 = yes
+# 			#TODO:给100步兵装备
+# 			add_equipment_to_stockpile = {
+# 				type = infantry_equipment
+# 				amount = 100
+# 			}
+# 			#TODO:给10反坦克装备
+# 			add_equipment_to_stockpile = {
+# 				type = heavy_fire_support_equipment
+# 				amount = 10
+# 			}
+# 			custom_effect_tooltip = ALR_new_military_operation_tt
+# 		}
+# 	}
+# 	focus = { #大红莲团参上
+# 		id = ALR_resistance_organization_2
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		cost = 3
+# 		x = -2
+# 		y = 2
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			army_experience = 10
+# 			#TODO:4辆夫人产中型主战坦克
+# 			add_equipment_to_stockpile = {
+# 				type = mbt_chassis
+# 				amount = 4
+# 				producer = ARI
+# 			}
+# 			custom_effect_tooltip = ALR_new_military_operation_tt
+# 		}
+# 	}
+# 	focus = { #战场救援小组-紫色十字会
+# 		id = ALR_resistance_organization_3
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		cost = 3
+# 		x = -1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			ALR_add_supply_20 = yes
+# 			add_manpower = 2000
+# 			custom_effect_tooltip = ALR_new_military_operation_tt
+# 		}
+# 	}
+# 	focus = { #阿里乌斯解放运动“五月”
+# 		id = ALR_resistance_organization_4
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		cost = 3
+# 		x = 1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			ALR_add_weapon_20 = yes
+# 			#TODO:火力支援组装备+20
+# 			add_equipment_to_stockpile = {
+# 				type = light_fire_support_equipment
+# 				amount = 20
+# 			}
+# 			custom_effect_tooltip = ALR_new_military_operation_tt
+# 		}
+# 	}
+# 	focus = { #尤斯蒂娜姐妹会
+# 		id = ALR_resistance_organization_5
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		cost = 3
+# 		x = 2
+# 		y = 2
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_political_power = 50
+# 			add_stability = 0.1
+# 			custom_effect_tooltip = ALR_resistance_organization_5_tt
+# 		}
+# 	}
+# 	focus = { #皇家园艺协会
+# 		id = ALR_resistance_organization_6
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		cost = 3
+# 		x = 3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			add_political_power = 25
+# 			ALR_add_supply_50 = yes
+# 			custom_effect_tooltip = ALR_new_military_operation_tt
+# 		}
+# 	}
+# 	focus = { #全体抵抗组织联合宣言
+# 		id = ALR_declaration_by_resistance_organizations
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_front
+# 		prerequisite = { focus = ALR_united_front }
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_declaration_by_resistance_organizations_available_tt
+# 				has_completed_focus = ALR_resistance_organization_1
+# 				has_completed_focus = ALR_resistance_organization_2
+# 				has_completed_focus = ALR_resistance_organization_3
+# 				has_completed_focus = ALR_resistance_organization_4
+# 				has_completed_focus = ALR_resistance_organization_5
+# 				has_completed_focus = ALR_resistance_organization_6
+# 			}
+# 		}
+# 		cost = 3
+# 		x = 0
+# 		y = 3
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_political_power = 150
+# 			add_stability = 0.2
+# 			add_war_support = 0.2
+# 			country_event = ALR_resistance.100
+# 		}
+# 	}
+# #基地部分
+# 	focus = { #探索旧校舍遗址
+# 		id = ALR_explore_old_hall
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_foothold
+# 		prerequisite = { focus = ALR_foothold }
+# 		cost = 5
+# 		x = 2
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			custom_effect_tooltip = ALR_base_construction_decisions_tt
+# 			hidden_effect = {
+# 				ALR_initialize_base_construction_system = yes
+# 				add_political_power = 20
+# 			}
+# 		}
+# 	}
+# 	#1级
+# 	focus = { #重启旧校舍基础设施
+# 		id = ALR_base_construction_1
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_explore_old_hall
+# 		prerequisite = { focus = ALR_explore_old_hall }
+# 		available = {
+# 			ALR_has_40_supply = yes
+# 		}
+# 		cost = 5
+# 		x = 3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			set_temp_variable = { supply_value = -40 }
+# 			ALR_change_supply = yes
+# 			ALR_raise_base_level = yes
+# 		}
+# 	}
+# 	focus = { #采集野生植物
+# 		id = ALR_base_supply_1
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_1
+# 		prerequisite = { focus = ALR_base_construction_1 }
+# 		cost = 3
+# 		x = 1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			ALR_add_supply_10 = yes
+# 			set_temp_variable = { supply_weekly_modifier_value = 2 }
+# 			ALR_change_supply_weekly_modifier = yes
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_seek_supply }
+# 			ALR_unlock_focus = yes
+# 		}
+# 	}
+# 	focus = { #赠与未来的遗产
+# 		id = ALR_base_education_1
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_1
+# 		prerequisite = { focus = ALR_base_construction_1 }
+# 		cost = 3
+# 		x = 3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_political_power = 150
+# 			#TODO:三张100ppBD科研加速卡
+# 			add_tech_bonus = {
+# 				bonus  = 1
+# 				uses = 3
+# 				#category = 
+# 			}
+# 			custom_effect_tooltip = ALR_base_education_new_decision_tt
+# 			custom_effect_tooltip = ALR_base_education_1_tt
+# 		}
+# 	}
+# 	focus = { #启用枪械维修室
+# 		id = ALR_base_weapon_1
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_1
+# 		prerequisite = { focus = ALR_base_construction_1 }
+# 		cost = 3
+# 		x = 5
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			ALR_add_weapon_20 = yes
+# 			set_temp_variable = { weapon_weekly_modifier_value = 2 }
+# 			ALR_change_weapon_weekly_modifier = yes
+# 			#TODO:10步兵装备
+# 			add_equipment_to_stockpile = {
+# 				type = infantry_equipment
+# 				amount = 10
+# 			}
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_repair_weapon }
+# 			ALR_unlock_focus = yes
+# 		}
+# 	}
+# 	focus = { #启用旧会议室
+# 		id = ALR_base_facility_1
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_1
+# 		prerequisite = { focus = ALR_base_construction_1 }
+# 		cost = 3
+# 		x = 7
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_political_power = 50
+# 			add_stability = 0.05
+# 			custom_effect_tooltip = ALR_new_state_decisions_tt
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_political_consultation }
+# 			ALR_unlock_focus = yes
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_stability }
+# 			ALR_unlock_focus = yes
+# 		}
+# 	}
+# 	#2级
+# 	focus = { #开拓森林营地
+# 		id = ALR_base_construction_2
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_1
+# 		prerequisite = { focus = ALR_base_construction_1 }
+# 		available = {
+# 			ALR_has_60_supply = yes
+# 			ALR_has_20_weapon = yes
+# 		}
+# 		cost = 5
+# 		x = 0
+# 		y = 2
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			set_temp_variable = { supply_value = -60 }
+# 			ALR_change_supply = yes
+# 			ALR_sub_weapon_20 = yes
+# 			ALR_raise_base_level = yes
+# 		}
+# 	}
+# 	focus = { #寂静的猎人
+# 		id = ALR_base_supply_2
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_2
+# 		prerequisite = { focus = ALR_base_construction_2 }
+# 		available = {
+# 			has_completed_focus = ALR_base_supply_1
+# 		}
+# 		cost = 3
+# 		x = 1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			ALR_add_supply_20 = yes
+# 			set_temp_variable = { supply_weekly_modifier_value = 4 }
+# 			ALR_change_supply_weekly_modifier = yes
+# 		}
+# 	}
+# 	focus = { #第一堂音乐课
+# 		id = ALR_base_education_2
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_2
+# 		prerequisite = { focus = ALR_base_construction_2 }
+# 		available = {
+# 			has_completed_focus = ALR_base_education_1
+# 			ALR_has_5_supply = yes
+# 		}
+# 		cost = 3
+# 		x = 3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_political_power = 50
+# 			add_stability = 0.05
+# 			add_war_support = 0.05
+# 			ALR_sub_supply_5 = yes
+# 			custom_effect_tooltip = ALR_base_education_new_decision_tt
+# 		}
+# 	}
+# 	focus = { #简易手工作坊
+# 		id = ALR_base_weapon_2
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_2
+# 		prerequisite = { focus = ALR_base_construction_2 }
+# 		available = {
+# 			has_completed_focus = ALR_base_weapon_1
+# 		}
+# 		cost = 3
+# 		x = 5
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			capital_scope = {
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = industrial_complex
+# 					level = 1
+# 				}
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = ALR_industry_0
+# 				add_idea = ALR_industry_1
+# 			}
+# 			custom_effect_tooltip = ALR_new_state_decisions_tt
+# 		}
+# 	}
+# 	focus = { #会议室沙盘
+# 		id = ALR_base_facility_2
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_2
+# 		prerequisite = { focus = ALR_base_construction_2 }
+# 		available = {
+# 			has_completed_focus = ALR_base_facility_1
+# 		}
+# 		cost = 3
+# 		x = 7
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_command_power = 30
+# 			custom_effect_tooltip = ALR_new_state_decisions_tt
+# 		}
+# 	}
+# 	#3级
+# 	focus = { #隐蔽洞穴据点
+# 		id = ALR_base_construction_3
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_2
+# 		prerequisite = { focus = ALR_base_construction_2 }
+# 		available = {
+# 			ALR_has_100_supply = yes
+# 		}
+# 		cost = 5
+# 		x = 0
+# 		y = 2
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			set_temp_variable = { supply_value = -100 }
+# 			ALR_change_supply = yes
+# 			ALR_raise_base_level = yes
+# 		}
+# 	}
+# 	focus = { #开垦隐蔽农田
+# 		id = ALR_base_supply_3
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_3
+# 		prerequisite = { focus = ALR_base_construction_3 }
+# 		available = {
+# 			has_completed_focus = ALR_base_supply_2
+# 			ALR_has_10_supply = yes
+# 		}
+# 		cost = 3
+# 		x = 1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			ALR_sub_supply_10 = yes
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_farmlands }
+# 			ALR_unlock_focus = yes
+# 		}
+# 	}
+# 	focus = { #文化课教学
+# 		id = ALR_base_education_3
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_3
+# 		prerequisite = { focus = ALR_base_construction_3 }
+# 		available = {
+# 			has_completed_focus = ALR_base_education_2
+# 			ALR_has_5_supply = yes
+# 		}
+# 		cost = 3
+# 		x = 3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			ALR_sub_supply_5 = yes
+# 			custom_effect_tooltip = ALR_base_education_new_decision_tt
+# 		}
+# 	}
+# 	focus = { #洞穴加工据点
+# 		id = ALR_base_weapon_3
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_3
+# 		prerequisite = { focus = ALR_base_construction_3 }
+# 		available = {
+# 			has_completed_focus = ALR_base_weapon_2
+# 			ALR_has_50_supply = yes
+# 		}
+# 		cost = 3
+# 		x = 5
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			set_temp_variable = { supply_value = -50 }
+# 			ALR_change_supply = yes
+# 			capital_scope = {
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = arms_factory
+# 					level = 1
+# 				}
+# 			}
+# 			custom_effect_tooltip = ALR_new_state_decisions_tt
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_large_scale_manufacturing }
+# 			ALR_unlock_focus = yes
+# 		}
+# 	}
+# 	focus = { #固定电话通信网络
+# 		id = ALR_base_facility_3
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_3
+# 		prerequisite = { focus = ALR_base_construction_3 }
+# 		available = {
+# 			has_completed_focus = ALR_base_facility_2
+# 		}
+# 		cost = 3
+# 		x = 7
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			#TODO:2张50%民用通讯科技加速卡
+# 			add_tech_bonus = {
+# 				bonus  = 0.5
+# 				uses = 2
+# 				#category = 
+# 			}
+# 		}
+# 	}
+# 	#4级
+# 	focus = { #废墟前哨据点
+# 		id = ALR_base_construction_4
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_3
+# 		prerequisite = { focus = ALR_base_construction_3 }
+# 		available = {
+# 			ALR_has_20_supply = yes
+# 			ALR_has_100_weapon = yes
+# 		}
+# 		cost = 5
+# 		x = 0
+# 		y = 2
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			set_temp_variable = { supply_value = -20 }
+# 			ALR_change_supply = yes
+# 			set_temp_variable = { weapon_value = -100 }
+# 			ALR_change_weapon = yes
+# 			ALR_raise_base_level = yes
+# 			set_temp_variable = { unlocked_focus = token:ALR_focus_guerrilla_warfare }
+# 			ALR_unlock_focus = yes
+# 		}
+# 	}
+# 	focus = { #制造便携口粮
+# 		id = ALR_base_supply_4
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_4
+# 		prerequisite = { focus = ALR_base_construction_4 }
+# 		available = {
+# 			has_completed_focus = ALR_base_supply_3
+# 		}
+# 		cost = 3
+# 		x = 1
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			add_stability = 0.05
+# 			add_war_support = 0.05
+# 		}
+# 	}
+# 	focus = { #理科教学
+# 		id = ALR_base_education_4
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_4
+# 		prerequisite = { focus = ALR_base_construction_4 }
+# 		available = {
+# 			has_completed_focus = ALR_base_education_3
+# 			ALR_has_5_supply = yes
+# 		}
+# 		cost = 3
+# 		x = 3
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			ALR_sub_supply_5 = yes
+# 			custom_effect_tooltip = ALR_base_education_new_decision_tt
+# 		}
+# 	}
+# 	focus = { #山洞军工厂
+# 		id = ALR_base_weapon_4
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_4
+# 		prerequisite = { focus = ALR_base_construction_4 }
+# 		available = {
+# 			has_completed_focus = ALR_base_weapon_3
+# 		}
+# 		cost = 3
+# 		x = 5
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			capital_scope = {
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = heavy_arms_factory
+# 					level = 1
+# 				}
+# 			}
+# 			#TODO:10火力组装备
+# 			add_equipment_to_stockpile = {
+# 				type = light_fire_support_equipment
+# 				amount = 10
+# 			}
+			
+# 			swap_ideas = {
+# 				remove_idea = ALR_industry_1
+# 				add_idea = ALR_industry_2
+# 			}
+# 		}
+# 	}
+# 	focus = { #前沿地道网络
+# 		id = ALR_base_facility_4
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_base_construction_4
+# 		prerequisite = { focus = ALR_base_construction_4 }
+# 		available = {
+# 			has_completed_focus = ALR_base_facility_3
+# 			ALR_has_20_weapon = yes
+# 		}
+# 		cost = 3
+# 		x = 7
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+# 			custom_effect_tooltip = ALR_new_state_decisions_tt
+# 		}
+# 	}
+
+# #军事部分
+# 	focus = { #隐蔽哨位
+# 		id = ALR_hidden_sentry_posts
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_foothold
+# 		prerequisite = { focus = ALR_foothold }
+# 		cost = 3
+# 		x = -6
+# 		y = 3
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			#TODO
+# 		}
+# 	}
+# 	focus = { #反侦察训练
+# 		id = ALR_anti_recon
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_hidden_sentry_posts
+# 		prerequisite = { focus = ALR_hidden_sentry_posts }
+# 		cost = 3
+# 		x = -1
+# 		y = 3
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			army_experience = 10
+# 			add_command_power = 10
+# 			custom_effect_tooltip = ALR_military_operation_new_options_tt
+# 		}
+# 	}
+# 	focus = { #路边伏击战术
+# 		id = ALR_ambush_tactic
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_hidden_sentry_posts
+# 		prerequisite = { focus = ALR_hidden_sentry_posts }
+# 		cost = 3
+# 		x = 1
+# 		y = 3
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			#TODO:国家精神“直属特战大队”变为精神“游击战术”
+# 			custom_effect_tooltip = ALR_military_operation_new_options_tt
+# 		}
+# 	}
+# 	focus = { #联合行动指挥部
+# 		id = ALR_united_command_post
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_declaration_by_resistance_organizations
+# 		prerequisite = { focus = ALR_anti_recon }
+# 		prerequisite = { focus = ALR_ambush_tactic }
+# 		prerequisite = { focus = ALR_declaration_by_resistance_organizations }
+# 		cost = 3
+# 		x = 0
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_ARMY }
+# 		completion_reward = {
+# 			add_command_power = 20
+# 			#获得国家精神联合指挥部
+# 			add_ideas = ALR_united_resistance_command_post
+# 		}
+# 	}
+# #最终国策
+# 	focus = { #抵抗阵线的力量
+# 		id = ALR_might_of_the_front
+# 		#icon = GFX_goal_unknown
+# 		relative_position_id = ALR_united_command_post
+# 		prerequisite = { focus = ALR_united_command_post }
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_might_of_the_front_available_tt
+# 				has_completed_focus = ALR_base_construction_4
+# 				has_completed_focus = ALR_base_supply_4
+# 				has_completed_focus = ALR_base_education_4
+# 				has_completed_focus = ALR_base_weapon_4
+# 				has_completed_focus = ALR_base_facility_4
+# 			}
+# 		}
+# 		cost = 3
+# 		x = 0
+# 		y = 1
+# 		search_filters = { FOCUS_FILTER_POLITICAL }
+# 		completion_reward = {
+			
+# 		}
+# 	}
+# }

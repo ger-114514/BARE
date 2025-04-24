@@ -1,0 +1,61 @@
+scripted_gui = {
+	BARE_ARI_Resource_SG = {
+		context_type = decision_category
+		window_name = "BARE_ARI_Resource"
+
+		effects = {
+			BA_ARI_Resourc_Item_add_click = {
+				add_to_variable = {
+					BARE_ARI_Resource_Want_Array^i = 6
+				}
+				clamp_variable = {
+					var = BARE_ARI_Resource_Want_Array^i
+					min = 0
+				}
+				set_variable = {
+					BARE_ARI_Resource_Cost_Array^i = BARE_ARI_Resource_Want_Array^i
+				}
+				multiply_variable = {
+					BARE_ARI_Resource_Cost_Array^i  = -2
+				}
+
+
+				BA_ARI_Resourc_Item_Cost_Count = yes
+			}
+
+			BA_ARI_Resourc_Item_sub_click = {
+				add_to_variable = {
+					BARE_ARI_Resource_Want_Array^i = -6
+				}
+				clamp_variable = {
+					var = BARE_ARI_Resource_Want_Array^i
+					min = 0
+				}
+				set_variable = {
+					BARE_ARI_Resource_Cost_Array^i = BARE_ARI_Resource_Want_Array^i
+				}
+				multiply_variable = {
+					BARE_ARI_Resource_Cost_Array^i  = -2
+				}
+				BA_ARI_Resourc_Item_Cost_Count = yes
+			}
+		}
+
+		triggers = {
+			
+		}
+
+		dynamic_lists = {
+			BARE_ARI_Resource_List = {
+				array = BARE_ARI_Resource_Want_Array
+				entry_container = BARE_ARI_Resource_List_Windows
+			}
+		}
+
+		properties = {
+			BA_ARI_Resource_Item_resource_icon = {
+				image = "GFX_BA_ARI_Resourc_Item_resource_icon_[?i]"
+			}
+		}
+	}
+}

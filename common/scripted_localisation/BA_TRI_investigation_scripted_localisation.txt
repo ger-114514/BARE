@@ -1,0 +1,83 @@
+﻿defined_text = {
+    name = noa_test_koharu
+    text = {
+        trigger = {
+            check_variable = { pemission@TRI_koharu = 1 }
+			#has_country_flag = koharu_invest_success
+        }
+        localization_key = noa_test_koharu_ok
+    }
+    text = {
+        # trigger = {
+		# 	NOT = { has_country_flag = koharu_invest_success }
+        # }
+        localization_key = noa_test_koharu_not_ok
+    }
+}    
+
+defined_text = {
+    name = noa_test_hanako
+    text = {
+        trigger = {
+            check_variable = { pemission@TRI_hanako = 1 }
+        }
+        localization_key = noa_test_hanako_ok
+    }
+    text = {
+        # trigger = {
+		# 	NOT = { has_country_flag = hanako_invest_success }
+        # }
+        localization_key = noa_test_hanako_not_ok
+    }
+}
+
+defined_text = {
+    name = noa_test_azusa
+    text = {
+        trigger = {
+            check_variable = { pemission@TRI_azusa = 1 }
+        }
+        localization_key = noa_test_azusa_ok
+    }
+    text = {
+        trigger = {
+			NOT = { has_country_flag = azusa_invest_success }
+        }
+        localization_key = noa_test_azusa_not_ok
+    }
+}
+
+defined_text = {
+    name = noa_test_hifumi
+    text = {
+        trigger = {
+            check_variable = { pemission@TRI_hifumi = 1 }
+        }
+        localization_key = noa_test_hifumi_ok
+    }
+    text = {
+        trigger = {
+			NOT = { has_country_flag = hifumi_invest_success }
+        }
+        localization_key = noa_test_hifumi_not_ok
+    }
+}
+TRI_get_investigation_desc = {
+    name = TRI_get_investigation_desc
+    text = {
+        trigger = { check_variable = { name = token:TRI_koharu } }
+        localization_key = TRI_koharu_investigation_desc
+    }
+    text = {
+        trigger = { check_variable = { name = token:TRI_hanako } }
+        localization_key = TRI_hanako_investigation_desc
+    }
+    text = {
+        trigger = { check_variable = { name = token:TRI_azusa } }
+        localization_key = TRI_azusa_investigation_desc
+    }
+    text = {
+        trigger = { check_variable = { name = token:TRI_hifumi } }
+        localization_key = TRI_hifumi_investigation_desc
+    }
+}

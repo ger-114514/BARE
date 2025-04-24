@@ -1,0 +1,279 @@
+guiTypes = {
+	containerWindowType = {  #超事件1
+		name = "BARE_SuperEvent_1"
+		position = {x =35% y =13%}
+		size = { width =720 height = 960 }
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_BARE_SuperEvent_BG_1"
+		}
+		
+
+		buttonType = {
+			name = "BARE_SuperEvent_1_Close"
+			position = { x = 42 y = 50 }
+			quadTextureSprite ="GFX_BARE_SuperEvent_1_Close" 
+		}
+
+		instantTextboxType = { #剧情标题
+			name = "BARE_SuperEvent_1_No_Text"
+			position = { x = 58 y = 133  }
+			textureFile = ""
+			font = "LXGW_975_30b"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetNT]"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+		iconType = { 
+			name ="BARE_SuperEvent_1_Point"
+			spriteType = "GFX_BARE_SuperEvent_1_Point"
+			position = { x= 36	 y=131 }
+		}
+
+		instantTextboxType = { #剧情标题
+			name = "BARE_SuperEvent_1_GetT"
+			position = { x = 58  y = 173  }
+			textureFile = ""
+			font = "FZLanTYJW_B_24"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetSuperEventTitle]"
+			maxWidth = 400
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = { #名言
+			name = "BARE_SuperEvent_1_Quotes_Text"
+			position = { x = 51  y = 256  }
+			textureFile = ""
+			font = "FZLanTYJW_B_16"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetQT]"
+			maxWidth = 400
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = { #名言
+			name = "BARE_SuperEvent_1_Quotes_Name_Text"
+			position = { x = 171  y = 289  }
+			textureFile = ""
+			font = "FZLanTYJW_B_16"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetQN]"
+			maxWidth = 400
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = { #本章导读
+			name = "BARE_SuperEvent_1_Introduction_Text"
+			position = { x =58  y = 370  }
+			textureFile = ""
+			font = "FZLanTYJW_B_24"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetIT]"
+			maxWidth = 280
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = { #文本
+			name = "BARE_SuperEvent_1_Text"
+			position = { x =58  y = 408  }
+			textureFile = ""
+			font = "FZLanTYJW_B_14"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetT]"
+			maxWidth = 184
+			maxHeight = 222
+			format = left
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = { #图片文本
+			name = "BARE_SuperEvent_1_Photo_Text"
+			position = { x =240  y = 544  }
+			textureFile = ""
+			font = "FZLanTYJW_B_12"
+			borderSize = {x = 0 y = 0}
+			text = "[BARE_SuperEvent_1_GetPT]"
+			maxWidth = 280
+			maxHeight = 40
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = { #图片
+			name ="BARE_SuperEvent_1_Photo"
+			spriteType = "GFX_BARE_SuperEvent_1_Point"
+			position = { x= 257	 y=371 }
+		}
+	}
+
+
+	containerWindowType = { #超事件2
+		name = "BARE_SuperEvent_2"
+		position = { x = -20 y = -6000 }
+		show_position = { x = -20 y = 20 }
+		hide_position = { x = -20 y = -6000 }
+		animation_time = 1
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		size = { width = 610 height = 500 }
+		Orientation = center
+		Origo = center
+		moveable = yes
+		clipping = no
+		background = {
+			name = "Background"
+			spriteType ="GFX_tiled_window_transparent"
+		}
+		
+		containerWindowType = {
+			name = "BARE_SuperEvent_2_super_event_title"
+			size = { width = 610 height = 500 }
+			position = { x = 0 y = 0 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_bigevent_border"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "title_background"
+				spriteType = "GFX_BARE_SuperEvent_2_frame"
+			}
+			######
+			iconType = {
+				name = "BARE_SuperEvent_2_image"
+				position = { x = 16 y = 23 }
+				#quadTextureSprite = "GFX_BAR_SE_EDEN_TREATY_NORMAL"
+				alwaystransparent = yes
+			}
+			######
+			iconType = {
+				name = "BARE_SuperEvent_2_title"
+				spriteType = "GFX_BARE_SuperEvent_2_title"
+				position = { x = 0 y = -510 }
+				Orientation = lower_left
+				alwaystransparent = yes
+			}
+			######
+			instantTextBoxType = {
+				name = "text1"
+				position = { x = 34 y = -472 }
+				font = "LXGW_975_14typewriter"
+				text = "[BARE_SuperEvent_2_GetSuperEventAddress]"
+				maxWidth = 98
+				maxHeight = 18
+				fixedsize = yes
+				Orientation = lower_left
+				#format = center
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "text2"
+				position = { x = 30 y = -455 }
+				font = "LXGW_975_12"
+				text = "BARE_SuperEvent_2_SuperEventTime"
+				maxWidth = 40
+				maxHeight = 15
+				fixedsize = yes
+				Orientation = lower_left
+				format = center
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "text3"
+				position = { x = 35 y = -125 }
+				font = "LXGW_975_24typewriter"
+				text = "[BARE_SuperEvent_2_GetSuperEventTitle]"
+				maxWidth = 480
+				maxHeight = 32
+				fixedsize = yes
+				Orientation = lower_left
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "text4"
+				position = { x = 35 y = -93 }
+				font = "LXGW_975_14"
+				text = "[BARE_SuperEvent_2_GetSuperEventDesc]"
+				maxWidth = 480
+				maxHeight = 173
+				fixedsize = yes
+				Orientation = lower_left
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "text5"
+				position = { x = 90 y = -68 }
+				font = "LXGW_975_14"
+				text = "[BARE_SuperEvent_2_GetSuperEventMotto]"
+				maxWidth = 400
+				maxHeight = 173
+				fixedsize = yes
+				Orientation = lower_left
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "text6"
+				position = { x = 525 y = -92 }
+				font = "LXGW_975_12"
+				text = "BARE_SuperEvent_2_SuperEventTime"
+				maxWidth = 58
+				maxHeight = 15
+				fixedsize = yes
+				format = center
+				Orientation = lower_left
+				alwaystransparent = yes
+			}
+			######
+			#buttonType = {
+			#	name = "BAR_SE_option"
+			#	text = "456"
+			#	shortcut = "ESCAPE"
+			#	position = { x = -110 y = 183 }
+			#	quadTextureSprite = "GFX_button_221x34"
+			#	buttonFont = "Bomb_24"
+			#	Orientation = center
+			#}
+			
+			iconType = {
+				name = "close_button_frame"
+				position = { x = -15 y = 217 }
+				quadTextureSprite = "GFX_BARE_SuperEvent_2_close_button"
+				Orientation = center
+			}
+			
+			buttonType = {
+				name = "close_button"
+				position = { x = -15 y = 217 }
+				quadTextureSprite = "GFX_BARE_SuperEvent_2_close_button_frame"
+				buttonFont = "Main_14_black"
+				shortcut = "ESCAPE"
+				Orientation = center
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+			}
+		}
+	}
+	
+}

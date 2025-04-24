@@ -1,0 +1,340 @@
+# ideas = {
+# 	country = {
+# 		ALR_capital_influence_rank_4 = {
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = 2
+# 				ALR_weapon_weekly_modifier = 1
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 2 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 1 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -2 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -1 }
+# 			}
+# 		}
+# 		ALR_base_level_0 = {
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = -2
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -2 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 2 }
+# 			}
+# 		}
+# 		ALR_base_level_1 = {
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = -2
+# 				ALR_weapon_weekly_modifier = -1
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -2 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -1 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 2 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 1 }
+# 			}
+# 		}
+# 		ALR_base_level_2 = {
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = -4
+# 				ALR_weapon_weekly_modifier = -3
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -4 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -3 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 4 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 3 }
+# 			}
+# 		}
+# 		ALR_base_level_3 = {
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = -10
+# 				ALR_weapon_weekly_modifier = -4
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -10 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -4 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 10 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 4 }
+# 			}
+# 		}
+# 		ALR_base_level_4 = {
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = -15
+# 				ALR_weapon_weekly_modifier = -5
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -15 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -5 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 15 }
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -5 }
+# 			}
+# 		}
+# 		ALR_focus_seek_supply = { #搜集补给
+# 			picture = unkown
+# 			modifier = {
+# 				ALR_supply_weekly_modifier = 5
+# 				supply_consumption_factor = -0.1
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = 5 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_supply_weekly_modifier = -5 }
+# 			}
+# 		}
+# 		ALR_focus_repair_weapon = { #修复枪支
+# 			picture = unkown
+# 			modifier = {
+# 				ALR_weapon_weekly_modifier = 5
+# 				equipment_capture = 0.1
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 5 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -5 }
+# 			}
+# 		}
+# 		ALR_focus_large_scale_manufacturing = { #大规模制造
+# 			picture = unkown
+# 			modifier = {
+# 				ALR_weapon_weekly_modifier = 20
+# 				production_factory_max_efficiency_factor = 0.1
+# 				production_factory_efficiency_gain_factor = 0.1
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 20 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -20 }
+# 			}
+# 		}
+# 		ALR_focus_political_consultation = { #政治协商
+# 			picture = unkown
+# 			modifier = {
+# 				political_power_factor = 0.2
+# 				political_power_gain = 0.2
+# 			}
+# 		}
+# 		ALR_focus_stability = { #安定人心
+# 			picture = unkown
+# 			modifier = {
+# 				political_power_factor = 0.2
+# 				political_power_gain = 0.2
+# 			}
+# 		}
+		
+# 		ALR_focus_guerrilla_warfare = { #袭扰作战
+# 			picture = unkown
+# 			modifier = {
+# 				ALR_weapon_weekly_modifier = -10
+# 				experience_gain_army_factor = 0.5
+# 				experience_gain_army = 0.1
+# 				attrition = 0.1
+# 			}
+# 			on_add = {
+# 				add_to_variable = { ALR_weapon_weekly_modifier = -10 }
+# 			}
+# 			on_remove = {
+# 				add_to_variable = { ALR_weapon_weekly_modifier = 10 }
+# 			}
+# 		}
+# 		ALR_focus_farmlands = { #隐蔽农田
+# 			picture = unkown
+# 			modifier = {
+# 				custom_modifier_tooltip = ALR_focus_farmlands_tt
+# 				political_power_factor = 0.1
+# 			}
+# 		}
+
+# 		ALR_industry_0 = { #无工业能力
+# 			modifier = {
+# 				industrial_capacity_factory = -0.2
+# 				production_factory_efficiency_gain_factor = -0.1
+# 				production_factory_max_efficiency_factor = -0.3
+# 				line_change_production_efficiency_factor = -0.1
+# 			}
+# 		}
+# 		ALR_industry_1 = { #作坊和修理室
+# 			modifier = {
+# 				industrial_capacity_factory = -0.05
+# 				production_factory_max_efficiency_factor = -0.1
+# 			}
+# 		}
+# 		ALR_industry_2 = { #山洞军工体系
+# 			modifier = {
+# 				industrial_capacity_factory = 0.05
+# 				production_factory_efficiency_gain_factor = 0.1
+# 				line_change_production_efficiency_factor = 0.1
+# 			}
+# 		}
+# 		ALR_resistance_refugee_0 = { #惶恐不安的逃亡者们
+# 			modifier = {
+# 				political_power_gain = -0.1
+# 				stability_factor = -0.3
+# 				war_support_factor = -0.3
+# 				army_org_regain = -0.2
+# 			}
+# 		}
+# 		ALR_resistance_refugee_1 = { #惶恐不安的逃亡者们
+# 			modifier = {
+# 				political_power_gain = -0.1
+# 				stability_factor = -0.2
+# 				war_support_factor = -0.2
+# 				army_org_regain = -0.1
+# 			}
+# 		}
+# 		ALR_resistance_refugee_2 = { #惶恐不安的逃亡者们
+# 			modifier = {
+# 				political_power_gain = -0.05
+# 				stability_factor = -0.1
+# 				war_support_factor = -0.1
+# 			}
+# 		}
+# 		ALR_resistance_refugee_3 = { #惶恐不安的逃亡者们
+# 			modifier = {
+# 				army_org_regain = 0.1
+# 			}
+# 		}
+# 		ALR_resistance_barrier = { #抵抗者的坚实堡垒
+# 			modifier = {
+# 				political_power_gain = 0.01
+# 				stability_factor = 0.1
+# 				war_support_factor = 0.1
+# 				army_org_regain = 0.15
+# 				army_core_attack_factor = 0.1
+# 				army_core_defence_factor = 0.1
+# 			}
+# 		}
+# 		ALR_resistance_illiterate_0 = { #低基础学科水平
+# 			modifier = {
+# 				research_speed_factor = -0.3
+# 				production_factory_efficiency_gain_factor = -0.2
+# 				production_factory_max_efficiency_factor = -0.2
+# 				army_artillery_attack_factor = -0.2
+# 			}
+# 		}
+# 		ALR_resistance_illiterate_1 = { #低基础学科水平
+# 			modifier = {
+# 				research_speed_factor = -0.2
+# 				production_factory_efficiency_gain_factor = -0.2
+# 				production_factory_max_efficiency_factor = -0.2
+# 				army_artillery_attack_factor = -0.2
+# 			}
+# 		}
+# 		ALR_resistance_illiterate_2 = { #低基础学科水平
+# 			modifier = {
+# 				research_speed_factor = -0.15
+# 				production_factory_efficiency_gain_factor = -0.15
+# 				production_factory_max_efficiency_factor = -0.2
+# 			}
+# 		}
+# 		ALR_resistance_illiterate_3 = { #低基础学科水平
+# 			modifier = {
+# 				research_speed_factor = -0.1
+# 				production_factory_efficiency_gain_factor = -0.1
+# 				production_factory_max_efficiency_factor = -0.1
+# 			}
+# 		}
+# 		ALR_resistance_illiterate_4 = { #低基础学科水平
+# 			modifier = {
+# 				research_speed_factor = -0.05
+# 				production_factory_efficiency_gain_factor = -0.05
+# 				production_factory_max_efficiency_factor = -0.05
+# 			}
+# 		}
+# 		ALR_resistance_wisdom = { #自战火中传承的智慧
+# 			modifier = {
+# 				research_speed_factor = 0.05
+# 			}
+# 		}
+# 		ALR_no_administrative_experience = { #无行政经验
+# 			modifier = {
+# 				political_power_factor = -0.1
+# 				stability_factor = -0.1
+# 				production_speed_buildings_factor = -0.2
+# 				industrial_capacity_factory = -0.2
+# 			}
+# 		}
+# 		ALR_administrative_experience = { #建立行政组织
+# 			modifier = {
+# 				stability_factor = -0.1
+# 				production_speed_buildings_factor = -0.2
+# 				industrial_capacity_factory = -0.2
+# 			}
+# 		}
+# 		ALR_administrative_experience_1_1 = { #建立行政组织
+# 			modifier = {
+# 				political_power_factor = 0.15
+# 				stability_factor = -0.1
+# 				industrial_capacity_factory = -0.2
+# 			}
+# 		}
+# 		ALR_administrative_experience_1_2 = { #建立行政组织
+# 			modifier = {
+# 				political_power_factor = 0.15
+# 				production_speed_buildings_factor = -0.2
+# 			}
+# 		}
+# 		ALR_administrative_experience_2 = { #建立行政组织
+# 			modifier = {
+# 				political_power_factor = 0.3
+# 			}
+# 		}
+# 		ALR_base_regime = { #根据地式组织形式
+# 			modifier = {
+# 				political_power_factor = 0.3
+# 				industrial_capacity_factory = 0.2
+# 				consumer_goods_factor = -0.1
+# 			}
+# 		}
+
+# 		ALR_united_resistance_command_post = { #抵抗行动联合指挥部
+# 			modifier = {
+# 				army_chief_cost_factor = -0.15
+# 				high_command_cost_factor = -0.15
+# 				experience_gain_army_factor = 0.1
+# 				land_reinforce_rate = 0.03
+# 				coordination_bonus = 0.04
+# 				army_org_regain = 0.05
+# 			}
+# 		}
+		
+# 	}
+# 	trade_laws = {
+# 		law = yes
+# 		ALR_isolated_resistors = {
+# 			allowed_to_remove = {
+# 				always = no
+# 			}
+# 			visible = {
+# 				original_tag = ALR
+# 			}
+# 			modifier = {
+# 				trade_opinion_factor = -10
+# 				min_export = 0
+# 			}
+# 		}
+# 	}
+# 	hidden_ideas = {
+# 		ALR_base_supply_1 = {}
+# 		ALR_base_weapon_1 = {}
+# 		ALR_base_weapon_3 = {}
+# 		ALR_base_facility_1 = {}
+# 		ALR_base_construction_4 = {}
+# 		ALR_base_supply_3 = {}
+# 		ALR_focus_none = {}
+# 	}
+# }

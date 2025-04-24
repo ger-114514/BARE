@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+		RWT_BuWenDingZhengJv = { #不稳定政局
+			picture = unkown
+
+			modifier = {
+				stability_factor = -0.3 #稳定度
+				political_power_factor = 0.05 #政治点数加成%
+			}
+		}
+
+		RWT_JiTiZhuYiZhiHun = { #集体主义之魂
+			picture = unkown
+
+			modifier = {
+				winter_attrition_factor = -0.15 #冬季损耗百分比修正
+				surrender_limit = 0.1 #投降界限
+			}
+		}
+
+		#此起彼伏的罢工,看文档应该是删了
+	}
+}

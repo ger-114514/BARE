@@ -1,0 +1,30 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	TRI_main_faction_hawk_1_opinion = {
+		value = -10
+	}
+	TRI_main_faction_hawk_2_opinion = {
+		value = -25
+	}
+	TRI_main_faction_hawk_3_opinion = {
+		value = -40
+	}
+	TRI_main_faction_dove_1_opinion = {
+		value = 20
+	}
+	TRI_main_faction_dove_2_opinion = {
+		value = 40
+	}
+	TRI_main_faction_dove_3_opinion = {
+		value = 60
+	}
+}	

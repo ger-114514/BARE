@@ -1,0 +1,34 @@
+
+division_template = {
+	name = "夏莱保安部队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		military_police = {x=0 y=0}
+	}
+}
+
+
+units = {
+	division= {
+		name = "夏莱第1保安部队"
+		location = 12194
+		division_template = "夏莱保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "夏莱第2保安部队"
+		location = 12194
+		division_template = "夏莱保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

@@ -1,0 +1,132 @@
+division_template = {
+	name = "总部保安部队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "总部精英部队"		
+
+	regiments = {
+		infantry_sf = { x = 0 y = 0 }
+		infantry_sf = { x = 0 y = 1 }
+		infantry_sf = { x = 1 y = 0 }
+		infantry_sf = { x = 1 y = 1 }
+	}
+	support = {
+		recon = {x=0 y=0}
+	}
+}
+
+
+
+units = {
+	division= {
+		name = "总部第1保安队"
+		location = 4493
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第2保安队"
+		location = 1062
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第3保安队"
+		location = 1682
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第4保安队"
+		location = 12016
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第5保安队"
+		location = 11925
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第6保安队"
+		location = 5731
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第7保安队"
+		location = 1075
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第8保安队"
+		location = 1078
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第9保安队"
+		location = 3703
+		division_template = "总部保安部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "总部第1精英安保队"
+		location = 4493
+		division_template = "总部精英部队" #这个师用的编制的名字
+		start_experience_factor = 0.7 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第2精英安保队"
+		location = 7278
+		division_template = "总部精英部队" #这个师用的编制的名字
+		start_experience_factor = 0.7 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "总部第3精英安保队"
+		location = 12016
+		division_template = "总部精英部队" #这个师用的编制的名字
+		start_experience_factor = 0.7 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

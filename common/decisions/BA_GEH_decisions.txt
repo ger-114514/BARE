@@ -1,0 +1,396 @@
+GEH_emergency_time_decision_category = {
+
+	#紧急工厂转换
+	GEH_emergency_factory_change = {
+		visible = {
+		}
+		available = {
+			num_of_civilian_factories > 5
+		}
+		cost = 15
+        days_re_enable = 60
+		complete_effect = {
+            add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+
+	#学园宵禁
+	GEH_curfew_in_gehenna = {
+		visible = {
+		}
+		available = {
+		}
+		cost = 15
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.15
+			add_war_support = -0.15
+		}
+	}
+
+
+	#镇压混乱
+	GEH_supress_the_choas = {
+		visible = {
+		}
+		available = {
+		}
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_timed_idea = {
+				idea = GEH_supress_the_choas_idea
+				days = 180
+			}
+		}
+	}
+
+
+	#交通管制
+	GEH_control_the_transport = {
+		visible = {
+		}
+		available = {
+		}
+		cost = 30
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = GEH_control_the_transport_idea
+				days = 180
+			}
+		}
+	}
+
+
+	#强行征召
+	GEH_forecing_mobilization = {
+		visible = {
+		}
+		available = {
+		}
+		cost = 50
+		days_re_enable = 100
+
+		complete_effect = {
+			add_manpower = 50000
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+	}
+
+
+	#死战不退
+	GEH_no_step_back = {
+		visible = {
+		}
+		available = {
+		}
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_timed_idea = {
+				idea = GEH_no_step_back_idea
+				days = 180
+			}
+		}
+	}
+
+
+	###营救学生
+	GEH_save_our_vip_students = {
+		visible = {
+			has_completed_focus = GEH_save_important_student
+			NOT = {
+				check_variable = { 
+					var = GEH_save_students_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { support_equipment > 99 }
+			command_power > 24
+			NOT = {
+				check_variable = { 
+					var = GEH_save_students_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		cost = 15
+
+		days_remove = 30
+
+		complete_effect = {
+			custom_effect_tooltip = GEH_3_times_get_back_characters
+			hidden_effect = {
+				add_to_variable = {
+					var = GEH_save_students_count
+					value = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			add_command_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+			}
+
+			custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_3_1_tt
+
+			if = {
+				limit = {
+					check_variable = { 
+						var = GEH_save_students_count
+						value = 3
+						compare = greater_than_or_equals
+					}
+				}
+
+				clr_country_flag = GEH_has_fall_in_chaos_in_arius_attack
+			}
+
+			hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.1
+                }            
+            }
+		}
+	}
+
+
+	#重新集结军队
+	GEH_reorganization_our_troop = {
+		visible = {
+			has_completed_focus = GEH_attack_key_point
+			NOT = {
+				check_variable = { 
+					var = GEH_regroup_troop_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		available = {
+			NOT = {
+				check_variable = { 
+					var = GEH_regroup_troop_count
+					value = 3
+					compare = greater_than_or_equals
+				}
+			}
+			command_power > 24
+		}
+
+		cost = 30
+		days_remove = 30
+
+		complete_effect = {
+			add_command_power = -25
+			hidden_effect = {
+				add_to_variable = {
+					var = GEH_regroup_troop_count
+					value = 1
+				}
+			}
+		}
+		
+		remove_effect = {
+			GEH_degrade_debuff_of_troop = yes
+		}
+	}
+
+
+	#组织进攻
+	GEH_reorganization_our_attack = {
+		visible = {
+			has_completed_focus = GEH_attack_key_point
+		}
+		available = {
+			command_power > 49
+		}
+
+		days_remove = 30
+
+		complete_effect = {
+			add_command_power = -50
+		}
+		
+		remove_effect = {
+			
+			140 = {
+				#TODO:消除古圣堂地区的{未经计划的攻势}——但我不知道这个modifier是啥
+			}
+		}
+	}
+}
+
+
+GEH_after_eden_war_decision_category = {
+
+
+	#停止产能动员
+	GEH_stop_war_industry = {
+		visible = {
+			has_idea = GEH_war_industry_modifier
+		}
+		available = {
+		}
+
+		cost = 20
+		days_remove = 35
+
+		remove_effect = {
+			remove_ideas = GEH_war_industry_modifier
+		}
+	}
+
+
+}

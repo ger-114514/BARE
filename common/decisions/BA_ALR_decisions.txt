@@ -1,0 +1,776 @@
+# ALR_education_in_flame_decisions = {
+# 	ALR_rebuild_multi_function_room = { #重启多功能室
+# 		visible = {
+# 			has_completed_focus = ALR_base_education_1
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_illiterate_0
+# 				add_idea = ALR_resistance_illiterate_1
+# 			}
+# 		}
+# 	}
+# 	ALR_music_education = { #开始音乐课教学
+# 		visible = {
+# 			has_completed_focus = ALR_base_education_2
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			add_political_power = 100
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_refugee_0
+# 				add_idea = ALR_resistance_refugee_1
+# 			}
+# 		}
+# 	}
+# 	ALR_seek_instruments = { #寻找乐器
+# 		visible = {
+# 			OR = {
+# 				has_idea = ALR_resistance_refugee_1
+# 				has_idea = ALR_resistance_refugee_2
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		cost = 20
+# 		days_remove = 60
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_idea = ALR_resistance_refugee_1 }
+# 				swap_ideas = {
+# 					remove_idea = ALR_resistance_refugee_1
+# 					add_idea = ALR_resistance_refugee_2
+# 				}
+# 			}
+# 			else = {
+# 				swap_ideas = {
+# 					remove_idea = ALR_resistance_refugee_2
+# 					add_idea = ALR_resistance_refugee_3
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ALR_art_education = { #开启美术课教学
+# 		visible = {
+# 			OR = {
+# 				has_idea = ALR_resistance_refugee_1
+# 				has_idea = ALR_resistance_refugee_2
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_idea = ALR_resistance_refugee_1 }
+# 				swap_ideas = {
+# 					remove_idea = ALR_resistance_refugee_1
+# 					add_idea = ALR_resistance_refugee_2
+# 				}
+# 			}
+# 			else = {
+# 				swap_ideas = {
+# 					remove_idea = ALR_resistance_refugee_2
+# 					add_idea = ALR_resistance_refugee_3
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ALR_entertainment_activities = { #组织娱乐活动
+# 		visible = {
+# 			has_idea = ALR_resistance_refugee_3
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_refugee_3
+# 				add_idea = ALR_resistance_barrier
+# 			}
+# 		}
+# 	}
+
+# 	ALR_political_education = { #开始政治课教学
+# 		visible = {
+# 			has_completed_focus = ALR_base_education_3
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_no_administrative_experience
+# 				add_idea = ALR_administrative_experience
+# 			}
+# 		}
+# 	}
+# 	ALR_literature_education = { #开始语文课教学
+# 		visible = {
+# 			OR = {
+# 				has_idea = ALR_administrative_experience
+# 				has_idea = ALR_administrative_experience_1_2
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_idea = ALR_administrative_experience }
+# 				swap_ideas = {
+# 					remove_idea = ALR_administrative_experience
+# 					add_idea = ALR_administrative_experience_1_1
+# 				}
+# 			}
+# 			else = {
+# 				swap_ideas = {
+# 					remove_idea = ALR_administrative_experience_1_2
+# 					add_idea = ALR_administrative_experience_2
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ALR_history_education = { #开始历史课教学
+# 		visible = {
+# 			OR = {
+# 				has_idea = ALR_administrative_experience
+# 				has_idea = ALR_administrative_experience_1_1
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_idea = ALR_administrative_experience }
+# 				swap_ideas = {
+# 					remove_idea = ALR_administrative_experience
+# 					add_idea = ALR_administrative_experience_1_2
+# 				}
+# 			}
+# 			else = {
+# 				swap_ideas = {
+# 					remove_idea = ALR_administrative_experience_1_1
+# 					add_idea = ALR_administrative_experience_2
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ALR_proper_organization = { #寻找适合我们的组织形式
+# 		visible = {
+# 			has_idea = ALR_administrative_experience_2
+# 		}
+# 		fire_only_once = yes
+# 		cost = 20
+# 		days_remove = 60
+# 		remove_effect = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_administrative_experience_2
+# 				add_idea = ALR_base_regime
+# 			}
+# 		}
+# 	}
+
+# 	ALR_math_education = { #开始数学课教学
+# 		visible = {
+# 			has_completed_focus = ALR_base_education_4
+# 			has_idea = ALR_resistance_illiterate_1
+# 		}
+# 		fire_only_once = yes
+# 		cost = 10
+# 		days_remove = 30
+# 		remove_effect = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_illiterate_1
+# 				add_idea = ALR_resistance_illiterate_2
+# 			}
+# 		}
+# 	}
+# 	ALR_physics_education = { #开始物理课教学
+# 		visible = {
+# 			OR = {
+# 				has_idea = ALR_resistance_illiterate_2
+# 				has_idea = ALR_resistance_illiterate_3
+# 			}
+# 		}
+# 		fire_only_once = yes
+# 		cost = 20
+# 		days_remove = 60
+# 		remove_effect = {
+# 			if = {
+# 				limit = { has_idea = ALR_resistance_illiterate_2 }
+# 				swap_ideas = {
+# 					remove_idea = ALR_resistance_illiterate_2
+# 					add_idea = ALR_resistance_illiterate_3
+# 				}
+# 			}
+# 			else = {
+# 				swap_ideas = {
+# 					remove_idea = ALR_resistance_illiterate_3
+# 					add_idea = ALR_resistance_illiterate_4
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ALR_chemistry_education = { #开始化学课教学
+# 	visible = {
+# 		OR = {
+# 			has_idea = ALR_resistance_illiterate_2
+# 			has_idea = ALR_resistance_illiterate_3
+# 		}
+# 	}
+# 	fire_only_once = yes
+# 	cost = 20
+# 	days_remove = 60
+# 	remove_effect = {
+# 		if = {
+# 			limit = { has_idea = ALR_resistance_illiterate_2 }
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_illiterate_2
+# 				add_idea = ALR_resistance_illiterate_3
+# 			}
+# 		}
+# 		else = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_illiterate_3
+# 				add_idea = ALR_resistance_illiterate_4
+# 			}
+# 		}
+# 	}
+# 	}
+# 	ALR_normalize_BD_usage = { #BD教学常态化
+# 		visible = {
+# 			has_idea = ALR_resistance_illiterate_4
+# 		}
+# 		fire_only_once = yes
+# 		cost = 20
+# 		days_remove = 60
+# 		remove_effect = {
+# 			swap_ideas = {
+# 				remove_idea = ALR_resistance_illiterate_4
+# 				add_idea = ALR_resistance_wisdom
+# 			}
+# 		}
+# 	}
+# }
+# ALR_resistance_decisions = {
+# 	ALR_add_inlf = {
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		complete_effect = {
+# 			var:ARI_map_selected_state = {
+# 				set_temp_variable = { influence_change_value = 10 }
+# 				ALR_change_influence = yes
+# 			}
+			
+# 		}
+# 	}
+# 	ALR_subtract_inlf = {
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		complete_effect = {
+# 			var:ARI_map_selected_state = {
+# 				set_temp_variable = { influence_change_value = -10 }
+# 				ALR_change_influence = yes
+# 			}
+# 		}
+# 	}
+# 	ALR_weekly_influence_modifier = {
+# 		is_good = yes
+# 		available = { always = no }
+# 		activation = {
+# 			has_country_flag = ALR_resistance_system_actived
+# 		}
+# 		cancel_trigger = {
+# 			hidden_trigger = {
+# 				NOT = { has_country_flag = ALR_resistance_system_actived }
+# 			}
+			
+# 		}
+# 		timeout_effect = {
+# 			hidden_effect = {
+# 				every_state = {
+# 					limit = { ARI_is_arius_state = yes }
+# 					set_temp_variable = { influence_change_value = ALR_state_influence_weekly_modifier }
+# 					ALR_change_influence = yes
+# 				}
+# 				activate_mission = ALR_weekly_influence_modifier
+# 			}
+# 		}
+		
+# 		days_mission_timeout = 7
+# 	}
+	
+# 	ALR_construct_workshop = { #建设物资回收作坊
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		visible = {
+# 			capital_scope = { state = var:ARI_map_selected_state }
+# 			check_variable = { ALR_construct_workshop_used < 3 }
+# 		}
+# 		available = {
+# 			capital_scope = { ALR_state_influence_rank_4 = yes }
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_construct_workshop_used_tt
+# 				check_variable = { ALR_construct_workshop_used < 3 }
+# 			}
+# 			has_completed_focus = ALR_base_weapon_2
+# 		}
+# 		cost = 20
+# 		days_remove = 10
+# 		remove_effect = {
+# 			capital_scope = {
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = industrial_complex
+# 					level = 1
+# 				}
+# 			}
+# 			add_to_variable = {
+# 				ALR_construct_workshop_used = 1
+# 			}
+# 		}
+# 	}
+# 	ALR_construct_arms_factory = { #建设武器兵工厂
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		visible = {
+# 			check_variable = { ARI_map_selected_state = 139 }
+# 			check_variable = { ALR_construct_workshop_used < 5 }
+# 		}
+# 		available = {
+# 			139 = {
+# 				ALR_state_influence_rank_4 = yes
+# 				custom_trigger_tooltip = {
+# 					tooltip = ALR_construct_arms_factory_used_tt
+# 					check_variable = { ALR_construct_arms_factory_used < 5 }
+# 				}
+# 			}
+# 			has_completed_focus = ALR_base_weapon_3
+# 		}
+# 		cost = 40
+# 		days_remove = 10
+# 		remove_effect = {
+# 			capital_scope = {
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = arms_factory
+# 					level = 1
+# 				}
+# 			}
+# 			add_to_variable = {
+# 				ALR_construct_arms_factory_used = 1
+# 			}
+# 		}
+# 	}
+# 	ALR_seek_local_resource = { #在当地搜索物资
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		available = {
+# 			var:ARI_map_selected_state = {
+# 				ALR_state_influence_rank_2 = yes
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_seek_local_resource_cd_tt
+# 				var:ARI_map_selected_state = {
+# 					check_variable = { ALR_seek_local_resource_cd = 0 }
+# 				}
+# 			}
+# 			has_completed_focus = ALR_base_weapon_3
+# 		}
+# 		cost = 10
+# 		complete_effect = {
+# 			ALR_add_supply_20 = yes
+# 			ALR_add_weapon_10 = yes
+# 			var:ARI_map_selected_state = {
+# 				set_variable = { ALR_seek_local_resource_cd = 20 }
+# 				custom_effect_tooltip = ARI_state_decision_cd_20d
+# 			}
+# 		}
+# 	}
+# 	ALR_tunnelling = { #挖掘地道
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		visible = {
+# 			var:ARI_map_selected_state = {
+# 				NOT = { has_state_flag = ALR_resistance_tunnel }
+# 				is_controlled_by = ARI
+# 			}
+# 		}
+# 		available = {
+# 			var:ARI_map_selected_state = {
+# 				ALR_state_influence_rank_2 = yes
+# 			}
+# 			command_power > 10
+# 			has_completed_focus = ALR_base_facility_4
+# 		}
+# 		cost = 40
+# 		days_remove = 20
+# 		complete_effect = {
+# 			set_variable = {
+# 				ALR_tunnelling_target_state = ARI_map_selected_state
+# 			}
+# 			add_command_power = -10
+# 		}
+# 		remove_effect = {
+# 			var:ALR_tunnelling_target_state = {
+# 				if = {
+# 					limit = { is_controlled_by = ARI }
+# 					add_province_modifier = {
+# 						static_modifiers = { ALR_resistance_tunnel }
+# 						province = {
+# 							all_provinces = yes
+							
+# 						}
+# 					}
+# 				}
+# 				set_state_flag = ALR_resistance_tunnel
+# 			}
+# 			clear_variable = ALR_tunnelling_target_state
+# 		}
+# 	}
+# 	ALR_infiltrate_state = { #渗透地区
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		visible = {
+# 			var:ARI_map_selected_state = {
+# 				check_variable = { ALR_state_influence_rank < 4 }
+# 			}
+# 		}
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_infiltrate_state_cd_tt
+# 				var:ARI_map_selected_state = {
+# 					check_variable = { ALR_infiltrate_state_cd = 0 }
+# 				}
+# 			}
+# 			custom_override_tooltip = {
+# 				tooltip = {
+# 					localization_key = decision_cd_tt
+# 					DECISION_CD = "[?var:ARI_map_selected_state:ALR_infiltrate_state_cd|Y0]"
+# 				}
+# 				var:ARI_map_selected_state = {
+# 					check_variable = { ALR_infiltrate_state_cd = 0 }
+# 				}
+# 			}
+# 			has_completed_focus = ALR_base_facility_1
+# 			command_power > 10
+# 		}
+# 		cost = 10
+# 		complete_effect = {
+# 			add_command_power = -10
+# 			var:ARI_map_selected_state = {
+# 				ALR_increase_influence_30 = yes
+# 				set_variable = { ALR_infiltrate_state_cd = 20 }
+# 				custom_effect_tooltip = ARI_state_decision_cd_20d
+# 			}
+# 		}
+# 	}
+# 	ALR_underground_organization = { #建立地下抵抗组织
+# 		highlight_states = {
+# 			highlight_state_targets = { state = var:ARI_map_selected_state }
+# 		}
+# 		visible = {
+# 			var:ARI_map_selected_state = {
+# 				check_variable = { ALR_state_influence_rank < 4 }
+# 			}
+# 		}
+# 		available = {
+# 			var:ARI_map_selected_state = {
+# 				ALR_state_influence_rank_2 = yes
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_underground_organization_cd_tt
+# 				var:ARI_map_selected_state = {
+# 					check_variable = { ALR_underground_organization_cd = 0 }
+# 				}
+# 			}
+# 			has_completed_focus = ALR_base_facility_2
+# 			command_power > 20
+# 			ALR_has_10_supply = yes
+# 			ALR_has_10_weapon = yes
+# 		}
+# 		cost = 10
+# 		complete_effect = {
+# 			add_command_power = -20
+# 			ALR_sub_supply_10 = yes
+# 			ALR_sub_weapon_10 = yes
+# 			var:ARI_map_selected_state = {
+# 				ALR_increase_influence_weekly_modifier_10 = yes
+# 				set_variable = { ALR_underground_organization_cd = 20 }
+# 				custom_effect_tooltip = ARI_state_decision_cd_20d
+# 			}
+# 		}
+# 	}
+# }
+# ALR_military_operation_decisions = {
+# 	ALR_assault_special_brigade_camps = { #特战队兵营袭击作战
+# 		highlight_states = {
+# 			highlight_state_targets = { 
+# 				state = 137 
+# 				state = 530
+# 				state = 531
+# 			}
+# 		}
+# 		available = {
+# 			ALR_has_20_weapon = yes
+# 			has_completed_focus = ALR_resistance_organization_4
+# 			NOT = { has_country_flag = ALR_conducting_an_military_operation }
+# 		}
+# 		days_remove = 30
+# 		days_re_enable = 30
+# 		cost = 40
+# 		complete_effect = {
+# 			set_country_flag = ALR_conducting_an_military_operation
+# 			ALR_sub_weapon_20 = yes
+# 		}
+# 		remove_effect = {
+# 			clr_country_flag = ALR_conducting_an_military_operation
+# 			army_experience = 20
+# 			add_command_power = 10
+# 			137 = { ALR_increase_influence_50 = yes }
+# 			530 = { ALR_increase_influence_50 = yes }
+# 			531 = { ALR_increase_influence_50 = yes }
+# 			effect_tooltip = {
+# 				ARI = {
+# 					army_experience = -20
+# 					add_war_support = -0.1
+# 				}
+# 			}
+# 			country_event = ALR_military_operation.1
+# 		}
+# 	}
+# 	ALR_decapitation_strike = { #狙击忠于夫人的幕僚
+# 		available = {
+# 			ALR_has_20_weapon = yes
+# 			has_completed_focus = ALR_resistance_organization_1
+# 			NOT = { has_country_flag = ALR_conducting_an_military_operation }
+# 		}
+# 		days_remove = 30
+# 		days_re_enable = 30
+# 		cost = 40
+# 		complete_effect = {
+# 			set_country_flag = ALR_conducting_an_military_operation
+# 			ALR_sub_weapon_20 = yes
+# 		}
+# 		remove_effect = {
+# 			clr_country_flag = ALR_conducting_an_military_operation
+# 			army_experience = 20
+# 			add_command_power = 10
+# 			add_political_power = 40
+# 			add_war_support = 0.05
+# 			add_stability = 0.05
+# 			effect_tooltip = {
+# 				ARI = {
+# 					add_timed_idea = {
+# 						idea = ARI_broken_administration
+# 						days = 180
+# 					}
+# 				}
+# 			}
+# 			country_event = ALR_military_operation.2
+# 		}
+# 	}
+# 	ALR_assault_armor_factory = { #偷袭装甲维修站
+# 		available = {
+# 			ALR_has_20_weapon = yes
+# 			has_completed_focus = ALR_resistance_organization_2
+# 			NOT = { has_country_flag = ALR_conducting_an_military_operation }
+# 		}
+# 		days_remove = 30
+# 		days_re_enable = 30
+# 		cost = 40
+# 		complete_effect = {
+# 			set_country_flag = ALR_conducting_an_military_operation
+# 			ALR_sub_weapon_20 = yes
+# 		}
+# 		remove_effect = {
+# 			clr_country_flag = ALR_conducting_an_military_operation
+# 			army_experience = 20
+# 			add_stability = 0.05
+# 			#TODO:5辆夫人产中型主战坦克
+# 			add_equipment_to_stockpile = {
+# 				type = mbt_chassis
+# 				amount = 5
+# 				producer = ARI
+# 			}
+# 			country_event = ALR_military_operation.3
+# 		}
+# 	}
+# 	ALR_assault_armor_patrol = { #袭击装甲巡逻队
+# 	highlight_states = {
+# 		highlight_state_targets = {  state = 139 }
+# 	}
+# 		available = {
+# 			ALR_has_20_weapon = yes
+# 			has_completed_focus = ALR_resistance_organization_3
+# 			NOT = { has_country_flag = ALR_conducting_an_military_operation }
+# 		}
+# 		days_remove = 30
+# 		days_re_enable = 30
+# 		cost = 40
+# 		complete_effect = {
+# 			set_country_flag = ALR_conducting_an_military_operation
+# 			ALR_sub_weapon_20 = yes
+# 		}
+# 		remove_effect = {
+# 			clr_country_flag = ALR_conducting_an_military_operation
+# 			army_experience = 20
+# 			capital_scope = {
+# 				add_manpower = 1000
+# 			}
+# 			country_event = ALR_military_operation.4
+# 		}
+# 	}
+# 	ALR_collective_prayer = { #组织集体祈祷
+# 		available = {
+# 			ALR_has_20_supply = yes
+# 			has_completed_focus = ALR_resistance_organization_5
+# 			has_completed_focus = ALR_base_education_1
+# 		}
+# 		days_remove = 30
+# 		days_re_enable = 30
+# 		cost = 40
+# 		complete_effect = {
+# 			ALR_sub_supply_20 = yes
+# 		}
+# 		remove_effect = {
+# 			add_political_power = 100
+# 			add_war_support = 0.1
+# 			add_stability = 0.1
+# 			country_event = ALR_military_operation.5
+# 		}
+# 	}
+# 	ALR_farmlands_development = { #建设旧校舍农业区
+# 		highlight_states = {
+# 			highlight_state_targets = { state = 139 }
+# 		}
+# 		available = {
+# 			ALR_has_40_supply = yes
+# 			has_completed_focus = ALR_resistance_organization_6
+# 		}
+# 		fire_only_once = yes
+# 		days_remove = 30
+# 		days_re_enable = 30
+# 		cost = 40
+# 		complete_effect = {
+# 			ALR_sub_supply_40 = yes
+# 		}
+# 		remove_effect = {
+# 			army_experience = 20
+# 			capital_scope = {
+# 				add_building_construction = {
+# 					type = infrastructure
+# 					level = 1
+# 				}
+# 				add_dynamic_modifier = {
+# 					modifier = ALR_developed_agriculture
+# 				}
+# 			}
+# 			country_event = ALR_military_operation.6
+# 		}
+# 	}
+# }
+# ALR_base_construction_decisions = {
+# 	ALR_set_focus = { #设置重心
+# 		visible = {
+# 			NOT = {
+# 				check_variable = { ALR_selected_focus = ALR_resistance_focus }
+# 			}
+# 		}
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_focus_unlocked_tt
+# 				check_variable = { unlocked@var:ALR_selected_focus = 2 }
+# 			}
+# 		}
+# 		cost = 10
+# 		days_remove = 30
+# 		complete_effect = {
+# 			ALR_swap_focus = yes
+# 			effect_tooltip = {
+# 				meta_effect = {
+# 					text = {
+# 						add_ideas = [FOCUS]
+# 					}
+# 					FOCUS = "[?ALR_selected_focus.GetTokenKey]"
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ALR_weekly_resource_modifier = {
+# 		is_good = no
+# 		available = { always = no }
+# 		activation = {
+# 			hidden_trigger = {
+# 				has_country_flag = ALR_base_construction_system_actived
+# 			}
+# 		}
+# 		cancel_trigger = {
+# 			hidden_trigger = {
+# 				NOT = { has_country_flag = ALR_base_construction_system_actived }
+# 			}
+# 		}
+# 		timeout_effect = {
+# 			139 = {
+# 				set_temp_variable = { PREV.supply_from_industrial_complex = non_damaged_building_level@industrial_complex }
+# 				set_temp_variable = { PREV.weapon_from_arms_factory = non_damaged_building_level@arms_factory }
+# 				set_temp_variable = { PREV.weapon_from_heavy_arms_factory = non_damaged_building_level@heavy_arms_factory }
+# 			}
+# 			multiply_temp_variable = { supply_from_industrial_complex = 5 }
+# 			multiply_temp_variable = { weapon_from_arms_factory = 2 }
+# 			multiply_temp_variable = { weapon_from_heavy_arms_factory = 10 }
+# 			custom_effect_tooltip = ALR_resource_from_buildings_tt
+# 			set_temp_variable = { supply_value = ALR_supply_weekly_modifier }
+# 			add_to_temp_variable = { supply_value = supply_from_industrial_complex }
+# 			ALR_change_supply = yes
+# 			set_temp_variable = { weapon_value = ALR_weapon_weekly_modifier }
+# 			add_to_temp_variable = { weapon_value = weapon_from_arms_factory }
+# 			add_to_temp_variable = { weapon_value = weapon_from_heavy_arms_factory }
+# 			ALR_change_weapon = yes
+# 			if = {
+# 				limit = { has_idea = ALR_focus_farmlands }
+# 				set_temp_variable = { supply_weekly_modifier_value = 2 }
+# 				ALR_change_supply_weekly_modifier = yes
+# 			}
+# 			hidden_effect = {
+# 				activate_mission = ALR_weekly_resource_modifier
+# 			}
+# 		}
+		
+# 		days_mission_timeout = 7
+# 	}
+# 	ALR_seek_old_hall_resource = { #搜索旧校舍剩余物资
+# 		visible = {
+# 			check_variable = { ALR_seek_old_hall_resource_used < 3 }
+# 		}
+# 		available = {
+# 			has_completed_focus = ALR_explore_old_hall
+# 			custom_trigger_tooltip = {
+# 				tooltip = ALR_seek_old_hall_resource_used_tt
+# 				check_variable = { ALR_seek_old_hall_resource_used < 3 }
+# 			}
+# 		}
+# 		cost = 5
+# 		days_remove = 5
+# 		remove_effect = {
+# 			ALR_add_supply_10 = yes
+# 			ALR_add_weapon_10 = yes
+# 			add_to_variable = {
+# 				ALR_seek_old_hall_resource_used = 1
+# 			}
+# 		}
+# 	}
+# }

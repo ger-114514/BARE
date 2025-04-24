@@ -1,0 +1,70 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+
+##PS：我不知道tag，所以我tag瞎填的（写的A01）
+HEL_Inf_01 = {
+	name = "钢盔团暴走族"
+
+	for_countries = { A01 } #这里瞎填的！
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "钢盔团暴走族第%d组"
+
+	ordered =
+	{
+		1 = { "钢盔团暴走族第1“喧哗上等”组" }
+		2 = { "钢盔团暴走族第2“爱死天流”组" }
+		3 = { "钢盔团暴走族第3“夜露死苦”组" }
+		4 = { "钢盔团暴走族第4“爱罗武勇”组" }
+		5 = { "钢盔团暴走族第5“走死走爱”组" }
+		6 = { "钢盔团暴走族第6“神帝丽罗”组" }
+	}
+}
+
+HEL_Infm_01 = {
+	name = "钢盔团混混小组"
+
+	for_countries = { A01 }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "钢盔团混混小组第%d组"
+
+	ordered =
+	{
+		1 = { "钢盔团混混小组第1“钟崎会”组" }
+		2 = { "钢盔团混混小组第2“柯基联合”组" }
+		3 = { "钢盔团混混小组第3“白鸟联合”组" }
+		4 = { "钢盔团混混小组第4“夜户浦港”组" }
+		5 = { "钢盔团混混小组第5“南街道帮”组" }
+	}
+}

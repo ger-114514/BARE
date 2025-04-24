@@ -1,0 +1,135 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BARE_ARI_Resource"
+		position = {x = 0 y =0}
+		size = { width = 500 height = 407 }
+
+		iconType = { #背景
+			name ="BARE_ARI_resesource_Gui_BG"
+			spriteType = "GFX_BA_ARI_Resourc_bg"
+			pdx_tooltip = BARE_ARI_resource_tt
+			position = { x=0	 y=0 }
+		}
+
+
+		gridboxtype = { ##动态列表用的元素
+			name = "BARE_ARI_Resource_List"
+			position = { x = 18 y =38 } #整个元素的位置
+			size = { width = 472 height = 298 }
+			slotsize = { width = 472 height = 48 }
+			max_slots_horizontal = 6 #一行（列）最多有几个元素
+			add_horizontal = no
+		}
+
+
+		iconType = { #背景
+			name ="BA_ARI_Resourc_Item_num_BG"
+			spriteType = "GFX_BA_ARI_Resourc_Item_num_bg"
+			position = { x=164	 y=352 }
+		}
+
+
+		instantTextboxType = { 
+			name = "BARE_ARI_resource_cost_all_text_GUI"
+			position = { x = 109 y = 358  }
+			textureFile = ""
+			font = "LXGW_975_18bf"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_ARI_resource_cost_all_text"
+			maxWidth = 300
+			maxHeight = 40
+			format = center
+			alwaystransparent = yes
+		}
+	}
+
+
+	containerWindowType = {
+		name = "BARE_ARI_Resource_List_Windows"
+		position = {x = 0 y = 0}
+		size = { width = 472 height = 40 }
+
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_transparent"
+			alwaystransparent = yes
+		}
+		
+		iconType = { #背景
+			name ="BA_ARI_Resourc_Item_bg"
+			spriteType = "GFX_BA_ARI_Resourc_Item_bg"
+			position = { x=0	 y=1 }
+		}
+
+		iconType = { #资源图标
+			name ="BA_ARI_Resource_Item_resource_icon"
+			spriteType = "GFX_BA_ARI_Resourc_Item_resource_icon_1"
+			position = { x=16	 y=9 }
+		}
+
+		
+		instantTextboxType = { 
+			name = "BARE_ARI_resource_text_GUI"
+			position = { x = 43 y = 13  }
+			textureFile = ""
+			font = "LXGW_975_16bf"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_ARI_resource_text"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = { 
+			name = "BARE_ARI_resource_num_text_GUI"
+			position = { x = 123 y = 13  }
+			textureFile = ""
+			font = "LXGW_975_16bf"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_ARI_resource_num_text"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = { 
+			name = "BARE_ARI_resource_cost_text_GUI"
+			position = { x = 203 y = 13  }
+			textureFile = ""
+			font = "LXGW_975_16bf"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_ARI_resource_cost_text"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+
+		iconType = { 
+			name ="BA_ARI_Resourc_Item_bg"
+			spriteType = "GFX_BA_ARI_Resourc_Item_bg"
+			position = { x=0	 y=1 }
+		}
+
+
+		buttonType  = { 
+			name ="BA_ARI_Resourc_Item_add"
+			quadTextureSprite = "GFX_BA_ARI_Resourc_Item_add"
+			position = { x=357	 y=2 }
+		}
+
+		buttonType = { 
+			name ="BA_ARI_Resourc_Item_sub"
+			quadTextureSprite = "GFX_BA_ARI_Resourc_Item_sub"
+			position = { x=412	 y=1 }
+		}
+
+	}
+
+}

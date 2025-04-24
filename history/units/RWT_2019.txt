@@ -1,0 +1,394 @@
+division_template = {
+	name = "红冬近卫步兵连"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+		infantry = {x = 2 y = 1}
+		infantry = {x = 2 y = 2}
+		infantry = {x = 2 y = 0}
+		fire_support_team_la = {x = 3 y = 0}
+	}
+	support = {
+		fire_support_team_su_la = {x=0 y=0}
+		engineer = {x=0 y=1}
+	}
+}
+
+
+division_template = {
+	name = "事务局保安中队"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+	}
+	support = {
+		military_police = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "事务局摩托化小队"		
+
+	regiments = {
+		apc_unit = {x = 0 y = 0}
+		apc_unit = {x = 0 y = 1}
+		apc_unit = {x = 1 y = 0}
+		apc_unit = {x = 1 y = 1}
+		apc_artillery_unit = {x = 2 y = 0}
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "事务局装甲近卫中队"		
+
+	regiments = {
+		light_armor = {x = 1 y = 1}
+		light_armor = {x = 1 y = 2}
+		light_armor = {x = 1 y = 0}
+		medium_armor = {x = 0 y = 1}
+		medium_armor = {x = 0 y = 2}
+		heavy_armor = {x = 0 y = 0}
+	}
+	support = {
+		military_police = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "工务部自卫中队"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 0}
+	}
+	support = {
+		engineer = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "温泉乡保安小队"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 0}
+	}
+	support = {
+		military_police = {x=0 y=0}
+	}
+}
+
+
+division_template = {
+	name = "红冬自治区民兵"		
+
+	regiments = {
+		infantry_militia = {x = 1 y = 1}
+		infantry_militia = {x = 1 y = 0}
+		infantry_militia = {x = 0 y = 1}
+		infantry_militia = {x = 0 y = 0}
+	}
+	support = {
+	}
+}
+
+
+units = {
+	division= {
+		name = "红冬近卫步兵第1“第聂伯”连"
+		location = 9070
+		division_template = "红冬近卫步兵连" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬近卫步兵第2“伏尔加”连"
+		location = 6846
+		division_template = "红冬近卫步兵连" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬近卫步兵第3“摩尔曼”连"
+		location = 2581
+		division_template = "红冬近卫步兵连" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "事务局保安中队第1“菲利克斯”连"
+		location = 9855
+		division_template = "事务局保安中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局保安中队第2“弗拉基米”连"
+		location = 480
+		division_template = "事务局保安中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局保安中队第3“亚历山大”连"
+		location = 8910
+		division_template = "事务局保安中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局保安中队第4“库兹涅夫”连"
+		location = 8919
+		division_template = "事务局保安中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局保安中队第5“托斯卡杨”连"
+		location = 6657
+		division_template = "事务局保安中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "事务局第1“雪橇”摩托化小队"
+		location = 892
+		division_template = "事务局摩托化小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局第2“冰屋”摩托化小队"
+		location = 2733
+		division_template = "事务局摩托化小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局第3“绒衣”摩托化小队"
+		location = 7521
+		division_template = "事务局摩托化小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+
+	division= {
+		name = "事务局第1“红星”装甲近卫中队"
+		location = 9849
+		division_template = "事务局装甲近卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "事务局第2“大帝”装甲近卫中队"
+		location = 6846
+		division_template = "事务局装甲近卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "工务部第1“镰刀”自卫中队"
+		location = 3926
+		division_template = "工务部自卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "工务部第2“锄头”自卫中队"
+		location = 7122
+		division_template = "工务部自卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "工务部第3“铁锤”自卫中队"
+		location = 9931
+		division_template = "工务部自卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "工务部第4“犁耙”自卫中队"
+		location = 8919
+		division_template = "工务部自卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	# division= {
+	# 	name = "温泉乡第1“东方”保安小队"
+	# 	location = 891
+	# 	division_template = "温泉乡保安小队" #这个师用的编制的名字
+	# 	start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+	# 	start_equipment_factor = 1 #初始装备 0-1
+	# 	start_manpower_factor = 1 #初始人力 0-1
+	# }
+	# division= {
+	# 	name = "温泉乡第2“间歇泉”保安小队"
+	# 	location = 
+	# 	division_template = "温泉乡保安小队" #这个师用的编制的名字
+	# 	start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+	# 	start_equipment_factor = 1 #初始装备 0-1
+	# 	start_manpower_factor = 1 #初始人力 0-1
+	# }
+	# division= {
+	# 	name = "温泉乡第3“浴盐”保安小队"
+	# 	location = 
+	# 	division_template = "温泉乡保安小队" #这个师用的编制的名字
+	# 	start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+	# 	start_equipment_factor = 1 #初始装备 0-1
+	# 	start_manpower_factor = 1 #初始人力 0-1
+	# }
+	# division= {
+	# 	name = "温泉乡第4“顽石”保安小队"
+	# 	location = 
+	# 	division_template = "温泉乡保安小队" #这个师用的编制的名字
+	# 	start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+	# 	start_equipment_factor = 1 #初始装备 0-1
+	# 	start_manpower_factor = 1 #初始人力 0-1
+	# }
+	# division= {
+	# 	name = "温泉乡第5“牛奶”保安小队"
+	# 	location = 
+	# 	division_template = "温泉乡保安小队" #这个师用的编制的名字
+	# 	start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+	# 	start_equipment_factor = 1 #初始装备 0-1
+	# 	start_manpower_factor = 1 #初始人力 0-1
+	# }
+	# division= {
+	# 	name = "温泉乡第6“团子”保安小队"
+	# 	location = 
+	# 	division_template = "温泉乡保安小队" #这个师用的编制的名字
+	# 	start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+	# 	start_equipment_factor = 1 #初始装备 0-1
+	# 	start_manpower_factor = 1 #初始人力 0-1
+	# }
+
+
+	division= {
+		name = "红冬自治区民兵第1“英勇”连"
+		location = 3409
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第2“机敏”连"
+		location = 9559
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第3“警戒”连"
+		location = 7657
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第4“威武”连"
+		location = 9981
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第5“缜密”连"
+		location = 8681
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第6“大胆”连"
+		location = 2129
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第7“好奇”连"
+		location = 3280
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第8“无畏”连"
+		location = 5274
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第9“忍耐”连"
+		location = 393
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "红冬自治区民兵第10“睿智”连"
+		location = 9525
+		division_template = "红冬自治区民兵" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

@@ -1,0 +1,41 @@
+# #这两个template是国策给的
+# division_template = {
+# 	name = "阿里乌斯神秘步兵小队"
+
+# 	regiments = {
+
+# 		infantry_sp = { x = 0 y = 0 } 
+# 		infantry_sp = { x = 0 y = 1 }
+# 		infantry_sp = { x = 1 y = 0 }
+# 		infantry_sp = { x = 1 y = 1 }
+# 		fire_support_team_sp = { x = 2 y = 1 }
+# 	}
+# 	support = {
+# 		recon = {x=0 y=0}
+# 		fire_support_team_su_sa = {x=0 y=1}
+
+
+# 	}
+
+	
+# }
+
+
+
+# division_template = {
+# 	name = "机动安保支队"
+
+# 	regiments = {
+
+# 		infantry_heavy = { x = 0 y = 0 } 
+# 		infantry_heavy = { x = 0 y = 1 }
+# 		infantry_heavy = { x = 1 y = 0 }
+# 		infantry_heavy = { x = 1 y = 1 }
+# 	}
+# 	support = {
+# 		signal_company = {x=0 y=0}
+
+# 	}
+
+	
+# }

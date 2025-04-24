@@ -1,0 +1,20 @@
+state={
+	id=650
+	name="STATE_650"
+	resources={
+		resources_cm = 20
+		resources_rm = 40 
+	}
+	provinces={
+		1344 3323 4264 5913 10984 
+	}
+	history = {
+		owner = GEH
+		add_core_of=GEH
+		victory_points = {3323 15}
+    }
+	manpower=18400
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

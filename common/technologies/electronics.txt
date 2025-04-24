@@ -1,0 +1,741 @@
+technologies = {
+####电力生产
+
+	######个人计算机和服务站
+
+	Personal_Computer_T1= {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Personal_Computer_T2
+		}
+
+		research_speed_factor = 0.05
+		special_project_speed_factor = 0.05
+
+
+		dependencies = {
+			T1_electronic = 1
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+
+	}
+
+	Personal_Computer_T2 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 2
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Personal_Computer_T3
+		}
+
+		research_speed_factor = 0.05
+		special_project_speed_factor = 0.05
+
+		dependencies = {
+			T2_electronic = 1
+		}
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+
+	}
+
+	Personal_Computer_T3 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Personal_Computer_T4
+		}
+
+		research_speed_factor = 0.07
+		special_project_speed_factor = 0.07
+
+		dependencies = {
+			T3_electronic = 1
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+
+	}
+
+	Personal_Computer_T4 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 6
+				
+			}
+		}
+
+
+		dependencies = {
+			T4_electronic = 1
+		}
+		path = { 
+			leads_to_tech = Personal_Computer_T5
+		}
+
+		research_speed_factor = 0.07
+		special_project_speed_factor = 0.07
+
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+
+	}
+
+	Personal_Computer_T5 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_electronic = 1
+		}
+		research_speed_factor = 0.1
+		special_project_speed_factor = 0.1
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+
+	}
+    
+	#####数字控制系统
+	Digital_control_system_T1= {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Digital_control_system_T2
+		}
+		production_factory_efficiency_gain_factor = 0.03
+		line_change_production_efficiency_factor = 0.03
+		industrial_capacity_factory = 0.03
+		equipment_conversion_speed = 0.05
+
+		dependencies = {
+			T1_electronic = 1
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	   
+	}
+
+	Digital_control_system_T2 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 2
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Digital_control_system_T3
+		}
+
+		dependencies = {
+			T2_electronic = 1
+		}
+		production_factory_efficiency_gain_factor = 0.03
+		equipment_conversion_speed = 0.05
+		production_factory_max_efficiency_factor = 0.03
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+	}
+
+	Digital_control_system_T3 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Digital_control_system_T4
+		}
+		dependencies = {
+			T3_electronic = 1
+		}
+
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
+		industrial_capacity_factory = 0.05
+		equipment_conversion_speed = 0.05
+
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+	}
+
+	Digital_control_system_T4 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 6
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Digital_control_system_T5
+		}
+		dependencies = {
+			T4_electronic = 1
+		}
+		production_factory_efficiency_gain_factor = 0.05
+		equipment_conversion_speed = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+	}
+
+	Digital_control_system_T5 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_electronic = 1
+		}
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
+		industrial_capacity_factory = 0.05
+		equipment_conversion_speed = 0.05
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	 
+	}
+
+
+	####工业机器人
+	Industrial_Robots_T1= {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+				
+			}
+		}
+		dependencies = {
+			T1_electronic = 1
+		}
+
+		production_speed_buildings_factor = 0.03
+		industrial_capacity_factory = 0.03
+		industry_repair_factor = 0.05
+		free_cost_combat_readiness_percentage = 0.02
+		
+
+		path = { 
+			leads_to_tech = Industrial_Robots_T2
+		}
+		research_cost = 1.5
+		
+		
+		categories = {
+			electronics
+		}
+
+	
+    }
+
+	Industrial_Robots_T2 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 2
+				
+			}
+		}
+		dependencies = {
+			T2_electronic = 1
+		}
+
+		production_speed_buildings_factor = 0.03
+		industrial_capacity_factory = 0.03
+		industry_repair_factor = 0.05
+		free_cost_combat_readiness_percentage = 0.02
+		
+
+		path = { 
+			leads_to_tech = Industrial_Robots_T3
+		}
+		research_cost = 1.5
+		
+		enable_equipments = {
+			auto_mech_1
+		}
+
+		enable_subunits = {
+			infantry_am
+		}
+
+		force_use_small_tech_layout = yes
+		
+		categories = {
+			electronics
+		}
+
+	
+    }
+
+	Industrial_Robots_T3 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+				
+			}
+		}
+		dependencies = {
+			T3_electronic = 1
+		}
+		categories = {
+			electronics
+		}
+
+		infantry_am = {
+			max_organisation = 5
+		}
+		
+
+		path = { 
+			leads_to_tech = Industrial_Robots_T4
+		}
+		research_cost = 1.5
+		
+		
+		production_speed_buildings_factor = 0.04
+		industrial_capacity_factory = 0.04
+		industry_repair_factor = 0.05
+		free_cost_combat_readiness_percentage = 0.03
+
+	
+    }
+
+	Industrial_Robots_T4 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 6
+				
+			}
+		}
+		dependencies = {
+			T4_electronic = 1
+		}
+		enable_equipments = {
+			auto_mech_2
+		}
+
+		force_use_small_tech_layout = yes
+
+		path = { 
+			leads_to_tech = Industrial_Robots_T5
+		}
+		research_cost = 1.5
+
+		categories = {
+			electronics
+		}
+		
+		
+		production_speed_buildings_factor = 0.04
+		industrial_capacity_factory = 0.04
+		industry_repair_factor = 0.05
+		free_cost_combat_readiness_percentage = 0.03
+
+	
+    }
+
+	Industrial_Robots_T5 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_electronic = 1
+		}
+		infantry_am = {
+			max_organisation = 5
+		}
+		
+		research_cost = 1.5
+
+		categories = {
+			electronics
+		}
+		
+		
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industry_repair_factor = 0.05
+		free_cost_combat_readiness_percentage = 0.03
+
+	
+    }
+
+    ####通讯雷达
+	Communications_radar_T1= {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+				
+			}
+		}
+		dependencies = {
+			T1_electronic = 1
+		}
+
+		enable_building = {
+			building = radar_station
+			level = 1
+		}
+
+		civilian_intel_factor = 0.05
+
+		path = { 
+			leads_to_tech = Communications_radar_T2
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+		
+	
+	}
+
+	Communications_radar_T2 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 2
+				
+			}
+		}
+		dependencies = {
+			T2_electronic = 1
+		}
+		enable_building = {
+			building = radar_station
+			level = 3
+		}
+
+		path = { 
+			leads_to_tech = Communications_radar_T3
+		}
+		research_cost = 1.5
+		
+		
+		categories = {
+			electronics
+		}
+	}
+
+	Communications_radar_T3 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+				
+			}
+		}
+		dependencies = {
+			T3_electronic = 1
+		}
+
+		enable_building = {
+			building = radar_station
+			level = 4
+		}
+
+		coordination_bonus = 0.01
+
+		path = { 
+			leads_to_tech = Communications_radar_T4
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	
+	}
+
+	Communications_radar_T4 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 6
+				
+			}
+		}
+		dependencies = {
+			T4_electronic = 1
+		}
+		enable_building = {
+			building = radar_station
+			level = 5
+		}
+		air_superiority_detect_factor = 0.05
+		
+
+		path = { 
+			leads_to_tech = Communications_radar_T5
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+	
+	}
+
+	Communications_radar_T5 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_electronic = 1
+		}
+		enable_building = {
+			building = radar_station
+			level = 6
+		}
+
+		coordination_bonus = 0.01
+		air_superiority_detect_factor = 0.05
+		
+		research_cost = 1.5
+		
+		
+		categories = {
+			electronics
+		}
+	}
+
+	#####通讯网络
+
+	Communication_Network_T1= {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+				
+			}
+		}
+		dependencies = {
+			T1_electronic = 1
+		}
+		land_reinforce_rate = 0.01
+		coordination_bonus = 0.01
+
+		path = { 
+			leads_to_tech = Communication_Network_T2
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+
+	}
+
+	Communication_Network_T2 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 2
+				
+			}
+		}
+		dependencies = {
+			T2_electronic = 1
+		}
+		land_reinforce_rate = 0.01
+		coordination_bonus = 0.01
+
+		path = { 
+			leads_to_tech = Communication_Network_T3
+		}
+		research_cost = 1.5
+		
+		
+		categories = {
+			electronics
+		}
+	}
+
+	Communication_Network_T3 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+				
+			}
+		}
+
+		land_reinforce_rate = 0.02
+		coordination_bonus = 0.02
+		dependencies = {
+			T3_electronic = 1
+		}
+
+		path = { 
+			leads_to_tech = Communication_Network_T4
+		}
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+
+	}
+
+	Communication_Network_T4 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 6
+				
+			}
+		}
+		dependencies = {
+			T4_electronic = 1
+		}
+		land_reinforce_rate = 0.02
+		coordination_bonus = 0.02
+		
+
+		path = { 
+			leads_to_tech = Communication_Network_T5
+		}
+		research_cost = 1.5
+		
+		
+
+	}
+
+	Communication_Network_T5 = {
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_electronic = 1
+		}
+		land_reinforce_rate = 0.03
+		coordination_bonus = 0.03
+		
+		research_cost = 1.5
+		
+		categories = {
+			electronics
+		}
+
+	}
+}

@@ -1,0 +1,26 @@
+
+
+########    ###    ##    ## ##    ##     ######   ########   #######  ##     ## ########   ######  
+   ##      ## ##   ###   ## ##   ##     ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
+   ##     ##   ##  ####  ## ##  ##      ##        ##     ## ##     ## ##     ## ##     ## ##       
+   ##    ##     ## ## ## ## #####       ##   #### ########  ##     ## ##     ## ########   ######  
+   ##    ######### ##  #### ##  ##      ##    ##  ##   ##   ##     ## ##     ## ##              ## 
+   ##    ##     ## ##   ### ##   ##     ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
+   ##    ##     ## ##    ## ##    ##     ######   ##     ##  #######   #######  ##         ######  
+
+
+
+cat_eq_all_uav = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		small_uav_airframe
+		small_uav_cas_airframe
+		medium_uav_airframe
+		medium_uav_cas_airframe
+		heavy_uav_airframe
+		heavy_uav_cas_airframe
+		transport_plane_equipment
+		small_uav_recon_airframe
+	}
+}
+
+

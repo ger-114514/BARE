@@ -1,0 +1,2072 @@
+technologies = {
+	#民用汽车
+	civilian_car_equipment_T1 = {
+		enable_equipments = {
+			motorized_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 6
+				y = -1
+			}
+		}
+		path = {
+			leads_to_tech = Armored_Vehicles_T1
+		}
+		path = {
+			leads_to_tech = IFV_Weapon_Optimization_T2
+		}
+		path = {
+			leads_to_tech = IFV_Opaz_Enhancement_T2
+		}
+		path = {
+			leads_to_tech = IFV_engine_optimization_T2
+		}
+		path = {
+			leads_to_tech = IFV_defense_optimization_T2
+		}
+		path = {
+			leads_to_tech = Infantry_fighting_vehicle_T1
+		}
+		dependencies = {
+			T1_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#轮式步战车
+	Armored_Vehicles_T1 = {
+		enable_equipments = {
+			apc_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 0
+				y = 4
+			}
+		}
+		sub_technologies = {
+			Armored_Vehicles_AA_T1
+			Armored_Vehicles_ART_T1
+			Armored_Vehicles_AT_T1
+		}
+		path = {
+			leads_to_tech = Armored_Vehicles_T2
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AA_T1 = {
+		enable_equipments = {
+			apc_aa_equipment_1
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_ART_T1 = {
+		enable_equipments = {
+			apc_artillery_equipment_1
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AT_T1 = {
+		enable_equipments = {
+			apc_at_equipment_1
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_T2 = {
+		enable_equipments = {
+			apc_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 0
+				y = 9
+			}
+		}
+		sub_technologies = {
+			Armored_Vehicles_AA_T2
+			Armored_Vehicles_ART_T2
+			Armored_Vehicles_AT_T2
+		}
+		path = {
+			leads_to_tech = Armored_Vehicles_T3
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AA_T2 = {
+		enable_equipments = {
+			apc_aa_equipment_2
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_ART_T2 = {
+		enable_equipments = {
+			apc_artillery_equipment_2
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AT_T2 = {
+		enable_equipments = {
+			apc_at_equipment_2
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_T3 = {
+		enable_equipments = {
+			apc_equipment_3
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 0
+				y = 14
+			}
+		}
+		sub_technologies = {
+			Armored_Vehicles_AA_T3
+			Armored_Vehicles_ART_T3
+			Armored_Vehicles_AT_T3
+		}
+		path = {
+			leads_to_tech = Armored_Vehicles_T4
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AA_T3 = {
+		enable_equipments = {
+			apc_aa_equipment_3
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_ART_T3 = {
+		enable_equipments = {
+			apc_artillery_equipment_3
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AT_T3 = {
+		enable_equipments = {
+			apc_at_equipment_3
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_T4 = {
+		enable_equipments = {
+			apc_equipment_4
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 0
+				y = 19
+			}
+		}
+		sub_technologies = {
+			Armored_Vehicles_AA_T4
+			Armored_Vehicles_ART_T4
+			Armored_Vehicles_AT_T4
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AA_T4 = {
+		enable_equipments = {
+			apc_aa_equipment_4
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_ART_T4 = {
+		enable_equipments = {
+			apc_artillery_equipment_4
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Armored_Vehicles_AT_T4 = {
+		enable_equipments = {
+			apc_at_equipment_4
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			apc
+		}
+
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####步战车武器优化
+	IFV_Weapon_Optimization_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 2
+				y = 4
+			}
+		}
+
+		category_mech = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			ap_attack = 0.03
+		}
+
+		category_mech_aa = {
+			air_attack = 0.05
+			soft_attack = 0.01
+			hard_attack = 0.01
+			ap_attack = 0.01
+		}
+
+
+		category_mech_art = {
+			soft_attack = 0.05
+			hard_attack = 0.01
+		}
+
+		category_mech_at = {
+			hard_attack = 0.05
+			soft_attack = 0.01
+			ap_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_attack_upgrade1_tt
+		}
+		path = {
+			leads_to_tech = IFV_Weapon_Optimization_T3
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Weapon_Optimization_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 2
+				y = 9
+			}
+		}
+
+		category_mech = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			ap_attack = 0.03
+		}
+
+		category_mech_aa = {
+			air_attack = 0.05
+			soft_attack = 0.01
+			hard_attack = 0.01
+			ap_attack = 0.01
+		}
+
+
+		category_mech_art = {
+			soft_attack = 0.05
+			hard_attack = 0.01
+		}
+
+		category_mech_at = {
+			hard_attack = 0.05
+			soft_attack = 0.01
+			ap_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_attack_upgrade2_tt
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = IFV_Weapon_Optimization_T4
+		}
+	}
+	IFV_Weapon_Optimization_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 2
+				y = 14
+			}
+		}
+
+		category_mech = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			ap_attack = 0.03
+		}
+
+		category_mech_aa = {
+			air_attack = 0.05
+			soft_attack = 0.01
+			hard_attack = 0.01
+			ap_attack = 0.01
+		}
+
+
+		category_mech_art = {
+			soft_attack = 0.05
+			hard_attack = 0.01
+		}
+
+		category_mech_at = {
+			hard_attack = 0.05
+			soft_attack = 0.01
+			ap_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_attack_upgrade3_tt
+		}
+		path = {
+			leads_to_tech = IFV_Weapon_Optimization_T5
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Weapon_Optimization_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 2
+				y = 19
+			}
+		}
+
+		category_mech = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			ap_attack = 0.03
+		}
+
+		category_mech_aa = {
+			air_attack = 0.05
+			soft_attack = 0.01
+			hard_attack = 0.01
+			ap_attack = 0.01
+		}
+
+
+		category_mech_art = {
+			soft_attack = 0.05
+			hard_attack = 0.01
+		}
+
+		category_mech_at = {
+			hard_attack = 0.05
+			soft_attack = 0.01
+			ap_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_attack_upgrade4_tt
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###欧帕兹武备强化
+	IFV_Opaz_Enhancement_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 4
+				y = 4
+			}
+		}
+		path = {
+			leads_to_tech = IFV_Opaz_Enhancement_T3
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_Opaz_Enhancement_upgrade1_tt
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+			T2_opaz = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Opaz_Enhancement_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 4
+				y = 9
+			}
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_Opaz_Enhancement_upgrade2_tt
+		}
+
+		path = {
+			leads_to_tech = IFV_Opaz_Enhancement_T4
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+			T3_opaz = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Opaz_Enhancement_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 4
+				y = 14
+			}
+		}
+		path = {
+			leads_to_tech = IFV_Opaz_Enhancement_T5
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_Opaz_Enhancement_upgrade3_tt
+		}
+
+		dependencies = {
+			T4_mobile_vehicle = 1
+			T4_opaz = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Opaz_Enhancement_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 4
+				y = 19
+			}
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+			T5_opaz = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_Opaz_Enhancement_upgrade4_tt
+		}
+
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####步战车引擎优化
+	IFV_engine_optimization_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 6
+				y = 4
+			}
+		}
+
+
+
+
+		category_mech = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_aa = {
+			maximum_speed = 0.02
+		}
+
+
+		category_mech_art = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_at = {
+			maximum_speed = 0.02
+		}
+
+
+		path = {
+			leads_to_tech = IFV_engine_optimization_T3
+		}
+
+		
+		on_research_complete = {
+			custom_effect_tooltip = IFV_engine_upgrade1_tt
+		}
+
+
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_engine_optimization_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 6
+				y = 9
+			}
+		}
+
+		category_mech = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_aa = {
+			maximum_speed = 0.02
+		}
+
+
+		category_mech_art = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_at = {
+			maximum_speed = 0.02
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade2_tt
+		}
+
+
+		path = {
+			leads_to_tech = IFV_engine_optimization_T4
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_engine_optimization_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 6
+				y = 14
+			}
+		}
+
+		category_mech = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_aa = {
+			maximum_speed = 0.02
+		}
+
+
+		category_mech_art = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_at = {
+			maximum_speed = 0.02
+		}
+
+
+		path = {
+			leads_to_tech = IFV_engine_optimization_T5
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade3_tt
+		}
+
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_engine_optimization_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 6
+				y = 19
+			}
+		}
+
+		category_mech = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_aa = {
+			maximum_speed = 0.02
+		}
+
+
+		category_mech_art = {
+			maximum_speed = 0.02
+		}
+
+		category_mech_at = {
+			maximum_speed = 0.02
+		}
+
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade4_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###欧帕兹武备强化2
+	IFV_Opaz_defense_Enhancement_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 8
+				y = 4
+			}
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade1_tt
+		}
+
+		path = {
+			leads_to_tech = IFV_Opaz_defense_Enhancement_T3
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+			T2_opaz = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Opaz_defense_Enhancement_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 8
+				y = 9
+			}
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade2_tt
+		}
+
+
+		path = {
+			leads_to_tech = IFV_Opaz_defense_Enhancement_T4
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+			T3_opaz = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Opaz_defense_Enhancement_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 8
+				y = 14
+			}
+		}
+		path = {
+			leads_to_tech = IFV_Opaz_defense_Enhancement_T5
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+			T4_opaz = 1
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade3_tt
+		}
+
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_Opaz_defense_Enhancement_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 8
+				y = 19
+			}
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_optimization_upgrade4_tt
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+			T5_opaz = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###步战车防御优化
+	IFV_defense_optimization_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 9
+				y = 4
+			}
+		}
+
+		category_mech = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_aa = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+
+		category_mech_art = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_at = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_upgrade1_tt
+		}
+
+		path = {
+			leads_to_tech = IFV_defense_optimization_T3
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_defense_optimization_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 9
+				y = 9
+			}
+		}
+
+		category_mech = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_aa = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+
+		category_mech_art = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_at = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_upgrade2_tt
+		}
+		path = {
+			leads_to_tech = IFV_defense_optimization_T4
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_defense_optimization_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 9
+				y = 14
+			}
+		}
+
+		category_mech = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_aa = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+
+		category_mech_art = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_at = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_upgrade3_tt
+		}
+		path = {
+			leads_to_tech = IFV_defense_optimization_T5
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IFV_defense_optimization_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 9
+				y = 19
+			}
+		}
+
+		category_mech = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_aa = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+
+		category_mech_art = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		category_mech_at = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.02
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = IFV_defense_upgrade4_tt
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			apc
+			ifv
+			mech_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###步战车
+	Infantry_fighting_vehicle_T1 = {
+		enable_equipments = {
+			ifv_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 12
+				y = 4
+			}
+		}
+		sub_technologies = {
+			Infantry_fighting_vehicle_AA_T1
+			Infantry_fighting_vehicle_ART_T1
+			Infantry_fighting_vehicle_AT_T1
+		}
+		path = {
+			leads_to_tech = Infantry_fighting_vehicle_T2
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AA_T1 = {
+		enable_equipments = {
+			ifv_aa_equipment_1
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_ART_T1 = {
+		enable_equipments = {
+			ifv_artillery_equipment_1
+		}
+		research_cost = 1.5
+		categories = {
+			infantry_weapons
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AT_T1 = {
+		enable_equipments = {
+			ifv_at_equipment_1
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_T2 = {
+		enable_equipments = {
+			ifv_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 12
+				y = 9
+			}
+		}
+		sub_technologies = {
+			Infantry_fighting_vehicle_AA_T2
+			Infantry_fighting_vehicle_ART_T2
+			Infantry_fighting_vehicle_AT_T2
+		}
+		path = {
+			leads_to_tech = Infantry_fighting_vehicle_T3
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AA_T2 = {
+		enable_equipments = {
+			ifv_aa_equipment_2
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_ART_T2 = {
+		enable_equipments = {
+			ifv_artillery_equipment_2
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AT_T2 = {
+		enable_equipments = {
+			ifv_at_equipment_2
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_T3 = {
+		enable_equipments = {
+			ifv_equipment_3
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 12
+				y = 14
+			}
+		}
+		sub_technologies = {
+			Infantry_fighting_vehicle_AA_T3
+			Infantry_fighting_vehicle_ART_T3
+			Infantry_fighting_vehicle_AT_T3
+		}
+		path = {
+			leads_to_tech = Infantry_fighting_vehicle_T4
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AA_T3 = {
+		enable_equipments = {
+			ifv_aa_equipment_3
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_ART_T3 = {
+		enable_equipments = {
+			ifv_artillery_equipment_3
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AT_T3 = {
+		enable_equipments = {
+			ifv_at_equipment_3
+		}
+		research_cost = 1.5
+		categories = {
+			motorized
+			ifv
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_T4 = {
+		enable_equipments = {
+			ifv_equipment_4
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 12
+				y = 19
+			}
+		}
+		sub_technologies = {
+			Infantry_fighting_vehicle_AA_T4
+			Infantry_fighting_vehicle_ART_T4
+			Infantry_fighting_vehicle_AT_T4
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AA_T4 = {
+		enable_equipments = {
+			ifv_aa_equipment_4
+		}
+		research_cost = 1.5
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_ART_T4 = {
+		enable_equipments = {
+			ifv_artillery_equipment_4
+		}
+		research_cost = 1.5
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Infantry_fighting_vehicle_AT_T4 = {
+		enable_equipments = {
+			ifv_at_equipment_4
+		}
+		research_cost = 1.5
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			motorized
+			ifv
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####民用直升机
+	Civilian_helicopter_T1 = {
+		enable_equipments = {
+			helicopter_equipment_1
+			attack_helicopter_equipment_1
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 19
+				y = 4
+			}
+		}
+		path = {
+			leads_to_tech = General_helicopter_T2
+		}
+		path = {
+			leads_to_tech = Helicopter_engine_optimization_T2
+		}
+		path = {
+			leads_to_tech = Opaz_helicopter_T2
+		}
+		path = {
+			leads_to_tech = Helicopter_Optimization_T2
+		}
+		path = {
+			leads_to_tech = attack_helicopter_T2
+		}
+		dependencies = {
+			T2_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####通用直升机
+	General_helicopter_T2 = {
+		enable_equipments = {
+			helicopter_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 15
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = General_helicopter_T3
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	General_helicopter_T3 = {
+		enable_equipments = {
+			helicopter_equipment_3
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 15
+				y = 14
+			}
+		}
+		path = {
+			leads_to_tech = General_helicopter_T4
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	General_helicopter_T4 = {
+		enable_equipments = {
+			helicopter_equipment_4
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 15
+				y = 19
+			}
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###直升机载荷引擎优化
+	Helicopter_engine_optimization_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 17
+				y = 9
+			}
+		}
+
+
+		category_assist_heil = {
+			maximum_speed = 0.03
+		}
+
+		category_attack_heil = {
+			maximum_speed = 0.03
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = Heil_engine_upgrade1_tt
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = Helicopter_engine_optimization_T3
+		}
+	}
+	Helicopter_engine_optimization_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 17
+				y = 14
+			}
+		}
+
+		category_assist_heil = {
+			maximum_speed = 0.03
+		}
+
+		category_attack_heil = {
+			maximum_speed = 0.03
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = Heil_engine_upgrade2_tt
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = Helicopter_engine_optimization_T4
+		}
+	}
+	Helicopter_engine_optimization_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 17
+				y = 19
+			}
+		}
+
+		category_assist_heil = {
+			maximum_speed = 0.03
+		}
+
+		category_attack_heil = {
+			maximum_speed = 0.03
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = Heil_engine_upgrade3_tt
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####直升机欧帕兹技术升级
+	Opaz_helicopter_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 19
+				y = 9
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = Heil_Opaz_upgrade1_tt
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+			T3_opaz = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = Opaz_helicopter_T3
+		}
+	}
+	Opaz_helicopter_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 19
+				y = 14
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = Heil_Opaz_upgrade2_tt
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+			T3_opaz = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = Opaz_helicopter_T4
+		}
+	}
+	Opaz_helicopter_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 19
+				y = 19
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = Heil_Opaz_upgrade3_tt
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+			T3_opaz = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####直升机防护武备优化
+	Helicopter_Optimization_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 21
+				y = 9
+			}
+		}
+
+		category_assist_heil = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.01
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+
+		category_attack_heil = {
+			breakthrough = 0.01
+			defense = 0.01
+			armor_value = 0.03
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = Heil_attack_upgrade1_tt
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = Helicopter_Optimization_T3
+		}
+	}
+	Helicopter_Optimization_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 21
+				y = 14
+			}
+		}
+
+		category_assist_heil = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.01
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+
+		category_attack_heil = {
+			breakthrough = 0.01
+			defense = 0.01
+			armor_value = 0.03
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = Heil_attack_upgrade2_tt
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		path = {
+			leads_to_tech = Helicopter_Optimization_T4
+		}
+	}
+	Helicopter_Optimization_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 21
+				y = 19
+			}
+		}
+
+		category_assist_heil = {
+			breakthrough = 0.03
+			defense = 0.03
+			armor_value = 0.01
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+
+		category_attack_heil = {
+			breakthrough = 0.01
+			defense = 0.01
+			armor_value = 0.03
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+
+		on_research_complete = {
+			custom_effect_tooltip = Heil_attack_upgrade3_tt
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+			helicopter_upgrade
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####武装直升机
+	attack_helicopter_T2 = {
+		enable_equipments = {
+			attack_helicopter_equipment_2
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 23
+				y = 9
+			}
+		}
+		path = {
+			leads_to_tech = attack_helicopter_T3
+		}
+		dependencies = {
+			T3_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	attack_helicopter_T3 = {
+		enable_equipments = {
+			attack_helicopter_equipment_3
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 23
+				y = 14
+			}
+		}
+		path = {
+			leads_to_tech = attack_helicopter_T4
+		}
+		dependencies = {
+			T4_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	attack_helicopter_T4 = {
+		enable_equipments = {
+			attack_helicopter_equipment_4
+		}
+		research_cost = 1.5
+		folder = {
+			name = ifv_folder
+			position = {
+				x = 23
+				y = 19
+			}
+		}
+		dependencies = {
+			T5_mobile_vehicle = 1
+		}
+		categories = {
+			helicopter
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

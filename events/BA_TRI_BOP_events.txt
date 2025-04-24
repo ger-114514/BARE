@@ -1,0 +1,1192 @@
+#权力平衡事件组
+add_namespace = TRI_region
+add_namespace = TRI_BOP_decision
+country_event = {
+	id = TRI_region.0
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_1_cd
+						factor = 0
+					}
+					country_event = {
+						id = TRI_region.1
+						days = 60
+						random_days = 15
+					}
+				}
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_2_cd
+						factor = 0
+					}
+					modifier = {
+						all_of = {
+							array = TRI_regions
+							value = region
+							check_variable = { region_stability@var:region > 0.75 }
+						}
+						factor = 0
+					}
+					modifier = {
+						any_of = {
+							array = TRI_regions
+							value = region
+							check_variable = { region_stability@var:region < 0.4 }
+						}
+						factor = 3
+					}
+					country_event = {
+						id = TRI_region.2
+						days = 60
+						random_days = 15
+					}
+				}
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_11_cd
+						factor = 0
+					}
+					country_event = {
+						id = TRI_region.11
+						days = 60
+						random_days = 15
+					}
+				}
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_12_cd
+						factor = 0
+					}
+					country_event = {
+						id = TRI_region.12
+						days = 60
+						random_days = 15
+					}
+				}
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_21_cd
+						factor = 0
+					}
+					country_event = {
+						id = TRI_region.21
+						days = 60
+						random_days = 15
+					}
+				}
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_22_cd
+						factor = 0
+					}
+					country_event = {
+						id = TRI_region.22
+						days = 60
+						random_days = 15
+					}
+				}
+				1 = {
+					modifier = {
+						has_country_flag = TRI_region_event_23_cd
+						factor = 0
+					}
+					country_event = {
+						id = TRI_region.23
+						days = 60
+						random_days = 15
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = TRI_region.1
+	title = TRI_region.1.t
+	desc = TRI_region.1.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.1.a
+		for_each_loop = {
+			array = TRI_regions
+			value = region
+			add_to_temp_array = { regions_stability = region_stability@var:region }
+		}
+		find_lowest_in_array = {
+			array = regions_stability
+			index = index
+		}
+		set_temp_variable = { region = var:TRI_regions^index }
+		custom_effect_tooltip = TRI_region_1_tt
+		hidden_effect = {
+			set_temp_variable = { stability_change = 0.05 }
+			TRI_change_region_stability = yes
+
+			set_temp_variable = { association = token:TRI_parliament_association_3 }
+			set_temp_variable = { influence_change = 5 }
+			TRI_change_region_association_influence = yes
+		}
+		set_country_flag = {
+			flag = TRI_region_event_1_cd
+			days = 180
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 180
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.2
+	title = TRI_region.2.t
+	desc = TRI_region.2.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.2.a
+		for_each_loop = {
+			array = TRI_regions
+			value = region
+			add_to_temp_array = { regions_stability = region_stability@var:region }
+		}
+		find_lowest_in_array = {
+			array = regions_stability
+			index = i
+		}
+		set_temp_variable = { region = TRI_regions^i }
+		custom_effect_tooltip = TRI_region_2_tt
+		hidden_effect = {
+			set_temp_variable = { stability_change = 0.1 }
+			TRI_change_region_stability = yes
+
+			set_temp_variable = { association = token:TRI_parliament_association_3 }
+			set_temp_variable = { influence_change = 15 }
+			TRI_change_region_association_influence = yes
+		}
+		set_country_flag = {
+			flag = TRI_region_event_2_cd
+			days = 360
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 60
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.11
+	title = TRI_region.11.t
+	desc = TRI_region.11.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.11.a
+		set_temp_variable_to_random = {
+			var = idx
+			min = 0
+			max = 13
+			integer = yes
+		}
+		set_temp_variable = { region = var:TRI_regions^idx }
+		add_political_power = 15
+		set_temp_variable = { association = token:TRI_parliament_association_4 }
+		set_temp_variable = { influence_change = 5 }
+		TRI_change_region_association_influence = yes
+		set_country_flag = {
+			flag = TRI_region_event_11_cd
+			days = 120
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 180
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.12
+	title = TRI_region.12.t
+	desc = TRI_region.12.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.12.a
+		set_temp_variable_to_random = {
+			var = idx
+			min = 0
+			max = 13
+			integer = yes
+		}
+		set_temp_variable = { region = var:TRI_regions^idx }
+		set_temp_variable = { stability_change = 0.05 }
+		TRI_change_region_stability = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_4 }
+		set_temp_variable = { influence_change = 10 }
+		TRI_change_region_association_influence = yes
+		set_country_flag = {
+			flag = TRI_region_event_12_cd
+			days = 180
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 60
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.21
+	title = TRI_region.21.t
+	desc = TRI_region.21.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.21.a
+		set_temp_variable_to_random = {
+			var = idx
+			min = 0
+			max = 13
+			integer = yes
+		}
+		set_temp_variable = { region = var:TRI_regions^idx }
+		set_temp_variable = { stability_change = 0.05 }
+		TRI_change_region_stability = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_5 }
+		set_temp_variable = { influence_change = 10 }
+		TRI_change_region_association_influence = yes
+		set_country_flag = {
+			flag = TRI_region_event_21_cd
+			days = 180
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 60
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.22
+	title = TRI_region.22.t
+	desc = TRI_region.22.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.22.a
+		set_temp_variable_to_random = {
+			var = idx
+			min = 0
+			max = 13
+			integer = yes
+		}
+		set_temp_variable = { region = var:TRI_regions^idx }
+		every_controlled_state = {
+			limit = {
+				check_variable = { state_region = var:region }
+			}
+			add_manpower = 1000
+		}
+
+		set_temp_variable = { association = token:TRI_parliament_association_5 }
+		set_temp_variable = { influence_change = 10 }
+		TRI_change_region_association_influence = yes
+		set_country_flag = {
+			flag = TRI_region_event_22_cd
+			days = 180
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 60
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.23
+	title = TRI_region.23.t
+	desc = TRI_region.23.desc
+	is_triggered_only = yes
+	option = {
+		name = TRI_region.23.a
+		set_temp_variable_to_random = {
+			var = idx
+			min = 0
+			max = 13
+			integer = yes
+		}
+		set_temp_variable = { region = var:TRI_regions^idx }
+		set_temp_variable = { stability_change = -0.05 }
+		TRI_change_region_stability = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_5 }
+		set_temp_variable = { influence_change = -5 }
+		TRI_change_region_association_influence = yes
+		set_country_flag = {
+			flag = TRI_region_event_23_cd
+			days = 180
+		}
+		country_event = {
+			id = TRI_region.0
+			days = 60
+			random_days = 10
+		}
+	}
+}
+country_event = {
+	id = TRI_region.101
+	title = TRI_region.101.t
+	desc = TRI_region.101.desc
+	
+	is_triggered_only = yes
+	trigger = {
+		any_controlled_state = {
+			is_core_of = ROOT
+			has_variable = state_region
+			OR = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = no
+				}
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = no
+				}
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clear_array = global.TRI_invest_regions
+			for_loop_effect = {
+				end = 3
+				if = {
+					limit = {
+						any_owned_state = {
+							is_core_of = ROOT
+							is_controlled_by = ROOT
+							has_variable = state_region
+							OR = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = no
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = no
+								}
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+								}
+							}
+						}
+					}
+					random_owned_state = {
+						limit = {
+							is_core_of = ROOT
+							is_controlled_by = ROOT
+							has_variable = state_region
+							OR = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = no
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = no
+								}
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+								}
+							}
+						}
+						add_to_array = { global.TRI_invest_regions = state_region }
+					}
+				}
+			}
+			clear_array = global.TRI_region_investment_building
+			for_each_loop = {
+				array = global.TRI_invest_regions
+				value = region
+				random_list = {
+					1 = {
+						modifier = {
+							NOT = {
+								any_controlled_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = no
+									}
+									check_variable = { state_region = var:region }
+								}
+							}
+							factor = 0
+						}
+						add_to_array = { global.TRI_region_investment_building = token:industrial_complex }
+					}
+					1 = {
+						modifier = {
+							NOT = {
+								any_controlled_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = no
+									}
+									check_variable = { state_region = var:region }
+								}
+							}
+							factor = 0
+						}
+						add_to_array = { global.TRI_region_investment_building = token:arms_factory }
+					}
+					1 = {
+						modifier = {
+							NOT = {
+								any_controlled_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									check_variable = { state_region = var:region }
+								}
+							}
+							factor = 0
+						}
+						add_to_array = { global.TRI_region_investment_building = token:infrastructure }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = TRI_region.101.a
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			every_controlled_state = {
+				limit = {
+					check_variable = { state_region = global.TRI_invest_regions^0 }
+				}
+				set_variable = { TRI_building_goal_type = var:global.TRI_region_investment_building^0 }
+				set_variable = { TRI_building_goal = building_level@var:TRI_building_goal_type }
+				add_to_variable = { TRI_building_goal = 1 }
+			}
+			set_variable = { TRI_invest_region = var:global.TRI_invest_regions^0 }
+			set_variable = { TRI_building_goal_type = var:global.TRI_region_investment_building^0 }
+			set_variable = { TRI_invest_association = token:TRI_parliament_association_3 }
+			clear_array = global.TRI_invest_regions
+			clear_array = global.TRI_region_investment_building
+		}
+		set_temp_variable = { region = TRI_invest_region }
+		set_temp_variable = { association = token:TRI_parliament_association_3 }
+		set_temp_variable = { influence_change = 5 }
+		TRI_change_region_association_influence = yes
+	}
+	option = {
+		name = TRI_region.101.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			every_controlled_state = {
+				limit = {
+					check_variable = { state_region = global.TRI_invest_regions^1 }
+				}
+				set_variable = { TRI_building_goal_type = var:global.TRI_region_investment_building^1 }
+				set_variable = { TRI_building_goal = building_level@var:TRI_building_goal_type }
+				add_to_variable = { TRI_building_goal = 1 }
+			}
+			set_variable = { TRI_invest_region = var:global.TRI_invest_regions^1 }
+			set_variable = { TRI_building_goal_type = var:global.TRI_region_investment_building^1 }
+			set_variable = { TRI_invest_association = token:TRI_parliament_association_4 }
+			clear_array = global.TRI_invest_regions
+			clear_array = global.TRI_region_investment_building
+		}
+		set_temp_variable = { region = TRI_invest_region }
+		set_temp_variable = { association = token:TRI_parliament_association_4 }
+		set_temp_variable = { influence_change = 5 }
+		TRI_change_region_association_influence = yes
+	}
+	option = {
+		name = TRI_region.101.c
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			every_controlled_state = {
+				limit = {
+					check_variable = { state_region = global.TRI_invest_regions^2 }
+				}
+				set_variable = { TRI_building_goal_type = var:global.TRI_region_investment_building^2 }
+				set_variable = { TRI_building_goal = building_level@var:TRI_building_goal_type }
+				add_to_variable = { TRI_building_goal = 1 }
+			}
+			set_variable = { TRI_invest_region = var:global.TRI_invest_regions^2 }
+			set_variable = { TRI_building_goal_type = var:global.TRI_region_investment_building^2 }
+			set_variable = { TRI_invest_association = token:TRI_parliament_association_5 }
+			clear_array = global.TRI_invest_regions
+			clear_array = global.TRI_region_investment_building
+		}
+		set_temp_variable = { region = TRI_invest_region }
+		set_temp_variable = { association = token:TRI_parliament_association_5 }
+		set_temp_variable = { influence_change = 5 }
+		TRI_change_region_association_influence = yes
+	}
+	option = {
+		name = TRI_region.101.d
+		ai_chance = {
+			factor = 100
+		}
+		clear_array = global.TRI_invest_regions
+		clear_array = global.TRI_region_investment_building
+		add_political_power = -20
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.101
+				days = 120
+			}
+		}
+	}
+}
+state_event = {
+	id = TRI_region.200
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_extra_state_shared_building_slots = 1
+			ROOT = {
+				add_to_variable = { TRI_rebuilding_subsidy_fire_count = 1 }
+			}
+		}
+	}
+}
+country_event = { #委派更多权利
+	id = TRI_BOP_decision.1
+	title = TRI_BOP_decision.1.t
+	desc = TRI_BOP_decision.1.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_BOP_decision.1.a
+		set_temp_variable = { TRI_policy_change_num = 0.02 }
+		multiply_temp_variable = { TRI_policy_change_num = TRI_BOP_transfer_right_effect_factor }
+		if = {
+			limit = { check_variable = { TRI_player_focus_position > 0.5 } }
+			divide_temp_variable = { TRI_policy_change_num = 2 }
+			set_temp_variable = { radicalism_change = -0.05 }
+			multiply_temp_variable = { radicalism_change = TRI_BOP_transfer_right_effect_factor }
+			for_each_loop = {
+				array = TRI_against_association
+				value = association
+				if = {
+					limit = { check_variable = { radicalism@var:association > 0.5 } }
+					TRI_parliament_radicalism_change = yes
+				}
+			}
+		}
+		TRI_BOP_change_hardliner_both_parliament = yes
+	}
+	option = {
+		name = TRI_BOP_decision.1.b
+		set_temp_variable = { TRI_policy_change_num = -0.01 }
+		multiply_temp_variable = { TRI_policy_change_num = TRI_BOP_transfer_right_effect_factor }
+		TRI_BOP_change_hardliner_both_parliament = yes
+		TRI_BOP_change_moderate_both_parliament = yes
+	}
+	option = {
+		name = TRI_BOP_decision.1.c
+		set_temp_variable = { TRI_policy_change_num = 0.02 }
+		multiply_temp_variable = { TRI_policy_change_num = TRI_BOP_transfer_right_effect_factor }
+		if = {
+			limit = { check_variable = { TRI_player_focus_position < -0.5 } }
+			divide_temp_variable = { TRI_policy_change_num = 2 }
+			set_temp_variable = { radicalism_change = -0.05 }
+			multiply_temp_variable = { radicalism_change = TRI_BOP_transfer_right_effect_factor }
+			for_each_loop = {
+				array = TRI_against_association
+				value = association
+				if = {
+					limit = { check_variable = { radicalism@var:v > 0.5 } }
+					TRI_parliament_radicalism_change = yes
+				}
+			}
+			TRI_BOP_generate_total_resistance = yes
+		}
+		TRI_BOP_change_moderate_both_parliament = yes
+	}
+}
+country_event = { #确保可控状态
+	id = TRI_BOP_decision.2
+	title = TRI_BOP_decision.2.t
+	desc = TRI_BOP_decision.2.desc
+	#picture = 
+	is_triggered_only = yes
+	#主要鹰派转中立
+	option = {
+		name = TRI_BOP_decision.2.a
+		set_temp_variable = { TRI_policy_change_num = -0.04 }
+		TRI_BOP_change_hardliner_both_parliament = yes
+		set_temp_variable = { TRI_policy_change_num = -0.01 }
+		TRI_BOP_change_moderate_both_parliament = yes
+	}
+	#主要鸽派转中立
+	option = {
+		name = TRI_BOP_decision.2.b
+		set_temp_variable = { TRI_policy_change_num = -0.04 }
+		TRI_BOP_change_moderate_both_parliament = yes
+		set_temp_variable = { TRI_policy_change_num = -0.01 }
+		TRI_BOP_change_hardliner_both_parliament = yes
+	}
+}
+country_event = { #确保宣传口径
+	id = TRI_BOP_decision.3
+	title = TRI_BOP_decision.3.t
+	desc = TRI_BOP_decision.3.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_BOP_decision.3.a
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = 0.02
+			max = 0.05
+		}
+		TRI_BOP_change_hardliner_both_parliament = yes
+	}
+	option = {
+		name = TRI_BOP_decision.3.b
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = -0.03
+			max = -0.01
+		}
+		TRI_BOP_change_hardliner_both_parliament = yes
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = -0.03
+			max = -0.01
+		}
+		TRI_BOP_change_moderate_both_parliament = yes
+	}
+	option = {
+		name = TRI_BOP_decision.3.c
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = 0.02
+			max = 0.05
+		}
+		TRI_BOP_change_moderate_both_parliament = yes
+	}
+}
+country_event = { #控制资源分配
+	id = TRI_BOP_decision.4
+	title = TRI_BOP_decision.4.t
+	desc = TRI_BOP_decision.4.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_BOP_decision.4.a
+		if = {
+			limit = { check_variable = { TRI_against_faction = token:BOP_hardliner } }
+			set_temp_variable_to_random = {
+				var = TRI_policy_change_num
+				min = 0.04
+				max = 0.08
+			}
+			set_temp_variable = { radicalism_change = 0.15 }
+			TRI_parliament_against_radicalism_change = yes
+		}
+		else = {
+			set_temp_variable_to_random = {
+				var = TRI_policy_change_num
+				min = 0.08
+				max = 0.15
+			}
+			set_temp_variable = { radicalism_change = -0.05 }
+			TRI_parliament_non_against_radicalism_change = yes
+		}
+		TRI_BOP_change_hardliner_both_parliament = yes
+	}
+	option = {
+		name = TRI_BOP_decision.4.b
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = -0.08
+			max = -0.04
+		}
+		TRI_BOP_change_hardliner_both_parliament = yes
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = -0.08
+			max = -0.04
+		}
+		TRI_BOP_change_moderate_both_parliament = yes
+		set_temp_variable = { radicalism_change = -0.05 }
+		TRI_parliament_non_against_radicalism_change = yes
+	}
+	option = {
+		name = TRI_BOP_decision.4.c
+		if = {
+			limit = { check_variable = { TRI_against_faction = token:BOP_moderate } }
+			set_temp_variable_to_random = {
+				var = TRI_policy_change_num
+				min = 0.04
+				max = 0.08
+			}
+			set_temp_variable = { radicalism_change = 0.15 }
+			TRI_parliament_against_radicalism_change = yes
+		}
+		else = {
+			set_temp_variable_to_random = {
+				var = TRI_policy_change_num
+				min = 0.08
+				max = 0.15
+			}
+			set_temp_variable = { radicalism_change = -0.05 }
+			TRI_parliament_non_against_radicalism_change = yes
+		}
+		TRI_BOP_change_moderate_both_parliament = yes
+	}
+}
+country_event = { #安抚社团成员
+	id = TRI_BOP_decision.5
+	title = TRI_BOP_decision.5.t
+	desc = TRI_BOP_decision.5.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_BOP_decision.5.a
+		if = {
+			limit = { 
+				check_variable = { loyalty@var:appease_association_target < 0.6 }
+			}
+			add_timed_idea = {
+				idea = TRI_BOP_appease_association_3
+				days = 35
+			}
+			set_temp_variable_to_random = {
+				var = loyalty_change
+				min = 0.2
+				max = 0.3
+			}
+		}
+		else_if = {
+			limit = { 
+				check_variable = { loyalty@var:appease_association_target < 0.8 }
+			}
+			add_timed_idea = {
+				idea = TRI_BOP_appease_association_2
+				days = 35
+			}
+			set_temp_variable_to_random = {
+				var = loyalty_change
+				min = 0.15
+				max = 0.25
+			}
+		}
+		else_if = {
+			limit = { 
+				check_variable = { loyalty@var:appease_association_target < 1.2 }
+			}
+			add_timed_idea = {
+				idea = TRI_BOP_appease_association_1
+				days = 35
+			}
+			set_temp_variable_to_random = {
+				var = loyalty_change
+				min = 0.1
+				max = 0.2
+			}
+		}
+		else = {
+			set_temp_variable_to_random = {
+				var = loyalty_change
+				min = 0.05
+				max = 0.15
+			}
+		}
+		set_temp_variable = { association = var:appease_association_target }
+		TRI_parliament_loyalty_change = yes
+		set_temp_variable_to_random = {
+			var = TRI_policy_change_num
+			min = -0.06
+			max = -0.03
+		}
+		if = {
+			limit = { check_variable = { faction@var:appease_association_target = token:BOP_hardliner } }
+			TRI_BOP_change_moderate_both_parliament = yes
+		}
+		else_if = {
+			limit = { check_variable = { faction@var:appease_association_target = token:BOP_moderate } }
+			TRI_BOP_change_hardliner_both_parliament = yes
+		}
+	}
+}
+country_event = { #施行紧急状态管制
+	id = TRI_BOP_decision.6
+	title = TRI_BOP_decision.6.t
+	desc = TRI_BOP_decision.6.desc
+	#picture = 
+	is_triggered_only = yes
+	#安定非对立派系
+	option = {
+		name = TRI_BOP_decision.6.a
+		set_temp_variable = { radicalism_change = -0.05 }
+		TRI_parliament_non_against_radicalism_change = yes
+	}
+	#迫使对立派系忠诚
+	option = {
+		name = TRI_BOP_decision.6.b
+		set_temp_variable = { radicalism_change = 0.15 }
+		TRI_parliament_against_radicalism_change = yes
+
+		set_temp_variable = { loyalty_change = 0.05 }
+		TRI_parliament_against_loyalty_change = yes
+
+	}
+}
+country_event = { #稳定社团关系
+	id = TRI_BOP_decision.7
+	title = TRI_BOP_decision.7.t
+	desc = TRI_BOP_decision.7.desc
+	#picture = 
+	is_triggered_only = yes
+	#不投入消费品/忠诚度大于80
+	option = {
+		name = TRI_BOP_decision.7.a
+		set_temp_variable = { association = var:association_stability_target }
+		set_temp_variable = { TRI_policy_change_num = 0.1 }
+		set_temp_variable = { radicalism_change = 0.1 }
+		if = { 
+			limit = { check_variable = { loyalty@var:association < 0.8 } }
+			set_temp_variable = { TRI_policy_change_num = 0.05  }
+			set_temp_variable = { radicalism_change = -0.05 }
+			custom_effect_tooltip = TRI_BOP_association_stability_loyalty_alert
+		}
+		TRI_parliament_radicalism_change = yes
+		if = {
+			limit = { check_variable = { view@var:association = token:view_against } }
+			multiply_temp_variable = { TRI_policy_change_num = -1 }
+			if = {
+				limit = { check_variable = { faction@var:association = token:BOP_hardliner } }
+				TRI_BOP_change_moderate = yes
+			}
+			else_if = {
+				limit = { check_variable = { faction@var:association = token:BOP_moderate } }
+				TRI_BOP_change_hardliner = yes
+			}
+			else = {
+				multiply_temp_variable = { TRI_policy_change_num = 0.5 }
+				TRI_BOP_change_hardliner = yes
+				TRI_BOP_change_moderate = yes
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { faction@var:association = token:BOP_hardliner } }
+				TRI_BOP_change_hardliner = yes
+			}
+			else_if = {
+				limit = { check_variable = { faction@var:association = token:BOP_moderate } }
+				TRI_BOP_change_moderate = yes
+			}
+			else = {
+				multiply_temp_variable = { TRI_policy_change_num = 0.5 }
+				TRI_BOP_change_hardliner = yes
+				TRI_BOP_change_moderate = yes
+			}
+		}
+	}
+	#投入消费品
+	option = {
+		name = TRI_BOP_decision.7.b
+		trigger = {
+			check_variable = { loyalty@var:association_stability_target < 0.8 }
+		}
+		add_timed_idea = {
+			idea = TRI_BOP_association_stability_modifier
+			days = 25
+		}
+		set_temp_variable = { association = var:association_stability_target }
+		set_temp_variable = { TRI_policy_change_num = 0.1 }
+		set_temp_variable = { radicalism_change = 0.1 }
+		TRI_parliament_radicalism_change = yes
+		if = {
+			limit = { check_variable = { view@var:association = token:view_against } }
+			multiply_temp_variable = { TRI_policy_change_num = -1 }
+			if = {
+				limit = { check_variable = { faction@var:association = token:BOP_hardliner } }
+				TRI_BOP_change_moderate = yes
+			}
+			else_if = {
+				limit = { check_variable = { faction@var:association = token:BOP_moderate } }
+				TRI_BOP_change_hardliner = yes
+			}
+			else = {
+				multiply_temp_variable = { TRI_policy_change_num = 0.5 }
+				TRI_BOP_change_hardliner = yes
+				TRI_BOP_change_moderate = yes
+			}
+		}
+		else = {
+			if = {
+				limit = { check_variable = { faction@var:association = token:BOP_hardliner } }
+				TRI_BOP_change_hardliner = yes
+			}
+			else_if = {
+				limit = { check_variable = { faction@var:association = token:BOP_moderate } }
+				TRI_BOP_change_moderate = yes
+			}
+			else = {
+				multiply_temp_variable = { TRI_policy_change_num = 0.5 }
+				TRI_BOP_change_hardliner = yes
+				TRI_BOP_change_moderate = yes
+			}
+		}
+	}
+}
+country_event = { #维持学院内稳定——稳定
+	id = TRI_BOP_decision.8
+	title = TRI_BOP_decision.8.t
+	desc = TRI_BOP_decision.8.desc
+	#picture = 
+	is_triggered_only = yes
+	#1级
+	option = {
+		name = TRI_BOP_decision.8.a
+		set_temp_variable = { invest_rank = 1 }
+		TRI_focus_2_invest_stability = yes
+	}
+	#2级
+	option = {
+		name = TRI_BOP_decision.8.b
+		set_temp_variable = { invest_rank = 2 }
+		TRI_focus_2_invest_stability = yes
+	}
+	#3级
+	option = {
+		name = TRI_BOP_decision.8.c
+		set_temp_variable = { invest_rank = 3 }
+		TRI_focus_2_invest_stability = yes
+	}
+}
+country_event = { #维持学院内稳定——战争
+	id = TRI_BOP_decision.9
+	title = TRI_BOP_decision.9.t
+	desc = TRI_BOP_decision.9.desc
+	#picture = 
+	is_triggered_only = yes
+	#1级
+	option = {
+		name = TRI_BOP_decision.9.a
+		set_temp_variable = { invest_rank = 1 }
+		TRI_focus_2_invest_war_support = yes
+	}
+	#2级
+	option = {
+		name = TRI_BOP_decision.9.b
+		set_temp_variable = { invest_rank = 2 }
+		TRI_focus_2_invest_war_support = yes
+	}
+	#3级
+	option = {
+		name = TRI_BOP_decision.9.c
+		set_temp_variable = { invest_rank = 3 }
+		TRI_focus_2_invest_war_support = yes
+	}
+}
+country_event = { #我们的抉择
+	id = TRI_BOP_decision.1000
+	title = TRI_BOP_decision.1000.t
+	desc = TRI_BOP_decision.1000.desc
+	#picture = 
+	is_triggered_only = yes
+	#加强即行政策
+	option = {
+		name = TRI_BOP_decision.1000.a
+		hidden_effect = {
+			for_each_loop = {
+				array = BA_TRI_non_against_association
+				value = v
+				#正面影响修正
+				add_to_variable = { positive_modifier@var:v = 0.2 }
+			}
+			for_each_loop = {
+				array = TRI_against_association
+				value = v
+				#负面影响修正
+				add_to_variable = { negative_modifier@var:v = 0.5 }
+			}
+		}
+		custom_effect_tooltip = TRI_BOP_set_current_policy_a_tt
+		set_country_flag = TRI_BOP_set_current_policy_completed
+	}
+	#保证平稳行进
+	option = {
+		name = TRI_BOP_decision.1000.b
+		hidden_effect = {
+			for_each_loop = {
+				array = BA_TRI_non_against_association
+				value = v
+				#正面影响修正
+				add_to_variable = { positive_modifier@var:v = -0.2 }
+			}
+			for_each_loop = {
+				array = TRI_against_association
+				value = v
+				#负面影响修正
+				add_to_variable = { negative_modifier@var:v = -0.2 }
+			}
+		}
+		custom_effect_tooltip = TRI_BOP_set_current_policy_b_tt
+		set_country_flag = TRI_BOP_set_current_policy_completed
+	}
+	#向反对派妥协
+	option = {
+		name = TRI_BOP_decision.1000.c
+		hidden_effect = {
+			for_each_loop = {
+				array = BA_TRI_non_against_association
+				value = v
+				#正面影响修正
+				add_to_variable = { positive_modifier@var:v = -0.8 }
+			}
+			for_each_loop = {
+				array = TRI_against_association
+				value = v
+				#负面影响修正
+				add_to_variable = { negative_modifier@var:v = -0.8 }
+			}
+		}
+		custom_effect_tooltip = TRI_BOP_set_current_policy_c_tt
+		set_country_flag = TRI_BOP_set_current_policy_completed
+	}
+}
+country_event = { #众说纷纭
+	id = TRI_BOP_decision.101
+	title = TRI_BOP_decision.101.t
+	desc = TRI_BOP_decision.101.desc
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = TRI_BOP_decision.101.a
+		add_war_support = 0.1
+		add_stability = -0.05
+		
+		set_temp_variable = { target_faction = token:BOP_hardliner }
+		set_temp_variable = { loyalty_change = -0.1 }
+		set_temp_variable = { radicalism_change = 0.2 }
+		TRI_parliament_loyalty_change_faction = yes
+		TRI_parliament_radicalism_change_faction = yes
+
+	}
+}
+country_event = { #混乱的一天
+	id = TRI_BOP_decision.102
+	title = TRI_BOP_decision.102.t
+	desc = TRI_BOP_decision.102.desc
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = TRI_BOP_decision.102.a
+		add_stability = -0.2
+		
+		set_temp_variable = { loyalty_change = -0.1 }
+		set_temp_variable = { radicalism_change = 0.1 }
+		TRI_parliament_all_loyalty_change = yes
+		TRI_parliament_all_radicalism_change = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_3 }
+		set_temp_variable = { loyalty_change = -0.2 }
+		set_temp_variable = { radicalism_change = 0.15 }
+		TRI_parliament_loyalty_change = yes
+		TRI_parliament_radicalism_change = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_4 }
+		set_temp_variable = { loyalty_change = 0.1 }
+		set_temp_variable = { radicalism_change = -0.1 }
+		TRI_parliament_loyalty_change = yes
+		TRI_parliament_radicalism_change = yes
+		set_country_flag = TRI_revolting_justice
+		set_country_flag = TRI_revolting_justice_prime_chance
+		activate_mission = TRI_revolting_justice
+	}
+}
+country_event = { #算无遗策
+	id = TRI_BOP_decision.103
+	title = TRI_BOP_decision.103.t
+	desc = TRI_BOP_decision.103.desc
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = TRI_BOP_decision.103.a
+		add_stability = 0.15
+
+		set_temp_variable = { association = token:TRI_parliament_association_3 }
+		set_temp_variable = { loyalty_change = -0.1 }
+		set_temp_variable = { radicalism_change = -0.05 }
+		TRI_parliament_loyalty_change = yes
+		TRI_parliament_radicalism_change = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_4 }
+		set_temp_variable = { loyalty_change = 0.05 }
+		set_temp_variable = { radicalism_change = 0.15 }
+		TRI_parliament_loyalty_change = yes
+		TRI_parliament_radicalism_change = yes
+
+		set_temp_variable = { loyalty_change = 0.1 }
+		set_temp_variable = { radicalism_change = -0.15 }
+		TRI_parliament_all_loyalty_change = yes
+		TRI_parliament_all_radicalism_change = yes
+
+	}
+}
+country_event = { #稍有差池
+	id = TRI_BOP_decision.104
+	title = TRI_BOP_decision.104.t
+	desc = TRI_BOP_decision.104.desc
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = TRI_BOP_decision.104.a
+		add_stability = 0.15
+
+		set_temp_variable = { association = token:TRI_parliament_association_3 }
+		set_temp_variable = { loyalty_change = -0.05 }
+		TRI_parliament_loyalty_change = yes
+
+		set_temp_variable = { association = token:TRI_parliament_association_4 }
+		set_temp_variable = { radicalism_change = 0.1 }
+		TRI_parliament_radicalism_change = yes
+		
+		set_temp_variable = { loyalty_change = 0.05 }
+		set_temp_variable = { radicalism_change = -0.1 }
+		TRI_parliament_all_loyalty_change = yes
+		TRI_parliament_all_radicalism_change = yes
+
+	}
+}

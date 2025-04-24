@@ -1,0 +1,91 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+A01_Inf_01 = {
+	name = "凯撒重工SOF"
+
+	for_countries = { A01 }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "凯撒重工SOF第%d团"
+
+	ordered =
+	{
+		1 = { "凯撒重工SOF第1团" }
+		2 = { "凯撒重工SOF第2团" }
+		3 = { "凯撒重工SOF第3团" }
+		4 = { "凯撒重工SOF第4团" }
+		5 = { "凯撒重工SOF第5团" }
+		6 = { "凯撒重工SOF第6团" }
+	}
+}
+
+A01_Infm_01 = {
+	name = "凯撒PMC保安部队"
+
+	for_countries = { A01 }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "凯撒重工保安第%d中队"
+
+	ordered =
+	{
+		1 = { "凯撒重工保安第1中队" }
+		2 = { "凯撒重工保安第2中队" }
+		3 = { "凯撒重工保安第3中队" }
+		4 = { "凯撒重工保安第4中队" }
+		5 = { "凯撒重工保安第5中队" }
+		6 = { "凯撒重工保安第6中队" }
+	}
+}
+
+A01_Infam_01 = {
+	name = "凯撒重工自动机小队"
+
+	for_countries = { A01 }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_am" }
+
+	fallback_name = "凯撒重工自动机第%d小队"
+
+	ordered =
+	{
+		1 = { "黑帮自动机第1小队" }
+		2 = { "黑帮自动机第2小队" }
+		3 = { "黑帮自动机第3小队" }
+		4 = { "黑帮自动机第4小队" }
+		5 = { "黑帮自动机第5小队" }
+		6 = { "黑帮自动机第6小队" }
+	}
+}

@@ -1,0 +1,291 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "noa_test"
+		position = { x=20 y=-1000 }
+		show_position = { x=-100 y=0 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 500
+		size = { width = 1000 height = 913 }
+		orientation = center
+		origo = center
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_bg"
+		}
+
+		# iconType = {
+		# 	name = "noa_koharu"
+		# 	position = { x = 305 y = 145 }
+		# 	spriteType = "GFX_koharu_s"
+		# 	orientation = UPPER_LEFT
+		# 	pdx_tooltip = "koharu_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# 	scale = 0.5
+		# }
+
+		# buttonType = {
+		# 	name = "koharu_inv_1"
+		# 	position = { x = 300 y = 75 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_koharu_inv1"
+		# 	pdx_tooltip = "koharu_inv1_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "koharu_inv_2"
+		# 	position = { x = 235 y = 125 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_koharu_inv2"
+		# 	pdx_tooltip = "koharu_inv2_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }		
+
+		# buttonType = {
+		# 	name = "koharu_inv_3"
+		# 	position = { x = 365 y = 75 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_koharu_inv3"
+		# 	pdx_tooltip = "koharu_inv3_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "koharu_inv_4"
+		# 	position = { x = 235 y = 195 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_koharu_inv4"
+		# 	pdx_tooltip = "koharu_inv4_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# iconType = {
+		# 	name = "noa_hanako"
+		# 	position = { x = 955 y = 145 }
+		# 	spriteType = "GFX_hanako_s"
+		# 	orientation = UPPER_LEFT
+		# 	pdx_tooltip = "hanako_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# 	scale = 0.5
+		# }
+
+		# buttonType = {
+		# 	name = "hanako_inv_1"
+		# 	position = { x = 940 y = 75 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hanako_inv1"
+		# 	pdx_tooltip = "hanako_inv1_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "hanako_inv_2"
+		# 	position = { x = 1005 y = 75 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hanako_inv2"
+		# 	pdx_tooltip = "hanako_inv2_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }		
+
+		# buttonType = {
+		# 	name = "hanako_inv_3"
+		# 	position = { x = 1085 y = 125 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hanako_inv3"
+		# 	pdx_tooltip = "hanako_inv3_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "hanako_inv_4"
+		# 	position = { x = 1085 y = 195 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hanako_inv4"
+		# 	pdx_tooltip = "hanako_inv4_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# iconType = {
+		# 	name = "noa_azusa"
+		# 	position = { x = 305 y = 535 }
+		# 	spriteType = "GFX_azusa_s"
+		# 	orientation = UPPER_LEFT
+		# 	pdx_tooltip = "azusa_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# 	scale = 0.5
+		# }
+
+		# buttonType = {
+		# 	name = "azusa_inv_1"
+		# 	position = { x = 235 y = 570 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_azusa_inv1"
+		# 	pdx_tooltip = "azusa_inv1_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "azusa_inv_2"
+		# 	position = { x = 235 y = 640 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_azusa_inv2"
+		# 	pdx_tooltip = "azusa_inv2_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }		
+
+		# buttonType = {
+		# 	name = "azusa_inv_3"
+		# 	position = { x = 290 y = 705 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_azusa_inv3"
+		# 	pdx_tooltip = "azusa_inv3_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "azusa_inv_4"
+		# 	position = { x = 365 y = 705 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_azusa_inv4"
+		# 	pdx_tooltip = "azusa_inv4_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# iconType = {
+		# 	name = "noa_hifumi"
+		# 	position = { x = 955 y = 535 }
+		# 	spriteType = "GFX_hifumi_s"
+		# 	orientation = UPPER_LEFT
+		# 	pdx_tooltip = "hifumi_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# 	scale = 0.5
+		# }
+
+		# buttonType = {
+		# 	name = "hifumi_inv_1"
+		# 	position = { x = 1085 y = 570 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hifumi_inv1"
+		# 	pdx_tooltip = "hifumi_inv1_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "hifumi_inv_2"
+		# 	position = { x = 1085 y = 640 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hifumi_inv2"
+		# 	pdx_tooltip = "hifumi_inv2_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }		
+
+		# buttonType = {
+		# 	name = "hifumi_inv_3"
+		# 	position = { x = 1025 y = 705 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hifumi_inv3"
+		# 	pdx_tooltip = "hifumi_inv3_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+		# buttonType = {
+		# 	name = "hifumi_inv_4"
+		# 	position = { x = 950 y = 705 }
+		# 	orientation = UPPER_LEFT
+		# 	spriteType = "GFX_hifumi_inv4"
+		# 	pdx_tooltip = "hifumi_inv4_desc"
+		# 	#pdx_tooltip = "CLOSE"
+		# }
+
+
+		buttonType = {
+			name = "noa_exit"
+			position = { x = 100 y = 100 }
+			spriteType = "GFX_exit"
+			orientation = UPPER_LEFT
+			clicksound = click_close
+			shortcut = "ESCAPE"
+		}
+
+		iconType = {
+			name = "noa_bukebu"
+			position = { x = 430 y = 305 }
+			spriteType = "GFX_bukebu_s"
+			orientation = UPPER_LEFT
+			pdx_tooltip = "bukebu_inv_desc"
+		}
+		gridBoxType = {
+			name = "TRI_investigation_portraits"
+			position = { x = 0 y = 0 }
+		}
+		gridBoxType = {
+			name = "TRI_investigation_buttons"
+			position = { x = 0 y = 0 }
+		}
+
+		instantTextboxType = {
+			name = "investigation_result"
+			position = { x = 300 y = 755 }
+			font = "hoi_30header"
+			text = "investigation_result_text"
+			maxWidth = 780
+			maxHeight = 300
+			format = center
+		}
+	}
+	containerWindowType = {
+		name = "TRI_investigation_open_window"
+		size = { width = 100 height = 100 }
+		position = { x = -85 y = -550 }
+		orientation = lower_right
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+
+		buttonType = {
+			name = "TRI_investigation_open_button"
+			quadTextureSprite = "TRI_investigation_open_button"
+			position = { x = 50 y = 50 }
+			pdx_tooltip = "TRI_investigation_open_button_tt"
+			centerposition = yes
+		}
+	}
+	containerWindowType = {
+		name = "TRI_investigation_character_portrait_container"
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "TRI_investigation_portrait"
+			quadTextureSprite = "GFX_TRI_koharu_s"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "TRI_investigation_portrait_tt"
+			scale = 0.5
+		}
+		iconType = {
+			name = "GFX_TRI_investigation_permission"
+			quadTextureSprite = "GFX_TRI_investigation_permission"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "TRI_investigation_portrait_tt"
+			scale = 0.5
+		}
+	}
+	containerWindowType = {
+		name = "TRI_investigation_button_container"
+		position = { x = 0 y = 0 }
+		buttonType = {
+			name = "TRI_investigation_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_TRI_koharu_inv1"
+			pdx_tooltip = "TRI_investigation_button_tt"
+		}
+
+
+	}
+}

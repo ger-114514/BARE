@@ -1,0 +1,264 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "ALR_resistance_state_136"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_136.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_137"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_137.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_138"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_138.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_139"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_139.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_530"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_530.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_531"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_531.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_532"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_532.png"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_136_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_136_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_137_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_137_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_138_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_138_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_139_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_139_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_530_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_530_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_531_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_531_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ALR_resistance_state_532_big"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_532_big.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_resistance_state_bg"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_bg.png"
+	}
+	spriteType = {
+		name = "ALR_focus_seek_supply_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_seek_supply_icon.png"
+	}
+	spriteType = {
+		name = "ALR_focus_repair_weapon_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_repair_weapon_icon.png"
+	}
+	spriteType = {
+		name = "ALR_focus_large_scale_manufacturing_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_large_scale_manufacturing_icon.png"
+	}
+	spriteType = {
+		name = "ALR_focus_political_consultation_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_political_consultation_icon.png"
+	}
+	spriteType = {
+		name = "ALR_focus_stability_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_political_consultation_icon.png"
+	}
+	spriteType = {
+		name = "ALR_focus_guerrilla_warfare_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_guerrilla_warfare_icon.png"
+	}
+	spriteType = {
+		name = "ALR_focus_farmlands_icon"
+		texturefile = "gfx/interface/Arius/BA_ALR_focus_farmlands_icon.png"
+	}
+
+	progressbartype = {
+		name = "ARI_selected_state_bar_influence"
+		textureFile1 = "gfx/interface/Arius/BA_ARI_selected_state_bar_influence_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ARI_selected_state_bar_influence_2.png"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { x = 123 y = 150 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 1000
+		horizontal = no
+	}
+	spriteType = {
+		name = "ARI_concealment_portrait_wanted"
+		texturefile = "gfx/interface/Arius/BA_ARI_concealment_portrait_wanted.png"
+	}
+	frameAnimatedSpriteType = {
+		name = "ARI_concealment_portrait_1"
+		texturefile = "gfx/interface/Arius/BA_ARI_concealment_portrait_1.png"
+		noOfFrames = 3
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "ARI_concealment_portrait_2"
+		texturefile = "gfx/interface/Arius/BA_ARI_concealment_portrait_2.png"
+		noOfFrames = 3
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "ARI_concealment_portrait_3"
+		texturefile = "gfx/interface/Arius/BA_ARI_concealment_portrait_3.png"
+		noOfFrames = 3
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	spriteType = {
+		name = "ARI_state_modifier_framework"
+		texturefile = "gfx/interface/Arius/BA_ARI_state_modifier_framework.png"
+		noOfFrames = 2
+	}
+	progressbartype = {
+		name = "ARI_suppression_control_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ARI_suppression_control_bar_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ARI_suppression_control_bar_2.png"
+		size = { x = 300 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressbartype = {
+		name = "ARI_suppression_guard_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ARI_suppression_guard_bar_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ARI_suppression_guard_bar_2.png"
+		size = { x = 300 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressbartype = {
+		name = "ARI_suppression_guard_rank_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ARI_suppression_guard_rank_bar_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ARI_suppression_guard_rank_bar_2.png"
+		size = { x = 300 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 4
+	}
+	progressbartype = {
+		name = "ALR_state_influence_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ALR_state_influence_bar_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ALR_state_influence_bar_2.png"
+		size = { x = 300 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "ALR_state_influence_rank_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ARI_suppression_guard_rank_bar_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ALR_state_influence_rank_bar_2.png"
+		size = { x = 300 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 4
+	}
+	progressbartype = {
+		name = "ALR_state_max_influence_rank_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ARI_suppression_guard_rank_bar_2.png"
+		textureFile2 = "gfx/interface/Arius/BA_ALR_max_influence_rank_bar_2.png"
+		size = { x = 300 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 4
+	}
+	progressbartype = {
+		name = "BA_ALR_base_resource_bar"
+		textureFile1 = "gfx/interface/Arius/BA_ALR_base_resource_bar_1.png"
+		textureFile2 = "gfx/interface/Arius/BA_ALR_base_resource_bar_2.png"
+		size = { x = 150 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 1000
+	}
+	spriteType = {
+		name = "BA_ARI_button_with_check"
+		texturefile = "gfx/interface/Arius/BA_ARI_button_with_check.png"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "BA_ARI_switch"
+		texturefile = "gfx/interface/Arius/BA_ARI_switch.png"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_136"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_136.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_137"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_137.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_138"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_138.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_139"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_139.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_530"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_530.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_531"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_531.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "ARI_suppression_state_guard_532"
+		texturefile = "gfx/interface/Arius/BA_ARI_state/BA_ARI_state_guard_532.png"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+}

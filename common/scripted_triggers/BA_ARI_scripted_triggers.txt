@@ -1,0 +1,3 @@
+ARI_resistance_state_interaction_available = {
+    NOT = { check_variable = { ARI_state_base_rank < ARI_state_interaction_available_rank } }
+}

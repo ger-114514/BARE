@@ -1,0 +1,1165 @@
+BARE_Combat_Readiness_count_State = { #手动计算可服役人口
+	set_temp_variable = { #手动计算可服役人口
+		BARE_Combat_Readiness_State_K_count_temp = state_population_k
+	}
+	#获取服役人口修正 适役人口+适役人口系数+地区人口适役系数
+	set_temp_variable = {
+		BARE_Combat_Readiness_State_K_modifier_count_temp = 1
+	}
+	add_to_temp_variable = { #当地人口修正 占领法案用
+		BARE_Combat_Readiness_State_K_modifier_count_temp = modifier@local_manpower
+	}
+	add_to_temp_variable = { #适役人口修正 地区修正用
+		BARE_Combat_Readiness_State_K_modifier_count_temp = modifier@recruitable_population_factor
+	}
+	set_variable = { #地区人口修正
+		BARE_Combat_Readiness_State_K_modifier_count = BARE_Combat_Readiness_State_K_modifier_count_temp
+	}
+
+	set_variable = { #基本人口修正
+		BARE_Combat_Readiness_State_K_modifier_Base_CR = state_population_k
+	}
+
+	multiply_variable = { 
+		BARE_Combat_Readiness_State_K_modifier_Base_CR = BARE_Combat_Readiness_State_K_modifier_count
+	}
+
+	set_temp_variable = { #省份适役人口 占领法案用
+		BARE_Combat_Readiness_State_K_modifier_conscription_temp = modifier@recruitable_population
+	}
+
+
+	set_temp_variable = {
+		BARE_Combat_Readiness_State_K_modifier_non_core_temp = 1
+	}
+
+	controller = { #国家适役人口
+		add_to_temp_variable = { #自定义修正
+			PREV.BARE_Combat_Readiness_State_K_modifier_conscription_temp  = modifier@can_use_combat_readiness_percentage
+		}
+		set_temp_variable = { #人口
+			PREV.BARE_Combat_Readiness_State_K_modifier_count_country_temp = modifier@conscription_factor
+		}
+		add_to_temp_variable = {
+			PREV.BARE_Combat_Readiness_State_K_modifier_count_country_temp = 1
+		}
+		set_variable = {
+			BARE_Combat_Readiness_State_K_modifier_count_country = BARE_Combat_Readiness_State_K_modifier_count_country_temp
+		}
+		set_variable = {#国家适役人口修正
+			PREV.BARE_Combat_Readiness_State_K_modifier_count_country = BARE_Combat_Readiness_State_K_modifier_count_country_temp
+		}
+		set_variable = {#国家适役人口修正
+			PREV.BARE_Combat_Readiness_State_K_modifier_conscription = BARE_Combat_Readiness_State_K_modifier_conscription_temp
+		}
+
+		if = {
+			limit = {
+				not = {
+					PREV = {
+						is_core_of = PREV
+					}
+				}
+			}
+			set_temp_variable = {
+				PREV.BARE_Combat_Readiness_State_K_modifier_non_core_temp = 0.02
+			}
+			add_to_temp_variable = {
+				PREV.BARE_Combat_Readiness_State_K_modifier_non_core_temp = modifier@non_core_manpower
+			}
+			add_to_temp_variable = {
+				PREV.BARE_Combat_Readiness_State_K_modifier_non_core_temp = PREV.modifier@local_non_core_manpower
+			}
+
+			set_variable = {#非核心修正
+				PREV.BARE_Combat_Readiness_State_K_modifier_non_core = BARE_Combat_Readiness_State_K_modifier_non_core_temp
+			}
+
+			set_variable = { #非核心人口计数
+				PREV.BARE_Combat_Readiness_State_K_modifier_non_core_CR = PREV.BARE_Combat_Readiness_State_K_modifier_Base_CR
+			}
+			multiply_variable = {
+				PREV.BARE_Combat_Readiness_State_K_modifier_non_core_CR = PREV.BARE_Combat_Readiness_State_K_modifier_non_core
+			}
+
+		}
+
+	}
+	#最低为0
+	clamp_temp_variable = {
+		var = BARE_Combat_Readiness_State_K_modifier_count_temp
+		min = 0
+	}
+	clamp_temp_variable = {
+		var = BARE_Combat_Readiness_State_K_modifier_count_country_temp
+		min = 0
+	}
+	clamp_temp_variable = {
+		var = BARE_Combat_Readiness_State_K_modifier_conscription_temp
+		min = 0
+	}
+	clamp_temp_variable = {
+		var = BARE_Combat_Readiness_State_K_modifier_non_core_temp
+		min = 0
+	}
+	#结果运算
+	multiply_temp_variable = {
+		BARE_Combat_Readiness_State_K_count_temp = BARE_Combat_Readiness_State_K_modifier_count_temp #当地人口修正
+	}
+	multiply_temp_variable = {
+		BARE_Combat_Readiness_State_K_count_temp = BARE_Combat_Readiness_State_K_modifier_count_country_temp #全局人口修正
+	}
+	multiply_temp_variable = {
+		BARE_Combat_Readiness_State_K_count_temp = BARE_Combat_Readiness_State_K_modifier_conscription_temp #适役人口修正
+	}
+	multiply_temp_variable = {
+		BARE_Combat_Readiness_State_K_count_temp = BARE_Combat_Readiness_State_K_modifier_non_core_temp #非核心人口修正
+	}
+	set_variable = {
+		BARE_Combat_Readiness_State_K_count = BARE_Combat_Readiness_State_K_count_temp
+	}
+	#最低0
+	clamp_variable = {
+		var = BARE_Combat_Readiness_State_K_count
+		min = 0
+	}
+}
+
+
+BARE_Combat_Readiness_count_Country = { #战备数值计算 国家作用域
+	#可用战备计算K
+	set_variable = {
+		BARE_Combat_Readiness_Country_K_country = 0
+	} 
+	#核心战备计数
+	set_variable = {
+		BARE_Combat_Readiness_Country_K_State_Core = 0
+	} 
+	#非核心战备计数
+	set_variable = {
+		BARE_Combat_Readiness_Country_K_State_Non_Core = 0
+	} 
+	#总战备计数
+	set_variable = {
+		BARE_Combat_Readiness_Country_K_State_All = 0
+	} 
+	#非核心战备补正计数
+	set_variable = {
+		BARE_Combat_Readiness_Country_K_State_Non_Core_Modifier = 0
+	} 
+	every_state = {
+		limit = {
+			is_controlled_by = PREV
+		}
+		add_to_variable = {
+			PREV.BARE_Combat_Readiness_Country_K_country = BARE_Combat_Readiness_State_K_count
+		}
+		if = {
+			limit = {
+				is_core_of = PREV
+			}
+
+			add_to_variable = {
+				PREV.BARE_Combat_Readiness_Country_K_State_Core = BARE_Combat_Readiness_State_K_modifier_Base_CR
+			}
+		}
+		else = {
+			add_to_variable = {
+				PREV.BARE_Combat_Readiness_Country_K_State_Non_Core = BARE_Combat_Readiness_State_K_modifier_Base_CR
+			}
+			add_to_variable = {
+				PREV.BARE_Combat_Readiness_Country_K_State_Non_Core_Modifier = BARE_Combat_Readiness_State_K_modifier_non_core_CR
+			}
+		}
+	}
+	add_to_variable = {
+		BARE_Combat_Readiness_Country_K_State_All = BARE_Combat_Readiness_Country_K_State_Core
+	}
+	add_to_variable = {
+		BARE_Combat_Readiness_Country_K_State_All = BARE_Combat_Readiness_Country_K_State_Non_Core
+	}
+	clamp_variable = {
+		var = BARE_Combat_Readiness_Country_K_country
+		min = 0
+	}
+	#最低0
+	#常备战备计算
+	#为可用战备上限的比例
+	#还是最低0
+	set_variable = {
+		BARE_Free_Combat_Readiness_Country_K_country = BARE_Combat_Readiness_Country_K_country
+	}
+	multiply_variable = {
+		BARE_Free_Combat_Readiness_Country_K_country = modifier@free_cost_combat_readiness_percentage
+	}
+	add_to_variable = {
+		BARE_Free_Combat_Readiness_Country_K_country = modifier@free_cost_combat_readiness
+	}
+	clamp_variable = {
+		var = BARE_Free_Combat_Readiness_Country_K_country
+		min = 0
+	}
+	#下一轮战备恢复计算 #默认是最大战备的1%加可用战备的5%
+	#计算可用战备
+	#获取服役人数
+
+	#冰箱
+	set_temp_variable = {
+		BALP_Combat_Readiness_Deployment_queue_Temp = amount_manpower_in_deployment_queue
+	}
+	if = { #溢出的话默认2.1M
+		limit = {
+			check_variable = {
+				BALP_Combat_Readiness_Deployment_queue_Temp < 0
+			}
+		}
+		set_temp_variable = {
+			BALP_Combat_Readiness_Deployment_queue_Temp = 2100000
+		}
+	}
+	divide_temp_variable = {
+		BALP_Combat_Readiness_Deployment_queue_Temp = 1000
+	}
+	set_variable = {
+		BALP_Combat_Readiness_Deployment_queue_Text = BALP_Combat_Readiness_Deployment_queue_Temp
+	}
+	set_variable = {#部署单位带来的人数
+		BALP_Combat_Readiness_Cost_Unit_k = BALP_Combat_Readiness_Deployment_queue_Temp
+	}
+	# add_to_variable = {
+	# 	BALP_Combat_Readiness_Cost_Unit_k = deployed_army_manpower_k
+	# }
+
+	BARE_Combat_Readiness_Count_Land_Count_Effect = yes
+	add_to_variable = {
+		BALP_Combat_Readiness_Cost_Unit_k = BARE_Combat_Readiness_Count_Land_Unit
+	}
+
+	add_to_variable = {
+		BALP_Combat_Readiness_Cost_Unit_k = deployed_navy_manpower_k
+	}
+	add_to_variable = {
+		BALP_Combat_Readiness_Cost_Unit_k = deployed_airforce_manpower_k
+	}
+
+	#驻军
+	set_temp_variable = {
+		BALP_Combat_Readiness_Garrison_Need_Temp = garrison_manpower_need
+	}
+	if = { #溢出的话默认2.1M
+		limit = {
+			check_variable = {
+				BALP_Combat_Readiness_Garrison_Need_Temp < 0
+			}
+		}
+		set_temp_variable = {
+			BALP_Combat_Readiness_Garrison_Need_Temp = 2100000
+		}
+	}
+	divide_temp_variable = {
+		BALP_Combat_Readiness_Garrison_Need_Temp = 1000
+	}
+	set_variable = {
+		BALP_Combat_Readiness_Garrison_Need_Text = BALP_Combat_Readiness_Garrison_Need_Temp
+	}
+	add_to_variable = {
+		BALP_Combat_Readiness_Cost_Unit_k = BALP_Combat_Readiness_Garrison_Need_Temp
+	}
+
+
+
+
+
+
+	#max_available_manpower_k  部署人力+人力池+驻军
+
+	set_variable = { #使用的免费战备数量 部署单位优先消耗这个
+		BARE_Combat_Readinness_Cost_Free_Use_k = BALP_Combat_Readiness_Cost_Unit_k
+	}
+	clamp_variable = {
+		var = BARE_Combat_Readinness_Cost_Free_Use_k
+		min = 0
+		max = BARE_Free_Combat_Readiness_Country_K_country
+	}
+	#剩余免费战备
+	set_variable = {
+		BARE_Combat_Readinness_Cost_Free_Remind_k =  BARE_Free_Combat_Readiness_Country_K_country
+	}
+	subtract_from_variable = {
+		BARE_Combat_Readinness_Cost_Free_Remind_k = BALP_Combat_Readiness_Cost_Unit_k
+	}
+
+	clamp_variable = {
+		var = BARE_Combat_Readinness_Cost_Free_Remind_k
+		min = 0
+		max = BARE_Free_Combat_Readiness_Country_K_country
+	}
+
+	#然后减去免费战备，获取占用的战备数量
+	#max_available_manpower_k  部署人力+人力池+驻军
+	set_variable = {
+		BARE_Combat_Readinness_Cost_Not_Free_k = BALP_Combat_Readiness_Cost_Unit_k
+	}
+	subtract_from_variable = {
+		BARE_Combat_Readinness_Cost_Not_Free_k = BARE_Combat_Readinness_Cost_Free_Use_k
+	}
+	clamp_variable = { #最大战备最低0
+		var = BARE_Combat_Readinness_Cost_Not_Free_k 
+		min = 0
+	}
+	set_variable = { #后备战备上限
+		BARE_Combat_Readinness_Remain = BARE_Combat_Readiness_Country_K_country
+	}
+	subtract_from_variable = {
+		BARE_Combat_Readinness_Remain = BARE_Combat_Readinness_Cost_Not_Free_k
+	}
+	clamp_variable = {
+		var = BARE_Combat_Readinness_Remain
+		min = 0
+		max = BARE_Combat_Readiness_Country_K_country
+	}
+
+
+	#获取战备缺口 现有总人力-
+	BARE_Count_Has_Combat_Readiness_left = yes
+
+	set_temp_variable = {
+		BARE_Count_Has_Combat_Readiness_left_sub = BARE_Combat_Readinness_Remain
+	}
+	subtract_from_temp_variable = {
+		BARE_Count_Has_Combat_Readiness_left_sub = BARE_Combat_Readiness_left
+	}
+
+	
+
+	#获取下次恢复战备  #默认是最大战备的1%加战备缺口的8%，不大于上限
+	set_temp_variable = {
+		BARE_Combat_Readinness_Recover_Cost_Num_temp = BARE_Count_Has_Combat_Readiness_left_sub
+	}
+	multiply_temp_variable = {
+		BARE_Combat_Readinness_Recover_Cost_Num_temp = global.BARE_Combat_Readiness_Recover_Cost
+	}
+	
+	set_temp_variable = {
+		BARE_Combat_Readinness_Recover_All_Num_temp = BARE_Combat_Readiness_Country_K_country
+	}
+	multiply_temp_variable = {
+		BARE_Combat_Readinness_Recover_All_Num_temp = global.BARE_Combat_Readiness_Recover_Max
+	}
+	#修正
+	
+
+
+	set_variable = {
+		BARE_Combat_Readinness_Recover_k = BARE_Combat_Readinness_Recover_Cost_Num_temp
+	}
+	add_to_variable = {
+		BARE_Combat_Readinness_Recover_k = BARE_Combat_Readinness_Recover_All_Num_temp
+	}
+
+	set_variable = {
+		BARE_Combat_Readinness_Recover_k_Normal = BARE_Combat_Readinness_Recover_k
+	}
+
+	set_temp_variable = {
+		BARE_combat_readiness_recovery_percentage_temp = 1
+	}
+	add_to_temp_variable = {
+		BARE_combat_readiness_recovery_percentage_temp = modifier@combat_readiness_recovery_percentage
+	}
+	clamp_temp_variable = {
+		var = BARE_combat_readiness_recovery_percentage_temp
+		min = 0
+	}
+	set_variable = {
+		BARE_combat_readiness_recovery_percentage_text = BARE_combat_readiness_recovery_percentage_temp
+	}
+	multiply_variable = {
+		BARE_Combat_Readinness_Recover_k = BARE_combat_readiness_recovery_percentage_temp
+	}
+
+	add_to_variable = {
+		BARE_Combat_Readinness_Recover_k = modifier@combat_readiness_recovery
+	}
+
+	clamp_variable = {
+		var = BARE_Combat_Readinness_Recover_k
+		min = 0
+		max = BARE_Count_Has_Combat_Readiness_left_sub
+	}
+	#计算完毕
+
+	#开局设置
+	if = {
+		limit = {
+			has_idea = BARE_Combat_Readiness_Mid_Idea
+			has_global_flag = BARE_Week_Is_Pass
+		}
+		remove_ideas = BARE_Combat_Readiness_Mid_Idea
+		set_variable = {
+			BARE_Combat_Readiness_Add_Manpower =  BARE_Combat_Readinness_Remain #开始是无法正常计算后备战备的，因为默认人口的存在
+		}
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					BARE_Combat_Readiness_Add_Manpower > 1999
+				}
+			}
+			add_manpower = 2000000
+			add_to_variable = {
+				BARE_Combat_Readiness_Add_Manpower = -2000
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					BARE_Combat_Readiness_Add_Manpower > 0
+				}
+			}
+			multiply_variable = {
+				BARE_Combat_Readiness_Add_Manpower = 1000
+			}
+			add_manpower = BARE_Combat_Readiness_Add_Manpower
+		}
+	}
+}
+
+
+BARE_Combat_Readiness_Get_Manpower = {
+	set_temp_variable = {
+		BARE_Combat_Readinness_Recover_k_temp = BARE_Combat_Readinness_Recover_k
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				BARE_Combat_Readinness_Recover_k_temp > 1999
+			}
+		}
+		add_manpower = 2000000
+		add_to_temp_variable = {
+			BARE_Combat_Readinness_Recover_k_temp = -2000
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				BARE_Combat_Readinness_Recover_k_temp > 0
+			}
+		}
+		multiply_temp_variable = {
+			BARE_Combat_Readinness_Recover_k_temp = 1000
+		}
+		add_manpower = BARE_Combat_Readinness_Recover_k_temp
+		
+	}
+}
+
+#
+BARE_Combat_Readiness_Init = {
+	set_variable = {
+		global.BARE_Combat_Readiness_Recover_Max = 0.01
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Recover_Cost = 0.08
+	}
+	BARE_Combat_Readiness_Count_Start_Init = yes
+	every_state = {
+		BARE_Combat_Readiness_count_State = yes
+	}
+	every_country = {
+		BARE_Combat_Readiness_Start_Manpower_Count = yes
+		BARE_Combat_Readiness_count_Country = yes
+	}
+	
+}
+
+#手动统计部署的营数
+BARE_Combat_Readiness_Count_Land_Count_Effect = {
+	set_temp_variable = {
+		BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 0
+	}
+	set_variable = {
+		BARE_Combat_Readiness_Count_Land_Unit = 0
+	}
+
+	for_each_loop = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+
+		meta_effect = {
+			unitName = "[?v.GetTokenKey]"
+			text = {
+				set_temp_variable = {
+					BARE_Combat_Readiness_Count_Land_unit_Have_Num = num_battalions_with_type@[unitName]
+				}
+				multiply_temp_variable = {
+					BARE_Combat_Readiness_Count_Land_unit_Have_Num  = global.BARE_Combat_Readiness_Count_[unitName]
+				}
+				add_to_variable = {
+					BARE_Combat_Readiness_Count_Land_Unit = BARE_Combat_Readiness_Count_Land_unit_Have_Num
+				}
+			}
+		}
+
+	}
+
+	# while_loop_effect = {
+	# 	limit = {
+	# 		check_variable = {
+	# 			BARE_Combat_Readiness_Count_Land_Unit_Temp_Var < global.BARE_Combat_Readiness_Count_All_Num
+	# 		}
+	# 	}
+
+	# 	meta_effect = {
+	# 		unitName = "[Get_BARE_Combat_Readiness_Count_Land_Unit_Name]"
+	# 		text = {
+	# 			set_temp_variable = {
+	# 				BARE_Combat_Readiness_Count_Land_unit_Have_Num = num_battalions_with_type@[unitName]
+	# 			}
+	# 			multiply_temp_variable = {
+	# 				BARE_Combat_Readiness_Count_Land_unit_Have_Num  = global.BARE_Combat_Readiness_Count_[unitName]
+	# 			}
+	# 			add_to_variable = {
+	# 				BARE_Combat_Readiness_Count_Land_Unit = BARE_Combat_Readiness_Count_Land_unit_Have_Num
+	# 			}
+	# 		}
+	# 	}
+
+	# 	add_to_temp_variable = {
+	# 		BARE_Combat_Readiness_Count_Land_Unit_Temp_Var = 1
+	# 	}
+	# }
+}
+
+#单位统计 开局计算
+#有新单位添加时要看这个
+#单位是K
+BARE_Combat_Readiness_Count_Start_Init = {
+	# set_variable = { #有多少种单位
+	# 	global.BARE_Combat_Readiness_Count_All_Num = 60
+	# } 
+	#下面是每个单位占用的战备
+	#步兵 7个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry = 0.1
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry_heavy = 0.12
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry_heavy
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry_sp = 0.12
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry_sp
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry_sp_bbl = 0.12
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry_sp_bbl
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry_sf  = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry_sf
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry_am = 0.015
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry_am
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_infantry_militia = 0.1
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:infantry_militia
+	}
+
+
+	# set_variable = {
+	# 	global.BARE_Combat_Readiness_Count_infantry_babala = 0.6
+	# }
+	# add_to_array = {
+	# 	array = global.BARE_Combat_Readiness_Unit_Type_Array
+	# 	value = token:infantry_babala
+	# }
+
+	#火炮（支援火力）7个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_la = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_la
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_ha  = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_ha
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_sp = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_sp
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_aa = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_aa
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_su_la = 0.03
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_su_la
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_su_ha  = 0.03
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_su_ha
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_fire_support_team_su_sa = 0.03
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:fire_support_team_su_sa
+	}
+	#步战车 8个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_ifv_unit = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:ifv_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_ifv_artillery_unit  = 0.105
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:ifv_artillery_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_ifv_at_unit = 0.105
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:ifv_at_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_ifv_aa_unit = 0.105
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:ifv_aa_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_apc_unit = 0.14
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:apc_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_apc_artillery_unit  = 0.1
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:apc_artillery_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_apc_at_unit = 0.1
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:apc_at_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_apc_aa_unit = 0.1
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:apc_aa_unit
+	}
+
+
+
+	#坦克 12个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_armor = 0.16
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_armor
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_sp_artillery_brigade = 0.12
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_sp_artillery_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_tank_destroyer_brigade = 0.12
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_tank_destroyer_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_sp_anti_air_brigade = 0.11
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_sp_anti_air_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_armor = 0.18
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_armor
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_sp_artillery_brigade = 0.14
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_sp_artillery_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_tank_destroyer_brigade = 0.14
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_tank_destroyer_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_sp_anti_air_brigade = 0.13
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_sp_anti_air_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_armor = 0.2
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_armor
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_sp_artillery_brigade = 0.16
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_sp_artillery_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_tank_destroyer_brigade = 0.16
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_tank_destroyer_brigade
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_sp_anti_air_brigade = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_sp_anti_air_brigade
+	}
+	#机甲 12个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_bm_unit = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_bm_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_bm_sp_artillery_unit = 0.13
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_bm_sp_artillery_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_bm_tank_destroyer_unit = 0.13
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_bm_tank_destroyer_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_light_bm_sp_anti_air_unit = 0.12
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:light_bm_sp_anti_air_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_bm_unit = 0.17
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_bm_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_bm_sp_artillery_unit = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_bm_sp_artillery_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_bm_tank_destroyer_unit = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_bm_tank_destroyer_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_medium_bm_sp_anti_air_unit = 0.14
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:medium_bm_sp_anti_air_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_bm_unit = 0.19
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_bm_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_bm_sp_artillery_unit = 0.17
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_bm_sp_artillery_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_bm_tank_destroyer_unit = 0.17
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_bm_tank_destroyer_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_heavy_bm_sp_anti_air_unit = 0.16
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:heavy_bm_sp_anti_air_unit
+	}
+	#空输 2个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_air_assest_unit = 0.15
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:air_assest_unit
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_air_attack_unit = 0.13
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:air_attack_unit
+	}
+	#侦查支援连 5个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_recon = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:recon
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_apc_recon = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:apc_recon
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_ifv_recon = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:ifv_recon
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_mbt_recon = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:mbt_recon
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_helicopter_recon = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:helicopter_recon
+	}
+	#其他支援连 8个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_engineer = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:engineer
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_logistics_company = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:logistics_company
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_motorized_logistics_company = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:motorized_logistics_company
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_helicopter_logistics_company = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:helicopter_logistics_company
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_maintenance_company = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:maintenance_company
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_military_police = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:military_police
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_signal_company = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:signal_company
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_field_hospital = 0.05
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:field_hospital
+	}
+
+	   #格黑娜特殊单位X2
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_royal_artillery_support_company_units = 0.05
+	}
+    add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:field_artillery_units
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_assault_engineer_units = 0.05
+	}
+    add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:assault_engineer_units
+	}
+
+	#圣三一特殊单位X4
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_royal_artillery_support_company_units = 0.05
+	}
+    add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:royal_artillery_support_company_units
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_security_gendarmerie_units = 0.05
+	}
+    add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:security_gendarmerie_units
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_elite_battlefield_hospital_units = 0.05
+	}
+    add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:elite_battlefield_hospital_units
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_cattlefield_chaplains_units = 0.05
+	}
+    add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:cattlefield_chaplains_units
+	}
+
+
+
+
+
+	
+		
+	
+}
+#手动计算剩余人力
+BARE_Count_Has_Combat_Readiness_left = {
+	set_variable = { #总军队人力 由于奇怪的BUG变成了剩余人力
+		BARE_Combat_Readiness_left = max_available_manpower_k
+	}
+
+	# subtract_from_variable = {
+	# 	BARE_Combat_Readiness_left = deployed_airforce_manpower_k
+	# }
+	# subtract_from_variable = {
+	# 	BARE_Combat_Readiness_left = deployed_navy_manpower_k
+	# }
+	# subtract_from_variable = {
+	# 	BARE_Combat_Readiness_left = deployed_army_manpower_k
+	# }
+	
+	# 	#驻军 #因为无法获取驻军的实时情况，默认驻军永远齐装满员，这会减少驻军杀伤的效果
+	# set_temp_variable = {
+	# 	BALP_Combat_Readiness_Garrison_Need_Temp = garrison_manpower_need
+	# }
+	# if = { #溢出的话默认2.1M
+	# 	limit = {
+	# 		check_variable = {
+	# 			BALP_Combat_Readiness_Garrison_Need_Temp < 0
+	# 		}
+	# 	}
+	# 	set_temp_variable = {
+	# 		BALP_Combat_Readiness_Garrison_Need_Temp = 2100000
+	# 	}
+	# }
+	# divide_temp_variable = {
+	# 	BALP_Combat_Readiness_Garrison_Need_Temp = 1000
+	# }
+	# subtract_from_variable = {
+	# 	BARE_Combat_Readiness_left = BALP_Combat_Readiness_Garrison_Need_Temp
+	# }
+
+	
+	# #冰箱
+	# set_temp_variable = {
+	# 	BALP_Combat_Readiness_Deployment_queue_Temp = amount_manpower_in_deployment_queue
+	# }
+	# if = { #溢出的话默认2.1M
+	# 	limit = {
+	# 		check_variable = {
+	# 			BALP_Combat_Readiness_Deployment_queue_Temp < 0
+	# 		}
+	# 	}
+	# 	set_temp_variable = {
+	# 		BALP_Combat_Readiness_Deployment_queue_Temp = 2100000
+	# 	}
+	# }
+	# divide_temp_variable = {
+	# 	BALP_Combat_Readiness_Deployment_queue_Temp = 1000
+	# }
+	# subtract_from_variable = {
+	# 	BARE_Combat_Readiness_left = BALP_Combat_Readiness_Deployment_queue_Temp
+	# }
+
+	clamp_variable = { #最低0，最大后备上限
+		var = BARE_Combat_Readiness_left
+		min = 0
+		max = BARE_Combat_Readinness_Remain
+	}
+}
+
+
+
+#开局设置，先把人力扣光
+BARE_Combat_Readiness_Start_Manpower_Count = {
+	if = { #计算开始人力
+		limit = {
+			has_idea = BARE_Combat_Readiness_Start_Idea
+		}
+		remove_ideas = BARE_Combat_Readiness_Start_Idea
+		add_ideas = BARE_Combat_Readiness_Mid_Idea
+		set_temp_variable = {
+			BARE_Combat_Readiness_Start_Manpower_Count_K = manpower_k
+		}
+
+		divide_temp_variable = {
+			BARE_Combat_Readiness_Start_Manpower_Garrison_Count_K = 1000
+		}
+		subtract_from_temp_variable = {
+			BARE_Combat_Readiness_Start_Manpower_Count_K = BARE_Combat_Readiness_Start_Manpower_Garrison_Count_K
+		}
+		
+		#然后给爷扣人力
+		while_loop_effect = {
+			limit = { 
+				check_variable = {
+					BARE_Combat_Readiness_Start_Manpower_Count_K > 2000
+				}
+			}
+			add_manpower = -2000000
+			add_to_temp_variable = {
+				BARE_Combat_Readiness_Start_Manpower_Count_K = -2000
+			}
+		}
+		
+		if = {
+			limit = {
+				check_variable = {
+					BARE_Combat_Readiness_Start_Manpower_Count_K > 0
+				}
+			}
+			multiply_temp_variable = {
+				BARE_Combat_Readiness_Start_Manpower_Count_K = 1000
+			}
+			set_temp_variable = {
+				BARE_Combat_Readiness_Start_Manpower_Count_K_sub = 0
+			}
+			subtract_from_temp_variable = {
+				BARE_Combat_Readiness_Start_Manpower_Count_K_sub = BARE_Combat_Readiness_Start_Manpower_Count_K
+			}
+			add_manpower = BARE_Combat_Readiness_Start_Manpower_Count_K_sub
+		}
+	}
+
+	
+
+}

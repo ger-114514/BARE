@@ -1,0 +1,349 @@
+division_template = {
+	name = "阴阳部守卫部队"		
+
+	regiments = {
+		fire_support_team_la = {x = 2 y = 0}
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+	}
+	support = {
+		recon = { x = 0 y = 0}
+	}
+}
+
+division_template = {
+	name = "阴阳部神鬼卫"		
+
+	regiments = {
+		infantry_sp = {x = 0 y = 0}
+		infantry_sp = {x = 0 y = 1}
+		infantry_sp = {x = 0 y = 2}
+		infantry_sp = {x = 1 y = 0}
+		infantry_sp = {x = 1 y = 1}
+		infantry_sp = {x = 1 y = 2}
+		fire_support_team_sp = {x = 2 y = 0}
+	}
+	support = {
+		recon = { x = 0 y = 0}
+	}
+}
+
+division_template = {
+	name = "阴阳部机械化分队"		
+
+	regiments = {
+		light_armor = {x = 0 y = 0}
+		light_armor = {x = 0 y = 1}
+		light_armor = {x = 1 y = 0}
+		light_armor = {x = 1 y = 1}
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "百花缭乱维和队"		
+
+	regiments = {
+		infantry = {x = 1 y = 1}
+		infantry = {x = 1 y = 2}
+		infantry = {x = 1 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+		infantry = {x = 0 y = 0}
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+}
+
+
+division_template = {
+	name = "百花缭乱快速反应小队"		
+
+	regiments = {
+		apc_unit = {x = 1 y = 1}
+		apc_unit = {x = 1 y = 0}
+		apc_unit = {x = 1 y = 2}
+		apc_unit = {x = 0 y = 1}
+		apc_unit = {x = 0 y = 0}
+		apc_unit = {x = 0 y = 2}
+		apc_artillery_unit = {x = 2 y = 0}
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "忍者小队"		
+
+	regiments = {
+		infantry_sf = {x = 1 y = 1}
+		infantry_sf = {x = 1 y = 0}
+		infantry_sf = {x = 0 y = 1}
+		infantry_sf = {x = 0 y = 0}
+	}
+	support = {
+		recon = { x = 0 y = 0}
+	}
+}
+
+
+division_template = {
+	name = "庆典维和小队"		
+
+	regiments = {
+		infantry = {x = 1 y = 0}
+		infantry = {x = 1 y = 1}
+		infantry = {x = 0 y = 0}
+		infantry = {x = 0 y = 1}
+		infantry = {x = 0 y = 2}
+	}
+	support = {
+		logistics_company = { x = 0 y = 0}
+	}
+}
+
+
+division_template = {
+	name = "百鬼夜行防卫中队"		
+
+	regiments = {
+		infantry = {x = 1 y = 0}
+		infantry = {x = 1 y = 1}
+		infantry = {x = 0 y = 0}
+		infantry = {x = 0 y = 1}
+	}
+	support = {
+	}
+}
+
+
+##location是province的ID
+units = {
+	division= {	 #一个师
+		name = "阴阳部守卫部队第一连“伏见”"
+		location = 7237
+		division_template = "阴阳部守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "阴阳部守卫部队第二连“竹取”"
+		location = 3459
+		division_template = "阴阳部守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "阴阳部守卫部队第三连“源”"
+		location = 5975
+		division_template = "阴阳部守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "阴阳部守卫部队第四连“落洼”"
+		location = 3676
+		division_template = "阴阳部守卫部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "阴阳部神鬼卫第一分队“道”"
+		location = 4756
+		division_template = "阴阳部神鬼卫" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "阴阳部神鬼卫第二分队“阴”"
+		location = 2188
+		division_template = "阴阳部神鬼卫" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "阴阳部神鬼卫第三分队“阳”"
+		location = 300
+		division_template = "阴阳部神鬼卫" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "百花缭乱第1“三日月宗近”中队"
+		location = 7781
+		division_template = "百花缭乱维和队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百花缭乱第2“数珠丸恒次”中队"
+		location = 7451
+		division_template = "百花缭乱维和队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百花缭乱第3“大典太光世”中队"
+		location = 2287
+		division_template = "百花缭乱维和队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百花缭乱第4“鬼丸国纲”中队"
+		location = 7575
+		division_template = "百花缭乱维和队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百花缭乱第5“萤丸”中队"
+		location = 8934
+		division_template = "百花缭乱维和队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {	 #一个师
+		name = "百花缭乱第1“千子村正”快反小队"
+		location = 2787
+		division_template = "百花缭乱快速反应小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百花缭乱第2“宗三左文字”快反小队"
+		location = 10358
+		division_template = "百花缭乱快速反应小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "忍术研究部第1“飞雷神”忍者小队"
+		location = 2285
+		division_template = "忍者小队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "忍术研究部第2“神威”忍者小队"
+		location = 10455
+		division_template = "忍者小队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "忍术研究部第3“黄泉比良坂”忍者小队"
+		location = 4410
+		division_template = "忍者小队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "庆典运用部第1“四季山水”后勤小队"
+		location = 9117
+		division_template = "庆典维和小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "庆典运用部第2“洛中洛外”后勤小队"
+		location = 7451
+		division_template = "庆典维和小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "庆典运用部第3“唐狮子”后勤小队"
+		location = 1992
+		division_template = "庆典维和小队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "百鬼夜行防卫第1“鸟取”中队"
+		location = 10635
+		division_template = "百鬼夜行防卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百鬼夜行防卫第2“松岛”中队"
+		location = 656
+		division_template = "百鬼夜行防卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百鬼夜行防卫第3“八郎湖”中队"
+		location = 9105
+		division_template = "百鬼夜行防卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百鬼夜行防卫第4“月山”中队"
+		location = 206
+		division_template = "百鬼夜行防卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百鬼夜行防卫第5“出云”中队"
+		location = 8479
+		division_template = "百鬼夜行防卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {	 #一个师
+		name = "百鬼夜行防卫第6“樱岛”中队"
+		location = 4207
+		division_template = "百鬼夜行防卫中队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	
+}

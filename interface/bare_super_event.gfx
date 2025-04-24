@@ -1,0 +1,78 @@
+
+spriteTypes = {	
+	#超事件1
+	SpriteType = {
+		name = "GFX_BARE_SuperEvent_BG_1"
+		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_BG_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_BARE_SuperEvent_1_Point"
+		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_1_Point.dds"
+	}
+	SpriteType = {
+		name = "GFX_BARE_SuperEvent_1_Close"
+		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_1_Close.dds"
+	}
+
+	#超事件1图片
+	SpriteType = {
+		name = "GFX_BARE_SuperEvent_1_SECOND_EDEN_TREATY"
+		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEventPictures/SuperEvent_1_Photo_1.dds"
+	}
+
+	#超事件2
+
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_close_button"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_button.dds"
+		TransparenceCheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_close_button_frame"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_button_frame.dds"
+		TransparenceCheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_title"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_title.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_frame"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_frame.dds"
+	}
+	#超事件2图片
+	############################################################
+	
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_trinity_home.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_NORMAL"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_normal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_DOUBLE_TWELVE_COUP"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/double_twelve_coup.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/red_winter_civil_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_CAESAR_COUP_FAILED"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/caesar_coup_failed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_MIKA_COUP_ARI"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/mika_coup_ari.dds"
+	}
+}

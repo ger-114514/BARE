@@ -1,0 +1,922 @@
+add_namespace = ARI_beatrice
+add_namespace = ARI_beatrice_revolt
+add_namespace = ARI_beatrice_diplomacy
+add_namespace = ARI_beatrice_operations
+#开篇
+country_event = {
+    id = ARI_beatrice.1
+    title = ARI_beatrice.1.t
+    desc = ARI_beatrice.1.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    #突袭成功
+    option = {
+        name = ARI_beatrice.1.a
+        #民工+2
+        capital_scope = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+            }
+        }
+        ai_chance = { base = 100 }
+    }
+    # #抵抗
+    # option = {
+    #     name = ARI_beatrice.1.b
+    #     set_country_flag = ALR_resistance_option_1
+    #     custom_effect_tooltip = ALR_resistance_option_tt
+    #     country_event = {
+    #         id = ARI_beatrice.2
+    #         days = 3
+    #     }
+    #     ai_chance = { base = 0 }
+    # }
+}
+#你将如闪电般归来
+country_event = {
+    id = ARI_beatrice.2
+    title = ARI_beatrice.2.t
+    desc = ARI_beatrice.2.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.2.a
+    }
+}
+#被奴役者们
+country_event = {
+    id = ARI_beatrice.3
+    title = ARI_beatrice.3.t
+    desc = ARI_beatrice.3.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    #突袭成功
+    option = {
+        name = ARI_beatrice.3.a
+        #军工+2
+        capital_scope = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+            }
+        }
+        ai_chance = { base = 100 }
+    }
+    # #抵抗
+    # option = {
+    #     name = ARI_beatrice.3.b
+    #     trigger = { has_country_flag = ALR_resistance_option_1 }
+    #     custom_effect_tooltip = ALR_resistance_option_tt
+    #     set_country_flag = ALR_resistance_option_2
+    #     ai_chance = { base = 0 }
+    # }
+}
+#特殊小队
+country_event = {
+    id = ARI_beatrice.4
+    title = ARI_beatrice.4.t
+    desc = ARI_beatrice.4.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    #愿以后我们不会在战场上再见
+    option = {
+        name = ARI_beatrice.4.a
+        ARI_saori = {
+            add_skill_level = 1
+            add_attack = 1
+            add_defense = 1
+            add_planning = 1
+            add_logistics = 1
+        }
+        ai_chance = { base = 100 }
+    }
+    # #愿终有一天我们可以并肩作战
+    # option = {
+    #     name = ARI_beatrice.4.b
+    #     trigger = { has_country_flag = ALR_resistance_option_2 }
+    #     custom_effect_tooltip = ALR_resistance_option_tt
+    #     set_country_flag = ALR_resistance_option_3
+    #     ai_chance = { base = 0 }
+    # }
+}
+# #TODO:换线事件
+# country_event = {
+#     id = ARI_beatrice.5
+#     title = ARI_beatrice.5.t
+#     desc = ARI_beatrice.5.desc
+#     #picture =  
+#     immediate = {
+#         hidden_effect = {
+#             ALR = {
+#                 complete_national_focus = ALR_glimmer_of_life
+#                 transfer_state = 139
+#                 add_state_core = 139
+#                 BARE_Combat_Readiness_count_Country = yes
+#                 change_tag_from = ARI
+#             }
+#             remove_state_core = 139
+#         }
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ARI_beatrice.5.a
+#         clr_country_flag = ALR_resistance_option_1
+#         clr_country_flag = ALR_resistance_option_2
+#         clr_country_flag = ALR_resistance_option_3
+#     }
+# }
+
+#仪式实验
+country_event = {
+    id = ARI_beatrice.6
+    title = ARI_beatrice.6.t
+    desc = ARI_beatrice.6.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.6.a
+    }
+}
+#数秘术定期会议
+country_event = {
+    id = ARI_beatrice.7
+    title = ARI_beatrice.7.t
+    desc = ARI_beatrice.7.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.7.a
+    }
+}
+#会议记录
+country_event = {
+    id = ARI_beatrice.8
+    title = ARI_beatrice.8.t
+    desc = ARI_beatrice.8.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.8.a
+    }
+}
+#密约
+country_event = {
+    id = ARI_beatrice.9
+    title = ARI_beatrice.9.t
+    desc = ARI_beatrice.9.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.9.a
+        custom_effect_tooltip = {
+            localization_key = ARI_min_intelligence_tt
+            TAG = GEH
+        }
+        set_variable = { ARI_min_intelligence_in_GEH = 30 }
+        clamp_variable = {
+            var = ARI_intelligence_in_GEH
+            min = var:ARI_min_intelligence_in_GEH
+            max = 100
+        }
+    }
+}
+
+#坚果行动的教训
+country_event = {
+    id = ARI_beatrice.10
+    title = ARI_beatrice.10.t
+    desc = ARI_beatrice.10.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.10.a
+        complete_national_focus = ARI_commander_ability
+    }
+    option = {
+        name = ARI_beatrice.10.b
+        complete_national_focus = ARI_driven_by_revanchism
+    }
+}
+
+
+#合作的终结
+country_event = {
+    id = ARI_beatrice.100
+    title = ARI_beatrice.100.t
+    desc = ARI_beatrice.100.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.100.a
+        remove_dynamic_modifier = {
+            modifier = ARI_Gematria_member
+        }
+    }
+}
+
+#阿里乌斯的骚动
+country_event = {
+    id = ARI_beatrice.101
+    title = ARI_beatrice.101.t
+    desc = ARI_beatrice.101.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.101.a
+        remove_ideas = ARI_armed_students_modifier
+        remove_ideas = ARI_special_force
+        remove_ideas = ARI_Intelligence_department
+    }
+}
+
+#大人的决断
+country_event = {
+    id = ARI_beatrice.102
+    title = ARI_beatrice.102.t
+    desc = ARI_beatrice.102.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.102.a
+
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    NOT = {tag = ARI}
+                    NOT = {has_war_with = ARI}
+                }
+
+                #TODO:要排除掉所有的废墟地区
+                declare_war_on = {
+                    target = ARI
+                    type = annex_everything
+                }
+            }
+        }
+    }
+}
+
+#工厂骚动
+country_event = {
+    id = ARI_beatrice_revolt.1
+    title = ARI_beatrice_revolt.1.t
+    desc = ARI_beatrice_revolt.1.desc
+    #picture =  
+    immediate = {
+        hidden_effect = {
+            ARI_initialize_suppression_system = yes
+            531 = {
+                ARI_control_decrease_30 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed
+            }
+            country_event = {
+                id = ARI_beatrice_revolt.2
+                days = 60
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_revolt.1.a
+        add_stability = -0.05
+        add_war_support = -0.05
+        custom_effect_tooltip = event_immediately_happened_tt
+        custom_effect_tooltip = ARI_initialize_suppression_system_tt
+        effect_tooltip = {
+            531 = { 
+                ARI_control_decrease_30 = yes
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+        }
+    }
+}
+#宿舍区骚乱
+country_event = {
+    id = ARI_beatrice_revolt.2
+    title = ARI_beatrice_revolt.2.t
+    desc = ARI_beatrice_revolt.2.desc
+    #picture =  
+    immediate = {
+        hidden_effect = {
+            137 = {
+                ARI_control_decrease_30 = yes
+            }
+            532 = {
+                ARI_control_decrease_30 = yes
+            }
+            country_event = {
+                id = ARI_beatrice_revolt.3
+                days = 60
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_revolt.2.a
+        add_political_power = -40
+        custom_effect_tooltip = event_immediately_happened_tt
+        effect_tooltip = {
+            137 = { ARI_control_decrease_30 = yes }
+            532 = { ARI_control_decrease_30 = yes }
+        }
+    }
+}
+#主校区袭击
+country_event = {
+    id = ARI_beatrice_revolt.3
+    title = ARI_beatrice_revolt.3.t
+    desc = ARI_beatrice_revolt.3.desc
+    #picture =  
+    immediate = {
+        hidden_effect = {
+            136 = {
+                set_temp_variable = { control_change_value = -40 }
+	            ARI_change_control = yes
+                ARI_control_modifier_decrease_2 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed
+            }
+            138 = {
+                set_temp_variable = { control_change_value = -40 }
+	            ARI_change_control = yes
+                ARI_control_modifier_decrease_2 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed
+            }
+            country_event = {
+                id = ARI_beatrice_revolt.4
+                days = 60
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_revolt.3.a
+        custom_effect_tooltip = event_immediately_happened_tt
+        effect_tooltip = {
+            136 = {
+                set_temp_variable = { control_change_value = -40 }
+	            ARI_change_control = yes
+                ARI_control_modifier_decrease_2 = yes
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+            138 = {
+                set_temp_variable = { control_change_value = -40 }
+	            ARI_change_control = yes
+                ARI_control_modifier_decrease_2 = yes
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+        }
+    }
+}
+#普遍动乱
+country_event = {
+    id = ARI_beatrice_revolt.4
+    title = ARI_beatrice_revolt.4.t
+    desc = ARI_beatrice_revolt.4.desc
+    #picture =  
+    immediate = {
+        hidden_effect = {
+            139 = {
+                ARI_control_decrease_30 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed
+            }
+            530 = {
+                ARI_control_decrease_30 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed
+            }
+            532 = {
+                ARI_control_decrease_30 = yes
+            }
+            country_event = {
+                id = ARI_beatrice_revolt.5
+                days = 30
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_revolt.4.a
+        add_stability = -0.05
+        add_war_support = -0.05
+        custom_effect_tooltip = event_immediately_happened_tt
+        effect_tooltip = {
+            139 = { 
+                ARI_control_decrease_30 = yes 
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+            530 = { 
+                ARI_control_decrease_30 = yes 
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+            532 = { 
+                ARI_control_decrease_30 = yes 
+            }
+        }
+    }
+}
+#最后的突袭
+country_event = {
+    id = ARI_beatrice_revolt.5
+    title = ARI_beatrice_revolt.5.t
+    desc = ARI_beatrice_revolt.5.desc
+    #picture =  
+    immediate = {
+        hidden_effect = {
+            137 = { 
+                ARI_control_decrease_20 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed 
+            }
+            532 = { 
+                ARI_control_decrease_20 = yes
+                clr_state_flag = ARI_state_cannot_be_suppressed
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_revolt.5.a
+        custom_effect_tooltip = event_immediately_happened_tt
+        effect_tooltip = {
+            137 = { 
+                ARI_control_decrease_20 = yes 
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+            532 = { 
+                ARI_control_decrease_20 = yes 
+                custom_effect_tooltip = ARI_state_can_be_suppressed_tt
+            }
+        }
+    }
+}
+#地区完全控制
+country_event = {
+    id = ARI_beatrice_revolt.1000
+    title = ARI_beatrice_revolt.1000.t
+    desc = ARI_beatrice_revolt.1000.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_revolt.1000.a
+    }
+}
+#地下之鼠
+country_event = {
+    id = ARI_beatrice_diplomacy.1
+    title = ARI_beatrice_diplomacy.1.t
+    desc = ARI_beatrice_diplomacy.1.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.1.a
+    }
+}
+#新官上任
+country_event = {
+    id = ARI_beatrice_diplomacy.2
+    title = ARI_beatrice_diplomacy.2.t
+    desc = ARI_beatrice_diplomacy.2.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.2.a
+    }
+}
+#会议记录-FA3287
+country_event = {
+    id = ARI_beatrice_diplomacy.3
+    title = ARI_beatrice_diplomacy.3.t
+    desc = ARI_beatrice_diplomacy.3.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.3.a
+    }
+}
+#密约
+country_event = {
+    id = ARI_beatrice_diplomacy.4
+    title = ARI_beatrice_diplomacy.4.t
+    desc = ARI_beatrice_diplomacy.4.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.4.a
+        add_political_power = 20
+    }
+}
+#密约
+country_event = {
+    id = ARI_beatrice_diplomacy.5
+    title = ARI_beatrice_diplomacy.5.t
+    desc = ARI_beatrice_diplomacy.5.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.5.a
+        army_experience = 20
+    }
+}
+#笑面罗刹
+country_event = {
+    id = ARI_beatrice_diplomacy.6
+    title = ARI_beatrice_diplomacy.6.t
+    desc = ARI_beatrice_diplomacy.6.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.6.a
+    }
+}
+#“黑蟒”行动
+country_event = {
+    id = ARI_beatrice_diplomacy.7
+    title = ARI_beatrice_diplomacy.7.t
+    desc = ARI_beatrice_diplomacy.7.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.7.a
+    }
+}
+#数秘术定期会议
+country_event = {
+    id = ARI_beatrice_diplomacy.8
+    title = ARI_beatrice_diplomacy.8.t
+    desc = ARI_beatrice_diplomacy.8.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_diplomacy.8.a
+    }
+}
+#废墟的馈赠
+country_event = {
+    id = ARI_beatrice_operations.1
+    title = ARI_beatrice_operations.1.t
+    desc = ARI_beatrice_operations.1.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.1.a
+    }
+}
+#废墟的新据点
+country_event = {
+    id = ARI_beatrice_operations.2
+    title = ARI_beatrice_operations.2.t
+    desc = ARI_beatrice_operations.2.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.2.a
+    }
+}
+#情报交流
+country_event = {
+    id = ARI_beatrice_operations.3
+    title = ARI_beatrice_operations.3.t
+    desc = ARI_beatrice_operations.3.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.3.a
+    }
+}
+#佣兵报告：成功
+country_event = {
+    id = ARI_beatrice_operations.4
+    title = ARI_beatrice_operations.4.t
+    desc = ARI_beatrice_operations.4.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.4.a
+    }
+}
+#佣兵报告：大成功
+country_event = {
+    id = ARI_beatrice_operations.5
+    title = ARI_beatrice_operations.5.t
+    desc = ARI_beatrice_operations.5.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.5.a
+    }
+}
+#谣言传播成功！-圣三一
+country_event = {
+    id = ARI_beatrice_operations.6
+    title = ARI_beatrice_operations.6.t
+    desc = ARI_beatrice_operations.6.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.6.a
+    }
+}
+#谣言传播失败！-圣三一
+country_event = {
+    id = ARI_beatrice_operations.7
+    title = ARI_beatrice_operations.7.t
+    desc = ARI_beatrice_operations.7.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.7.a
+    }
+}
+#谣言传播成功！-格赫娜
+country_event = {
+    id = ARI_beatrice_operations.8
+    title = ARI_beatrice_operations.8.t
+    desc = ARI_beatrice_operations.8.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.8.a
+    }
+}
+#谣言传播失败！-格赫娜
+country_event = {
+    id = ARI_beatrice_operations.9
+    title = ARI_beatrice_operations.9.t
+    desc = ARI_beatrice_operations.9.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.9.a
+    }
+}
+#暗处的流言
+country_event = {
+    id = ARI_beatrice_operations.10
+    title = ARI_beatrice_operations.10.t
+    desc = ARI_beatrice_operations.10.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.10.a
+    }
+}
+#绑架计划成功！
+country_event = {
+    id = ARI_beatrice_operations.11
+    title = ARI_beatrice_operations.11.t
+    desc = ARI_beatrice_operations.11.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.11.a
+    }
+}
+#绑架计划失败！
+country_event = {
+    id = ARI_beatrice_operations.12
+    title = ARI_beatrice_operations.12.t
+    desc = ARI_beatrice_operations.12.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.12.a
+    }
+}
+#意料之外的失败
+country_event = {
+    id = ARI_beatrice_operations.13
+    title = ARI_beatrice_operations.13.t
+    desc = ARI_beatrice_operations.13.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.13.a
+    }
+}
+#学生被绑架！
+country_event = {
+    id = ARI_beatrice_operations.14
+    title = ARI_beatrice_operations.14.t
+    desc = ARI_beatrice_operations.14.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.14.a
+    }
+}
+#设施袭击成功！
+country_event = {
+    id = ARI_beatrice_operations.15
+    title = ARI_beatrice_operations.15.t
+    desc = ARI_beatrice_operations.15.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.15.a
+    }
+}
+#设施袭击失败！
+country_event = {
+    id = ARI_beatrice_operations.16
+    title = ARI_beatrice_operations.16.t
+    desc = ARI_beatrice_operations.16.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.16.a
+    }
+}
+#设施遇袭！
+country_event = {
+    id = ARI_beatrice_operations.17
+    title = ARI_beatrice_operations.17.t
+    desc = ARI_beatrice_operations.17.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.17.a
+    }
+}
+#袭击阴谋被挫败！
+country_event = {
+    id = ARI_beatrice_operations.18
+    title = ARI_beatrice_operations.18.t
+    desc = ARI_beatrice_operations.18.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.18.a
+    }
+}
+#另一次会面
+country_event = {
+    id = ARI_beatrice_operations.19
+    title = ARI_beatrice_operations.19.t
+    desc = ARI_beatrice_operations.19.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.19.a
+    }
+}
+#师徒关系
+country_event = {
+    id = ARI_beatrice_operations.20
+    title = ARI_beatrice_operations.20.t
+    desc = ARI_beatrice_operations.20.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.20.a
+    }
+}
+#风纪委压制成功！
+country_event = {
+    id = ARI_beatrice_operations.21
+    title = ARI_beatrice_operations.21.t
+    desc = ARI_beatrice_operations.21.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.21.a
+    }
+}
+#风纪委压制失败！
+country_event = {
+    id = ARI_beatrice_operations.22
+    title = ARI_beatrice_operations.22.t
+    desc = ARI_beatrice_operations.22.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.22.a
+    }
+}
+#针对风纪委的袭击
+country_event = {
+    id = ARI_beatrice_operations.23
+    title = ARI_beatrice_operations.23.t
+    desc = ARI_beatrice_operations.23.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.23.a
+    }
+}
+#针对风纪委的袭击被挫败
+country_event = {
+    id = ARI_beatrice_operations.24
+    title = ARI_beatrice_operations.24.t
+    desc = ARI_beatrice_operations.24.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.24.a
+    }
+}
+#假旗行动成功！
+country_event = {
+    id = ARI_beatrice_operations.25
+    title = ARI_beatrice_operations.25.t
+    desc = ARI_beatrice_operations.25.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.25.a
+    }
+}
+#假旗行动部分成功
+country_event = {
+    id = ARI_beatrice_operations.26
+    title = ARI_beatrice_operations.26.t
+    desc = ARI_beatrice_operations.26.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.26.a
+    }
+}
+#边境冲突！
+country_event = {
+    id = ARI_beatrice_operations.27
+    title = ARI_beatrice_operations.27.t
+    desc = ARI_beatrice_operations.27.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.27.a
+    }
+}
+#小规模边境冲突增加
+country_event = {
+    id = ARI_beatrice_operations.28
+    title = ARI_beatrice_operations.28.t
+    desc = ARI_beatrice_operations.28.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.28.a
+    }
+}
+#训练项目结束
+country_event = {
+    id = ARI_beatrice_operations.29
+    title = ARI_beatrice_operations.29.t
+    desc = ARI_beatrice_operations.29.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.29.a
+    }
+}

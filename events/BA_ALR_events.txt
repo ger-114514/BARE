@@ -1,0 +1,244 @@
+# add_namespace = ALR_resistance
+# add_namespace = ALR_military_operation
+# #不期而遇
+# country_event = {
+#     id = ALR_resistance.1
+#     title = ALR_resistance.1.t
+#     desc = ALR_resistance.1.desc
+#     #picture =  
+    
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_resistance.1.a
+#         add_political_power = 50
+#         ##TODO:获得三个流亡者步兵师编制（2民兵）
+#         division_template = {
+#             name = "流亡者步兵师"
+#             is_locked = no
+#             #division_names_group = ALR_
+#             priority = 0
+#             regiments = {
+#                 infantry_militia = { x = 0 y = 0 }
+#                 infantry_militia = { x = 0 y = 1 }
+#             }
+#         }
+#         139 = {
+#             create_unit = {
+#                 division = "name = \"流亡者步兵师\" division_template = \"流亡者步兵师\" start_experience_factor = 0.1 start_equipment_factor = 0.3 start_manpower_factor = 0.6"
+#                 owner = ALR
+#                 count = 3
+#             }
+#         }
+#     }
+# }
+# #旧校舍的落脚点
+# country_event = {
+#     id = ALR_resistance.2
+#     title = ALR_resistance.2.t
+#     desc = ALR_resistance.2.desc
+#     #picture =  
+    
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_resistance.2.a
+        
+#     }
+# }
+# #绘制旗帜，展望未来
+# country_event = {
+#     id = ALR_resistance.3
+#     title = ALR_resistance.3.t
+#     desc = ALR_resistance.3.desc
+#     #picture =  
+    
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_resistance.3.a
+#         add_political_power = 50
+#         hidden_effect = {
+#             set_cosmetic_tag = ALR_flag
+#         }
+#         custom_effect_tooltip = ALR_new_flag_tt
+#     }
+# }
+# #《阿里乌斯全体抵抗组织联合宣言》
+# country_event = {
+#     id = ALR_resistance.100
+#     title = ALR_resistance.100.t
+#     desc = ALR_resistance.100.desc
+#     #picture =  
+    
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_resistance.100.a
+#     }
+# }
+
+
+# #夫人派出巡逻队
+# country_event = {
+#     id = ALR_military_operation.100
+#     title = ALR_military_operation.100.t
+#     desc = ALR_military_operation.100.desc
+#     #picture =  
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.100.a
+#         trigger = {
+#             has_completed_focus = ALR_anti_recon
+#         }
+#         custom_effect_tooltip = ALR_military_operation_anti_recon_tt
+        
+#     }
+#     option = {
+#         name = ALR_military_operation.100.b
+#         trigger = {
+#             has_completed_focus = ALR_ambush_tactic
+#         }
+#         custom_effect_tooltip = ALR_military_operation_ambush_tactic_tt
+#     }
+#     option = {
+#         name = ALR_military_operation.100.c
+#         random = {
+#             chance = 70
+#             start_border_war = {
+#                 change_state_after_war = no
+#                 attacker = {
+#                     state = 532
+#                     num_provinces = 2
+#                     # on_win = 
+#                     # on_lose = 
+#                     # on_cancel = 
+#                     modifier = 0.4
+#                     dig_in_factor = 0
+#                     terrain_factor = 0
+#                 }	
+#                 defender = {
+#                     state = 139
+#                     num_provinces = 3
+#                     # on_win = 
+#                     # on_lose = 
+#                     # on_cancel = 
+#                 }
+#             }
+#         }
+#     }
+# }
+# #特战队兵营爆炸
+# country_event = {
+#     id = ALR_military_operation.1
+#     title = ALR_military_operation.1.t
+#     desc = ALR_military_operation.1.desc
+#     #picture =  
+#     immediate = {
+#         hidden_effect = {
+#             ARI = {
+#                 army_experience = -20
+#                 add_war_support = -0.1
+#             }
+#             country_event = {
+#                 id = ALR_military_operation.100
+#                 days = 2
+#             }
+#         }
+        
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.1.a
+        
+#     }
+# }
+# #行动代号：马兰比吉河
+# country_event = {
+#     id = ALR_military_operation.2
+#     title = ALR_military_operation.2.t
+#     desc = ALR_military_operation.2.desc
+#     #picture =  
+#     immediate = {
+#         hidden_effect = {
+#             ARI = {
+#                 add_timed_idea = {
+#                     idea = ARI_broken_administration
+#                     days = 180
+#                 }
+#             }
+#             country_event = {
+#                 id = ALR_military_operation.100
+#                 days = 2
+#             }
+#         }
+        
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.2.a
+        
+#     }
+# }
+# #行动代号：天元突破
+# country_event = {
+#     id = ALR_military_operation.3
+#     title = ALR_military_operation.3.t
+#     desc = ALR_military_operation.3.desc
+#     #picture =  
+#     immediate = {
+#         hidden_effect = {
+#             country_event = {
+#                 id = ALR_military_operation.100
+#                 days = 2
+#             }
+#         }
+        
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.3.a
+        
+#     }
+# }
+# #破坏与救援
+# country_event = {
+#     id = ALR_military_operation.4
+#     title = ALR_military_operation.4.t
+#     desc = ALR_military_operation.4.desc
+#     #picture =  
+#     immediate = {
+#         hidden_effect = {
+#             country_event = {
+#                 id = ALR_military_operation.100
+#                 days = 2
+#             }
+#         }
+        
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.4.a
+        
+#     }
+# }
+# #弥撒
+# country_event = {
+#     id = ALR_military_operation.5
+#     title = ALR_military_operation.5.t
+#     desc = ALR_military_operation.5.desc
+#     #picture =  
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.5.a
+        
+#     }
+# }
+# #园艺师们的智慧
+# country_event = {
+#     id = ALR_military_operation.6
+#     title = ALR_military_operation.6.t
+#     desc = ALR_military_operation.6.desc
+#     #picture =  
+#     is_triggered_only = yes
+#     option = {
+#         name = ALR_military_operation.6.a
+        
+#     }
+# }

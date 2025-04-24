@@ -1,0 +1,197 @@
+division_template = {
+	name = "PMC步兵部队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "PMC火力支援部队"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		fire_support_team_la = { x = 2 y = 0 }
+		fire_support_team_la = { x = 2 y = 1 }
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "PMC快速反应部队"		
+
+	regiments = {
+		apc_unit = { x = 0 y = 0 }
+		apc_unit = { x = 0 y = 1 }
+		apc_unit = { x = 0 y = 2 }
+		apc_unit = { x = 1 y = 0 }
+		apc_unit = { x = 1 y = 1 }
+		apc_unit = { x = 1 y = 2 }
+		apc_artillery_unit = { x = 2 y = 0 }
+		apc_artillery_unit = { x = 2 y = 1 }
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "PMC合成化装甲部队"		
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		medium_armor = { x = 1 y = 0 }
+		ifv_unit = { x = 2 y = 1 }
+		ifv_unit = { x = 2 y = 0 }
+	}
+	support = {
+	}
+}
+
+
+units = {
+	division= {
+		name = "凯撒PMC第1步兵团"
+		location = 4774
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第2步兵团"
+		location = 2524
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第3步兵团"
+		location = 67
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第4步兵团"
+		location = 8301
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第5步兵团"
+		location = 11141
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第6步兵团"
+		location = 5395
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第7步兵团"
+		location = 11630
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第8步兵团"
+		location = 3915
+		division_template = "PMC步兵部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "凯撒PMC第1火力支援部队"
+		location = 9552
+		division_template = "PMC火力支援部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第2火力支援部队"
+		location = 11008
+		division_template = "PMC火力支援部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第3火力支援部队"
+		location = 899
+		division_template = "PMC火力支援部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "凯撒PMC第1快速反应部队"
+		location = 5500
+		division_template = "PMC快速反应部队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第2快速反应部队"
+		location = 5407
+		division_template = "PMC快速反应部队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {
+		name = "凯撒PMC第1装甲部队"
+		location = 6486
+		division_template = "PMC合成化装甲部队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "凯撒PMC第2装甲部队"
+		location = 1366
+		division_template = "PMC合成化装甲部队" #这个师用的编制的名字
+		start_experience_factor = 0.8 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+}

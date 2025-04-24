@@ -1,0 +1,205 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+ABY_Inf_01 = {
+	name = "阿拜多斯公路小队"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "阿拜多斯公路小队第%d骑行小队"
+
+	ordered =
+	{
+		1 = { "阿拜多斯公路第1“纳赛尔”骑行小队" }
+		2 = { "阿拜多斯公路第2“阿斯旺”骑行小队" }
+		3 = { "阿拜多斯公路第3“曼宰莱”骑行小队" }
+		4 = { "阿拜多斯公路第4“苏伊士”骑行小队" }
+	}
+}
+
+ABY_Inf_02 = {
+	name = "对策委员会直属小队"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "对策委员会直属第%d小队"
+
+	ordered =
+	{
+		1 = { "对策委员会直属第1“荷鲁斯”小队" }
+		2 = { "对策委员会直属第2“奈芙蒂斯”小队" }
+		3 = { "对策委员会直属第3“阿努比斯”小队" }
+		4 = { "对策委员会直属第4“托特”小队" }
+		5 = { "对策委员会直属第5“巴斯提”小队" }
+	}
+}
+
+ABY_Infs_01 = {
+	name = "对策委员会快速反应中队"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "对策委员会快速反应第%d中队"
+
+	ordered =
+	{
+		1 = { "对策委员会快速反应第1“塞特拉”中队" }
+		2 = { "对策委员会快速反应第2“阿克汗”中队" }
+		3 = { "对策委员会快速反应第3“卡莉达”中队" }
+		4 = { "对策委员会快速反应第4“纳加什”中队" }
+		5 = { "对策委员会快速反应第5“卡特普”中队" }
+		6 = { "对策委员会快速反应第6“内卡夫”中队" }
+		7 = { "对策委员会快速反应第7“阿法波斯”中队" }
+		8 = { "对策委员会快速反应第8“拉姆霍特普”中队" }
+	}
+}
+
+ABY_Ifv_01 = {
+	name = "对策委员会机械化中队"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "对策委员会机械化第%d中队"
+
+	ordered =
+	{
+		1 = { "对策委员会机械化第1“胡夫”中队" }
+		2 = { "对策委员会机械化第2“哈特谢普苏特”中队" }
+		3 = { "对策委员会机械化第3“图特摩斯”中队" }
+		4 = { "对策委员会机械化第4“阿蒙霍特普”中队" }
+		5 = { "对策委员会机械化第5“阿肯那顿”中队" }
+		6 = { "对策委员会机械化第6“图坦卡蒙”中队" }
+		7 = { "对策委员会机械化第7“拉美西斯”中队" }
+		8 = { "对策委员会机械化第8“阿图姆”中队" }
+	}
+}
+
+ABY_Infm_01 = {
+	name = "阿拜多斯自治区自警团"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "阿拜多斯自治区第%d巡逻小队"
+
+	ordered =
+	{
+		1 = { "阿拜多斯自治区第1“亚历山大”巡逻小队" }
+		2 = { "阿拜多斯自治区第2“吉萨”巡逻小队" }
+		3 = { "阿拜多斯自治区第3“开罗”巡逻小队" }
+		4 = { "阿拜多斯自治区第4“伊德芙”巡逻小队" }
+		5 = { "阿拜多斯自治区第5“法尤姆”巡逻小队" }
+		6 = { "阿拜多斯自治区第6“马特鲁”巡逻小队" }
+		7 = { "阿拜多斯自治区第7“艾斯尤特”巡逻小队" }
+		8 = { "阿拜多斯自治区第8“沙姆沙耶赫”巡逻小队" }
+	}
+}
+
+ABY_Infm_02 = {
+	name = "阿拜多斯自治区精锐自警团"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "阿拜多斯自治区卫戍第%d中队"
+
+	ordered =
+	{
+		1 = { "阿拜多斯自治区卫戍第1“影月苍狼”中队" }
+		2 = { "阿拜多斯自治区卫戍第2“荷鲁斯之子”中队" }
+		3 = { "阿拜多斯自治区卫戍第3“黑色军团”中队" }
+		4 = { "阿拜多斯自治区卫戍第4“克索尼亚”中队" }
+		5 = { "阿拜多斯自治区卫戍第5“牧狼神”中队" }
+		6 = { "阿拜多斯自治区卫戍第6“乌兰诺”中队" }
+		7 = { "阿拜多斯自治区卫戍第7“影月议会”中队" }
+	}
+}
+
+ABY_Inf_03 = {
+	name = "圣三一志愿军"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "圣三一直属第%d志愿中队"
+
+	ordered =
+	{
+		1 = { "圣三一第1“科普特”志愿中队" }
+		2 = { "圣三一第2“迦克墩”志愿中队" }
+		3 = { "圣三一第3“阿尼努斯”志愿中队" }
+		4 = { "圣三一第4“阿维留斯”志愿中队" }
+		5 = { "圣三一第5“刻达尔”志愿中队" }
+		6 = { "圣三一第6“普利莫”志愿中队" }
+	}
+}
+
+ABY_Inf_04 = {
+	name = "红冬志愿军"
+
+	for_countries = { ABY }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "红冬第%d志愿中队"
+
+	ordered =
+	{
+		1 = { "红冬第1“三所里”志愿中队" }
+		2 = { "红冬第2“砥平里”志愿中队" }
+		3 = { "红冬第3“云山”志愿中队" }
+		4 = { "红冬第4“温井”志愿中队" }
+		5 = { "红冬第5“横城”志愿中队" }
+		6 = { "红冬第6“清川江”志愿中队" }
+	}
+}

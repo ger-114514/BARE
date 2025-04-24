@@ -1,0 +1,23 @@
+#格黑娜的日常
+GEH_gehenna_daily_life = {
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	army_org_factor = GEH_gehenna_daily_life_army_org_factor_factor
+	stability_factor =  GEH_gehenna_daily_life_stability_factor
+	consumer_goods_factor = GEH_gehenna_daily_life_consumer_goods_factor
+	power_balance_weekly = GEH_gehenna_daily_life_power_balance_weekly_factor
+}
+
+
+#措手不及
+GEH_a_unpredictable_attack = {
+	army_attack_factor = GEH_a_unpredictable_attack_army_attack_factor
+	army_defence_factor = GEH_a_unpredictable_attack_army_defence_factor
+	army_org_regain = GEH_a_unpredictable_attack_army_org_regain
+	army_speed_factor = GEH_a_unpredictable_attack_army_speed_factor
+	supply_consumption_factor = GEH_a_unpredictable_attack_supply_consumption_factor
+	out_of_supply_factor = GEH_a_unpredictable_attack_out_of_supply_factor
+	land_reinforce_rate = GEH_a_unpredictable_attack_land_reinforce_rate
+	breakthrough_factor = GEH_a_unpredictable_attack_breakthrough_factor
+}

@@ -1,0 +1,591 @@
+ideas = {
+	country = {
+		#鹰派主导
+		TRI_main_faction_BOP_hardliner_1 = {
+			picture = unkown
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				opinion_gain_monthly_factor = -0.1
+				army_org_regain = 0.05
+				custom_modifier_tooltip = TRI_main_faction_hawk_modifier_1_tt
+			}
+			on_add = {
+				every_other_country = {
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_hawk_1_opinion
+                    }
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_hawk_1_opinion
+                    }
+				}
+			}
+		}
+		TRI_main_faction_BOP_hardliner_2 = {
+			picture = unkown
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.15
+				opinion_gain_monthly_factor = -0.15
+				army_org_factor = 0.05
+				army_org_regain = 0.1
+				production_speed_industrial_complex_factor = -0.05
+				industrial_capacity_factory = 0.025
+				consumer_goods_factor = 0.05
+				custom_modifier_tooltip = TRI_main_faction_hawk_modifier_3_tt
+			}
+			on_add = {
+				every_other_country = {
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_hawk_2_opinion
+                    }
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_hawk_2_opinion
+                    }
+				}
+			}
+		}
+		TRI_main_faction_BOP_hardliner_3 = {
+			picture = unkown
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.25
+				opinion_gain_monthly_factor = -0.3
+				army_org_factor = 0.15
+				army_org_regain = 0.1
+				army_attack_factor = 0.05
+				production_speed_industrial_complex_factor = -0.15
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.1
+				monthly_population = 0.1
+				custom_modifier_tooltip = TRI_main_faction_hawk_modifier_3_tt
+			}
+			on_add = {
+				every_other_country = {
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_hawk_3_opinion
+                    }
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_hawk_3_opinion
+                    }
+				}
+			}
+		}
+		#中立派主导
+		TRI_main_faction_BOP_conservative_1 = {
+			picture = unkown
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.025
+				mobilization_laws_cost_factor = -0.05
+				trade_laws_cost_factor  = -0.05
+				economy_cost_factor = -0.05
+				political_advisor_cost_factor = -0.05
+				army_chief_cost_factor = -0.05
+				air_chief_cost_factor = -0.05
+				high_command_cost_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				military_industrial_organization_funds_gain = 0.05
+			}
+		}
+		TRI_main_faction_BOP_conservative_2 = {
+			picture = unkown
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				mobilization_laws_cost_factor = -0.1
+				trade_laws_cost_factor  = -0.1
+				economy_cost_factor = -0.1
+				political_advisor_cost_factor = -0.1
+				army_chief_cost_factor = -0.1
+				air_chief_cost_factor = -0.1
+				high_command_cost_factor = -0.1
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				military_industrial_organization_design_team_assign_cost = -0.05
+				military_industrial_organization_funds_gain = 0.05
+			}
+		}
+		TRI_main_faction_BOP_conservative_3 = {
+			picture = unkown
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				mobilization_laws_cost_factor = -0.15
+				trade_laws_cost_factor  = -0.15
+				economy_cost_factor = -0.15
+				political_advisor_cost_factor = -0.2
+				army_chief_cost_factor = -0.2
+				air_chief_cost_factor = -0.2
+				high_command_cost_factor = -0.2
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				military_industrial_organization_design_team_assign_cost = -0.1
+				military_industrial_organization_funds_gain = 0.1
+			}
+		}
+		#鸽派主导
+		TRI_main_faction_BOP_moderate_1 = {
+			picture = unkown
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				opinion_gain_monthly_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				industrial_capacity_factory = -0.05
+				training_time_army_factor = 0.15
+				custom_modifier_tooltip = TRI_main_faction_dove_modifier_1_tt
+			}
+			on_add = {
+				every_other_country = {
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_dove_1_opinion
+                    }
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_dove_1_opinion
+                    }
+				}
+			}
+		}
+		TRI_main_faction_BOP_moderate_2 = {
+			picture = unkown
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = -0.1
+				opinion_gain_monthly_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.1
+				training_time_army_factor = 0.25
+				monthly_population = -0.1
+				custom_modifier_tooltip = TRI_main_faction_dove_modifier_2_tt
+			}
+			on_add = {
+				every_other_country = {
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_dove_2_opinion
+                    }
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_dove_2_opinion
+                    }
+				}
+			}
+		}
+		TRI_main_faction_BOP_moderate_3 = {
+			picture = unkown
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = -0.2
+				opinion_gain_monthly_factor = 0.25
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				production_speed_industrial_complex_factor = 0.15
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = -0.2
+				training_time_army_factor = 0.5
+				conscription = -0.025
+				monthly_population = -0.1
+				custom_modifier_tooltip = TRI_main_faction_dove_modifier_3_tt
+			}
+			on_add = {
+				every_other_country = {
+					add_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_dove_3_opinion
+                    }
+				}
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = TRI_main_faction_dove_3_opinion
+                    }
+				}
+			}
+		}
+		TRI_BOP_appease_association_1 = { #安抚社团成员——低投入
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		TRI_BOP_appease_association_2 = { #安抚社团成员——中投入
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		TRI_BOP_appease_association_3 = { #安抚社团成员——高投入
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.35
+			}
+		}
+		TRI_BOP_association_stability_modifier = { #稳定社团关系
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		TRI_BOP_school_stability_1 = { #维持学院内稳定——低投入
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		TRI_BOP_school_stability_2 = { #维持学院内稳定——中投入
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		TRI_BOP_school_stability_3 = { #维持学院内稳定——高投入
+			picture = unkown
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+		}
+	}
+    hidden_ideas = {
+		TRI_politics_tab_parliament = {}
+		TRI_politics_tab_focus = {}
+		TRI_politics_tab_regions = {}
+		TRI_parliament_association_none = {}
+		TRI_parliament_association_tea_party = {}
+		TRI_parliament_association_0 = {} #茶会——帕特尔
+		TRI_parliament_association_1 = {} #茶会——菲利乌斯
+		TRI_parliament_association_2 = {} #茶会——圣库特斯
+		TRI_parliament_association_3 = {} #正义实现委员会
+		TRI_parliament_association_4 = {} #修女会
+		TRI_parliament_association_5 = {} #救护骑士团
+		TRI_parliament_association_6 = {} #其它社团
+		TRI_parliament_association_0_desc = {} #茶会——帕特尔
+		TRI_parliament_association_1_desc = {} #茶会——菲利乌斯
+		TRI_parliament_association_2_desc = {} #茶会——圣库特斯
+		TRI_parliament_association_3_desc = {} #正义实现委员会
+		TRI_parliament_association_4_desc = {} #修女会
+		TRI_parliament_association_5_desc = {} #救护骑士团
+		TRI_parliament_association_6_desc = {} #其它社团
+		BA_TRI_senate_seat = {} #上议院
+		BA_TRI_house_seat = {} #下议院
+		#社团领袖
+		TRI_mika = {}
+		TRI_mika_arrested = {}
+		TRI_nagisa = {}
+		TRI_seia = {}
+		TRI_tsurugi = {}
+		TRI_sakurako = {}
+		TRI_mine = {}
+		TRI_ui = {}
+		TRI_mika_name = {}
+		TRI_mika_arrested_name = {}
+		TRI_nagisa_name = {}
+		TRI_seia_name = {}
+		TRI_tsurugi_name = {}
+		TRI_sakurako_name = {}
+		TRI_mine_name = {}
+		TRI_ui_name = {}
+		TRI_mika_description = {}
+		TRI_mika_arrested_description = {}
+		TRI_nagisa_description = {}
+		TRI_seia_description = {}
+		TRI_tsurugi_description = {}
+		TRI_sakurako_description = {}
+		TRI_mine_description = {}
+		TRI_ui_description = {}
+		TRI_mika_parliament_leader_portrait = {}
+		TRI_mika_arrested_parliament_leader_portrait = {}
+		TRI_nagisa_parliament_leader_portrait = {}
+		TRI_seia_parliament_leader_portrait = {}
+		TRI_tsurugi_parliament_leader_portrait = {}
+		TRI_sakurako_parliament_leader_portrait = {}
+		TRI_mine_parliament_leader_portrait = {}
+		TRI_ui_parliament_leader_portrait = {}
+		BOP_hardliner = {} #强硬派
+		BOP_conservative = {} #保守派
+		BOP_moderate = {} #温和派
+		BOP_none = {} #无派系
+		position_support = {} #支持
+		position_centrist = {} #中立
+		position_opposition = {} #反对
+		position_none = {} #无反应
+		view_non_against = {} #非对立
+		view_against = {} #对立
+		TRI_bill_cd = {}
+		#“胡萝卜蛋糕”法案
+		TRI_Bill_of_carrot_cake = {
+			on_add = {
+				set_variable = { senate_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_senate_seat }
+				divide_variable = { senate_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = senate_needed_support@var:TRI_debated_bill
+				set_variable = { house_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_house_seat }
+				divide_variable = { house_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = house_needed_support@var:TRI_debated_bill
+				set_variable = { need_detail@var:TRI_debated_bill = 0 }
+
+				set_variable = { hardliner_support@var:TRI_debated_bill = 0.4 }
+				set_variable = { conservative_support@var:TRI_debated_bill = 0.7 }
+				set_variable = { moderate_support@var:TRI_debated_bill = 0.6 }
+				# add_days_mission_timeout = {
+				# 	mission = TRI_vote_for_the_bill
+				# 	days = 35
+				# }
+			}
+			on_remove = {
+				add_timed_idea = {
+					idea = TRI_Bill_of_carrot_cake_factory
+					days = 180
+				}
+				add_tech_bonus = {
+					name = TRI_Bill_of_carrot_cake
+					category = industry
+					bonus = 0.5
+					uses = 1
+				}
+			}
+		}
+		TRI_Bill_of_carrot_cake_factory = {
+			modifier = {
+				industrial_factory_donations = 3
+			}
+		}
+		#“铜橄榄”法案
+		TRI_Bill_of_copper_olive = {
+			on_add = {
+				set_variable = { senate_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_senate_seat }
+				divide_variable = { senate_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = senate_needed_support@var:TRI_debated_bill
+				set_variable = { house_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_house_seat }
+				divide_variable = { house_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = house_needed_support@var:TRI_debated_bill
+				set_variable = { need_detail@var:TRI_debated_bill = 0 }
+
+				set_variable = { hardliner_support@var:TRI_debated_bill = 0.8 }
+				set_variable = { conservative_support@var:TRI_debated_bill = 0.7 }
+				set_variable = { moderate_support@var:TRI_debated_bill = 0.3 }
+				# add_days_mission_timeout = {
+				# 	mission = TRI_vote_for_the_bill
+				# 	days = 35
+				# }
+			}
+			on_remove = {
+				if = {
+					limit = { check_variable = { TRI_bill_come_into_effect = 1 } }
+					add_timed_idea = {
+						idea = TRI_Bill_of_copper_olive_factory
+						days = 180
+					}
+					army_experience = 75
+					add_doctrine_cost_reduction = {
+						cost_reduction = 0.5
+						category = land_doctrine
+					}
+				}
+			}
+		}
+		TRI_Bill_of_copper_olive_factory = {
+			modifier = {
+				military_factory_donations = 3
+			}
+		}
+		#开诚布公法案
+		TRI_Bill_of_disclosure = {
+			on_add = {
+				set_variable = { senate_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_senate_seat }
+				divide_variable = { senate_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = senate_needed_support@var:TRI_debated_bill
+				set_variable = { house_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_house_seat }
+				divide_variable = { house_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = house_needed_support@var:TRI_debated_bill
+				set_variable = { need_detail@var:TRI_debated_bill = 1 }
+
+				set_variable = { hardliner_support@var:TRI_debated_bill = 0.4 }
+				set_variable = { conservative_support@var:TRI_debated_bill = 0.5 }
+				set_variable = { moderate_support@var:TRI_debated_bill = 0.7 }
+				# add_days_mission_timeout = {
+				# 	mission = TRI_vote_for_the_bill
+				# 	days = 35
+				# }
+			}
+			on_remove = {
+				if = {
+					limit = { check_variable = { TRI_bill_come_into_effect = 1 } }
+					add_tech_bonus = {
+						category = industry
+						bonus = 0.5
+					}
+					clr_country_flag = TRI_senate_detail_ignored
+					clr_country_flag = TRI_house_detail_ignored
+					TRI_BOP_calculate_senate_seats = yes
+					##初始化团结度系统
+						set_country_flag = TRI_unity_system_visible
+						#初始团结度
+						set_variable = { TRI_unity = 55 }
+						#进度条图标
+						resize_array = {
+							array = TRI_unity_progress_bar_icon
+							size = 5
+						}
+						#设置团结度等级
+						TRI_generate_unity_rank = yes
+						#添加团结度效果
+						add_dynamic_modifier = { modifier = TRI_unity_modifier }
+				}
+			}
+		}
+		#重获信任法案
+		TRI_Bill_of_regaining_trust = {
+			on_add = {
+				set_variable = { senate_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_senate_seat }
+				divide_variable = { senate_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = senate_needed_support@var:TRI_debated_bill
+				set_variable = { house_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_house_seat }
+				divide_variable = { house_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = house_needed_support@var:TRI_debated_bill
+				set_variable = { need_detail@var:TRI_debated_bill = 0 }
+				if = {
+					limit = { has_completed_focus = TRI_bouncing_back }
+					add_to_variable = { temp_support@BA_TRI_senate_seat = 3 }
+					add_to_variable = { temp_support@BA_TRI_house_seat = 10 }
+				}
+
+				set_variable = { hardliner_support@var:TRI_debated_bill = 0.4 }
+				set_variable = { conservative_support@var:TRI_debated_bill = 0.4 }
+				set_variable = { moderate_support@var:TRI_debated_bill = 0.4 }
+				# add_days_mission_timeout = {
+				# 	mission = TRI_vote_for_the_bill
+				# 	days = 35
+				# }
+			}
+			on_remove = {
+				if = {
+					limit = { check_variable = { TRI_bill_come_into_effect = 1 } }
+					country_event = TRI_events.52
+				}
+			}
+		}
+		#“紧急事态动议”法案
+		TRI_Bill_of_emergent_motion = {
+			on_add = {
+				set_variable = { senate_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_senate_seat }
+				divide_variable = { senate_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = senate_needed_support@var:TRI_debated_bill
+				set_variable = { house_needed_support@var:TRI_debated_bill = valid_seats@BA_TRI_house_seat }
+				divide_variable = { house_needed_support@var:TRI_debated_bill = 2 }
+				round_variable = house_needed_support@var:TRI_debated_bill
+				set_variable = { need_detail@var:TRI_debated_bill = 0 }
+
+				set_variable = { hardliner_support@var:TRI_debated_bill = 0.9 }
+				set_variable = { conservative_support@var:TRI_debated_bill = 0.6 }
+				set_variable = { moderate_support@var:TRI_debated_bill = 0.4 }
+				# add_days_mission_timeout = {
+				# 	mission = TRI_vote_for_the_bill
+				# 	days = 35
+				# }
+			}
+			on_remove = {
+				if = {
+					limit = { check_variable = { TRI_bill_come_into_effect = 1 } }
+					remove_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
+					add_to_variable = { eden_broken_daily_power_gain = 0.4 }
+					add_to_variable = { eden_broken_factory_output = 0.1 }
+					add_to_variable = { eden_broken_advisor_cost = -0.5 }
+					add_to_variable = { eden_broken_army_chief_cost = -0.5 }
+					add_to_variable = { eden_broken_air_chief_cost = -0.5 }
+					add_to_variable = { eden_broken_economy_cost = -0.5 }
+					add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
+					add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
+					add_dynamic_modifier = { modifier = eden_treaty_step_5_modifier }
+				}
+			}
+		}
+		#焦点：实装圣娅（
+		TRI_parliament_focus_0 = {
+			on_add = {
+				remove_ideas = TRI_parliament_focus_0
+				set_variable = { BA_TRI_enabled_focus_modifier = 0 }
+				#弹出选立场事件
+				country_event = TRI_parliament_focus.0
+			}
+		}
+		#焦点：《伊甸条约》的签订
+		TRI_parliament_focus_signing_Eden = {
+			on_add = {
+				remove_ideas = TRI_parliament_focus_signing_Eden
+				clear_variable = TRI_focus_stability_weekly
+				clear_variable = TRI_focus_war_support_factor
+				set_variable = { TRI_focus_consumer_goods_factor = 0.15 }
+				#弹出选立场事件
+				country_event = TRI_parliament_focus.1
+			}
+		}
+		#焦点：对现任茶话会领袖的支持
+		TRI_parliament_focus_trust_on_current_leader = {
+			on_add = {
+				remove_ideas = TRI_parliament_focus_trust_on_current_leader
+				clear_variable = TRI_focus_stability_weekly
+				clear_variable = TRI_focus_war_support_factor
+				clear_variable = TRI_focus_consumer_goods_factor
+			}
+		}
+		#焦点：《伊甸条约》的威胁
+		TRI_parliament_focus_Eden_threat = {
+			on_add = {
+				remove_ideas = TRI_parliament_focus_Eden_threat
+				#投资等级
+				set_variable = { TRI_focus_2_invest_rank_stability = 0 }
+				set_variable = { TRI_focus_2_invest_rank_war_support = 0 }
+				#弹出选立场事件
+				country_event = TRI_parliament_focus.2
+			}
+		}
+		#焦点：胜利签订的《伊甸条约》
+		TRI_parliament_focus_successfully_signed_Eden = {
+			on_add = {
+				remove_ideas = TRI_parliament_focus_successfully_signed_Eden
+				clear_variable = TRI_focus_stability_weekly
+				clear_variable = TRI_focus_war_support_factor
+				clear_variable = TRI_focus_consumer_goods_factor
+			}
+		}
+	}
+}

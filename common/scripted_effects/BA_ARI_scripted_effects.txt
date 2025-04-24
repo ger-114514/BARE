@@ -1,0 +1,263 @@
+#更换神秘装备buff
+ARI_upgrade_mystery_weapon_buff = {
+	if = {
+		limit = {
+			NOt = { has_idea = ARI_mystery_weapon_buff_1 }
+			NOt = { has_idea = ARI_mystery_weapon_buff_2 }
+			NOt = { has_idea = ARI_mystery_weapon_buff_3 }
+			NOt = { has_idea = ARI_mystery_weapon_buff_4 }
+			NOt = { has_idea = ARI_mystery_weapon_buff_5 }
+		}
+
+		add_ideas = ARI_mystery_weapon_buff_1
+	}
+
+	if = {
+		limit = { has_idea = ARI_mystery_weapon_buff_4 }
+		swap_ideas = {
+			remove_idea = ARI_mystery_weapon_buff_4
+			add_idea = ARI_mystery_weapon_buff_5
+		}
+	}
+
+	if = {
+		limit = { has_idea = ARI_mystery_weapon_buff_3 }
+		swap_ideas = {
+			remove_idea = ARI_mystery_weapon_buff_3
+			add_idea = ARI_mystery_weapon_buff_4
+		}
+	}
+
+	if = {
+		limit = { has_idea = ARI_mystery_weapon_buff_2 }
+		swap_ideas = {
+			remove_idea = ARI_mystery_weapon_buff_2
+			add_idea = ARI_mystery_weapon_buff_3
+		}
+	}
+
+	if = {
+		limit = { has_idea = ARI_mystery_weapon_buff_1 }
+		swap_ideas = {
+			remove_idea = ARI_mystery_weapon_buff_1
+			add_idea = ARI_mystery_weapon_buff_2
+		}
+	}
+}
+
+###升级神秘科技
+ARI_upgrade_mystery_tech = {
+
+	###PS:当点击升级决议时，如果rank是1（也就是1升2），则解锁T3神秘科技；同理，rank2升级为rank3时解锁T4，rank3升级为rank4时解锁T5
+	if = {
+		limit = {
+			check_variable = {
+				var = ARI_mystic_rank
+				value = 1
+			}
+		}
+
+		set_technology = {
+			T3_opaz = 1
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = ARI_mystic_rank
+				value = 2
+			}
+		}
+
+		set_technology = {
+			T4_opaz = 1
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = ARI_mystic_rank
+				value = 3
+			}
+		}
+
+		set_technology = {
+			T5_opaz = 1
+		}
+	}
+}
+
+###确认旅者行动教训是否应该替换###
+ARI_check_if_traveller_idea_replaced = {
+	if = {
+		limit = {
+			check_variable = {
+				var = ARI_catastrophic_traveller_operation_army_attack_factor
+				value = 0
+			}
+
+			check_variable = {
+				var = ARI_catastrophic_traveller_operation_army_defence_factor
+				value = 0
+			}
+
+			check_variable = {
+				var = ARI_catastrophic_traveller_operation_army_org_factor
+				value = 0
+			}
+
+			NOT = { has_country_flag = ARI_lock_foreign_operation }
+		}
+
+		remove_dynamic_modifier = { modifier = ARI_catastrophic_traveller_operation }
+		add_dynamic_modifier = { modifier = ARI_lesson_traveller_operation }
+	}
+}
+
+
+#旅者行动准备，当圣三一渗透进度达到80%以上时，超过80%部分额外变成准备度
+#临时变量 intelligence_change 添加的进度
+ARI_traveller_operation_prepare_progress_update_effect = {
+	if = {
+		limit = {
+			not = {
+				check_variable = {
+					ARI_traveller_operation_prepare_progress = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					ARI_intelligence_in_TRI > 80
+				}
+			}
+
+			add_to_variable = {
+				ARI_traveller_operation_prepare_progress = intelligence_change
+			}
+
+		}else = {
+			set_temp_variable = {
+				ARI_intelligence_in_TRI_conut_temp = ARI_intelligence_in_TRI
+			}
+			add_to_temp_variable = {
+				ARI_intelligence_in_TRI_conut_temp = intelligence_change
+			}
+			add_to_temp_variable = {
+				ARI_intelligence_in_TRI_conut_temp = -80
+			}
+			if = {
+				limit = {
+					check_variable = {
+						ARI_intelligence_in_TRI_conut_temp > 0
+					}
+				}
+				add_to_variable = {
+					ARI_traveller_operation_prepare_progress = ARI_intelligence_in_TRI_conut_temp
+				}
+			}
+		}
+		clamp_variable = {
+			var = ARI_traveller_operation_prepare_progress
+			min = 0
+			max = 100
+		}
+	}
+}
+
+
+
+
+#政变事件链
+#锁定国策
+#临时变量 ART_coup_effect_lock_Tri_var 为1为圣三一抢先触发（渚教线）
+
+ARITRI_coup_effect_lock = {
+	if = {
+		limit = {
+			check_variable = {
+				ART_coup_effect_lock_Tri_var = 1
+			}
+		}
+		set_global_flag = ARITRI_Coup_Side_Lock_TRI
+	}else = {
+		set_global_flag = ARITRI_Coup_Side_Lock_ARI
+	}
+
+
+}
+#政变事件
+ARITRI_coup_effect = {
+	set_global_flag = ARITRI_Coup_is_Happened #政变已发生
+	BARE_SuperEvent_2_effect_6 = yes
+
+	if = {#阿里乌斯触发（标准剧情）
+		limit = {
+			has_global_flag = ARITRI_Coup_Side_Lock_ARI
+		}
+		ARI = { #阿里乌斯触发事件链
+			country_event = ARI_coup.1
+		}
+	}else_if = {
+		limit = {
+			has_global_flag = ARITRI_Coup_Side_Lock_TRI
+		}
+
+		ARI = { #阿里乌斯触发失败事件链
+			country_event = ARI_coup.6
+		}
+	}
+}
+
+
+#降级神秘步兵debuff
+ARI_cut_down_sp_infrantry_debuff = {
+
+	if = {
+		limit = { has_idea = ARI_eden_mystery_infantry_debuff_1 }
+		remove_ideas = ARI_eden_mystery_infantry_debuff_1
+	}
+
+	if = {
+		limit = { has_idea = ARI_eden_mystery_infantry_debuff_2 }
+		swap_ideas = {
+			remove_idea = ARI_eden_mystery_infantry_debuff_2 
+			add_idea = ARI_eden_mystery_infantry_debuff_1
+		}
+	}
+
+	if = {
+		limit = { has_idea = ARI_eden_mystery_infantry_debuff_3 }
+		swap_ideas = {
+			remove_idea = ARI_eden_mystery_infantry_debuff_3 
+			add_idea = ARI_eden_mystery_infantry_debuff_2
+		}
+	}
+
+	if = {
+		limit = { has_idea = ARI_eden_mystery_infantry_debuff_4}
+		swap_ideas = {
+			remove_idea = ARI_eden_mystery_infantry_debuff_4 
+			add_idea = ARI_eden_mystery_infantry_debuff_3
+		}
+	}
+
+}
+
+
+BA_ARI_Resourc_Item_Cost_Count = {
+	set_variable = {
+		BARE_ARI_Resource_Cost_all = 0
+	}
+
+	for_each_loop = {
+		array = BARE_ARI_Resource_Cost_Array
+		add_to_variable = {
+			BARE_ARI_Resource_Cost_all = v
+		}
+
+	}
+}

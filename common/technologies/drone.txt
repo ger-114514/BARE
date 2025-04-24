@@ -1,0 +1,962 @@
+technologies = {
+	recon_drone = {
+		enable_equipments = { small_uav_recon_equipment_1 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 3 y = 2 }
+		}
+		path = { leads_to_tech = recon_drone_MK2 }
+		path = { leads_to_tech = light_fighting_drone }
+        path = { leads_to_tech = fighting_drone }
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+		dependencies = {
+			T1_drone = 1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	recon_drone_MK2 = {
+		enable_equipments = { small_uav_recon_equipment_2 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 3 y = 6 }
+		}
+		path = { leads_to_tech = recon_fighting_drone_MK3 }
+		
+
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+		dependencies = {
+			T2_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+    recon_fighting_drone_MK3 = {
+		enable_equipments = { small_uav_recon_equipment_3 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 3 y = 10 }
+		}
+		path = { leads_to_tech = recon_fighting_drone_MK4 }
+		
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+		dependencies = {
+			T3_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+    recon_fighting_drone_MK4 = {
+		enable_equipments = { small_uav_recon_equipment_4 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 3 y = 14 }
+		}
+
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+		dependencies = {
+			T4_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+    light_fighting_drone = {
+		enable_equipments = { small_uav_equipment_1 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 4 }
+		}
+		sub_technologies = {
+			light_attack_drone
+		}
+		path = { leads_to_tech = light_fighting_drone_MK2 }
+		dependencies = {
+			T2_drone = 1
+		}
+
+
+		categories = { 
+			uav
+			fight_uav
+			small_uav
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	light_attack_drone = {
+		enable_equipments = { 
+			small_uav_cas_equipment_1
+		}
+		research_cost = 1.5
+
+		dependencies = {
+			T2_drone = 1
+		}
+		
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+    light_fighting_drone_MK2 = {
+		enable_equipments = {  small_uav_equipment_2 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 8 }
+		}
+
+		sub_technologies = {
+			light_attack_drone_MK2
+		}
+
+		path = { leads_to_tech = light_fighting_drone_MK3 }
+		path = { leads_to_tech = recon_fighting_drone_MK3 }
+		categories = { 
+			uav
+			fight_uav
+			small_uav
+		}
+
+		dependencies = {
+			T3_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	light_attack_drone_MK2  = {
+		enable_equipments = { 
+			small_uav_cas_equipment_2
+		}
+		research_cost = 1.5
+
+		
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+
+		dependencies = {
+			T3_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+    light_fighting_drone_MK3 = {
+		enable_equipments = {  small_uav_equipment_3 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 12 }
+		}
+		dependencies = {
+			T4_drone = 1
+		}
+
+		
+		sub_technologies = {
+			light_attack_drone_MK3
+		}
+
+		path = { leads_to_tech = light_fighting_drone_MK4 }
+		path = { leads_to_tech = recon_fighting_drone_MK4 }
+		categories = { 
+			uav
+			fight_uav
+			small_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+	light_attack_drone_MK3  = {
+		enable_equipments = {
+			small_uav_cas_equipment_3
+		}
+		research_cost = 1.5
+
+		dependencies = {
+			T4_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+    light_fighting_drone_MK4 = {
+		enable_equipments = {  small_uav_equipment_4 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 16 }
+		}
+
+		dependencies = {
+			T5_drone = 1
+		}
+			
+		sub_technologies = {
+			light_attack_drone_MK4
+		}
+		
+		categories = { 
+			uav
+			fight_uav
+			small_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	light_attack_drone_MK4  = {
+		enable_equipments = {
+			small_uav_cas_equipment_4
+		}
+		research_cost = 1.5
+
+		dependencies = {
+			T5_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			small_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+
+    fighting_drone = {
+		enable_equipments = { medium_uav_equipment_1 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 6 y = 4 }
+		}
+
+		sub_technologies = {
+			attack_drone
+		}
+
+		dependencies = {
+			T2_drone = 1
+		}
+
+		path = { leads_to_tech = fighting_drone_MK2 }
+		
+		categories = { 
+			uav
+			fight_uav
+			meidum_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	attack_drone  = {
+		enable_equipments = {
+			medium_uav_cas_equipment_1
+		}
+		research_cost = 1.5
+		
+		categories = { 
+			uav
+			cas_uav
+			meidum_uav
+		}
+
+		dependencies = {
+			T2_drone = 1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+
+    fighting_drone_MK2 = {
+		enable_equipments = { medium_uav_equipment_2 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 6 y = 8 }
+		}
+
+		dependencies = {
+			T3_drone = 1
+		}
+
+		sub_technologies = {
+			attack_drone_MK2
+		}
+
+		path = { leads_to_tech = fighting_drone_MK3 }
+		path = { leads_to_tech = recon_fighting_drone_MK3 }
+		path = { leads_to_tech = gunship_drone_MK3 }
+		categories = { 
+			uav
+			fight_uav
+			meidum_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	attack_drone_MK2  = {
+		enable_equipments = {
+			medium_uav_cas_equipment_2
+		}
+		research_cost = 1.5
+		
+		dependencies = {
+			T3_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			meidum_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+    fighting_drone_MK3 = {
+		enable_equipments = { medium_uav_equipment_3 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 6 y = 12 }
+		}
+
+		sub_technologies = {
+			attack_drone_MK3
+		}
+
+
+		dependencies = {
+			T4_drone = 1
+		}
+
+		path = { leads_to_tech = fighting_drone_MK4 }
+		path = { leads_to_tech = recon_fighting_drone_MK4 }
+		path = { leads_to_tech = gunship_drone_MK4 }
+		categories = { 
+			uav
+			fight_uav
+			meidum_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	
+	attack_drone_MK3  = {
+		enable_equipments = {
+			medium_uav_cas_equipment_3
+		}
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 4 }
+		}
+
+		dependencies = {
+			T4_drone = 1
+		}
+		
+		categories = { 
+			uav
+			cas_uav
+			meidum_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+
+    fighting_drone_MK4 = {
+		enable_equipments = { medium_uav_equipment_4 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 6 y = 16 }
+		}
+
+		sub_technologies = {
+			attack_drone_MK4
+		}
+
+		dependencies = {
+			T5_drone = 1
+		}
+		
+		categories = { 
+			uav
+			fight_uav
+			meidum_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	attack_drone_MK4  = {
+		enable_equipments = {
+			medium_uav_cas_equipment_4
+		}
+		research_cost = 1.5
+		
+		categories = { 
+			uav
+			cas_uav
+			meidum_uav
+		}
+
+		dependencies = {
+			T5_drone = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	transport_drone = {
+		enable_equipments = { transport_plane_equipment_1 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 9 y = 2 }
+		}
+		path = { leads_to_tech = transport_drone_MK2 }
+		path = { leads_to_tech = fighting_drone }
+		path = { leads_to_tech = heavy_fighting_drone }
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+
+		dependencies = {
+			T1_drone = 1
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	transport_drone_MK2 = {
+		enable_equipments = { transport_plane_equipment_2 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 9 y = 6 }
+		}
+		path = { leads_to_tech = gunship_drone_MK3 }
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+
+		dependencies = {
+			T2_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+	gunship_drone_MK3 = {
+		enable_equipments = {transport_plane_equipment_3 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 9 y = 10 }
+		}
+		path = { leads_to_tech = gunship_drone_MK4 }
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+
+
+		dependencies = {
+			T3_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+	gunship_drone_MK4 = {
+		enable_equipments = { transport_plane_equipment_4 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 9 y = 14 }
+		}
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+
+
+		dependencies = {
+			T4_drone = 1
+		}
+		ai_will_do = { factor = 1 }
+	}
+	heavy_fighting_drone = {
+		enable_equipments = { heavy_uav_equipment_1 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 12 y = 4 }
+		}
+		sub_technologies = {
+			heavy_attack_drone 
+		}
+		dependencies = {
+			T2_drone = 1
+		}
+		path = { leads_to_tech = heavy_fighting_drone_MK2 }
+		categories = { 
+			uav
+			cas_uav
+			fight_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	
+	heavy_attack_drone  = {
+		enable_equipments = {
+			heavy_uav_cas_equipment_1
+		}
+		research_cost = 1.5
+		dependencies = {
+			T2_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	heavy_fighting_drone_MK2 = {
+		enable_equipments = { heavy_uav_equipment_2 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 12 y = 8 }
+		}
+		dependencies = {
+			T3_drone = 1
+		}
+		sub_technologies = {
+			heavy_attack_drone_MK2
+		}
+
+		path = { leads_to_tech = heavy_fighting_drone_MK3 }
+		path = { leads_to_tech = gunship_drone_MK3 }
+		categories = { 
+			uav
+			cas_uav
+			fight_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	heavy_attack_drone_MK2  = {
+		enable_equipments = {
+			heavy_uav_cas_equipment_2
+		}
+		research_cost = 1.5
+		dependencies = {
+			T3_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+	heavy_fighting_drone_MK3 = {
+		enable_equipments = { heavy_uav_equipment_3 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 12 y = 12 }
+		}
+		dependencies = {
+			T4_drone = 1
+		}
+		sub_technologies = {
+			heavy_attack_drone_MK3
+		}
+
+		path = { leads_to_tech = heavy_fighting_drone_MK4 }
+		path = { leads_to_tech = gunship_drone_MK4 }
+		categories = { 
+			uav
+			cas_uav
+			fight_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+		
+	heavy_attack_drone_MK3  = {
+		enable_equipments = {
+			heavy_uav_cas_equipment_3
+		}
+		research_cost = 1.5
+		dependencies = {
+			T4_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	heavy_fighting_drone_MK4 = {
+		enable_equipments = { heavy_uav_equipment_4 }
+		research_cost = 1.5
+		folder = {
+			name = air_techs_folder
+			position = { x = 12 y = 16 }
+		}
+		dependencies = {
+			T5_drone = 1
+		}
+		sub_technologies = {
+			heavy_attack_drone_MK4
+		}
+
+		categories = { 
+			uav
+			cas_uav
+			fight_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+
+	heavy_attack_drone_MK4  = {
+		enable_equipments = {
+			heavy_uav_cas_equipment_4
+		}
+		research_cost = 1.5
+		dependencies = {
+			T5_drone = 1
+		}
+		categories = { 
+			uav
+			cas_uav
+			heavy_uav
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	drone_attack_upgrade1 = {
+		research_cost = 1.5
+
+		air_attack_factor = 0.05
+		air_cas_efficiency = 0.05
+
+		on_research_complete = {
+			custom_effect_tooltip = drone_attack_upgrade1_tt
+		}
+		dependencies = {
+			T2_drone = 1
+		}
+		folder = {
+			name = air_techs_folder
+			position = { x = 16 y = 4 }
+		}
+		path = { leads_to_tech = drone_attack_upgrade2 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_attack_upgrade2 = {
+		research_cost = 1.5
+
+		air_attack_factor = 0.05
+		air_cas_efficiency = 0.05
+
+		on_research_complete = {
+			custom_effect_tooltip = drone_attack_upgrade2_tt
+		}
+		dependencies = {
+			T3_drone = 1
+		}
+		folder = {
+			name = air_techs_folder
+			position = { x = 16 y = 8 }
+		}
+		path = { leads_to_tech = drone_attack_upgrade3 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_attack_upgrade3 = {
+		research_cost = 1.5
+
+		air_attack_factor = 0.05
+		air_cas_efficiency = 0.05
+		dependencies = {
+			T4_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_attack_upgrade3_tt
+		}
+
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 16 y = 12 }
+		}
+		path = { leads_to_tech = drone_attack_upgrade4 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_attack_upgrade4 = {
+		research_cost = 1.5
+
+		air_attack_factor = 0.05
+		air_cas_efficiency = 0.05
+		dependencies = {
+			T5_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_attack_upgrade4_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 16 y = 16 }
+		}
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_defence_upgrade1 = {
+		research_cost = 1.5
+
+
+		air_defence_factor = 0.05
+		air_detection = 0.05
+
+		on_research_complete = {
+			custom_effect_tooltip = drone_defence_upgrade1_tt
+		}
+
+		dependencies = {
+			T2_drone = 1
+		}
+		folder = {
+			name = air_techs_folder
+			position = { x = 19 y = 4 }
+		}
+		path = { leads_to_tech = drone_defence_upgrade2 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_defence_upgrade2 = {
+		research_cost = 1.5
+
+		air_defence_factor = 0.05
+		air_detection = 0.05
+		dependencies = {
+			T3_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_defence_upgrade2_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 19 y = 8 }
+		}
+		path = { leads_to_tech = drone_defence_upgrade3 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_defence_upgrade3 = {
+		research_cost = 1.5
+
+		air_defence_factor = 0.05
+		air_detection = 0.05
+		dependencies = {
+			T4_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_defence_upgrade3_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 19 y = 12 }
+		}
+		path = { leads_to_tech = drone_defence_upgrade4 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_defence_upgrade4 = {
+		research_cost = 1.5
+
+		air_defence_factor = 0.05
+		air_detection = 0.05
+
+		dependencies = {
+			T5_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_defence_upgrade4_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 19 y = 16 }
+		}
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_engine_upgrade1 = {
+		research_cost = 1.5
+
+		air_agility_factor = 0.05
+		air_range_factor = 0.05
+		dependencies = {
+			T2_drone = 1
+		}
+		folder = {
+			name = air_techs_folder
+			position = { x = 22 y = 4 }
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = drone_engine_upgrade1_tt
+		}
+
+		path = { leads_to_tech = drone_engine_upgrade2 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_engine_upgrade2 = {
+		research_cost = 1.5
+		dependencies = {
+			T3_drone = 1
+		}
+		air_agility_factor = 0.05
+		air_range_factor = 0.05
+
+		on_research_complete = {
+			custom_effect_tooltip = drone_engine_upgrade2_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 22 y = 8 }
+		}
+		path = { leads_to_tech = drone_engine_upgrade3 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_engine_upgrade3 = {
+		research_cost = 1.5
+
+		air_agility_factor = 0.05
+		air_range_factor = 0.05
+		dependencies = {
+			T4_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_engine_upgrade3_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 22 y = 12 }
+		}
+		path = { leads_to_tech = drone_engine_upgrade4 }
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+	drone_engine_upgrade4 = {
+		research_cost = 1.5
+
+		air_agility_factor = 0.05
+		air_range_factor = 0.05
+		dependencies = {
+			T5_drone = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = drone_engine_upgrade4_tt
+		}
+
+		folder = {
+			name = air_techs_folder
+			position = { x = 22 y = 16 }
+		}
+		categories = { 
+			uav
+			uav_upgrade
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

@@ -1,0 +1,52 @@
+#这个文件主要实现议会席位生成，不涉及重新计算席位，除非要进行图像分布修改，请勿随意修改
+
+TRI_senators_init_parliament = { #上议院
+	
+	clear_array = TRI_senators_grid_box_array
+	# Resize array to t1 seats, setting P1 frame numbers to 1 (Party 1 color)
+	resize_array = {
+		array = TRI_senators_grid_box_array
+		value = 1
+		size = position_support@BA_TRI_senate_seat
+	}
+	# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
+	resize_array = { #红色点为3号
+		array = TRI_senators_grid_box_array
+		value = 3
+		size = valid_seats@BA_TRI_senate_seat
+	}
+	resize_array = {
+		array = TRI_senators_grid_box_array
+		value = 2
+		size = total_seats@BA_TRI_senate_seat
+	}
+
+}
+
+TRI_house_init_parliament = { #下议院
+	
+	clear_array = TRI_house_grid_box_array
+
+	# Resize array to t1 seats, setting P1 frame numbers to 1 (Party 1 color)
+	resize_array = {
+		array = TRI_house_grid_box_array
+		value = 1
+		size = position_support@BA_TRI_house_seat
+	}
+	# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
+	resize_array = { #红色点为3号
+		array = TRI_house_grid_box_array
+		value = 3
+		size = valid_seats@BA_TRI_house_seat
+	}
+	resize_array = {
+		array = TRI_house_grid_box_array
+		value = 2
+		size = total_seats@BA_TRI_house_seat
+	}
+}
+TRI_init_senate_house = {
+	TRI_parliament_party_seats = yes
+	TRI_senators_init_parliament = yes
+	TRI_house_init_parliament = yes
+}

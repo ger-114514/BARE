@@ -1,0 +1,560 @@
+ARI_initialize_suppression_system = { #初始化
+	set_country_flag = ARI_suppression_available
+	136 = { #特鲁大教堂
+		set_variable = { ARI_state_guard_rank = 3 }
+		set_variable = { ARI_weekly_control_modifier = 2 }
+	}
+	137 = { #阿里乌斯暗影哨所
+		set_variable = { ARI_state_guard_rank = 2 }
+	}
+	138 = { #阿里乌斯本馆
+		set_variable = { ARI_state_guard_rank = 3 }
+		set_variable = { ARI_weekly_control_modifier = 2 }
+	}
+	139 = { #阿里乌斯旧商店街
+		set_variable = { ARI_state_guard_rank = 1 }
+	}
+	530 = { #地下墓穴
+		set_variable = { ARI_state_guard_rank = 1 }
+	}
+	531 = { #残墟郊地
+		set_variable = { ARI_state_guard_rank = 2 }
+	}
+	532 = { #废弃居民区
+		set_variable = { ARI_state_guard_rank = 3 }
+		set_variable = { ARI_weekly_control_modifier = 2 }
+	}
+	
+	every_owned_state = {
+		set_variable = { ARI_state_control = 100 }
+		set_variable = { ARI_state_control_rank = 1 }
+		set_variable = { ARI_state_button_frame = ARI_state_control_rank }
+		set_variable = { ARI_weekly_guard_modifier = 0 }
+		set_variable = { ARI_state_guard = 20 }
+		set_state_flag = ARI_state_cannot_be_suppressed
+	}
+	set_variable = { ARI_map_selected_state = 136 }
+	set_variable = { ARI_suppression_map_mode_control = 2 }
+	set_variable = { ARI_suppression_map_mode_guard = 1 }
+	set_variable = { ARI_suppression_map_mode = token:ALR_resistance_state }
+}
+#改变控制力
+ARI_change_control = {
+	add_to_variable = { ARI_state_control = control_change_value }
+	custom_effect_tooltip = ARI_change_control_tt
+	clamp_variable = {
+		var = ARI_state_control
+		min = 0 
+		max = 100
+	}
+	add_to_variable = { PREV.ARI_average_control = ARI_state_control }
+	if = { 
+		limit = { check_variable = { ARI_state_control < 60 } }
+		set_variable = { ARI_state_control_rank = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { ARI_state_control < 90 } }
+		set_variable = { ARI_state_control_rank = 2 }
+	}
+	else = { 
+		set_variable = { ARI_state_control_rank = 1 }
+	}
+	if = {
+		limit = { ARI = { check_variable = { ARI_suppression_map_mode = token:ALR_resistance_state } } }
+		set_variable = { ARI_state_button_frame = ARI_state_control_rank }
+	}
+	hidden_effect = {
+		ARI = { ARI_calculate_average_control = yes }
+	}
+}
+#改变控制力每周变化值
+ARI_change_control_modifier = {
+	add_to_variable = { ARI_weekly_control_modifier = control_modifier_change_value }
+	custom_effect_tooltip = ARI_change_control_modifier_tt
+}
+#改变监控强度
+ARI_change_guard = {
+	add_to_variable = { ARI_state_guard = guard_change_value }
+	custom_effect_tooltip = ARI_change_guard_tt
+	set_temp_variable = { ARI_original_state_guard_rank = ARI_state_guard_rank }
+	if = {
+		limit = { check_variable = { ARI_state_guard < 0 } }
+		add_to_variable = { ARI_state_guard = 100 }
+		add_to_variable = { ARI_state_guard_rank = -1 }
+	}
+	if = { 
+		limit = { check_variable = { ARI_state_guard > 99 } }
+		add_to_variable = { ARI_state_guard = -100 }
+		add_to_variable = { ARI_state_guard_rank = 1 }
+	}
+	if = {
+		limit = { check_variable = { ARI_state_guard_rank < 1 } }
+		set_variable = { ARI_state_guard = 0 }
+		set_variable = { ARI_state_guard_rank = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { ARI_state_guard_rank > 4 } }
+		set_variable = { ARI_state_guard = 100 }
+		set_variable = { ARI_state_guard_rank = 4 }
+	}
+	if = {
+		limit = { 
+			check_variable = { ARI_original_state_guard_rank < 3 } 
+			check_variable = { ARI_state_guard_rank > 2 } 
+		}
+		add_to_variable = { ARI_weekly_control_modifier = 2 }
+	}
+	else_if = {
+		limit = { 
+			check_variable = { ARI_original_state_guard_rank > 2 } 
+			check_variable = { ARI_state_guard_rank < 3 } 
+		}
+		add_to_variable = { ARI_weekly_control_modifier = 2 }
+	}
+	if = {
+		limit = { ARI = { check_variable = { ARI_suppression_map_mode = token:ARI_suppression_state_guard } } }
+		set_variable = { ARI_state_button_frame = ARI_state_guard_rank }
+	}
+}
+#改变监控强度每周变化值
+ARI_change_guard_modifier = {
+	add_to_variable = { ARI_weekly_guard_modifier = guard_modifier_change_value }
+	custom_effect_tooltip = ARI_change_guard_modifier_tt
+}
+
+ARI_control_increase_30 = {
+	set_temp_variable = { control_change_value = 30 }
+	ARI_change_control = yes
+}
+ARI_control_decrease_30 = {
+	set_temp_variable = { control_change_value = -30 }
+	ARI_change_control = yes
+}
+ARI_control_increase_20 = {
+	set_temp_variable = { control_change_value = 20 }
+	ARI_change_control = yes
+}
+ARI_control_decrease_20 = {
+	set_temp_variable = { control_change_value = -20 }
+	ARI_change_control = yes
+}
+
+ARI_control_modifier_increase_2 = {
+	set_temp_variable = { control_modifier_change_value = 2 }
+	ARI_change_control_modifier = yes
+}
+ARI_control_modifier_decrease_2 = {
+	set_temp_variable = { control_modifier_change_value = -2 }
+	ARI_change_control_modifier = yes
+}
+
+ARI_guard_increase_30 = {
+	set_temp_variable = { guard_change_value = 30 }
+	ARI_change_guard = yes
+}
+ARI_guard_decrease_30 = {
+	set_temp_variable = { guard_change_value = -30 }
+	ARI_change_guard = yes
+}
+ARI_guard_increase_20 = {
+	set_temp_variable = { guard_change_value = 20 }
+	ARI_change_guard = yes
+}
+ARI_guard_decrease_20 = {
+	set_temp_variable = { guard_change_value = -20 }
+	ARI_change_guard = yes
+}
+
+ARI_guard_modifier_increase_2 = {
+	set_temp_variable = { guard_modifier_change_value = 2 }
+	ARI_change_guard_modifier = yes
+}
+ARI_guard_modifier_decrease_2 = {
+	set_temp_variable = { guard_modifier_change_value = -2 }
+	ARI_change_guard_modifier = yes
+}
+ARI_guard_modifier_increase_5 = {
+	set_temp_variable = { guard_modifier_change_value = 5 }
+	ARI_change_guard_modifier = yes
+}
+ARI_guard_modifier_decrease_5 = {
+	set_temp_variable = { guard_modifier_change_value = -5 }
+	ARI_change_guard_modifier = yes
+}
+#刷新
+ARI_calculate_average_control = {
+	hidden_effect = {
+		#计算平均控制力
+		set_variable = { ARI_average_control = 0 }
+		every_owned_state = {
+			add_to_variable = { PREV.ARI_average_control = ARI_state_control }
+		}
+		divide_variable = { ARI_average_control = 7 }
+		remove_ideas = ARI_control_rank_1
+		remove_ideas = ARI_control_rank_2
+		remove_ideas = ARI_control_rank_3
+		if = {
+			limit = { check_variable = { ARI_average_control < 60 } }
+			add_ideas = ARI_control_rank_3
+		}
+		else_if = {
+			limit = { check_variable = { ARI_average_control < 90 } }
+			add_ideas = ARI_control_rank_2
+		}
+		else = {
+			add_ideas = ARI_control_rank_1
+		}
+	}
+}
+ARI_remove_suppression_system = {
+	hidden_effect = {
+		every_owned_state = {
+			clear_variable = ARI_state_control
+			clear_variable = ARI_state_control_rank
+			clear_variable = ARI_state_guard_rank
+		}
+		clr_country_flag = ARI_suppression_available
+		set_country_flag = ARI_complete_suppression_task
+		clear_variable = ARI_map_selected_state
+		clear_array = ARI_states
+		clear_array = ARI_states_x
+		clear_array = ARI_states_y
+		remove_ideas = ARI_control_rank_1
+		remove_ideas = ARI_control_rank_2
+		remove_ideas = ARI_control_rank_3
+	}
+}
+
+ARI_change_mystic_progress = {
+	custom_effect_tooltip = ARI_change_mystic_progress_tt
+	add_to_variable = { ARI_mystic_progress = mystic_progress_change }
+	clamp_variable = {
+		var = ARI_mystic_progress
+		min = 0
+		max = 100
+	}
+	#手动推进阶段
+	# if = {
+	# 	limit = { 
+	# 		NOT = { check_variable = { ARI_mystic_progress < 100 } }
+	# 		check_variable = { ARI_mystic_rank = 1 }
+	# 	}
+	# 	custom_effect_tooltip = ARI_change_mystic_rank_tt
+	# 	add_to_variable = { ARI_mystic_rank = 1 }
+	# 	subtract_from_variable = { ARI_mystic_progress = 100 }
+	# }
+	# else = {
+	# 	clamp_variable = {
+	# 		var = ARI_mystic_progress
+	# 		min = 0
+	# 		max = 100
+	# 	}
+	# }
+}
+ARI_change_materials = {
+	custom_effect_tooltip = ARI_change_materials_tt
+	add_to_variable = { ARI_materials = material_change }
+	clamp_variable = {
+		var = ARI_materials
+		min = 0
+		max = 1000
+	}
+}
+ARI_change_materials_monthly_modifier = {
+	custom_effect_tooltip = ARI_change_materials_monthly_modifier_tt
+	add_to_variable = { ARI_materials_monthly_modifier = material_monthly_modifier_change }
+}
+ARI_change_intelligence_in_TRI = {
+	custom_effect_tooltip = {
+		localization_key = ARI_change_intelligence_tt
+		TAG = "TRI"
+	}
+	
+	add_to_variable = { ARI_intelligence_in_TRI = intelligence_change }
+	clamp_variable = {
+		var = ARI_intelligence_in_TRI
+		min = var:ARI_min_intelligence_in_TRI
+		max = 100
+	}
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { ARI_intelligence_in_TRI > 80 } }
+			set_temp_variable = { new_rank = 4 }
+		}
+		else_if = {
+			limit = { check_variable = { ARI_intelligence_in_TRI > 60 } }
+			set_temp_variable = { new_rank = 3 }
+		}
+		else_if = {
+			limit = { check_variable = { ARI_intelligence_in_TRI > 40 } }
+			set_temp_variable = { new_rank = 2 }
+		}
+		else_if = {
+			limit = { check_variable = { ARI_intelligence_in_TRI > 20 } }
+			set_temp_variable = { new_rank = 1 }
+		}
+		else = {
+			set_temp_variable = { new_rank = 0 }
+		}
+		meta_effect = {
+			text = {
+				swap_ideas = {
+					remove_idea = ARI_intelligence_in_TRI_[OLD]
+					add_idea = ARI_intelligence_in_TRI_[NEW]
+				}
+			}
+			OLD = "[?ARI_intelligence_in_TRI_rank]"
+			NEW = "[?new_rank]"
+		}
+		set_variable = { ARI_intelligence_in_TRI_rank = new_rank }
+	}
+}
+ARI_change_intelligence_in_GEH = {
+	custom_effect_tooltip = {
+		localization_key = ARI_change_intelligence_tt
+		TAG = "GEH"
+	}
+	
+	add_to_variable = { ARI_intelligence_in_GEH = intelligence_change }
+	clamp_variable = {
+		var = ARI_intelligence_in_GEH
+		min = var:ARI_min_intelligence_in_GEH
+		max = 100
+	}
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { ARI_intelligence_in_GEH > 80 } }
+			set_temp_variable = { new_rank = 4 }
+		}
+		else_if = {
+			limit = { check_variable = { ARI_intelligence_in_GEH > 60 } }
+			set_temp_variable = { new_rank = 3 }
+		}
+		else_if = {
+			limit = { check_variable = { ARI_intelligence_in_GEH > 40 } }
+			set_temp_variable = { new_rank = 2 }
+		}
+		else_if = {
+			limit = { check_variable = { ARI_intelligence_in_GEH > 20 } }
+			set_temp_variable = { new_rank = 1 }
+		}
+		else = {
+			set_temp_variable = { new_rank = 0 }
+		}
+		meta_effect = {
+			text = {
+				swap_ideas = {
+					remove_idea = ARI_intelligence_in_GEH_[OLD]
+					add_idea = ARI_intelligence_in_GEH_[NEW]
+				}
+			}
+			OLD = "[?ARI_intelligence_in_GEH_rank]"
+			NEW = "[?new_rank]"
+		}
+		set_variable = { ARI_intelligence_in_GEH_rank = new_rank }
+	}
+}
+ARI_change_revenge_progress = {
+	custom_effect_tooltip = ARI_change_revenge_progress_tt
+	add_to_variable = { ARI_revenge_progress = revenge_progress_change }
+	clamp_variable = {
+		var = ARI_revenge_progress
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = { check_variable = { ARI_revenge_progress < 33 } }
+		set_temp_variable = { revenge = 33 }
+		subtract_from_temp_variable = { revenge = ARI_revenge_progress }
+		divide_temp_variable = { revenge = 33 }
+		set_variable = { ARI_flame_of_revenge_stability_factor = revenge }
+		set_variable = { ARI_flame_of_revenge_war_support_factor = revenge }
+		set_variable = { ARI_flame_of_revenge_industrial_capacity_factory = revenge }
+		set_variable = { ARI_flame_of_revenge_army_org_factor = revenge }
+		set_variable = { ARI_flame_of_revenge_army_org_regain = 0 }
+		multiply_variable = { ARI_flame_of_revenge_stability_factor = -0.3 }
+		multiply_variable = { ARI_flame_of_revenge_war_support_factor = -0.3 }
+		multiply_variable = { ARI_flame_of_revenge_industrial_capacity_factory = -0.2 }
+		multiply_variable = { ARI_flame_of_revenge_army_org_factor = -0.2 }
+	}
+	else = {
+		set_temp_variable = { revenge = ARI_revenge_progress }
+		subtract_from_temp_variable = { revenge = 33 }
+		divide_temp_variable = { revenge = 67 }
+		set_variable = { ARI_flame_of_revenge_stability_factor = revenge }
+		set_variable = { ARI_flame_of_revenge_war_support_factor = revenge }
+		set_variable = { ARI_flame_of_revenge_industrial_capacity_factory = revenge }
+		set_variable = { ARI_flame_of_revenge_army_org_factor = revenge }
+		set_variable = { ARI_flame_of_revenge_army_org_regain = revenge }
+		multiply_variable = { ARI_flame_of_revenge_stability_factor = 0.1 }
+		multiply_variable = { ARI_flame_of_revenge_war_support_factor = 0.2 }
+		multiply_variable = { ARI_flame_of_revenge_industrial_capacity_factory = 0.15 }
+		multiply_variable = { ARI_flame_of_revenge_army_org_factor = 0.15 }
+		multiply_variable = { ARI_flame_of_revenge_army_org_regain = 0.15 }
+	}
+}
+random_intelligence_agency_upgrades = {
+	random_list = {
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_economy_civilian
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_economy_civilian
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_army_department
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_army_department
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_naval_department
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_naval_department
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_airforce_department
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_airforce_department
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_passive_defense
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_passive_defense
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_anti_partisan
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_anti_partisan
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_blueprint_stealing
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_blueprint_stealing
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_portable_radios
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_portable_radios
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_invisible_ink
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_invisible_ink
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_plastic_explosives
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_plastic_explosives
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_suicide_pills
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_suicide_pills
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_training_centers
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_training_centers
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_commando_training
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_commando_training
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_interrogation_techniques
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_interrogation_techniques
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_diplo_training
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_diplo_training
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_psycho_warfare
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_psycho_warfare
+		}
+		1 = {
+			modifier = {
+				has_done_agency_upgrade = upgrade_form_department
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_form_department
+		}
+		1 = {
+			modifier = {
+				OR = {
+					has_done_agency_upgrade = upgrade_decryption_boost
+					NOT = { has_done_agency_upgrade = upgrade_form_department }
+				}
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_decryption_boost
+		}
+		1 = {
+			modifier = {
+				OR = {
+					has_done_agency_upgrade = upgrade_decryption_boost_2
+					NOT = { has_done_agency_upgrade = upgrade_form_department }
+					NOT = { has_done_agency_upgrade = upgrade_decryption_boost }
+				}
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_decryption_boost_2
+		}
+		1 = {
+			modifier = {
+				OR = {
+					has_done_agency_upgrade = upgrade_crypto_strength
+					NOT = { has_done_agency_upgrade = upgrade_form_department }
+				}
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_crypto_strength
+		}
+		1 = {
+			modifier = {
+				OR = {
+					has_done_agency_upgrade = upgrade_crypto_strength_2
+					NOT = { has_done_agency_upgrade = upgrade_form_department }
+					NOT = { has_done_agency_upgrade = upgrade_crypto_strength }
+				}
+				factor = 0
+			}
+			upgrade_intelligence_agency = upgrade_crypto_strength_2
+		}
+	}
+}

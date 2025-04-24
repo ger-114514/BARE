@@ -1,0 +1,73 @@
+characters = {
+	VAL_kanna = {
+		name = VAL_kanna_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_VAL_kanna
+				small = GFX_idea_advisor_VAL_kanna
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			traits = { }
+			expire = "2042.1.1.1"
+			id = -1
+		}
+
+        corps_commander= {
+			traits = {infantry_officer harsh_leader
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+
+	}
+
+
+
+    VAL_fubuki ={ 
+		name=VAL_fubuki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_val_fubuki
+				small=GFX_portrait_val_fubuki_small
+			}	
+		}
+
+        field_marshal = {
+			traits = {
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+
+	}
+
+
+	
+    VAL_kirino ={ 
+		name=VAL_kirino_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_val_kirino
+				small=GFX_portrait_val_kirino_small
+			}	
+		}
+
+        field_marshal = {
+			traits = {
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

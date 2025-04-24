@@ -1,0 +1,68 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			TRI = {
+				add_ideas = {
+					TRI_center_campus_region
+					TRI_northern_campus_region
+					TRI_eastern_campus_region
+					TRI_southern_campus_region
+					TRI_industrial_park_region
+					TRI_living_area_region
+					TRI_business_district_region
+					# TRI_cultural_center_region
+					# TRI_dormitory_region
+					# TRI_doria_region
+					# TRI_southwestern_region
+					# TRI_coastal_region
+					# TRI_southern_living_quarters_region
+					# TRI_southern_business_district_region
+				}
+				TRI_region_generate_statistics = yes
+				TRI_parliament_house_election = yes
+				set_variable = { TRI_selected_region = token:TRI_center_campus_region }
+				every_controlled_state = {
+					limit = { has_variable = state_region }
+					add_dynamic_modifier = {
+						modifier = TRI_state_region_stability_modifier
+					}
+				}
+			}
+		}
+	}
+	on_daily_TRI = {
+		effect = {
+			if = { #花子执政效果
+				limit = { 
+					has_country_leader = { character = TRI_hanako }
+					has_variable = TRI_parliament_focus
+					has_completed_focus = TRI_across_the_border
+				}
+				set_variable = { support@TRI_parliament_association_4 = 0 }
+				set_variable = { centrist@TRI_parliament_association_4 = 0 }
+				set_variable = { opposition@TRI_parliament_association_4 = 0 }
+				if = {
+					limit = { check_variable = { BA_TRI_player_position = token:position_support } }
+					set_variable = { support@TRI_parliament_association_4 = 20 }
+				}
+				else_if = {
+					limit = { check_variable = { BA_TRI_player_position = token:position_centrist } }
+					set_variable = { centrist@TRI_parliament_association_4 = 20 }
+				}
+				else = {
+					set_variable = { opposition@TRI_parliament_association_4 = 20 }
+				}
+			}
+
+			if = {
+				limit = { check_variable = { TRI_political_focus_cd > 0 } }
+				subtract_from_variable = { TRI_political_focus_cd = 1 }
+			}
+		}
+	}
+	on_monthly_TRI = {
+		effect = {
+			TRI_region_generate_statistics = yes
+		}
+	}
+}

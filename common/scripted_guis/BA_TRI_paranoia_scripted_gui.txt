@@ -1,0 +1,46 @@
+scripted_gui = {
+	#偏执度系统ui
+	TRI_paranoia_system_ui = {
+		context_type = decision_category
+		window_name = "TRI_paranoia_system_ui_window"
+		dynamic_lists = {
+			TRI_association_buttons = {
+				array = TRI_paranoia_association
+				index = i
+				value = v
+				entry_container = TRI_association_button_container
+			}
+		}
+		effects = {
+			TRI_association_button_click = {
+				set_variable = { TRI_paranoia_selected_association = i }
+				if = {
+					limit = { NOT = { has_country_flag = TRI_paranoia_association_inspection_flag } }
+					set_variable = { TRI_inspected_assosiation = TRI_paranoia_association^i }
+				}
+			}
+		}
+		triggers = {
+			TRI_association_button_click_enabled = {
+				NOT = { has_country_flag = TRI_paranoia_inspect_association_cooldown }
+			}
+			TRI_association_button_crack_visible = {
+				check_variable = { TRI_paranoia_association_state@var:v = 1 }
+			}
+		}
+		properties = {
+			TRI_paranoia_paranoiameter = {
+				frame = TRI_paranoia_dial_frame
+			}
+			TRI_paranoia_needle = {
+				frame = TRI_paranoia_dial_frame
+			}
+			TRI_paranoia_nagisa = {
+				frame = TRI_paranoia_nagisa_state
+			}
+			TRI_association_button = {
+				image = "TRI_paranoia_association_button_[?i]"
+			}
+		}
+	}
+}

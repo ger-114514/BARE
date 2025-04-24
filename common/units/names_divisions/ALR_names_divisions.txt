@@ -1,0 +1,161 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+ALR_Inf_01 = {
+	name = "反抗军步兵"
+
+	for_countries = { ALR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "阿里乌斯抵抗阵线第%d连"
+
+	ordered =
+	{
+		1 = { "阿里乌斯抵抗阵线第1“马夫蒂”连" }
+		2 = { "阿里乌斯抵抗阵线第2“大红莲团”连" }
+		3 = { "阿里乌斯抵抗阵线第3“返乡战士”连" }
+		4 = { "阿里乌斯抵抗阵线第4“秘银”连" }
+		5 = { "阿里乌斯抵抗阵线第5“流星”连" }
+		6 = { "阿里乌斯抵抗阵线第6“天人”连" }
+	}
+}
+
+ALR_Inf_02 = {
+	name = "皇室禁卫"
+
+	for_countries = { ALR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "阿里乌斯皇室禁卫第%d铁甲圣骑中队"
+
+	ordered =
+	{
+		1 = { "阿里乌斯皇室禁卫第1“君士坦丁”铁甲圣骑中队" }
+		2 = { "阿里乌斯皇室禁卫第2“查士丁尼”铁甲圣骑中队" }
+		3 = { "阿里乌斯皇室禁卫第3“狄奥多西”铁甲圣骑中队" }
+		4 = { "阿里乌斯皇室禁卫第4“希拉克略”铁甲圣骑中队" }
+		5 = { "阿里乌斯皇室禁卫第5“米哈伊尔”铁甲圣骑中队" }
+		6 = { "阿里乌斯皇室禁卫第6“瓦西里”铁甲圣骑中队" }
+		7 = { "阿里乌斯皇室禁卫第7“阿莱克修斯”铁甲圣骑中队" }
+		8 = { "阿里乌斯皇室禁卫第8“曼努埃尔”铁甲圣骑中队" }
+	}
+}
+
+ALR_Infs_01 = {
+	name = "反抗军滑翔伞步兵"
+
+	for_countries = { ALR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "阿里乌斯抵抗阵线第%d滑翔伞连"
+
+	ordered =
+	{
+		1 = { "阿里乌斯抵抗阵线第1“解放”滑翔伞连" }
+		2 = { "阿里乌斯抵抗阵线第2“抵抗”滑翔伞连" }
+		3 = { "阿里乌斯抵抗阵线第3“坦齐姆”滑翔伞连" }
+		4 = { "阿里乌斯抵抗阵线第4“阿克萨”滑翔伞连" }
+		5 = { "阿里乌斯抵抗阵线第5“卡桑”滑翔伞连" }
+		6 = { "阿里乌斯抵抗阵线第6“穆斯塔法”滑翔伞连" }
+	}
+}
+
+ALR_apc_01 = {
+	name = "反抗军摩托化部队"
+
+	for_countries = { ALR }
+
+	can_use = { always = yes }
+
+	division_types = { "apc_unit" }
+
+	fallback_name = "抵抗阵线摩托化第%d连"
+
+	ordered =
+	{
+		1 = { "抵抗阵线摩托化第1“巴德尔丁”连" }
+		2 = { "抵抗阵线摩托化第2“旅程”连" }
+		3 = { "抵抗阵线摩托化第3“塔伊兹”连" }
+		4 = { "抵抗阵线摩托化第4“阿布”连" }
+		5 = { "抵抗阵线摩托化第5“萨那”连" }
+		6 = { "抵抗阵线摩托化第6“荷台达”连" }
+	}
+}
+
+ALR_Ifv_01 = {
+	name = "反抗军机械化部队"
+
+	for_countries = { ALR }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "阿里乌斯抵抗阵线第%d机械化连"
+
+	ordered =
+	{
+		1 = { "抵抗阵线第1“贝鲁特”机械化连" }
+		2 = { "抵抗阵线第2“大马士革”机械化连" }
+		3 = { "抵抗阵线第3“宾特朱拜勒”机械化连" }
+		4 = { "抵抗阵线第4“拉德万”机械化连" }
+		5 = { "抵抗阵线第5“萨德尔”机械化连" }
+		6 = { "抵抗阵线第6“埃纳塔”机械化连" }
+		7 = { "抵抗阵线第7“橄榄林”机械化连" }
+	}
+}
+
+ALR_LA_01 = {
+	name = "反抗军装甲部队"
+
+	for_countries = { ALR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+	fallback_name = "阿里乌斯抵抗阵线快反装甲第%d营"
+
+	ordered =
+	{
+		1 = { "抵抗阵线快反装甲第1“老虎”营" }
+		2 = { "抵抗阵线快反装甲第2“拉塔基亚”营" }
+		3 = { "抵抗阵线快反装甲第3“巴尔米拉”营" }
+		4 = { "抵抗阵线快反装甲第4“哈马”营" }
+		5 = { "抵抗阵线快反装甲第5“达拉亚”营" }
+		6 = { "抵抗阵线快反装甲第6“阿勒颇”营" }
+		7 = { "抵抗阵线快反装甲第7“卡拉蒙之盾”营" }
+	}
+}

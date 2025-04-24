@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		SCH_QiGuaiDeDaRen = { #奇怪的大人
+			picture = unkown
+
+			modifier = {
+				custom_modifier_tooltip = SCH_WuJinDeFanRong_R
+				opinion_gain_monthly_factor = 10 #改善关系速度
+			}
+		}
+
+		SCH_TeBieQuanLi = { #特别权利
+			picture = unkown
+
+			modifier = {
+				custom_modifier_tooltip = SCH_WuJinDeFanRong_QL
+			}
+		}
+	}
+}

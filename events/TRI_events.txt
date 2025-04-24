@@ -1,0 +1,1356 @@
+#################
+###圣三一事件组###
+#################
+add_namespace = TRI_events
+add_namespace = TRI_autofocus
+#1开始是正常事件
+#200开始时调查事件
+#1000开始是超事件
+country_event = {
+    id = TRI_autofocus.1
+    hidden = yes
+    is_triggered_only = yes
+    trigger = {
+        NOT = { check_variable = { TRI_hoshubu_focus_line^0 = 0 } }
+    }
+    immediate = {
+        hidden_effect = {
+            meta_effect = {
+                text = {
+                    deactivate_shine_on_focus = [FOCUS]
+                    complete_national_focus = {
+                        focus = [FOCUS]
+                        use_side_message = yes
+                        originator_name = TRI_hoshubu
+                    }
+                    if = {
+                        limit = { 
+                            NOT = { check_variable = { TRI_hoshubu_focus_line^1 = 0 } }
+                        }
+                        activate_shine_on_focus = [NEW_FOCUS]
+                        country_event = {
+                            id = TRI_autofocus.1
+                            days = TRI_auto_focus_days
+                        }
+                    }
+                    remove_from_array = {
+                        array = TRI_hoshubu_focus_line
+                        index = 0
+                    }
+                }
+                FOCUS = "[?TRI_hoshubu_focus_line^0.GetTokenKey]"
+                NEW_FOCUS = "[?TRI_hoshubu_focus_line^1.GetTokenKey]"
+            }
+        }
+        
+    }
+}
+#欢迎来到圣三一！
+country_event = {
+    id = TRI_events.1
+    title = TRI_events.1.t
+    desc = TRI_events.1.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.1.a
+        country_event = {
+            id = TRI_events.2
+            days = 14
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#在意，载疑，再议
+country_event = {
+    id = TRI_events.2
+    title = TRI_events.2.t
+    desc = TRI_events.2.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.2.a
+        hidden_effect = {
+            news_event = TRI_events.1000
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#各怀鬼胎
+country_event = {
+    id = TRI_events.3
+    title = TRI_events.3.t
+    desc = TRI_events.3.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.3.a
+		set_temp_variable = { position_change = -0.2 }
+		TRI_change_player_focus_position = yes
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.3.b
+
+		ai_chance = {
+			base = 4
+		}
+    }
+
+    option = {
+		name = TRI_events.3.c
+		set_temp_variable = { position_change = 0.1 }
+		TRI_change_player_focus_position = yes
+
+		ai_chance = {
+			base = 5
+		}
+    }
+}
+
+#意料之外的使者
+country_event = {
+    id = TRI_events.4
+    title = TRI_events.4.t
+    desc = TRI_events.4.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.4.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#简要的会面
+country_event = {
+    id = TRI_events.5
+    title = TRI_events.5.t
+    desc = TRI_events.5.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = TRI_events.5.a
+        #刷新国策树
+        hidden_effect = {
+            load_focus_tree = TRI_focus_stage_2
+        }
+        #将【圣三一的权力平衡】焦点设置为：《伊甸条约》的签订
+		TRI_set_focus_signing_Eden = yes
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#既有近虑
+country_event = {
+    id = TRI_events.6
+    title = TRI_events.6.t
+    desc = TRI_events.6.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.6.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.6.b
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.6.c
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#乐园之辩
+country_event = {
+    id = TRI_events.7
+    title = TRI_events.7.t
+    desc = TRI_events.7.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.7.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.7.b
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#乌云笼于庙堂之上
+country_event = {
+    id = TRI_events.8
+    title = TRI_events.8.t
+    desc = TRI_events.8.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.8.a
+
+        trigger = { has_country_flag = ba_enabled_nonhistoric_choice }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.8.b
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#离心之盟
+country_event = {
+    id = TRI_events.9
+    title = TRI_events.9.t
+    desc = TRI_events.9.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    #暂且不实装
+    option = {
+		name = TRI_events.9.a
+        trigger = {
+			always = no
+		}
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    #暂且不实装
+    option = {
+		name = TRI_events.9.b
+        trigger = {
+			always = no
+		}
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+
+    option = {
+		name = TRI_events.9.c
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#危险机密被泄露？
+country_event = {
+    id = TRI_events.10
+    title = TRI_events.10.t
+    desc = TRI_events.10.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.10.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#外来者
+country_event = {
+    id = TRI_events.11
+    title = TRI_events.11.t
+    desc = TRI_events.11.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.11.a
+        add_ideas = TRI_SCH_teacher_modifier
+        #桐藤渚偏执度-5%
+        set_temp_variable = { TRI_paranoia_change = -5 }
+        TRI_change_paranoia = yes
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#与老师的会面
+country_event = {
+    id = TRI_events.12
+    title = TRI_events.12.t
+    desc = TRI_events.12.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.12.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#第二次伊甸条约地点选址
+country_event = {
+    id = TRI_events.13
+    title = TRI_events.13.t
+    desc = TRI_events.13.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.13.a
+
+        #非历史线出现
+        trigger = { has_country_flag = ba_enabled_nonhistoric_choice }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.13.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+#名为信任的纽带
+country_event = {
+    id = TRI_events.25
+    title = TRI_events.25.t
+    desc = TRI_events.25.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.25.a
+        BA_TRI_remove_paranoia_system = yes
+
+        hidden_effect = {
+            country_event = {
+                id = TRI_events.51
+                days = 7
+            }
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#剑拔弩张的会面
+country_event = {
+    id = TRI_events.26
+    title = TRI_events.26.t
+    desc = TRI_events.26.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    immediate = {
+        hidden_effect = {
+            140 = {
+                set_demilitarized_zone = yes
+            }
+            529 = {
+                set_demilitarized_zone = yes
+            }
+        }
+    }
+    option = {
+		name = TRI_events.26.a
+        custom_effect_tooltip =  event_immediately_happened_tt
+        effect_tooltip = {
+            140 = {
+                set_demilitarized_zone = yes
+            }
+            529 = {
+                set_demilitarized_zone = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#灼天的硝火
+country_event = {
+    id = TRI_events.27
+    title = TRI_events.27.t
+    desc = TRI_events.27.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    immediate = {
+        hidden_effect = {
+            goto_province = 5612
+        }
+    }
+
+    option = {
+		name = TRI_events.27.a
+
+        hidden_effect = {
+            country_event = {
+                id = TRI_events.28
+                days = 3
+            }
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#弥散而出的混乱
+country_event = {
+    id = TRI_events.28
+    title = TRI_events.28.t
+    desc = TRI_events.28.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    immediate = {
+        hidden_effect = {
+            #暂时移除领袖桐藤渚的所有效果
+            #在渚的头像上打上MISSING的红色标记
+            #同时将效果替换成“失踪的领袖”
+            #效果：（无法切换政治顾问、军事顾问和任何法案）
+            promote_character = TRI_missing_nagisa
+        }
+    }
+    option = {
+		name = TRI_events.28.a
+        hidden_effect = {
+            country_event = {
+                id = TRI_events.29
+                days = 3
+            }
+        }
+        #圣三一的团结——团结度－10
+        TRI_unity_decrease_10 = yes
+        
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#摇摇欲坠
+country_event = {
+    id = TRI_events.29
+    title = TRI_events.29.t
+    desc = TRI_events.29.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.29.a
+
+        #正义实现委员会的支持度降低至30%，激进度提升至60%
+        hidden_effect = {
+            if = {
+                limit = {
+                    check_variable = { loyalty@TRI_parliament_association_3 > 0.3 }
+                }
+                set_variable = { loyalty@TRI_parliament_association_3 = 0.3 }
+            }
+            if = {
+                limit = { check_variable = { radicalism@TRI_parliament_association_3 < 0.6 } }
+                set_variable = { radicalism@TRI_parliament_association_3 = 0.6 }
+            }
+            TRI_parliament_party_seats = yes
+            set_country_flag = TRI_BOP_set_current_policy_available
+            TRI_parliament_party_seats = yes
+            country_event = {
+                id = TRI_events.30
+                days = 1
+            }
+        }
+        custom_effect_tooltip = TRI_events_29_tt
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#凶镬延漫
+country_event = {
+    id = TRI_events.30
+    title = TRI_events.30.t
+    desc = TRI_events.30.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.30.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#临时代管协议
+country_event = {
+    id = TRI_events.31
+    title = TRI_events.31.t
+    desc = TRI_events.31.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.31.a
+
+        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        set_country_flag = TRI_church_investigation
+        unlock_decision_category_tooltip = TRI_church_investigation
+        #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
+        set_country_flag = TRI_hanako_decisions
+        unlock_decision_category_tooltip = TRI_hanako_decisions
+
+        add_timed_idea = {
+            idea = TRI_prepare_for_war
+            days = 140
+        }
+        #完成国策：风暴中的炬手
+        complete_national_focus = TRI_torchbearer_in_the_storm
+        hidden_effect = {
+            country_event = { id = TRI_events.32 days = 14 } #两周，14days
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.31.b
+
+        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        set_country_flag = TRI_church_investigation
+        unlock_decision_category_tooltip = TRI_church_investigation
+        #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
+        set_country_flag = TRI_hanako_decisions
+        unlock_decision_category_tooltip = TRI_hanako_decisions
+
+        add_timed_idea = {
+            idea = TRI_focus_on_stability
+            days = 140
+        }
+        #完成国策：动荡下的砥石
+        complete_national_focus = TRI_mainstay_in_the_collapse
+        hidden_effect = {
+            country_event = { id = TRI_events.32 days = 14 } #两周，14days
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+
+#意外访客
+country_event = {
+    id = TRI_events.32
+    title = TRI_events.32.t
+    desc = TRI_events.32.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.32.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#逆乱
+country_event = {
+    id = TRI_events.33
+    title = TRI_events.33.t
+    desc = TRI_events.33.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.33.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#无解的谜题
+country_event = {
+    id = TRI_events.34
+    title = TRI_events.34.t
+    desc = TRI_events.34.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.34.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#转机
+country_event = {
+    id = TRI_events.35
+    title = TRI_events.35.t
+    desc = TRI_events.35.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.35.a
+
+        add_political_power = 200
+
+        #团结度+10
+        TRI_unity_increase_10 = yes
+        #为民族精神【逐渐稳定的《伊甸条约》】添加效果：（每日获取的政治点数＋0.1，工厂产出＋15％，所有顾问、法案花费－50％）
+        custom_effect_tooltip = eden_treaty_step_5_add_modifier_1
+        add_to_variable = { eden_broken_daily_power_gain = 0.1 }
+        add_to_variable = { eden_broken_factory_output = 0.15 }
+        add_to_variable = { eden_broken_advisor_cost = -0.5 }
+        add_to_variable = { eden_broken_army_chief_cost = -0.5 }
+        add_to_variable = { eden_broken_air_chief_cost = -0.5 }
+        add_to_variable = { eden_broken_economy_cost = -0.5 }
+        add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
+        add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#“邪恶的暗部领袖”
+country_event = {
+    id = TRI_events.36
+    title = TRI_events.36.t
+    desc = TRI_events.36.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.36.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#战壕速递
+country_event = {
+    id = TRI_events.37
+    title = TRI_events.37.t
+    desc = TRI_events.37.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.37.a
+
+        country_event = TRI_events.39
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#正义，青春与友谊
+country_event = {
+    id = TRI_events.38
+    title = TRI_events.38.t
+    desc = TRI_events.38.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.38.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#新以代之
+country_event = {
+    id = TRI_events.39
+    title = TRI_events.39.t
+    desc = TRI_events.39.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.39.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#乐园之议
+country_event = {
+    id = TRI_events.40
+    title = TRI_events.40.t
+    desc = TRI_events.40.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.40.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#最后的挣扎
+country_event = {
+    id = TRI_events.41
+    title = TRI_events.41.t
+    desc = TRI_events.41.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.41.a
+
+         hidden_effect = {
+            country_event = { id = TRI_events.42 days = 21 } #3周，21天
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#余波
+country_event = {
+    id = TRI_events.42
+    title = TRI_events.42.t
+    desc = TRI_events.42.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.42.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#有条件的军事准备
+country_event = {
+    id = TRI_events.100
+    title = TRI_events.100.t
+    desc = TRI_events.100.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+    option = {
+		name = TRI_events.100.a
+        add_political_power = -150
+        random_controlled_state = {
+            limit = {
+                TRI_is_tea_party_state = yes
+                free_building_slots = {
+                    building = arms_factory
+                    size > 0
+                    include_locked = yes
+                }
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }	
+        }
+        random_controlled_state = {
+            limit = {
+                TRI_is_tea_party_state = no
+                free_building_slots = {
+                    building = industrial_complex
+                    size > 0
+                    include_locked = yes
+                }
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }	
+        }
+        random_controlled_state = {
+            limit = {
+                NOT = {
+                    TRI_is_tea_party_state = no
+                }
+                free_building_slots = {
+                    building = industrial_complex
+                    size > 0
+                    include_locked = yes
+                }
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }	
+        }
+        set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+        set_temp_variable = { loyalty_change = 0.03 }
+        TRI_parliament_loyalty_change_parliament = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+    option = {
+		name = TRI_events.100.b
+        add_political_power = -40
+        random_controlled_state = {
+            limit = {
+                TRI_is_tea_party_state = yes
+                free_building_slots = {
+                    building = arms_factory
+                    size > 0
+                    include_locked = yes
+                }
+            }
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }	
+        }
+        set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+        set_temp_variable = { loyalty_change = 0.01 }
+        TRI_parliament_loyalty_change_parliament = yes
+        set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+        set_temp_variable = { loyalty_change = -0.02 }
+        TRI_parliament_loyalty_change_parliament = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+###2025.2.20 乃爱###
+#圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始
+country_event = {
+    id = TRI_events.50
+    title = TRI_events.50.t
+    desc = TRI_events.50.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.50.a
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#桐藤渚的地位遭受质疑
+country_event = {
+    id = TRI_events.51
+    title = TRI_events.51.t
+    desc = TRI_events.51.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = TRI_events.51.a
+        set_variable = { TRI_shaked_nagisa_belief_stability_weekly = -0.005 }
+        set_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = 0.75 }
+        set_variable = { TRI_shaked_nagisa_belief_political_power_cost = 0.5 }
+        set_variable = { TRI_shaked_nagisa_belief_paranoia_modifier_increase = 1 }
+        set_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = -2 }
+        set_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = -2 }
+        add_dynamic_modifier = {
+            modifier = TRI_shaked_nagisa_belief_1
+        }
+        add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 1 }
+        add_to_variable = { TRI_other_unity_modifiers = -2 }
+        add_to_variable = { Eden_treaty_weights_modifier = -2 }
+        TRI_unity_decrease_10 = yes
+        TRI_set_focus_trust_on_current_leader = yes
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#狂澜即挽
+country_event = {
+    id = TRI_events.52
+    title = TRI_events.52.t
+    desc = TRI_events.52.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.52.a
+        remove_dynamic_modifier = {
+            modifier = TRI_shaked_nagisa_belief_1
+        }
+        add_to_variable = { TRI_shaked_nagisa_belief_stability_weekly = 0.005 }
+        add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.35 }
+        add_to_variable = { TRI_shaked_nagisa_belief_paranoia_modifier_increase = -1 }
+        add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
+        add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+        add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -1 }
+        add_to_variable = { TRI_other_unity_modifiers = 1 }
+        add_to_variable = { Eden_treaty_weights_modifier = 1 }
+        add_dynamic_modifier = {
+            modifier = TRI_shaked_nagisa_belief_2
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#善意的假面
+country_event = {
+    id = TRI_events.43
+    title = TRI_events.43.t
+    desc = TRI_events.43.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.43.a
+        add_political_power = 100
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#敞开心扉
+country_event = {
+    id = TRI_events.44
+    title = TRI_events.44.t
+    desc = TRI_events.44.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.44.a
+        custom_effect_tooltip = TRI_dissonance_modifier_ns_tt
+        add_to_variable = { ssi_operative_slot = 1 }
+        #获得间谍：白洲梓
+        create_operative_leader = {
+            name = "白洲梓"
+            GFX = GFX_portrait_TRI_azusa
+            gender = female
+            traits = {  }
+            bypass_recruitment = yes
+            available_to_spy_master = no
+            nationalities = { TRI ARI }
+        }
+        #在间谍机构【圣三一特殊事务调查部】中添加任务：对茶话会的渗透#目前不做
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+###超事件###
+#第一次《伊甸条约》会谈
+news_event = {
+    id = TRI_events.1000
+    title = TRI_events.1000.t
+    desc = TRI_events.1000.d
+    picture = GFX_TRI_events_pic
+	is_triggered_only = yes
+    major = yes
+	fire_only_once = yes
+    #这里需要进一步完善
+    option = {
+		name = TRI_events.1000.a
+        trigger = { original_tag = TRI }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_1 = yes
+        }
+        
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.1000.b
+        trigger = {
+            NOT = { original_tag = TRI }
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_1 = yes
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+#第二次《伊甸条约》会谈
+news_event = {
+    id = TRI_events.1001
+    title = TRI_events.1001.t
+    desc = TRI_events.1001.d
+    #picture = GFX_TRI_events_pic
+    major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+    immediate = {
+        hidden_effect = {
+            if = {
+                limit = { 
+                    NOT = { has_completed_focus = TRI_choosing_pact_place }
+                    original_tag = TRI
+                }
+                unlock_national_focus = TRI_choosing_pact_place
+                add_stability = -0.1
+                set_temp_variable = { loyalty_change = -0.05 }
+                TRI_parliament_all_loyalty_change = yes
+                TRI_unity_decrease_5 = yes
+            }
+            set_global_flag = BA_2st_eden_pact_begin
+        }
+    }
+    option = {
+		name = TRI_events.1001.a
+
+        trigger = {
+            original_tag = TRI
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_2 = yes
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.1001.b
+
+        trigger = {
+            NOT = { original_tag = TRI }
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_2 = yes
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+
+#古圣堂遇袭！
+news_event = {
+    id = TRI_events.1002
+    title = TRI_events.1002.t
+    desc = TRI_events.1002.d
+    #picture = GFX_TRI_events_pic
+    major = yes
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    immediate = {
+        hidden_effect = {
+            set_global_flag = WOR_ancient_cathedral_has_been_attacked
+            #给格黑娜、圣三一刷新一下国策
+            if = {
+                limit = { original_tag = GEH }
+                mark_focus_tree_layout_dirty = yes
+            }
+            if = {
+                limit = { original_tag = TRI }
+                #切换议会焦点为：《伊甸条约》的威胁
+                TRI_set_focus_Eden_threat = yes
+                complete_national_focus = TRI_unexpected_accident
+            }
+        }
+    }
+
+    option = {
+		name = TRI_events.1002.a
+
+        trigger = {
+            original_tag = TRI
+        }
+
+        hidden_effect = {
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                BAR_LX_Super_Event_effect_6 = yes
+            }
+        }
+        
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = TRI_events.1002.b
+
+        trigger = {
+            NOT = { original_tag = TRI }
+        }
+        hidden_effect = {
+            if = {
+            limit = { is_ai = no }
+                BAR_LX_Super_Event_effect_6 = yes
+            }
+        }
+        
+
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#超事件：《伊甸条约》的成功签订
+news_event = {
+    id = TRI_events.1003
+    title = TRI_events.1003.t
+    desc = TRI_events.1003.d
+    #picture = GFX_TRI_events_pic
+    major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+    immediate = {
+        
+    }
+
+    option = {
+		name = TRI_events.1003.a
+        trigger = {
+            original_tag = TRI
+        }
+        hidden_effect = {
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                #BAR_LX_Super_Event_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = TRI_events.1003.b
+        trigger = {
+            NOT = { original_tag = TRI }
+        }
+        hidden_effect = {
+            if = {
+                limit = { is_ai = no }
+                #BAR_LX_Super_Event_effect_7 = yes
+            }
+        }
+        
+		ai_chance = {
+			base = 100
+		}
+    }
+}

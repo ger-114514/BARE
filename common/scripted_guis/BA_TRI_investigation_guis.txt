@@ -1,0 +1,326 @@
+scripted_gui = {
+    #GUI3的打开按钮
+    TRI_investigation_open_window_button_gui = {
+        window_name = "TRI_investigation_open_window"
+        context_type = player_context
+        parent_window_token = top_bar
+        visible = {
+            original_tag = TRI
+            has_country_flag = TRI_investigate_available #在开启补课部调查的时候才可用
+            is_ai = no
+        }
+        effects = {
+            TRI_investigation_open_button_click = {
+                if = {
+                    limit = { has_country_flag = TRI_investigate_open }
+                    clr_country_flag = TRI_investigate_open
+                }
+                else = {
+                    set_country_flag = TRI_investigate_open
+                }
+            }
+        }
+    }
+
+    #GUI3补课部调查主页面
+    noa_test_gui = {
+        context_type = player_context
+        window_name = "noa_test"
+        visible = {
+            original_tag = TRI
+            has_country_flag = TRI_investigate_open
+        }
+        dynamic_lists = {
+            TRI_investigation_portraits = {
+                array = TRI_investigation_character
+                index = i
+                value = name
+                entry_container = TRI_investigation_character_portrait_container
+            }
+            TRI_investigation_buttons = {
+                array = TRI_investigation_decisions
+                index = i
+                value = decision
+                entry_container = TRI_investigation_button_container
+            }
+        }
+        effects = {
+            noa_exit_click = {
+                clr_country_flag = TRI_investigate_open
+            }
+            TRI_investigation_button_click = {
+                set_variable = { exectued@var:decision = 1 }
+                set_country_flag = TRI_in_inv_cooldown
+                meta_effect = {
+                    text = {
+                        country_event = {
+                            id = TRI_events.[event_id]
+                            days = 7
+                        }
+                    }
+                    event_id = "[?event@var:decision]"
+                }
+            }
+            # koharu_inv_1_click = {
+            #     country_event = {
+            #         id = TRI_events.210
+            #         days = 7
+            #     }
+            #     set_country_flag = koharu_inv_1_click_start
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # koharu_inv_2_click = {
+            #     country_event = {
+            #         id = TRI_events.211
+            #         days = 7
+            #     }
+            #     set_country_flag = koharu_inv_2_click_start     
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # koharu_inv_3_click = {
+            #     country_event = {
+            #         id = TRI_events.212
+            #         days = 7
+            #     }
+            #     set_country_flag = koharu_inv_3_click_start    
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # koharu_inv_4_click = {
+            #     country_event = {
+            #         id = TRI_events.213
+            #         days = 7
+            #     }
+            #     set_country_flag = koharu_inv_4_click_start        
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # azusa_inv_1_click = {
+            #     country_event = {
+            #         id = TRI_events.220
+            #         days = 7
+            #     }
+            #     set_country_flag = azusa_inv_1_click_start
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # azusa_inv_2_click = {
+            #     country_event = {
+            #         id = TRI_events.221
+            #         days = 7
+            #     }
+            #     set_country_flag = azusa_inv_2_click_start  
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # azusa_inv_3_click = {
+            #     country_event = {
+            #         id = TRI_events.222
+            #         days = 7
+            #     }
+            #     set_country_flag = azusa_inv_3_click_start    
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # azusa_inv_4_click = {
+            #     country_event = {
+            #         id = TRI_events.223
+            #         days = 7
+            #     }
+            #     set_country_flag = azusa_inv_4_click_start     
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hanako_inv_1_click = {
+            #     country_event = {
+            #         id = TRI_events.230
+            #         days = 7
+            #     }
+            #     set_country_flag = hanako_inv_1_click_start
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hanako_inv_2_click = {
+            #     country_event = {
+            #         id = TRI_events.231
+            #         days = 7
+            #     }
+            #     set_country_flag = hanako_inv_2_click_start
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hanako_inv_3_click = {
+            #     country_event = {
+            #         id = TRI_events.232
+            #         days = 7
+            #     }
+            #     set_country_flag = hanako_inv_3_click_start   
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hanako_inv_4_click = {
+            #     country_event = {
+            #         id = TRI_events.233
+            #         days = 7
+            #     }
+            #     set_country_flag = hanako_inv_4_click_start    
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hifumi_inv_1_click = {
+            #     country_event = {
+            #         id = TRI_events.240
+            #         days = 7
+            #     }
+            #     set_country_flag = hifumi_inv_1_click_start     
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hifumi_inv_2_click = {
+            #     country_event = {
+            #         id = TRI_events.241
+            #         days = 7
+            #     }
+            #     set_country_flag = hifumi_inv_2_click_start    
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hifumi_inv_3_click = {
+            #     country_event = {
+            #         id = TRI_events.242
+            #         days = 7
+            #     }
+            #     set_country_flag = hifumi_inv_3_click_start   
+            #     set_country_flag = TRI_in_inv_cooldown
+            # }
+
+            # hifumi_inv_4_click = {
+            #     custom_effect_tooltip = hifumi_inv_4_tooltip
+            #     hidden_effect = {
+            #         country_event = {
+            #             id = TRI_events.243
+            #             days = 7
+            #         }
+            #         set_country_flag = hifumi_inv_4_click_start  
+            #         set_country_flag = {
+            #             flag = TRI_in_inv_cooldown
+            #             days = 7
+            #         }                     
+            #     }
+            # }
+
+        }
+
+        triggers = {
+            GFX_TRI_investigation_permission_visible = {
+                check_variable = { pemission@var:name = 1 }
+            }
+            TRI_investigation_button_visible = {
+                NOT = { check_variable = { enable@var:decision = 1 } }
+            }
+            TRI_investigation_button_click_enabled = {
+                NOT = { check_variable = { exectued@var:decision = 1 } }
+                NOT = { has_country_flag = TRI_in_inv_cooldown }
+            }
+            # koharu_inv_1_click_enabled = {
+            #     NOT = { has_country_flag = koharu_inv_1_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # koharu_inv_2_click_enabled = {
+            #     NOT = { has_country_flag = koharu_inv_2_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # koharu_inv_3_click_enabled = {
+            #     NOT = { has_country_flag = koharu_inv_3_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # koharu_inv_4_click_enabled = {
+            #     NOT = { has_country_flag = koharu_inv_4_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hanako_inv_1_click_enabled = {
+            #     NOT = { has_country_flag = hanako_inv_1_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hanako_inv_2_click_enabled = {
+            #     NOT = { has_country_flag = hanako_inv_2_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hanako_inv_3_click_enabled = {
+            #     NOT = { has_country_flag = hanako_inv_3_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hanako_inv_4_click_enabled = {
+            #     NOT = { has_country_flag = hanako_inv_4_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # azusa_inv_1_click_enabled = {
+            #     NOT = { has_country_flag = azusa_inv_1_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # azusa_inv_2_click_enabled = {
+            #     NOT = { has_country_flag = azusa_inv_2_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # azusa_inv_3_click_enabled = {
+            #     NOT = { has_country_flag = azusa_inv_3_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # azusa_inv_4_click_enabled = {
+            #     NOT = { has_country_flag = azusa_inv_4_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hifumi_inv_1_click_enabled = {
+            #     NOT = { has_country_flag = hifumi_inv_1_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hifumi_inv_2_click_enabled = {
+            #     NOT = { has_country_flag = hifumi_inv_2_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hifumi_inv_3_click_enabled = {
+            #     NOT = { has_country_flag = hifumi_inv_3_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+            # hifumi_inv_4_click_enabled = {
+            #     NOT = { has_country_flag = hifumi_inv_4_click_start }
+            #     NOT = { has_country_flag = TRI_in_inv_cooldown }
+            # }
+
+        }
+        properties = {
+            TRI_investigation_portrait = {
+                image = "GFX_[?name.GetTokenKey]_s"
+                x = TRI_investigation_character_portrait_x^i
+                y = TRI_investigation_character_portrait_y^i
+            }
+            GFX_TRI_investigation_permission = {
+                x = TRI_investigation_character_portrait_x^i
+                y = TRI_investigation_character_portrait_y^i
+            }
+            TRI_investigation_button = {
+                image = "GFX_[?decision.GetTokenKey]"
+                x = TRI_investigation_decisions_x^i
+                y = TRI_investigation_decisions_y^i
+            }
+        }
+    }
+
+}

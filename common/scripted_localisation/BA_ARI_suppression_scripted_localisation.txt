@@ -1,0 +1,77 @@
+ARI_get_guard_rank = {
+	name = ARI_get_guard_rank
+	text = {
+		trigger = {
+			var:ARI_map_selected_state = { check_variable = { ARI_state_guard_rank = 1 } }
+		}
+		localization_key = ARI_guard_rank_1
+	}
+	text = {
+		trigger = {
+			var:ARI_map_selected_state = { check_variable = { ARI_state_guard_rank = 2 } }
+		}
+		localization_key = ARI_guard_rank_2
+	}
+	text = {
+		trigger = {
+			var:ARI_map_selected_state = { check_variable = { ARI_state_guard_rank = 3 } }
+		}
+		localization_key = ARI_guard_rank_3
+	}
+	text = {
+		trigger = {
+			var:ARI_map_selected_state = { check_variable = { ARI_state_guard_rank = 4 } }
+		}
+		localization_key = ARI_guard_rank_4
+	}
+}
+
+
+Get_ARI_traveller_operation_2_progress = {
+	name = Get_ARI_traveller_operation_2_progress
+
+	text = {
+		trigger = {
+			check_variable = {
+				ARI_traveller_operation_progress > 1259.99
+			}
+		}
+		localization_key = ARI_traveller_operation_2_progress_5
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				ARI_traveller_operation_progress > 999
+			}
+		}
+		localization_key = ARI_traveller_operation_2_progress_4
+	}
+
+	text = {
+		trigger = {
+			check_variable = {
+				ARI_traveller_operation_progress > 699
+			}
+		}
+		localization_key = ARI_traveller_operation_2_progress_3
+	}
+
+
+	text = {
+		trigger = {
+			check_variable = {
+				ARI_traveller_operation_progress > 399
+			}
+		}
+		localization_key = ARI_traveller_operation_2_progress_2
+	}
+
+	
+	text = {
+		trigger = {
+
+		}
+		localization_key = ARI_traveller_operation_2_progress_1
+	}
+}

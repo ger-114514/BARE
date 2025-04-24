@@ -1,0 +1,187 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+CAE_Inf_01 = {
+	name = "凯撒总裁卫队"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "凯撒总裁卫队第%d营"
+
+	ordered =
+	{
+		1 = { "凯撒总裁卫队“第一队”骑兵营" }
+		2 = { "凯撒总裁卫队“老勇士”装甲营" }
+		3 = { "凯撒总裁卫队“大红”第一机械化步兵营" }
+		4 = { "凯撒总裁卫队“印第安酋长”第二机械化步兵营" }
+		5 = { "凯撒总裁卫队“马恩磐石”第三机械化步兵营" }
+		6 = { "凯撒总裁卫队“常春藤”第四机械化步兵营" }
+		7 = { "凯撒总裁卫队“高山”山地营" }
+		8 = { "凯撒总裁卫队“热带闪电”快反营" }
+		9 = { "凯撒总裁卫队“全美”第82空降营" }
+		10 = { "凯撒总裁卫队“呼啸之鹰”第101空中突击营" }
+	}
+}
+
+CAE_Infs_01 = {
+	name = "凯撒特种作战部队"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "凯撒特战空输部队第%d中队"
+
+	ordered =
+	{
+		1 = { "凯撒特战空输部队第1“秃鹫”中队" }
+		2 = { "凯撒特战空输部队第2“飞虎”中队" }
+		3 = { "凯撒特战空输部队第3“黑龙”中队" }
+		4 = { "凯撒特战空输部队第4“天马”中队" }
+		5 = { "凯撒特战空输部队第5“鬼星”中队" }
+		6 = { "凯撒特战空输部队第6“黄金蝙蝠”中队" }
+		7 = { "凯撒特战空输部队第7“黑豹”中队" }
+	}
+}
+
+CAE_Infm_01 = {
+	name = "动员预备军"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "凯撒动员预备第%d大队"
+
+	ordered =
+	{
+		1 = { "凯撒动员预备第1“钢铁”大队" }
+		2 = { "凯撒动员预备第2“尽忠”大队" }
+		3 = { "凯撒动员预备第3“北汉山”大队" }
+		4 = { "凯撒动员预备第4“飞虎”大队" }
+		5 = { "凯撒动员预备第5“烽火”大队" }
+		6 = { "凯撒动员预备第6“弓箭”大队" }
+	}
+}
+
+CAE_Infm_02 = {
+	name = "乡土预备军"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "凯撒乡土预备第%d大队"
+
+	ordered =
+	{
+		1 = { "凯撒乡土预备第1“白虎”大队" }
+		2 = { "凯撒乡土预备第2“忠壮”大队" }
+		3 = { "凯撒乡土预备第3“白龙”大队" }
+		4 = { "凯撒乡土预备第4“忠景”大队" }
+		5 = { "凯撒乡土预备第5“忠勇”大队" }
+		6 = { "凯撒乡土预备第6“波涛”大队" }
+	}
+}
+
+CAE_Ifv_01 = {
+	name = "凯撒机械化步兵"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "ifv_unit" }
+
+	fallback_name = "凯撒机械化步兵第%d中队"
+
+	ordered =
+	{
+		1 = { "凯撒总部守卫机械化“猛虎”中队" }
+		2 = { "凯撒机械化步兵第1“前进”中队" }
+		3 = { "凯撒机械化步兵第2“决战”中队" }
+		4 = { "凯撒机械化步兵第3“白骨”中队" }
+		5 = { "凯撒机械化步兵第4“钥匙”中队" }
+		6 = { "凯撒机械化步兵第5“青星”中队" }
+		7 = { "凯撒机械化步兵第6“七星”中队" }
+		8 = { "凯撒机械化步兵第7“不倒翁”中队" }
+		9 = { "凯撒机械化步兵第8“白马”中队" }
+	}
+}
+
+CAE_Infam_01 = {
+	name = "凯撒自动机小队"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_am" }
+
+	fallback_name = "凯撒集团直属自动机第%d小队"
+
+	ordered =
+	{
+		1 = { "凯撒集团直属自动机第1小队" }
+		2 = { "凯撒集团直属自动机第2小队" }
+		3 = { "凯撒集团直属自动机第3小队" }
+		4 = { "凯撒集团直属自动机第4小队" }
+		5 = { "凯撒集团直属自动机第5小队" }
+		6 = { "凯撒集团直属自动机第6小队" }
+	}
+}
+
+CAE_LA_01 = {
+	name = "凯撒装甲中队"
+
+	for_countries = { CAE }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+	fallback_name = "凯撒装甲第%d中队"
+
+	ordered =
+	{
+		1 = { "凯撒装甲第1“火群”中队" }
+		2 = { "凯撒装甲第2“铁马”中队" }
+		3 = { "凯撒装甲第3“充溢”中队" }
+		4 = { "凯撒装甲第4“奥林匹克”中队" }
+		5 = { "凯撒装甲第5“决心”中队" }
+		6 = { "凯撒装甲第6“花郎”中队" }
+	}
+}

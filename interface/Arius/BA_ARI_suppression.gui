@@ -1,0 +1,94 @@
+guiTypes = {
+	containerWindowType = {
+		name = "ARI_suppression_window"
+		size = { width = 500 height = 360 }
+		##地图界面
+		containerWindowType = {
+			name = "ARI_suppression_map_main"
+			size = { width = 400 height = 200 }
+			position = { x = 50 y = 0 }
+			gridboxtype = {
+				name = "ARI_suppression_states"
+				position = { x = 0 y = 0 }
+			}
+			
+			iconType = {
+				name = "ARI_suppression_state_bg"
+				position = { x = 0 y = 0 }
+				spriteType = "ARI_resistance_state_bg"
+				alwaystransparent = yes
+			}
+		}
+		##信息界面
+		containerWindowType = {
+			name = "ARI_suppression_state_info"
+			size = { width = 500 height = 200 }
+			position = { x = 0 y = 170 }
+			instantTextBoxType = {
+				name = "ARI_suppression_state_name"
+				position = { x = 0 y = 0 }
+				maxWidth = 490
+				maxHeight = 24
+				format = center
+				font = "hoi_24header"
+				text = "ARI_suppression_state_name"
+			}
+			iconType = {
+				name = "ARI_suppression_control_bar"
+				position = { x = 80 y = 30 }
+				spriteType = "ARI_suppression_control_bar"
+			}
+			buttonType = {
+				name = "ARI_suppression_map_mode_control_button"
+				position = { x = 385 y = 31 }
+				spriteType = "BA_ARI_button_with_check"
+				pdx_tooltip = "ARI_shift_map_mode_tt"
+			}
+			instantTextBoxType = {
+				name = "ARI_suppression_state_control"
+				position = { x = 100 y = 70 }
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				font = "hoi_20b"
+				text = "ARI_suppression_state_control"
+			}
+			iconType = {
+				name = "ARI_suppression_guard_bar"
+				position = { x = 80 y = 95 }
+				spriteType = "ARI_suppression_guard_bar"
+			}
+			iconType = {
+				name = "ARI_suppression_guard_rank_bar"
+				position = { x = 80 y = 115 }
+				spriteType = "ARI_suppression_guard_rank_bar"
+			}
+			buttonType = {
+				name = "ARI_suppression_map_mode_guard_button"
+				position = { x = 385 y = 96 }
+				spriteType = "BA_ARI_button_with_check"
+				pdx_tooltip = "ARI_shift_map_mode_tt"
+			}
+			instantTextBoxType = {
+				name = "ARI_suppression_state_guard"
+				position = { x = 100 y = 135 }
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				font = "hoi_20b"
+				text = "ARI_suppression_state_guard"
+			}
+		}
+	}
+	containerWindowType = {
+		name = "ARI_state_button_container"
+		position = { x = 0 y = 0 }
+		buttonType = {
+			name = "ARI_state_button"
+			position = { x = 0 y = 0 }
+			spriteType = "ALR_resistance_state_136"
+			pdx_tooltip = ARI_select_state_tt
+		}
+	}
+
+}

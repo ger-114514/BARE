@@ -1,0 +1,120 @@
+ideas = {
+    country = {
+		TRI_inspected_administration = { #遭到审查的文职部员
+			picture = unknown
+            allowed = {
+                always = no
+            }
+			modifier = {
+                political_power_factor = -0.2
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.05
+            }
+		}
+		TRI_inspected_army = { #受到严格审查的陆军
+			picture = unknown
+            allowed = {
+                always = no
+            }
+			modifier = {
+				army_leader_cost_factor = 0.25
+				command_power_gain_mult = -0.25
+				promote_cost_factor = 0.25
+				reassignment_duration_factor = 0.25
+                unit_leader_as_advisor_cp_cost_factor = 0.15
+				
+            }
+			research_bonus = { #需要改成支援装备
+				infantry_weapons = -0.25
+			}
+		}
+		TRI_training_activities_curtailed = { #减少军事演习
+			picture = generic_army_problems
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				experience_gain_army_factor = -0.15
+				training_time_factor = 0.25
+				land_equipment_upgrade_xp_cost = 0.15
+			}
+		}
+		TRI_inspected_airforce = { #受到严格审查的空军
+			picture = unknown
+            allowed = {
+                always = no
+            }
+			modifier = {
+				air_maximum_speed_factor = -0.1
+				air_mission_efficiency = -0.15
+				air_ace_generation_chance_factor = -0.25
+            }
+		}
+		TRI_ground_based_training = { #暂停的地面训练
+			allowed = {
+				always = no
+			}
+			picture = unknown
+
+			modifier = {
+				experience_gain_air_factor = -0.2
+				air_accidents_factor = 0.25
+				air_mission_xp_gain_factor = -0.2
+			}
+		}
+
+	}
+	hidden_ideas = {
+		TRI_investigation_in_care = {}
+		TRI_calling_for_Schale = {}
+		TRI_investigation_focus_azusa = {}
+		TRI_investigation_focus_koharu = {}
+		TRI_investigation_focus_hanako = {}
+		TRI_investigation_focus_hifumi = {}
+		TRI_establish_hoshubu = {}
+		TRI_guide_of_hoshubu = {}
+		TRI_love_for_students = {}
+		TRI_examination_for_training_club = {}
+		TRI_buy_time = {}
+		TRI_dissonance = {}
+		TRI_the_story_of_girls = {}
+		TRI_open_up = {}
+		TRI_Unintentional_windfall = {}
+		TRI_conspiracy_against_conspiracy = {}
+		TRI_desperate_fight = {}
+		TRI_sweet_dream_in_one_night = {}
+		TRI_silence = {}
+		TRI_unexpected_one = {}
+		TRI_daring_plan_meticulous_action = {}
+		TRI_lure_the_enemy = {}
+		#偏执度界面的五个社团
+		TRI_paranoia_association_0 = {}
+		TRI_paranoia_association_1 = {}
+		TRI_paranoia_association_2 = {}
+		TRI_paranoia_association_3 = {}
+		TRI_paranoia_association_4 = {}
+		#补课部成员
+		TRI_koharu = {}
+		TRI_hanako = {}
+		TRI_azusa = {}
+		TRI_hifumi = {}
+		TRI_koharu_inv1 = {}
+		TRI_koharu_inv2 = {}
+		TRI_koharu_inv3 = {}
+		TRI_koharu_inv4 = {}
+		TRI_hanako_inv1 = {}
+		TRI_hanako_inv2 = {}
+		TRI_hanako_inv3 = {}
+		TRI_hanako_inv4 = {}
+		TRI_azusa_inv1 = {}
+		TRI_azusa_inv2 = {}
+		TRI_azusa_inv3 = {}
+		TRI_azusa_inv4 = {}
+		TRI_hifumi_inv1 = {}
+		TRI_hifumi_inv2 = {}
+		TRI_hifumi_inv3 = {}
+		TRI_hifumi_inv4 = {}
+	}
+}

@@ -1,0 +1,101 @@
+on_actions = {
+	on_weekly_TRI = {
+		#偏执度系统，随机跳出清洗事件
+		effect = {
+			if = {
+				#执行清洗后14天内不再进行
+				limit = {
+					has_country_flag = TRI_paranoia_system_active
+					NOT = { has_country_flag = TRI_paranoia_random_purge_cooldown }
+					check_variable = { TRI_nagisa_paranoia_total > 25 }
+				}
+				set_temp_variable = { TRI_purge_chance = 0 }
+				#每25偏执度，积累15%
+				while_loop_effect = {
+					limit = { 
+						check_variable = { chance_from_paranoia > 24 }
+					}
+					subtract_from_temp_variable = { chance_from_paranoia = 25 }
+					add_to_temp_variable = { TRI_purge_chance = 15 }
+				}
+				#随时间累积
+				add_to_temp_variable = { TRI_purge_chance = TRI_purge_chance_time_accumulation }
+				#随政治国策累积
+				set_temp_variable = { TRI_political_focus_duration_factor = 1 }
+				set_temp_variable = { pfd = TRI_political_focus_duration }
+				while_loop_effect = {
+					limit = { 
+						check_variable = { pfd > 139 }
+					}
+					subtract_from_temp_variable = { pfd = 140 }
+					multiply_temp_variable = { TRI_political_focus_duration_factor = 5 }
+					add_to_temp_variable = { TRI_purge_chance = TRI_political_focus_duration_factor }
+					divide_temp_variable = { TRI_political_focus_duration_factor = 5 }
+					add_to_temp_variable = { TRI_political_focus_duration_factor = 1 }
+				}
+				clamp_variable = {
+					var = TRI_purge_chance
+					min = 0
+					max = 100
+				}
+				#按照概率决定是否清洗
+				random = {
+					chance = TRI_purge_chance
+					random_list = {
+						1 = {
+							modifier = {
+								factor = 0
+								BA_TRI_can_purge_administration = no
+							}
+							TRI_purge_administration = yes
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								BA_TRI_can_purge_army = no
+							}
+							TRI_purge_army = yes
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								BA_TRI_can_purge_airforce = no
+							}
+							TRI_purge_airforce = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	on_daily_TRI = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = TRI_investigation_perfect_ending_enter
+					check_variable = { TRI_nagisa_paranoia_rank > 1 }
+				}
+				clr_country_flag = TRI_investigation_perfect_ending_enter
+			}
+			if = {
+				limit = { check_variable = { TRI_nagisa_paranoia_total < 40 } }
+				add_to_variable = { TRI_low_paranoia_duration = 1 }
+				if = {
+					limit = { 
+						check_variable = { TRI_low_paranoia_duration > 239 }
+					}
+					if = {
+						limit = { check_variable = { TRI_nagisa_paranoia_rank > 0 } }
+						#触发事件降低一级偏执度
+						TRI_paranoia_rank_down = yes
+						set_variable = { TRI_low_paranoia_duration = 0 }
+					}
+				}
+				else = {
+					set_variable = { TRI_low_paranoia_duration = 0 }
+				}
+			}
+		}
+		
+	}
+}

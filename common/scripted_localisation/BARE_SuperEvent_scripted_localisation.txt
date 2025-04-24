@@ -1,0 +1,162 @@
+defined_text = {
+	name = BARE_SuperEvent_1_GetSuperEventImage
+	### DEFAULT ###
+	text = {
+		localization_key = "GFX_[?BARE_SuperEvent_1_var.GetTokenKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetSuperEventTitle
+	### DEFAULT ###
+	text = {
+		localization_key = "[?BARE_SuperEvent_1_var.GetTokenLocalizedKey]"
+	}
+}
+
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetQT
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_1_super_qt_var = token:[SUPER]_QT } }
+				SUPER = "[?BARE_SuperEvent_1_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_1_super_qt_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetQN
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_1_super_qn_var = token:[SUPER]_QN } }
+				SUPER = "[?BARE_SuperEvent_1_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_1_super_qn_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetT
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_1_super_t_var = token:[SUPER]_T } }
+				SUPER = "[?BARE_SuperEvent_1_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_1_super_t_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetPT
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_1_super_pt_var = token:[SUPER]_PT } }
+				SUPER = "[?BARE_SuperEvent_1_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_1_super_pt_var.GetTokenLocalizedKey]"
+	}
+}
+
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetIT
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_1_super_it_var = token:[SUPER]_IT } }
+				SUPER = "[?BARE_SuperEvent_1_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_1_super_it_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_1_GetNT
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_1_super_nt_var = token:[SUPER]_NT } }
+				SUPER = "[?BARE_SuperEvent_1_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_1_super_nt_var.GetTokenLocalizedKey]"
+	}
+}
+
+
+#超事件2
+
+defined_text = {
+	name = BARE_SuperEvent_2_GetSuperEventImage
+	### DEFAULT ###
+	text = {
+		localization_key = "GFX_[?BARE_SuperEvent_2_var.GetTokenKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_2_GetSuperEventAddress
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_2_super_a_var = token:[SUPER]_A } }
+				SUPER = "[?BARE_SuperEvent_2_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_2_super_a_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_2_GetSuperEventTitle
+	### DEFAULT ###
+	text = {
+		localization_key = "[?BARE_SuperEvent_2_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_2_GetSuperEventDesc
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_2_super_d_var = token:[SUPER]_D } }
+				SUPER = "[?BARE_SuperEvent_2_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_2_super_d_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = BARE_SuperEvent_2_GetSuperEventMotto
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { BARE_SuperEvent_2_super_m_var = token:[SUPER]_M } }
+				SUPER = "[?BARE_SuperEvent_2_var.GetTokenKey]"
+			}
+		}
+		localization_key = "[?BARE_SuperEvent_2_super_m_var.GetTokenLocalizedKey]"
+	}
+}

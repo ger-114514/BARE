@@ -1,0 +1,30 @@
+TRI_get_nagisa_state = {
+	name = TRI_get_nagisa_state
+	text = {
+		trigger = { check_variable = { TRI_paranoia_nagisa_state = 1 } }
+		localization_key = TRI_paranoia_nagisa_state_1
+	}
+	text = {
+		trigger = { check_variable = { TRI_paranoia_nagisa_state = 2 } }
+		localization_key = TRI_paranoia_nagisa_state_2
+	}
+	text = {
+		trigger = { check_variable = { TRI_paranoia_nagisa_state = 3 } }
+		localization_key = TRI_paranoia_nagisa_state_3
+	}
+}
+TRI_get_nagisa_state_tooltip = {
+	name = TRI_get_nagisa_state_tooltip
+	text = {
+		trigger = { check_variable = { TRI_paranoia_nagisa_state = 1 } }
+		localization_key = TRI_paranoia_nagisa_state_tooltip_1
+	}
+	text = {
+		trigger = { check_variable = { TRI_paranoia_nagisa_state = 2 } }
+		localization_key = TRI_paranoia_nagisa_state_tooltip_2
+	}
+	text = {
+		trigger = { check_variable = { TRI_paranoia_nagisa_state = 3 } }
+		localization_key = TRI_paranoia_nagisa_state_tooltip_3
+	}
+}

@@ -1,0 +1,144 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+VAL_Inf_01 = {
+	name = "瓦尔基里快速反应中队"
+
+	for_counVALes = { VAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "瓦尔基里公安局快反第%d中队"
+
+	ordered =
+	{
+		1 = { "瓦尔基里公安局快反第1“亚尔薇特”中队" }
+		2 = { "瓦尔基里公安局快反第2“赫尔薇尔”中队" }
+		3 = { "瓦尔基里公安局快反第3“洁萝露尔”中队" }
+		4 = { "瓦尔基里公安局快反第4“布伦希尔德”中队" }
+		5 = { "瓦尔基里公安局快反第5“希格德莉法”中队" }
+		6 = { "瓦尔基里公安局快反第6“洁尔诗科古尔”中队" }
+		7 = { "瓦尔基里公安局快反第7“格蕾”中队" }
+		8 = { "瓦尔基里公安局快反第8“格恩达尔”中队" }
+	}
+}
+
+VAL_Inf_02 = {
+	name = "瓦尔基里镇爆大队"
+
+	for_counVALes = { VAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "瓦尔基里第%d镇爆大队"
+
+	ordered =
+	{
+		1 = { "瓦尔基里公安局第1“姆乔尔尼尔”镇爆大队" }
+		2 = { "瓦尔基里公安局第2“米斯特汀”镇爆大队" }
+		3 = { "瓦尔基里公安局第3“古拉姆”镇爆大队" }
+		4 = { "瓦尔基里公安局第4“提尔锋”镇爆大队" }
+		5 = { "瓦尔基里公安局第5“莱瓦汀”镇爆大队" }
+		6 = { "瓦尔基里公安局第6“冈格尼尔”镇爆大队" }
+	}
+}
+
+
+VAL_Inf_03 = {
+	name = "警备局快反中队"
+
+	for_counVALes = { VAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "瓦尔基里警备局第%d快反中队"
+
+	ordered =
+	{
+		1 = { "瓦尔基里警备局第1“拉格纳”快反中队" }
+		2 = { "瓦尔基里警备局第2“罗洛”快反中队" }
+		3 = { "瓦尔基里警备局第3“高姆”快反中队" }
+		4 = { "瓦尔基里警备局第4“哈拉尔”快反中队" }
+		5 = { "瓦尔基里警备局第5“斯温”快反中队" }
+		6 = { "瓦尔基里警备局第6“埃里克”快反中队" }
+		7 = { "瓦尔基里警备局第7“哈德拉达”快反中队" }
+	}
+}
+
+VAL_Infm_01 = {
+	name = "瓦尔基里巡逻队"
+
+	for_counVALes = { VAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "瓦尔基里生活安全局第%d巡逻大队"
+
+	ordered =
+	{
+		1 = { "瓦尔基里生活安全局第1“西兰”巡逻大队" }
+		2 = { "瓦尔基里生活安全局第2“诺德兰”巡逻大队" }
+		3 = { "瓦尔基里生活安全局第3“萨普米”巡逻大队" }
+		4 = { "瓦尔基里生活安全局第4“瑞德约德”巡逻大队" }
+		5 = { "瓦尔基里生活安全局第5“索米”巡逻大队" }
+		6 = { "瓦尔基里生活安全局第6“哥特兰”巡逻大队" }
+		7 = { "瓦尔基里生活安全局第7“阿格迪尔”巡逻大队" }
+		8 = { "瓦尔基里生活安全局第8“斯莫兰”巡逻大队" }
+	}
+}
+
+
+VAL_Infs_01 = {
+	name = "瓦尔基里特警队"
+
+	for_counVALes = { VAL }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "瓦尔基里特警队第%d小队"
+
+	ordered =
+	{
+		1 = { "瓦尔基里特警队第1“尼德霍格”小队" }
+		2 = { "瓦尔基里特警队第2“耶梦加德”小队" }
+		3 = { "瓦尔基里特警队第3“芬里”小队" }
+		4 = { "瓦尔基里特警队第4“芬里尔”小队" }
+		5 = { "瓦尔基里特警队第5“斯库尔”小队" }
+		6 = { "瓦尔基里特警队第6“哈提”小队" }
+		7 = { "瓦尔基里特警队第7“法夫尼尔”小队" }
+		8 = { "瓦尔基里特警队第8“克拉肯”小队" }
+	}
+}

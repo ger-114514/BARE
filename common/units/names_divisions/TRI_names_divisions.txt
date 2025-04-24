@@ -1,0 +1,250 @@
+#步兵，特战步兵，自动机，神秘步兵，机步，摩步，装甲，机甲，空突
+#动员步兵也可以（民兵）
+
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
+TRI_Inf_01 = {
+	name = "修女会步兵连"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "修女会第%d连"
+
+	ordered =
+	{
+		1 = { "修女会第1“彼得”连" }
+		2 = { "修女会第2“利奴”连" }
+		3 = { "修女会第3“阿内克利特”连" }
+		4 = { "修女会第4“克雷芒”连" }
+		5 = { "修女会第5“埃瓦里斯特”连" }
+		6 = { "修女会第6“亚历山大”连" }
+		7 = { "修女会第7“乌尔班”连" }
+	}
+}
+
+TRI_Inf_02 = {
+	name = "茶会近卫合成化连"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "茶会近卫合成化第%d连"
+
+	ordered =
+	{
+		1 = { "茶会近卫合成化第1“加百列”连" }
+		2 = { "茶会近卫合成化第2“米迦勒”连" }
+		3 = { "茶会近卫合成化第3“拉斐尔”连" }
+		4 = { "茶会近卫合成化第4“乌利尔”连" }
+		5 = { "茶会近卫合成化第5“拉贵尔”连" }
+		6 = { "茶会近卫合成化第6“沙利叶”连" }
+		7 = { "茶会近卫合成化第7“雷米尔”连" }
+	}
+}
+
+TRI_Inf_03 = {
+	name = "茶会快反营"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "茶会第%d快反营"
+
+	ordered =
+	{
+		1 = { "茶会第1“内近卫骑兵”快反营" }
+		2 = { "茶会第2“威尔士骑兵”快反营" }
+		3 = { "茶会第3“掷弹兵卫队”快反营" }
+		4 = { "茶会第4“冷溪卫队”快反营" }
+		5 = { "茶会第4“康诺特突击”快反营" }
+	}
+}
+
+TRI_Inf_04 = {
+	name = "正义委步兵"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "正义委巡逻第%d连"
+
+	ordered =
+	{
+		1 = { "正义委巡逻第1“安德肋”连" }
+		2 = { "正义委巡逻第2“巴尔纳伯”连" }
+		3 = { "正义委巡逻第3“巴多罗买”连" }
+		4 = { "正义委巡逻第4“雅各”连" }
+		5 = { "正义委巡逻第5“若望”连" }
+		6 = { "正义委巡逻第6“玛窦”连" }
+	}
+}
+
+TRI_Inf_05 = {
+	name = "正义委快速反应部队"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "正义委快速反应第%d连"
+
+	ordered =
+	{
+		1 = { "正义委快速反应第1“阿撒兹勒”连" }
+		2 = { "正义委快速反应第2“亚列”连" }
+		3 = { "正义委快速反应第3“安士白”连" }
+		4 = { "正义委快速反应第4“桑杨沙”连" }
+		5 = { "正义委快速反应第5“卡麦尔”连" }
+		6 = { "正义委快速反应第6“沙利叶”连" }
+		7 = { "正义委快速反应第7“萨麦尔”连" }
+		8 = { "正义委快速反应第8“拉哈伯”连" }
+	}
+}
+
+TRI_Inf_06 = {
+	name = "救护骑士团步兵"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "救护骑士团步行救援第%d中队"
+
+	ordered =
+	{
+		1 = { "救护骑士团步行救援第1“圣约翰”中队" }
+		2 = { "救护骑士团步行救援第2“圣殿”中队" }
+		3 = { "救护骑士团步行救援第3“条顿”中队" }
+		4 = { "救护骑士团步行救援第4“耶路撒冷”中队" }
+		5 = { "救护骑士团步行救援第5“安条克”中队" }
+		6 = { "救护骑士团步行救援第6“的黎波里”中队" }
+	}
+}
+
+TRI_Infsp_01 = {
+	name = "修女会圣徒步兵连"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sp" }
+
+	fallback_name = "修女会圣徒步兵第%d连"
+
+	ordered =
+	{
+		1 = { "修女会圣徒步兵第1“莱昂”连" }
+		2 = { "修女会圣徒步兵第2“卢瑟”连" }
+		3 = { "修女会圣徒步兵第3“赛弗”连" }
+		4 = { "修女会圣徒步兵第4“阿兹瑞尔”连" }
+		5 = { "修女会圣徒步兵第5“阿斯莫代”连" }
+		6 = { "修女会圣徒步兵第6“贝利亚”连" }
+	}
+}
+
+
+TRI_Infm_01 = {
+	name = "自警团巡逻队"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_militia" }
+
+	fallback_name = "圣三一自警团第%d连"
+
+	ordered =
+	{
+		1 = { "圣三一自警团第1“东兰开夏”连" }
+		2 = { "圣三一自警团第2“威塞克斯”连" }
+		3 = { "圣三一自警团第3“南米德兰”连" }
+		4 = { "圣三一自警团第4“西约克郡”连" }
+		5 = { "圣三一自警团第5“诺森布里亚”连" }
+		6 = { "圣三一自警团第6“高地”连" }
+		7 = { "圣三一自警团第7“伦敦”连" }
+		8 = { "圣三一自警团第8“斯塔福德郡”连" }
+	}
+}
+
+
+TRI_Infs_01 = {
+	name = "情报局突击队"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry_sf" }
+
+	fallback_name = "情报局突击第%d特种营"
+
+	ordered =
+	{
+		1 = { "情报局突击第1特种空勤营" }
+		2 = { "情报局突击第2特种侦查营" }
+		3 = { "情报局突击第3“蓝色骑兵”营" }
+		4 = { "情报局突击第4“游骑兵”营" }
+	}
+}
+
+TRI_apc_01 = {
+	name = "救护骑士团应急机动分队"
+
+	for_countries = { TRI }
+
+	can_use = { always = yes }
+
+	division_types = { "apc_unit" }
+
+	fallback_name = "救护骑士团应急机动第%d分队"
+
+	ordered =
+	{
+		1 = { "救护骑士团应急机动第1“西吉斯蒙德”分队" }
+		2 = { "救护骑士团应急机动第2“赫尔布雷西特”分队" }
+		3 = { "救护骑士团应急机动第3“阿克托安”分队" }
+		4 = { "救护骑士团应急机动第4“阿德尔贝特”分队" }
+		5 = { "救护骑士团应急机动第5“阿玛瑞奇”分队" }
+		6 = { "救护骑士团应急机动第6“奥斯汀”分队" }
+	}
+}

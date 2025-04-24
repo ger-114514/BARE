@@ -1,0 +1,1477 @@
+technologies = {
+	####生产资源统筹
+	industrial_complex_T1= {
+		# enable_building = {
+		# 	building = industrial_complex
+		# 	level = 9
+		# }
+		folder = {
+			name = industry_resource_folder
+			position = { x = 0 y = 0 }
+		}
+		research_cost = 1.5
+
+		local_resources_factor = 0.1
+		
+		path = { 
+			leads_to_tech = industrial_complex_T2
+		}
+		path = { 
+			leads_to_tech = Metal_Refining_T1
+		}
+
+		path = { 
+			leads_to_tech = Electronic_technology_upgrade_T1
+		}
+
+		path = { 
+			leads_to_tech = Rare_metal_smelting_T1
+		}
+
+		path = { 
+			leads_to_tech = Opaz_smelting_T1
+		}
+		
+		path = { 
+			leads_to_tech = Oil_Processing_T1
+		}
+		dependencies = {
+			T1_production = 1
+		}
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	industrial_complex_T2 = {
+		# enable_building = {
+		# 	building = industrial_complex
+		# 	level = 9
+		# }
+		folder = {
+			name = industry_resource_folder
+			position = { x = 0 y = 2 }
+		}
+
+
+		local_resources_factor = 0.1
+
+		research_cost = 1.5
+		path = { 
+			leads_to_tech = industrial_complex_T3
+		}
+		dependencies = {
+			T2_production = 1
+		}
+		categories = {
+			industry
+			excavation_tech
+		}
+	}
+	
+	industrial_complex_T3 = {
+		# enable_building = {
+		# 	building = industrial_complex
+		# 	level = 9
+		# }
+		folder = {
+			name = industry_resource_folder
+			position = { x = 0 y = 4 }
+		}
+
+		enable_building = {
+			building = resource_distribution_center
+			level = 1
+		}
+		dependencies = {
+			T3_production = 1
+		}
+
+		local_resources_factor = 0.05
+
+
+		research_cost = 1.5
+		path = { 
+			leads_to_tech = industrial_complex_T4
+		}
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+	}
+
+	industrial_complex_T4 = {
+		# enable_building = {
+		# 	building = industrial_complex
+		# 	level = 9
+		# }
+		folder = {
+			name = industry_resource_folder
+			position = { x = 0 y = 6 }
+		}
+		research_cost = 1.5
+		path = { 
+			leads_to_tech = industrial_complex_T5
+		}
+		dependencies = {
+			T4_production = 1
+		}
+
+		enable_building = {
+			building = resource_distribution_center
+			level = 2
+		}
+
+
+		local_resources_factor = 0.05
+			
+		categories = {
+			industry
+			excavation_tech
+		}
+	}
+
+	industrial_complex_T5 = {
+		# enable_building = {
+		# 	building = industrial_complex
+		# 	level = 9
+		# }
+		folder = {
+			name = industry_resource_folder
+			position = { x = 0 y = 8 }
+		}
+		research_cost = 1.5
+		
+		enable_building = {
+			building = resource_distribution_center
+			level = 3
+		}
+		dependencies = {
+			T5_production = 1
+		}
+
+		local_resources_factor = 0.05
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+	}
+
+	####钢材治炼
+
+	Metal_Refining_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 2
+			}
+		}
+
+		enable_building = {
+			building = metal_processing_plant
+			level = 3
+		}
+
+		dependencies = {
+			T2_production = 1
+		}
+
+		path = { 
+			leads_to_tech = Metal_Refining_T2
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	
+	Metal_Refining_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 4
+			}
+		}
+
+		enable_building = {
+			building = metal_processing_plant
+			level = 4
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building = metal_processing_plant
+				resource = resources_cm
+				amount = 1
+			}
+		}
+
+		path = { 
+			leads_to_tech = Metal_Refining_T3
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Metal_Refining_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 6
+			}
+		}
+		dependencies = {
+			T4_production = 1
+		}
+		path = { 
+			leads_to_tech = Metal_Refining_T4
+		}
+
+
+		enable_building = {
+			building = metal_processing_plant
+			level = 5
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = metal_processing_plant
+				resource = resources_cm
+				amount = 1
+			}
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Metal_Refining_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 8
+			}
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = metal_processing_plant
+				resource = resources_cm
+				amount = 2
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	####电子元件优化
+	Electronic_technology_upgrade_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 6
+				y = 2
+			}
+		}
+		dependencies = {
+			T2_production = 1
+		}
+
+		
+		enable_building = {
+			building = electronic_component_factory
+			level = 3
+		}
+
+		path = { 
+			leads_to_tech = Electronic_technology_upgrade_T2
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Electronic_technology_upgrade_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 6
+				y = 4
+			}
+		}
+
+		path = { 
+			leads_to_tech = Electronic_technology_upgrade_T3
+		}
+		dependencies = {
+			T3_production = 1
+		}
+
+		enable_building = {
+			building = electronic_component_factory
+			level = 4
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = electronic_component_factory
+				resource = resources_ec
+				amount = 1
+			}
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Electronic_technology_upgrade_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 6
+				y = 6
+			}
+		}
+
+		dependencies = {
+			T4_production = 1
+		}
+		enable_building = {
+			building = electronic_component_factory
+			level = 5
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = electronic_component_factory
+				resource = resources_ec
+				amount = 1
+			}
+		}
+
+		path = { 
+			leads_to_tech = Electronic_technology_upgrade_T4
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Electronic_technology_upgrade_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 6
+				y = 8
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = electronic_component_factory
+				resource = resources_ec
+				amount = 2
+			}
+		}
+		
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	####稀有金属治炼
+
+	Rare_metal_smelting_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 9
+				y = 2
+			}
+		}
+
+
+		enable_building = {
+			building = rare_metal_processing_plant
+			level = 3
+		}
+
+		dependencies = {
+			T2_production = 1
+		}
+
+		path = { 
+			leads_to_tech = Rare_metal_smelting_T2
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Rare_metal_smelting_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 9
+				y = 4
+			}
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		enable_building = {
+			building = rare_metal_processing_plant
+			level = 4
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = rare_metal_processing_plant
+				resource = resources_rm
+				amount = 1
+			}
+		}
+
+
+		path = { 
+			leads_to_tech = Rare_metal_smelting_T3
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Rare_metal_smelting_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 9
+				y = 6
+			}
+		}
+
+		dependencies = {
+			T4_production = 1
+		}
+		enable_building = {
+			building = rare_metal_processing_plant
+			level = 5
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = rare_metal_processing_plant
+				resource = resources_rm
+				amount = 1
+			}
+		}
+
+		path = { 
+			leads_to_tech = Rare_metal_smelting_T4
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Rare_metal_smelting_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 9
+				y = 8
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = rare_metal_processing_plant
+				resource = resources_rm
+				amount = 2
+			}
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+
+	####欧帕兹
+
+	Opaz_smelting_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 12
+				y = 2
+			}
+		}
+
+
+		enable_building = {
+			building = opatz_synthesis_center
+			level = 3
+		}
+
+		dependencies = {
+			T2_production = 1
+			T2_opaz = 1
+		}
+
+		path = { 
+			leads_to_tech = Opaz_smelting_T2
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Opaz_smelting_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 12
+				y = 4
+			}
+		}
+		dependencies = {
+			T3_production = 1
+			T3_opaz = 1
+		}
+		enable_building = {
+			building = opatz_synthesis_center
+			level = 4
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = opatz_synthesis_center
+				resource = resources_mm
+				amount = 1
+			}
+		}
+
+
+		path = { 
+			leads_to_tech = Opaz_smelting_T3
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Opaz_smelting_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 12
+				y = 6
+			}
+		}
+
+		dependencies = {
+			T4_production = 1
+			T4_opaz = 1
+		}
+		enable_building = {
+			building =  opatz_synthesis_center
+			level = 5
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building =  opatz_synthesis_center
+				resource = resources_mm
+				amount = 1
+			}
+		}
+
+		path = { 
+			leads_to_tech = Opaz_smelting_T4
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+	Opaz_smelting_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 12
+				y = 8
+			}
+		}
+		dependencies = {
+			T5_production = 1
+			T5_opaz = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building =  opatz_synthesis_center
+				resource = resources_mm
+				amount = 2
+			}
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+		}
+
+	}
+
+
+	####石油加工
+	Oil_Processing_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 18
+				y = 2
+			}
+		}
+		dependencies = {
+			T2_production = 1
+		}
+
+
+		enable_building = {
+			building = synthetic_refinery
+			level = 3
+		}
+
+		fuel_gain_factor = 0.20
+		fuel_gain_factor_from_states = 0.1
+
+		path = { 
+			leads_to_tech = Oil_Processing_T2
+		}
+
+		path = { 
+			leads_to_tech = kerosene_T1
+		}
+
+		path = { 
+			leads_to_tech = Synthetic_rubber_T1
+		}
+
+		
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+		
+
+		research_cost = 1.5
+		
+		
+	
+	}
+
+	Oil_Processing_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 18
+				y = 4
+			}
+		}
+
+		dependencies = {
+			T3_production = 1
+		}
+
+		enable_building = {
+			building = synthetic_refinery
+			level = 4
+		}
+
+		fuel_gain_factor = 0.20
+		fuel_gain_factor_from_states = 0.1
+
+		path = { 
+			leads_to_tech = Oil_Processing_T3
+		}
+
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+
+		research_cost = 1.5
+		
+		
+	
+	}
+
+	 
+	Oil_Processing_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 18
+				y = 6
+			}
+		}
+		dependencies = {
+			T4_production = 1
+		}
+
+		enable_building = {
+			building = synthetic_refinery
+			level = 5
+		}
+
+		fuel_gain_factor = 0.20
+		fuel_gain_factor_from_states = 0.1
+
+		path = { 
+			leads_to_tech = Oil_Processing_T4
+		}
+
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+
+		research_cost = 1.5
+		
+		
+	
+	}
+
+
+	
+
+	
+	Oil_Processing_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 18
+				y = 8
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+		
+		fuel_gain_factor = 0.3
+		fuel_gain_factor_from_states = 0.15
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+	
+	}
+
+	###煤油
+	kerosene_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 15
+				y = 4
+			}
+		}
+
+		path = { 
+			leads_to_tech = kerosene_T2
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		research_cost = 1.5
+		
+		fuel_gain_factor_from_states = 0.75
+		
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+	}
+
+	kerosene_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 15
+				y = 6
+			}
+		}
+
+		path = { 
+			leads_to_tech = kerosene_T3
+		}
+
+		research_cost = 1.5
+		dependencies = {
+			T4_production = 1
+		}
+		fuel_gain_factor_from_states = 0.75
+
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+	
+	}
+	
+	kerosene_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 15
+				y = 8
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+
+		research_cost = 1.5
+		
+		fuel_gain_factor_from_states = 1
+	
+	}
+
+	###合成橡胶
+	Synthetic_rubber_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 21
+				y = 4
+			}
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = resources_pm
+				amount = 2
+			}
+		}
+
+		path = { 
+			leads_to_tech = Synthetic_rubber_T2
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+	
+	}
+
+	Synthetic_rubber_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 21
+				y = 6
+			}
+		}
+
+		path = { 
+			leads_to_tech = Synthetic_rubber_T3
+		}
+		dependencies = {
+			T4_production = 1
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = resources_pm
+				amount = 2
+			}
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+	
+	}
+
+	Synthetic_rubber_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 21
+				y = 8
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = resources_pm
+				amount = 2
+			}
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			excavation_tech
+			synth_resources
+		}
+	
+	}
+	Power_Development_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 0
+				y = 0
+				
+			}
+		}
+		dependencies = {
+			T1_production = 1
+		}
+		path = { 
+			leads_to_tech = Power_Development_T2
+		}
+
+		path = { 
+			leads_to_tech = Ecological_power_generation_T1
+		}
+
+		path = { 
+			leads_to_tech = Opaz_Power_Generation_T1
+		}
+
+		categories = {
+			industry
+			power_development
+		}
+
+		research_cost = 1.5
+		
+		
+		industrial_capacity_factory = 0.1
+	}
+
+	Power_Development_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 0
+				y = 2
+				
+			}
+		}
+		dependencies = {
+			T2_production = 1
+		}
+		path = { 
+			leads_to_tech = Power_Development_T3
+		}
+
+		categories = {
+			industry
+			power_development
+		}
+		
+
+		research_cost = 1.5
+		
+		enable_building = {
+			building = thermal_power_station
+			level = 2
+		}
+	
+
+
+	}
+	Power_Development_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 0
+				y = 4
+				
+			}
+		}
+
+		path = { 
+			leads_to_tech = Power_Development_T4
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		categories = {
+			industry
+			power_development
+		}
+
+	
+		on_research_complete = {
+			modify_building_resources = {
+				building = thermal_power_station
+				resource = resources_cm
+				amount = 1
+			}
+
+		}
+
+		production_speed_thermal_power_station_factor = 0.15
+		research_cost = 1.5
+		
+		
+	
+	}
+
+	Power_Development_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 0
+				y = 6
+				
+			}
+		}
+		dependencies = {
+			T4_production = 1
+		}
+		categories = {
+			industry
+			power_development
+		}
+		
+		enable_building = {
+			building = thermal_power_station
+			level = 4
+		}
+
+		
+
+		path = { 
+			leads_to_tech = Power_Development_T5
+		}
+		research_cost = 1.5
+		
+		
+	
+	}
+
+	Power_Development_T5 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 0
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+		categories = {
+			industry
+			power_development
+		}
+
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = thermal_power_station
+				resource = resources_cm
+				amount = 1
+			}
+
+		}
+
+		production_speed_thermal_power_station_factor = 0.15
+		
+		research_cost = 1.5
+		
+		
+	
+	}
+
+	####生态发电站
+	Ecological_power_generation_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = -3
+				y = 2
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Ecological_power_generation_T2
+		}
+		dependencies = {
+			T2_production = 1
+		}
+		enable_building = {
+			building = thermal_power_station
+			level = 2
+		}
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+
+	Ecological_power_generation_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = -3
+				y = 4
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Ecological_power_generation_T3
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = biological_power_station
+				resource = resources_cm
+				amount = 1
+			}
+		}
+		dependencies = {
+			T3_production = 1
+		}
+		production_speed_biological_power_station_factor = 0.15
+
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+
+	Ecological_power_generation_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = -3
+				y = 6
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Ecological_power_generation_T4
+		}
+
+		enable_building = {
+			building = thermal_power_station
+			level = 4
+		}
+		dependencies = {
+			T4_production = 1
+		}
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+
+	Ecological_power_generation_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = -3
+				y = 8
+				
+			}
+		}
+		dependencies = {
+			T5_production = 1
+		}
+		research_cost = 1.5
+		
+		on_research_complete = {
+			modify_building_resources = {
+				building = biological_power_station
+				resource = resources_cm
+				amount = 1
+			}
+		}
+
+		categories = {
+			industry
+			power_development
+		}
+
+		production_speed_biological_power_station_factor = 0.15
+	
+	}
+
+
+	####欧帕兹发电
+	Opaz_Power_Generation_T1= {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 2
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Opaz_Power_Generation_T2
+		}
+		research_cost = 1.5
+		dependencies = {
+			T2_production = 1
+			T2_opaz = 1
+		}
+		
+		enable_building = {
+			building = opaz_power_station
+			level = 2
+		}
+
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+
+	Opaz_Power_Generation_T2 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 4
+				
+			}
+		}
+		dependencies = {
+			T3_production = 1
+			T3_opaz = 1
+		}
+		on_research_complete = {
+			modify_building_resources = {
+				building = opaz_power_station
+				resource = resources_mm
+				amount = 1
+			}
+		}
+
+		production_speed_opaz_power_station_factor = 0.15
+
+		path = { 
+			leads_to_tech = Opaz_Power_Generation_T3
+		}
+		research_cost = 1.5
+		
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+
+	Opaz_Power_Generation_T3 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 6
+				
+			}
+		}
+		path = { 
+			leads_to_tech = Opaz_Power_Generation_T4
+		}
+		research_cost = 1.5
+		dependencies = {
+			T4_production = 1
+			T4_opaz = 1
+		}
+		enable_building = {
+			building = opaz_power_station
+			level = 4
+		}
+
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+
+	Opaz_Power_Generation_T4 = {
+		folder = {
+			name = industry_resource_folder
+			position = {
+				x = 3
+				y = 8
+				
+			}
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = opaz_power_station
+				resource = resources_mm
+				amount = 1
+			}
+
+			modify_building_resources = {
+				building = opaz_power_station
+				resource = resources_cm
+				amount = 1
+			}
+		}
+
+		production_speed_opaz_power_station_factor = 0.15
+		
+		research_cost = 1.5
+		dependencies = {
+			T5_production = 1
+			T5_opaz = 1
+		}
+		categories = {
+			industry
+			power_development
+		}
+	
+	}
+}

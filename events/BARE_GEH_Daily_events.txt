@@ -1,0 +1,258 @@
+add_namespace = GEH_daily
+
+country_event = { # 风纪委员会-事件报告 DESQ-2234
+    id = GEH_daily.11
+    title = GEH_daily.11.t
+    desc = GEH_daily.11.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.11.a
+    }
+
+    option = {
+        name = GEH_daily.11.b
+    }
+}
+
+country_event = { # 风纪委员会运营资金被万魔殿扣押
+    id = GEH_daily.12
+    title = GEH_daily.12.t
+    desc = GEH_daily.12.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.12.a
+    }
+    option = {
+        name = GEH_daily.12.b
+    }
+}
+
+country_event = { # 商业街发生餐厅爆炸事件
+    id = GEH_daily.13
+    title = GEH_daily.13.t
+    desc = GEH_daily.13.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.13.a
+    }
+    option = {
+        name = GEH_daily.13.b
+    }
+}
+
+country_event = { # 万魔殿因伊吹布丁失踪整体陷入瘫痪状态
+    id = GEH_daily.14
+    title = GEH_daily.14.t
+    desc = GEH_daily.14.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.14.a
+    }
+    option = {
+        name = GEH_daily.14.b
+    }
+}
+
+
+country_event = { # 虎丸坦克载人空投实验
+    id = GEH_daily.15
+    title = GEH_daily.15.t
+    desc = GEH_daily.15.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.15.a
+    }
+    option = {
+        name = GEH_daily.15.b
+    }
+}
+
+country_event = { # 真琴议长的24小时环格赫那飞艇演讲巡演
+    id = GEH_daily.16
+    title = GEH_daily.16.t
+    desc = GEH_daily.16.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.16.a
+    }
+    option = {
+        name = GEH_daily.16.b
+    }
+}
+
+country_event = { # 风纪委员带头破坏风纪?万魔殿特派员千秋独家报道——风纪委员会的内幕
+    id = GEH_daily.17
+    title = GEH_daily.17.t
+    desc = GEH_daily.17.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.17.a
+    }
+    option = {
+        name = GEH_daily.17.b
+    }
+}
+
+country_event = { # 风纪委员会日奈会长钢琴独奏限定BD预售，好评如潮
+    id = GEH_daily.18
+    title = GEH_daily.18.t
+    desc = GEH_daily.18.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.18.a
+    }
+    option = {
+        name = GEH_daily.18.b
+    }
+}
+
+country_event = { # 急救医学部最新数据统计显示，格赫那学员因扰乱风纪而被镇压造成的伤患率下降了三个百分点
+    id = GEH_daily.19
+    title = GEH_daily.19.t
+    desc = GEH_daily.19.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.19.a
+    }
+    option = {
+        name = GEH_daily.19.b
+    }
+}
+
+country_event = { # 由于供给部部长放假而导致美食研究会开始在格黑娜各处大肆破坏
+    id = GEH_daily.20
+    title = GEH_daily.20.t
+    desc = GEH_daily.20.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.20.a
+    }
+    option = {
+        name = GEH_daily.20.b
+    }
+}
+
+country_event = { # 《不忍之心》电影系列连载漫画正式发售，一起来看忍者和坦克同台战斗的飒爽英姿吧
+    id = GEH_daily.21
+    title = GEH_daily.21.t
+    desc = GEH_daily.21.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.21.a
+    }
+    option = {
+        name = GEH_daily.21.b
+    }
+}
+
+country_event = { # 行政官亚子的擅自行动
+    id = GEH_daily.22
+    title = GEH_daily.22.t
+    desc = GEH_daily.22.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.22.a
+    }
+    option = {
+        name = GEH_daily.22.b
+    }
+}
+
+country_event = { # 装甲部队的建设分歧
+    id = GEH_daily.23
+    title = GEH_daily.23.t
+    desc = GEH_daily.23.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.23.a
+    }
+    option = {
+        name = GEH_daily.23.b
+    }
+}
+
+country_event = { # 神秘自传的争议
+    id = GEH_daily.24
+    title = GEH_daily.24.t
+    desc = GEH_daily.24.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.24.a
+    }
+    option = {
+        name = GEH_daily.24.b
+    }
+}
+
+country_event = { # 学生食堂暴动
+    id = GEH_daily.25
+    title = GEH_daily.25.t
+    desc = GEH_daily.25.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.25.a
+    }
+    option = {
+        name = GEH_daily.25.b
+    }
+}
+
+country_event = { # 火力研究部的失误
+    id = GEH_daily.26
+    title = GEH_daily.26.t
+    desc = GEH_daily.26.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.26.a
+    }
+    option = {
+        name = GEH_daily.26.b
+    }
+}
+
+country_event = { # 暴动的...松饼？
+    id = GEH_daily.27
+    title = GEH_daily.27.t
+    desc = GEH_daily.27.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.27.a
+    }
+    option = {
+        name = GEH_daily.27.b
+    }
+}

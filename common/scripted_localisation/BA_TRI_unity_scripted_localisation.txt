@@ -1,0 +1,144 @@
+TRI_get_unity_rank = {
+	name = TRI_get_unity_rank
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 0 }
+		}
+		localization_key = TRI_unity_rank_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 1 }
+		}
+		localization_key = TRI_unity_rank_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 2 }
+		}
+		localization_key = TRI_unity_rank_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 3 }
+		}
+		localization_key = TRI_unity_rank_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 4 }
+		}
+		localization_key = TRI_unity_rank_4
+	}
+}
+TRI_get_unity_rank_tt = {
+	name = TRI_get_unity_rank_tt
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 0 }
+		}
+		localization_key = TRI_unity_rank_tt_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 1 }
+		}
+		localization_key = TRI_unity_rank_tt_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 2 }
+		}
+		localization_key = TRI_unity_rank_tt_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 3 }
+		}
+		localization_key = TRI_unity_rank_tt_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { TRI_unity_rank = 4 }
+		}
+		localization_key = TRI_unity_rank_tt_4
+	}
+}
+TRI_get_association_focus_position = {
+	name = TRI_get_association_focus_position
+	text = {
+		trigger = { 
+			check_variable = { detail_ignored@var:association = 1 }
+		}
+		localization_key = unkown_tt
+	}
+	text = {
+		trigger = { 
+			check_variable = { focus_position@var:association > 0.5 }
+		}
+		localization_key = TRI_association_focus_position_moderate
+	}
+	text = {
+		trigger = { 
+			check_variable = { focus_position@var:association > -0.5 }
+		}
+		localization_key = TRI_association_focus_position_conservative
+	}
+	text = {
+		localization_key = TRI_association_focus_position_hardliner
+	}
+}
+TRI_get_association_loyalty = {
+	name = TRI_get_association_loyalty
+	text = {
+		trigger = { 
+			check_variable = { detail_ignored@var:association = 1 }
+		}
+		localization_key = unkown_tt
+	}
+	text = {
+		trigger = { 
+			check_variable = { loyalty@var:association < 0.7 }
+		}
+		localization_key = TRI_association_loyalty_R
+	}
+	text = {
+		trigger = { 
+			check_variable = { loyalty@var:association < 0.9 }
+		}
+		localization_key = TRI_association_loyalty_Y
+	}
+	text = {
+		trigger = { 
+			check_variable = { loyalty@var:association < 1.1 }
+		}
+		localization_key = TRI_association_loyalty_W
+	}
+	text = {
+		localization_key = TRI_association_loyalty_G
+	}
+}
+TRI_get_association_radicalism = {
+	name = TRI_get_association_radicalism
+	text = {
+		trigger = { 
+			check_variable = { detail_ignored@var:association = 1 }
+		}
+		localization_key = unkown_tt
+	}
+	text = {
+		trigger = { 
+			check_variable = { radicalism@var:association < 0.2 }
+		}
+		localization_key = TRI_association_radicalism_G
+	}
+	text = {
+		trigger = { 
+			check_variable = { radicalism@var:association < 0.6 }
+		}
+		localization_key = TRI_association_radicalism_Y
+	}
+	text = {
+		localization_key = TRI_association_radicalism_R
+	}
+}

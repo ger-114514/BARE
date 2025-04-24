@@ -1,0 +1,27 @@
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								if = {
+									limit = {
+										has_war_with = FROM
+										is_major = yes
+									}
+									has_capitulated = yes
+								}
+							}
+						}
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+				}
+			}
+		}
+	}
+}

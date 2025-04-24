@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		HYA_BGZC_SYZD = { #百鬼之宅,神隐之地
+			picture = unkown
+
+			modifier = {
+				stability_factor = 0.05 #稳定度
+			}
+		}
+
+		HYA_HLD_BaiHuaLiaoLuan_WYH = { #陷入混乱的百花缭乱委员会
+			picture = unkown
+
+			modifier = {
+				stability_factor = -0.05 #稳定度
+				war_support_factor = -0.1 #战争支持度
+				army_attack_factor = -0.1 #陆军攻击
+			}
+		}
+	}
+}
