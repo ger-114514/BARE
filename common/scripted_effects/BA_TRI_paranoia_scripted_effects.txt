@@ -41,7 +41,6 @@ TRI_change_paranoia = {
 			check_variable = { TRI_nagisa_paranoia_total < 0 }
 			check_variable = { TRI_nagisa_paranoia_rank > 0 }
 		}
-		add_to_variable = { TRI_nagisa_paranoia_total = 100 }
 		TRI_paranoia_rank_down = yes
 	}
 	clamp_variable = {
@@ -63,8 +62,11 @@ TRI_paranoia_rank_up = {
 }
 TRI_paranoia_rank_down = {
 	custom_effect_tooltip = TRI_paranoia_rank_down_tt
+	set_variable = { TRI_nagisa_paranoia_total = 50 }
 	subtract_from_variable = { TRI_nagisa_paranoia_rank = 1 }
-	add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -1 }
+	add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 5 }
+	add_to_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week = 5 }
+	set_country_flag = TRI_nagisa_paranoia_modifier_increase_extra_week
 }
 #偏执度增减30/20/10
 TRI_paranoia_increase_30 = {
@@ -112,7 +114,7 @@ BA_TRI_generate_paranoia_frame = {
 #弹出清洗行政系统事件
 TRI_purge_administration = {
 	random_list = {
-		1 = { #需要有可以清洗的人员
+		2 = { #需要有可以清洗的人员
 			modifier = {
 				factor = 0
 				NOT = {
@@ -137,17 +139,29 @@ TRI_purge_administration = {
 			}
 			country_event = TRI_paranoia.1
 		}
-		1 = { #需要没有“受到审查的行政机构”
+		2 = { #需要没有“受到审查的行政机构”
 			modifier = {
 				factor = 0
 				has_idea = TRI_inspected_administration
 			}
 			country_event = TRI_paranoia.2
 		}
-		1 = { #需要渚没有“风声鹤唳”
+		0 = { #需要渚没有“风声鹤唳”
 			modifier = {
 				factor = 0
 				TRI_nagisa = { has_trait = BA_TRI_nagisa_paranoid }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = TRI_paranoia_3_cd
+			}
+			modifier = {
+				add = 5
+				check_variable = { TRI_nagisa_paranoia_total > 60 }
+			}
+			modifier = {
+				add = 1
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
 			}
 			country_event = TRI_paranoia.3
 		}

@@ -39,6 +39,7 @@ ideas = {
 				set_variable = { knights@TRI_northern_campus_region = 20 }
 				add_to_array = { TRI_northern_campus_region = 116 }
 				add_to_array = { TRI_northern_campus_region = 367 }
+				add_to_array = { TRI_region_present_state = 116 }
 				116 = { set_state_flag = region_present }
 				set_variable = { state_num@TRI_northern_campus_region = 2 }
 				for_each_scope_loop = {

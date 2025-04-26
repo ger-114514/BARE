@@ -21,6 +21,24 @@ TRI_paranoia_system = {
 		timeout_effect = {
 			set_temp_variable = { TRI_paranoia_change = TRI_nagisa_paranoia_modifier_increase }
 			TRI_change_paranoia = yes
+			if = {
+				limit = { 
+					check_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week > 0 } 
+				}
+				add_to_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week = -1 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week = 0 } 
+					has_country_flag = TRI_nagisa_paranoia_modifier_increase_extra_week
+				}
+				clr_country_flag = TRI_nagisa_paranoia_modifier_increase_extra_week
+				add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -5 }
+				custom_effect_tooltip = {
+					localization_key = TRI_nagisa_paranoia_modifier_increase_sub_tt
+					SUB = "5"
+				}
+			}
 			activate_mission = TRI_paranoia_weekly_change
 		}
 		

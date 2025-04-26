@@ -17,7 +17,10 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_seia_available_tt
+					always = no
+				}
 			} 
 			traits = {
 				obscure_prophet
@@ -41,15 +44,15 @@ characters={
 			}
         }
 
-        corps_commander = {
-			traits = {trait_cautious infantry_officer inflexible_strategist
-			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 1
-		}
+        # corps_commander = {
+		# 	traits = {trait_cautious infantry_officer inflexible_strategist
+		# 	}
+		# 	skill = 3
+		# 	attack_skill = 3
+		# 	defense_skill = 2
+		# 	planning_skill = 4
+		# 	logistics_skill = 1
+		# }
 
 	}
 
@@ -503,8 +506,11 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
-			} 
+				custom_override_tooltip = {
+					tooltip = TRI_mine_available_tt
+					has_country_flag = TRI_mine_available
+				}
+			}
 			traits = {
 				savior_at_any_cost
 			}
@@ -524,15 +530,15 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {armor_officer trait_cautious
-			}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 5
-			planning_skill = 4
-			logistics_skill = 1
-		}
+        # field_marshal = {
+		# 	traits = {armor_officer trait_cautious
+		# 	}
+		# 	skill = 3
+		# 	attack_skill = 2
+		# 	defense_skill = 5
+		# 	planning_skill = 4
+		# 	logistics_skill = 1
+		# }
 
 	}
 
@@ -937,7 +943,7 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				has_country_flag = TRI_sisterhood_engage_in_politic
 			}
 			traits = {
 				timid_haracles
@@ -949,8 +955,7 @@ characters={
 		}
 
         field_marshal = {
-			traits = {bearer_of_artillery
-			}
+			traits = { bearer_of_artillery }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -1033,7 +1038,7 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				has_country_flag = TRI_sisterhood_engage_in_politic
 			}
 			traits = {
 				gentle_war_leader
@@ -1051,7 +1056,7 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				has_country_flag = TRI_sisterhood_engage_in_politic
 			} 
 			traits = {
 				devout_secret_keeper

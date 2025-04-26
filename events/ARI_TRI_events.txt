@@ -451,6 +451,7 @@ country_event = { #示之假寐
             ADD = "4"
         }
         add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 4 }
+        set_country_flag = TRI_negative_paranoia_event
     }
 }
 country_event = { #负面事件1
@@ -459,6 +460,7 @@ country_event = { #负面事件1
     desc = TRI_coup.25.desc
     #picture =
     trigger = {
+        has_country_flag = TRI_negative_paranoia_event
         check_variable = { TRI_nagisa_paranoia_total > 40 }
     }
     mean_time_to_happen = {
@@ -468,6 +470,7 @@ country_event = { #负面事件1
     option = {
         name = TRI_coup.25.a
         add_political_power = -20
+        clr_country_flag = TRI_negative_paranoia_event
         set_country_flag = TRI_negative_paranoia_event_1
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
@@ -489,6 +492,7 @@ country_event = { #负面事件2
     option = {
         name = TRI_coup.26.a
         add_political_power = -20
+        clr_country_flag = TRI_negative_paranoia_event_1
         set_country_flag = TRI_negative_paranoia_event_2
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
@@ -510,6 +514,7 @@ country_event = { #负面事件3
     option = {
         name = TRI_coup.27.a
         add_political_power = -20
+        clr_country_flag = TRI_negative_paranoia_event_2
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
         country_event = {

@@ -196,11 +196,94 @@ TRI_bill_voting_decisions_categories = {
 		}
 	}
 	skip_voting = {
+		visible = {
+			is_debug = yes
+		}
 		complete_effect = {
 			add_days_mission_timeout = {
 				mission = TRI_vote_for_the_bill
 				days = -140
 			}
+		}
+	}
+	#“胡萝卜蛋糕”法案
+	TRI_submit_Bill_of_carrot_cake = {
+		visible = {
+			is_in_array = {
+				array = TRI_bills_to_be_passed
+				value = token:TRI_Bill_of_carrot_cake
+			}
+		}
+		available = {
+			TRI_can_submit_a_bill = yes
+		}
+		complete_effect = {
+			set_temp_variable = { bill = token:TRI_Bill_of_carrot_cake }
+			TRI_submit_the_bill = yes
+		}
+	}
+	#“铜橄榄”法案
+	TRI_submit_Bill_of_copper_olive = {
+		visible = {
+			is_in_array = {
+				array = TRI_bills_to_be_passed
+				value = token:TRI_Bill_of_copper_olive
+			}
+		}
+		available = {
+			TRI_can_submit_a_bill = yes
+		}
+		complete_effect = {
+			set_temp_variable = { bill = token:TRI_Bill_of_copper_olive }
+			TRI_submit_the_bill = yes
+		}
+	}
+	#开诚布公法案
+	TRI_submit_Bill_of_disclosure = {
+		visible = {
+			is_in_array = {
+				array = TRI_bills_to_be_passed
+				value = token:TRI_Bill_of_disclosure
+			}
+		}
+		available = {
+			TRI_can_submit_a_bill = yes
+		}
+		complete_effect = {
+			set_temp_variable = { bill = token:TRI_Bill_of_disclosure }
+			TRI_submit_the_bill = yes
+		}
+	}
+	#重获信任法案
+	TRI_submit_Bill_of_regaining_trust = {
+		visible = {
+			is_in_array = {
+				array = TRI_bills_to_be_passed
+				value = token:TRI_Bill_of_regaining_trust
+			}
+		}
+		available = {
+			TRI_can_submit_a_bill = yes
+		}
+		complete_effect = {
+			set_temp_variable = { bill = token:TRI_Bill_of_regaining_trust }
+			TRI_submit_the_bill = yes
+		}
+	}
+	#“紧急事态动议”法案
+	TRI_submit_Bill_of_emergent_motion = {
+		visible = {
+			is_in_array = {
+				array = TRI_bills_to_be_passed
+				value = token:TRI_Bill_of_emergent_motion
+			}
+		}
+		available = {
+			TRI_can_submit_a_bill = yes
+		}
+		complete_effect = {
+			set_temp_variable = { bill = token:TRI_Bill_of_emergent_motion }
+			TRI_submit_the_bill = yes
 		}
 	}
 }

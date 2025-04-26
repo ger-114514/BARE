@@ -167,6 +167,7 @@ country_event = {
             load_focus_tree = TRI_focus_stage_2
         }
         #将【圣三一的权力平衡】焦点设置为：《伊甸条约》的签订
+        set_country_flag = TRI_parliament_available
 		TRI_set_focus_signing_Eden = yes
 		ai_chance = {
 			base = 100
@@ -616,7 +617,7 @@ country_event = {
     option = {
 		name = TRI_events.31.a
 
-        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        #于【圣三一情报局】添加《古圣堂袭击》调查决议
         set_country_flag = TRI_church_investigation
         unlock_decision_category_tooltip = TRI_church_investigation
         #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
@@ -640,7 +641,7 @@ country_event = {
     option = {
 		name = TRI_events.31.b
 
-        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        #于【圣三一情报局】添加《古圣堂袭击》调查决议
         set_country_flag = TRI_church_investigation
         unlock_decision_category_tooltip = TRI_church_investigation
         #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
@@ -1136,7 +1137,7 @@ country_event = {
             available_to_spy_master = no
             nationalities = { TRI ARI }
         }
-        #在间谍机构【圣三一特殊事务调查部】中添加任务：对茶话会的渗透#目前不做
+        #在间谍机构【圣三一情报局】中添加任务：对茶话会的渗透#目前不做
 		ai_chance = {
 			base = 100
 		}

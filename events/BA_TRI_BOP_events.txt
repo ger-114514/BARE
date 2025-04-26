@@ -135,10 +135,12 @@ country_event = {
 			flag = TRI_region_event_1_cd
 			days = 180
 		}
-		country_event = {
-			id = TRI_region.0
-			days = 180
-			random_days = 10
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
@@ -172,10 +174,12 @@ country_event = {
 			flag = TRI_region_event_2_cd
 			days = 360
 		}
-		country_event = {
-			id = TRI_region.0
-			days = 60
-			random_days = 10
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
@@ -189,7 +193,7 @@ country_event = {
 		set_temp_variable_to_random = {
 			var = idx
 			min = 0
-			max = 13
+			max = 6
 			integer = yes
 		}
 		set_temp_variable = { region = var:TRI_regions^idx }
@@ -199,12 +203,14 @@ country_event = {
 		TRI_change_region_association_influence = yes
 		set_country_flag = {
 			flag = TRI_region_event_11_cd
-			days = 120
-		}
-		country_event = {
-			id = TRI_region.0
 			days = 180
-			random_days = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
@@ -218,7 +224,7 @@ country_event = {
 		set_temp_variable_to_random = {
 			var = idx
 			min = 0
-			max = 13
+			max = 6
 			integer = yes
 		}
 		set_temp_variable = { region = var:TRI_regions^idx }
@@ -232,10 +238,12 @@ country_event = {
 			flag = TRI_region_event_12_cd
 			days = 180
 		}
-		country_event = {
-			id = TRI_region.0
-			days = 60
-			random_days = 10
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
@@ -249,7 +257,7 @@ country_event = {
 		set_temp_variable_to_random = {
 			var = idx
 			min = 0
-			max = 13
+			max = 6
 			integer = yes
 		}
 		set_temp_variable = { region = var:TRI_regions^idx }
@@ -263,10 +271,12 @@ country_event = {
 			flag = TRI_region_event_21_cd
 			days = 180
 		}
-		country_event = {
-			id = TRI_region.0
-			days = 60
-			random_days = 10
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
@@ -280,7 +290,7 @@ country_event = {
 		set_temp_variable_to_random = {
 			var = idx
 			min = 0
-			max = 13
+			max = 6
 			integer = yes
 		}
 		set_temp_variable = { region = var:TRI_regions^idx }
@@ -298,10 +308,12 @@ country_event = {
 			flag = TRI_region_event_22_cd
 			days = 180
 		}
-		country_event = {
-			id = TRI_region.0
-			days = 60
-			random_days = 10
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
@@ -315,7 +327,7 @@ country_event = {
 		set_temp_variable_to_random = {
 			var = idx
 			min = 0
-			max = 13
+			max = 6
 			integer = yes
 		}
 		set_temp_variable = { region = var:TRI_regions^idx }
@@ -329,10 +341,12 @@ country_event = {
 			flag = TRI_region_event_23_cd
 			days = 180
 		}
-		country_event = {
-			id = TRI_region.0
-			days = 60
-			random_days = 10
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
 		}
 	}
 }
