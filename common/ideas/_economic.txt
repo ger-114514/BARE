@@ -124,13 +124,15 @@ ideas = {
 
 			visible = {
 				original_tag = GEH
-				#TODO：战争结束后自动消失，无法再次解锁
+				#战争结束后自动消失，无法再次解锁
+				has_war = yes
 				#TODO：补全国策
 				#has_completed_focus = 非常措施
 			}
 
 			available = {
-				#TODO：战争结束后自动消失，无法再次解锁
+				#战争结束后自动消失，无法再次解锁
+				has_war = yes
 			}
 
 			modifier = {
