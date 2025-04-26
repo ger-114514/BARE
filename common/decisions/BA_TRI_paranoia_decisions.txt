@@ -38,6 +38,7 @@ TRI_paranoia_system = {
 		}
 		days_remove = 7
 		remove_effect = {
+			clr_country_flag = TRI_the_way_to_get_trust
 			country_event = TRI_coup.23
 			effect_tooltip = {
 				TRI_nagisa = {

@@ -73,11 +73,12 @@ on_actions = {
 						}
 					}
 					#物资不足，则重置获得数量
+					clear_array = BARE_ARI_Resource_Want_Array
+					clear_array = BARE_ARI_Resource_Get_Array
 					resize_array = {
 						array = BARE_ARI_Resource_Want_Array
 						size = 6
 					}
-	
 					resize_array = {
 						array = BARE_ARI_Resource_Get_Array
 						size = 6

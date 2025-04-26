@@ -210,6 +210,30 @@ country_event = {
     }
 }
 
+#叛徒的明天
+country_event = {
+    id = ARI_beatrice.11
+    title = ARI_beatrice.11.t
+    desc = ARI_beatrice.11.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.11.a
+    }
+}
+#审查
+country_event = {
+    id = ARI_beatrice.12
+    title = ARI_beatrice.12.t
+    desc = ARI_beatrice.12.desc
+    #picture =  
+    
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.12.a
+    }
+}
 
 #合作的终结
 country_event = {

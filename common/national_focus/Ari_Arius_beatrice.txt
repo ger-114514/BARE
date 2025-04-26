@@ -1181,6 +1181,9 @@ focus_tree = {
 			#icon = GFX_goal_unknown
 			relative_position_id = ARI_traveller_operation
 			prerequisite = { focus = ARI_traveller_operation }
+			allow_branch = {
+				has_completed_focus = ARI_traveller_operation
+			}
 			available = {
 				always = no #自动跳过
 			}
@@ -1373,8 +1376,8 @@ focus_tree = {
 				unlock_decision_tooltip = ARI_deal_with_traitor_de
 
 				hidden_effect = {
-					#TODO:出现事件：叛徒的明天
-					#event = { id =  }
+					#出现事件：叛徒的明天
+					country_event = ARI_beatrice.11
 				}
 			}
 		}
@@ -1423,7 +1426,9 @@ focus_tree = {
 			relative_position_id = ARI_traveller_operation
 			prerequisite = { focus = ARI_traveller_operation }
 			prerequisite = { focus = ARI_fake_flag_operation}
-			prerequisite = { focus = ARI_experience_in_Trinity }
+			allow_branch = {
+				has_completed_focus = ARI_traveller_operation
+			}
 			available = {
 				always = no #自动跳过
 			}
@@ -1446,8 +1451,9 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 			completion_reward = {
-				#TODO
 				#圣三一现在可以反制阿里乌斯的渗透现在在不建立安全屋的情况下，对圣三一方的主动进攻行动会减少渗透度
+				custom_effect_tooltip = ARI_open_the_curtain_tt
+				TRI = { custom_effect_tooltip = TRI_anti_spy_available_tt }
 			}
 		}
 
@@ -1465,7 +1471,6 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 			completion_reward = {
-				#TODO
 				unlock_decision_tooltip = ARI_build_safe_home
 				unlock_decision_tooltip = ARI_send_sf_to_trinity
 			}
@@ -1485,7 +1490,6 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 			completion_reward = {
-				#TODO
 				unlock_decision_tooltip = ARI_disguise_conference_preparer
 				unlock_decision_tooltip = ARI_control_trinity_border
 			}
@@ -1751,6 +1755,24 @@ focus_tree = {
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
 				add_stability = 0.05
+				# add_advisor_role = {
+				# 	character = ARI_code_01
+				# 	advisor = {
+				# 		slot = political_advisor
+				# 		idea_token = ARI_code_01_ac
+				# 		traits = { arbitrary_supervisor }
+				# 		cost = 100
+				# 	}
+				# }
+				# add_advisor_role = {
+				# 	character = ARI_code_02
+				# 	advisor = {
+				# 		slot = political_advisor
+				# 		idea_token = ARI_code_02_ac
+				# 		traits = { local_ruler }
+				# 		cost = 100
+				# 	}
+				# }
 			}
 		}
 		#维稳部分
@@ -1873,7 +1895,25 @@ focus_tree = {
 					completion_reward = {
 						add_stability = 0.1
 						#启用顾问蝙蝠07
-						custom_effect_tooltip = ARI_recruit_informants_tt
+						# custom_effect_tooltip = ARI_recruit_informants_tt
+						# add_advisor_role = {
+						# 	character = ARI_code_00
+						# 	advisor = {
+						# 		slot = political_advisor
+						# 		idea_token = ARI_code_00_ac
+						# 		traits = { positive_collaborator }
+						# 		cost = 100
+						# 	}
+						# }
+						# add_advisor_role = {
+						# 	character = ARI_code_07
+						# 	advisor = {
+						# 		slot = political_advisor
+						# 		idea_token = ARI_code_07_ac
+						# 		traits = { secret_agent }
+						# 		cost = 100
+						# 	}
+						# }
 						#提升隐蔽度提升的程度
 						every_owned_state = {
 							ARI_guard_modifier_increase_2 = yes

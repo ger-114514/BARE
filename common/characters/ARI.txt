@@ -170,69 +170,22 @@ characters = {
 	#代号01
 	ARI_code_01 = {
 		name = ARI_code_01_name
-		advisor = {
-			slot = political_advisor
-			idea_token = ARI_code_01_ac
-			traits = { arbitrary_supervisor }
-			cost = 100
-			visible = {
-				
-			}
-			available = {
-				has_completed_focus = ARI_meeting_with_farmers
-			}
-		}
 	}
 
 	#代号02
 	ARI_code_02 = {
 		name = ARI_code_02_name
-		advisor = {
-			slot = political_advisor
-			idea_token = ARI_code_02_ac
-			traits = { local_ruler }
-			cost = 100
-			visible = {
-				
-			}
-			available = {
-				has_completed_focus = ARI_meeting_with_farmers
-			}
-		}
 	}
 
 	#代号00
 	ARI_code_00 = {
 		name = ARI_code_00_name
-		advisor = {
-			slot = political_advisor
-			idea_token = ARI_code_00_ac
-			traits = { positive_collaborator }
-			cost = 100
-			visible = {
-				
-			}
-			available = {
-				has_completed_focus = ARI_recruit_informants
-			}
-		}
 	}
 
 	#代号07
 	ARI_code_07 = {
 		name = ARI_code_07_name
-		advisor = {
-			slot = political_advisor
-			idea_token = ARI_code_07_ac
-			traits = { secret_agent }
-			cost = 100
-			visible = {
-				
-			}
-			available = {
-				has_completed_focus = ARI_recruit_informants
-			}
-		}
+		
 	}
 
 	#代号14

@@ -1278,10 +1278,7 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    has_built = {
-                        type = infrastructure
-                        value < 5
-                    }
+                    infrastructure < 5
                 }
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -1294,10 +1291,7 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    has_built = {
-                        type = infrastructure
-                        value < 5
-                    }
+                    infrastructure < 5
                 }
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -1310,10 +1304,7 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    has_built = {
-                        type = infrastructure
-                        value < 5
-                    }
+                    infrastructure < 5
                 }
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -1326,10 +1317,7 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    has_built = {
-                        type = infrastructure
-                        value < 5
-                    }
+                    infrastructure < 5
                 }
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -1342,10 +1330,7 @@ focus_tree = {
             random_owned_controlled_state = {
                 limit = {
                     is_controlled_by = ROOT
-                    has_built = {
-                        type = infrastructure
-                        value < 5
-                    }
+                    infrastructure < 5
                 }
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {

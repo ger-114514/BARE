@@ -39,7 +39,7 @@ TRI_change_paranoia = {
 	while_loop_effect = {
 		limit = {
 			check_variable = { TRI_nagisa_paranoia_total < 0 }
-			check_variable = { TRI_nagisa_paranoia_rank > 1 }
+			check_variable = { TRI_nagisa_paranoia_rank > 0 }
 		}
 		add_to_variable = { TRI_nagisa_paranoia_total = 100 }
 		TRI_paranoia_rank_down = yes
@@ -51,7 +51,7 @@ TRI_change_paranoia = {
 	}
 	clamp_variable = {
 		var = TRI_nagisa_paranoia_rank
-		min = 1
+		min = 0
 		max = 5
 	}
 	BA_TRI_generate_paranoia_frame = yes

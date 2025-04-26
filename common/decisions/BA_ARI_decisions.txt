@@ -1115,8 +1115,8 @@ ARI_foreign_operations_decisions = {
 		remove_effect = {
 			set_temp_variable = { intelligence_change = 10 }
 			ARI_change_intelligence_in_TRI = yes
-
-			#TODO:一次安全屋抵消一次反渗透
+			custom_effect_tooltip = ARI_build_safe_home_tt
+			#一次安全屋抵消一次反渗透
 			add_to_variable = {
 				var = ARI_safety_home_use_time
 				value = 2
@@ -1738,11 +1738,11 @@ ARI_raw_material_decisions = {
 					amount = 16
 				}
 			}
-			#TODO:神秘科技加速卡*1
+			#神秘科技加速卡*1
 			add_tech_bonus = {
+				category = mystical
 				bonus = 1
 				uses = 1
-				#category = 
 			}
 		}
 	}
@@ -1773,11 +1773,11 @@ ARI_equipments_development_decisions = {
 		fire_only_once = yes
 		days_remove = 90
 		remove_effect = {
-			#TODO:支援武器（火炮）加成卡100*2
+			#支援武器（火炮）加成卡100*2
 			add_tech_bonus = {
+				category = fire_support
 				bonus = 1
-				uses = 1
-				#category =
+				uses = 2
 			}
 			add_ideas = ARI_light_support_equipment_idea
 		}
@@ -1790,11 +1790,11 @@ ARI_equipments_development_decisions = {
 		fire_only_once = yes
 		days_remove = 90
 		remove_effect = {
-			#TODO:支援部队加成卡100*1
+			#支援部队加成卡100*1
 			add_tech_bonus = {
+				category = support
 				bonus = 1
 				uses = 1
-				#category =
 			}
 			#强化精神“阿里乌斯武装学生部队”
 			custom_effect_tooltip = ARI_logistics_teams_tt
@@ -1837,11 +1837,11 @@ ARI_equipments_development_decisions = {
 		fire_only_once = yes
 		days_remove = 90
 		remove_effect = {
-			#TODO:2*100*装甲卡
+			#2*100*装甲卡
 			add_tech_bonus = {
+				category = armor
 				bonus = 1
 				uses = 2
-				#category = 
 			}
 			swap_ideas = {
 				remove_idea = ARI_merkava_main_battle_tank_1
@@ -2298,8 +2298,8 @@ ARI_traveller_operation_caretaking_decisions = {
 		remove_effect = {
 			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_4
 			hidden_effect = {
-				#TODO:出现事件：审查
-				#event = { id =  }
+				#出现事件：审查
+				country_event = ARI_beatrice.12
 				add_to_variable = { ARI_lesson_traveller_operation_war_support_factor = 0.2 }
 				add_to_variable = { ARI_lesson_traveller_operation_stability = 0.2 }
 			}
@@ -2451,8 +2451,8 @@ ARI_preparation_of_operation_eden_decisions = {
 		}
 		available = {
 			custom_override_tooltip = {
-				tooltip = ARI_must_finish_first_three_eden_oparation
-				check_variable = { ARI_devil_hunting_operation_count = 3 }
+				tooltip = ARI_must_finish_first_three_eden_operation
+				check_variable = { ARI_giving_operation_count = 3 }
 				check_variable = { ARI_clear_sky_operation_count = 3 }
 				check_variable = { ARI_oath_operation_count = 3 }
 			}
@@ -2498,8 +2498,8 @@ ARI_preparation_of_operation_eden_decisions = {
 		}
 		available = {
 			custom_override_tooltip = {
-				tooltip = ARI_must_finish_first_three_eden_oparation
-				check_variable = { ARI_delusion_operation_count = 3 }
+				tooltip = ARI_must_finish_first_three_eden_operation
+				check_variable = { ARI_giving_operation_count = 3 }
 				check_variable = { ARI_clear_sky_operation_count = 3 }
 				check_variable = { ARI_oath_operation_count = 3 }
 			}
@@ -2547,8 +2547,8 @@ ARI_preparation_of_operation_eden_decisions = {
 		}
 		available = {
 			custom_override_tooltip = {
-				tooltip = ARI_must_finish_first_three_eden_oparation
-				check_variable = { ARI_delusion_operation_count = 3 }
+				tooltip = ARI_must_finish_first_three_eden_operation
+				check_variable = { ARI_giving_operation_count = 3 }
 				check_variable = { ARI_clear_sky_operation_count = 3 }
 				check_variable = { ARI_oath_operation_count = 3 }
 			}
@@ -2592,8 +2592,8 @@ ARI_preparation_of_operation_eden_decisions = {
 		}
 		available = {
 			custom_override_tooltip = {
-				tooltip = ARI_must_finish_first_three_eden_oparation
-				check_variable = { ARI_delusion_operation_count = 3 }
+				tooltip = ARI_must_finish_first_three_eden_operation
+				check_variable = { ARI_giving_operation_count = 3 }
 				check_variable = { ARI_clear_sky_operation_count = 3 }
 				check_variable = { ARI_oath_operation_count = 3 }
 			}
