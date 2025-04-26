@@ -41,3 +41,15 @@ GEH_after_eden_war_decision_category = {
 	}
 	priority = 1098
 }
+
+#古圣堂之战临时触发决议类别 - fgvfgfs
+GEH_GST_LS_category = {
+	icon = generic_research
+	
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = TRI
+	}
+	priority = 114514
+}

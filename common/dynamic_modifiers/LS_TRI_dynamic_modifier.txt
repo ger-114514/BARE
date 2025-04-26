@@ -1,0 +1,7 @@
+TRI_BeiAliWuSiTuXi = { #被阿里乌斯突袭
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	army_attack_factor = -0.9 #-90%陆军进攻
+
+}

@@ -9,7 +9,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6586;11391;;-1;-1;-1;-1;-1;;Trainroad
 6586;654;;-1;-1;-1;-1;-1;;Trainroad
 654;8069;;-1;-1;-1;-1;-1;;Trainroad
-4623;8069;;-1;-1;-1;-1;-1;;Trainroad
+4623;8482;;-1;-1;-1;-1;-1;;Trainroad
 4623;5014;;-1;-1;-1;-1;-1;;Trainroad
 6202;336;;-1;-1;-1;-1;-1;;Trainroad
 5548;336;;-1;-1;-1;-1;-1;;Trainroad
@@ -94,5 +94,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 9365;10128;;-1;-1;-1;-1;-1;;sea
 738;7640;;-1;-1;-1;-1;-1;;sea
 1741;7967;;-1;-1;-1;-1;-1;;sea
+5548;8827;;-1;-1;-1;-1;-1;;Trainroad
+5059;8827;;-1;-1;-1;-1;-1;;Trainroad
+5059;8482;;-1;-1;-1;-1;-1;;Trainroad
+8069;8482;;-1;-1;-1;-1;-1;;Trainroad
+
 
 -1;-1;;-1;-1;-1;-1;-1;-1

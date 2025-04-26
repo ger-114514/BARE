@@ -1,5 +1,5 @@
 sub_units = {
-	recon = { #mounted cav
+	recon = { #!步兵侦查营
 		abbreviation = "LREC"
 		sprite = infantry
 		map_icon_category = infantry
@@ -12,7 +12,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_front_line
@@ -89,6 +89,7 @@ sub_units = {
 	}
 
 	apc_recon = { #trucks, motorcyles, ill-placed cars
+		#!轮式战车侦查营
 		abbreviation = "MREC"
 		sprite = motorized
 		map_icon_category = infantry
@@ -101,7 +102,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_front_line
@@ -179,6 +180,7 @@ sub_units = {
 
 
 	ifv_recon = { #trucks, motorcyles, ill-placed cars
+		#!步兵战车侦查营
 		abbreviation = "MREC"
 		sprite = motorized
 		map_icon_category = infantry
@@ -191,7 +193,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_front_line
@@ -268,7 +270,7 @@ sub_units = {
 		same_support_type = recon # blocks adding other recon types to template
 	}
 
-	mbt_recon = { 
+	mbt_recon = { #!轻型坦克侦查营
 		abbreviation = "HREC"
 		sprite = armor
 		map_icon_category = infantry
@@ -281,7 +283,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_front_line
@@ -355,7 +357,7 @@ sub_units = {
 		same_support_type = recon # blocks adding other recon types to template
 	}
 
-	helicopter_recon = {
+	helicopter_recon = { #!直升机侦查营
 		abbreviation = "HREC"
 		sprite = armor
 		map_icon_category = infantry
@@ -368,7 +370,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_front_line

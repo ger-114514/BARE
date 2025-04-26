@@ -1,6 +1,6 @@
 sub_units = {
 
-	fire_support_team_su_la = {
+	fire_support_team_su_la = { #!火炮支援连
 		abbreviation = "AT"
 		sprite = anti_tank
 		map_icon_category = infantry
@@ -48,7 +48,7 @@ sub_units = {
 		hard_attack = -0.5
 	}
 
-	fire_support_team_su_ha = {
+	fire_support_team_su_ha = { #!反坦克炮支援连
 		abbreviation = "AT"
 		sprite = anti_tank
 		map_icon_category = infantry
@@ -97,7 +97,7 @@ sub_units = {
 	}
 
 
-	fire_support_team_su_sa = {
+	fire_support_team_su_sa = { #!神秘火炮支援连
 		abbreviation = "AT"
 		sprite = anti_tank
 		map_icon_category = infantry

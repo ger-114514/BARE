@@ -2,9 +2,8 @@ state={
 	id=639
 	name="STATE_639"
 	resources={
-		resources_rm = 4
-		resources_ec = 8
-		resources_mm = 6
+		resources_cm = 40
+		resources_ec = 10
 	}
 	provinces={
 		53 1111 2063 2206 2655 2674 3326 3706 4045 4761 4833 4994 5297 5476 5551 6854 7120 7332 8172 8638 8749 8889 11633 11638 11641 11653 11658 11672 11685 11686 11713 11727 11748 11755 11802 
@@ -13,8 +12,8 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		owner = A48
-		add_core_of=A48
+		owner = A55
+		add_core_of=A55
 		victory_points = {4833 5}
     }
 	manpower=54400

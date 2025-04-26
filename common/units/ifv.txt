@@ -1,5 +1,5 @@
 sub_units = { #
-	ifv_unit = { #
+	ifv_unit = { #!步兵战车(机械化步兵)
 		abbreviation = "ifv"
 		sprite = motorized
 		map_icon_category = infantry
@@ -12,7 +12,7 @@ sub_units = { #
 			mechanized
 		}
 		
-		group = mobile
+		group = JiDong_BuBing #!机动步兵
 		
 		categories = {
 			category_front_line
@@ -69,7 +69,7 @@ sub_units = { #
 		}
 	}
 
-	ifv_artillery_unit = {
+	ifv_artillery_unit = { #!步兵火炮战车(机械化炮兵)
 		abbreviation = "MRT"
 		sprite = artillery
 		map_icon_category = infantry
@@ -82,7 +82,7 @@ sub_units = { #
 			artillery
 		}
 
-		group = mobile_combat_support
+		group = JiDong_PaoBing #!机动炮兵
 		
 		categories = {
 			category_army
@@ -141,7 +141,7 @@ sub_units = { #
 		}
 	}
 
-	ifv_at_unit = {
+	ifv_at_unit = { #!步兵反坦克战车
 		abbreviation = "MAT"
 		sprite = anti_tank
 		map_icon_category = infantry
@@ -154,7 +154,7 @@ sub_units = { #
 			anti_tank
 		}
 		
-		group = mobile_combat_support
+		group = JiDong_PaoBing #!机动炮兵
 		
 		categories = {
 			category_front_line
@@ -215,7 +215,7 @@ sub_units = { #
 	}
 
 
-	ifv_aa_unit = {
+	ifv_aa_unit = { #!步兵防空战车
 		abbreviation = "MAA"
 		sprite = infantry
 		map_icon_category = infantry
@@ -228,7 +228,7 @@ sub_units = { #
 			anti_air
 		}
 		
-		group = mobile_combat_support
+		group = JiDong_PaoBing #!机动炮兵
 		
 		categories = {
 			category_army

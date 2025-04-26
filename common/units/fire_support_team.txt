@@ -2,7 +2,7 @@ sub_units = {
 	####################################################
 	#学生#
 	####################################################
-	fire_support_team_la = {
+	fire_support_team_la = { #!牵引式火炮
 		abbreviation = "FSTL"
 		sprite = artillery
 		map_icon_category = infantry
@@ -13,7 +13,7 @@ sub_units = {
 			infantry
 			artillery
 		}
-		group = combat_support
+		group = TuBuPaoBing #!徒步炮兵
 		categories = {
 			category_army
 			category_artillery
@@ -62,7 +62,7 @@ sub_units = {
 		}
 	}
 	
-	fire_support_team_ha = {
+	fire_support_team_ha = { #!反坦克火炮
 		abbreviation = "FSTH"
 		sprite = artillery
 		map_icon_category = infantry
@@ -73,7 +73,7 @@ sub_units = {
 			infantry
 			artillery
 		}
-		group = combat_support
+		group = TuBuPaoBing #!徒步炮兵
 		categories = {
 			category_army
 			category_line_artillery
@@ -122,7 +122,7 @@ sub_units = {
 			attack = -0.4
 		}
 	}
-	fire_support_team_sp = {
+	fire_support_team_sp = { #!神秘火炮
 		abbreviation = "FSTSP"
 		sprite = artillery
 		map_icon_category = infantry
@@ -133,7 +133,7 @@ sub_units = {
 			infantry
 			artillery
 		}
-		group = combat_support
+		group = TuBuPaoBing #!徒步炮兵
 		categories = {
 			category_army
 			category_line_artillery
@@ -182,7 +182,7 @@ sub_units = {
 	}
 	
 
-	fire_support_team_aa  = {
+	fire_support_team_aa  = { #!防空火炮
 		abbreviation = "FSTA"
 		sprite = infantry
 		map_icon_category = infantry
@@ -195,7 +195,7 @@ sub_units = {
 			anti_air
 		}
 		
-		group = combat_support
+		group = TuBuPaoBing #!徒步炮兵
 		
 		categories = {
 			category_army

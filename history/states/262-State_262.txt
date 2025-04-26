@@ -1,12 +1,12 @@
 state={
 	id=262
 	name="STATE_262"
-	resources={
-		resources_cm = 60
-		resources_ec = 22
-	}
+
 	provinces={
 		246 411 2951 8681 9966 9986 
+	}
+	resources={
+		resources_cm = 20
 	}
 	history={
 		owner = RWT

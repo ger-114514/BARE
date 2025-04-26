@@ -1,5 +1,5 @@
 sub_units  = {
-	# attack_helicopter = {
+	# attack_helicopter = { #!攻击直升机
 	# 	sprite = light_plane
 	# 	priority = 2
 	# 	active = yes
@@ -8,7 +8,7 @@ sub_units  = {
 	# 	categories = { category_cas }
 	# 	land_air_wing_size = 100
 	# }
-	# utility_helicopter = {
+	# utility_helicopter = { #!多用途直升机
 	# 	sprite = light_plane
 	# 	priority = 2
 	# 	active = yes

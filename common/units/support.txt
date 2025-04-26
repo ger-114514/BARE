@@ -1,7 +1,7 @@
 sub_units = {
 
 
-	engineer = {
+	engineer = { #!工兵支援营
 		abbreviation = "ENG"
 		sprite = infantry
 		map_icon_category = infantry
@@ -16,7 +16,7 @@ sub_units = {
 			flame
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_front_line
@@ -100,7 +100,7 @@ sub_units = {
 	}
 
 
-	logistics_company = {
+	logistics_company = { #!后勤支援营
 		abbreviation = "LOG"
 		sprite = infantry
 		map_icon_category = infantry
@@ -114,7 +114,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions
@@ -152,7 +152,7 @@ sub_units = {
 		same_support_type = logistics_company
 	}
 
-	motorized_logistics_company = {
+	motorized_logistics_company = { #!摩托化后勤支援营
 		abbreviation = "LOG"
 		sprite = infantry
 		map_icon_category = infantry
@@ -166,7 +166,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions
@@ -206,7 +206,7 @@ sub_units = {
 	}
 
 
-	helicopter_logistics_company = {
+	helicopter_logistics_company = { #!直升机后勤支援营
 		abbreviation = "LOG"
 		sprite = infantry
 		map_icon_category = infantry
@@ -220,7 +220,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions
@@ -261,7 +261,7 @@ sub_units = {
 	}
 
 
-	maintenance_company = {
+	maintenance_company = { #!战地维修支援营
 		abbreviation = "MAIN"
 		sprite = infantry
 		map_icon_category = infantry
@@ -275,7 +275,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions
@@ -310,7 +310,7 @@ sub_units = {
 
 	}
 
-	military_police = {
+	military_police = { #!宪兵支援营
 		abbreviation = "MP"
 		sprite = infantry
 		map_icon_category = infantry
@@ -324,7 +324,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions
@@ -363,7 +363,7 @@ sub_units = {
 			infantry_equipment = 40
 		}
 	}
-	signal_company = {
+	signal_company = { #!通讯支援营
 		abbreviation = "SIG"
 		sprite = infantry
 		map_icon_category = infantry
@@ -377,7 +377,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions
@@ -417,7 +417,7 @@ sub_units = {
 	}
 
 
-	field_hospital = {
+	field_hospital = { #!野战医院支援营
 		abbreviation = "HOS"
 		sprite = infantry
 		map_icon_category = infantry
@@ -431,7 +431,7 @@ sub_units = {
 			support
 		}
 		
-		group = support
+		group = support #!支援
 		
 		categories = {
 			category_support_battalions

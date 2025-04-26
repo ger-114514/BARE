@@ -4,6 +4,10 @@ state={
 	provinces={
 		587 1012 1673 1770 2656 2908 3295 3381 4442 4869 6295 6446 6698 7919 8704 8725 8820 9297 10692 10697 10713 10734 
 	}
+	resources={
+		resources_rm = 10
+		resources_cm = 20
+	}
 	history = {
 		buildings = {
 			infrastructure = 3

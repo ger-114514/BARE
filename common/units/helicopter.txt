@@ -1,5 +1,5 @@
 sub_units = {
-	air_assest_unit = {
+	air_assest_unit = { #!空中突击营
 		abbreviation = "baasu"
 		sprite = infantry
 		map_icon_category = infantry
@@ -12,7 +12,7 @@ sub_units = {
 			infantry
 		}
 		
-		group = mobile
+		group = KongZhong_ZhiYuan #!空中支援
 		
 		categories = {
 			category_front_line
@@ -79,7 +79,7 @@ sub_units = {
 	}
 
 
-	air_attack_unit = {
+	air_attack_unit = { #!武装直升机营
 		abbreviation = "baasu"
 		sprite = infantry
 		map_icon_category = infantry
@@ -92,7 +92,7 @@ sub_units = {
 			infantry
 		}
 		
-		group = mobile
+		group = KongZhong_ZhiYuan #!空中支援
 		
 		categories = {
 			category_army

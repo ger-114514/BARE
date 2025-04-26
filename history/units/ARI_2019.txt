@@ -1,3 +1,26 @@
+#infantry 步兵 #infantry_heavy 重装步兵
+#infantry_sp 神秘步兵 #infantry_sf 特战步兵
+#infantry_am 自动机 #infantry_militia 动员步兵
+#fire_support_team_la 火炮 fire_support_team_ha AT
+#fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+#ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+#ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+#apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+#apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+#light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+#light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+#medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+#medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+#heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+#heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+#light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+#light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+#medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+#medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
+#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
+#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
+
 division_template = {
 	name = "阿里乌斯标准步兵中队"		
 
@@ -82,6 +105,74 @@ division_template = {
 		engineer = { x = 0 y = 1}
 	}
 	
+}
+
+division_template = {
+	name = "圣徒会的投影" #古圣堂之战事件刷兵用 - fgvfgfs
+	regiments = { 
+		infantry_sp = { x = 0 y = 0 }
+		infantry_sp = { x = 0 y = 1 }
+		infantry_sp = { x = 0 y = 2 }
+		infantry_sp = { x = 0 y = 3 }
+		infantry_sp = { x = 0 y = 4 }
+		infantry_sp = { x = 1 y = 0 }
+		infantry_sp = { x = 1 y = 1 }
+		infantry_sp = { x = 1 y = 2 }
+		infantry_sp = { x = 1 y = 3 }
+		infantry_sp = { x = 1 y = 4 }
+		infantry_sp = { x = 2 y = 0 }
+		infantry_sp = { x = 2 y = 1 }
+	}
+	is_locked = yes
+}
+
+division_template = {
+	name = "阿里乌斯突袭特战部队" #古圣堂之战事件刷兵用 - fgvfgfs
+	regiments = { 
+		infantry_sf = { x = 0 y = 0 } #特战步兵
+		infantry_sf = { x = 0 y = 1 }
+		infantry_sf = { x = 0 y = 2 }
+		infantry_sf = { x = 0 y = 3 }
+		infantry_sf = { x = 0 y = 4 }
+		infantry_sf = { x = 1 y = 0 }
+		infantry_sf = { x = 1 y = 1 }
+		infantry_sf = { x = 1 y = 2 }
+		infantry_sf = { x = 1 y = 3 }
+		infantry_sf = { x = 1 y = 4 }
+		fire_support_team_la = { x = 2 y = 0 } #牵引式火炮
+		fire_support_team_la = { x = 2 y = 1 }
+		fire_support_team_ha = { x = 2 y = 2 } #反坦克火炮
+	}
+	is_locked = yes
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "阿里乌斯突袭后备部队" #古圣堂之战事件刷兵用 - fgvfgfs
+	regiments = { 
+		infantry = { x = 0 y = 0 } #普通步兵
+		infantry = { x = 0 y = 1 } #普通步兵
+		infantry = { x = 0 y = 2 } #普通步兵
+		infantry = { x = 0 y = 3 } #普通步兵
+		infantry = { x = 0 y = 4 } #普通步兵
+		infantry = { x = 1 y = 0 } #普通步兵
+		infantry = { x = 1 y = 1 } #普通步兵
+		infantry = { x = 1 y = 2 } #普通步兵
+		infantry_heavy = { x = 1 y = 3 } #重装步兵
+		infantry_heavy = { x = 1 y = 4 } #重装步兵
+		fire_support_team_la = { x = 2 y = 0 } #牵引式火炮
+		fire_support_team_la = { x = 2 y = 1 }
+		fire_support_team_ha = { x = 2 y = 2 } #反坦克火炮
+
+	}
+	is_locked = yes
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
 }
 
 units = {

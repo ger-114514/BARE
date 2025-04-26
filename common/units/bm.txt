@@ -1,6 +1,5 @@
 sub_units = { 
-	#主要机甲
-	light_bm_unit = {
+	light_bm_unit = { #!轻型机甲
 		abbreviation = "Lbm"
 		sprite = light_armor
 		map_icon_category = armored
@@ -12,7 +11,7 @@ sub_units = {
 			armor
 		}
 		
-		group = armor
+		group = JiJia #!机甲
 		
 		categories = {
 			category_bm
@@ -68,7 +67,7 @@ sub_units = {
 	}
 
 
-	medium_bm_unit = {
+	medium_bm_unit = { #!中型机甲
 		abbreviation = "Mbm"
 		sprite = "medium_armor"
 		map_icon_category = armored
@@ -80,7 +79,7 @@ sub_units = {
 			armor
 		}
 		
-		group = armor
+		group = JiJia #!机甲
 		
 		categories = {
 			category_bm
@@ -140,7 +139,7 @@ sub_units = {
 	}
 
 
-	heavy_bm_unit = {
+	heavy_bm_unit = { #!重型机甲
 		abbreviation = "Hbm"
 		sprite = heavy_armor
 		map_icon_category = armored
@@ -153,7 +152,7 @@ sub_units = {
 			armor
 		}
 		
-		group = armor
+		group = JiJia #!机甲
 		
 		categories = {
 			category_bm
@@ -220,7 +219,7 @@ sub_units = {
 	}
 
 
-	# super_heavy_bm_unit = {
+	# super_heavy_bm_unit = { #!超重型坦克机甲-废案
 	# 	abbreviation = "SHMU"
 	# 	sprite = heavy_armor
 	# 	map_icon_category = armored
@@ -232,7 +231,7 @@ sub_units = {
 	# 		armor
 	# 	}
 		
-	# 	group = armor
+	# 	group = JiJia #!机甲
 
 	# 	categories = {
 	# 		category_bm
@@ -300,7 +299,7 @@ sub_units = {
 	# 	}
 	# }
 	#AT
-	light_bm_tank_destroyer_unit = {
+	light_bm_tank_destroyer_unit = { #!轻型反坦克机甲
 		abbreviation = "LbmBTD"
 		sprite = "light_armor"
 		map_icon_category = armored
@@ -313,7 +312,7 @@ sub_units = {
 			anti_tank
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -367,7 +366,7 @@ sub_units = {
 		}
 	}
 	
-	medium_bm_tank_destroyer_unit = {
+	medium_bm_tank_destroyer_unit = { #!中型反坦克机甲
 		abbreviation = "MbmTD"
 		sprite = "medium_armor"
 		map_icon_category = armored
@@ -380,7 +379,7 @@ sub_units = {
 			anti_tank
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -439,7 +438,7 @@ sub_units = {
 		}
 	}
 	
-	heavy_bm_tank_destroyer_unit = {
+	heavy_bm_tank_destroyer_unit = { #!重型反坦克机甲
 		abbreviation = "HbmTD"
 		sprite = "heavy_armor"
 		map_icon_category = armored
@@ -453,7 +452,7 @@ sub_units = {
 			anti_tank
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -514,7 +513,7 @@ sub_units = {
 		}
 	}
 	
-	# super_heavy_bm_tank_destroyer_unit = {
+	# super_heavy_bm_tank_destroyer_unit = { #!超重型反坦克机甲-废案
 	# 	abbreviation = "SbmTD"
 	# 	sprite = "heavy_armor"
 	# 	map_icon_category = armored
@@ -527,7 +526,7 @@ sub_units = {
 	# 		anti_tank
 	# 	}
 
-	# 	group = armor_combat_support
+	# 	group = JiJia_ZhiYuan #!机甲支援
 		
 	# 	categories = {
 	# 		category_bm
@@ -588,7 +587,7 @@ sub_units = {
 	# }
 	#火炮
 
-	light_bm_sp_artillery_unit = {
+	light_bm_sp_artillery_unit = { #!轻型火炮机甲
 		abbreviation = "LbmAR"
 		sprite = light_armor
 		map_icon_category = armored
@@ -601,7 +600,7 @@ sub_units = {
 			artillery
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 
 		categories = {
 			category_bm
@@ -655,7 +654,7 @@ sub_units = {
 		}
 	}
 	
-	medium_bm_sp_artillery_unit = {
+	medium_bm_sp_artillery_unit = { #!中型火炮机甲
 		abbreviation = "MbmAR"
 		sprite = medium_armor
 		map_icon_category = armored
@@ -668,7 +667,7 @@ sub_units = {
 			artillery
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 
 		categories = {
 			category_bm
@@ -724,7 +723,7 @@ sub_units = {
 		}
 	}
 	
-	heavy_bm_sp_artillery_unit = {
+	heavy_bm_sp_artillery_unit = { #!重型火炮机甲
 		abbreviation = "HbmAR"
 		sprite = heavy_armor
 		map_icon_category = armored
@@ -738,7 +737,7 @@ sub_units = {
 			artillery
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -794,7 +793,7 @@ sub_units = {
 		}
 	}
 	
-	# super_heavy_bm_sp_artillery_unit = {
+	# super_heavy_bm_sp_artillery_unit = { #!超重型火炮机甲-废案
 	# 	abbreviation = "SAR"
 	# 	sprite = heavy_armor
 	# 	map_icon_category = armored
@@ -807,7 +806,7 @@ sub_units = {
 	# 		artillery
 	# 	}
 		
-	# 	group = armor
+	# 	group = JiJia_ZhiYuan #!机甲支援
 		
 	# 	categories = {
 	# 		category_bm
@@ -866,7 +865,7 @@ sub_units = {
 
 
 
-	light_bm_sp_anti_air_unit = {
+	light_bm_sp_anti_air_unit = { #!轻型防空机甲
 		abbreviation = "LbmAA"
 		sprite = light_armor
 		map_icon_category = armored
@@ -879,7 +878,7 @@ sub_units = {
 			anti_air
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -933,7 +932,7 @@ sub_units = {
 		}
 	}
 	
-	medium_bm_sp_anti_air_unit = {
+	medium_bm_sp_anti_air_unit = { #!中型防空机甲
 		abbreviation = "MAA"
 		sprite = medium_armor
 		map_icon_category = armored
@@ -946,7 +945,7 @@ sub_units = {
 			anti_air
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -1003,7 +1002,7 @@ sub_units = {
 		}
 	}
 	
-	heavy_bm_sp_anti_air_unit = {
+	heavy_bm_sp_anti_air_unit = { #!重型防空机甲
 		abbreviation = "HAA"
 		sprite = heavy_armor
 		map_icon_category = armored
@@ -1017,7 +1016,7 @@ sub_units = {
 			anti_air
 		}
 		
-		group = armor_combat_support
+		group = JiJia_ZhiYuan #!机甲支援
 		
 		categories = {
 			category_bm
@@ -1073,7 +1072,7 @@ sub_units = {
 		}
 	}
 	
-	# super_heavy_bm_sp_anti_air_unit = {
+	# super_heavy_bm_sp_anti_air_unit = { #!超重型防空机甲-废案
 	# 	abbreviation = "SAA"
 	# 	sprite = heavy_armor
 	# 	map_icon_category = armored
@@ -1086,7 +1085,7 @@ sub_units = {
 	# 		category_army
 	# 	}
 		
-	# 	group = armor
+	# 	group = JiJia_ZhiYuan #!机甲支援
 		
 	# 	type = {
 	# 		support

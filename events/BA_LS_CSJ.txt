@@ -1,0 +1,217 @@
+add_namespace = LS_GST
+
+country_event = {
+	id = LS_GST.1
+	title = LS_GST.1.t
+	desc = LS_GST.1.d
+	is_triggered_only = yes
+
+	timeout_days = 14
+
+	option = {
+		name = LS_GST.1.a
+		ai_chance = {
+			base = 114
+		}
+
+		if = {
+			#TRI_unity 圣三一团结度
+			limit = { 
+				ARI = {
+					check_variable = {
+						var = ARI_ZhunBeiDu #准备度
+						value = 49
+						compare = greater_than_or_equals #大于等于
+					}
+				}
+			}
+
+			TRI = {
+				declare_war_on = { #向指定国家宣战
+					target = GEH #被宣战国家TAG
+					type = topple_government #战争目标类型 - 颠覆政权
+				}
+
+				complete_national_focus = TRI_unexpected_accident 
+				load_focus_tree = { #加载国策树
+					tree = TRI_focus_stage_2
+					keep_completed = yes #保持已完成的共享国策
+					copy_completed_from = root #从当前国家复制国策完成状态
+				}
+			}
+
+			GEH = {
+				GEH_ako = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = { 
+							ideology = no_ideology_type
+							traits = {
+								#特质搜不到
+							}
+							expire = "-1.1.1.1"
+							id = -1
+						}
+					}
+				}
+			}
+		}
+
+		ARI = {
+			country_event = {
+				id = LS_GST.3
+				days = 3
+			}
+		}
+	}
+
+	immediate = {
+		launch_nuke = {
+			province = 5612
+		}
+		launch_nuke = {
+			province = 7663
+		}
+	}
+}
+
+country_event = {
+	id = LS_GST.2
+	title = LS_GST.2.t
+	desc = LS_GST.2.d
+	is_triggered_only = yes
+
+	timeout_days = 14
+
+	option = {
+		trigger = {
+			NOT = {
+				original_tag = ARI
+			}
+		}
+		name = LS_GST.2.a
+
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = LS_GST.3
+	title = LG_GST.3.t
+	desc = LS_GST.3.d
+	is_triggered_only = yes
+	timeout_days = 2
+
+	option = {
+		trigger = {
+			original_tag = ARI
+		}
+		name = LS_GST.3.a
+		
+		140 = {
+			transfer_state_to = ARI #转移控制者和拥有者给予指定TAG
+			add_dynamic_modifier = {
+				modifier = TRI_BeiAliWuSiTuXi
+			}
+		}
+
+		529 = {
+			transfer_state_to = ARI #转移控制者和拥有者给予指定TAG
+			add_dynamic_modifier = {
+				modifier = TRI_BeiAliWuSiTuXi
+			}
+		}
+
+		complete_national_focus = ARI_time_for_final_action #完成国策 - 行动时刻
+		create_faction = ARI_FACTION_NAME #创建阵营
+		#古圣堂获得48个阿里乌斯突袭特战部队 以及12个阿里乌斯突袭后备部队
+		140 = { #古圣堂位于140 已改 原138 -fgvfgfs
+			create_unit = {
+				division = "name = \"阿里乌斯突袭特战部队\" division_template = \"阿里乌斯突袭特战部队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 48
+				allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
+				divisional_commander_xp = 1000 #为战地指挥官分配经验
+			}
+
+			create_unit = {
+				division = "name = \"阿里乌斯突袭后备部队\" division_template = \"阿里乌斯突袭后备部队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 12
+				allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
+				divisional_commander_xp = 1000 #为战地指挥官分配经验
+			}
+
+			add_dynamic_modifier = { #被阿里乌斯突袭 -90%陆军进攻
+				modifier = TRI_BeiAliWuSiTuXi
+				scope = GEH
+			}
+
+			add_dynamic_modifier = {
+				modifier = TRI_BeiAliWuSiTuXi
+				scope = TRI
+			}
+		}
+
+		529 = { #古圣堂外围废墟
+			add_dynamic_modifier = {
+				modifier = TRI_BeiAliWuSiTuXi
+				scope = GEH
+			}
+
+			add_dynamic_modifier = {
+				modifier = TRI_BeiAliWuSiTuXi
+				scope = TRI
+			}
+		}
+
+		news_event = {
+			id = LS_GST.4
+			days = 7
+		}
+
+		declare_war_on = { #向指定国家宣战
+			target = GEH #被宣战国家TAG
+			type = annex_everything #战争目标类型 - 颠覆政权
+		}
+
+		declare_war_on = { #向指定国家宣战
+			target = TRI #被宣战国家TAG
+			type = annex_everything #战争目标类型 - 颠覆政权
+		}
+
+
+		ai_chance = {
+			base = 114
+		}
+	}
+}
+
+news_event = {
+	id = LS_GST.4
+	title = LG_GST.4.t
+	desc = LS_GST.4.d
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			NOT = {
+				original_tag = ARI
+				original_tag = GEH
+				original_tag = TRI
+			}
+		}
+		name = LS_GST.4.a
+	}
+
+	option = {
+		trigger = {
+			original_tag = ARI
+			original_tag = GEH
+			original_tag = TRI
+		}
+		name = LS_GST.4.b
+	}
+}

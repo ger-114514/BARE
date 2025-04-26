@@ -1,6 +1,6 @@
 sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更正，决定的不是名字而是类型
 #ng为市民部队
-	apc_unit = { 
+	apc_unit = { #!轮式步兵战车
 		abbreviation = "apc"
 		sprite = motorized
 		map_icon_category = infantry
@@ -13,7 +13,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 			motorized
 		}
 		
-		group = mobile
+		group = JiDong_BuBing #!机动步兵
 		
 		categories = {
 			category_front_line
@@ -76,7 +76,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 	}
 
 
-	apc_artillery_unit = {
+	apc_artillery_unit = { #!轮式火炮战车
 		abbreviation = "MRT"
 		sprite = artillery
 		map_icon_category = infantry
@@ -89,7 +89,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 			artillery
 		}
 
-		group = mobile_combat_support
+		group = JiDong_PaoBing #!机动炮兵
 		
 		categories = {
 			category_army
@@ -148,7 +148,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 		}
 	}
 
-	apc_at_unit = {
+	apc_at_unit = { #!轮式反坦克战车
 		abbreviation = "MAT"
 		sprite = anti_tank
 		map_icon_category = infantry
@@ -161,7 +161,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 			anti_tank
 		}
 		
-		group = mobile_combat_support
+		group = JiDong_PaoBing #!机动炮兵
 		
 		categories = {
 			category_front_line
@@ -222,7 +222,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 	}
 
 
-	apc_aa_unit = {
+	apc_aa_unit = { #!轮式防空战车
 		abbreviation = "MAA"
 		sprite = infantry
 		map_icon_category = infantry
@@ -235,7 +235,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 			anti_air
 		}
 		
-		group = mobile_combat_support
+		group = JiDong_PaoBing #!机动炮兵
 		
 		categories = {
 			category_army

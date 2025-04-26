@@ -1,8 +1,9 @@
 sub_units = {
 	####################################################
-	#学生#
+	#学生# 你猜注释谁写的 - fgvfgfs
+	#为了方面使用VSC进行查找 我特意在注释前面加了!
 	####################################################
-	infantry = {
+	infantry = { #!普通步兵
 		abbreviation = "INF"
 		sprite = infantry
 		map_icon_category = infantry
@@ -18,7 +19,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = {
 			
@@ -26,7 +27,7 @@ sub_units = {
 			category_light_infantry #轻步兵
 			category_all_infantry #所有步兵
 			category_army #陆军
-			category_normlly_infantry 
+			category_normlly_infantry #通用步兵
 		}
 		
 		combat_width = 2
@@ -51,7 +52,7 @@ sub_units = {
 	}
 
 
-	infantry_heavy = {
+	infantry_heavy = { #!重装步兵
 		abbreviation = "INF"
 		sprite = infantry
 		map_icon_category = infantry
@@ -67,7 +68,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = {
 			
@@ -106,7 +107,7 @@ sub_units = {
 
 	
 
-	infantry_sp = {
+	infantry_sp = { #!神秘步兵
 		abbreviation = "INFS"
 		sprite = infantry
 		map_icon_category = infantry
@@ -122,7 +123,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = {
 			category_front_line
@@ -155,7 +156,7 @@ sub_units = {
 
 
 
-	infantry_sp_bbl = {
+	infantry_sp_bbl = { #!圣女芭芭拉
 		abbreviation = "INFS"
 		sprite = infantry #兵模
 		map_icon_category = infantry #地图
@@ -171,7 +172,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry #分支
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = { #属于的类别，决定加成用
 			category_front_line
@@ -208,7 +209,7 @@ sub_units = {
 	}
 
 
-	infantry_sf = {
+	infantry_sf = { #!特战步兵
 		abbreviation = "INFSF"
 		sprite = infantry
 		map_icon_category = infantry
@@ -225,7 +226,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = {
 			category_front_line
@@ -295,7 +296,7 @@ sub_units = {
 		}
 	}
 
-	infantry_am = {
+	infantry_am = { #!自动机器步兵
 		abbreviation = "INFAM"
 		sprite = infantry
 		map_icon_category = infantry
@@ -311,7 +312,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = {
 			category_front_line
@@ -351,7 +352,7 @@ sub_units = {
 		}
 	}
 
-	infantry_militia = {
+	infantry_militia = { #!动员步兵
 		abbreviation = "INFAM"
 		sprite = infantry
 		map_icon_category = infantry
@@ -367,7 +368,7 @@ sub_units = {
 		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
 		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 		
-		group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
 		categories = {
 			category_front_line
@@ -407,54 +408,54 @@ sub_units = {
 		}
 	}
 
-	###“圣女”芭芭拉
-	# infantry_babala = {
-	# 	abbreviation = "INFBBL"
-	# 	sprite = infantry
-	# 	map_icon_category = infantry
+	###!“圣女”芭芭拉
+	infantry_babala = {
+		abbreviation = "INFBBL"
+		sprite = infantry
+		map_icon_category = infantry
 		
-	# 	priority = 600
-	# 	ai_priority = 200
-	# 	active = no
+		priority = 600
+		ai_priority = 200
+		active = no
 
-	# 	type = {
-	# 		infantry
-	# 	}
+		type = {
+			infantry
+		}
 		
-	# 	#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
-	# 	#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
+		#can_exfiltrate_from_coast = yes #Can this subunit board convoys from a non-port location. 
+		#Intended for use with special forces marine templates; all non-support subunits in the division must have this flag set to yes
 	
-	# 	group = infantry
+		group = TuBuBuBing #!徒步步兵
 		
-	# 	categories = {
-	# 		category_front_line
-	# 		category_light_infantry
-	# 		category_all_infantry
-	# 		category_army
-	# 		category_special_infantry
-	# 	}
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_infantry
+		}
 		
-	# 	combat_width = 5
+		combat_width = 5
 		
-	# 	#Size Definitions
-	# 	max_strength = 80
-	# 	max_organisation = 200
-	# 	default_morale = 1
-	# 	manpower = 10
+		#Size Definitions
+		max_strength = 80
+		max_organisation = 200
+		default_morale = 1
+		manpower = 10
 
-	# 	#Misc Abilities
-	# 	training_time = 270
-	# 	suppression = 5
-	# 	weight = 2
+		#Misc Abilities
+		training_time = 270
+		suppression = 5
+		weight = 2
 
-	# 	breakthrough = 1
-	# 	supply_consumption = 0.3
+		breakthrough = 1
+		supply_consumption = 0.3
 
 
-	# 	need = {
-	# 		special_infantry_equipment = 500
-	# 	}
-	# }
+		need = {
+			special_infantry_equipment = 500
+		}
+	}
 
 
 }
