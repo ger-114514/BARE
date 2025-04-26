@@ -748,24 +748,6 @@ country_event = { #尤斯蒂娜之影
 		}
     }
 }
-country_event = { #无解的谜题
-    id = TRI_events.302
-    title = TRI_events.302.t
-    desc = TRI_events.302.d
-    picture = GFX_TRI_events_pic
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-    option = {
-		name = TRI_events.302.a
-
-		ai_chance = {
-			base = 100
-		}
-    }
-}
 country_event = { #审讯记录1
     id = TRI_events.400
     title = TRI_events.400.t
