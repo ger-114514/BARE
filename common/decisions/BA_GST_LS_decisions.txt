@@ -5,6 +5,21 @@ GST_LS_ZZ_category = {
 		activation = {
 			has_war_with = GEH
 		}
+		available = {
+			OR = {
+				NOT = {
+					has_war_with = GEH
+				}
+				OR = {
+					GEH = {
+						surrender_progress > 0.35
+					}
+					TRI = {
+						surrender_progress > 0.35
+					}
+				}
+			}
+		}
 		is_good = no
 		cancel_trigger = {
 			OR = {
