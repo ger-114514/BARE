@@ -172,7 +172,7 @@ country_event = {
 		#古圣堂获得48个阿里乌斯突袭特战部队 以及12个阿里乌斯突袭后备部队
 		140 = { #古圣堂位于140 已改 原138 -fgvfgfs
 			create_unit = {
-				division = "name = \"圣徒会的投影\" division_template = \"阿里乌斯突袭特战部队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+				division = "name = \"圣徒会的投影\" division_template = \"圣徒会的投影\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 				owner = ROOT
 				count = 48
 				allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
@@ -329,7 +329,7 @@ country_event = {
 			}
 			140 = {
 				create_unit = {
-					division = "name = \"圣徒会的投影\" division_template = \"阿里乌斯突袭特战部队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					division = "name = \"圣徒会的投影\" division_template = \"圣徒会的投影\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
 					count = 48
 					allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
@@ -348,5 +348,18 @@ country_event = {
 	timeout_days = 7
 	option = {
 		name = LS_GST.7.a
+	}
+
+	immediate = {
+		for_each_loop = {
+			array = global.GST_JS_ZBH #为每个州执行效果
+			value = v
+
+			v = {
+				add_dynamic_modifier = {
+					modifier = test_manpower_modifier
+				}
+			}
+		}
 	}
 }

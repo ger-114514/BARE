@@ -1,0 +1,39 @@
+on_actions = {
+	on_startup = { #用于古圣堂之战的僵持事件
+		#翻译 古圣堂_僵持_州包含
+		effect = {
+			add_to_array = { global.GST_JS_ZBH = 529 }
+			add_to_array = { global.GST_JS_ZBH = 120 }
+			add_to_array = { global.GST_JS_ZBH = 349 }
+			add_to_array = { global.GST_JS_ZBH = 134 }
+			add_to_array = { global.GST_JS_ZBH = 133 }
+			add_to_array = { global.GST_JS_ZBH = 373 }
+			add_to_array = { global.GST_JS_ZBH = 130 }
+			add_to_array = { global.GST_JS_ZBH = 504 }
+			add_to_array = { global.GST_JS_ZBH = 131 }
+			add_to_array = { global.GST_JS_ZBH = 649 }
+			add_to_array = { global.GST_JS_ZBH = 129 }
+			add_to_array = { global.GST_JS_ZBH = 128 }
+			add_to_array = { global.GST_JS_ZBH = 127 }
+			add_to_array = { global.GST_JS_ZBH = 371 }
+			add_to_array = { global.GST_JS_ZBH = 369 }
+			add_to_array = { global.GST_JS_ZBH = 141 }
+			add_to_array = { global.GST_JS_ZBH = 650 }
+			add_to_array = { global.GST_JS_ZBH = 386 }
+			add_to_array = { global.GST_JS_ZBH = 191 }
+			add_to_array = { global.GST_JS_ZBH = 190 }
+			add_to_array = { global.GST_JS_ZBH = 229 }
+			add_to_array = { global.GST_JS_ZBH = 230 }
+			add_to_array = { global.GST_JS_ZBH = 231 }
+			add_to_array = { global.GST_JS_ZBH = 232 }
+			add_to_array = { global.GST_JS_ZBH = 383 }
+			add_to_array = { global.GST_JS_ZBH = 233 }
+			add_to_array = { global.GST_JS_ZBH = 389 }
+			add_to_array = { global.GST_JS_ZBH = 172 }
+			add_to_array = { global.GST_JS_ZBH = 169 }
+			add_to_array = { global.GST_JS_ZBH = 170 }
+			add_to_array = { global.GST_JS_ZBH = 171 }
+			add_to_array = { global.GST_JS_ZBH = 172 }
+		}
+	}
+}

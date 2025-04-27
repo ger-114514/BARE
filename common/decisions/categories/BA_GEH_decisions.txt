@@ -53,3 +53,21 @@ GEH_GST_LS_category = {
 	}
 	priority = 114514
 }
+
+#古圣堂之战临时触发任务类别 - fgvfgfs
+GST_LS_ZZ_category = {
+	icon = generic_research
+
+	visible_when_empty = yes
+	visible = {
+		AND = {
+			OR = {
+				original_tag = TRI
+				original_tag = ARI
+				original_tag = GEH
+			}
+			has_war = yes
+		}
+	}
+	priority = 114515
+}

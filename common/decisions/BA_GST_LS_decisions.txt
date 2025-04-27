@@ -1,0 +1,70 @@
+GST_LS_ZZ_category = {
+	GST_ZZ = {
+		icon = generic_research
+		priority = 10
+		activation = {
+			has_war_with = GEH
+		}
+		is_good = no
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					has_war_with = GEH
+				}
+				OR = {
+					GEH = {
+						surrender_progress > 0.35
+					}
+					TRI = {
+						surrender_progress > 0.35
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			ARI = {
+				dismantle_faction = yes
+			}
+			TRI = {
+				white_peace = {
+					tag = GEH
+					message = pec_bec
+				}
+				create_faction = FAN_ARI_ZHENXIAN
+				add_to_faction = GEH
+				if = {
+					limit = { 
+						has_global_flag = JiWoTuoSiFangWeiLianMeng_CunZai
+					}
+					set_faction_name = FAN_ARI_ZHENXIAN_GAI
+				}
+			}
+		}
+		days_mission_timeout = 35
+
+		timeout_effect = {
+			ARI = {
+				dismantle_faction = yes
+			}
+			TRI = { #检测是否与歌赫娜处于战争状态
+				if = {
+					limit = { 
+						has_war_with = GEH
+					}
+					white_peace = {
+						tag = GEH
+						message = pec_bec
+					}
+				}
+				create_faction = FAN_ARI_ZHENXIAN
+				add_to_faction = GEH
+				if = {
+					limit = { 
+						has_global_flag = JiWoTuoSiFangWeiLianMeng_CunZai
+					}
+					set_faction_name = FAN_ARI_ZHENXIAN_GAI
+				}
+			}
+		}
+	}
+}
