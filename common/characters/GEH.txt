@@ -1,5 +1,24 @@
 characters = {
 	###格黑娜GEH 开始###
+
+	GEH_JingJiZhuangTaiWeiYuanHui = {
+		name = GEH_JingJiZhuangTaiWeiYuanHui_name
+		portraits = {
+			civilian = {
+				large = GFX_leader_unknown
+				small = GFX_leader_unknown
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				GEH_FCCS_JingJiZhuangTaiWeiYuanHui
+			}
+			expire = "-1.1.1.1"
+			id = -1
+		}
+	}
+
 	GEH_hina = {
 		name = GEH_hina_name
 		portraits = {
@@ -190,7 +209,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_makoto = {
+	GEH_makoto = { #万魔殿 - 羽沼真琴
 		name = GEH_makoto_name
 		portraits = {
 			civilian = {
@@ -216,7 +235,12 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			traits = {
 				leader_of_gehena_ac
@@ -230,7 +254,12 @@ characters = {
 			traits = {old_guard inflexible_strategist media_personality thorough_planner
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			skill = 3
 			attack_skill = 1
@@ -239,7 +268,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_iroha = {
+	GEH_iroha = { #万魔殿 - 枣伊吕波
 		name = GEH_iroha_name
 		portraits = {
 			civilian = {
@@ -257,7 +286,12 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			traits = {
 				gehena_armored_general
@@ -280,7 +314,12 @@ characters = {
 				leisurely_manager
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -290,7 +329,12 @@ characters = {
 			traits = {armor_officer war_hero harsh_leader
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			skill = 2
 			attack_skill = 3
@@ -299,7 +343,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	GEH_ibuki = {
+	GEH_ibuki = { #万魔殿 - 丹花伊吹
 		name = GEH_ibuki_name
 		portraits = {
 			civilian = {
@@ -319,7 +363,12 @@ characters = {
 			traits = {media_personality armor_officer
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			skill = 1
 			attack_skill = 2
@@ -328,7 +377,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_satsuki = {
+	GEH_satsuki = { #万魔殿 - 陆八魔皋月
 		name = GEH_satsuki_name
 		portraits = {
 			civilian = {
@@ -340,7 +389,12 @@ characters = {
 			traits = {bearer_of_artillery 
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			skill = 1
 			attack_skill = 1

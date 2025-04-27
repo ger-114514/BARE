@@ -1,7 +1,7 @@
 
 characters={
     ###圣三一TRI 开始###
-    TRI_seia ={ 
+    TRI_seia ={ #茶话会 - 百合园圣娅
 		name=TRI_seia_name 
 		portraits={
 			civilian={
@@ -21,6 +21,14 @@ characters={
 			} 
 			traits = {
 				obscure_prophet
+			}
+			visible = {
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
 			}
 			#菲利乌斯派支持度+20%
        		#TODO：随机给予预言
@@ -44,6 +52,14 @@ characters={
         corps_commander = {
 			traits = {trait_cautious infantry_officer inflexible_strategist
 			}
+			visible = {
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
+			}
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -53,7 +69,7 @@ characters={
 
 	}
 
-    TRI_nagisa = { 
+    TRI_nagisa = { #茶话会 - 桐藤渚
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -72,6 +88,14 @@ characters={
         field_marshal = {
 			traits = {bearer_of_artillery brilliant_strategist
 			}
+			visible = {
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
+			}
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -80,7 +104,7 @@ characters={
 		}
 
 	}
-	TRI_missing_nagisa = { 
+	TRI_missing_nagisa = { #茶话会 - 桐藤渚(失踪)
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -98,7 +122,7 @@ characters={
 
 	}
 
-    TRI_mika ={ 
+    TRI_mika ={ #茶话会 - 圣园未花 
 		name=TRI_mika_name 
 		portraits={
 			civilian={
@@ -115,7 +139,15 @@ characters={
 			}
 			available = {
 				original_tag = TRI
-			} 
+			}
+			visible = {
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
+			}
 			traits = {
 				innocent_princess
 			}
@@ -139,6 +171,14 @@ characters={
 			traits = {trait_reckless war_hero fortress_buster infantry_officer
 			}
 			skill = 3
+			visible = {
+				NOT = {
+					AND = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
+			}
 			attack_skill = 4
 			defense_skill = 1
 			planning_skill = 1
