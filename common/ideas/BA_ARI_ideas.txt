@@ -407,11 +407,11 @@ ideas = {
 		#行动的混乱
 		ARI_eden_action_chaos = {
 			modifier = {
-				land_reinforce_rate = -0.01
-				army_org_factor = -0.15
-				army_org_regain = -0.15
-				army_attack_factor = -0.1
-				army_defence_factor = -0.1
+				land_reinforce_rate = -0.01 #增援率
+				army_org_factor = -0.15 #陆军组织度(百分比)
+				army_org_regain = -0.15 #陆军组织度恢复
+				army_attack_factor = -0.1 #陆军攻击修正
+				army_defence_factor = -0.1 #陆军防御修正
 			}
 		}
 
@@ -427,8 +427,8 @@ ideas = {
 		##被削弱的投影
 		ARI_eden_mystery_infantry_debuff_4 = {
 			modifier = {
-				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.2
-				modifier_army_sub_unit_category_special_infantry_defence_factor = -0.2
+				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.2 #神秘步兵攻击修正
+				modifier_army_sub_unit_category_special_infantry_defence_factor = -0.2 #神秘步兵防御修正
 			}
 		}
 

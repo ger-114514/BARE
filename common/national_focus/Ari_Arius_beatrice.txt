@@ -816,7 +816,7 @@ focus_tree = {
 			}
 			focus = { #数密术学术交流
 				id = ARI_Gematria_academic_exchange
-				icon = GFX_goal_ARI_Gematria_academic_exchange
+				#icon = GFX_goal_unknown
 				relative_position_id = ARI_Maesutoro
 				prerequisite = { focus = ARI_Maesutoro }
 				prerequisite = { focus = ARI_Gorukosoda }
@@ -831,7 +831,7 @@ focus_tree = {
 		#搞事部分
 			focus = { #暗区行动
 				id = ARI_operation_dark_zone
-				icon = GFX_goal_ARI_operation_dark_zone
+				#icon = 
 				cost = 3
 				relative_position_id = ARI_new_guide
 				prerequisite = { focus = ARI_new_guide }
@@ -890,7 +890,7 @@ focus_tree = {
 			}
 			focus = { #行动目标：格赫娜
 				id = ARI_Gehenna_operation
-				icon = GFX_goal_ARI_Gehenna_operation
+				# icon = GFX_goal_Trinity_operation
 				relative_position_id = ARI_Trinity_operation
 				prerequisite = { focus = ARI_Trinity_operation }
 				cost = 3
@@ -916,7 +916,7 @@ focus_tree = {
 			}
 			focus = { #格黑娜间谍
 				id = ARI_spies_in_Gehenna
-				icon = GFX_goal_ARI_spies_in_Gehenna
+				#icon = 
 				cost = 3
 				relative_position_id = ARI_Gehenna_operation
 				prerequisite = { focus = ARI_Gehenna_operation }
@@ -1065,7 +1065,7 @@ focus_tree = {
 
 			focus = { #圣三一行动的经验
 				id = ARI_experience_in_Trinity
-				icon = GFX_goal_ARI_experience_in_Trinity
+				#icon = GFX_goal_unknown
 				relative_position_id = ARI_collaborator_in_Trinity
 				prerequisite = { focus = ARI_collaborator_in_Trinity }
 				prerequisite = { focus = ARI_take_the_initiative }
@@ -1085,7 +1085,7 @@ focus_tree = {
 			}
 			focus = { #假旗行动
 				id = ARI_fake_flag_operation
-				icon = GFX_goal_ARI_fake_flag_operation
+				#icon = 
 				cost = 3
 				relative_position_id = ARI_experience_in_Trinity
 				prerequisite = { focus = ARI_secret_cooperation_with_Pandemonium }
