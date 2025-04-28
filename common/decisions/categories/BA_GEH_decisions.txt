@@ -63,10 +63,12 @@ GST_LS_ZZ_category = {
 		AND = {
 			OR = {
 				original_tag = TRI
-				original_tag = ARI
 				original_tag = GEH
 			}
-			has_war = yes
+			OR = {
+				has_war_with = GEH
+				has_war_with = TRI
+			}
 		}
 	}
 	priority = 114515

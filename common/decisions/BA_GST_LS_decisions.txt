@@ -2,9 +2,6 @@ GST_LS_ZZ_category = {
 	GST_ZZ = {
 		icon = generic_research
 		priority = 10
-		activation = {
-			has_war_with = GEH
-		}
 		available = {
 			OR = {
 				NOT = {
