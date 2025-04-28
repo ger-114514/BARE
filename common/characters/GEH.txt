@@ -1,7 +1,7 @@
 characters = {
 	###格黑娜GEH 开始###
 
-	GEH_JingJiZhuangTaiWeiYuanHui = {
+	GEH_JingJiZhuangTaiWeiYuanHui = { #歌赫娜紧急状态委员会
 		name = GEH_JingJiZhuangTaiWeiYuanHui_name
 		portraits = {
 			civilian = {
@@ -14,12 +14,12 @@ characters = {
 			traits = {
 				GEH_FCCS_JingJiZhuangTaiWeiYuanHui
 			}
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 	}
 
-	GEH_hina = {
+	GEH_hina = {#空崎日奈 - 风纪委
 		name = GEH_hina_name
 		portraits = {
 			civilian = {
@@ -32,7 +32,7 @@ characters = {
 			traits = {
 				leader_of_fukiinkai_cl
 			}
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 		advisor = {
@@ -45,7 +45,16 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			traits = {
 				leader_of_fukiinkai_ac
@@ -59,7 +68,16 @@ characters = {
 			traits = {expert_delegator politically_connected media_personality harsh_leader
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			skill = 3
 			attack_skill = 3
@@ -87,7 +105,16 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			traits = {
 				intelligence_supporter
@@ -107,7 +134,16 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			traits = {
 				left_hand_of_hina
@@ -119,7 +155,16 @@ characters = {
 		corps_commander = {
 			traits = {organizer skilled_staffer}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			skill = 2
 			attack_skill = 2
@@ -128,7 +173,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	GEH_iori = {
+	GEH_iori = {#银镜伊织 - 风纪委
 		name = GEH_iori_name
 		portraits = {
 			civilian = {
@@ -146,7 +191,16 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			traits = {
 				set_the_tune_with_three_firing
@@ -160,7 +214,16 @@ characters = {
 			traits = {harsh_leader infantry_officer trickster
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			skill = 2
 			attack_skill = 4
@@ -169,7 +232,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_chinatsu = {
+	GEH_chinatsu = {#火宫千夏 - 风纪委
 		name = GEH_chinatsu_name
 		portraits = {
 			civilian = {
@@ -187,7 +250,17 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					
+				}
 			}
 			traits = {
 				medicial_support_of_fukiinkai
@@ -200,7 +273,16 @@ characters = {
 		field_marshal = {
 			traits = {career_officer trait_cautious organizer}
 			visible = {
-				NOT = { has_country_flag = GEH_has_fall_in_chaos_in_arius_attack }
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
 			}
 			skill = 1
 			attack_skill = 1
@@ -222,7 +304,7 @@ characters = {
 			traits = {
 				leader_of_gehena_cl
 			}
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 		advisor = {
@@ -235,10 +317,15 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -251,13 +338,17 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = {old_guard inflexible_strategist media_personality thorough_planner
-			}
+			traits = {old_guard inflexible_strategist media_personality thorough_planner}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -286,10 +377,15 @@ characters = {
 				original_tag = GEH
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -314,10 +410,15 @@ characters = {
 				leisurely_manager
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -329,10 +430,15 @@ characters = {
 			traits = {armor_officer war_hero harsh_leader
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -356,17 +462,22 @@ characters = {
 			traits = {
 				mascot_of_gehena
 			}
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 		field_marshal = {
 			traits = {media_personality armor_officer
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -389,10 +500,15 @@ characters = {
 			traits = {bearer_of_artillery 
 			}
 			visible = {
-				NOT = {
-					AND = {
-						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
 				}
 			}
@@ -403,7 +519,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	GEH_aru = {
+	GEH_aru = {#陆八魔爱露 - 便利屋(非法组织)
 		name = GEH_aru_name
 		portraits = {
 			civilian = {
@@ -438,7 +554,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	GEH_mutsuki = {
+	GEH_mutsuki = {#浅黄睦月 - 便利屋(非法组织)
 		name = GEH_mutsuki_name
 		portraits = {
 			civilian = {
@@ -473,7 +589,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_kayoko = {
+	GEH_kayoko = {#鬼形佳代子 - 便利屋(非法组织)
 		name = GEH_kayoko_name
 		portraits = {
 			civilian = {
@@ -508,7 +624,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	GEH_haruka = {
+	GEH_haruka = {#伊草遥香 - 便利屋(非法组织)
 		name = GEH_haruka_name
 		portraits = {
 			civilian = {
@@ -542,7 +658,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_fuuka = {
+	GEH_fuuka = { #爱清枫香 - 食品部
 		name = GEH_fuuka_name
 		portraits = {
 			civilian = {
@@ -576,7 +692,7 @@ characters = {
 			logistics_skill = 5
 		}
 	}
-	GEH_juri = {
+	GEH_juri = { #牛牧朱莉 - 食品部
 		name = GEH_juri_name
 		portraits = {
 			civilian = {
@@ -610,7 +726,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	GEH_haruna = {
+	GEH_haruna = {#黑馆晴奈 - 美食"研究会"
 		name = GEH_haruna_name
 		portraits = {
 			civilian = {
@@ -644,7 +760,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	GEH_izumi = {
+	GEH_izumi = {#狮子堂泉 - 美食"研究会"
 		name = GEH_izumi_name
 		portraits = {
 			civilian = {
@@ -678,7 +794,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_junko = {
+	GEH_junko = {#赤司淳子 - 美食"研究会"
 		name = GEH_junko_name
 		portraits = {
 			civilian = {
@@ -712,7 +828,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	GEH_akari = {
+	GEH_akari = {#鳄渊明里 - 美食"研究会"
 		name = GEH_akari_name
 		portraits = {
 			civilian = {
@@ -746,7 +862,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_sena = {
+	GEH_sena = {#冰室濑名 - 急救医学部
 		name = GEH_sena_name
 		portraits = {
 			civilian = {
@@ -781,7 +897,7 @@ characters = {
 			logistics_skill = 3
 		}
 	}
-	GEH_megu = {
+	GEH_megu = {#下仓惠 - 忘了
 		name = GEH_megu_name
 		portraits = {
 			civilian = {
@@ -815,7 +931,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_kasumi = {
+	GEH_kasumi = {#霞 - 温泉开发部
 		name = GEH_kasumi_name
 		portraits = {
 			civilian = {
@@ -849,7 +965,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_erika = {
+	GEH_erika = {#旗舰绘里香 - 忘了
 		name = GEH_erika_name
 		portraits = {
 			civilian = {
@@ -867,7 +983,7 @@ characters = {
 			logistics_skill = 2
 		}
 	}
-	GEH_kirara = {
+	GEH_kirara = {#绮良 - 忘了
 		name = GEH_kirara_name
 		portraits = {
 			civilian = {

@@ -73,3 +73,21 @@ GST_LS_ZZ_category = {
 	}
 	priority = 114515
 }
+
+#古圣堂之战临时触发营救学生类别 - fgvfgfs
+GST_LS_HelpStu_category = {
+	icon = generic_research
+	visible_when_empty = yes
+	visible = {
+		AND = {
+			OR = {
+				original_tag = TRI
+				original_tag = GEH
+			}
+			any_character = {
+				has_character_flag = ARI_BeiBangJia
+			}
+		}
+	}
+	priority = 114513
+}

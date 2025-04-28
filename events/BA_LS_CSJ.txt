@@ -49,10 +49,16 @@ country_event = {
 					}
 				}
 			}
-
-			set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+			for_each_loop = {
+				array = global.ARI_ShouHaiZheMingDan_ER
+				value = v
+				var:v = {
+					set_character_flag = ARI_BeiBangJia
+				}
+			}
 
 			TRI = {
+				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
 				declare_war_on = { #向指定国家宣战
 					target = GEH #被宣战国家TAG
 					type = topple_government #战争目标类型 - 颠覆政权
@@ -66,8 +72,10 @@ country_event = {
 			}
 
 			GEH = {
-				GEH_ako = {
-					promote_leader = yes
+				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
+				promote_character = {
+					character = GEH_ako
+					ideology = no_ideology_type
 				}
 				add_dynamic_modifier = {
 					modifier = GEH_a_unpredictable_attack #措手不及
@@ -84,16 +92,40 @@ country_event = {
 					}
 				}
 			}
-			set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+
+			for_each_loop = {
+				array = global.ARI_ShouHaiZheMingDan_SAN
+				value = v
+				var:v = {
+					set_character_flag = ARI_BeiBangJia
+				}
+				log = "asdfasfaf"
+			}
+			
+			TRI = {
+				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				declare_war_on = { #向指定国家宣战
+					target = GEH #被宣战国家TAG
+					type = topple_government #战争目标类型 - 颠覆政权
+				}
+				complete_national_focus = TRI_unexpected_accident 
+				load_focus_tree = { #加载国策树
+					tree = TRI_focus_stage_2
+					keep_completed = yes #保持已完成的共享国策
+					copy_completed_from = root #从当前国家复制国策完成状态
+				}
+			}
 			GEH = {
+				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 				add_ideas = {
 					GEH_army_in_chaos
 				}
 				add_dynamic_modifier = {
 					modifier = GEH_a_unpredictable_attack
 				}
-				GEH_JingJiZhuangTaiWeiYuanHui = {
-					promote_leader = yes
+				promote_character = {
+					character = GEH_JingJiZhuangTaiWeiYuanHui
+					ideology = no_ideology_type
 				}
 			}
 		}
@@ -351,13 +383,15 @@ country_event = {
 	}
 
 	immediate = {
-		for_each_loop = {
-			array = global.GST_JS_ZBH #为每个州执行效果
-			value = v
-
-			v = {
-				add_dynamic_modifier = {
-					modifier = test_manpower_modifier
+		hidden_effect = {
+			for_each_loop = {
+				array = global.GST_JS_ZBH #为每个州执行效果
+				value = v
+	
+				var:v = {
+					add_dynamic_modifier = {
+						modifier = test_manpower_modifier
+					}
 				}
 			}
 		}
