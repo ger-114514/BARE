@@ -26,7 +26,7 @@ characters={
 				obscure_prophet
 			}
 			#菲利乌斯派支持度+20%
-       		#TODO：随机给予预言
+       		#随机给予预言
 			on_add = {
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = 0.2 }
