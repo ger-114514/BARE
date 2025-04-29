@@ -1,8 +1,9 @@
 ﻿l_simp_chinese:
  TRI_parliament_open_button_tt: "打开圣三一政治gui"
  TRI_parliament_decisions_categories: "议事聚焦"
- TRI_parliament_decisions_categories_desc: "即便是最默默无闻的学生也对当前学院内遭遇的重大事件持有其自身的看法。我们或许可以通过一些手段影响她们的立场——不可否认的是：想要达成我们的目的，我们就必须要团结尽可能多的人到我们的旗帜之下……\n\n当前焦点：[?TRI_parliament_focus.GetTokenLocalizedKey]"
+ TRI_parliament_decisions_categories_desc: "即便是最默默无闻的学生也对当前学院内遭遇的重大事件持有其自身的看法。我们或许可以通过一些手段影响她们的立场——不可否认的是：想要达成我们的目的，我们就必须要团结尽可能多的人到我们的旗帜之下……"
 
+ TRI_current_focus: "当前焦点：[?TRI_parliament_focus.GetTokenLocalizedKey]"
  TRI_parliament_senators_header: "§H上议院§!"
  TRI_parliament_senators_seats_desc: "§G支持§!：[?position_support@BA_TRI_senate_seat|Y0]"
  TRI_parliament_house_header: "§H下议院§!"
@@ -191,6 +192,8 @@
  TRI_bill_voting_decisions_categories_desc: "正在审议的法案：§Y[?TRI_debated_bill.GetTokenLocalizedKey]§!\n各派系对该法案的基础支持率：\n$BOP_hardliner$：[?hardliner_support@var:TRI_debated_bill|Y%0]\n$BOP_conservative$：[?conservative_support@var:TRI_debated_bill|Y%0]\n$BOP_moderate$：[?moderate_support@var:TRI_debated_bill|Y%0]\n\n上议院需要多于[?senate_needed_support@var:TRI_debated_bill|Y0]支持，当前[?bill_support@BA_TRI_senate_seat|Y0]\n下议院需要多于[?house_needed_support@var:TRI_debated_bill|Y0]支持，当前[?bill_support@BA_TRI_house_seat|Y0]"
  TRI_vote_for_the_bill: "审议法案中"
  TRI_parliament_adjourn: "议会休会中"
+ TRI_emergent_voting: "紧急召集议会"
+ TRI_emergent_voting_tt: "立刻结束议会休会期，允许再次递交法案"
  TRI_submit_Bill_of_carrot_cake: "递交“胡萝卜蛋糕”法案"
  TRI_submit_Bill_of_copper_olive: "递交“铜橄榄”法案"
  TRI_submit_Bill_of_disclosure: "递交开诚布公法案"

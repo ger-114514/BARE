@@ -195,6 +195,21 @@ TRI_bill_voting_decisions_categories = {
 			clr_country_flag = TRI_parliament_adjourn
 		}
 	}
+	TRI_emergent_voting = {
+		visible = {
+			has_country_flag = TRI_emergent_voting_available
+			has_active_mission = TRI_parliament_adjourn
+		}
+		available = {
+			has_active_mission = TRI_parliament_adjourn
+		}
+		cost = 100
+		days_remove = 3
+		remove_effect = {
+			custom_effect_tooltip = TRI_emergent_voting_tt
+			clr_country_flag = TRI_parliament_adjourn
+		}
+	}
 	skip_voting = {
 		visible = {
 			is_debug = yes

@@ -68,6 +68,29 @@ TRI_paranoia_system = {
 			}
 		}
 	}
+	TRI_empty_nest_operation = { #空巢行动
+		visible = {
+			has_country_flag = TRI_empty_nest_operation
+		}
+		available = {
+			command_power > 75
+			has_equipment = { infantry_equipment > 2999 }
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = yes
+		complete_effect = {
+			add_command_power = -75
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+			}
+		}
+		remove_effect = {
+			clr_country_flag = TRI_empty_nest_operation
+			country_event = TRI_coup.29
+		}
+	}
 	BA_TRI_forge_investigation_reports = { #伪造调查报告
 		priority = 5
 		icon = GFX_decision_eng_trade_unions_support

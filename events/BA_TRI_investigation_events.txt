@@ -17,6 +17,11 @@ country_event = { #正义实现委员会的精英？
 			localization_key = TRI_new_hoshubu_member_tt
 			NAME = TRI_koharu_name
 		}
+		hidden_effect = {
+			TRI_koharu = {
+				set_character_flag = TRI_character_arrested
+			}
+		}
 		ai_chance = {
 			factor = 100
 		}

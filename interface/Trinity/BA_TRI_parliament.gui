@@ -20,9 +20,18 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "TRI_politics_tab_focus"
+		instantTextBoxType = {
+			name = "TRI_current_focus"
+			position = { x = 150 y = 20 }
+			font = "hoi_30header"
+			text = "TRI_current_focus"
+			format = left
+			maxWidth = 500
+			maxHeight = 18
+		}
 		containerWindowType = {
 			name = "TRI_focus_senators_container"
-			position = { x = 0 y = 40 }
+			position = { x = 0 y = 60 }
 
 			instantTextBoxType = {
 				name = "BOP_senators_name"
@@ -49,7 +58,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "TRI_focus_house_container"
-			position = { x = 0 y = 165 }
+			position = { x = 0 y = 185 }
 			instantTextBoxType = {
 				name = "BOP_house_name"
 				position = { x = 0 y = 0 }

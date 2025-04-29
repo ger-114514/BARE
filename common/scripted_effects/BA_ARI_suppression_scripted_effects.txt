@@ -190,19 +190,28 @@ ARI_calculate_average_control = {
 			add_to_variable = { PREV.ARI_average_control = ARI_state_control }
 		}
 		divide_variable = { ARI_average_control = 7 }
-		remove_ideas = ARI_control_rank_1
-		remove_ideas = ARI_control_rank_2
-		remove_ideas = ARI_control_rank_3
+		if = {
+			limit = { has_idea = ARI_control_rank_1 }
+			remove_ideas = ARI_control_rank_1
+		}
+		else_if = {
+			limit = { has_idea = ARI_control_rank_2 }
+			remove_ideas = ARI_control_rank_2
+		}
+		else_if = {
+			limit = { has_idea = ARI_control_rank_3 }
+			remove_ideas = ARI_control_rank_3
+		}
 		if = {
 			limit = { check_variable = { ARI_average_control < 60 } }
-			add_ideas = ARI_control_rank_3
+			add_ideas = ARI_control_rank_1
 		}
 		else_if = {
 			limit = { check_variable = { ARI_average_control < 90 } }
 			add_ideas = ARI_control_rank_2
 		}
 		else = {
-			add_ideas = ARI_control_rank_1
+			add_ideas = ARI_control_rank_3
 		}
 	}
 }

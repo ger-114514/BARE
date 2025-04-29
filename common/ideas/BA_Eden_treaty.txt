@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+		Eden_treaty_research_cooperation = {
+			picture = unknown
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			cancel = {
+				NOT = {
+					has_global_flag = Eden_treaty_negotiation_ongoing
+				}
+			}
+		}
+		Eden_treaty_research_cooperation_2 = {
+			picture = unknown
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			cancel = {
+				NOT = {
+					has_global_flag = Eden_treaty_negotiation_ongoing
+				}
+			}
+		}
+	}
+	hidden_ideas = {
+		Eden_treaty_phase_opening = {}
+		Eden_treaty_phase_negotiating = {}
+		Eden_treaty_phase_agreement = {}
+	}
+}

@@ -1,0 +1,26 @@
+scripted_gui = {
+	#伊甸条约ui
+	Eden_treaty_negotiation_ui = {
+		context_type = decision_category
+		window_name = "Eden_treaty_negotiation_ui"
+		triggers = {
+			Eden_treaty_negotiation_TRI_victory_1_visible = {
+				check_variable = { global.Eden_treaty_negotiation_phase_leader^0 = TRI }
+			}
+			Eden_treaty_negotiation_TRI_victory_2_visible = {
+				check_variable = { global.Eden_treaty_negotiation_phase_leader^1 = TRI }
+			}
+			Eden_treaty_negotiation_GEH_victory_1_visible = {
+				check_variable = { global.Eden_treaty_negotiation_phase_leader^0 = GEH }
+			}
+			Eden_treaty_negotiation_GEH_victory_2_visible = {
+				check_variable = { global.Eden_treaty_negotiation_phase_leader^1 = GEH }
+			}
+		}
+		properties = {
+			Eden_treaty_negotiation_progress_bar = {
+				frame = global.Eden_treaty_progress
+			}
+		}
+	}
+}

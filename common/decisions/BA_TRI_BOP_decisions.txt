@@ -631,6 +631,7 @@ TRI_region_interaction_decisions_category = {
 		TRI_switch_tea_party_artillery_recruiting = {
 			visible = {
 				has_country_flag = TRI_standing_guard
+				check_variable = { TRI_tea_party_artillery_recruiting_use > 0 }
 			}
 			complete_effect = {
 				if = {

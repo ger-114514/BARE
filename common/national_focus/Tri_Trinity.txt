@@ -89,33 +89,16 @@ focus_tree = {
 			completion_reward = {
 				add_political_power = 50
 				#启用政治顾问：羽川莲见、鹫见芹奈
-				add_advisor_role = {
-					character = TRI_serina
-					activate = no
-					advisor = { 
-						slot = political_advisor
-						idea_token = TRI_serina_pa
-						traits = {
-							sweet_nurse
-						}
-						ai_will_do = {
-							base = 1
-						}
-					}
+				set_country_flag = TRI_restart_domestic_struggle
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_serina_name
+					JOB = political_advisor
 				}
-				add_advisor_role = {
-					character = TRI_hasumi
-					activate = no
-					advisor = { 
-						slot = army_chief
-						idea_token = TRI_hasumi_ac
-						traits = {
-							serious_vice_chairman
-						}
-						ai_will_do = {
-							base = 1
-						}
-					}
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_hasumi_name
+					JOB = army_chief
 				}
 				custom_effect_tooltip = TRI_restart_domestic_struggle_tt
 				#激活焦点抉择：《伊甸条约》的签订
@@ -425,7 +408,10 @@ focus_tree = {
 					TRI_paranoia_decrease_10 = yes
 					add_ideas = TRI_prepare_for_meeting
 					hidden_effect = {
-						country_event = TRI_events.50
+						if = {
+							limit = { NOT = { has_global_flag = BA_2st_eden_pact_begin } }
+							news_event = Eden_pact.1001
+						}
 					}
 				}			
 			}
@@ -928,7 +914,6 @@ focus_tree = {
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_unexpected_one }
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_daring_plan_meticulous_action }
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_lure_the_enemy }
-						add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
 						activate_shine_on_focus = TRI_silence
 						country_event = {
 							id = TRI_autofocus.1
@@ -1254,6 +1239,9 @@ focus_tree = {
 					if = {
 						limit = { has_country_flag = TRI_investigation_perfect_ending }
 						country_event = TRI_coup.30
+						TRI_unity_increase_10 = yes
+						set_temp_variable = { loyalty_change = 0.03 }
+						TRI_parliament_all_loyalty_change = yes
 					}
 					else = {
 						country_event = TRI_coup.5
@@ -1523,7 +1511,7 @@ focus_tree = {
 				add_to_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = -0.5 }
 				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
 				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
-				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
 				add_ideas = TRI_bouncing_back_idea
 			}
 		}
@@ -1620,7 +1608,7 @@ focus_tree = {
 				add_to_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = -0.25 }
 				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
 				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
-				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
 				add_ideas = TRI_making_the_best_use_idea
 			}			
 		}
@@ -1851,6 +1839,10 @@ focus_tree = {
 			x = 0
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
+			allow_branch = {
+				NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+				has_global_flag = Eden_treaty_negotiation_completed
+			}
 			select_effect = {
 				country_event = TRI_events.26
 				hidden_effect = {
@@ -1859,9 +1851,9 @@ focus_tree = {
 						days = 24
 					}
 				}
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
+				custom_effect_tooltip = TRI_dont_always_pick_political_focus
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
 					add_to_variable = {
@@ -2186,6 +2178,11 @@ focus_tree = {
 						add = entrusted_in_emergency_2
 					}
 				}
+				set_country_flag = TRI_emergent_voting_available
+				unlock_decision_tooltip = {
+					decision = TRI_emergent_voting
+					show_effect_tooltip = yes
+				}
 				set_temp_variable = { bill = token:TRI_Bill_of_emergent_motion }
 				TRI_submit_the_bill = yes
 				custom_effect_tooltip = eden_step_4_to_5_desc
@@ -2481,21 +2478,12 @@ focus_tree = {
 					category = land_doctrine
 				}
 				add_stability = -0.05
+				set_country_flag = TRI_cooperation_with_justice_club
 				#启用军事顾问：剑先鹤城
-				add_advisor_role = {
-					character = TRI_tsurugi
-					activate = no
-					advisor = { 
-						slot = army_chief
-						idea_token = TRI_tsurugi_ac
-						traits = {
-							screaming_death
-						}
-						cost = 100
-						ai_will_do = {
-							base = 1
-						}
-					}
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_tsurugi_name
+					JOB = army_chief
 				}
 				custom_effect_tooltip = TRI_cooperation_with_justice_club_tt
 				add_to_variable = { TRI_trinity_military_army_infantry_attack_factor = 0.1 }

@@ -336,9 +336,10 @@ focus_tree = {
         }
 
         completion_reward = {
-            #TODO：触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
-            country_event = {
-                id = GEH_dip_events.1000 #我不清楚能不能直接套用三一的，我抄了一遍
+            #触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
+            if = {
+                limit = { NOT = { has_global_flag = BA_2st_eden_pact_begin } }
+                news_event = Eden_pact.1001
             }
             add_ideas = GEH_ideas_prepare_for_conference_1
             add_ideas = GEH_ideas_conference_support_1
@@ -522,7 +523,16 @@ focus_tree = {
 
         allow_branch = {
             NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+            has_global_flag = Eden_treaty_negotiation_completed
         } 
+        select_effect = {
+            hidden_effect = {
+                news_event = {
+                    id = TRI_events.1002
+                    days = 24
+                }
+            }
+        }
         #隐藏国策树,配合mark_focus_tree_layout_dirty = yes 刷新国策树
         
         search_filters = { FOCUS_FILTER_POLITICAL }

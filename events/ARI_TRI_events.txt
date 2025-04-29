@@ -395,6 +395,31 @@ country_event = { #说者有心
     is_triggered_only = yes
     option = {
         name = TRI_coup.21.a
+        hidden_effect = {
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                        BA_TRI_can_purge_administration = no
+                    }
+                    TRI_purge_administration = yes
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        BA_TRI_can_purge_army = no
+                    }
+                    TRI_purge_army = yes
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        BA_TRI_can_purge_airforce = no
+                    }
+                    TRI_purge_airforce = yes
+                }
+            }
+        }
         country_event = TRI_coup.22
     }
 }
@@ -407,8 +432,8 @@ country_event = { #可疑的邀约
     is_triggered_only = yes
     option = {
         name = TRI_coup.22.a
-        #TODO:于【GUI：圣三一情报局】下添加一个决议任务：【取信之道】，该决议需要调查完补习部全部4名学生之后才可以激活，激活后持续7天，然后激活事件：【离巢】，通过选项对桐藤渚特质【追根溯源】追加效果：每周偏执度－2％并移除该决议。
-        #在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
+        #于【GUI：圣三一情报局】下添加一个决议任务：【取信之道】，该决议需要调查完补习部全部4名学生之后才可以激活，激活后持续7天，然后激活事件：【离巢】，通过选项对桐藤渚特质【追根溯源】追加效果：每周偏执度－2％并移除该决议。
+        #TODO:在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
         set_country_flag = TRI_the_way_to_get_trust
         unlock_decision_tooltip = {
             decision = TRI_the_way_to_get_trust
@@ -688,6 +713,15 @@ country_event = { #空巢行动
     is_triggered_only = yes
     option = {
         name = TRI_coup.29.a
+        add_war_support = 0.1
+        hidden_effect = {
+            add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
+            activate_shine_on_focus = TRI_desperate_fight
+            country_event = {
+                id = TRI_autofocus.1
+                days = 7
+            }
+        }
     }
 }
 country_event = { #暗处涌流
