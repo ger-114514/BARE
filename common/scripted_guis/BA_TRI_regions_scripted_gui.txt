@@ -18,7 +18,7 @@ scripted_gui = {
 							OR = {
 								NOT = { has_country_flag = TRI_politics_windows_opened } 
 								NOT = { check_variable = { TRI_politics_selected_tab^0 = token:TRI_politics_tab_regions } } 
-								NOT = { TRI_selected_region = PREV.var:state_region } 
+								NOT = { check_variable = { TRI_selected_region = state_region } } 
 							}
 						}
 						set_country_flag = TRI_politics_windows_opened

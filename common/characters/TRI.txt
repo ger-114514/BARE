@@ -28,6 +28,7 @@ characters={
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = 0.2 }
 				TRI_parliament_loyalty_change = yes
+				
 				set_country_flag = TRI_seia_prophecy
 			}
 			on_remove = {

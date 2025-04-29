@@ -59,7 +59,6 @@ tactic_artillery_13 = {
 		phase = no
 		OR = {
 			has_unit_type = engineer
-			has_unit_type = pioneer_support
 		}
 	}
 	
