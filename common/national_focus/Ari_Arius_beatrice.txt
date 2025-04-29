@@ -83,18 +83,18 @@ focus_tree = {
 	}
 
 }
-#第二阶段-夫人 需要1036天 游戏开始1127天
+#第二阶段-夫人
 focus_tree = {
 	id = Arius_stage_2_beatrice
 	country = {
 		factor = 0
 	}
 	default = no
-	#神秘研究部分
 	continuous_focus_position = {
 		x = 50
 		y = 3000
 	}
+	#神秘研究部分
 	###阶段1(RANK=1)
 		focus = { #力量之欲
 			id = ARI_desire_of_power
@@ -751,7 +751,6 @@ focus_tree = {
 					add_dynamic_modifier = {
 						modifier = ARI_Gematria_member
 					}
-					custom_effect_tooltip = ARI_Gematria_new_trade_tt
 					country_event = ARI_beatrice.7
 					hidden_effect = {
 						country_event = {
@@ -772,10 +771,7 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_ECO }
 				completion_reward = {
 					#开启数秘术交易面板
-					unlock_decision_tooltip = {
-						decision = ARI_black_suit_trade
-						show_effect_tooltip = yes
-					}
+					custom_effect_tooltip = ARI_Gematria_new_trade_tt
 				}
 			}
 			focus = { #巨匠的神秘造物
@@ -1774,6 +1770,9 @@ focus_tree = {
 				# 	}
 				# }
 			}
+			ai_will_do = {
+				base = 100
+			}
 		}
 		#维稳部分
 			focus = { #虚无永存
@@ -1794,6 +1793,9 @@ focus_tree = {
 					hidden_effect = {
 						ARI_initialize_suppression_system = yes
 					}
+				}
+				ai_will_do = {
+					base = 100
 				}
 			}
 			#复仇主义部分
@@ -1863,6 +1865,9 @@ focus_tree = {
 						add_command_power = 5
 						custom_effect_tooltip = ARI_suppress_resistance_tt
 					}
+					ai_will_do = {
+						base = 100
+					}
 				}
 				focus = { #贯彻夫人的意志
 					id = ARI_carry_out_the_will
@@ -1881,6 +1886,9 @@ focus_tree = {
 						every_owned_state = {
 							ARI_control_modifier_increase_2 = yes
 						}
+					}
+					ai_will_do = {
+						base = 100
 					}
 				}
 				focus = { #阿里乌斯信用体系
@@ -1918,6 +1926,9 @@ focus_tree = {
 						every_owned_state = {
 							ARI_guard_modifier_increase_2 = yes
 						}
+					}
+					ai_will_do = {
+						base = 100
 					}
 				}
 			#虚无主义部分

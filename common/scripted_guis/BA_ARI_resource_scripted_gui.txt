@@ -8,34 +8,12 @@ scripted_gui = {
 				add_to_variable = {
 					BARE_ARI_Resource_Want_Array^i = 6
 				}
-				clamp_variable = {
-					var = BARE_ARI_Resource_Want_Array^i
-					min = 0
-				}
-				set_variable = {
-					BARE_ARI_Resource_Cost_Array^i = BARE_ARI_Resource_Want_Array^i
-				}
-				multiply_variable = {
-					BARE_ARI_Resource_Cost_Array^i  = 2
-				}
-
-
 				BA_ARI_Resourc_Item_Cost_Count = yes
 			}
 
 			BA_ARI_Resourc_Item_sub_click = {
 				add_to_variable = {
 					BARE_ARI_Resource_Want_Array^i = -6
-				}
-				clamp_variable = {
-					var = BARE_ARI_Resource_Want_Array^i
-					min = 0
-				}
-				set_variable = {
-					BARE_ARI_Resource_Cost_Array^i = BARE_ARI_Resource_Want_Array^i
-				}
-				multiply_variable = {
-					BARE_ARI_Resource_Cost_Array^i  = 2
 				}
 				BA_ARI_Resourc_Item_Cost_Count = yes
 			}

@@ -1,0 +1,57 @@
+ARI_historical_plan = {
+	name = "Arius Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ARI
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no 
+	}
+
+	ai_national_focuses = {
+		ARI_iron_curtain_of_beatrice
+		ARI_the_enslaved
+		ARI_special_team
+		ARI_the_death_of_hope
+
+		ARI_meeting_with_supervisor
+		ARI_Nihilism_forever
+		ARI_arrest_rebels
+		ARI_identity_system
+		ARI_carry_out_the_will
+
+		ARI_deal_with_shortage
+		ARI_restructure_teams
+		ARI_armed_students
+
+		ARI_desire_of_power
+		ARI_new_guide
+		ARI_operation_dark_zone
+
+
+
+
+
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+	}
+
+}

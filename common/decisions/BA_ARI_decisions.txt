@@ -19,20 +19,79 @@ ARI_suppression_decisions = {
 				every_owned_state = {
 					limit = { NOT = { has_state_flag = ARI_state_absolutely_controlled } }
 					set_temp_variable = { control_change_value = ARI_weekly_control_modifier }
-					if = {
-						limit = { check_variable = { ARI_state_guard_rank > 2 } }
-						add_to_temp_variable = { control_change_value = 2 }
-					}
 					ARI_change_control = yes
 					set_temp_variable = { guard_change_value = ARI_weekly_guard_modifier }
 					ARI_change_guard = yes
 				}
 				activate_mission = ARI_state_weekly_modifier
 			}
-			
+		}
+		days_mission_timeout = 7
+	}
+	ARI_select_target_state_AI = { #给AI用的选地区决议
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+			}
+		}
+		visible = {
+			is_ai = yes
+			NOT = {
+				OR = {
+					has_country_flag = ARI_select_target_state_AI_CD
+					check_variable = { ARI_map_selected_state = FROM }
+					FROM = { has_state_flag = ARI_state_absolutely_controlled }
+				}
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				has_state_flag = ARI_state_absolutely_controlled
+			}
+		}
+		available = {
+			NOT = { has_country_flag = ARI_select_target_state_AI_CD }
+		}
+		days_remove = 5
+		complete_effect = {
+			set_country_flag = ARI_select_target_state_AI_CD
+			set_variable = { ARI_map_selected_state = FROM }
+		}
+		remove_effect = {
+			clr_country_flag = ARI_select_target_state_AI_CD
+		}
+		cancel_effect = {
+			clr_country_flag = ARI_select_target_state_AI_CD
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 5
+				FROM = { check_variable = { ARI_state_guard_rank = 1 } }
+			}
+			modifier = {
+				add = 4
+				FROM = { check_variable = { ARI_state_guard_rank = 2 } }
+			}
+			modifier = {
+				add = 3
+				FROM = { check_variable = { ARI_state_guard_rank = 3 } }
+			}
+			modifier = {
+				add = 4
+				FROM = { check_variable = { ARI_state_control_rank = 3 } }
+			}
+			modifier = {
+				add = 3
+				FROM = { check_variable = { ARI_state_control_rank = 2 } }
+			}
+			modifier = {
+				add = 1 
+				FROM = { check_variable = { ARI_state_control_rank = 1 } }
+			}
 		}
 		
-		days_mission_timeout = 7
 	}
 	ARI_collect_intelligence = { #收集地区情报
 		visible = {
@@ -57,6 +116,33 @@ ARI_suppression_decisions = {
 			}
 			custom_effect_tooltip = ARI_state_decision_cd_20d
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 4 }
+				}
+			}
+			modifier = {
+				add = 2
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 3 }
+				}
+			}
+			modifier = {
+				add = 3
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 2 }
+				}
+			}
+			modifier = {
+				add = 5
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 1 }
+				}
+			}
+		}
 	}
 	ARI_sweep_state = { #地区扫荡
 		visible = {
@@ -73,6 +159,7 @@ ARI_suppression_decisions = {
 				}
 			}
 			has_equipment = { infantry_equipment > 29 }
+			has_manpower > 99
 			has_completed_focus = ARI_arrest_rebels
 		}
 		cost = 20
@@ -88,6 +175,45 @@ ARI_suppression_decisions = {
 			}
 			add_manpower = -100
 			custom_effect_tooltip = ARI_state_decision_cd_10d
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				add = 1
+				has_political_power > 100
+			}
+			modifier = {
+				add = 1
+				has_manpower > 2000
+			}
+			modifier = {
+				add = 1
+				has_equipment = { infantry_equipment > 600 }
+			}
+			modifier = {
+				factor = 0
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_control = 100 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 3 }
+				}
+			}
+			modifier = {
+				add = 1
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 2 }
+				}
+			}
+			modifier = {
+				add = 3
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 1 }
+				}
+			}
 		}
 	}
 	ARI_dispatch_special_team = { #特战小队清剿
@@ -105,6 +231,7 @@ ARI_suppression_decisions = {
 				}
 			}
 			has_equipment = { infantry_equipment > 49 }
+			has_manpower > 199
 		}
 		cost = 10
 		complete_effect = {
@@ -118,6 +245,45 @@ ARI_suppression_decisions = {
 			}
 			add_manpower = -200
 			custom_effect_tooltip = ARI_state_decision_cd_20d
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				add = 1
+				has_political_power > 100
+			}
+			modifier = {
+				add = 1
+				has_manpower > 4000
+			}
+			modifier = {
+				add = 1
+				has_equipment = { infantry_equipment > 2500 }
+			}
+			modifier = {
+				factor = 0
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_control = 100 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 3 }
+				}
+			}
+			modifier = {
+				add = 1
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 2 }
+				}
+			}
+			modifier = {
+				add = 3
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 1 }
+				}
+			}
 		}
 	}
 	ARI_monitor_system = { #严密监控体系
@@ -146,6 +312,31 @@ ARI_suppression_decisions = {
 			add_manpower = -200
 			custom_effect_tooltip = ARI_state_decision_cd_30d
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				add = 2
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 0
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 4 }
+				}
+			}
+			modifier = {
+				add = 2
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 3 }
+				}
+			}
+			modifier = {
+				add = 5
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 2 }
+				}
+			}
+		}
 	}
 	ARI_direct_manage = { #夫人直接管理
 		visible = {
@@ -159,6 +350,13 @@ ARI_suppression_decisions = {
 		}
 		available = {
 			has_completed_focus = ARI_arrest_rebels
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				var:ARI_map_selected_state = {
+					has_state_flag = ARI_state_absolutely_controlled
+				}
+			}
 		}
 		cost = 40
 		days_remove = 50
@@ -177,6 +375,49 @@ ARI_suppression_decisions = {
 			clear_variable = ARI_direct_manage_target
 			custom_effect_tooltip = ARI_state_decision_only_once
 		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				add = 2
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 0
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 4 }
+				}
+			}
+			modifier = {
+				add = 2
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 3 }
+				}
+			}
+			modifier = {
+				add = 5
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_guard_rank = 2 }
+				}
+			}
+			modifier = {
+				factor = 0
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_control_rank = 3 }
+				}
+			}
+			modifier = {
+				add = 2
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_control_rank = 2 }
+				}
+			}
+			modifier = {
+				add = 5
+				var:ARI_map_selected_state = {
+					check_variable = { ARI_state_control_rank = 1 }
+				}
+			}
+		}
 	}
 	ARI_complete_suppression_task = { #确立绝对掌控
 		priority = 1000
@@ -194,42 +435,7 @@ ARI_suppression_decisions = {
 			base = 1000
 		}
 	}
-
 }
-# ARI_outside_recon = {
-# 	ARI_outside_recon = { #勘探外界
-# 		available = {
-# 			has_equipment = { infantry_equipment > 499 }
-# 			has_manpower > 999
-# 			num_of_available_civilian_factories > 0
-# 			has_completed_focus = ARI_new_guide
-# 		}
-# 		fire_only_once = yes
-# 		days_remove = 35
-# 		modifier = {
-# 			civilian_factory_use = 1
-# 		}
-# 		complete_effect = {
-# 			add_manpower = -1000
-# 			add_equipment_to_stockpile = {
-# 				type = infantry_equipment
-# 				amount = -500
-# 			}
-# 		}
-# 		remove_effect = {
-# 			add_political_power = 25
-# 			add_equipment_to_stockpile = {
-# 				type = infantry_equipment
-# 				amount = 400
-# 			}
-# 			army_experience = 15
-# 			set_country_flag = ARI_outside_recon_fired
-# 		}
-# 		ai_will_do = {
-# 			factor = 1000
-# 		}
-# 	}
-# }
 # ARI_mystic_research_decisions = {
 # 	ARI_research_royal_blood = { #皇室血脉研究
 # 		days_remove = 60
@@ -255,22 +461,507 @@ ARI_suppression_decisions = {
 # }
 ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 	#黑服的资源交易
-	ARI_black_suit_trade = {
+	ARI_black_suit_trade_fe_add = {
 		visible = {
+			is_ai = yes
 		}
 		available = {
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = ARI_has_materials
-					AMOUNT = "10"
-				}
-				check_variable = { ARI_materials > 9 }
+			check_variable = {
+				ARI_materials > BARE_ARI_Resource_Cost_all
 			}
 			has_completed_focus = ARI_black_suit
 		}
-		days_re_enable = 30
 		complete_effect = {
-			#
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^0 = 6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_fe
+					amount < 0
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_fe_sub = {
+		visible = {
+			is_ai = yes
+			check_variable = { BARE_ARI_Resource_Want_Array^0 > 0 }
+		}
+		available = {
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^0 = -6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				add = 60
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_fe
+					amount > 5
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_ec_add = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			check_variable = {
+				ARI_materials > BARE_ARI_Resource_Cost_all
+			}
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^1 = 6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_ec
+					amount < 0
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_ec_sub = {
+		visible = {
+			is_ai = yes
+			check_variable = { BARE_ARI_Resource_Want_Array^1 > 0 }
+		}
+		available = {
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^1 = -6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				add = 60
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_ec
+					amount > 5
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_pm_add = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			check_variable = {
+				ARI_materials > BARE_ARI_Resource_Cost_all
+			}
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^2 = 6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_pm
+					amount < 0
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_pm_sub = {
+		visible = {
+			is_ai = yes
+			check_variable = { BARE_ARI_Resource_Want_Array^2 > 0 }
+		}
+		available = {
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^2 = -6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				add = 60
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_pm
+					amount > 5
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_rm_add = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			check_variable = {
+				ARI_materials > BARE_ARI_Resource_Cost_all
+			}
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^3 = 6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_rm
+					amount < 0
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_rm_sub = {
+		visible = {
+			is_ai = yes
+			check_variable = { BARE_ARI_Resource_Want_Array^3 > 0 }
+		}
+		available = {
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^3 = -6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				add = 60
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_rm
+					amount > 5
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_cm_add = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			check_variable = {
+				ARI_materials > BARE_ARI_Resource_Cost_all
+			}
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^4 = 6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_cm
+					amount < 0
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_cm_sub = {
+		visible = {
+			is_ai = yes
+			check_variable = { BARE_ARI_Resource_Want_Array^4 > 0 }
+		}
+		available = {
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^4 = -6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				add = 60
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_cm
+					amount > 5
+					buildings = yes
+					extracted = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_mm_add = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			check_variable = {
+				ARI_materials > BARE_ARI_Resource_Cost_all
+			}
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^5 = 6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_mm
+					amount < 0
+					buildings = yes
+				}
+			}
+		}
+	}
+	ARI_black_suit_trade_mm_sub = {
+		visible = {
+			is_ai = yes
+			check_variable = { BARE_ARI_Resource_Want_Array^5 > 0 }
+		}
+		available = {
+			has_completed_focus = ARI_black_suit
+		}
+		complete_effect = {
+			add_to_variable = {
+				BARE_ARI_Resource_Want_Array^5 = -6
+			}
+			BA_ARI_Resourc_Item_Cost_Count = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 100 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				add = 60
+				check_variable = {
+					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+				}
+			}
+			modifier = {
+				add = 100
+				has_resources_in_country = {
+					resource = resources_mm
+					amount > 5
+					buildings = yes
+					extracted = yes
+				}
+			}
 		}
 	}
 	#巨匠的神秘造物
@@ -415,9 +1106,9 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 ARI_foreign_operations_decisions = {
 	ARI_outside_recon = { #勘探外界
 		available = {
-			has_equipment = { infantry_equipment > 499 }
+			has_equipment = { infantry_equipment > 99 }
 			has_manpower > 999
-			num_of_available_civilian_factories > 0
+			num_of_civilian_factories_available_for_projects > 0
 			has_completed_focus = ARI_new_guide
 		}
 		fire_only_once = yes
@@ -453,7 +1144,7 @@ ARI_foreign_operations_decisions = {
 			set_country_flag = ARI_outside_recon_fired
 		}
 		ai_will_do = {
-			factor = 1000
+			base = 1000
 		}
 	}
 	ARI_explore_ruins = { #探索废墟
@@ -491,6 +1182,33 @@ ARI_foreign_operations_decisions = {
 				set_country_flag = ARI_explore_ruins_fired
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials > 750 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { ARI_materials > 1500 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 10000
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 5000 }
+			}
+		}
 	}
 	ARI_stronghold_on_the_ground = { #建立地面据点
 		visible = {
@@ -520,6 +1238,25 @@ ARI_foreign_operations_decisions = {
 			set_temp_variable = { material_monthly_modifier_change = 30 }
 			ARI_change_materials_monthly_modifier = yes
 		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 300 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials_monthly_modifier < 300 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 4500 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { support_equipment < 300 }
+			}
+		}
 	}
 	ARI_intelligence_Trinity_branch = { #建立圣三一分部
 		visible = {
@@ -548,6 +1285,9 @@ ARI_foreign_operations_decisions = {
 			add_ideas = ARI_intelligence_in_TRI_0
 			set_country_flag = ARI_intelligence_Trinity_branch_established
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	ARI_intelligence_Gehenna_branch = { #建立格赫娜分部
 		visible = {
@@ -575,6 +1315,9 @@ ARI_foreign_operations_decisions = {
 			set_variable = { ARI_min_intelligence_in_GEH = 0 }
 			add_ideas = ARI_intelligence_in_GEH_0
 			set_country_flag = ARI_intelligence_Gehenna_branch_established
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 	ARI_spread_rumours_TRI = { #散布不实谣言（圣三一）
@@ -1569,6 +2312,9 @@ ARI_deal_with_shortage_decisions = {
 			add_to_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = 0.1 }
 			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	ARI_emergency_allocation = { #紧急配给政策
 		cost = 25
@@ -1585,6 +2331,9 @@ ARI_deal_with_shortage_decisions = {
 			add_to_variable = { ARI_broken_provisioning_system_stability_factor = 0.05 }
 			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
 			add_to_variable = { ARI_broken_provisioning_system_conscription_factor = 0.1 }
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 	ARI_earn_Trinity_supply = { #争取更多圣三一补给
@@ -1613,6 +2362,9 @@ ARI_deal_with_shortage_decisions = {
 			add_to_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = 0.05 }
 			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
 			add_to_variable = { ARI_broken_provisioning_system_conscription_factor = 0.05 }
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 }

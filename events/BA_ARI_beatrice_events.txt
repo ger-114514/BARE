@@ -306,7 +306,7 @@ country_event = {
             ARI_initialize_suppression_system = yes
             531 = {
                 ARI_control_decrease_30 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed
+                set_state_flag = ARI_state_can_be_suppressed
             }
             country_event = {
                 id = ARI_beatrice_revolt.2
@@ -372,13 +372,13 @@ country_event = {
                 set_temp_variable = { control_change_value = -40 }
 	            ARI_change_control = yes
                 ARI_control_modifier_decrease_2 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed
+                set_state_flag = ARI_state_can_be_suppressed
             }
             138 = {
                 set_temp_variable = { control_change_value = -40 }
 	            ARI_change_control = yes
                 ARI_control_modifier_decrease_2 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed
+                set_state_flag = ARI_state_can_be_suppressed
             }
             country_event = {
                 id = ARI_beatrice_revolt.4
@@ -416,11 +416,11 @@ country_event = {
         hidden_effect = {
             139 = {
                 ARI_control_decrease_30 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed
+                set_state_flag = ARI_state_can_be_suppressed
             }
             530 = {
                 ARI_control_decrease_30 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed
+                set_state_flag = ARI_state_can_be_suppressed
             }
             532 = {
                 ARI_control_decrease_30 = yes
@@ -462,11 +462,11 @@ country_event = {
         hidden_effect = {
             137 = { 
                 ARI_control_decrease_20 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed 
+                set_state_flag = ARI_state_can_be_suppressed 
             }
             532 = { 
                 ARI_control_decrease_20 = yes
-                clr_state_flag = ARI_state_cannot_be_suppressed
+                set_state_flag = ARI_state_can_be_suppressed
             }
         }
     }

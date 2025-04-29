@@ -31,7 +31,6 @@ ARI_initialize_suppression_system = { #初始化
 		set_variable = { ARI_state_button_frame = ARI_state_control_rank }
 		set_variable = { ARI_weekly_guard_modifier = 0 }
 		set_variable = { ARI_state_guard = 20 }
-		set_state_flag = ARI_state_cannot_be_suppressed
 	}
 	set_variable = { ARI_map_selected_state = 136 }
 	set_variable = { ARI_suppression_map_mode_control = 2 }
