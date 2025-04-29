@@ -4,11 +4,14 @@ state={
 	provinces={
 		32 1279 4405 7399 11157 11140
 	}
+	resources = {
+		resources_fe = 30
+	}
 	history = {
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 2
-			arms_factory = 1
+			synthetic_refinery = 3
 		}
 		owner = SHA
 		add_core_of=SHA

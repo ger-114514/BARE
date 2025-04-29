@@ -1,19 +1,20 @@
 state={
-	id=501
-	name="STATE_501"
+	id=656
+	name="STATE_656"
 	provinces={
-		105 318 2065 2474 4428 5402 6050 6223 7126 
+		161 1215 1501 2364 2790 5313 5888 6173 11007 11065 11082 
 	}
 	history = {
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
 		}
 		owner = A42
 		add_core_of=A42
-		victory_points = {6050 5}
     }
-	manpower=12530
+	manpower=14300
 	state_category = city
+
+	
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

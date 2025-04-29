@@ -2,6 +2,7 @@ state={
 	id=139
 	name="STATE_139"
 	resources={
+		resources_cm = 20
 	}
 	provinces={
 		1718 2820 6623 11052 
@@ -11,6 +12,7 @@ state={
 			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 3
+			rare_metal_processing_plant = 2
 		}
 		owner = ARI
 		add_core_of=ARI

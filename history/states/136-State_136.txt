@@ -5,15 +5,15 @@ state={
 		3564 3983 4221 4839 9094 11036 
 	}
 	resources = {
-		resources_rm =10
-		resources_mm = 2
+		resources_rm = 10
+		resources_mm = 8
 	}
 	history={
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			industrial_complex = 2
 			anti_air_building = 3
-            heavy_arms_factory = 2
+            metal_processing_plant = 2
 		}
 		owner = ARI
 		add_core_of=ARI

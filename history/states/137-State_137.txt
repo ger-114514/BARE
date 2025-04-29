@@ -6,9 +6,10 @@ state={
 	}
 	history={
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 3
+			industrial_complex = 2
 			arms_factory = 2
+			metal_processing_plant = 2
 			anti_air_building = 3
 		}
 		owner = ARI

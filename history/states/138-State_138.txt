@@ -5,15 +5,14 @@ state={
 		1449 5905 11035 
 	}
 	resources = {
-		resources_cm = 10
+		resources_rm = 10
 	}
 	history={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 3
-			heavy_arms_factory = 1
-			opaz_power_station = 1
+			opatz_synthesis_center = 2
 			anti_air_building = 4
 		}
 		owner = ARI
