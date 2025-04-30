@@ -1205,8 +1205,16 @@ ARI_foreign_operations_decisions = {
 				has_manpower < 10000
 			}
 			modifier = {
+				factor = 2.5
+				has_manpower > 100000
+			}
+			modifier = {
 				factor = 0.5
 				has_equipment = { infantry_equipment < 5000 }
+			}
+			modifier = {
+				factor = 2.5 
+				has_equipment = { infantry_equipment > 20000 }
 			}
 		}
 	}
@@ -1239,7 +1247,7 @@ ARI_foreign_operations_decisions = {
 			ARI_change_materials_monthly_modifier = yes
 		}
 		ai_will_do = {
-			base = 2
+			base = 5
 			modifier = {
 				factor = 0.8
 				check_variable = { ARI_materials < 300 }
@@ -1255,6 +1263,14 @@ ARI_foreign_operations_decisions = {
 			modifier = {
 				factor = 0.5
 				has_equipment = { support_equipment < 300 }
+			}
+			modifier = {
+				factor = 1.5
+				has_equipment = { infantry_equipment > 10000 }
+			}
+			modifier = {
+				factor = 1.5
+				has_equipment = { support_equipment > 1000 }
 			}
 		}
 	}
@@ -1372,6 +1388,25 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials > 400 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+		}
 	}
 	ARI_spread_rumours_GEH = { #散布不实谣言（格赫娜）
 		highlight_states = {
@@ -1422,6 +1457,33 @@ ARI_foreign_operations_decisions = {
 					ARI_change_materials = yes
 					country_event = ARI_action.14
 				}
+			}
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials > 400 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2 
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 90 }
 			}
 		}
 	}
@@ -1497,6 +1559,41 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 600 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 6000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 5000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 10000 }
+			}
+		}
 	}
 	ARI_attack_Trinity_facilities = { #攻击圣三一设施
 		highlight_states = {
@@ -1563,6 +1660,41 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 6000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { support_equipment < 300 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 5000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 10000 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { support_equipment > 1000 }
+			}
+		}
 	}
 	ARI_connect_with_mika = { #与未花的接触
 		highlight_states = {
@@ -1596,6 +1728,33 @@ ARI_foreign_operations_decisions = {
 			ARI_traveller_operation_prepare_progress_update_effect = yes
 			ARI_change_intelligence_in_TRI = yes
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 600 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_revenge_progress < 40 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_revenge_progress < 60 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+		}
 	}
 	ARI_Trinity_intelligence_net = { #加强圣三一情报网络
 		visible = {
@@ -1627,6 +1786,33 @@ ARI_foreign_operations_decisions = {
 			ARI_traveller_operation_prepare_progress_update_effect = yes
 			ARI_change_intelligence_in_TRI = yes
 		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 300 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				has_manpower < 2000
+			}
+			modifier = {
+				factor = 1.2
+				has_manpower > 10000
+			}
+		}
 	}
 	ARI_monitoring_station = { #建立圣三一情报监听站
 		visible = {
@@ -1634,7 +1820,7 @@ ARI_foreign_operations_decisions = {
 			has_country_flag = ARI_outside_recon_fired
 		}
 		available = {
-			num_of_available_civilian_factories > 1
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		cost = 25
 		fire_only_once = yes
@@ -1652,6 +1838,17 @@ ARI_foreign_operations_decisions = {
 			add_tech_bonus = {
 				bonus = 0.75
 				category = electronics
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.4
+				num_of_civilian_factories_available_for_projects < 5
+			}
+			modifier = {
+				factor = 3
+				num_of_civilian_factories_available_for_projects > 9
 			}
 		}
 	}
@@ -1691,6 +1888,57 @@ ARI_foreign_operations_decisions = {
 			ARI_change_materials = yes
 			set_temp_variable = { intelligence_change = 10 }
 			ARI_change_intelligence_in_GEH = yes
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 600 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_revenge_progress < 40 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_revenge_progress < 60 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 90 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 7500 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 5000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 15000 }
+			}
 		}
 	}
 	ARI_suppress_Prefect_Team = { #压制风纪委员会
@@ -1742,7 +1990,61 @@ ARI_foreign_operations_decisions = {
 					}
 				}
 			}
-			
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 400 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_revenge_progress < 40 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_revenge_progress < 60 }
+			}
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_revenge_progress > 85 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 90 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 7500 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 5000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 15000 }
+			}
 		}
 	}
 	ARI_operation_fake_flag_decision = { #假旗行动
@@ -1820,10 +2122,59 @@ ARI_foreign_operations_decisions = {
 					}
 				}
 			}
-			
+		}
+		ai_will_do = {
+			base = 4
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 600 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_revenge_progress < 40 }
+			}
+			modifier = {
+				factor = 0.4
+				check_variable = { ARI_revenge_progress > 60 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_GEH > 90 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 10000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 10000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 24000 }
+			}
 		}
 	}
-
 	#建立安全屋
 	ARI_build_safe_home	= {
 		visible = {
@@ -1865,8 +2216,34 @@ ARI_foreign_operations_decisions = {
 				value = 2
 			}
 		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 450 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_safety_home_use_time < 3 }
+			}
+			modifier = {
+				factor = 0.4
+				check_variable = { ARI_safety_home_use_time > 5 }
+			}
+		}
 	}
-
 	#部署外派特战部队
 	ARI_send_sf_to_trinity	= {
 		visible = {
@@ -1899,8 +2276,42 @@ ARI_foreign_operations_decisions = {
 			set_temp_variable = { intelligence_change = 10 }
 			ARI_change_intelligence_in_TRI = yes
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 400 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 5000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 8000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 10000 }
+			}
+		}
 	}
-
 	#牵制圣三一边境巡逻队
 	ARI_control_trinity_border = {
 		visible = {
@@ -1951,8 +2362,58 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 300 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_revenge_progress < 40 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_revenge_progress > 80 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 5000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { light_fire_support_equipment < 100 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 9000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 10000 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { light_fire_support_equipment > 500 }
+			}
+		}
 	}
-
 	#伪装会谈筹备者
 	ARI_disguise_conference_preparer = {
 		visible = {
@@ -1972,7 +2433,7 @@ ARI_foreign_operations_decisions = {
 		days_remove = 30
 		days_re_enable = 90
 		complete_effect = {
-			set_temp_variable = { revenge_progress_change = 5 }
+			set_temp_variable = { revenge_progress_change = -5 }
 			ARI_change_revenge_progress = yes
 		}
 		remove_effect = {
@@ -1983,9 +2444,30 @@ ARI_foreign_operations_decisions = {
 				civilian_intel = 10
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { ARI_revenge_progress < 40 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_revenge_progress < 60 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_revenge_progress > 80 }
+			}
+		}
 	}
-
-
 	#万魔殿秘密物资交换
 	ARI_pandaemonium_secret_material_change = {
 		visible = {
@@ -2020,8 +2502,46 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 4
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials > 2000 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 90 }
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 10
+			}
+			modifier = {
+				factor = 1.5
+				num_of_military_factories > 20
+			}
+		}
 	}
-
 	#格黑娜游学之旅
 	ARI_a_trip_to_gehenna = {
 		visible = {
@@ -2029,7 +2549,7 @@ ARI_foreign_operations_decisions = {
 			has_country_flag = ARI_outside_recon_fired
 		}
 		available = {
-			num_of_available_civilian_factories > 2
+			num_of_civilian_factories_available_for_projects > 2
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -2041,8 +2561,38 @@ ARI_foreign_operations_decisions = {
 			set_temp_variable = { intelligence_change = 15 }
 			ARI_change_intelligence_in_GEH = yes
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0.6
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
+			}
+			modifier = {
+				factor = 0.5
+				num_of_civilian_factories_available_for_projects < 10
+			}
+			modifier = {
+				factor = 1.5
+				num_of_civilian_factories_available_for_projects > 20
+			}
+		}
 	}
-
 	#参与温泉部发掘行动
 	ARI_join_spring_club_activity = {
 		visible = {
@@ -2103,8 +2653,42 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 300 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 90 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { support_equipment < 500 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { support_equipment > 1000 }
+			}
+		}
 	}
-
 	#参与温泉部发掘行动
 	ARI_join_food_seminar_club_activity = {
 		visible = {
@@ -2150,8 +2734,30 @@ ARI_foreign_operations_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0.6
+				has_political_power < 300
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 500
+			}
+		}
 	}
-
 }
 ARI_black_market_decisions = {
 	ARI_black_market_guns_in = { #黑市武器交易（步枪买入）
@@ -2176,6 +2782,29 @@ ARI_black_market_decisions = {
 				amount = 4000
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.2
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials > 800 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment < 5000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment > 20000 }
+			}
+		}
 	}
 	ARI_black_market_guns_out = { #黑市武器交易（步枪卖出）
 		available = {
@@ -2192,6 +2821,29 @@ ARI_black_market_decisions = {
 		remove_effect = {
 			set_temp_variable = { material_change = 100 }
 			ARI_change_materials = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { ARI_materials > 800 }
+			}
+			modifier = {
+				factor = 0.6
+				has_equipment = { infantry_equipment < 15000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment > 40000 }
+			}
 		}
 	}
 	ARI_black_market_support_in = { #黑市武器交易（支援装备买入）
@@ -2216,6 +2868,29 @@ ARI_black_market_decisions = {
 				amount = 500
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.2
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { ARI_materials > 800 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { support_equipment < 2000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { support_equipment > 4000 }
+			}
+		}
 	}
 	ARI_black_market_support_out = { #黑市武器交易（支援装备卖出）
 		available = {
@@ -2232,6 +2907,29 @@ ARI_black_market_decisions = {
 		remove_effect = {
 			set_temp_variable = { material_change = 100 }
 			ARI_change_materials = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 200 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { ARI_materials > 800 }
+			}
+			modifier = {
+				factor = 0.6
+				has_equipment = { support_equipment < 3000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { support_equipment > 6000 }
+			}
 		}
 	}
 	ARI_intelligence_exchange = { #黑市情报交流
@@ -2254,6 +2952,29 @@ ARI_black_market_decisions = {
 			army_experience = 30
 			set_temp_variable = { material_change = -50 }
 			ARI_change_materials = yes
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_materials < 150 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 300 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials > 500 }
+			}
+			modifier = {
+				factor = 2
+				has_army_experience < 50
+			}
+			modifier = {
+				factor = 0.5
+				has_army_experience > 200
+			}
 		}
 	}
 	ARI_engage_in_mercenaries = { #参与佣兵作战
@@ -2292,6 +3013,53 @@ ARI_black_market_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 1.5
+				check_variable = { ARI_materials < 500 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { ARI_materials < 1000 }
+			}
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials > 2000 }
+			}
+			modifier = {
+				factor = 2
+				has_army_experience < 50
+			}
+			modifier = {
+				factor = 0.5
+				has_army_experience > 200
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 8000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { support_equipment < 600 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 9000
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 12000 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { support_equipment > 1000 }
+			}
+		}
 	}
 }
 ARI_deal_with_shortage_decisions = {
@@ -2306,7 +3074,7 @@ ARI_deal_with_shortage_decisions = {
 			subtract_from_variable = { ARI_deal_with_shortage_decisions_count = 1 }
 			add_tech_bonus = {
 				bonus = 1
-				#category = 
+				category = industry
 			}
 			custom_effect_tooltip = ARI_spread_production_technologies_tt
 			add_to_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = 0.1 }
@@ -2434,6 +3202,9 @@ ARI_raw_material_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	ARI_power_station = { #建设发电站
 		visible = {
@@ -2472,6 +3243,9 @@ ARI_raw_material_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	ARI_explore_ruins_ooparts = { #废墟区探索
 		visible = {
@@ -2480,6 +3254,9 @@ ARI_raw_material_decisions = {
 		cost = 50
 		fire_only_once = yes
 		days_remove = 60
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
 		modifier = {
 			civilian_factory_use = 2
 		}
@@ -2495,6 +3272,13 @@ ARI_raw_material_decisions = {
 				category = mystical
 				bonus = 1
 				uses = 1
+			}
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				add = 95
+				num_of_civilian_factories_available_for_projects > 5
 			}
 		}
 	}
@@ -2516,6 +3300,17 @@ ARI_equipments_development_decisions = {
 			}
 			add_ideas = ARI_assault_rifle_idea
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
+		}
 	}
 	ARI_light_support_equipment = { #轻装支援火力
 		visible = {
@@ -2532,6 +3327,17 @@ ARI_equipments_development_decisions = {
 				uses = 2
 			}
 			add_ideas = ARI_light_support_equipment_idea
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
 		}
 	}
 	ARI_logistics_teams = { #行动后勤保障小组
@@ -2551,6 +3357,17 @@ ARI_equipments_development_decisions = {
 			#强化精神“阿里乌斯武装学生部队”
 			custom_effect_tooltip = ARI_logistics_teams_tt
 			add_to_variable = { ARI_armed_students_modifier_supply_consumption_factor = -0.1 }
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
 		}
 	}
 	ARI_old_production_line = { #重启旧生产线
@@ -2580,6 +3397,17 @@ ARI_equipments_development_decisions = {
 				add_idea = ARI_merkava_main_battle_tank_1
 			}
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
+		}
 	}
 	ARI_new_generation_of_merkava = { #新一代“驰车”
 		visible = {
@@ -2599,6 +3427,9 @@ ARI_equipments_development_decisions = {
 				remove_idea = ARI_merkava_main_battle_tank_1
 				add_idea = ARI_merkava_main_battle_tank_2
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 	}
 
@@ -2621,6 +3452,17 @@ ARI_special_training_decisions = {
 			custom_effect_tooltip = ARI_night_infiltration_warfare_tt
 			add_to_variable = { ARI_special_force_land_night_attack = 0.2 }
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
+		}
 	}
 	ARI_ambush_warfare = { #伏击特化训练
 		available = {
@@ -2641,6 +3483,17 @@ ARI_special_training_decisions = {
 			add_to_variable = { ARI_special_force_max_dig_in_factor = 0.1 }
 			add_to_variable = { ARI_special_force_dig_in_speed_factor = 0.1 }
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
+		}
 	}
 	ARI_assault_warfare = { #强袭特化训练
 		available = {
@@ -2659,6 +3512,17 @@ ARI_special_training_decisions = {
 			custom_effect_tooltip = ARI_assault_warfare_tt
 			add_to_variable = { ARI_special_force_army_speed_factor = 0.05 }
 			add_to_variable = { special_forces_attack_factor = 0.1 }
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
 		}
 	}
 	ARI_CQB_training = { #CQB特训
@@ -2680,6 +3544,17 @@ ARI_special_training_decisions = {
 				ARI_CQB_training = 1
 			}
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
+		}
 	}
 	ARI_wilderness_survival = { #野外生存训练标准化
 		available = {
@@ -2697,6 +3572,17 @@ ARI_special_training_decisions = {
 			custom_effect_tooltip = ARI_wilderness_survival_tt
 			add_to_variable = { ARI_special_force_out_of_supply_factor = -0.15 }
 			add_to_variable = { ARI_special_force_no_supply_grace = 48 }
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_political_power < 150
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 300
+			}
 		}
 	}
 }
@@ -2754,6 +3640,9 @@ ARI_power_chaser_decisions = {
 				set_country_flag = ARI_rank3_achieved
 			}
 		}
+		ai_will_do = {
+			base = 1000
+		}
 	}
 
 	ARI_final_ascension = { #飞升
@@ -2774,7 +3663,9 @@ ARI_power_chaser_decisions = {
 		remove_effect = {
 			custom_effect_tooltip = ARI_the_time_has_come
 		}
-
+		ai_will_do = {
+			base = 1000
+		}
 	}
 
 	ARI_research_the_royal_blood = { #研究皇室血统
@@ -2792,6 +3683,9 @@ ARI_power_chaser_decisions = {
 			set_temp_variable = { mystic_progress_change = 5 }
 			ARI_change_mystic_progress = yes
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 
 	ARI_read_trinity_old_book = { #阅读圣三一古书
@@ -2804,6 +3698,17 @@ ARI_power_chaser_decisions = {
 		remove_effect = {
 			set_temp_variable = { mystic_progress_change = 10 }
 			ARI_change_mystic_progress = yes
+		}
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 0.2
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 200
+			}
 		}
 	}
 
@@ -2822,6 +3727,17 @@ ARI_power_chaser_decisions = {
 		remove_effect = {
 			set_temp_variable = { mystic_progress_change = 10 }
 			ARI_change_mystic_progress = yes
+		}
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 0.2
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 3
+				has_political_power > 200
+			}
 		}
 	}
 
@@ -2849,6 +3765,17 @@ ARI_power_chaser_decisions = {
 		remove_effect = {
 			set_temp_variable = { mystic_progress_change = 10 }
 			ARI_change_mystic_progress = yes
+		}
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 0.2
+				has_equipment = { special_infantry_equipment < 2000 }
+			}
+			modifier = {
+				factor = 3
+				has_equipment = { special_infantry_equipment > 5000 }
+			}
 		}
 	}
 
@@ -2901,11 +3828,29 @@ ARI_power_chaser_decisions = {
 				add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_attack_factor = 0.03 }
 			}
 		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0.2
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 2
+				has_political_power > 300
+			}
+			modifier = {
+				factor = 0.5
+				num_of_civilian_factories_available_for_projects < 15
+			}
+			modifier = {
+				factor = 1.5
+				num_of_civilian_factories_available_for_projects > 30
+			}
+		}
 	}
 }
 ###“旅者”行动决议组###
 ARI_traveller_operation_caretaking_decisions = {
-
 	ARI_get_back_special_force_de = { #撤回特战队
 		visible = {
 			has_completed_focus = ARI_get_back_special_force
@@ -2969,8 +3914,38 @@ ARI_traveller_operation_caretaking_decisions = {
 				ARI_check_if_traveller_idea_replaced = yes
 			}
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0.6
+				check_variable = { ARI_materials < 300 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 800 }
+			}
+			modifier = {
+				factor = 10
+				check_variable = { ARI_materials > 1500 }
+			}
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 4000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 5000
+			}
+			modifier = {
+				factor = 5
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 5
+				has_equipment = { infantry_equipment > 12000 }
+			}
+		}
 	}
-
 	ARI_get_back_revenge_spirit_de = { #重申复仇理想
 		visible = {
 			has_completed_focus = ARI_get_back_revenge_spirit
@@ -2994,8 +3969,26 @@ ARI_traveller_operation_caretaking_decisions = {
 				ARI_check_if_traveller_idea_replaced = yes
 			}
 		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.5
+				has_political_power < 200
+			}
+			modifier = {
+				factor = 0.2
+				has_manpower < 10000
+			}
+			modifier = {
+				factor = 5
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 5
+				has_political_power > 400
+			}
+		}
 	}
-
 	ARI_fix_our_supply = { #弥补物资缺口
 		visible = {
 			has_completed_focus = ARI_solve_supply_shorting
@@ -3023,22 +4016,32 @@ ARI_traveller_operation_caretaking_decisions = {
 				add_to_variable = { ARI_power_chaser_goods_factor = -0.25 }
 			}
 		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.4
+				check_variable = { ARI_materials < 800 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_materials < 1000 }
+			}
+			modifier = {
+				factor = 10
+				check_variable = { ARI_materials > 2000 }
+			}
+		}
 	}
-
 	ARI_deal_with_traitor_de = { #处理“叛徒”
 		visible = {
 			has_completed_focus = ARI_solve_supply_shorting
 		}
-
 		available = {
 			has_manpower > 1999
 			has_equipment = { infantry_equipment > 499 }
 		}
-
 		days_remove = 90
-
 		fire_only_once = yes
-
 		complete_effect = {
 			add_manpower = -2000
 			add_equipment_to_stockpile = {
@@ -3046,7 +4049,6 @@ ARI_traveller_operation_caretaking_decisions = {
 				amount = -500
 			}
 		}
-
 		remove_effect = {
 			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_4
 			hidden_effect = {
@@ -3056,14 +4058,30 @@ ARI_traveller_operation_caretaking_decisions = {
 				add_to_variable = { ARI_lesson_traveller_operation_stability = 0.2 }
 			}
 		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 2000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_manpower < 6000
+			}
+			modifier = {
+				factor = 5
+				has_manpower > 100000
+			}
+			modifier = {
+				factor = 5
+				has_equipment = { infantry_equipment > 5000 }
+			}
+		}
 	}
-
-
 }
 
 ###乐园行动决议组###
 ARI_preparation_of_operation_eden_decisions = {
-
 	#誓言计划
 	ARI_oath_operation = {
 		visible = {
@@ -3103,8 +4121,22 @@ ARI_preparation_of_operation_eden_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_TRI > 80 }
+			}
+		}
 	}
-
 	#净空计划
 	ARI_clear_sky_operation = {
 		visible = {
@@ -3144,8 +4176,22 @@ ARI_preparation_of_operation_eden_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.2
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { ARI_intelligence_in_TRI < 60 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_TRI > 80 }
+			}
+		}
 	}
-
 	#馈赠计划
 	ARI_giving_operation = {
 		visible = {
@@ -3185,9 +4231,18 @@ ARI_preparation_of_operation_eden_decisions = {
 				}
 			}
 		}
-		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.4
+				check_variable = { ARI_intelligence_in_GEH < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+		}
 	}
-
 	#猎魔计划
 	ARI_devil_hunting_operation = {
 		visible = {
@@ -3233,8 +4288,18 @@ ARI_preparation_of_operation_eden_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.4
+				check_variable = { ARI_intelligence_in_GEH < 60 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+		}
 	}
-
 	#狂想计划
 	ARI_delusion_operation = {
 		visible = {
@@ -3289,9 +4354,27 @@ ARI_preparation_of_operation_eden_decisions = {
 				}
 			}
 		}
-	}	
-
-
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.5
+				check_variable = { ARI_intelligence_in_GEH < 40 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_GEH > 80 }
+			}
+			modifier = {
+				factor = 0.4
+				check_variable = { ARI_intelligence_in_TRI < 40 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_TRI > 80 }
+			}
+		}
+	}
+	
 	#做好决战计划
 	ARI_prepare_final_war_plan = {
 		visible = {
@@ -3334,9 +4417,10 @@ ARI_preparation_of_operation_eden_decisions = {
 				value = 20
 			}
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
-
-
 	#准备后备计划
 	ARI_prepare_backup_plan = {
 		visible = {
@@ -3372,14 +4456,15 @@ ARI_preparation_of_operation_eden_decisions = {
 				value = 10
 			}
 		}
+		ai_will_do = {
+			base = 60
+		}
 	}
-	
 }
 
 
 ###乐园行动参战决议组###
 ARI_suppress_resistance_eden_decisions = {
-
 	#压制残余抵抗
 	ARI_suppress_resistance_eden_decision = {
 		visible = {
@@ -3413,7 +4498,26 @@ ARI_suppress_resistance_eden_decisions = {
 				}
 			}
 			else = {
-				remove_idea = ARI_eden_action_chaos_2
+				remove_ideas = ARI_eden_action_chaos_2
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_equipment = { infantry_equipment < 5000 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 10000 }
+			}
+			modifier = {
+				factor = 0.5
+				has_army_experience < 50
+			}
+			modifier = {
+				factor = 2
+				has_army_experience > 100
 			}
 		}
 	}
@@ -3455,6 +4559,17 @@ ARI_suppress_resistance_eden_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.8
+				has_equipment = { special_infantry_equipment < 1500 }
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { special_infantry_equipment > 3000 }
+			}
+		}
 	}
 
 
@@ -3481,6 +4596,17 @@ ARI_suppress_resistance_eden_decisions = {
 					owner = ROOT
 					count = 4
 				}
+			}
+		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 0.8
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 2
+				has_political_power > 200
 			}
 		}
 	}

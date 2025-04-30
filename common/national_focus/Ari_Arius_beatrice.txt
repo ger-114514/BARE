@@ -1770,9 +1770,6 @@ focus_tree = {
 				# 	}
 				# }
 			}
-			ai_will_do = {
-				base = 100
-			}
 		}
 		#维稳部分
 			focus = { #虚无永存
@@ -1793,9 +1790,6 @@ focus_tree = {
 					hidden_effect = {
 						ARI_initialize_suppression_system = yes
 					}
-				}
-				ai_will_do = {
-					base = 100
 				}
 			}
 			#复仇主义部分
@@ -1865,9 +1859,7 @@ focus_tree = {
 						add_command_power = 5
 						custom_effect_tooltip = ARI_suppress_resistance_tt
 					}
-					ai_will_do = {
-						base = 100
-					}
+					
 				}
 				focus = { #贯彻夫人的意志
 					id = ARI_carry_out_the_will
@@ -1887,9 +1879,7 @@ focus_tree = {
 							ARI_control_modifier_increase_2 = yes
 						}
 					}
-					ai_will_do = {
-						base = 100
-					}
+					
 				}
 				focus = { #阿里乌斯信用体系
 					id = ARI_identity_system
@@ -1927,9 +1917,7 @@ focus_tree = {
 							ARI_guard_modifier_increase_2 = yes
 						}
 					}
-					ai_will_do = {
-						base = 100
-					}
+					
 				}
 			#虚无主义部分
 				focus = { #虚无主义灌输
