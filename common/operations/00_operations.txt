@@ -226,7 +226,7 @@
  	desc = operation_fake_intel_desc
  	priority = 2
 
- 	days = 48
+ 	days = 60
  	network_strength = 40
  	operatives = 2
 
@@ -296,7 +296,7 @@
  						is_fake_intel_division = yes
  						is_locked = yes
  						regiments = {
- 							fake_intel_unit = { x = 0 y = 0 }
+ 							# fake_intel_unit = { x = 0 y = 0 }
  						}
  					}
  					set_country_flag = fake_intel_template_created
@@ -331,7 +331,7 @@
  					}
  				}
 				
- 				country_event = { id = lar_fake_intel_units.1 days = 72 }
+ 				country_event = { id = lar_fake_intel_units.1 days = 90 }
  			}
  		}
  		custom_effect_tooltip = CUSTOM_EFFECT_CREATE_FAKE_ARMIES_RESULT
@@ -343,13 +343,17 @@
 	
  	#since this operation is taking place in friendly territory, no infiltration/exfiltration is necessary
  	phases = { #
- 		fake_intel_decoy_tanks = { base = 100 }
+	 fake_intel_decoy_tanks = { base = 33 }
+	 fake_intel_radio_deception = { base = 33 }
+	 fake_intel_deliberate_leaks = { base = 33 }
  	}
  	phases = { #fake intel
- 		fake_intel_press_releases = { base = 50 }
+	 fake_intel_press_releases = { base = 50 }
+	 fake_intel_utilize_double_agents = { base = 50 }
  	}
  	phases = { #
- 		fake_intel_plant_evidence = { base = 50 }
+	 fake_intel_plant_evidence = { base = 50 }
+	 fake_intel_release_pow = { base = 50 }
  	}
  }
 
@@ -885,7 +889,7 @@
  			target = FROM
  			value > 35
  		}
- 		NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
+
  		has_operation_token = {
  			tag = FROM
  			token = token_hide
@@ -919,27 +923,27 @@
  			}
  			if = {
  				limit = {
- 					PREV.ROOT = { has_government = fascism }
+ 				
  				}
- 				fascism > 0.2
+
  			}
  			if = {
  				limit = {
- 					PREV.ROOT = { has_government = communism }
+ 					
  				}
- 				communism > 0.2
+
  			}
  			if = {
  				limit = {
- 					PREV.ROOT = { has_government = democratic }
+ 				
  				}
- 				democratic > 0.2
+
  			}
  			if = {
  				limit = {
- 					PREV.ROOT = { has_government = neutrality }
+ 					
  				}
- 				neutrality > 0.2
+
  			}
  				#set_temp_variable = { coup_ideology@ROOT = PREV.ROOT.current_party_ideology_group }
  				#set_temp_variable = { coup_ideology_popularity@ROOT = party_popularity@ROOT.coup_ideology }
@@ -1167,9 +1171,7 @@
  		FROM.FROM = {
  			if = {
  				limit = {
- 					ROOT = {
- 						has_completed_focus = SWI_export_saboteurs
- 					}
+ 					always = no
  				}
  				add_resistance_target = {
  					amount = 25
@@ -1216,9 +1218,7 @@
  		FROM.FROM = {
  			if = {
  				limit = {
- 					ROOT = {
- 						has_completed_focus = SWI_export_saboteurs
- 					}
+					always = no
  				}
  				add_resistance_target = {
  					amount = 25
@@ -1620,7 +1620,6 @@
  		targets = { FROM }
  	}
 
- 	 Coordinated Strike will lead to a war with the target
  	will_lead_to_war_with = yes
  	risk_chance = 0.3
  	experience = 2
@@ -1630,7 +1629,6 @@
  		}
 		
  		execute_operation_coordinated_strike = {
- 			 Amount determines how often the mission simulation is run
  			amount = 12 #1 attack per 6 hours --> 12 attacks = 3 days
  		}
 
@@ -2198,7 +2196,7 @@
  			ROOT = {
  				steal_random_tech_bonus = {
  					folder = armour_folder
- 					folder = artillery_folder
+ 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2217,8 +2215,8 @@
  		else = {
  			ROOT = {
  				steal_random_tech_bonus = {
- 					folder = nsb_armour_folder
- 					folder = artillery_folder
+ 					folder = armour_folder
+ 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2247,7 +2245,7 @@
  					ROOT = {
  						steal_random_tech_bonus = {
  							folder = armour_folder
- 							folder = artillery_folder
+ 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 
@@ -2264,8 +2262,8 @@
  				else = {
  					ROOT = {
  						steal_random_tech_bonus = {
- 							folder = nsb_armour_folder
- 							folder = artillery_folder
+ 							folder = armour_folder
+ 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 
@@ -2288,7 +2286,7 @@
  					ROOT = {
  						steal_random_tech_bonus = {
  							folder = armour_folder
- 							folder = artillery_folder
+ 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 	
@@ -2305,8 +2303,8 @@
  				else = {
  					ROOT = {
  						steal_random_tech_bonus = {
- 							folder = nsb_armour_folder
- 							folder = artillery_folder
+ 							folder = armour_folder
+ 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 	
@@ -2330,7 +2328,7 @@
  			ROOT = {
  				steal_random_tech_bonus = {
  					folder = armour_folder
- 					folder = artillery_folder
+ 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2345,8 +2343,8 @@
  		else = {
  			ROOT = {
  				steal_random_tech_bonus = {
- 					folder = nsb_armour_folder
- 					folder = artillery_folder
+ 					folder = armour_folder
+ 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2442,16 +2440,7 @@
  		if = {
    			limit = { has_dlc = "Man the Guns"} 
    			ROOT = {
- 				steal_random_tech_bonus = {
- 					folder = mtgnavalfolder
-
- 					bonus = 3.0
- 					dynamic = yes
- 					instant = yes
- 					name = operation_steal_tech_navy
- 					target = FROM
- 					uses = 1
- 				}
+ 				
  				remove_operation_token = {
  					tag = FROM
  					token = token_navy
@@ -2460,16 +2449,7 @@
    		}
    		else = {
  	  		ROOT = {
- 				steal_random_tech_bonus = {
- 					folder = naval_folder
-
- 					bonus = 3.0
- 					dynamic = yes
- 					instant = yes
- 					name = operation_steal_tech_navy
- 					target = FROM
- 					uses = 1
- 				}
+ 				
  				remove_operation_token = {
  					tag = FROM
  					token = token_navy
@@ -2482,89 +2462,17 @@
 
  		random_list = {
  			33 = {
- 				if = {
-   					limit = { has_dlc = "Man the Guns"} 
-
-   					ROOT = {
- 						steal_random_tech_bonus = {
- 							folder = mtgnavalfolder
-
- 							bonus = 3.0
- 							ahead_reduction = 2
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_navy
- 							target = FROM
- 							uses = 1
- 						}
- 					}
-   				}
-   				else = {
- 					ROOT = {
- 						steal_random_tech_bonus = {
- 							folder = naval_folder
-
- 							bonus = 3.0
- 							ahead_reduction = 2
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_navy
- 							target = FROM
- 							uses = 1
- 						}
- 					}
-   				}				
+ 					
  			}
  			67 = {
- 				if = {
-   					limit = { has_dlc = "Man the Guns"} 
+ 				
 
- 					ROOT = {
- 						steal_random_tech_bonus = {
- 							folder = mtgnavalfolder
-
- 							bonus = 3.0
- 							ahead_reduction = 1
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_navy
- 							target = FROM
- 							uses = 1
- 						}
- 					}
- 				}
- 				else = {
- 					ROOT = {
- 						steal_random_tech_bonus = {
- 							folder = naval_folder
-
- 							bonus = 3.0
- 							ahead_reduction = 1
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_navy
- 							target = FROM
- 							uses = 1
- 						}
- 					}
- 				}
+ 				
  			}
  		}
  	}
  	outcome_potential = {
- 		ROOT = {
- 			steal_random_tech_bonus = {
- 				folder = naval_folder
- 				folder = mtgnavalfolder
-
- 				bonus = 3.0
- 				dynamic = yes
- 				instant = yes
- 				name = operation_steal_tech_navy
- 				target = FROM
- 				uses = 1
- 			}
- 		}
+ 	
  		custom_effect_tooltip = operation_outcome_consumes_token_tt
  	}
  	phases = { #infiltration
@@ -2640,32 +2548,15 @@
  	cost_modifiers = { operation_cost }
  	outcome_execute = {
  		ROOT = {
- 			if = {
- 				limit = {
- 					has_dlc = "By Blood Alone"
- 				}
- 				steal_random_tech_bonus = {
- 					folder = bba_air_techs_folder
- 					bonus = 3.0
- 					dynamic = yes
- 					instant = yes
- 					name = operation_steal_tech_airforce
- 					target = FROM
- 					uses = 1
- 				}
-				
- 			}
- 			else = {
- 				steal_random_tech_bonus = {
- 					folder = air_techs_folder
- 					bonus = 3.0
- 					dynamic = yes
- 					instant = yes
- 					name = operation_steal_tech_airforce
- 					target = FROM
- 					uses = 1
- 				}
- 			}
+			steal_random_tech_bonus = {
+				folder = air_techs_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_airforce
+				target = FROM
+				uses = 1
+			}
 
  			remove_operation_token = {
  				tag = FROM
@@ -2677,101 +2568,47 @@
  		random_list = {
  			33 = {
  				ROOT = {
- 					if = {
- 						limit = {
- 							has_dlc = "By Blood Alone"
- 						}
- 						steal_random_tech_bonus = {
- 							folder = bba_air_techs_folder
- 							bonus = 3.0
- 							ahead_reduction = 2
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_airforce
- 							target = FROM
- 							uses = 1
- 						}
- 					}
- 					else = {
- 						steal_random_tech_bonus = {
- 							folder = air_techs_folder
- 							bonus = 3.0
- 							ahead_reduction = 2
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_airforce
- 							target = FROM
- 							uses = 1
- 						}
- 					}
+					steal_random_tech_bonus = {
+						folder = air_techs_folder
+						bonus = 3.0
+						ahead_reduction = 2
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_airforce
+						target = FROM
+						uses = 1
+					}
 
  				}
  			}
  			67 = {
- 				if = {
- 					limit = {
- 						has_dlc = "By Blood Alone"
- 					}
-
- 					ROOT = {
- 						steal_random_tech_bonus = {
- 							folder = bba_air_techs_folder
- 							bonus = 3.0
- 							ahead_reduction = 1
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_airforce
- 							target = FROM
- 							uses = 1
- 						}
- 					}
-
- 				}
- 				else = {
- 					ROOT = {
- 						steal_random_tech_bonus = {
- 							folder = air_techs_folder
- 							bonus = 3.0
- 							ahead_reduction = 1
- 							dynamic = yes
- 							instant = yes
- 							name = operation_steal_tech_airforce
- 							target = FROM
- 							uses = 1
- 						}
- 					}
- 				}
+				ROOT = {
+					steal_random_tech_bonus = {
+						folder = air_techs_folder
+						bonus = 3.0
+						ahead_reduction = 1
+						dynamic = yes
+						instant = yes
+						name = operation_steal_tech_airforce
+						target = FROM
+						uses = 1
+					}
+				}
  			}
  		}
  	}
 
  	outcome_potential = {
  		ROOT = {
- 			if = {
- 				limit = {
- 					has_dlc = "By Blood Alone"
- 				}
- 				steal_random_tech_bonus = {
- 					folder = bba_air_techs_folder
- 					bonus = 3.0
- 					dynamic = yes
- 					instant = yes
- 					name = operation_steal_tech_airforce
- 					target = FROM
- 					uses = 1
- 				}
- 			}
- 			else = {
- 				steal_random_tech_bonus = {
- 					folder = air_techs_folder
- 					bonus = 3.0
- 					dynamic = yes
- 					instant = yes
- 					name = operation_steal_tech_airforce
- 					target = FROM
- 					uses = 1
- 				}
- 			}
+			steal_random_tech_bonus = {
+				folder = air_techs_folder
+				bonus = 3.0
+				dynamic = yes
+				instant = yes
+				name = operation_steal_tech_airforce
+				target = FROM
+				uses = 1
+			}
  		}
  		custom_effect_tooltip = operation_outcome_consumes_token_tt
  	}
