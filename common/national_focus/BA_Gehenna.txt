@@ -1281,9 +1281,9 @@ focus_tree = {
 
         completion_reward = {
 
-            remove_idea = GEH_war_industry_modifier
-            remove_idea = GEH_war_industry_2_modifier
-            add_idea = GEH_after_war_reconstrcution_modifier
+            remove_ideas = GEH_war_industry_modifier
+            remove_ideas = GEH_war_industry_2_modifier
+            add_ideas = GEH_after_war_reconstrcution_modifier
 
             random_owned_controlled_state = {
                 limit = {

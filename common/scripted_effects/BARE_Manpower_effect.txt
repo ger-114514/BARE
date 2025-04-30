@@ -484,7 +484,6 @@ BARE_Combat_Readiness_Count_Land_Count_Effect = {
 
 	for_each_loop = {
 		array = global.BARE_Combat_Readiness_Unit_Type_Array
-
 		meta_effect = {
 			unitName = "[?v.GetTokenKey]"
 			text = {
@@ -988,20 +987,20 @@ BARE_Combat_Readiness_Count_Start_Init = {
 	}
 
 	   #格黑娜特殊单位X2
-	set_variable = {
-		global.BARE_Combat_Readiness_Count_royal_artillery_support_company_units = 0.05
-	}
-    add_to_array = {
-		array = global.BARE_Combat_Readiness_Unit_Type_Array
-		value = token:field_artillery_units
-	}
-	set_variable = {
-		global.BARE_Combat_Readiness_Count_assault_engineer_units = 0.05
-	}
-    add_to_array = {
-		array = global.BARE_Combat_Readiness_Unit_Type_Array
-		value = token:assault_engineer_units
-	}
+	# set_variable = {
+	# 	global.BARE_Combat_Readiness_Count_royal_artillery_support_company_units = 0.05
+	# }
+    # add_to_array = {
+	# 	array = global.BARE_Combat_Readiness_Unit_Type_Array
+	# 	value = token:field_artillery_units
+	# }
+	# set_variable = {
+	# 	global.BARE_Combat_Readiness_Count_assault_engineer_units = 0.05
+	# }
+    # add_to_array = {
+	# 	array = global.BARE_Combat_Readiness_Unit_Type_Array
+	# 	value = token:assault_engineer_units
+	# }
 
 	#圣三一特殊单位X4
 	set_variable = {

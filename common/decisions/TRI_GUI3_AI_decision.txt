@@ -6,8 +6,10 @@ TRI_ai_bukebu_inv_decisions_categories = {
 		icon = generic_industry
 		allowed = {
 			original_tag = TRI
-			is_ai = yes
 			has_country_flag = TRY_investigate_available
+		}
+		visible = {
+			is_ai = yes
 		}
 		fire_only_once = no
 		days_remove = 6 #7-1，因为决议要在下一天才回复

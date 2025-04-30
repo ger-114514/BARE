@@ -58,25 +58,33 @@ operation_explore_the_ruined_base = {
             }
 			if = {
 				limit = {
-					MIL_temp_eleckami = 1
+					check_variable = {
+						MIL_temp_eleckami = 1
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 2
+					check_variable = {
+						MIL_temp_eleckami = 2
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 3
+					check_variable = {
+						MIL_temp_eleckami = 3
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 4
+					check_variable = {
+						MIL_temp_eleckami = 4
+					}
 				}
                 country_event = ALR_resistance.100
 			}
@@ -190,25 +198,34 @@ operation_explore_the_ruined_industry = {
             }
 			if = {
 				limit = {
-					MIL_temp_eleckami = 1
+					check_variable = {
+						MIL_temp_eleckami = 1
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 2
+					check_variable = {
+						MIL_temp_eleckami = 3
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 3
+					check_variable = {
+						MIL_temp_eleckami = 4
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 4
+					check_variable = {
+						MIL_temp_eleckami = 4
+					}
+					
 				}
                 country_event = ALR_resistance.100
 			}
@@ -323,31 +340,41 @@ operation_explore_the_ruined_city = {
             }
 			if = {
 				limit = {
-					MIL_temp_eleckami = 1
+					check_variable = {
+						MIL_temp_eleckami = 1
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 2
+					check_variable = {
+						MIL_temp_eleckami = 2
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 3
+					check_variable = {
+						MIL_temp_eleckami = 3
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 4
+					check_variable = {
+						MIL_temp_eleckami = 4
+					}
 				}
                 country_event = ALR_resistance.100
 			}
 			if = {
 				limit = {
-					MIL_temp_eleckami = 5
+					check_variable = {
+						MIL_temp_eleckami = 5
+					}
 				}
                 country_event = ALR_resistance.100
 			}

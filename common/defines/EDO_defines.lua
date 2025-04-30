@@ -6,7 +6,7 @@ NDefines.NProduction.MAX_EQUIPMENT_RESOURCES_NEED = 5	-- Max number of different
 NDefines.NGame.FUEL_RESOURCE = "resources_fe"						-- resource that will give country fuel
 
 NDefines.NFrontend.CAMERA_MIN_HEIGHT = 50.0
-NDefines.NFrontend.CAMERA_MAX_HEIGHT = 900.0
+NDefines.NFrontend.CAMERA_MAX_HEIGHT = 3000.0
 NDefines.NGraphics.PROVINCE_NAME_DRAW_DISTANCE = 500.0 			-- Remove province names beyond this distance
 
 NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 3.25

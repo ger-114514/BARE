@@ -39,7 +39,9 @@
  	risk_chance = 0.1
  	experience = 2
  	cost_multiplier = 0  
+ 	cost_multiplier = 0  
 
+ 	outcome_execute = {  
  	outcome_execute = {  
  		ROOT = {
  			free_random_operative = {
@@ -846,11 +848,6 @@
  
  				}
 
- 			}
- 			if = {
- 				limit = {
-
- 				}
 
  			}
  			if = {
@@ -858,11 +855,20 @@
 
  				}
 
+
  			}
  			if = {
  				limit = {
 
  				}
+
+
+ 			}
+ 			if = {
+ 				limit = {
+
+ 				}
+
 
  			}
  				#set_temp_variable = { coup_ideology@ROOT = PREV.ROOT.current_party_ideology_group }
@@ -2024,6 +2030,7 @@
  				steal_random_tech_bonus = {
  					folder = armour_folder
  					folder = ifv_folder
+ 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2042,6 +2049,8 @@
  		else = {
  			ROOT = {
  				steal_random_tech_bonus = {
+ 					folder = armour_folder
+ 					folder = ifv_folder
  					folder = armour_folder
  					folder = ifv_folder
  					folder = infantry_folder
@@ -2073,6 +2082,7 @@
  						steal_random_tech_bonus = {
  							folder = armour_folder
  							folder = ifv_folder
+ 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 
@@ -2089,6 +2099,8 @@
  				else = {
  					ROOT = {
  						steal_random_tech_bonus = {
+ 							folder = armour_folder
+ 							folder = ifv_folder
  							folder = armour_folder
  							folder = ifv_folder
  							folder = infantry_folder
@@ -2114,6 +2126,7 @@
  						steal_random_tech_bonus = {
  							folder = armour_folder
  							folder = ifv_folder
+ 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 	
@@ -2130,6 +2143,8 @@
  				else = {
  					ROOT = {
  						steal_random_tech_bonus = {
+ 							folder = armour_folder
+ 							folder = ifv_folder
  							folder = armour_folder
  							folder = ifv_folder
  							folder = infantry_folder
@@ -2156,6 +2171,7 @@
  				steal_random_tech_bonus = {
  					folder = armour_folder
  					folder = ifv_folder
+ 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2170,6 +2186,8 @@
  		else = {
  			ROOT = {
  				steal_random_tech_bonus = {
+ 					folder = armour_folder
+ 					folder = ifv_folder
  					folder = armour_folder
  					folder = ifv_folder
  					folder = infantry_folder
@@ -2254,6 +2272,7 @@
    			limit = { has_dlc = "Man the Guns"} 
    			ROOT = {
  				
+ 				
  				remove_operation_token = {
  					tag = FROM
  					token = token_navy
@@ -2262,6 +2281,7 @@
    		}
    		else = {
  	  		ROOT = {
+ 				
  				
  				remove_operation_token = {
  					tag = FROM
