@@ -53,3 +53,41 @@ GEH_GST_LS_category = {
 	}
 	priority = 114514
 }
+
+#古圣堂之战临时触发任务类别 - fgvfgfs
+GST_LS_ZZ_category = {
+	icon = generic_research
+
+	visible_when_empty = yes
+	visible = {
+		AND = {
+			OR = {
+				original_tag = TRI
+				original_tag = GEH
+			}
+			OR = {
+				has_war_with = GEH
+				has_war_with = TRI
+			}
+		}
+	}
+	priority = 114515
+}
+
+#古圣堂之战临时触发营救学生类别 - fgvfgfs
+GST_LS_HelpStu_category = {
+	icon = generic_research
+	visible_when_empty = yes
+	visible = {
+		AND = {
+			OR = {
+				original_tag = TRI
+				original_tag = GEH
+			}
+			any_character = {
+				has_character_flag = ARI_BeiBangJia
+			}
+		}
+	}
+	priority = 114513
+}

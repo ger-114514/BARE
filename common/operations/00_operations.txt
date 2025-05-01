@@ -3,7 +3,7 @@
 ## 2) required network strength
 ## eg. 1/70 comes before 2/40
 
- operation_rescue_operative = { ## 0 1/35
+ operation_rescue_operative = {
  	icon = GFX_operations_rescue_captured_operative
  	map_icon = GFX_operations_rescue_captured_operative_map
  	name = operation_rescue_operative
@@ -41,7 +41,6 @@
  	cost_multiplier = 0  
  	cost_multiplier = 0  
 
- 	outcome_execute = {  
  	outcome_execute = {  
  		ROOT = {
  			free_random_operative = {
