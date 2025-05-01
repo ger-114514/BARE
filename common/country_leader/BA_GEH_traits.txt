@@ -1,0 +1,12 @@
+@tier1 = 15
+
+leader_traits = {
+	GEH_FCCS_JingJiZhuangTaiWeiYuanHui = {
+		random = no
+		sprite = 1
+		mobilization_speed = 0.5 #动员速度修正
+		stability_weekly_factor = -0.01 #每周稳定度修正
+		political_power_factor = -0.15 #每日政治点修正
+		war_support_weekly_factor = 0.01
+	}
+}

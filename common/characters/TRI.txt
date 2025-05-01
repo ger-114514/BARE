@@ -1,7 +1,7 @@
 
 characters={
     ###圣三一TRI 开始###
-    TRI_seia ={ 
+    TRI_seia ={ #茶话会 - 百合园圣娅
 		name=TRI_seia_name 
 		portraits={
 			civilian={
@@ -56,7 +56,7 @@ characters={
 
 	}
 
-    TRI_nagisa = { 
+    TRI_nagisa = { #茶话会 - 桐藤渚
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -68,12 +68,36 @@ characters={
         country_leader = {
 			ideology = no_ideology_type
 			traits = { mild_leader }
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 
         field_marshal = {
 			traits = {bearer_of_artillery brilliant_strategist
+			}
+			visible = {
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+								has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							}
+							NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+						}
+					}
+				}
 			}
 			skill = 3
 			attack_skill = 3
@@ -83,7 +107,7 @@ characters={
 		}
 
 	}
-	TRI_missing_nagisa = { 
+	TRI_missing_nagisa = { #茶话会 - 桐藤渚(失踪)
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -95,13 +119,13 @@ characters={
         country_leader = {
 			ideology = no_ideology_type
 			traits = { missing_leader }
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 
 	}
 
-    TRI_mika ={ 
+    TRI_mika ={ #茶话会 - 圣园未花
 		name=TRI_mika_name 
 		portraits={
 			civilian={
@@ -509,7 +533,7 @@ characters={
         country_leader = {
 			ideology = no_ideology_type
 			traits = { h_loved_sage }
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 
@@ -760,7 +784,7 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				sweet_nurse
 			}
@@ -781,7 +805,7 @@ characters={
 
 	}
 
-    TRI_tsurugi ={ 
+    TRI_tsurugi = { #剑先鹤城 - 正义委
 		name=TRI_tsurugi_name 
 		portraits={
 			civilian={
@@ -843,12 +867,12 @@ characters={
 
 	}
 
-    TRI_hasumi ={ 
+    TRI_hasumi = { #羽川莲见 - 正义委
 		name=TRI_hasumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_hasumi
-				small=GFX_portrait_TRI_hasumi_small
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_hasumi
+				small = GFX_portrait_TRI_hasumi_small
 			}	
 		}
 
@@ -904,12 +928,12 @@ characters={
 
 	}
 
-    TRI_mashiro ={ 
-		name=TRI_mashiro_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_mashiro
-				small=GFX_portrait_TRI_mashiro_small
+    TRI_mashiro = { #静山真白 - 正义委
+		name = TRI_mashiro_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_mashiro
+				small = GFX_portrait_TRI_mashiro_small
 			}	
 		}
 
@@ -959,12 +983,12 @@ characters={
 
 	}
 
-    TRI_ichika ={ 
-		name=TRI_ichika_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_ichika
-				small=GFX_portrait_TRI_ichika_small
+    TRI_ichika = { #仲正一花 - 正义委
+		name = TRI_ichika_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_ichika
+				small = GFX_portrait_TRI_ichika_small
 			}	
 		}
 
@@ -1326,7 +1350,7 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				hightly_welcomed_sister
 			}

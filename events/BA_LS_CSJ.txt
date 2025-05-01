@@ -13,25 +13,56 @@ country_event = {
 		ai_chance = {
 			base = 114
 		}
-
+		#TRI_unity 圣三一团结度
 		if = {
-			#TRI_unity 圣三一团结度
-			limit = { 
+			limit = {
 				ARI = {
 					check_variable = {
 						var = ARI_ZhunBeiDu #准备度
-						value = 49
-						compare = greater_than_or_equals #大于等于
+						value = 46
+						compare = less_than_or_equals #小于等于
 					}
+				}
+			}
+			GEH = {
+				add_war_support = 0.05 #战争支持度修正
+				add_stability = -0.05 #稳定度修正
+				add_dynamic_modifier = {
+					modifier = GEH_a_unpredictable_attack #措手不及
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				ARI = {
+					AND = {
+						check_variable = {
+							var = ARI_ZhunBeiDu #准备度
+							value = 46
+							compare = greater_than_or_equals #大于等于
+						}
+						check_variable = {
+							var = ARI_ZhunBeiDu #准备度
+							value = 91
+							compare = less_than_or_equals #小于等于
+						}
+					}
+				}
+			}
+			for_each_loop = {
+				array = global.ARI_ShouHaiZheMingDan_ER
+				value = v
+				var:v = {
+					set_character_flag = ARI_BeiBangJia
 				}
 			}
 
 			TRI = {
+				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
 				declare_war_on = { #向指定国家宣战
 					target = GEH #被宣战国家TAG
 					type = topple_government #战争目标类型 - 颠覆政权
 				}
-
 				complete_national_focus = TRI_unexpected_accident 
 				load_focus_tree = { #加载国策树
 					tree = TRI_focus_stage_2
@@ -41,18 +72,60 @@ country_event = {
 			}
 
 			GEH = {
-				GEH_ako = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = { 
-							ideology = no_ideology_type
-							traits = {
-								#特质搜不到
-							}
-							expire = "-1.1.1.1"
-							id = -1
-						}
+				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
+				promote_character = {
+					character = GEH_ako
+					ideology = no_ideology_type
+				}
+				add_dynamic_modifier = {
+					modifier = GEH_a_unpredictable_attack #措手不及
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				ARI = {
+					check_variable = {
+						var = ARI_ZhunBeiDu #准备度
+						value = 91
+						compare = greater_than_or_equals #大于等于
 					}
+				}
+			}
+
+			for_each_loop = {
+				array = global.ARI_ShouHaiZheMingDan_SAN
+				value = v
+				var:v = {
+					set_character_flag = ARI_BeiBangJia
+				}
+				log = "asdfasfaf"
+			}
+			
+			TRI = {
+				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				declare_war_on = { #向指定国家宣战
+					target = GEH #被宣战国家TAG
+					type = topple_government #战争目标类型 - 颠覆政权
+				}
+				complete_national_focus = TRI_unexpected_accident 
+				load_focus_tree = { #加载国策树
+					tree = TRI_focus_stage_2
+					keep_completed = yes #保持已完成的共享国策
+					copy_completed_from = root #从当前国家复制国策完成状态
+				}
+			}
+			GEH = {
+				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				add_ideas = {
+					GEH_army_in_chaos
+				}
+				add_dynamic_modifier = {
+					modifier = GEH_a_unpredictable_attack
+				}
+				promote_character = {
+					character = GEH_JingJiZhuangTaiWeiYuanHui
+					ideology = no_ideology_type
 				}
 			}
 		}
@@ -66,11 +139,13 @@ country_event = {
 	}
 
 	immediate = {
-		launch_nuke = {
-			province = 5612
-		}
-		launch_nuke = {
-			province = 7663
+		hidden_effect = {
+			launch_nuke = {
+				province = 5612
+			}
+			launch_nuke = {
+				province = 7663
+			}
 		}
 	}
 }
@@ -129,9 +204,17 @@ country_event = {
 		#古圣堂获得48个阿里乌斯突袭特战部队 以及12个阿里乌斯突袭后备部队
 		140 = { #古圣堂位于140 已改 原138 -fgvfgfs
 			create_unit = {
-				division = "name = \"阿里乌斯突袭特战部队\" division_template = \"阿里乌斯突袭特战部队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+				division = "name = \"圣徒会的投影\" division_template = \"圣徒会的投影\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 				owner = ROOT
 				count = 48
+				allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
+				divisional_commander_xp = 1000 #为战地指挥官分配经验
+			}
+
+			create_unit = {
+				division = "name = \"阿里乌斯突袭特战部队\" division_template = \"阿里乌斯突袭特战部队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+				owner = ROOT
+				count = 5
 				allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
 				divisional_commander_xp = 1000 #为战地指挥官分配经验
 			}
@@ -170,6 +253,21 @@ country_event = {
 		news_event = {
 			id = LS_GST.4
 			days = 7
+		}
+		
+		country_event = {
+			id = LS_GST.5
+			days = 2
+		}
+
+		country_event = {
+			id = LS_GST.6
+			days = 14
+		}
+
+		country_event = {
+			id = LS_GST.7
+			days = 18
 		}
 
 		declare_war_on = { #向指定国家宣战
@@ -213,5 +311,89 @@ news_event = {
 			original_tag = TRI
 		}
 		name = LS_GST.4.b
+	}
+}
+
+country_event = {
+	id = LS_GST.5
+	title = LS_GST.5.t
+	desc = LS_GST.5.d
+
+	is_triggered_only = yes
+	timeout_days = 7
+
+	option = {
+		name = LS_GST.5.a
+
+		custom_effect_tooltip = ARI_YJFASHENG_LOC
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = {
+				ARI_eden_action_chaos #行动混乱
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LS_GST.6
+	title = LS_GST.6.t
+	desc = LS_GST.6.d
+
+	is_triggered_only = yes
+	timeout_days = 7
+
+	option = {
+		name = LS_GST.6.a
+		custom_effect_tooltip = ARI_YJFASHENG_LOC_2
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = {
+				ARI_eden_mystery_infantry_debuff_4 #被削弱的投影
+			}
+			delete_units = {
+				division_template = "圣徒会的投影"
+				disband = no
+			}
+			140 = {
+				create_unit = {
+					division = "name = \"圣徒会的投影\" division_template = \"圣徒会的投影\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 48
+					allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
+					divisional_commander_xp = 1 #为战地指挥官分配经验
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LS_GST.7
+	title = LS_GST.7.t
+	desc = LS_GST.7.d
+	is_triggered_only = yes
+	timeout_days = 7
+	option = {
+		name = LS_GST.7.a
+	}
+
+	immediate = {
+		hidden_effect = {
+			for_each_loop = {
+				array = global.GST_JS_ZBH #为每个州执行效果
+				value = v
+	
+				var:v = {
+					add_dynamic_modifier = {
+						modifier = test_manpower_modifier
+					}
+				}
+			}
+		}
 	}
 }
