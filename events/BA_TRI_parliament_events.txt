@@ -110,6 +110,10 @@ country_event = { #法案未通过
 				add_to_array = { TRI_bills_to_be_passed = var:TRI_debated_bill }
 			}
 			clear_variable = TRI_debated_bill
+			clear_variable = bill_support@BA_TRI_senate_seat
+			clear_variable = temp_support@BA_TRI_senate_seat
+			clear_variable = bill_support@BA_TRI_house_seat
+			clear_variable = temp_support@BA_TRI_house_seat
 		}
 	}
 	option = {

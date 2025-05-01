@@ -1,0 +1,44 @@
+ARI_historical_plan = {
+	name = "Trinity Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TRI
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no 
+	}
+
+	ai_national_focuses = {
+		TRI_pax_trinity
+		TRI_1st_eden_pact
+		TRI_prepare_for_eden
+		TRI_calling_for_sisterhood
+		TRI_restart_domestic_struggle
+
+		TRI_Bill_of_copper_olive
+		TRI_authorize_dove_faction
+		
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		base = 1
+		factor = 1.0
+	}
+
+}

@@ -188,6 +188,9 @@ country_event = {
 
     option = {
 		name = TRI_events.6.a
+        set_temp_variable = { target_faction = token:BOP_hardliner }
+        set_temp_variable = { loyalty_change = 0.03 }
+        TRI_parliament_loyalty_change_faction = yes
 
 		ai_chance = {
 			base = 100
@@ -196,6 +199,9 @@ country_event = {
 
     option = {
 		name = TRI_events.6.b
+        set_temp_variable = { target_faction = token:BOP_conservative }
+        set_temp_variable = { loyalty_change = 0.03 }
+        TRI_parliament_loyalty_change_faction = yes
 
 		ai_chance = {
 			base = 100
@@ -204,6 +210,9 @@ country_event = {
 
     option = {
 		name = TRI_events.6.c
+        set_temp_variable = { target_faction = token:BOP_moderate }
+        set_temp_variable = { loyalty_change = 0.03 }
+        TRI_parliament_loyalty_change_faction = yes
 
 		ai_chance = {
 			base = 100

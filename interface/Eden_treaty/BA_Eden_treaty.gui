@@ -54,21 +54,25 @@ guiTypes = {
 			name ="Eden_treaty_negotiation_TRI_victory_2"
 			spriteType = "Eden_treaty_negotiation_victory_mark_TRI"
 			position = { x = 149 y = 242 }
+			pdx_tooltip = Eden_treaty_victory_mark_tt
 		}
 		iconType = {
 			name ="Eden_treaty_negotiation_TRI_victory_1"
 			spriteType = "Eden_treaty_negotiation_victory_mark_TRI"
 			position = { x = 149 y = 210 }
+			pdx_tooltip = Eden_treaty_victory_mark_tt
 		}
 		iconType = {
 			name ="Eden_treaty_negotiation_GEH_victory_2"
 			spriteType = "Eden_treaty_negotiation_victory_mark_GEH"
 			position = { x = 308 y = 242 }
+			pdx_tooltip = Eden_treaty_victory_mark_tt
 		}
 		iconType = {
 			name ="Eden_treaty_negotiation_GEH_victory_1"
 			spriteType = "Eden_treaty_negotiation_victory_mark_GEH"
 			position = { x = 308 y = 210 }
+			pdx_tooltip = Eden_treaty_victory_mark_tt
 		}
 
 	}

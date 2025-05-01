@@ -184,7 +184,24 @@ focus_tree = {
 				relative_position_id = TRI_authorize_dove_faction
 				prerequisite = { focus = TRI_authorize_dove_faction }
 				prerequisite = { focus = TRI_turncoat_in_trinity }
-				
+				available = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = TRI_focus_support_trigger
+							PARLIAMENT = BA_TRI_senate_seat
+							SUPPORT = "20"
+						}
+						check_variable = { position_support@BA_TRI_senate_seat > 20 }
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = TRI_focus_support_trigger
+							PARLIAMENT = BA_TRI_house_seat
+							SUPPORT = "56"
+						}
+						check_variable = { position_support@BA_TRI_house_seat > 56 }
+					}
+				}
 				cost = 10
 				x = 0
 				y = 2
@@ -192,12 +209,10 @@ focus_tree = {
 				select_effect = {
 				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 70
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 70 }
 					}
 					add_political_power = 75
 					country_event = TRI_events.9
@@ -206,8 +221,8 @@ focus_tree = {
 					TRI_parliament_against_radicalism_change = yes
 					set_temp_variable = { radicalism_change = -0.1 }
 					TRI_parliament_non_against_radicalism_change = yes
-					#桐藤渚偏执度-10%
-					TRI_paranoia_decrease_10 = yes
+					#桐藤渚偏执度-20%
+					TRI_paranoia_decrease_20 = yes
 					#圣三一下议会+10支持席位
 					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
 					set_temp_variable = { loyalty_change = 0.1 }
@@ -225,14 +240,12 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					custom_effect_tooltip = eden_step_0_to_1_desc
 					hidden_effect = {
@@ -256,14 +269,12 @@ focus_tree = {
 				y = 2
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					set_temp_variable = { bill = token:TRI_Bill_of_disclosure }
 					TRI_submit_the_bill = yes
@@ -301,14 +312,12 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					random_owned_controlled_state = {
 						limit = {
@@ -351,14 +360,12 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					add_stability = 0.05
 					set_country_flag = TRI_rebuild_communication_channel
@@ -392,14 +399,12 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					add_political_power = 100
 					add_stability = 0.05
@@ -426,11 +431,11 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
 						add_to_variable = {
 							TRI_political_focus_duration = 35
 						}
@@ -457,14 +462,12 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
+				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					#电子科技100%加速卡x1
 					add_tech_bonus = {
@@ -496,12 +499,10 @@ focus_tree = {
 				select_effect = {
 				}
 				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					#获取工业加速卡50%x1
 					add_tech_bonus = {
@@ -566,7 +567,6 @@ focus_tree = {
 					#桐藤渚偏执度-5
 					set_temp_variable = { TRI_paranoia_change = -5 }
 					TRI_change_paranoia = yes
-					TRI_unity_decrease_5 = yes
 					country_event = TRI_events.8
 					add_dynamic_modifier = { modifier = TRI_special_services_investigations }
 					#桐藤渚获得特质描述
@@ -617,7 +617,6 @@ focus_tree = {
 						add_to_variable = { ssi_political_power_gain = -0.10 }
 						add_to_variable = { ssi_stability = 0.05 }
 					}
-					TRI_unity_decrease_5 = yes
 					custom_effect_tooltip = TRI_investigation_in_care_ns_tt
 					#于决议组下添加GUI：【圣三一情报局】并启用决议组：【对内部的调查】
 					custom_effect_tooltip = TRI_paranoia_new_investigation_decisions_tt
@@ -1291,14 +1290,12 @@ focus_tree = {
 				y = 3
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					}
-					completion_reward = {
-						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+				}
+				completion_reward = {
 					if = {
 						limit = { has_country_flag = TRI_paranoia_system_active }
-						add_to_variable = {
-							TRI_political_focus_duration = 35
-						}
+						custom_effect_tooltip = TRI_dont_always_pick_political_focus
+						add_to_variable = { TRI_political_focus_duration = 35 }
 					}
 					add_political_power = 100
 					country_event = TRI_events.25
@@ -1348,14 +1345,12 @@ focus_tree = {
 			y = 0
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				add_stability = 0.1
 				custom_effect_tooltip = when_completed_if_tt
@@ -1379,10 +1374,24 @@ focus_tree = {
 					if = {
 						limit = { check_variable = { position_support@BA_TRI_senate_seat > 22 } }
 						complete_national_focus = TRI_threading_a_needle
+						clr_country_flag = TRI_senate_promise_task_1
+						clr_country_flag = TRI_senate_promise_task_2
+						clr_country_flag = TRI_senate_promise_task_3
+						custom_effect_tooltip = {
+							localization_key = TRI_complete_all_promise_task_tt
+							PARLIAMENT = BA_TRI_senate_seat
+						}
 					}
 					if = {
-						limit = { check_variable = { position_support@BA_TRI_house_seat > 80 } }
+						limit = { check_variable = { position_support@BA_TRI_house_seat > 64 } }
 						complete_national_focus = TRI_return_a_favor
+						clr_country_flag = TRI_house_promise_task_1
+						clr_country_flag = TRI_house_promise_task_2
+						clr_country_flag = TRI_house_promise_task_3
+						custom_effect_tooltip = {
+							localization_key = TRI_complete_all_promise_task_tt
+							PARLIAMENT = BA_TRI_house_seat
+						}
 					}
 				}
 				unlock_decision_tooltip = {
@@ -1419,14 +1428,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				add_political_power = 100
 				random_controlled_state = {
@@ -1465,6 +1472,10 @@ focus_tree = {
 					}
 				}
 				#TODO:于议会中添加“对派系的许诺”决议，解锁玩家选择接受上议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
+				set_country_flag = TRI_threading_a_needle
+				set_country_flag = TRI_senate_promise_task_1
+				set_country_flag = TRI_senate_promise_task_2
+				set_country_flag = TRI_senate_promise_task_3
 			}
 		}
 		focus = { #重整旗鼓
@@ -1487,14 +1498,12 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				add_war_support = 0.1
 				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
@@ -1526,14 +1535,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				add_political_power = 100
 				random_controlled_state = {
@@ -1571,6 +1578,10 @@ focus_tree = {
 					}
 				}
 				#TODO:于议会中添加“对派系的许诺”决议，解锁玩家选择接受下议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
+				set_country_flag = TRI_return_a_favor
+				set_country_flag = TRI_house_promise_task_1
+				set_country_flag = TRI_house_promise_task_2
+				set_country_flag = TRI_house_promise_task_3
 			}			
 		}
 		focus = { #物尽其用
@@ -1593,14 +1604,12 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				add_stability = 0.15
 				custom_effect_tooltip = TRI_making_the_best_use_tt
@@ -1624,14 +1633,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				set_country_flag = TRI_rebuilding_subsidy
 				custom_effect_tooltip = TRI_rebuilding_subsidy_tt
@@ -1649,14 +1656,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				#工业加成卡100％x1
 				add_tech_bonus = {
@@ -1786,14 +1791,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				set_temp_variable = { bill = token:TRI_Bill_of_regaining_trust }
 				TRI_submit_the_bill = yes
@@ -1813,14 +1816,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			select_effect = {
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				add_political_power = 100
 				#暂时锁定GUI【圣三一的团结】的数值
@@ -1853,14 +1854,13 @@ focus_tree = {
 				}
 			}
 			completion_reward = {
-				custom_effect_tooltip = TRI_dont_always_pick_political_focus
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
-					add_to_variable = {
-						TRI_political_focus_duration = 35
-					}
+					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+					add_to_variable = { TRI_political_focus_duration = 35 }
 				}
 				effect_tooltip = {
+					Eden_treaty_formally_signed = yes
 					remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
 					add_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
 					custom_effect_tooltip = eden_step_2_to_3
@@ -2517,6 +2517,7 @@ focus_tree = {
 				set_temp_variable = { influence_change = 5 }
 				for_each_loop = {
 					array = TRI_regions
+					value = region
 					TRI_change_region_association_influence = yes
 				}
 				custom_effect_tooltip = TRI_teaparty_leading_tt
@@ -2814,6 +2815,7 @@ focus_tree = {
 				set_variable = { TRI_political_focus_duration = 0 }
 			}
 			completion_reward = {
+				set_country_flag = TRI_multi_association_exercise
 				activate_mission = TRI_joint_exercise
 			}			
 		}

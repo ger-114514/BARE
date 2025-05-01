@@ -36,6 +36,8 @@
  TRI_association_focus_position_conservative: "[?focus_position@var:association|0%Y]"
  TRI_association_focus_position_hardliner: "[?focus_position@var:association|0%R]"
 
+ TRI_next_house_election: "下一次下议院选举"
+ TRI_parliament_house_election_result: "重新选举下议院"
  TRI_get_patel_details: "要求$TRI_parliament_association_0$表明政见"
  TRI_get_filius_details: "要求$TRI_parliament_association_1$表明政见"
  TRI_get_cootes_details: "要求$TRI_parliament_association_2$表明政见"
@@ -96,10 +98,12 @@
  TRI_focus_pp_gain_tt: "根据赞成与对立数差额，我们的政治点将[?TRI_focus_pp_gain|=+0]"
  BA_TRI_set_parliament_focus_tt: "设置焦点为：[?TRI_focus.GetTokenLocalizedKey]"
 
+ TRI_get_temp_bill_support_tt: "[?parliament.GetTokenLocalizedKey]对当前法案的支持数：[?support_get|=+0]"
  TRI_submit_the_bill_tt: "§Y[?bill.GetTokenLocalizedKey]§!将直接进入议会讨论。\n若法案通过，将产生以下影响：\n"
  TRI_not_submit_the_bill_tt: "由于议会处于休会期或正在讨论其它法案，§Y[?bill.GetTokenLocalizedKey]§!需要在此后通过决议向议会提交。\n若法案通过，将产生以下影响：\n"
  TRI_need_detail_tt: "§Y若对立社团的具体政见未知，它所提供的支持票将§!§R减半§!"
  TRI_parliament_loyalty_change_tt: "§Y$TARGET$§!社团：支持度：[?loyalty_change|%+=0]"
+ TRI_parliament_loyalty_change_parliament_non_faction_tt: "§Y[?target_parliament.GetTokenLocalizedKey]§!非§Y$TARGET$§!社团：支持度：[?loyalty_change|%+=0]"
  TRI_parliament_radicalism_change_tt: "§Y$TARGET$§!社团：激进度：[?radicalism_change|%=-0]"
  TRI_get_temp_bill_support: "$BILL|Y$将额外获得上议院的$SENATE|G$支持票和下议院的$HOUSE|G$支持票"
 
@@ -129,6 +133,13 @@
  TRI_parliament_focus.2.c: "反对"
 
  TRI_parliament_focus_successfully_signed_Eden: "§Y胜利签订的《伊甸条约》§!"
+
+ TRI_senate_limited_lesson_adjustment: "允许上议院有限度的调整课程"
+ TRI_senate_relax_economic_control: "放宽对上议院的经济管控"
+ TRI_house_limited_lesson_adjustment: "允许下议院有限度的调整课程"
+ TRI_house_relax_economic_control: "放宽对下议院的经济管控"
+ TRI_complete_promise_task_tt: "完成$PARLIAMENT|Y$的这一任务视为已经完成"
+ TRI_complete_all_promise_task_tt: "完成所有三个$PARLIAMENT|Y$的任务"
 
  TRI_BOP_appease_association: "安抚社团成员"
  TRI_BOP_appease_association_1: "安抚社团成员——低投入"
@@ -189,11 +200,15 @@
  TRI_Bill_of_disclosure: "开诚布公法案"
  TRI_Bill_of_disclosure_tt: "可以采取决议获知各社团的具体政见"
  TRI_bill_voting_decisions_categories: "法案投票"
- TRI_bill_voting_decisions_categories_desc: "正在审议的法案：§Y[?TRI_debated_bill.GetTokenLocalizedKey]§!\n各派系对该法案的基础支持率：\n$BOP_hardliner$：[?hardliner_support@var:TRI_debated_bill|Y%0]\n$BOP_conservative$：[?conservative_support@var:TRI_debated_bill|Y%0]\n$BOP_moderate$：[?moderate_support@var:TRI_debated_bill|Y%0]\n\n上议院需要多于[?senate_needed_support@var:TRI_debated_bill|Y0]支持，当前[?bill_support@BA_TRI_senate_seat|Y0]\n下议院需要多于[?house_needed_support@var:TRI_debated_bill|Y0]支持，当前[?bill_support@BA_TRI_house_seat|Y0]"
+ TRI_bill_voting_decisions_categories_desc: "正在审议的法案：§Y[?TRI_debated_bill.GetTokenLocalizedKey]§!\n各派系对该法案的基础支持率：\n$BOP_hardliner$：[?hardliner_support@var:TRI_debated_bill|Y%0]\n$BOP_conservative$：[?conservative_support@var:TRI_debated_bill|Y%0]\n$BOP_moderate$：[?moderate_support@var:TRI_debated_bill|Y%0]\n\n上议院需要多于[?senate_needed_support@var:TRI_debated_bill|Y0]支持，当前[?bill_support@BA_TRI_senate_seat|Y0]（其中有[?temp_support@BA_TRI_senate_seat|Y0]个临时支持票）\n下议院需要多于[?house_needed_support@var:TRI_debated_bill|Y0]支持，当前[?bill_support@BA_TRI_house_seat|Y0]（其中有[?temp_support@BA_TRI_house_seat|Y0]个临时支持票）"
  TRI_vote_for_the_bill: "审议法案中"
  TRI_parliament_adjourn: "议会休会中"
  TRI_emergent_voting: "紧急召集议会"
  TRI_emergent_voting_tt: "立刻结束议会休会期，允许再次递交法案"
+ TRI_earn_extra_senate_support: "争取上议院支持"
+ TRI_bill_senate_support_not_enough: "§Y我们在上议院获得的支持票不足§!"
+ TRI_earn_extra_house_support: "争取下议院支持"
+ TRI_bill_house_support_not_enough: "§Y我们在下议院获得的支持票不足§!"
  TRI_submit_Bill_of_carrot_cake: "递交“胡萝卜蛋糕”法案"
  TRI_submit_Bill_of_copper_olive: "递交“铜橄榄”法案"
  TRI_submit_Bill_of_disclosure: "递交开诚布公法案"

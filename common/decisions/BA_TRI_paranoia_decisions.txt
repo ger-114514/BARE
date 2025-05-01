@@ -245,7 +245,7 @@ TRI_paranoia_system = {
 
 		cost = 20
 		days_remove = 7
-
+		days_re_enable = 180
 		complete_effect = {
 			set_country_flag = TRI_paranoia_conducting_inspection_flag
 			set_country_flag = TRI_paranoia_association_inspection_flag

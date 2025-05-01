@@ -1,15 +1,197 @@
 TRI_parliament_decisions_categories = {
+	TRI_senate_task = { #上议院任务1
+		visible = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_threading_a_needle
+				}
+				has_country_flag = TRI_threading_a_needle
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TRI_senate_promise_task_2 }
+				clr_country_flag = TRI_senate_promise_task_2
+				custom_effect_tooltip = {
+					localization_key = TRI_complete_promise_task_tt
+					PARLIAMENT = BA_TRI_senate_seat
+				}
+			}
+		}
+	}
+	TRI_senate_limited_lesson_adjustment = { #允许上议院有限度的调整课程
+		visible = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_threading_a_needle
+				}
+				has_country_flag = TRI_threading_a_needle
+			}
+		}
+		days_remove = 60
+		days_re_enable = 120
+		modifier = {
+			research_speed_factor = -0.05
+			stability_factor = -0.05
+		}
+		complete_effect = {
+			set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { loyalty_change = 0.03 }
+			TRI_parliament_loyalty_change_parliament = yes
+			if = {
+				limit = { has_country_flag = TRI_senate_promise_task_2 }
+				clr_country_flag = TRI_senate_promise_task_2
+				custom_effect_tooltip = {
+					localization_key = TRI_complete_promise_task_tt
+					PARLIAMENT = BA_TRI_senate_seat
+				}
+			}
+		}
+	}
+	TRI_senate_relax_economic_control = { #放宽对上议院的经济管控
+		visible = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_threading_a_needle
+				}
+				has_country_flag = TRI_threading_a_needle
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		days_remove = 60
+		days_re_enable = 120
+		modifier = {
+			stability_factor = -0.05
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { target_faction = TRI_player_focus_faction }
+			set_temp_variable = { loyalty_change = 0.1 }
+			TRI_parliament_loyalty_change_parliament_non_faction = yes
+			if = {
+				limit = { has_country_flag = TRI_senate_promise_task_3 }
+				clr_country_flag = TRI_senate_promise_task_3
+				custom_effect_tooltip = {
+					localization_key = TRI_complete_promise_task_tt
+					PARLIAMENT = BA_TRI_senate_seat
+				}
+			}
+		}
+	}
+	TRI_house_task = { #上议院任务1
+		visible = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_threading_a_needle
+				}
+				has_country_flag = TRI_threading_a_needle
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TRI_house_promise_task_2 }
+				clr_country_flag = TRI_house_promise_task_2
+				custom_effect_tooltip = {
+					localization_key = TRI_complete_promise_task_tt
+					PARLIAMENT = BA_TRI_house_seat
+				}
+			}
+		}
+	}
+	TRI_house_limited_lesson_adjustment = { #允许下议院有限度的调整课程
+		visible = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_return_a_favor
+				}
+				has_country_flag = TRI_return_a_favor
+			}
+		}
+		days_remove = 60
+		days_re_enable = 120
+		modifier = {
+			research_speed_factor = -0.05
+			stability_factor = -0.05
+		}
+		complete_effect = {
+			set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { loyalty_change = 0.03 }
+			TRI_parliament_loyalty_change_parliament = yes
+			if = {
+				limit = { has_country_flag = TRI_house_promise_task_2 }
+				clr_country_flag = TRI_house_promise_task_2
+				custom_effect_tooltip = {
+					localization_key = TRI_complete_promise_task_tt
+					PARLIAMENT = BA_TRI_house_seat
+				}
+			}
+		}
+	}
+	TRI_house_relax_economic_control = { #放宽对下议院的经济管控
+		visible = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_return_a_favor
+				}
+				has_country_flag = TRI_return_a_favor
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		days_remove = 60
+		days_re_enable = 120
+		modifier = {
+			stability_factor = -0.05
+			civilian_factory_use = 2
+		}
+		complete_effect = {
+			set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { target_faction = TRI_player_focus_faction }
+			set_temp_variable = { loyalty_change = 0.1 }
+			TRI_parliament_loyalty_change_parliament_non_faction = yes
+			if = {
+				limit = { has_country_flag = TRI_house_promise_task_3 }
+				clr_country_flag = TRI_house_promise_task_3
+				custom_effect_tooltip = {
+					localization_key = TRI_complete_promise_task_tt
+					PARLIAMENT = BA_TRI_house_seat
+				}
+			}
+		}
+	}
 	#安抚社团成员
 	TRI_BOP_appease_association = {
 		visible = {
 			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 		}
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		days_re_enable = 40
 		complete_effect = {
-			set_variable = { appease_association_target = var:BA_TRI_parliament_decision_target }
+			set_variable_to_random = {
+				var = i
+				min = 0
+				max = 6
+				integer = yes
+			}
+			set_variable = { appease_association_target = TRI_parliament_association^i }
 			country_event = TRI_BOP_decision.5
 		}
 	}
@@ -111,7 +293,13 @@ TRI_parliament_decisions_categories = {
 		}
 		
 		complete_effect = {
-			set_variable = { association_stability_target = var:BA_TRI_parliament_decision_target }
+			set_variable_to_random = {
+				var = i
+				min = 0
+				max = 6
+				integer = yes
+			}
+			set_variable = { association_stability_target = TRI_parliament_association^i }
 			country_event = TRI_BOP_decision.7
 		}
 	}
@@ -208,6 +396,48 @@ TRI_bill_voting_decisions_categories = {
 		remove_effect = {
 			custom_effect_tooltip = TRI_emergent_voting_tt
 			clr_country_flag = TRI_parliament_adjourn
+		}
+	}
+	TRI_earn_extra_senate_support = {
+		visible = {
+			has_variable = TRI_debated_bill
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = TRI_bill_senate_support_not_enough
+				NOT = { check_variable = { bill_support@BA_TRI_senate_seat > senate_needed_support@var:TRI_debated_bill } }
+			}
+		}
+		cost = 100
+		days_re_enable = 35
+		complete_effect = {
+			set_temp_variable = { parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { support_get = 1 }
+			TRI_get_temp_bill_support = yes
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+	TRI_earn_extra_house_support = {
+		visible = {
+			has_variable = TRI_debated_bill
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = TRI_bill_house_support_not_enough
+				NOT = { check_variable = { bill_support@BA_TRI_house_seat > senate_needed_support@var:TRI_debated_bill } }
+			}
+		}
+		cost = 100
+		days_re_enable = 35
+		complete_effect = {
+			set_temp_variable = { parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { support_get = 3 }
+			TRI_get_temp_bill_support = yes
+		}
+		ai_will_do = {
+			base = 50
 		}
 	}
 	skip_voting = {
