@@ -135,14 +135,7 @@ operation_sabotage_things = {
 	phases = { #exfiltration
 		exfiltration_air_pickup = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 		exfiltration_border = { base = 50 }
 	}	
@@ -204,7 +197,7 @@ operation_steal_tech_indus_civilian = { ### 12 3/35
 			}
 		}
 	}
-	outcome_extra_execute = { # SCOPE_OPERATION
+	outcome_extra_execute = { #   
 		random_list = {
 			80 = {
 				ROOT = {
@@ -258,14 +251,7 @@ operation_steal_tech_indus_civilian = { ### 12 3/35
 		infiltration_border = { base = 50 }
 		infiltration_paradrop = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 	}
 	phases = { #blueprint theft
@@ -274,14 +260,7 @@ operation_steal_tech_indus_civilian = { ### 12 3/35
 	phases = { #exfiltration
 		exfiltration_air_pickup = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 		exfiltration_border = { base = 50 }
 	}
@@ -343,7 +322,7 @@ operation_steal_tech_elec_civilian = { ### 12 3/35
 			}
 		}
 	}
-	outcome_extra_execute = { # SCOPE_OPERATION
+	outcome_extra_execute = { #   
 		random_list = {
 			80 = {
 				ROOT = {
@@ -397,14 +376,7 @@ operation_steal_tech_elec_civilian = { ### 12 3/35
 		infiltration_border = { base = 50 }
 		infiltration_paradrop = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 	}
 	phases = { #blueprint theft
@@ -413,14 +385,7 @@ operation_steal_tech_elec_civilian = { ### 12 3/35
 	phases = { #exfiltration
 		exfiltration_air_pickup = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 		exfiltration_border = { base = 50 }
 	}
@@ -481,7 +446,7 @@ operation_steal_tech_armour_army = { ### 16 3/55
 			}
 		}
 	}
-	outcome_extra_execute = { # SCOPE_OPERATION
+	outcome_extra_execute = { #   
 		random_list = {
 			33 = {
 				ROOT = {
@@ -535,14 +500,7 @@ operation_steal_tech_armour_army = { ### 16 3/55
 		infiltration_border = { base = 50 }
 		infiltration_paradrop = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 	}
 	phases = { #blueprint theft
@@ -551,25 +509,18 @@ operation_steal_tech_armour_army = { ### 16 3/55
 	phases = { #exfiltration
 		exfiltration_air_pickup = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 		exfiltration_border = { base = 50 }
 	}
 }
 
 
-operation_steal_tech_artillery_army = { ### 16 3/55
+operation_steal_tech_ifv_army = { ### 16 3/55
 	icon = GFX_operations_steal_blueprints
 	map_icon = GFX_operations_steal_blueprints_map
-	name = operation_steal_tech_artillery_army
-	desc = operation_steal_tech_artillery_army_desc
+	name = operation_steal_tech_ifv_army
+	desc = operation_steal_tech_ifv_army_desc
 	priority = 16
 
 	days = 90
@@ -606,7 +557,7 @@ operation_steal_tech_artillery_army = { ### 16 3/55
 	outcome_execute = {
 		ROOT = {
 			steal_random_tech_bonus = {
-				folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+				folder = ifv_folder #炮兵科技，但是和步兵科技放一起了
 				bonus = 3.0
 				dynamic = yes
 				instant = yes
@@ -620,12 +571,12 @@ operation_steal_tech_artillery_army = { ### 16 3/55
 			}
 		}
 	}
-	outcome_extra_execute = { # SCOPE_OPERATION
+	outcome_extra_execute = { #   
 		random_list = {
 			33 = {
 				ROOT = {
 					steal_random_tech_bonus = {
-						folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+						folder = ifv_folder #炮兵科技，但是和步兵科技放一起了
 
 						bonus = 3.0
 						ahead_reduction = 2
@@ -640,7 +591,7 @@ operation_steal_tech_artillery_army = { ### 16 3/55
 			67 = {
 				ROOT = {
 					steal_random_tech_bonus = {
-						folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+						folder = ifv_folder #炮兵科技，但是和步兵科技放一起了
 
 						bonus = 3.0
 						dynamic = yes
@@ -658,7 +609,7 @@ operation_steal_tech_artillery_army = { ### 16 3/55
 	outcome_potential = {
 		ROOT = {
 			steal_random_tech_bonus = {
-				folder = infantry_folder #炮兵科技，但是和步兵科技放一起了
+				folder = ifv_folder #炮兵科技，但是和步兵科技放一起了
 				bonus = 3.0
 				dynamic = yes
 				instant = yes
@@ -675,14 +626,7 @@ operation_steal_tech_artillery_army = { ### 16 3/55
 		infiltration_border = { base = 50 }
 		infiltration_paradrop = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 	}
 	phases = { #blueprint theft
@@ -691,14 +635,7 @@ operation_steal_tech_artillery_army = { ### 16 3/55
 	phases = { #exfiltration
 		exfiltration_air_pickup = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 		exfiltration_border = { base = 50 }
 	}
@@ -761,7 +698,7 @@ operation_steal_tech_infantryandsupport_army = { ### 16 3/55
 			}
 		}
 	}
-	outcome_extra_execute = { # SCOPE_OPERATION
+	outcome_extra_execute = { #   
 		random_list = {
 			33 = {
 				ROOT = {
@@ -818,14 +755,7 @@ operation_steal_tech_infantryandsupport_army = { ### 16 3/55
 		infiltration_border = { base = 50 }
 		infiltration_paradrop = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 	}
 	phases = { #blueprint theft
@@ -834,14 +764,7 @@ operation_steal_tech_infantryandsupport_army = { ### 16 3/55
 	phases = { #exfiltration
 		exfiltration_air_pickup = { 
 			base = 50 
-			modifier = {
-				ROOT = { 
-					has_equipment = {
-						transport_plane_equipment < 1
-					}
-				}
-				factor = 0
-			}
+ 
 		}
 		exfiltration_border = { base = 50 }
 	}

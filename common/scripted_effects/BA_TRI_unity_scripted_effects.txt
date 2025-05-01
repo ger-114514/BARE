@@ -13,6 +13,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = -0.04 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0.35 }
 		set_variable = { TRI_unity_industrial_capacity_factory = -0.15 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = -0.5 }
 	}
 	else_if = {
 		limit = { check_variable = { TRI_unity < 40 } }
@@ -27,6 +28,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = -0.02 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0.2 }
 		set_variable = { TRI_unity_industrial_capacity_factory = -0.05 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = -0.125 }
 	}
 	else_if = {
 		limit = { check_variable = { TRI_unity < 60 } }
@@ -41,6 +43,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = 0 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0.1 }
 		set_variable = { TRI_unity_industrial_capacity_factory = 0 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = 0.25 }
 	}
 	else_if = {
 		limit = { check_variable = { TRI_unity < 80 } }
@@ -55,6 +58,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = 0.02 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0 }
 		set_variable = { TRI_unity_industrial_capacity_factory = 0.05 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = 0.675 }
 	}
 	else = {
 		set_variable = { TRI_unity_rank = 4 }
@@ -68,6 +72,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = 0.03 }
 		set_variable = { TRI_unity_consumer_goods_factor = -0.15 }
 		set_variable = { TRI_unity_industrial_capacity_factory = 0.1 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = 1 }
 	}
 	#【烽烟骤起】国策效果
 	if = {

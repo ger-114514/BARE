@@ -96,18 +96,23 @@ country_event = { #法案未通过
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
+			set_temp_variable = { TRI_bill_come_into_effect = 0 }
 			remove_ideas = var:TRI_debated_bill
+			if = {
+				limit = {
+					NOT = {
+						is_in_array = {
+							array = TRI_bills_to_be_passed
+							value = var:TRI_debated_bill
+						}
+					}
+				}
+				add_to_array = { TRI_bills_to_be_passed = var:TRI_debated_bill }
+			}
 			clear_variable = TRI_debated_bill
 		}
 	}
 	option = {
 		name = TRI_parliament_bill.2.a
-		activate_mission = TRI_vote_for_the_bill
-	}
-	option = {
-		name = TRI_parliament_bill.2.b
-		hidden_effect = {
-			clear_variable = TRI_debated_bill
-		}
 	}
 }

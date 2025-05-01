@@ -53,7 +53,7 @@ country_event = { #文职部员队伍中的阴谋
 		TRI_paranoia_increase_10 = yes
 	}
 }
-country_event = { #特殊事务调查部的背叛？
+country_event = { #圣三一情报局的背叛？
 	id = TRI_paranoia.3
 	title = TRI_paranoia.3.t
 	desc = TRI_paranoia.3.desc
@@ -66,6 +66,10 @@ country_event = { #特殊事务调查部的背叛？
 		}
 		add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 1 }
 		TRI_paranoia_decrease_30 = yes
+		set_country_flag = {
+			flag = TRI_paranoia_3_cd
+			days = 240
+		}
 
 		ai_chance = {
 			base = 10
@@ -80,6 +84,10 @@ country_event = { #特殊事务调查部的背叛？
 
 		add_political_power = -75
 		TRI_paranoia_increase_20 = yes
+		set_country_flag = {
+			flag = TRI_paranoia_3_cd
+			days = 240
+		}
 	}
 }
 
@@ -252,9 +260,7 @@ country_event = { #对社团的调查
 		set_temp_variable = { loyalty_change = 0.2 }
 		set_temp_variable = { association = selected_association_t }
 		TRI_parliament_loyalty_change = yes
-		set_temp_variable = { TRI_paranoia_change = TRI_policy_change_num_real }
-		multiply_temp_variable = { TRI_paranoia_change = -5 }
-		TRI_change_paranoia = yes
+		TRI_paranoia_decrease_20 = yes
 
 		clear_variable = selected_association_t
 		clr_country_flag = TRI_paranoia_association_inspection_flag
@@ -264,7 +270,7 @@ country_event = { #对社团的调查
 		name = TRI_paranoia.31.b
 		TRI_paranoia_decrease_10 = yes
 
-		set_temp_variable = { TRI_policy_change_num = 0.1 }
+		set_temp_variable = { loyalty_change = 0.1 }
 		set_temp_variable = { association = selected_association_t }
 		TRI_parliament_loyalty_change = yes
 		

@@ -82,7 +82,7 @@ country_event = {
     option = {
 		name = TRI_events.2.a
         hidden_effect = {
-            news_event = TRI_events.1000
+            news_event = Eden_pact.1000
         }
 		ai_chance = {
 			base = 100
@@ -167,6 +167,7 @@ country_event = {
             load_focus_tree = TRI_focus_stage_2
         }
         #将【圣三一的权力平衡】焦点设置为：《伊甸条约》的签订
+        set_country_flag = TRI_parliament_available
 		TRI_set_focus_signing_Eden = yes
 		ai_chance = {
 			base = 100
@@ -616,7 +617,7 @@ country_event = {
     option = {
 		name = TRI_events.31.a
 
-        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        #于【圣三一情报局】添加《古圣堂袭击》调查决议
         set_country_flag = TRI_church_investigation
         unlock_decision_category_tooltip = TRI_church_investigation
         #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
@@ -640,7 +641,7 @@ country_event = {
     option = {
 		name = TRI_events.31.b
 
-        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        #于【圣三一情报局】添加《古圣堂袭击》调查决议
         set_country_flag = TRI_church_investigation
         unlock_decision_category_tooltip = TRI_church_investigation
         #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
@@ -1018,7 +1019,9 @@ country_event = {
 
     option = {
 		name = TRI_events.50.a
-
+        hidden_effect = {
+            news_event = Eden_pact.1001
+        }
 		ai_chance = {
 			base = 100
 		}
@@ -1042,13 +1045,12 @@ country_event = {
         set_variable = { TRI_shaked_nagisa_belief_political_power_cost = 0.5 }
         set_variable = { TRI_shaked_nagisa_belief_paranoia_modifier_increase = 1 }
         set_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = -2 }
-        set_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = -2 }
+        set_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = -2 }
         add_dynamic_modifier = {
             modifier = TRI_shaked_nagisa_belief_1
         }
         add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 1 }
         add_to_variable = { TRI_other_unity_modifiers = -2 }
-        add_to_variable = { Eden_treaty_weights_modifier = -2 }
         TRI_unity_decrease_10 = yes
         TRI_set_focus_trust_on_current_leader = yes
 		ai_chance = {
@@ -1077,10 +1079,9 @@ country_event = {
         add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.35 }
         add_to_variable = { TRI_shaked_nagisa_belief_paranoia_modifier_increase = -1 }
         add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
-        add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+        add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
         add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -1 }
         add_to_variable = { TRI_other_unity_modifiers = 1 }
-        add_to_variable = { Eden_treaty_weights_modifier = 1 }
         add_dynamic_modifier = {
             modifier = TRI_shaked_nagisa_belief_2
         }
@@ -1136,110 +1137,12 @@ country_event = {
             available_to_spy_master = no
             nationalities = { TRI ARI }
         }
-        #在间谍机构【圣三一特殊事务调查部】中添加任务：对茶话会的渗透#目前不做
+        #在间谍机构【圣三一情报局】中添加任务：对茶话会的渗透#目前不做
 		ai_chance = {
 			base = 100
 		}
     }
 }
-###超事件###
-#第一次《伊甸条约》会谈
-news_event = {
-    id = TRI_events.1000
-    title = TRI_events.1000.t
-    desc = TRI_events.1000.d
-    picture = GFX_TRI_events_pic
-	is_triggered_only = yes
-    major = yes
-	fire_only_once = yes
-    #这里需要进一步完善
-    option = {
-		name = TRI_events.1000.a
-        trigger = { original_tag = TRI }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_1 = yes
-        }
-        
-		ai_chance = {
-			base = 100
-		}
-    }
-
-    option = {
-		name = TRI_events.1000.b
-        trigger = {
-            NOT = { original_tag = TRI }
-        }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_1 = yes
-        }
-		ai_chance = {
-			base = 100
-		}
-    }
-
-}
-#第二次《伊甸条约》会谈
-news_event = {
-    id = TRI_events.1001
-    title = TRI_events.1001.t
-    desc = TRI_events.1001.d
-    #picture = GFX_TRI_events_pic
-    major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-    immediate = {
-        hidden_effect = {
-            if = {
-                limit = { 
-                    NOT = { has_completed_focus = TRI_choosing_pact_place }
-                    original_tag = TRI
-                }
-                unlock_national_focus = TRI_choosing_pact_place
-                add_stability = -0.1
-                set_temp_variable = { loyalty_change = -0.05 }
-                TRI_parliament_all_loyalty_change = yes
-                TRI_unity_decrease_5 = yes
-            }
-            set_global_flag = BA_2st_eden_pact_begin
-        }
-    }
-    option = {
-		name = TRI_events.1001.a
-
-        trigger = {
-            original_tag = TRI
-        }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_2 = yes
-        }
-
-		ai_chance = {
-			base = 100
-		}
-    }
-
-    option = {
-		name = TRI_events.1001.b
-
-        trigger = {
-            NOT = { original_tag = TRI }
-        }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_2 = yes
-        }
-
-		ai_chance = {
-			base = 100
-		}
-    }
-
-}
-
 #古圣堂遇袭！
 news_event = {
     id = TRI_events.1002
@@ -1302,53 +1205,6 @@ news_event = {
         }
         
 
-		ai_chance = {
-			base = 100
-		}
-    }
-}
-
-#超事件：《伊甸条约》的成功签订
-news_event = {
-    id = TRI_events.1003
-    title = TRI_events.1003.t
-    desc = TRI_events.1003.d
-    #picture = GFX_TRI_events_pic
-    major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-    immediate = {
-        
-    }
-
-    option = {
-		name = TRI_events.1003.a
-        trigger = {
-            original_tag = TRI
-        }
-        hidden_effect = {
-            country_event = { id = TRI_events.27 days = 1 }
-            if = {
-                limit = { is_ai = no }
-                #BAR_LX_Super_Event_effect_7 = yes
-            }
-        }
-		ai_chance = {
-			base = 100
-		}
-    }
-    option = {
-		name = TRI_events.1003.b
-        trigger = {
-            NOT = { original_tag = TRI }
-        }
-        hidden_effect = {
-            if = {
-                limit = { is_ai = no }
-                #BAR_LX_Super_Event_effect_7 = yes
-            }
-        }
-        
 		ai_chance = {
 			base = 100
 		}

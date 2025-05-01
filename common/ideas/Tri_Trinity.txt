@@ -94,15 +94,13 @@ ideas = {
                 stability_factor = 0.05
                 political_power_cost = 0.4
                 TRI_unity_weekly_modifier = -2
-                Eden_treaty_weights_modifier = 3
+                Eden_treaty_progress_modifier = 3
             }
             on_add = {
                 add_to_variable = { TRI_other_unity_modifiers = -2 }
-                add_to_variable = { Eden_treaty_weights_modifier = 3 }
             }
             on_remove = {
                 add_to_variable = { TRI_other_unity_modifiers = 2 }
-                add_to_variable = { Eden_treaty_weights_modifier = -3 }
             }
         }
         TRI_prepare_for_meeting_3 = {
@@ -114,18 +112,16 @@ ideas = {
                 stability_factor = 0.05
                 political_power_cost = 0.4
                 TRI_unity_weekly_modifier = -1
-                Eden_treaty_weights_modifier = 4
+                Eden_treaty_progress_modifier = 4
             }
             on_add = {
                 add_to_variable = { TRI_other_unity_modifiers = -1 }
-                add_to_variable = { Eden_treaty_weights_modifier = 4 }
             }
             on_remove = {
                 add_to_variable = { TRI_other_unity_modifiers = 1 }
-                add_to_variable = { Eden_treaty_weights_modifier = -4 }
             }
         }
-        TRI_prepare_for_meeting_3 = {
+        TRI_prepare_for_meeting_4 = {
             picture = unknown
             modifier = {
                 consumer_goods_factor = 0.1
@@ -133,13 +129,7 @@ ideas = {
                 production_factory_efficiency_gain_factor = 0.05
                 stability_factor = 0.2
                 political_power_cost = 0.3
-                Eden_treaty_weights_modifier = 4
-            }
-            on_add = {
-                add_to_variable = { Eden_treaty_weights_modifier = 4 }
-            }
-            on_remove = {
-                add_to_variable = { Eden_treaty_weights_modifier = -4 }
+                Eden_treaty_progress_modifier = 4
             }
         }
         #茶话会直属炮兵
@@ -257,7 +247,7 @@ ideas = {
                 political_advisor_cost_factor = 0.5
                 political_power_cost = 0.2
                 TRI_unity_weekly_modifier = -1
-                Eden_treaty_weights_modifier = -1
+                Eden_treaty_progress_modifier = -1
                 custom_modifier_tooltip = TRI_bouncing_back_remove_idea_trigger
             }
             cancel = {
@@ -266,7 +256,6 @@ ideas = {
             }
             on_remove = {
                 add_to_variable = { TRI_other_unity_modifiers = 1 }
-                add_to_variable = { Eden_treaty_weights_modifier = 1 }
             }
         }
         #物尽其用
@@ -276,7 +265,7 @@ ideas = {
                 political_advisor_cost_factor = 0.25
                 political_power_cost = 0.2
                 TRI_unity_weekly_modifier = -1
-                Eden_treaty_weights_modifier = -1
+                Eden_treaty_progress_modifier = -1
                 custom_modifier_tooltip = TRI_making_the_best_use_remove_idea_trigger
             }
             cancel = {
@@ -285,7 +274,6 @@ ideas = {
             }
             on_remove = {
                 add_to_variable = { TRI_other_unity_modifiers = 1 }
-                add_to_variable = { Eden_treaty_weights_modifier = 1 }
             }
         }
         #“影子”计划
@@ -317,7 +305,7 @@ ideas = {
                 has_global_flag = Arius_defeated
             }
             on_remove = {
-                news_event = TRI_events.1003
+                news_event = Eden_pact.1002
             }
         }
         TRI_prepare_for_war = {

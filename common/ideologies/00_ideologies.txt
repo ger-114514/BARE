@@ -4,9 +4,10 @@ ideologies = {
 		types = {
 		
 			no_ideology_type  = {
+				color = { 192 192 192 }
 			}
 		}
-		color = { 256 256 256 }
+		color = { 192 192 192 }
 
 		war_impact_on_world_tension = 0
 		faction_impact_on_world_tension = 0

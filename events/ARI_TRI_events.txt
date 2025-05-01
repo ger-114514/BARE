@@ -295,6 +295,7 @@ country_event = { #旅者”行动总结-部分成功
     is_triggered_only = yes
     option = {
         name = ARI_coup.5.a
+        mark_focus_tree_layout_dirty = yes
         effect_tooltip = {
             set_variable = {
                 ARI_lesson_traveller_operation_war_support_factor = -0.2
@@ -394,6 +395,31 @@ country_event = { #说者有心
     is_triggered_only = yes
     option = {
         name = TRI_coup.21.a
+        hidden_effect = {
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                        BA_TRI_can_purge_administration = no
+                    }
+                    TRI_purge_administration = yes
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        BA_TRI_can_purge_army = no
+                    }
+                    TRI_purge_army = yes
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        BA_TRI_can_purge_airforce = no
+                    }
+                    TRI_purge_airforce = yes
+                }
+            }
+        }
         country_event = TRI_coup.22
     }
 }
@@ -406,8 +432,8 @@ country_event = { #可疑的邀约
     is_triggered_only = yes
     option = {
         name = TRI_coup.22.a
-        #TODO:于【GUI：圣三一情报局】下添加一个决议任务：【取信之道】，该决议需要调查完补习部全部4名学生之后才可以激活，激活后持续7天，然后激活事件：【离巢】，通过选项对桐藤渚特质【追根溯源】追加效果：每周偏执度－2％并移除该决议。
-        #在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
+        #于【GUI：圣三一情报局】下添加一个决议任务：【取信之道】，该决议需要调查完补习部全部4名学生之后才可以激活，激活后持续7天，然后激活事件：【离巢】，通过选项对桐藤渚特质【追根溯源】追加效果：每周偏执度－2％并移除该决议。
+        #TODO:在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
         set_country_flag = TRI_the_way_to_get_trust
         unlock_decision_tooltip = {
             decision = TRI_the_way_to_get_trust
@@ -450,6 +476,7 @@ country_event = { #示之假寐
             ADD = "4"
         }
         add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 4 }
+        set_country_flag = TRI_negative_paranoia_event
     }
 }
 country_event = { #负面事件1
@@ -458,6 +485,7 @@ country_event = { #负面事件1
     desc = TRI_coup.25.desc
     #picture =
     trigger = {
+        has_country_flag = TRI_negative_paranoia_event
         check_variable = { TRI_nagisa_paranoia_total > 40 }
     }
     mean_time_to_happen = {
@@ -467,6 +495,7 @@ country_event = { #负面事件1
     option = {
         name = TRI_coup.25.a
         add_political_power = -20
+        clr_country_flag = TRI_negative_paranoia_event
         set_country_flag = TRI_negative_paranoia_event_1
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
@@ -488,6 +517,7 @@ country_event = { #负面事件2
     option = {
         name = TRI_coup.26.a
         add_political_power = -20
+        clr_country_flag = TRI_negative_paranoia_event_1
         set_country_flag = TRI_negative_paranoia_event_2
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
@@ -509,6 +539,7 @@ country_event = { #负面事件3
     option = {
         name = TRI_coup.27.a
         add_political_power = -20
+        clr_country_flag = TRI_negative_paranoia_event_2
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
         country_event = {
@@ -651,6 +682,7 @@ country_event = { #“旅者”行动总结-基本失败
     is_triggered_only = yes
     option = {
         name = ARI_coup.10.a
+        mark_focus_tree_layout_dirty = yes
         effect_tooltip = {
             set_variable = {
                 ARI_lesson_traveller_operation_war_support_factor = -0.2
@@ -681,6 +713,15 @@ country_event = { #空巢行动
     is_triggered_only = yes
     option = {
         name = TRI_coup.29.a
+        add_war_support = 0.1
+        hidden_effect = {
+            add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
+            activate_shine_on_focus = TRI_desperate_fight
+            country_event = {
+                id = TRI_autofocus.1
+                days = 7
+            }
+        }
     }
 }
 country_event = { #暗处涌流
@@ -692,5 +733,32 @@ country_event = { #暗处涌流
     is_triggered_only = yes
     option = {
         name = TRI_coup.30.a
+    }
+}
+
+country_event = { #圣三一发起了反间谍行动
+    id = ARI_coup.100
+    title = ARI_coup.100.t
+    desc = ARI_coup.100.d
+    picture = GFX_TRI_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = ARI_coup.100.a
+        if = {
+            limit = { check_variable = { ARI_safety_home_use_time > 0 } }
+            subtract_from_variable = { ARI_safety_home_use_time = 1 }
+            custom_effect_tooltip = ARI_cost_safety_home_tt
+        }
+        else = {
+            set_temp_variable = { intelligence_change = -5 }
+			ARI_change_intelligence_in_TRI = yes
+        }
+		ai_chance = {
+			base = 100
+		}
     }
 }

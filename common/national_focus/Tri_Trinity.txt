@@ -89,33 +89,16 @@ focus_tree = {
 			completion_reward = {
 				add_political_power = 50
 				#启用政治顾问：羽川莲见、鹫见芹奈
-				add_advisor_role = {
-					character = TRI_serina
-					activate = no
-					advisor = { 
-						slot = political_advisor
-						idea_token = TRI_serina_pa
-						traits = {
-							sweet_nurse
-						}
-						ai_will_do = {
-							base = 1
-						}
-					}
+				set_country_flag = TRI_restart_domestic_struggle
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_serina_name
+					JOB = political_advisor
 				}
-				add_advisor_role = {
-					character = TRI_hasumi
-					activate = no
-					advisor = { 
-						slot = army_chief
-						idea_token = TRI_hasumi_ac
-						traits = {
-							serious_vice_chairman
-						}
-						ai_will_do = {
-							base = 1
-						}
-					}
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_hasumi_name
+					JOB = army_chief
 				}
 				custom_effect_tooltip = TRI_restart_domestic_struggle_tt
 				#激活焦点抉择：《伊甸条约》的签订
@@ -425,7 +408,10 @@ focus_tree = {
 					TRI_paranoia_decrease_10 = yes
 					add_ideas = TRI_prepare_for_meeting
 					hidden_effect = {
-						country_event = TRI_events.50
+						if = {
+							limit = { NOT = { has_global_flag = BA_2st_eden_pact_begin } }
+							news_event = Eden_pact.1001
+						}
 					}
 				}			
 			}
@@ -547,7 +533,7 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					add_stability = -0.10
-					#建立间谍机构：【圣三一特殊调查部】
+					#建立间谍机构：【圣三一情报局】
 					create_intelligence_agency = yes
 					country_event = TRI_events.6
 					set_temp_variable = { loyalty_change = -0.06 }
@@ -633,7 +619,7 @@ focus_tree = {
 					}
 					TRI_unity_decrease_5 = yes
 					custom_effect_tooltip = TRI_investigation_in_care_ns_tt
-					#于决议组下添加GUI：【圣三一特殊事务调查部】并启用决议组：【对内部的调查】
+					#于决议组下添加GUI：【圣三一情报局】并启用决议组：【对内部的调查】
 					custom_effect_tooltip = TRI_paranoia_new_investigation_decisions_tt
 				}
 			}
@@ -758,7 +744,7 @@ focus_tree = {
 				completion_reward = {
 					set_temp_variable = { TRI_paranoia_change = -15 }
 					TRI_change_paranoia = yes
-					#于决议组：【圣三一特殊事务调查部】下追加决议组：【对补习部的调查】
+					#于决议组：【圣三一情报局】下追加决议组：【对补习部的调查】
 					custom_effect_tooltip = TRI_hoshubu_available_tt
 					set_country_flag = TRI_investigate_available
 				}
@@ -928,7 +914,6 @@ focus_tree = {
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_unexpected_one }
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_daring_plan_meticulous_action }
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_lure_the_enemy }
-						add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
 						activate_shine_on_focus = TRI_silence
 						country_event = {
 							id = TRI_autofocus.1
@@ -1105,6 +1090,7 @@ focus_tree = {
 					effect_tooltip = { 
 						custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
 						remove_country_leader_trait = TRI_nagisa_Find_the_root 
+						mark_focus_tree_layout_dirty = yes
 					}
 				}
 			}
@@ -1132,6 +1118,7 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					country_event = TRI_coup.20
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 			focus = { #意外之人
@@ -1139,6 +1126,9 @@ focus_tree = {
 				#icon = 
 				relative_position_id = TRI_silence
 				prerequisite = { focus = TRI_silence }
+				allow_branch = {
+					has_completed_focus = TRI_silence
+				}
 				available = {
 					custom_override_tooltip = {
 						tooltip = {
@@ -1154,7 +1144,7 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					country_event = TRI_coup.21
-					
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 			focus = { #大胆谋划，悉心行动
@@ -1162,6 +1152,9 @@ focus_tree = {
 				#icon = 
 				relative_position_id = TRI_unexpected_one
 				prerequisite = { focus = TRI_unexpected_one }
+				allow_branch = {
+					has_completed_focus = TRI_unexpected_one
+				}
 				available = {
 					custom_override_tooltip = {
 						tooltip = {
@@ -1177,6 +1170,7 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					country_event = TRI_coup.24
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 			focus = { #诱敌深入
@@ -1184,6 +1178,9 @@ focus_tree = {
 				#icon = 
 				relative_position_id = TRI_daring_plan_meticulous_action
 				prerequisite = { focus = TRI_daring_plan_meticulous_action }
+				allow_branch = {
+					has_completed_focus = TRI_daring_plan_meticulous_action
+				}
 				available = {
 					custom_override_tooltip = {
 						tooltip = {
@@ -1198,7 +1195,7 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
-					
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 		
@@ -1212,6 +1209,12 @@ focus_tree = {
 				}
 				prerequisite = { focus = TRI_buy_time }
 				cancelable = no	
+				allow_branch = {
+					OR = {
+						has_completed_focus = TRI_lure_the_enemy
+						has_completed_focus = TRI_conspiracy_against_conspiracy
+					}
+				}
 				
 				available = {
 					custom_override_tooltip = {
@@ -1236,6 +1239,9 @@ focus_tree = {
 					if = {
 						limit = { has_country_flag = TRI_investigation_perfect_ending }
 						country_event = TRI_coup.30
+						TRI_unity_increase_10 = yes
+						set_temp_variable = { loyalty_change = 0.03 }
+						TRI_parliament_all_loyalty_change = yes
 					}
 					else = {
 						country_event = TRI_coup.5
@@ -1270,7 +1276,7 @@ focus_tree = {
 					country_event = TRI_events.22
 					set_country_flag = TRI_sweet_dream_in_one_night_completed
 					
-					#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一特殊调查部】；②将【补习部调查】决议组移除出GUI【圣三一特殊调查部】
+					#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一情报局】；②将【补习部调查】决议组移除出GUI【圣三一情报局】
 				}			
 			}
 			focus = { #补习部的教训
@@ -1505,7 +1511,7 @@ focus_tree = {
 				add_to_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = -0.5 }
 				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
 				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
-				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
 				add_ideas = TRI_bouncing_back_idea
 			}
 		}
@@ -1602,7 +1608,7 @@ focus_tree = {
 				add_to_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = -0.25 }
 				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
 				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
-				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_weights_modifier = 1 }
+				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
 				add_ideas = TRI_making_the_best_use_idea
 			}			
 		}
@@ -1833,6 +1839,10 @@ focus_tree = {
 			x = 0
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
+			allow_branch = {
+				NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+				has_global_flag = Eden_treaty_negotiation_completed
+			}
 			select_effect = {
 				country_event = TRI_events.26
 				hidden_effect = {
@@ -1841,9 +1851,9 @@ focus_tree = {
 						days = 24
 					}
 				}
-				}
-				completion_reward = {
-					custom_effect_tooltip = TRI_dont_always_pick_political_focus
+			}
+			completion_reward = {
+				custom_effect_tooltip = TRI_dont_always_pick_political_focus
 				if = {
 					limit = { has_country_flag = TRI_paranoia_system_active }
 					add_to_variable = {
@@ -2014,6 +2024,13 @@ focus_tree = {
 					add_country_leader_trait = regency_of_sisterhood
 				}
 				set_variable = { fully_support@TRI_parliament_association_4 = 1 }
+				set_variable = { no_faction@TRI_parliament_association_4 = 0 }
+				
+				set_country_flag = TRI_sisterhood_engage_in_politic
+				hidden_effect = {
+					TRI_BOP_calculate_house_seats = yes
+					TRI_init_senate_house = yes
+				}
 			}
 		}
 		focus = { #动荡下的砥石
@@ -2160,6 +2177,11 @@ focus_tree = {
 						remove = entrusted_in_emergency
 						add = entrusted_in_emergency_2
 					}
+				}
+				set_country_flag = TRI_emergent_voting_available
+				unlock_decision_tooltip = {
+					decision = TRI_emergent_voting
+					show_effect_tooltip = yes
 				}
 				set_temp_variable = { bill = token:TRI_Bill_of_emergent_motion }
 				TRI_submit_the_bill = yes
@@ -2456,21 +2478,12 @@ focus_tree = {
 					category = land_doctrine
 				}
 				add_stability = -0.05
+				set_country_flag = TRI_cooperation_with_justice_club
 				#启用军事顾问：剑先鹤城
-				add_advisor_role = {
-					character = TRI_tsurugi
-					activate = no
-					advisor = { 
-						slot = army_chief
-						idea_token = TRI_tsurugi_ac
-						traits = {
-							screaming_death
-						}
-						cost = 100
-						ai_will_do = {
-							base = 1
-						}
-					}
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_tsurugi_name
+					JOB = army_chief
 				}
 				custom_effect_tooltip = TRI_cooperation_with_justice_club_tt
 				add_to_variable = { TRI_trinity_military_army_infantry_attack_factor = 0.1 }
@@ -2535,9 +2548,7 @@ focus_tree = {
 				set_country_flag = TRI_standing_guard
 				add_to_variable = { TRI_tea_party_artillery_recruiting_use = 7 }
 				custom_effect_tooltip = TRI_standing_guard_tt
-				effect_tooltip = {
-					add_ideas = TRI_tea_party_artillery_5
-				}
+				show_ideas_tooltip = TRI_tea_party_artillery_5
 			}		
 		}
 		focus = { #全面准备
@@ -2686,23 +2697,10 @@ focus_tree = {
 		focus = { #有条件的军事准备
 			id = TRI_limited_military_preparation
 			icon = GFX_goal_TRI_limited_military_preparation
-			relative_position_id = TRI_Bill_of_copper_olive
-			prerequisite = { focus = TRI_Bill_of_copper_olive }
 			cost = 5
-			x = -4
+			x = -13
 			y = 1
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = TRI_has_passed_bill_tt
-						BILL = TRI_Bill_of_copper_olive
-					}
-					is_in_array = {
-						array = TRI_passed_bills
-						value = token:TRI_Bill_of_copper_olive
-					}
-				}
-			}
+			prerequisite = { focus = TRI_Bill_of_copper_olive }
 			search_filters = { FOCUS_FILTER_ARMY }
 			select_effect = {
 				set_variable = { TRI_political_focus_duration = 0 }

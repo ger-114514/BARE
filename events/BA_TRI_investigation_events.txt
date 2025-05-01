@@ -17,6 +17,11 @@ country_event = { #正义实现委员会的精英？
 			localization_key = TRI_new_hoshubu_member_tt
 			NAME = TRI_koharu_name
 		}
+		hidden_effect = {
+			TRI_koharu = {
+				set_character_flag = TRI_character_arrested
+			}
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -742,24 +747,6 @@ country_event = { #尤斯蒂娜之影
 
     option = {
 		name = TRI_events.301.a
-
-		ai_chance = {
-			base = 100
-		}
-    }
-}
-country_event = { #无解的谜题
-    id = TRI_events.302
-    title = TRI_events.302.t
-    desc = TRI_events.302.d
-    picture = GFX_TRI_events_pic
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-    option = {
-		name = TRI_events.302.a
 
 		ai_chance = {
 			base = 100

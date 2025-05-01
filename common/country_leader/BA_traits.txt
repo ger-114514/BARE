@@ -74,7 +74,7 @@ leader_traits = {
         random = no
 
         #菲利乌斯派支持度+20%
-        #TODO：随机给予预言
+        #随机给予预言
         custom_modifier_tooltip = obscure_prophet_tt
         stability_factor = 0.1
         war_support_factor = -0.1

@@ -1,0 +1,128 @@
+GST_LS_ZZ_category = {
+	GST_ZZ = {
+		icon = generic_research
+		priority = 10
+		activation = {
+			OR = {
+				has_war_with = GEH
+				has_war_with = TRI
+			}
+		}
+		available = {
+			OR = {
+				NOT = {
+					OR = {
+						has_war_with = GEH #不与歌赫娜处于战争
+						has_war_with = TRI #不与圣三一处于战争
+					}
+				}
+				OR = { #圣三一或歌赫娜投降倾向高于35%
+					GEH = {
+						surrender_progress > 0.35
+					}
+					TRI = {
+						surrender_progress > 0.35
+					}
+				}
+			}
+		}
+		is_good = no
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					OR = {
+						has_war_with = GEH #不与歌赫娜处于战争
+						has_war_with = TRI #不与圣三一处于战争
+					}
+				}
+				OR = {
+					GEH = {
+						surrender_progress > 0.35
+					}
+					TRI = {
+						surrender_progress > 0.35
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			ARI = {
+				dismantle_faction = yes
+			}
+			TRI = {
+				white_peace = {
+					tag = GEH
+					message = pec_bec
+				}
+				create_faction = FAN_ARI_ZHENXIAN
+				add_to_faction = GEH
+				if = {
+					limit = { 
+						has_global_flag = JiWoTuoSiFangWeiLianMeng_CunZai
+					}
+					set_faction_name = FAN_ARI_ZHENXIAN_GAI
+				}
+			}
+		}
+		days_mission_timeout = 35
+
+		timeout_effect = {
+			ARI = {
+				dismantle_faction = yes
+			}
+			TRI = { #检测是否与歌赫娜处于战争状态
+				if = {
+					limit = { 
+						has_war_with = GEH
+					}
+					white_peace = {
+						tag = GEH
+						message = pec_bec
+					}
+				}
+				create_faction = FAN_ARI_ZHENXIAN #反阿里乌斯统一阵线
+				add_to_faction = GEH
+				if = {
+					limit = { 
+						has_global_flag = JiWoTuoSiFangWeiLianMeng_CunZai
+					}
+					set_faction_name = FAN_ARI_ZHENXIAN_GAI #伊甸条约组织
+				}
+			}
+		}
+	}
+}
+
+GST_LS_HelpStu_category = {
+	GST_YJ = {
+		icon = generic_research
+		priority = 10
+		visible = {
+			AND = {
+				any_character = {
+					has_character_flag = ARI_BeiBangJia
+				}
+			}
+		}
+
+		days_remove = 2
+
+		complete_effect = {
+			add_command_power = -30
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		remove_effect = {#营救决议
+			random_scope_in_array = {
+				array = global.ARI_ShouHaiZheMingDan_SAN
+				limit = { 
+					has_character_flag = ARI_BeiBangJia
+				}
+				clr_character_flag = ARI_BeiBangJia
+			}
+		}
+	}
+}

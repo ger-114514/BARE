@@ -126,7 +126,8 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.1
-                #TODO：贡献度获取+25%
+                #贡献度获取+25%
+                Eden_treaty_weights_gain_factor = 0.25
             }
         }
 
@@ -143,7 +144,8 @@ ideas = {
                 power_balance_weekly = -0.02
                 stability_factor = -0.1
                 war_support_factor = -0.1
-                #TODO：贡献度获取-25%
+                #贡献度获取-25%
+                Eden_treaty_weights_gain_factor = -0.25
             }
         }
 
@@ -162,7 +164,8 @@ ideas = {
                 stability_factor = 0.05
                 war_support_factor = 0.05
                 power_balance_weekly = 0.005
-                #TODO：贡献度获取+50%
+                #贡献度获取+50%
+                Eden_treaty_weights_gain_factor = 0.5
             }
         }
 

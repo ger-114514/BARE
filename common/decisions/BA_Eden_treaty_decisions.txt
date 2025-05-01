@@ -1,0 +1,769 @@
+#伊甸条约谈判
+Eden_treaty_negotiation_decisions = {
+	Eden_treaty_mutual_negotiation = {
+		priority = 1000
+		is_good = yes
+		days_mission_timeout = 30
+		available = { always = no }
+		activation = {
+			hidden_trigger = {
+				has_global_flag = Eden_treaty_negotiation_ongoing
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = {
+					has_global_flag = Eden_treaty_negotiation_ongoing
+				}
+			}
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				TRI = {
+					set_temp_variable = { progress_change = modifier@Eden_treaty_progress_modifier }
+					Eden_treaty_change_progress = yes
+				}
+				GEH = {
+					set_temp_variable = { progress_change = modifier@Eden_treaty_progress_modifier }
+					Eden_treaty_change_progress = yes
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						original_tag = TRI
+					}
+					set_temp_variable = { progress_change = modifier@Eden_treaty_progress_modifier }
+					add_to_temp_variable = { progress_change = GEH.modifier@Eden_treaty_progress_modifier }
+					Eden_treaty_change_progress = yes
+				}
+			}
+			activate_mission = Eden_treaty_mutual_negotiation
+		}
+	}
+
+	Eden_TRI_ask_hardliner_to_cooperate = { #要求强硬派配合
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Eden_common_decision_CD_tt
+				NOT = { has_country_flag = Eden_common_decision_CD }
+			}
+		}
+		cost = 30
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = Eden_common_decision_CD
+			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
+			set_temp_variable = { target_faction = token:BOP_hardliner }
+			set_temp_variable = { loyalty_change = -0.05 }
+			TRI_parliament_loyalty_change_faction = yes
+		}
+		remove_effect = {
+			clr_country_flag = Eden_common_decision_CD
+			set_temp_variable = { weights_change = 5 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_TRI_ask_conservative_to_cooperate = { #要求保守派配合
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Eden_common_decision_CD_tt
+				NOT = { has_country_flag = Eden_common_decision_CD }
+			}
+		}
+		cost = 30
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = Eden_common_decision_CD
+			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
+			set_temp_variable = { target_faction = token:BOP_conservative }
+			set_temp_variable = { loyalty_change = -0.05 }
+			TRI_parliament_loyalty_change_faction = yes
+		}
+		remove_effect = {
+			clr_country_flag = Eden_common_decision_CD
+			set_temp_variable = { weights_change = 5 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_TRI_ask_moderate_to_cooperate = { #要求温和派配合
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Eden_common_decision_CD_tt
+				NOT = { has_country_flag = Eden_common_decision_CD }
+			}
+		}
+		cost = 30
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = Eden_common_decision_CD
+			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
+			set_temp_variable = { target_faction = token:BOP_moderate }
+			set_temp_variable = { loyalty_change = -0.05 }
+			TRI_parliament_loyalty_change_faction = yes
+		}
+		remove_effect = {
+			clr_country_flag = Eden_common_decision_CD
+			set_temp_variable = { weights_change = 5 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_TRI_benefit_hardliner = { #让渡部分利益给强硬派
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Eden_common_decision_CD_tt
+				NOT = { has_country_flag = Eden_common_decision_CD }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		cost = 30
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = Eden_common_decision_CD
+			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { target_faction = token:BOP_hardliner }
+			set_temp_variable = { loyalty_change = 0.03 }
+			TRI_parliament_loyalty_change_faction = yes
+		}
+		remove_effect = {
+			clr_country_flag = Eden_common_decision_CD
+			add_war_support = 0.05
+		}
+	}
+	Eden_TRI_benefit_conservative = { #让渡部分利益给保守派
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Eden_common_decision_CD_tt
+				NOT = { has_country_flag = Eden_common_decision_CD }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		cost = 30
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = Eden_common_decision_CD
+			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { target_faction = token:BOP_conservative }
+			set_temp_variable = { loyalty_change = 0.03 }
+			TRI_parliament_loyalty_change_faction = yes
+		}
+		remove_effect = {
+			clr_country_flag = Eden_common_decision_CD
+			add_stability = 0.05
+		}
+	}
+	Eden_TRI_benefit_moderate = { #让渡部分利益给温和派
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Eden_common_decision_CD_tt
+				NOT = { has_country_flag = Eden_common_decision_CD }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		cost = 30
+		days_remove = 30
+		modifier = {
+			research_speed_factor = 0.05
+		}
+		complete_effect = {
+			set_country_flag = Eden_common_decision_CD
+			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { target_faction = token:BOP_moderate }
+			set_temp_variable = { loyalty_change = 0.03 }
+			TRI_parliament_loyalty_change_faction = yes
+		}
+		remove_effect = {
+			clr_country_flag = Eden_common_decision_CD
+		}
+	}
+	Eden_GEH_call_for_solidarity = { #呼吁团结一致
+		visible = {
+			original_tag = GEH
+		}
+		days_remove = -1
+		cancel_trigger = {
+			NOT = {
+				has_country_flag = Eden_GEH_call_for_solidarity
+			}
+		}
+		modifier = {
+			political_power_cost = 0.5
+			power_balance_weekly = -0.01
+		}
+		complete_effect = {
+			set_country_flag = Eden_GEH_call_for_solidarity
+		}
+	}
+	Eden_GEH_cancel_call_for_solidarity = { #暂停呼吁团结一致
+		visible = {
+			original_tag = GEH
+			has_country_flag = Eden_GEH_call_for_solidarity
+		}
+		complete_effect = {
+			clr_country_flag = Eden_GEH_call_for_solidarity
+		}
+	}
+	Eden_GEH_invite_Schale = { #请求夏莱协调谈判
+		visible = {
+			original_tag = GEH
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "25"
+				}
+				check_variable = { Eden_treaty_weights > 24.9 }
+			}
+		}
+		days_re_enable = 60
+		complete_effect = {
+			set_temp_variable = { weights_change = -25 }
+			Eden_treaty_change_weights = yes
+			add_political_power = 150
+		}
+	}
+	Eden_enhance_publicising = { #加大对外宣传
+		available = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					original_tag = TRI
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_unity
+						UNITY = "1"
+					}
+					check_variable = { TRI_unity > 0.9 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					original_tag = GEH
+				}
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < 1
+				}
+			}
+		}
+		days_remove = 7
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					original_tag = TRI
+				}
+				set_temp_variable = { TRI_unity_change = -1 }
+				TRI_change_unity = yes
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					original_tag = GEH
+				}
+				add_power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value = 0.01
+					tooltip_side = GEH_bp_chaos
+				}
+			}
+		}
+		remove_effect = {
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+			set_temp_variable = { weights_change = 10 }
+			Eden_treaty_change_weights = yes
+		}
+	}
+
+	Eden_reduce_border_conflict = { #减少边境摩擦
+		visible = {
+			original_tag = TRI
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+		}
+		available = {
+			command_power > 49.9
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_command_power = -50
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+			set_temp_variable = { weights_change = 10 }
+			Eden_treaty_change_weights = yes
+		}
+	}
+	Eden_persuade_parliament_of_treaty = { #说服院内群体
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		days_remove = 14
+		days_re_enable = 60
+		complete_effect = {
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+		}
+		remove_effect = {
+			if = {
+				limit = { original_tag = TRI }
+				TRI_unity_increase_5 = yes
+			}
+			else = {
+				add_power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value = -0.05
+					tooltip_side = GEH_bp_order
+				}
+			}
+		}
+	}
+	Eden_TRI_suppress_dissent = { #暂时压制异议
+		visible = {
+			original_tag = TRI
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			TRI_unity_increase_5 = yes
+			add_stability = 0.05
+		}
+	}
+	Eden_GEH_regulate_media = { #暂时性媒体约束
+		visible = {
+			original_tag = GEH
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+				}
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < 0.98
+				}
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value = 0.03
+				tooltip_side = GEH_bp_chaos
+			}
+			add_stability = -0.05
+			set_temp_variable = { weights_change = 10 }
+			Eden_treaty_change_weights = yes
+		}
+	}
+
+	Eden_TRI_point_out_error = { #提出对方的不妥
+		visible = {
+			original_tag = TRI
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_progress_tt
+					PROGRESS = "3"
+				}
+				check_variable = { global.Eden_treaty_progress > 2.9 }
+			}
+		}
+		cost = 100
+		days_re_enable = 90
+		complete_effect = {
+			GEH = {
+				set_temp_variable = { weights_change = -10 }
+				Eden_treaty_change_weights = yes
+			}
+			set_temp_variable = { progress_change = -3 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_GEH_refute_the_doubt = { #反驳对方的质疑
+		visible = {
+			original_tag = GEH
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_progress_tt
+					PROGRESS = "3"
+				}
+				check_variable = { global.Eden_treaty_progress > 2.9 }
+			}
+		}
+		cost = 100
+		days_re_enable = 90
+		complete_effect = {
+			TRI = {
+				set_temp_variable = { weights_change = -10 }
+				Eden_treaty_change_weights = yes
+			}
+			set_temp_variable = { progress_change = -3 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_research_cooperation = { #促进科研合作
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+			if = {
+				limit = { original_tag = GEH }
+				has_political_power > 50
+			}
+		}
+		cancel_trigger = {
+			has_global_flag = Eden_treaty_signed
+		}
+		modifier = {
+			research_speed_factor = 0.05
+		}
+		days_remove = -1
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = Eden_treaty_research_cooperation_tt
+			if = {
+				limit = { original_tag = GEH }
+				add_political_power = -50
+				set_temp_variable = { weights_change = 10 }
+				Eden_treaty_change_weights = yes
+			}
+			else = {
+				set_temp_variable = { weights_change = -10 }
+				Eden_treaty_change_weights = yes
+			}
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_economic_cooperation = { #加强经济合作
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		days_remove = 30
+		days_re_enable = 30
+		modifier = {
+			consumer_goods_factor = -0.2
+		}
+		complete_effect = {
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_propagate_our_effort = { #宣传我们的努力
+		visible = {
+			original_tag = TRI
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+		}
+		available = {
+			if = {
+				limit = {
+					original_tag = TRI
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_unity
+						UNITY = "80"
+					}
+					check_variable = { TRI_unity > 79.9 }
+				}
+			}
+			else = {
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.79
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 30
+		complete_effect = {
+			if = {
+				limit = { original_tag = TRI }
+				set_country_flag = Eden_treaty_no_unity_cost
+				custom_effect_tooltip = Eden_treaty_no_unity_cost
+			}
+			else = {
+				set_country_flag = Eden_treaty_no_BOP_change
+				custom_effect_tooltip = Eden_treaty_no_BOP_change
+			}
+		}
+	}
+
+	Eden_earn_interest = { #争取更多利益
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "15"
+				}
+				check_variable = { Eden_treaty_weights > 14.9 }
+			}
+		}
+		days_re_enable = 90
+		complete_effect = {
+			set_temp_variable = { progress_change = -3 }
+			Eden_treaty_change_progress = yes
+			set_temp_variable = { weights_change = -15 }
+			Eden_treaty_change_weights = yes
+			if = {
+				limit = { original_tag = TRI }
+				GEH = {
+					set_temp_variable = { weights_change = -10 }
+					Eden_treaty_change_weights = yes
+				}
+				set_temp_variable = { TRI_unity_change = 2 }
+				TRI_change_unity = yes
+			}
+			else = {
+				TRI = {
+					set_temp_variable = { weights_change = -10 }
+					Eden_treaty_change_weights = yes
+				}
+				add_power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value = -0.02
+					tooltip_side = GEH_bp_order
+				}
+			}
+		}
+	}
+	Eden_proper_compromise = { #适当妥协
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+		}
+		available = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					original_tag = TRI
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRI_has_unity
+						UNITY = "2"
+					}
+					check_variable = { TRI_unity > 1.9 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					original_tag = GEH
+				}
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < 0.99
+				}
+			}
+		}
+		days_re_enable = 30
+		cost = 75
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					original_tag = TRI
+				}
+				set_temp_variable = { TRI_unity_change = -2 }
+				TRI_change_unity = yes
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					original_tag = GEH
+				}
+				add_power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value = 0.02
+					tooltip_side = GEH_bp_chaos
+				}
+			}
+			set_temp_variable = { progress_change = 10 }
+			Eden_treaty_change_progress = yes
+			set_temp_variable = { weights_change = 20 }
+			Eden_treaty_change_weights = yes
+		}
+	}
+	Eden_research_cooperation_2 = { #进一步促进科研合作
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		cancel_trigger = {
+			has_global_flag = Eden_treaty_signed
+		}
+		modifier = {
+			research_speed_factor = 0.05
+		}
+		cost = 50
+		days_remove = -1
+		fire_only_once = yes
+		complete_effect = {
+			add_ideas = Eden_treaty_research_cooperation_2
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+	Eden_economic_cooperation_2 = { #进一步加强经济合作
+		visible = {
+			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = Eden_treaty_has_weights_tt
+					WEIGHTS = "10"
+				}
+				check_variable = { Eden_treaty_weights > 9.9 }
+			}
+		}
+		days_remove = 30
+		days_re_enable = 60
+		modifier = {
+			consumer_goods_factor = -0.3
+		}
+		complete_effect = {
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+	}
+}
+Eden_treaty_to_be_signed_decisions = {
+	Eden_treaty_to_be_signed = {
+		days_mission_timeout = 70
+		available = { always = no }
+		activation = {
+			NOT = { has_global_flag = Eden_treaty_has_been_signed }
+			hidden_trigger = {
+				NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+			}
+			has_global_flag = BA_2st_eden_pact_begin
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_global_flag = WOR_ancient_cathedral_has_been_attacked
+			}
+		}
+		timeout_effect = {
+			custom_effect_tooltip = Eden_treaty_has_been_signed
+			hidden_effect = {
+				if = {
+					limit = { original_tag = TRI }
+					news_event = TRI_events.1002
+				}
+			}
+		}
+	}
+}

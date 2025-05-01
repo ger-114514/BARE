@@ -1,7 +1,7 @@
 
 characters={
     ###圣三一TRI 开始###
-    TRI_seia ={ 
+    TRI_seia ={ #茶话会 - 百合园圣娅
 		name=TRI_seia_name 
 		portraits={
 			civilian={
@@ -17,18 +17,20 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
-			} 
+				custom_override_tooltip = {
+					tooltip = TRI_seia_available_tt
+					always = no
+				}
+			}
 			traits = {
 				obscure_prophet
 			}
 			#菲利乌斯派支持度+20%
-       		#TODO：随机给予预言
+       		#随机给予预言
 			on_add = {
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = 0.2 }
 				TRI_parliament_loyalty_change = yes
-				
 				set_country_flag = TRI_seia_prophecy
 			}
 			on_remove = {
@@ -42,19 +44,19 @@ characters={
 			}
         }
 
-        corps_commander = {
-			traits = {trait_cautious infantry_officer inflexible_strategist
-			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 1
-		}
+        # corps_commander = {
+		# 	traits = {trait_cautious infantry_officer inflexible_strategist
+		# 	}
+		# 	skill = 3
+		# 	attack_skill = 3
+		# 	defense_skill = 2
+		# 	planning_skill = 4
+		# 	logistics_skill = 1
+		# }
 
 	}
 
-    TRI_nagisa = { 
+    TRI_nagisa = { #茶话会 - 桐藤渚
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -66,12 +68,36 @@ characters={
         country_leader = {
 			ideology = no_ideology_type
 			traits = { mild_leader }
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 
         field_marshal = {
 			traits = {bearer_of_artillery brilliant_strategist
+			}
+			visible = {
+				OR = {
+					NOT = {
+						OR = {
+							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+								has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							}
+							NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+						}
+					}
+				}
 			}
 			skill = 3
 			attack_skill = 3
@@ -81,7 +107,7 @@ characters={
 		}
 
 	}
-	TRI_missing_nagisa = { 
+	TRI_missing_nagisa = { #茶话会 - 桐藤渚(失踪)
 		name=TRI_nagisa_name 
 		portraits={
 			civilian={
@@ -93,13 +119,13 @@ characters={
         country_leader = {
 			ideology = no_ideology_type
 			traits = { missing_leader }
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 
 	}
 
-    TRI_mika ={ 
+    TRI_mika ={ #茶话会 - 圣园未花
 		name=TRI_mika_name 
 		portraits={
 			civilian={
@@ -115,8 +141,18 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
-			} 
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = TRI_mika_arrested
+					}
+				}
+			}
 			traits = {
 				innocent_princess
 			}
@@ -164,7 +200,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_shimiko = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				butler_of_great_library
@@ -202,7 +254,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_ui = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				master_of_great_library
@@ -239,7 +307,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_suzumi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				slience_protector_of_trinity
@@ -257,7 +341,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_suzumi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				white_flash_of_trinity
@@ -305,7 +405,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_reisa = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				energetic_baka
@@ -417,7 +533,7 @@ characters={
         country_leader = {
 			ideology = no_ideology_type
 			traits = { h_loved_sage }
-			expire = "-1.1.1.1"
+			expire = "9999.1.1.1"
 			id = -1
 		}
 
@@ -456,7 +572,24 @@ characters={
 					}
 					has_country_flag = TRI_koharu_advisor_available
 				}
-			} 
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_koharu = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
 			traits = {
 				cute_baka_of_trinity
 			}
@@ -504,8 +637,28 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
-			} 
+				custom_override_tooltip = {
+					tooltip = TRI_mine_available_tt
+					has_country_flag = TRI_mine_available
+				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_mine = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
 			traits = {
 				savior_at_any_cost
 			}
@@ -525,15 +678,15 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {armor_officer trait_cautious
-			}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 5
-			planning_skill = 4
-			logistics_skill = 1
-		}
+        # field_marshal = {
+		# 	traits = {armor_officer trait_cautious
+		# 	}
+		# 	skill = 3
+		# 	attack_skill = 2
+		# 	defense_skill = 5
+		# 	planning_skill = 4
+		# 	logistics_skill = 1
+		# }
 
 	}
 
@@ -553,7 +706,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_hanae = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				energetic_nurse
@@ -584,22 +753,45 @@ characters={
 			}	
 		}
 
-		# advisor = {
-		# 	slot = political_advisor
-		# 	idea_token = TRI_serina_pa
-		# 	allowed = {
-		# 		original_tag = TRI
-		# 	}
-		# 	available = {
-		# 		has_completed_focus = TRI_restart_domestic_struggle
-		# 	} 
-		# 	traits = {
-		# 		sweet_nurse
-		# 	}
-		# 	ai_will_do = {
-		# 		factor = 1.000
-		# 	}
-        # }
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_serina_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = has_completed_focus_tt
+						FOCUS = TRI_restart_domestic_struggle
+					}
+					has_country_flag = TRI_restart_domestic_struggle
+				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_serina = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				sweet_nurse
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
 
         field_marshal = {
 			traits = {infantry_officer camouflage_expert
@@ -613,7 +805,7 @@ characters={
 
 	}
 
-    TRI_tsurugi ={ 
+    TRI_tsurugi = { #剑先鹤城 - 正义委
 		name=TRI_tsurugi_name 
 		portraits={
 			civilian={
@@ -622,23 +814,46 @@ characters={
 			}	
 		}
 
-        # advisor = {
-		# 	slot = army_chief
-		# 	idea_token = TRI_tsurugi_ac
-		# 	allowed = {
-		# 		original_tag = TRI
-		# 	}
-		# 	available = {
-		# 		original_tag = TRI
-		# 	}
-		# 	traits = {
-		# 		screaming_death
-		# 	}
-		# 	cost = 100
-		# 	ai_will_do = {
-		# 		factor = 1.000
-		# 	}
-		# }
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_tsurugi_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = has_completed_focus_tt
+						FOCUS = TRI_cooperation_with_justice_club
+					}
+					has_country_flag = TRI_cooperation_with_justice_club
+				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_tsurugi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				screaming_death
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 
         field_marshal = {
 			traits = {trait_cautious career_officer war_hero harsh_leader
@@ -652,36 +867,58 @@ characters={
 
 	}
 
-    TRI_hasumi ={ 
+    TRI_hasumi = { #羽川莲见 - 正义委
 		name=TRI_hasumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_hasumi
-				small=GFX_portrait_TRI_hasumi_small
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_hasumi
+				small = GFX_portrait_TRI_hasumi_small
 			}	
 		}
 
-        # advisor = {
-		# 	slot = army_chief
-		# 	idea_token = TRI_hasumi_ac
-		# 	allowed = {
-		# 		original_tag = TRI
-		# 	}
-		# 	available = {
-		# 		has_completed_focus = TRI_restart_domestic_struggle
-		# 	}
-		# 	traits = {
-		# 		serious_vice_chairman
-		# 	}
-		# 	cost = 100
-		# 	ai_will_do = {
-		# 		factor = 1.000
-		# 	}
-		# }
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_hasumi_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = has_completed_focus_tt
+						FOCUS = TRI_restart_domestic_struggle
+					}
+					has_country_flag = TRI_restart_domestic_struggle
+				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_hasumi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				serious_vice_chairman
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 
         field_marshal = {
-			traits = {trait_cautious infantry_officer
-			}
+			traits = { trait_cautious infantry_officer }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 2
@@ -691,12 +928,12 @@ characters={
 
 	}
 
-    TRI_mashiro ={ 
-		name=TRI_mashiro_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_mashiro
-				small=GFX_portrait_TRI_mashiro_small
+    TRI_mashiro = { #静山真白 - 正义委
+		name = TRI_mashiro_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_mashiro
+				small = GFX_portrait_TRI_mashiro_small
 			}	
 		}
 
@@ -707,7 +944,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_mashiro = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				long_range_justice_supporter
@@ -730,12 +983,12 @@ characters={
 
 	}
 
-    TRI_ichika ={ 
-		name=TRI_ichika_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_ichika
-				small=GFX_portrait_TRI_ichika_small
+    TRI_ichika = { #仲正一花 - 正义委
+		name = TRI_ichika_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_ichika
+				small = GFX_portrait_TRI_ichika_small
 			}	
 		}
 
@@ -746,7 +999,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_ichika = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				restraint_arbiter
@@ -785,7 +1054,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_natsu = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				thinker_of_romantic
@@ -824,7 +1109,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_airi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				mint_icecream
@@ -862,7 +1163,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_yoshimi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				rare_sweet_hunter
@@ -900,7 +1217,23 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_kazusa = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			} 
 			traits = {
 				legend_of_kathy_paruge
@@ -938,7 +1271,24 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				has_country_flag = TRI_sisterhood_engage_in_politic
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_hinata = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				timid_haracles
@@ -950,8 +1300,7 @@ characters={
 		}
 
         field_marshal = {
-			traits = {bearer_of_artillery
-			}
+			traits = { bearer_of_artillery }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -984,7 +1333,24 @@ characters={
 					}
 					has_country_flag = TRI_mari_advisor_available
 				}
-			} 
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_mari = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
 			traits = {
 				hightly_welcomed_sister
 			}
@@ -1034,7 +1400,24 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				has_country_flag = TRI_sisterhood_engage_in_politic
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_sakurako = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
 			}
 			traits = {
 				gentle_war_leader
@@ -1052,7 +1435,7 @@ characters={
 				original_tag = TRI
 			}
 			available = {
-				original_tag = TRI
+				has_country_flag = TRI_sisterhood_engage_in_politic
 			} 
 			traits = {
 				devout_secret_keeper

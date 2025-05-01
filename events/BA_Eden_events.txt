@@ -1,0 +1,174 @@
+add_namespace = Eden_pact
+###超事件###
+#第一次《伊甸条约》会谈
+news_event = {
+    id = Eden_pact.1000
+    title = Eden_pact.1000.t
+    desc = Eden_pact.1000.d
+    picture = GFX_TRI_events_pic
+	is_triggered_only = yes
+    major = yes
+	fire_only_once = yes
+    #这里需要进一步完善
+    option = {
+		name = Eden_pact.1000.a
+        trigger = { original_tag = TRI }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_1 = yes
+        }
+        
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = Eden_pact.1000.b
+        trigger = {
+            NOT = { original_tag = TRI }
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_1 = yes
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+#第二次《伊甸条约》会谈
+news_event = {
+    id = Eden_pact.1001
+    title = Eden_pact.1001.t
+    desc = Eden_pact.1001.d
+    #picture = GFX_TRI_events_pic
+    major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+    immediate = {
+        hidden_effect = {
+			if = {
+				limit = { original_tag = TRI }
+				set_variable = { global.Eden_treaty_progress = 0 }
+				set_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+				set_variable = { Eden_treaty_weights = 0 }
+				set_variable = { GEH.Eden_treaty_weights = 0 }
+                activate_mission = Eden_treaty_mutual_negotiation
+                if = {
+                    limit = { NOT = { has_completed_focus = TRI_choosing_pact_place } }
+                    unlock_national_focus = TRI_choosing_pact_place
+                    add_stability = -0.1
+                    set_temp_variable = { loyalty_change = -0.05 }
+                    TRI_parliament_all_loyalty_change = yes
+                    TRI_unity_decrease_5 = yes
+                }
+			}
+            else_if = {
+                limit = { 
+                    NOT = { has_completed_focus = TRI_choosing_pact_place }
+                    original_tag = GEH
+                }
+                unlock_national_focus = GEH_restart_eden_treaty_negotiation
+                #TODO:格赫娜未能触发的惩罚
+            }
+            set_global_flag = BA_2st_eden_pact_begin
+            set_global_flag = Eden_treaty_negotiation_ongoing
+        }
+    }
+    option = {
+		name = Eden_pact.1001.a
+
+        trigger = {
+            original_tag = TRI
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_2 = yes
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.1001.b
+
+        trigger = {
+            original_tag = GEH
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_2 = yes
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = Eden_pact.1001.c
+
+        trigger = {
+            NOT = { original_tag = TRI }
+            NOT = { original_tag = GEH }
+        }
+        if = {
+            limit = { is_ai = no }
+            BARE_SuperEvent_2_effect_2 = yes
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+#超事件：《伊甸条约》的成功签订
+news_event = {
+    id = Eden_pact.1002
+    title = Eden_pact.1002.t
+    desc = Eden_pact.1002.d
+    #picture = GFX_TRI_events_pic
+    major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+    immediate = {
+        
+    }
+
+    option = {
+		name = Eden_pact.1002.a
+        trigger = {
+            original_tag = TRI
+        }
+        hidden_effect = {
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                #BAR_LX_Super_Event_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.1002.b
+        trigger = {
+            NOT = { original_tag = TRI }
+        }
+        hidden_effect = {
+            if = {
+                limit = { is_ai = no }
+                #BAR_LX_Super_Event_effect_7 = yes
+            }
+        }
+        
+		ai_chance = {
+			base = 100
+		}
+    }
+}
