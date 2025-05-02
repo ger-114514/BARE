@@ -145,6 +145,16 @@ recruit_character = GEH_kasumi #温泉开发部
 recruit_character = GEH_erika #忘了
 recruit_character = GEH_kirara #忘了
 recruit_character = GEH_JingJiZhuangTaiWeiYuanHui #歌赫娜紧急状态委员会
+add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_makoto }
+add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_iroha }
+add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_ibuki }
+
+add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_makoto }
+add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iroha }
+add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_hina }
+add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ako }
+add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iori }
+add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_chinatsu }
 
 set_politics = {
 	ruling_party = no_ideology
