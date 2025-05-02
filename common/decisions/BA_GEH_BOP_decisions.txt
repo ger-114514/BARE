@@ -220,9 +220,12 @@ GEH_bop_decision_category = {
                   #筹备度+10
                   set_temp_variable = { progress_change = 10 }
                   Eden_treaty_change_progress = yes
-                  #TODO:隐藏效果：降低阿里乌斯的渗透度
+                  #隐藏效果：降低阿里乌斯的渗透度
                   hidden_effect = {
-                        
+                        ARI = {
+                              set_temp_variable = { intelligence_change = -5 }
+                              ARI_change_intelligence_in_GEH = yes
+                        }
                   }
             }
       }

@@ -374,12 +374,14 @@ GEH_emergency_time_decision_category = {
 
 
 GEH_after_eden_war_decision_category = {
-
-
 	#停止产能动员
 	GEH_stop_war_industry = {
 		visible = {
-			has_idea = GEH_war_industry_modifier
+			OR = {
+				has_idea = GEH_war_industry_modifier
+				has_idea = GEH_war_industry_2_modifier
+			}
+			
 		}
 		available = {
 		}
@@ -388,11 +390,18 @@ GEH_after_eden_war_decision_category = {
 		days_remove = 35
 
 		remove_effect = {
-			remove_ideas = GEH_war_industry_modifier
+			if = {
+				limit = { has_idea = GEH_war_industry_modifier }
+				remove_ideas = GEH_war_industry_modifier
+			}
+			else = {
+				remove_ideas = GEH_war_industry_2_modifier
+			}
+		}
+		ai_will_do = {
+			base = 0
 		}
 	}
-
-
 }
 
 GEH_GST_LS_category = {

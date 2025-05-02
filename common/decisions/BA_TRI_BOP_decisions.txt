@@ -4,6 +4,15 @@ TRI_debug_decisions = {
 			BA_TRI_initialize_paranoia_system = yes
 		}
 	}
+	TRI_remove_debuff = {
+		complete_effect = {
+			every_state = {
+				remove_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
+		}
+	}
 	#设置焦点，测试用
 	TRI_set_focus_signing_Eden = {
 		visible = {

@@ -52,7 +52,7 @@ focus_tree = {
 	    relative_position_id = GEH_fisrt_eden_treaty
         cost = 5
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_fisrt_eden_treaty }
         search_filters = { FOCUS_FILTER_POLITICAL }
         
@@ -69,7 +69,7 @@ focus_tree = {
 	    relative_position_id = GEH_go_back_to_inside
         cost = 5
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_go_back_to_inside }
         search_filters = { FOCUS_FILTER_POLITICAL }
         
@@ -86,7 +86,7 @@ focus_tree = {
         relative_position_id = GEH_battle_between_makoto_and_hina
         cost = 5
         x = 2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_battle_between_makoto_and_hina }
         mutually_exclusive = { focus = GEH_go_smoothly_forward }
         available = {
@@ -108,7 +108,7 @@ focus_tree = {
 	    relative_position_id = GEH_battle_between_makoto_and_hina
         cost = 5
         x = -2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_battle_between_makoto_and_hina }
         mutually_exclusive = { focus = GEH_add_for_hina }
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -128,7 +128,7 @@ focus_tree = {
 	    relative_position_id = GEH_go_smoothly_forward
         cost = 5
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_go_smoothly_forward }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -137,6 +137,7 @@ focus_tree = {
                 id = GEH_bp_between_chaos_and_order
                 left_side = GEH_bp_order
                 right_side = GEH_bp_chaos
+                set_value = 0.3
             }
             
         }
@@ -149,7 +150,7 @@ focus_tree = {
 	    relative_position_id = GEH_inside_fight_again
         cost = 4
         x = -2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_inside_fight_again }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -172,7 +173,7 @@ focus_tree = {
 	    relative_position_id = GEH_inside_fight_again
         cost = 4
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_inside_fight_again }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -195,7 +196,7 @@ focus_tree = {
 	    relative_position_id = GEH_inside_fight_again
         cost = 2
         x = 2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_inside_fight_again }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -229,7 +230,7 @@ focus_tree = {
 	    relative_position_id = GEH_gehinna_is_on_action
         cost = 10
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_gehinna_is_on_action }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -259,7 +260,7 @@ focus_tree = {
 	    relative_position_id = GEH_find_the_trust_again
         cost = 4
         x = -2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_find_the_trust_again }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -277,7 +278,7 @@ focus_tree = {
 	    relative_position_id = GEH_find_the_trust_again
         cost = 4
         x = 2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_find_the_trust_again }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -295,7 +296,7 @@ focus_tree = {
 	    relative_position_id = GEH_find_the_trust_again
         cost = 5
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_find_the_trust_again }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -336,9 +337,10 @@ focus_tree = {
         }
 
         completion_reward = {
-            #TODO：触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
-            country_event = {
-                id = GEH_dip_events.1000 #我不清楚能不能直接套用三一的，我抄了一遍
+            #触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
+            if = {
+                limit = { NOT = { has_global_flag = BA_2st_eden_pact_begin } }
+                news_event = Eden_pact.1001
             }
             add_ideas = GEH_ideas_prepare_for_conference_1
             add_ideas = GEH_ideas_conference_support_1
@@ -352,7 +354,7 @@ focus_tree = {
 	    relative_position_id = GEH_restart_eden_treaty_negotiation
         cost = 5
         x = -2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_restart_eden_treaty_negotiation }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -368,7 +370,7 @@ focus_tree = {
                 remove_idea = GEH_ideas_prepare_for_conference_1
                 add_idea = GEH_ideas_prepare_for_conference_2
             }
-            #TODO:每月向决议：第二次《伊甸条约》会谈筹备中添加2点筹备度
+            #每月向决议：第二次《伊甸条约》会谈筹备中添加2点筹备度
         }
 	}
 
@@ -379,7 +381,7 @@ focus_tree = {
 	    relative_position_id = GEH_restart_eden_treaty_negotiation
         cost = 5
         x = 2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_restart_eden_treaty_negotiation }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -434,7 +436,7 @@ focus_tree = {
 	    relative_position_id = GEH_riot_in_gehennna
         cost = 2
         x = -2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_riot_in_gehennna }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -462,7 +464,7 @@ focus_tree = {
 	    relative_position_id = GEH_riot_in_gehennna
         cost = 5
         x = 0
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_riot_in_gehennna }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -489,7 +491,7 @@ focus_tree = {
 	    relative_position_id = GEH_riot_in_gehennna
         cost = 4
         x = 2
-        y = 2
+        y = 1
         prerequisite = {  focus = GEH_riot_in_gehennna }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1172,8 +1174,8 @@ focus_tree = {
 
         completion_reward = {
 
-            #TODO:
-            #remove_ideas = 混乱的工厂 没写这个idea
+            #混乱的工厂
+            remove_ideas = GEH_factory_management_in_chaos
             #启动一个动态的精神：【格黑娜产能利用率】 这个我不会写
 
         }		
@@ -1223,9 +1225,8 @@ focus_tree = {
         completion_reward = {
 
             add_ideas = GEH_war_industry_modifier
-            #TODO:
             #解锁决议： 停止产能动员：需要20PP进行35天，移除此精神
-
+            unlock_decision_tooltip = GEH_stop_war_industry
         }		
     }
 
@@ -1268,6 +1269,7 @@ focus_tree = {
         prerequisite = {  focus = GEH_everything_for_war }
 
         available = {
+            has_war = no
         }
 
         completion_reward = {
@@ -1350,9 +1352,10 @@ focus_tree = {
         id = GEH_expand_military_building
         icon = GFX_goal_GEH_expand_military_building
         cost = 5
-        x = 6
+        x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_building_problems
 
         prerequisite = {  focus = GEH_building_problems }
 
@@ -1383,9 +1386,10 @@ focus_tree = {
         id = GEH_experiment_weapon_research
         icon = GFX_goal_GEH_experiment_weapon_research
         cost = 10
-        x = 6
-        y = 2
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_expand_military_building
 
         prerequisite = {  focus = GEH_expand_military_building }
 
@@ -1412,9 +1416,10 @@ focus_tree = {
         id = GEH_merge_outside_technology
         icon = GFX_goal_GEH_merge_outside_technology
         cost = 10
-        x = 6
-        y = 3
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_experiment_weapon_research
 
         prerequisite = {  focus = GEH_experiment_weapon_research }
 
@@ -1434,9 +1439,10 @@ focus_tree = {
         id = GEH_quality_first
         icon = GFX_goal_GEH_quality_first
         cost = 5
-        x = 6
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_merge_outside_technology
 
         prerequisite = {  focus = GEH_merge_outside_technology }
         mutually_exclusive = { focus = GEH_quantity_first }
@@ -1453,12 +1459,12 @@ focus_tree = {
         id = GEH_put_advance_tech_in_use
         icon = GFX_goal_GEH_put_advance_tech_in_use
         cost = 10
-        x = 6
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_quality_first
 
         prerequisite = {  focus = GEH_quality_first }
-        mutually_exclusive = { focus = GEH_quantity_first }
 
         completion_reward = {
 
@@ -1475,9 +1481,10 @@ focus_tree = {
         id = GEH_change_the_battlefield
         icon = GFX_goal_GEH_change_the_battlefield
         cost = 10
-        x = 6
-        y = 6
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_put_advance_tech_in_use
 
         prerequisite = {  focus = GEH_put_advance_tech_in_use }
 
@@ -1493,9 +1500,10 @@ focus_tree = {
         id = GEH_quantity_first
         icon = GFX_goal_GEH_quantity_first
         cost = 5
-        x = 8
-        y = 4
+        x = 2
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_merge_outside_technology
 
         prerequisite = {  focus = GEH_merge_outside_technology }
         mutually_exclusive = { focus = GEH_quality_first }
@@ -1513,9 +1521,10 @@ focus_tree = {
         id = GEH_save_time_and_matirial
         icon = GFX_goal_GEH_save_time_and_matirial
         cost = 5
-        x = 8
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_quantity_first
 
         prerequisite = {  focus = GEH_quantity_first }
 
@@ -1532,9 +1541,10 @@ focus_tree = {
         id = GEH_fit_real_war
         icon = GFX_goal_GEH_fit_real_war
         cost = 5
-        x = 8
-        y = 6
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_save_time_and_matirial
 
         prerequisite = {  focus = GEH_save_time_and_matirial }
 
@@ -1721,9 +1731,10 @@ focus_tree = {
         id = GEH_Military_Thought
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 18
+        x = 0
         y = 2
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Strengthening_law_enforcement
 
         prerequisite = {  focus = GEH_Strengthening_law_enforcement }
 
@@ -1748,9 +1759,10 @@ focus_tree = {
         id = GEH_Speed_is_everything
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 18
-        y = 3
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Military_Thought
         prerequisite = {  focus = GEH_Military_Thought }
         mutually_exclusive = { focus = GEH_Breakthrough }
         mutually_exclusive = { focus = GEH_People_oriented}
@@ -1773,9 +1785,10 @@ focus_tree = {
         id = GEH_Flexible
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 18
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Speed_is_everything
         prerequisite = {  focus = GEH_Breakthrough   focus = GEH_Speed_is_everything  focus = GEH_People_oriented }
         mutually_exclusive = { focus = GEH_Towering_mountain }
         mutually_exclusive = { focus = GEH_Overcoming_difficulties }
@@ -1791,9 +1804,10 @@ focus_tree = {
         id = GEH_Black_Ball_Express
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 18
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Flexible
         prerequisite = { focus = GEH_Flexible }
         completion_reward = {
          add_ideas = { GEH_Black_Ball_Express_ideas }
@@ -1805,9 +1819,10 @@ focus_tree = {
         id = GEH_Breakthrough
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 16
-        y = 3
+        x = -2
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Military_Thought
         prerequisite = {  focus = GEH_Military_Thought }
         mutually_exclusive = { focus = GEH_Speed_is_everything }
         mutually_exclusive = { focus = GEH_People_oriented}
@@ -1840,9 +1855,10 @@ focus_tree = {
         id = GEH_Overcoming_difficulties
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 16
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Breakthrough
         prerequisite = {  focus = GEH_Breakthrough   focus = GEH_Speed_is_everything  focus = GEH_People_oriented }
         mutually_exclusive = { focus = GEH_Flexible }
         mutually_exclusive = { focus = GEH_Towering_mountain }
@@ -1863,9 +1879,10 @@ focus_tree = {
         id = GEH_Combat_Engineer
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 16
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Overcoming_difficulties
         prerequisite = {  focus = GEH_Overcoming_difficulties }
         completion_reward = {
 
@@ -1887,9 +1904,10 @@ focus_tree = {
         id = GEH_People_oriented
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 20
-        y = 3
+        x = 2
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Military_Thought
         prerequisite = {  focus = GEH_Military_Thought }
         mutually_exclusive = { focus = GEH_Breakthrough }
         mutually_exclusive = { focus = GEH_Speed_is_everything }
@@ -1908,9 +1926,10 @@ focus_tree = {
         id = GEH_Towering_mountain
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 20
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_People_oriented
         prerequisite = {  focus = GEH_Breakthrough   focus = GEH_Speed_is_everything  focus = GEH_People_oriented}
         mutually_exclusive = { focus = GEH_Overcoming_difficulties }
         mutually_exclusive = { focus = GEH_Flexible }
@@ -1930,9 +1949,10 @@ focus_tree = {
         id = GEH_Master_Disguise
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 20
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Towering_mountain
         prerequisite = {  focus = GEH_Towering_mountain }
         completion_reward = {
             add_ideas = { GEH_Master_Disguise_ideas }
@@ -1945,14 +1965,15 @@ focus_tree = {
         id = GEH_Hundred_Battles
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 18
-        y = 6
+        x = 0
+        y = 1
 
         available = {
             has_army_experience > 150
             surrender_progress > 0.1
         }
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Black_Ball_Express
         prerequisite = { focus = GEH_Black_Ball_Express  focus = GEH_Combat_Engineer focus = GEH_Master_Disguise }
         select_effect = {
 			add_ideas = GEH_Reorganization_of_the_troops
@@ -1992,9 +2013,10 @@ focus_tree = {
         id = GEH_Border_defense
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 14
+        x = -4
         y = 2
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Strengthening_law_enforcement
 
         prerequisite = {  focus = GEH_Strengthening_law_enforcement }
 
@@ -2059,9 +2081,10 @@ focus_tree = {
         id = GEH_Training_in_medical_knowledge
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 14
-        y = 3
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Border_defense
 
         prerequisite = {  focus = GEH_Border_defense }
 
@@ -2075,9 +2098,10 @@ focus_tree = {
         id = GEH_Conquer_the_sky
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 22
+        x = 4
         y = 2
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Strengthening_law_enforcement
 
         prerequisite = {  focus = GEH_Strengthening_law_enforcement }
         completion_reward = {
@@ -2096,9 +2120,10 @@ focus_tree = {
         id = GEH_Experimental_Technology
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 22
-        y = 3
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Conquer_the_sky
 
         prerequisite = {  focus = GEH_Conquer_the_sky }
          completion_reward = {
@@ -2116,9 +2141,10 @@ focus_tree = {
         id = GEH_Strengthen_training
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 22
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Experimental_Technology
 
         prerequisite = {  focus = GEH_Experimental_Technology }
 
@@ -2137,9 +2163,10 @@ focus_tree = {
         id = GEH_Rotation_System
         icon = GFX_goal_GEH_building_problems
         cost = 5
-        x = 22
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Strengthen_training
 
         prerequisite = {  focus = GEH_Strengthen_training }
 
@@ -2157,9 +2184,10 @@ focus_tree = {
         id = GEH_Integration_Armaments
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 28
+        x = 10
         y = 2
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Strengthening_law_enforcement
 
         prerequisite = {  focus = GEH_Strengthening_law_enforcement }
 
@@ -2175,9 +2203,10 @@ focus_tree = {
         id = GEH_Multi_purpose_anti_aircraft_weapons
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 28
-        y = 3
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Integration_Armaments
         prerequisite = {  focus = GEH_Integration_Armaments } 
          completion_reward = {
             add_ideas = {
@@ -2194,9 +2223,10 @@ focus_tree = {
         id = GEH_Experimental_anti_aircraft_missile
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 28
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Multi_purpose_anti_aircraft_weapons
 
         prerequisite = {  focus = GEH_Multi_purpose_anti_aircraft_weapons }
         completion_reward = {
@@ -2212,9 +2242,10 @@ focus_tree = {
         id = GEH_Mature_design
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 28
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Experimental_anti_aircraft_missile
 
         prerequisite = {  focus = GEH_Experimental_anti_aircraft_missile }
         completion_reward = {
@@ -2232,9 +2263,10 @@ focus_tree = {
         id = GEH_Under_hook_grenade
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 26
-        y = 3
+        x = -2
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Integration_Armaments
 
         prerequisite = {  focus = GEH_Integration_Armaments }
         completion_reward = {
@@ -2247,9 +2279,10 @@ focus_tree = {
         id = GEH_Mass_production_laser_sight
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 26
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Under_hook_grenade
 
         prerequisite = {  focus = GEH_Under_hook_grenade }
 
@@ -2266,9 +2299,10 @@ focus_tree = {
         id = GEH_Experimental_night_vision_goggles
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 26
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Mass_production_laser_sight
 
         prerequisite = {  focus = GEH_Mass_production_laser_sight }
         completion_reward = {
@@ -2284,9 +2318,10 @@ focus_tree = {
         id = GEH_Gun_Specifications
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 24
-        y = 3
+        x = -4
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Integration_Armaments
 
         prerequisite = {  focus = GEH_Integration_Armaments }
         completion_reward = {
@@ -2299,9 +2334,10 @@ focus_tree = {
         id = GEH_Lightweight_anti_tank_weapons
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 24
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Gun_Specifications
 
         prerequisite = {  focus = GEH_Gun_Specifications }
 
@@ -2318,9 +2354,10 @@ focus_tree = {
         id = GEH_Wartime_simplification
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 24
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Lightweight_anti_tank_weapons
 
         prerequisite = {  focus = GEH_Lightweight_anti_tank_weapons }
         completion_reward = {
@@ -2336,9 +2373,10 @@ focus_tree = {
         id = GEH_Organize_Negotiation
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 30
-        y = 3
+        x = 2
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Integration_Armaments
 
         prerequisite = {  focus = GEH_Integration_Armaments }
         completion_reward = {
@@ -2354,9 +2392,10 @@ focus_tree = {
         id = GEH_Using_Feedback
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 30
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Organize_Negotiation
 
         prerequisite = {  focus = GEH_Organize_Negotiation }
         completion_reward = {
@@ -2372,9 +2411,10 @@ focus_tree = {
         id = GEH_Mobilizing_tanks
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 30
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Using_Feedback
 
         prerequisite = {  focus = GEH_Using_Feedback }
         completion_reward = {
@@ -2390,9 +2430,10 @@ focus_tree = {
         id = GEH_Transportation_Industry
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 32
-        y = 3
+        x = 4
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Integration_Armaments
 
         prerequisite = {  focus = GEH_Integration_Armaments }
          completion_reward = {
@@ -2408,9 +2449,10 @@ focus_tree = {
         id = GEH_Increase_investment
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 32
-        y = 4
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Transportation_Industry
 
         prerequisite = {  focus = GEH_Transportation_Industry }
         completion_reward = {
@@ -2435,9 +2477,10 @@ focus_tree = {
         id = GEH_Simplify_production
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 32
-        y = 5
+        x = 0
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
+        relative_position_id = GEH_Increase_investment
 
         prerequisite = {  focus = GEH_Increase_investment }
 

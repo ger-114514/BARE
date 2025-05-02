@@ -11,8 +11,8 @@ TRI_parliament_decisions_categories = {
 		}
 		complete_effect = {
 			if = {
-				limit = { has_country_flag = TRI_senate_promise_task_2 }
-				clr_country_flag = TRI_senate_promise_task_2
+				limit = { has_country_flag = TRI_senate_promise_task_1 }
+				clr_country_flag = TRI_senate_promise_task_1
 				custom_effect_tooltip = {
 					localization_key = TRI_complete_promise_task_tt
 					PARLIAMENT = BA_TRI_senate_seat
@@ -96,8 +96,8 @@ TRI_parliament_decisions_categories = {
 		}
 		complete_effect = {
 			if = {
-				limit = { has_country_flag = TRI_house_promise_task_2 }
-				clr_country_flag = TRI_house_promise_task_2
+				limit = { has_country_flag = TRI_house_promise_task_1 }
+				clr_country_flag = TRI_house_promise_task_1
 				custom_effect_tooltip = {
 					localization_key = TRI_complete_promise_task_tt
 					PARLIAMENT = BA_TRI_house_seat
