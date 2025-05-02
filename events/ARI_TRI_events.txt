@@ -450,11 +450,9 @@ country_event = { #离巢
     is_triggered_only = yes
     option = {
         name = TRI_coup.23.a
-        TRI_nagisa = {
-            swap_ruler_traits = {
-                remove = TRI_nagisa_Find_the_root_2
-                add = TRI_nagisa_Find_the_root_3
-            }
+        swap_ruler_traits = {
+            remove = TRI_nagisa_Find_the_root_2
+            add = TRI_nagisa_Find_the_root_3
         }
         subtract_from_variable = { TRI_nagisa_paranoia_modifier_increase = 2 }
     }

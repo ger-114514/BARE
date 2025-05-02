@@ -397,6 +397,17 @@ TRI_bill_voting_decisions_categories = {
 			custom_effect_tooltip = TRI_emergent_voting_tt
 			clr_country_flag = TRI_parliament_adjourn
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				any_of = {
+					array = TRI_bills_to_be_passed
+					value = v
+					NOT = { check_variable = { v = 0 } }
+				}
+			}
+		}
 	}
 	TRI_earn_extra_senate_support = {
 		visible = {
@@ -416,7 +427,7 @@ TRI_bill_voting_decisions_categories = {
 			TRI_get_temp_bill_support = yes
 		}
 		ai_will_do = {
-			base = 50
+			base = 100
 		}
 	}
 	TRI_earn_extra_house_support = {
@@ -437,7 +448,7 @@ TRI_bill_voting_decisions_categories = {
 			TRI_get_temp_bill_support = yes
 		}
 		ai_will_do = {
-			base = 50
+			base = 100
 		}
 	}
 	skip_voting = {
@@ -466,6 +477,9 @@ TRI_bill_voting_decisions_categories = {
 			set_temp_variable = { bill = token:TRI_Bill_of_carrot_cake }
 			TRI_submit_the_bill = yes
 		}
+		ai_will_do = {
+			base = 99
+		}
 	}
 	#“铜橄榄”法案
 	TRI_submit_Bill_of_copper_olive = {
@@ -481,6 +495,9 @@ TRI_bill_voting_decisions_categories = {
 		complete_effect = {
 			set_temp_variable = { bill = token:TRI_Bill_of_copper_olive }
 			TRI_submit_the_bill = yes
+		}
+		ai_will_do = {
+			base = 99
 		}
 	}
 	#开诚布公法案
@@ -498,6 +515,9 @@ TRI_bill_voting_decisions_categories = {
 			set_temp_variable = { bill = token:TRI_Bill_of_disclosure }
 			TRI_submit_the_bill = yes
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	#重获信任法案
 	TRI_submit_Bill_of_regaining_trust = {
@@ -514,6 +534,9 @@ TRI_bill_voting_decisions_categories = {
 			set_temp_variable = { bill = token:TRI_Bill_of_regaining_trust }
 			TRI_submit_the_bill = yes
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	#“紧急事态动议”法案
 	TRI_submit_Bill_of_emergent_motion = {
@@ -529,6 +552,9 @@ TRI_bill_voting_decisions_categories = {
 		complete_effect = {
 			set_temp_variable = { bill = token:TRI_Bill_of_emergent_motion }
 			TRI_submit_the_bill = yes
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 }

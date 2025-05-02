@@ -73,8 +73,7 @@ characters={
 		}
 
         field_marshal = {
-			traits = {bearer_of_artillery brilliant_strategist
-			}
+			traits = { bearer_of_artillery brilliant_strategist }
 			visible = {
 				OR = {
 					NOT = {
@@ -148,9 +147,7 @@ characters={
 					}
 				}
 				hidden_trigger = {
-					NOT = {
-						has_country_flag = TRI_mika_arrested
-					}
+					NOT = { has_country_flag = TRI_mika_arrested }
 				}
 			}
 			traits = {
@@ -172,8 +169,10 @@ characters={
 			}
         }
 
-        corps_commander = {
-			traits = {trait_reckless war_hero fortress_buster infantry_officer
+        field_marshal = {
+			traits = { trait_reckless war_hero fortress_buster infantry_officer }
+			visible = {
+				NOT = { has_country_flag = TRI_mika_arrested }
 			}
 			skill = 3
 			attack_skill = 4
@@ -279,9 +278,13 @@ characters={
 				factor = 1.000
 			}
         }
-
-        field_marshal = {
+        corps_commander = {
 			traits = {}
+			visible = {
+				TRI_ui = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
+			}
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -377,8 +380,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer trait_engineer
+        corps_commander = {
+			traits = { infantry_officer trait_engineer }
+			visible = {
+				TRI_suzumi = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 3
@@ -432,8 +439,12 @@ characters={
 			}
 		}
 
-        field_marshal = {
-			traits = {trait_engineer infantry_officer
+        corps_commander = {
+			traits = { trait_engineer infantry_officer }
+			visible = {
+				TRI_reisa = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 1
 			attack_skill = 2
@@ -470,8 +481,12 @@ characters={
 		# 	}
         # }
 
-        field_marshal = {
-			traits = {armor_officer politically_connected
+        corps_commander = {
+			traits = { armor_officer politically_connected }
+			visible = {
+				TRI_hifumi = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 3
@@ -509,8 +524,12 @@ characters={
 		# 	}
 		# }
 
-        field_marshal = {
-			traits = {infantry_officer guerilla_fighte camouflage_expert adaptable
+        corps_commander = {
+			traits = { infantry_officer guerilla_fighter camouflage_expert adaptable }
+			visible = {
+				TRI_azusa = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 3
 			attack_skill = 3
@@ -537,8 +556,12 @@ characters={
 			id = -1
 		}
 
-        field_marshal = {
-			traits = {infantry_officer career_officer politically_connected
+        corps_commander = {
+			traits = { infantry_officer career_officer politically_connected }
+			visible = {
+				TRI_hanako = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 3
@@ -609,8 +632,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {politically_connected infantry_officer 
+        corps_commander = {
+			traits = { politically_connected infantry_officer }
+			visible = {
+				TRI_koharu = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 2
@@ -678,15 +705,17 @@ characters={
 			}
         }
 
-        # field_marshal = {
-		# 	traits = {armor_officer trait_cautious
-		# 	}
-		# 	skill = 3
-		# 	attack_skill = 2
-		# 	defense_skill = 5
-		# 	planning_skill = 4
-		# 	logistics_skill = 1
-		# }
+        field_marshal = {
+			traits = { armor_officer trait_cautious }
+			visible = {
+				has_country_flag = TRI_mine_available
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 1
+		}
 
 	}
 
@@ -732,8 +761,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer
+        corps_commander = {
+			traits = { infantry_officer }
+			visible = {
+				TRI_hanae = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 1
@@ -793,8 +826,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer camouflage_expert
+        corps_commander = {
+			traits = { infantry_officer camouflage_expert }
+			visible = {
+				TRI_serina = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 1
@@ -856,7 +893,11 @@ characters={
 		}
 
         field_marshal = {
-			traits = {trait_cautious career_officer war_hero harsh_leader
+			traits = { trait_cautious career_officer war_hero harsh_leader }
+			visible = {
+				TRI_tsurugi = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 3
 			attack_skill = 5
@@ -919,6 +960,11 @@ characters={
 
         field_marshal = {
 			traits = { trait_cautious infantry_officer }
+			visible = {
+				TRI_hasumi = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
+			}
 			skill = 2
 			attack_skill = 3
 			defense_skill = 2
@@ -971,8 +1017,12 @@ characters={
 			}
 		}
 
-        field_marshal = {
-			traits = {infantry_officer commando
+        corps_commander = {
+			traits = { infantry_officer commando }
+			visible = {
+				TRI_mashiro = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 4
@@ -1026,8 +1076,12 @@ characters={
 			}
 		}
 
-        field_marshal = {
-			traits = {infantry_officer skilled_staffer
+        corps_commander = {
+			traits = { infantry_officer skilled_staffer }
+			visible = {
+				TRI_ichika = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 3
 			attack_skill = 3
@@ -1081,8 +1135,12 @@ characters={
 			}
 		}
 
-        field_marshal = {
-			traits = {infantry_officer
+        corps_commander = {
+			traits = { infantry_officer }
+			visible = {
+				TRI_natsu = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 1
@@ -1135,8 +1193,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer
+        corps_commander = {
+			traits = { infantry_officer }
+			visible = {
+				TRI_airi = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 1
@@ -1189,8 +1251,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer
+        corps_commander = {
+			traits = { infantry_officer }
+			visible = {
+				TRI_yoshimi = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 3
@@ -1243,8 +1309,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer
+        corps_commander = {
+			traits = { infantry_officer }
+			visible = {
+				TRI_kazusa = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 2
@@ -1299,8 +1369,14 @@ characters={
 			}
 		}
 
-        field_marshal = {
+        corps_commander = {
 			traits = { bearer_of_artillery }
+			visible = {
+				has_country_flag = TRI_sisterhood_engage_in_politic
+				TRI_hinata = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
+			}
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -1372,8 +1448,12 @@ characters={
 			}
         }
 
-        field_marshal = {
-			traits = {infantry_officer skilled_staffer
+        corps_commander = {
+			traits = { infantry_officer skilled_staffer }
+			visible = {
+				TRI_mari = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 2
 			attack_skill = 2
@@ -1436,6 +1516,15 @@ characters={
 			}
 			available = {
 				has_country_flag = TRI_sisterhood_engage_in_politic
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					NOT = {
+						has_country_flag = TRI_goverment_damaged
+					}
+				}
+				TRI_sakurako = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			} 
 			traits = {
 				devout_secret_keeper
@@ -1458,6 +1547,12 @@ characters={
 
         field_marshal = {
 			traits = {infantry_officer politically_connected
+			}
+			visible = {
+				has_country_flag = TRI_sisterhood_engage_in_politic
+				TRI_sakurako = {
+					NOT = { has_character_flag = TRI_character_arrested }
+				}
 			}
 			skill = 3
 			attack_skill = 2

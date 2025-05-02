@@ -30,7 +30,7 @@ country_event = {
                         activate_shine_on_focus = [NEW_FOCUS]
                         country_event = {
                             id = TRI_autofocus.1
-                            days = TRI_auto_focus_days
+                            days = var:TRI_auto_focus_days
                         }
                     }
                     remove_from_array = {
@@ -781,7 +781,10 @@ country_event = {
 
     option = {
 		name = TRI_events.36.a
-
+        country_event = {
+            id = TRI_events.38
+            days = 7
+        }
 		ai_chance = {
 			base = 100
 		}

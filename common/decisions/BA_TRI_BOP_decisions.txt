@@ -148,7 +148,7 @@ TRI_BOP_system = {
 	TRI_next_house_election = {
 		priority = 1000
 		days_mission_timeout = 730
-		visible = {
+		activation = {
 			has_country_flag = TRI_parliament_available
 		}
 		available = {

@@ -189,9 +189,9 @@ focus_tree = {
 						tooltip = {
 							localization_key = TRI_focus_support_trigger
 							PARLIAMENT = BA_TRI_senate_seat
-							SUPPORT = "20"
+							SUPPORT = "18"
 						}
-						check_variable = { position_support@BA_TRI_senate_seat > 20 }
+						check_variable = { position_support@BA_TRI_senate_seat > 18 }
 					}
 					custom_override_tooltip = {
 						tooltip = {
@@ -884,15 +884,11 @@ focus_tree = {
 				completion_reward = {
 					add_political_power = 50
 					TRI_unity_decrease_5 = yes
-					TRI_nagisa = {
-						swap_ruler_traits = {
-							remove = TRI_nagisa_Find_the_root
-							add = TRI_nagisa_Find_the_root_2
-						}
+					swap_ruler_traits = {
+						remove = TRI_nagisa_Find_the_root
+						add = TRI_nagisa_Find_the_root_2
 					}
-					add_to_variable = {
-						TRI_nagisa_paranoia_modifier_increase = 1
-					}
+					add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 1 }
 					#判定路线
 					if = {
 						limit = { has_country_flag = TRI_investigation_perfect_ending_enter }
@@ -918,6 +914,7 @@ focus_tree = {
 							id = TRI_autofocus.1
 							days = 7
 						}
+						mark_focus_tree_layout_dirty = yes
 					}
 					else = {
 						set_country_flag = TRI_investigation_normal_ending
@@ -1088,7 +1085,8 @@ focus_tree = {
 					#触发事件移除桐藤渚特质【追根溯源】
 					effect_tooltip = { 
 						custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
-						remove_country_leader_trait = TRI_nagisa_Find_the_root 
+						remove_country_leader_trait = TRI_nagisa_Find_the_root_2
+						add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -3 }
 						mark_focus_tree_layout_dirty = yes
 					}
 				}
@@ -1195,6 +1193,8 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					mark_focus_tree_layout_dirty = yes
+					set_country_flag = TRI_empty_nest_operation
+					unlock_decision_tooltip = TRI_empty_nest_operation
 				}
 			}
 		
@@ -1272,7 +1272,7 @@ focus_tree = {
 				completion_reward = {
 					TRI_unity_increase_5 = yes
 					add_political_power = 100
-					country_event = TRI_events.22
+					country_event = TRI_coup.9
 					set_country_flag = TRI_sweet_dream_in_one_night_completed
 					
 					#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一情报局】；②将【补习部调查】决议组移除出GUI【圣三一情报局】
@@ -1323,6 +1323,7 @@ focus_tree = {
 				prerequisite = { focus = TRI_desperate_fight }
 				prerequisite = { focus = TRI_steady_as_she_goes }
 				allow_branch = {
+					has_completed_focus = TRI_desperate_fight
 					has_country_flag = TRI_investigation_perfect_ending
 				}
 				cost = 5
@@ -1330,7 +1331,7 @@ focus_tree = {
 				y = 2
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
-					
+					BA_TRI_remove_paranoia_system = yes
 				}
 			}
 	#拥有焦点：【对现任茶话会领袖的支持】时显示的国策
@@ -2212,25 +2213,6 @@ focus_tree = {
 				add_dynamic_modifier = { modifier = TRI_chaotic_frontline_2 }
 			}			
 		}
-		# focus = { #善意的假面
-		# 	id = TRI_smile_under_mask
-		# 	##icon = GFX_goal_unknown
-		# 	relative_position_id = TRI_sun_rise_again
-		# 	prerequisite = {
-		# 		focus = TRI_sun_rise_again
-		# 	}		
-		# 	cost = 5
-		# 	x = 1
-		# 	y = 1
-		# 	search_filters = { FOCUS_FILTER_POLITICAL }
-		# 	completion_reward = {
-		# 		country_event = TRI_events.36
-		# 		add_political_power = 100
-				
-		# 		#为政治顾问：阿慈谷日富美添加效果：每日政治点数获取+10%,稳定度+10%
-	
-		# 	}			
-		# }
 		focus = { #雨破天晴
 			id = TRI_after_the_storm
 			##icon = GFX_goal_unknown
@@ -2246,7 +2228,7 @@ focus_tree = {
 				#所有社团支持度+30%
 				set_temp_variable = { loyalty_change = 0.3 }
 				TRI_parliament_all_loyalty_change = yes
-				country_event = TRI_events.38
+				country_event = TRI_events.36
 				custom_effect_tooltip = eden_treaty_step_5_add_modifier_2
 				add_to_variable = { eden_broken_daily_power_gain = 0.3 }
 				add_to_variable = { eden_broken_stability = 0.05 }
@@ -2267,7 +2249,10 @@ focus_tree = {
 				add_to_variable = { eden_broken_daily_power_gain = 0.20 }
 				add_to_variable = { eden_broken_stability = 0.15 }
 				add_to_variable = { eden_broken_research_speed = 0.10 }
-				country_event = TRI_events.35
+				country_event = {
+					id = TRI_events.35
+					days = 14
+				}
 				country_event = TRI_events.40
 			}			
 		}
