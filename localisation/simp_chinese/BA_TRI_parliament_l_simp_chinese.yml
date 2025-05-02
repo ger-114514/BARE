@@ -53,7 +53,7 @@
  view_non_against: "§G非对立§!"
  view_against: "§R对立§!"
 
- TRI_focus_support_trigger: "$PARLIAMENT$对我们焦点立场的支持数大于$SUPPORT$"
+ TRI_focus_support_trigger: "$PARLIAMENT$对我们焦点立场的支持数大于$SUPPORT|Y$"
 
  TRI_player_position_change_to_hardliner: "我们对焦点的立场向$BOP_hardliner$移动[?position_change|%0Y]"
  TRI_player_position_change_to_moderate: "我们对焦点的立场向$BOP_moderate$移动[?position_change|%0Y]"

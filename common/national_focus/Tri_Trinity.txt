@@ -1085,8 +1085,6 @@ focus_tree = {
 					#触发事件移除桐藤渚特质【追根溯源】
 					effect_tooltip = { 
 						custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
-						remove_country_leader_trait = TRI_nagisa_Find_the_root_2
-						add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -3 }
 						mark_focus_tree_layout_dirty = yes
 					}
 				}
