@@ -1,6 +1,397 @@
 ideas = {
     country = {
-    
+                ###政治线idea
+
+        #激烈的内部斗争
+        GEH_severe_inside_contradiction = {
+            name = GEH_severe_inside_contradiction
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                war_support_factor = -0.2
+                stability_factor = -0.2
+            }
+        }
+
+        #内部斗争
+        GEH_mild_inside_contradiction = {
+            name = GEH_severe_inside_contradiction
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                war_support_factor = -0.1
+                stability_factor = -0.1
+            }
+        }
+
+        #团结的格黑娜
+        GEH_unity_gehennna = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                war_support_factor = 0.1
+                stability_factor = 0.1
+                power_balance_weekly = -0.005
+            }
+        }
+
+        #筹备会谈
+        GEH_ideas_prepare_for_conference_1 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                political_power_cost = 0.1
+                stability_factor = -0.1
+                power_balance_weekly = -0.01
+            }
+        }
+
+        #筹备和圣三一的会谈
+        GEH_ideas_prepare_for_conference_2 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                political_power_factor = -0.2
+                political_power_cost = 0.1
+                stability_factor = -0.1
+                power_balance_weekly = -0.01
+            }
+        }
+
+        #完善的筹备
+        GEH_ideas_prepare_for_conference_3 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.2
+                political_power_factor = -0.2
+                political_power_cost = 0.3
+                stability_factor = -0.1
+                power_balance_weekly = -0.01
+                production_speed_buildings_factor = 0.2
+                production_factory_efficiency_gain_factor = 0.2
+            }
+        }
+
+        #会谈支持度：无人在意
+        GEH_ideas_conference_support_1 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+            }
+        }
+
+        #会谈支持度：略有耳闻
+        GEH_ideas_conference_support_2 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                political_power_factor = 0.1
+                #贡献度获取+25%
+                Eden_treaty_weights_gain_factor = 0.25
+            }
+        }
+
+        #会谈支持度：骚乱不断
+        GEH_ideas_conference_support_3 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                power_balance_weekly = -0.02
+                stability_factor = -0.1
+                war_support_factor = -0.1
+                #贡献度获取-25%
+                Eden_treaty_weights_gain_factor = -0.25
+            }
+        }
+
+
+        #会谈支持度：稳步向前
+        GEH_ideas_conference_support_4 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                political_power_factor = 0.1
+                stability_factor = 0.05
+                war_support_factor = 0.05
+                power_balance_weekly = 0.005
+                #贡献度获取+50%
+                Eden_treaty_weights_gain_factor = 0.5
+            }
+        }
+
+
+        # 变成了动态修正
+        # #措手不及
+        # GEH_a_unpredictable_attack = {
+        #     name = GEH_unity_gehennna
+        #     picture = unknown
+
+        #     allowed = {
+        #         original_tag = GEH
+        #     }
+
+        #     modifier = {
+        #         army_attack_factor = -0.5
+        #         army_defence_factor = -0.5
+        #         army_org_regain = -0.3
+        #         army_speed_factor = -0.2
+        #         supply_consumption_factor = 0.2
+        #         out_of_supply_factor = 0.2
+        #         land_reinforce_rate = -0.02
+        #         breakthrough_factor = -0.3
+        #     }
+        # }
+
+
+        #部队混乱(3次)
+        GEH_army_in_chaos = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                army_org_regain = -0.3
+                army_org_factor = -0.3
+                land_reinforce_rate = -0.03
+            }
+        }
+
+        GEH_army_in_chaos_2 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                army_org_regain = -0.2
+                army_org_factor = -0.2
+                land_reinforce_rate = -0.02
+            }
+        }
+
+        GEH_army_in_chaos_3 = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                army_org_regain = -0.1
+                army_org_factor = -0.1
+                land_reinforce_rate = -0.01
+            }
+        }
+
+
+        #不遗余力
+        GEH_fight_to_the_end = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                stability_weekly_factor = -0.01
+                army_attack_factor = 0.2
+                army_defence_factor = 0.2
+                army_org_regain = 0.1
+                army_org_factor = 0.2
+                army_speed_factor = 0.1
+            }
+        }
+
+
+
+
+        #三一-格黑娜军工协作
+        GEH_army_factory_cooperation = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.2
+                production_factory_max_efficiency_factor = 0.2
+            }
+        }
+
+        #对圣三一外交支持
+        GEH_dip_support_to_trinity = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                political_power_factor = -0.2
+                #每月贡献度+3
+            }
+        }
+
+        #非常措施
+        GEH_emergency_methods_for_arius = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                army_core_attack_factor = 0.2
+                army_core_defence_factor = 0.2
+                minimum_training_level = -0.1
+            }
+        }
+
+        #铁腕镇压
+        GEH_supress_the_choas_idea = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                resistance_target = -0.15
+                resistance_damage_to_garrison = -0.2
+            }
+        }
+
+        #管制交通
+        GEH_control_the_transport_idea = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                supply_factor = 0.1
+                production_speed_rail_way_factor = 0.2
+                production_speed_supply_node_factor = 0.3
+            }
+        }
+
+        #不许后退
+        GEH_no_step_back_idea = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                army_core_attack_factor = 0.2
+                army_core_defence_factor = 0.2
+            }
+        }
+
+
+        #格黑娜屹立于此
+        GEH_gehenna_stands_forever = {
+            name = GEH_unity_gehennna
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                power_balance_weekly = -0.02
+                political_power_factor = 0.15
+                stability_weekly = 0.005
+                war_support_weekly = 0.005
+                army_org_factor = 0.15
+                production_speed_buildings_factor = 0.1
+                industrial_capacity_factory = 0.2
+                consumer_goods_factor = -0.1
+            }
+        }
+
+        ###经济线idea
+
+        #混乱的工厂（起始）
+        GEH_factory_management_in_chaos = {
+            name = GEH_war_industry_modifier
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                industrial_capacity_factory = -0.05
+                production_factory_efficiency_gain_factor = -0.1
+                production_factory_max_efficiency_factor = -0.1
+            }
+        }
 
         
         #战时工业
