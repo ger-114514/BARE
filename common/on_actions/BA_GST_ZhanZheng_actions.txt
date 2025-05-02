@@ -35,27 +35,58 @@ on_actions = {
 			add_to_array = { global.GST_JS_ZBH = 171 }
 			add_to_array = { global.GST_JS_ZBH = 172 }
 
-			add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_makoto }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_iroha }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_ibuki }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_seia }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_nagisa }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_mika }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_makoto }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iroha }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ibuki }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_seia }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_nagisa }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_missing_nagisa }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mika }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_tsurugi }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_hasumi }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_ichika }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mashiro }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_hina }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ako }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iori }
-			add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_chinatsu }
+			GEH = {
+				add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_makoto }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_iroha }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_ER = GEH_ibuki }
+
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_makoto }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iroha }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ibuki }
+
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_hina }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ako }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iori }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_chinatsu }
+
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_hina }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ako }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iori }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_chinatsu }
+			}
+			TRI = {
+				# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_seia }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_nagisa }
+				# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_mika }
+
+				# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_seia }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_nagisa }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_missing_nagisa }
+				# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mika }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_tsurugi }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_hasumi }
+				add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_ichika }
+			}
+
+
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_seia }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_nagisa }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_mika }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_makoto }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iroha }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ibuki }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_seia }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_nagisa }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_missing_nagisa }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mika }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_tsurugi }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_hasumi }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_ichika }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mashiro }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_hina }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_ako }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_iori }
+			# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = GEH_chinatsu }
 		}
 	}
 }
