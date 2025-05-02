@@ -251,8 +251,17 @@ ideas = {
                 custom_modifier_tooltip = TRI_bouncing_back_remove_idea_trigger
             }
             cancel = {
-                #TODO:所有上议院派系均已完成一次任务
-                always = no
+                #所有上议院派系均已完成一次任务
+                NOT = {
+                    OR = {
+				        has_country_flag = TRI_senate_promise_task_1
+				        has_country_flag = TRI_senate_promise_task_2
+				        has_country_flag = TRI_senate_promise_task_3
+                        has_country_flag = TRI_house_promise_task_1
+                        has_country_flag = TRI_house_promise_task_2
+                        has_country_flag = TRI_house_promise_task_3
+                    }
+                }
             }
             on_remove = {
                 add_to_variable = { TRI_other_unity_modifiers = 1 }

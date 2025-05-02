@@ -13,10 +13,6 @@ news_event = {
     option = {
 		name = Eden_pact.1000.a
         trigger = { original_tag = TRI }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_1 = yes
-        }
         
 		ai_chance = {
 			base = 100
@@ -27,10 +23,6 @@ news_event = {
 		name = Eden_pact.1000.b
         trigger = {
             NOT = { original_tag = TRI }
-        }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_1 = yes
         }
 		ai_chance = {
 			base = 100
@@ -54,7 +46,17 @@ news_event = {
 				set_variable = { global.Eden_treaty_progress = 0 }
 				set_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
 				set_variable = { Eden_treaty_weights = 0 }
+				set_variable = { Eden_treaty_modifier_political_power_factor = 0.1 }
+				set_variable = { Eden_treaty_modifier_stability_factor = 0.1 }
+				set_variable = { Eden_treaty_modifier_war_support_factor = 0.1 }
+				set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
+				set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
 				set_variable = { GEH.Eden_treaty_weights = 0 }
+				set_variable = { GEH.Eden_treaty_modifier_political_power_factor = 0.1 }
+				set_variable = { GEH.Eden_treaty_modifier_stability_factor = 0.1 }
+				set_variable = { GEH.Eden_treaty_modifier_war_support_factor = 0.1 }
+				set_variable = { GEH.Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
+				set_variable = { GEH.Eden_treaty_modifier_research_speed_factor = 0.05 }
                 activate_mission = Eden_treaty_mutual_negotiation
                 if = {
                     limit = { NOT = { has_completed_focus = TRI_choosing_pact_place } }

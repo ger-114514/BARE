@@ -18,6 +18,7 @@
  Eden_treaty_negotiation_progress: "§b当前进度：[?global.Eden_treaty_progress|0%%]§!"
  Eden_treaty_negotiation_TRI_weights: "§b当前阶段贡献度：[?TRI.Eden_treaty_weights|0]§!"
  Eden_treaty_negotiation_GEH_weights: "§b当前阶段贡献度：[?GEH.Eden_treaty_weights|0]§!"
+ Eden_treaty_victory_mark_tt: "每在回合结束后获得一个胜利标记，则在条约完成签署后可额外获得：\n政治点数：§G+100§!\n$MODIFIER_POLITICAL_POWER_FACTOR$：§G+5.0%§!\n$MODIFIER_STABILITY_FACTOR$：§G+5.0%§!\n$MODIFIER_WAR_SUPPORT_FACTOR$：§G+5.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：§G+5.0%§!\n$MODIFIER_RESEARCH_SPEED_FACTOR$：§G+2.5%§!"
  
  Eden_treaty_mutual_negotiation: "双方沟通中..."
  Eden_common_decision_CD_tt: "没有正在执行其它共享冷却期的决议"
@@ -50,6 +51,7 @@
  Eden_treaty_to_be_signed_decisions: "行将签署的伊甸条约"
  Eden_treaty_to_be_signed: "行将签署的伊甸条约"
  Eden_treaty_has_been_signed: "伊甸条约完成签署"
+ Eden_treaty_modifier: "完成签署的伊甸条约"
 
 #事件
  Eden_pact.1000.t: "第一次《伊甸条约》会谈"
