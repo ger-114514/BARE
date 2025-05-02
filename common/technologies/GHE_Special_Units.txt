@@ -1,0 +1,29 @@
+technologies = {
+    Field_Artillery_tech = {
+        research_cost = 1
+        start_year = 2024
+
+        enable_subunits = {
+            Field_Artillery_units
+        }
+
+        allow = {
+            always = no
+        }
+    }
+
+    Assault_Engineer_tech = {
+        research_cost = 1
+        start_year = 2024
+
+        enable_subunits = {
+            Assault_Engineer_units
+        }
+
+        allow = {
+            always = no
+        }
+
+        
+    }
+}

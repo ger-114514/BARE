@@ -121,30 +121,33 @@ add_ideas = {
 	BARE_Global_College_Autonomous_Region
 }
 
-recruit_character = GEH_hina #风纪委
-recruit_character = GEH_ako #风纪委
-recruit_character = GEH_iori #风纪委
-recruit_character = GEH_chinatsu #风纪委
-recruit_character = GEH_makoto #万魔殿
-recruit_character = GEH_iroha #万魔殿
-recruit_character = GEH_ibuki #万魔殿
-recruit_character = GEH_satsuki #万魔殿
-recruit_character = GEH_aru #便利屋
-recruit_character = GEH_mutsuki #便利屋
-recruit_character = GEH_kayoko #便利屋
-recruit_character = GEH_haruka #便利屋
-recruit_character = GEH_fuuka #食品部(忘了社团名了 反正是厨师 - fgvfgfs)
-recruit_character = GEH_juri #食品部
-recruit_character = GEH_haruna #美食研究会
-recruit_character = GEH_izumi #美食研究会
-recruit_character = GEH_junko #美食研究会
-recruit_character = GEH_akari #美食研究会
-recruit_character = GEH_sena #急救医学部
-recruit_character = GEH_megu #忘了
-recruit_character = GEH_kasumi #温泉开发部
-recruit_character = GEH_erika #忘了
-recruit_character = GEH_kirara #忘了
-recruit_character = GEH_JingJiZhuangTaiWeiYuanHui #歌赫娜紧急状态委员会
+recruit_character = GEH_hina
+recruit_character = GEH_ako
+recruit_character = GEH_iori
+recruit_character = GEH_chinatsu
+recruit_character = GEH_makoto
+recruit_character = GEH_iroha
+recruit_character = GEH_ibuki
+recruit_character = GEH_satsuki
+recruit_character = GEH_aru
+recruit_character = GEH_mutsuki
+recruit_character = GEH_kayoko
+recruit_character = GEH_haruka
+recruit_character = GEH_fuuka
+recruit_character = GEH_juri
+recruit_character = GEH_haruna
+recruit_character = GEH_izumi
+recruit_character = GEH_junko
+recruit_character = GEH_akari
+recruit_character = GEH_sena
+recruit_character = GEH_megu
+recruit_character = GEH_kasumi
+recruit_character = GEH_erika
+recruit_character = GEH_kirara
+
+add_dynamic_modifier = {
+  modifier = GEH_army_Armed_Forces
+}
 
 set_politics = {
 	ruling_party = no_ideology
