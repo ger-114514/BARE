@@ -1,0 +1,58 @@
+sp_ba_T1_project = {
+    specialization = specialization_ba_tech
+    available = {
+
+    }
+    visible = {
+
+    }
+    breakthrough_cost = {
+
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = "GFX_my_project_icon"
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = 5
+        resource_cost = {
+        resources = {
+            resources_cm = 10
+        }
+    }
+    complexity = 15
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            add_stability = var:FROM.some_variable_at_projet_level
+        }
+        facility_state_effects = {
+            add_province_modifier = {
+                static_modifiers = { flooded }
+                province = {
+                    id = 6241
+                }
+            }
+        }
+        scientist_effects = {
+            retire = yes
+        }
+    }
+    unique_prototype_rewards = {
+        dynamic_token1 = {
+            country_effects = {
+                add_stability = 0.05
+            }
+        }
+    }
+    generic_prototype_rewards = {
+        generic_prototype_reward_token
+    }
+}
