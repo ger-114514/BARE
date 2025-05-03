@@ -108,7 +108,7 @@ country_event = {
 					target = GEH #被宣战国家TAG
 					type = topple_government #战争目标类型 - 颠覆政权
 				}
-				complete_national_focus = TRI_unexpected_accident 
+				complete_national_focus = TRI_unexpected_accident #完成国策 - 烽烟骤起
 				load_focus_tree = { #加载国策树
 					tree = TRI_focus_stage_2
 					keep_completed = yes #保持已完成的共享国策

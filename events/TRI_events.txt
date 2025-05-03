@@ -521,7 +521,24 @@ country_event = {
             #在渚的头像上打上MISSING的红色标记
             #同时将效果替换成“失踪的领袖”
             #效果：（无法切换政治顾问、军事顾问和任何法案）
-            promote_character = TRI_missing_nagisa
+            if = { #fgvfgfs 动的
+                limit = { 
+				    ARI = {
+				    	check_variable = {
+				    		var = ARI_ZhunBeiDu #准备度
+				    		value = 91
+				    		compare = greater_than_or_equals #大于等于
+				    	}
+                    }
+			    }
+                promote_character = {
+                    character = TRI_hanako
+                    ideology = no_ideology_type
+                }
+            }
+            else = {
+                promote_character = TRI_missing_nagisa
+            }
         }
     }
     option = {

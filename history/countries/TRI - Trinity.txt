@@ -670,39 +670,6 @@ recruit_character = TRI_mari
 recruit_character = TRI_commission_of_air_ground
 recruit_character = TRI_missing_nagisa
 
-TRI_nagisa = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-}
-TRI_missing_nagisa = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-}
-TRI_tsurugi  ={
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-}
-
-
-TRI_hasumi = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-}
-
-TRI_ichika = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-}
-
-#add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_seia }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_nagisa }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_mika }
-#
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_seia }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_nagisa }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_missing_nagisa }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mika }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_tsurugi }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_hasumi }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_ichika }
-#add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mashiro }
-
 
 set_politics = {
 	ruling_party = no_ideology

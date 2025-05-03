@@ -145,39 +145,6 @@ recruit_character = GEH_kasumi #温泉开发部
 recruit_character = GEH_erika #忘了
 recruit_character = GEH_kirara #忘了
 recruit_character = GEH_JingJiZhuangTaiWeiYuanHui #歌赫娜紧急状态委员会
-GEH_makoto = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_iroha = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_ibuki = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_makoto = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_iroha = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_hina = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_ako = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-GEH_iori = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
-
-GEH_chinatsu = {
-	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
-}
 
 set_politics = {
 	ruling_party = no_ideology
