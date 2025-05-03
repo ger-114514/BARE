@@ -31,7 +31,6 @@ ARI_initialize_suppression_system = { #初始化
 		set_variable = { ARI_state_button_frame = ARI_state_control_rank }
 		set_variable = { ARI_weekly_guard_modifier = 0 }
 		set_variable = { ARI_state_guard = 20 }
-		set_state_flag = ARI_state_cannot_be_suppressed
 	}
 	set_variable = { ARI_map_selected_state = 136 }
 	set_variable = { ARI_suppression_map_mode_control = 2 }
@@ -190,19 +189,28 @@ ARI_calculate_average_control = {
 			add_to_variable = { PREV.ARI_average_control = ARI_state_control }
 		}
 		divide_variable = { ARI_average_control = 7 }
-		remove_ideas = ARI_control_rank_1
-		remove_ideas = ARI_control_rank_2
-		remove_ideas = ARI_control_rank_3
+		if = {
+			limit = { has_idea = ARI_control_rank_1 }
+			remove_ideas = ARI_control_rank_1
+		}
+		else_if = {
+			limit = { has_idea = ARI_control_rank_2 }
+			remove_ideas = ARI_control_rank_2
+		}
+		else_if = {
+			limit = { has_idea = ARI_control_rank_3 }
+			remove_ideas = ARI_control_rank_3
+		}
 		if = {
 			limit = { check_variable = { ARI_average_control < 60 } }
-			add_ideas = ARI_control_rank_3
+			add_ideas = ARI_control_rank_1
 		}
 		else_if = {
 			limit = { check_variable = { ARI_average_control < 90 } }
 			add_ideas = ARI_control_rank_2
 		}
 		else = {
-			add_ideas = ARI_control_rank_1
+			add_ideas = ARI_control_rank_3
 		}
 	}
 }
@@ -257,7 +265,6 @@ ARI_change_materials = {
 	clamp_variable = {
 		var = ARI_materials
 		min = 0
-		max = 1000
 	}
 }
 ARI_change_materials_monthly_modifier = {

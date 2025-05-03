@@ -23,6 +23,7 @@
 
  TRI_the_way_to_get_trust: "取信之道"
  TRI_the_way_to_get_trust_available_tt: "对补习部的所有成员的调查均已成功"
+ TRI_empty_nest_operation: "空巢行动"
 
  BA_TRI_forge_investigation_reports: "伪造令人满意的调查报告"
  BA_TRI_forge_investigation_reports_desc: "我们最近对破坏分子的调查报告令人担忧。由于我们不知道校内的状态是否是源自于破坏者的行动，还是由于我们设定了不切实际的调查方向。但有一点是明确的，如果我们想要避免继续增加领袖不必要的压力，我们最好把调查数据调整到可以接受的程度。"
@@ -34,7 +35,7 @@
  TRI_paranoia_administration_purgeable_tt: "行政机构尚能接受审查"
 
  TRI_paranoia.1.t: "顾问被指控为不安定分子"
- TRI_paranoia.1.desc: "近日以来，特殊事务调查部收到了一些关于[?TRI_purge_event_target.GetName]的匿名指控。这些信件指向了[?TRI_purge_event_target.GetName]需要为已经发生的一部分对《伊甸条约》的签订造成了负面影响的事件负责。"
+ TRI_paranoia.1.desc: "近日以来，圣三一情报局收到了一些关于[?TRI_purge_event_target.GetName]的匿名指控。这些信件指向了[?TRI_purge_event_target.GetName]需要为已经发生的一部分对《伊甸条约》的签订造成了负面影响的事件负责。"
  TRI_paranoia.1.a: "在事件真的水落石出之前，我们或许应当对其严加看管。"
  TRI_paranoia.1.b: "只不过是一场政治迫害。"
 
@@ -45,8 +46,8 @@
  TRI_inspected_administration: "遭到审查的文职部员"
  TRI_inspected_administration_desc: "文职部员是构成我们行政的重要成员，也因此绝不能遭到恶意分子的渗透。"
 
- TRI_paranoia.3.t: "特殊事务调查部的背叛？"
- TRI_paranoia.3.desc: "即便这份情报可以确认源自于某个匿名部员，但其中的内容依旧显得过于惊世骇俗：有证据显示，现任特殊事务调查部部长正图谋在圣三一“陷入严重动乱”之时出面掌控局势。她们认为,这种说法只是借口,其真正意图是在为夺权做准备。\n面对以上指控,特殊事务调查部部长试图辩解说,这项方案只是例行公事且已经制定了有一段时间,只不过最近才刚更新而已。然而经过后续的深入调查及审问,这位部长承认，经过她的调查显示茶话会潜伏着一个神秘组织，企图与某个叛徒里应外合颠覆政权。\n我们无从查证这份情报的真实性，一切的决断仅能交由领袖自己判断。"
+ TRI_paranoia.3.t: "圣三一情报局的背叛？"
+ TRI_paranoia.3.desc: "即便这份情报可以确认源自于某个匿名部员，但其中的内容依旧显得过于惊世骇俗：有证据显示，现任圣三一情报局局长正图谋在圣三一“陷入严重动乱”之时出面掌控局势。她们认为,这种说法只是借口,其真正意图是在为夺权做准备。\n面对以上指控,圣三一情报局局长试图辩解说,这项方案只是例行公事且已经制定了有一段时间,只不过最近才刚更新而已。然而经过后续的深入调查及审问,这位局长承认，经过她的调查显示茶话会潜伏着一个神秘组织，企图与某个叛徒里应外合颠覆政权。\n我们无从查证这份情报的真实性，一切的决断仅能交由领袖自己判断。"
  TRI_paranoia.3.a: "我们无法确认消息的真假，但将之雪藏一定可以避免问题进一步发展"
  TRI_paranoia.3.b: "捕风捉影而来的消息会摧毁我们之间的信任"
  BA_TRI_nagisa_paranoid: "风声鹤唳"
@@ -54,17 +55,18 @@
  BA_TRI_nagisa_paranoid_paranoia_modifier_increase_effect_tt: "每周$TRI_nagisa_paranoia$ §R+1§!"
  TRI_nagisa_paranoia_modifier_increase: "每周$TRI_nagisa_paranoia$增长"
  TRI_nagisa_paranoia_modifier_increase_add_tt: "每周$TRI_nagisa_paranoia$增长：§R+$ADD$§!"
+ TRI_nagisa_paranoia_modifier_increase_sub_tt: "每周$TRI_nagisa_paranoia$增长：§G-$SUB$§!"
  TRI_inspection_in_the_army: "审查陆军"
- TRI_inspection_in_the_army_desc: "我们必须允许特殊事务调查部在陆军进行一次审查以揪出潜在的异议分子和破坏分子"
+ TRI_inspection_in_the_army_desc: "我们必须允许圣三一情报局在陆军进行一次审查以揪出潜在的异议分子和破坏分子"
  TRI_paranoia_army_purgeable_tt: "陆军尚能接受审查"
 
  TRI_paranoia.11.t: "将军被指控为不安定分子"
- TRI_paranoia.11.desc: "在甄别不安分分子的行动中,特殊事务调查部发现,[?TRI_purge_event_target.GetName]曾经发表过一些批判对《伊甸条约》相关事务调动的言论,其可能间接或是直接参与了有害学院稳定、默许破坏《伊甸条约》的行动之中。"
+ TRI_paranoia.11.desc: "在甄别不安分分子的行动中,圣三一情报局发现,[?TRI_purge_event_target.GetName]曾经发表过一些批判对《伊甸条约》相关事务调动的言论,其可能间接或是直接参与了有害学院稳定、默许破坏《伊甸条约》的行动之中。"
  TRI_paranoia.11.a: "在事件真的水落石出之前，我们或许应当对其严加看管。"
  TRI_paranoia.11.b: "或许是因公徇私，其心尚不可知。"
 
  TRI_paranoia.12.t: "陆军成员中的流言"
- TRI_paranoia.12.desc: "根据特殊事务调查部的报告，我们注意到了在陆军成员之中关于“桐藤渚大人其实比任何人都反对《伊甸条约》”的流言蜚语。显而易见的是这些不实言论极大地损坏我们军队之中的团结，而为了最大限度的避免这种不利于团结的事态发生，我们或许要采取一些行动。"
+ TRI_paranoia.12.desc: "根据圣三一情报局的报告，我们注意到了在陆军成员之中关于“桐藤渚大人其实比任何人都反对《伊甸条约》”的流言蜚语。显而易见的是这些不实言论极大地损坏我们军队之中的团结，而为了最大限度的避免这种不利于团结的事态发生，我们或许要采取一些行动。"
  TRI_paranoia.12.a: "我们必须展开一场对这些不实信息的清查。"
  TRI_paranoia.12.b: "言论自由是圣三一精神的根本，不应横加干涉。"
  TRI_inspected_army: "受到严格审查的军队"
@@ -78,11 +80,11 @@
  TRI_training_activities_curtailed_desc: "“制造或是修复坦克只需要东一榔头西一棒槌”——我们无法确认我们最新的战术装备是否是因为姐妹们长期对其的“不尊重”导致的，但近期以来频发的损坏事件使得我们不得不大幅度降低训练的频率，普及基础训练并检查流水线。"
 
  TRI_inspection_in_the_airforce: "审查空军"
- TRI_inspection_in_the_airforce_desc: "我们必须允许特殊事务调查部在空军进行一次审查以揪出潜在的异议分子和破坏分子"
+ TRI_inspection_in_the_airforce_desc: "我们必须允许圣三一情报局在空军进行一次审查以揪出潜在的异议分子和破坏分子"
  TRI_paranoia_airforce_purgeable_tt: "空军尚能接受审查"
 
  TRI_paranoia.22.t: "空军成员中的流言"
- TRI_paranoia.22.desc: "根据特殊事务调查部的报告，我们注意到了在空军成员之中关于抵制《伊甸条约》的流言蜚语。显而易见的是这些不实言论极大地损坏我们军队之中的团结，而为了最大限度的避免这种不利于团结的事态发生，我们或许要采取一些行动。"
+ TRI_paranoia.22.desc: "根据圣三一情报局的报告，我们注意到了在空军成员之中关于抵制《伊甸条约》的流言蜚语。显而易见的是这些不实言论极大地损坏我们军队之中的团结，而为了最大限度的避免这种不利于团结的事态发生，我们或许要采取一些行动。"
  TRI_paranoia.22.a: "我们必须展开一场对这些不实信息的清查。"
  TRI_paranoia.22.b: "言论自由是圣三一精神的根本，不应横加干涉。"
  TRI_inspected_airforce: "受到严格审查的空军"
@@ -96,7 +98,7 @@
  TRI_ground_based_training_desc: "“能飞就行”——我们先前并未对姐妹们的这一笑谈有什么反应，但近日以来多次 发生的坠机事故使我们不得不为了姐妹们的安全以及对事件调查本身这两方面出发而限制空军的训练。"
 
  TRI_inspection_in_the_association: "审查[?TRI_inspected_assosiation.GetTokenLocalizedKey]"
- TRI_inspection_in_the_association_desc: "我们必须允许特殊事务调查部对[?TRI_inspected_assosiation.GetTokenLocalizedKey]进行一次审查以揪出潜在的异议分子和破坏分子"
+ TRI_inspection_in_the_association_desc: "我们必须允许圣三一情报局对[?TRI_inspected_assosiation.GetTokenLocalizedKey]进行一次审查以揪出潜在的异议分子和破坏分子"
  TRI_paranoia_association_name: "[?var:v.GetTokenLocalizedKey]"
  TRI_paranoia_association_0: "§1正义实现委员会§!"
  TRI_paranoia_association_1: "§1救护骑士团§!"

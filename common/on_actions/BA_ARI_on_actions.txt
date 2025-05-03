@@ -1,12 +1,12 @@
 on_actions = {
 	on_weekly_ARI = {
 		effect = {
-			every_owned_state = {
+			random_owned_state = {
 				limit = {
 					NOT = { 
 						has_state_flag = ARI_state_absolutely_controlled 
-						has_state_flag = ARI_state_cannot_be_suppressed
 					}
+					has_state_flag = ARI_state_can_be_suppressed
 					check_variable = { ARI_state_guard_rank = 4 }
 					check_variable = { ARI_state_control = 100 }
 				}
@@ -73,11 +73,12 @@ on_actions = {
 						}
 					}
 					#物资不足，则重置获得数量
+					clear_array = BARE_ARI_Resource_Want_Array
+					clear_array = BARE_ARI_Resource_Get_Array
 					resize_array = {
 						array = BARE_ARI_Resource_Want_Array
 						size = 6
 					}
-	
 					resize_array = {
 						array = BARE_ARI_Resource_Get_Array
 						size = 6

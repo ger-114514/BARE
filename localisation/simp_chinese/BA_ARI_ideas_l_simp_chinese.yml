@@ -63,6 +63,8 @@
 
  ARI_mystery_reseacher: "神秘追寻者"
  ARI_mystery_reseacher_desc: "我们投入了大量的精力到那些古籍和过去神秘造物之上，这大大推进了我们在神秘科学领域的研究。"
+ ARI_mystery_reseacher_2: "$ARI_mystery_reseacher$"
+ ARI_mystery_reseacher_2_desc: "$ARI_mystery_reseacher_desc$"
 
  ARI_experience_in_Trinity_modifier: "圣三一行动的经验"
  ARI_experience_in_Trinity_modifier_desc: "在圣三一的行动为我们积累了很多经验，而它们在之后我们和圣三一周旋时能派上不小用场。"
@@ -70,9 +72,9 @@
  ARI_air_force_0: "阿里乌斯航空兵部队"
  ARI_air_force_1: "$ARI_air_force_0$"
 
- ARI_control_rank_1: "阿里乌斯掌握程度-§G高§!"
+ ARI_control_rank_1: "阿里乌斯掌握程度-§R低§!"
  ARI_control_rank_2: "阿里乌斯掌握程度-§Y中§!"
- ARI_control_rank_3: "阿里乌斯掌握程度-§R低§!"
+ ARI_control_rank_3: "阿里乌斯掌握程度-§G高§!"
  ARI_control_rank_1_desc: "夫人通过突袭自治区以及挟持旧阿里乌斯的学生会长实现了对自治区的掌控。但其的控制并非看上去那么稳固，实际上一直有抵抗其占领的学生存在。"
  ARI_control_rank_2_desc: "$ARI_control_rank_1_desc$"
  ARI_control_rank_3_desc: "$ARI_control_rank_1_desc$"
@@ -127,7 +129,7 @@
 ###动态修正语句###
  ARI_power_chaser: "力量渴望者"
  ARI_power_chaser: "力量，智慧，权力，这一切美妙的东西都存放在那至高的§R乐园§!中，等着我们伸手去拿取。而在通往§R乐园§!的道路上，我们必须积累足够多的知识，才能为我们铸就打开大门的钥匙...\n\n§R我们终将到达§!"
- ARI_power_chaser_effect_change_1: "获得名为§Y$ARI_power_chaser$%§!的民族精神，其初始效果为：\n研究速度：§G+3%§!\n部队攻击：§G+3%§!。且该民族精神会随着我们对§R乐园§!的不断追求而不断增强。"
+ ARI_power_chaser_effect_change_1: "获得名为§Y$ARI_power_chaser$§!的民族精神，其初始效果为：\n研究速度：§G+3%§!\n部队攻击：§G+3%§!。且该民族精神会随着我们对§R乐园§!的不断追求而不断增强。"
  ARI_power_chaser_effect_change_2: "$ARI_power_chaser$\n追加效果：\n部队攻击：§G+3%§!"
  ARI_power_chaser_effect_change_3: "$ARI_power_chaser$\n追加效果：\n神秘步兵防御：§G+7%§!"
  ARI_power_chaser_effect_change_4: "$ARI_power_chaser$\n追加效果：\n研究速度：§G+5%§!"

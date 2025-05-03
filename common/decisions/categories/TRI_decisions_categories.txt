@@ -61,10 +61,8 @@ TRI_parliament_decisions_categories = {
 		original_tag = TRI
 	}
 	visible = {
-		#has_variable = TRI_parliament_focus
+		has_country_flag = TRI_parliament_available
 	}
-
-	#scripted_gui = TRI_parliament_decision_ui
 
 	priority = 1002
 	visible_when_empty = yes
@@ -75,9 +73,6 @@ TRI_bill_voting_decisions_categories = {
 	allowed = {
 		original_tag = TRI
 	}
-	visible = {
-		has_variable = TRI_debated_bill
-	}
 
 	priority = 1001
 }
@@ -87,10 +82,11 @@ TRI_BOP_system = {
 	priority = 100
 	icon = generic
 
-	#scripted_gui = TRI_BOP_decision_ui
-
 	allowed = {
 		original_tag = TRI
+	}
+	visible = {
+		has_country_flag = TRI_parliament_available
 	}
 
 	visible_when_empty = yes

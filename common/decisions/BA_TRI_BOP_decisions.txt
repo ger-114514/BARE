@@ -145,6 +145,29 @@ TRI_debug_decisions = {
 	}
 }
 TRI_BOP_system = {
+	TRI_next_house_election = {
+		priority = 1000
+		days_mission_timeout = 730
+		activation = {
+			has_country_flag = TRI_parliament_available
+		}
+		available = {
+			
+		}
+		selectable_mission = yes
+		cost = 50
+		complete_effect = {
+			TRI_parliament_house_election = yes
+			activate_mission = TRI_next_house_election
+		}
+		timeout_effect = {
+			TRI_parliament_house_election = yes
+			activate_mission = TRI_next_house_election
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
 	TRI_get_patel_details = {
 		visible = {
 			check_variable = { detail_ignored@TRI_parliament_association_0 = 1 }
@@ -157,22 +180,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_0
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_0 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_filius_details = {
@@ -187,22 +209,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_1
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_1 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_cootes_details = {
@@ -217,22 +238,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_2
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_2 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_justice_details = {
@@ -247,22 +267,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_3
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_3 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_sisterhood_details = {
@@ -277,22 +296,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_4
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_4 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_knights_details = {
@@ -307,22 +325,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_5
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_5 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_other_details = {
@@ -337,22 +354,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_6
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_6 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_invest_in_region_factory = {
@@ -442,7 +458,13 @@ TRI_BOP_system = {
 		# 	has_variable = TRI_parliament_focus
 		# }
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		complete_effect = {
 			if = {
@@ -458,9 +480,13 @@ TRI_BOP_system = {
 		# 	has_variable = TRI_parliament_focus
 		# }
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
-		}
-		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 			custom_trigger_tooltip = {
 				tooltip = TRI_BOP_strengthen_control_trigger_tt
 				OR = {
@@ -479,7 +505,13 @@ TRI_BOP_system = {
 			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 		}
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		complete_effect = {
 			for_each_loop = {
@@ -506,7 +538,13 @@ TRI_BOP_system = {
 			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 		}
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		complete_effect = {
 			country_event = TRI_BOP_decision.4
@@ -530,17 +568,21 @@ TRI_BOP_system = {
 		is_good = yes
 		activation = {
 			has_completed_focus = TRI_multi_association_exercise
+			hidden_trigger = {
+				has_country_flag = TRI_multi_association_exercise
+			}
 		}
 		available = { 
 			# any_country_division = {
 				
 			# }
 			has_army_experience > 50
-			command_power > 80
+			command_power > 79.9
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
 		complete_effect = {
+			clr_country_flag = TRI_multi_association_exercise
 			army_experience = -50
 			add_command_power = -80
 			add_doctrine_cost_reduction = {
@@ -556,6 +598,9 @@ TRI_BOP_system = {
 			add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
 			add_to_variable = { TRI_trinity_military_experience_loss_factor = -0.1 }
 
+		}
+		timeout_effect = {
+			activate_mission = TRI_joint_exercise
 		}
 	}
 }
@@ -631,6 +676,7 @@ TRI_region_interaction_decisions_category = {
 		TRI_switch_tea_party_artillery_recruiting = {
 			visible = {
 				has_country_flag = TRI_standing_guard
+				check_variable = { TRI_tea_party_artillery_recruiting_use > 0 }
 			}
 			complete_effect = {
 				if = {
@@ -675,51 +721,44 @@ TRI_region_interaction_decisions_category = {
 				custom_effect_tooltip = TRI_tea_party_artillery_recruiting_tt
 				add_to_variable = { TRI_tea_party_artillery_cap = 2 }
 				add_to_variable = { TRI_tea_party_artillery_recruiting_count = 1 }
+				hidden_effect = {
+					remove_ideas = {
+						TRI_tea_party_artillery_1
+						TRI_tea_party_artillery_2
+						TRI_tea_party_artillery_3
+						TRI_tea_party_artillery_4
+						TRI_tea_party_artillery_5
+					}
+				}
 				if = {
 					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 2 }
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 14 }
 					}
-					add_ideas = TRI_tea_party_artillery_1
-				}
-				else_if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 5 }
-						has_idea = TRI_tea_party_artillery_1
-					}
-					swap_ideas = {
-						remove_idea = TRI_tea_party_artillery_1
-						add_idea = TRI_tea_party_artillery_2
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 8 }
-						has_idea = TRI_tea_party_artillery_2
-					}
-					swap_ideas = {
-						remove_idea = TRI_tea_party_artillery_2
-						add_idea = TRI_tea_party_artillery_3
-					}
+					add_ideas = TRI_tea_party_artillery_5
 				}
 				else_if = {
 					limit = {
 						check_variable = { TRI_tea_party_artillery_recruiting_count > 11 }
-						has_idea = TRI_tea_party_artillery_3
 					}
-					swap_ideas = {
-						remove_idea = TRI_tea_party_artillery_3
-						add_idea = TRI_tea_party_artillery_4
-					}
+					add_ideas = TRI_tea_party_artillery_4
 				}
 				else_if = {
 					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 14 }
-						has_idea = TRI_tea_party_artillery_4
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 8 }
 					}
-					swap_ideas = {
-						remove_idea = TRI_tea_party_artillery_4
-						add_idea = TRI_tea_party_artillery_5
+					add_ideas = TRI_tea_party_artillery_3
+				}
+				else_if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 5 }
 					}
+					add_ideas = TRI_tea_party_artillery_2
+				}
+				else_if = {
+					limit = {
+						check_variable = { TRI_tea_party_artillery_recruiting_count > 2 }
+					}
+					add_ideas = TRI_tea_party_artillery_1
 				}
 			}
 		}
@@ -1013,7 +1052,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_send_more_troops_visible
 				has_country_flag = TRI_hear_and_command
@@ -1082,7 +1121,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_deploy_less_materials_visible
 				has_country_flag = TRI_hear_and_command
@@ -1147,7 +1186,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_strengthen_state_monitor_visible
 				has_country_flag = TRI_hear_and_command
@@ -1188,6 +1227,74 @@ TRI_region_interaction_decisions_category = {
 				TRI_parliament_radicalism_change = yes
 			}
 		}
+	
+	#执行“反间谍”活动
+		TRI_switch_anti_spy = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
+				ARI = {
+					has_completed_focus = ARI_open_the_curtain
+				}
+			}
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_anti_spy_visible }
+					clr_country_flag = TRI_anti_spy_visible
+				}
+				else = {
+					set_country_flag = TRI_anti_spy_visible
+				}
+				
+			}
+		}
+		TRI_anti_spy = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {
+					is_controlled_by = ROOT
+				}
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_only
+			visible = {
+				has_country_flag = TRI_anti_spy_visible
+				has_country_flag = TRI_hear_and_command
+				NOT = { has_country_flag = TRI_anti_spy_ongoing }
+				ARI = {
+					has_completed_focus = ARI_open_the_curtain
+				}
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_anti_spy_ongoing }
+				}
+			}
+			days_remove = 180
+			complete_effect = {
+				set_country_flag = TRI_anti_spy_ongoing
+			}
+			remove_effect = {
+				clr_country_flag = TRI_anti_spy_ongoing
+				TRI_region_get_ruling_association = yes
+				set_temp_variable = { loyalty_change = -0.05 }
+				TRI_parliament_loyalty_change = yes
+				set_temp_variable = { radicalism_change = -0.25 }
+				TRI_parliament_radicalism_change = yes
+				custom_effect_tooltip = TRI_anti_spy_tt
+				hidden_effect = {
+					ARI = {
+						country_event = ARI_coup.100
+					}
+					
+				}
+			}
+		}
 	#增加物资调配
 		TRI_switch_deploy_more_materials = {
 			visible = {
@@ -1222,7 +1329,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_deploy_more_materials_visible
 				has_country_flag = TRI_hear_and_command
@@ -1287,7 +1394,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_promote_political_status_visible
 				has_country_flag = TRI_hear_and_command
@@ -1352,7 +1459,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_send_equipments_to_association_visible
 				has_country_flag = TRI_hear_and_command
@@ -1427,7 +1534,7 @@ TRI_region_interaction_decisions_category = {
 					check_variable = { state_region = PREV.FROM.state_region }
 				}
 			}
-			on_map_mode = map_and_decisions_view
+			on_map_mode = map_only
 			visible = {
 				has_country_flag = TRI_improve_medical_facilities_visible
 				has_country_flag = TRI_hear_and_command
@@ -1472,78 +1579,78 @@ TRI_region_interaction_decisions_category = {
 			}
 		}
 	#扩建本地教堂
-	TRI_switch_expand_church = {
-		visible = {
-			has_country_flag = TRI_hear_and_command
-		}
-		complete_effect = {
-			if = {
-				limit = { has_country_flag = TRI_expand_church_visible }
-				clr_country_flag = TRI_expand_church_visible
+		TRI_switch_expand_church = {
+			visible = {
+				has_country_flag = TRI_hear_and_command
 			}
-			else = {
-				set_country_flag = TRI_expand_church_visible
-			}
-			
-		}
-	}
-	TRI_expand_church = {
-		state_target = yes
-		target_array = TRI_region_present_state
-		target_trigger = {
-			FROM = {  is_controlled_by = ROOT }
-		}
-		highlight_states = {
-			highlight_states_trigger = {
-				check_variable = { state_region = PREV.FROM.state_region }
+			complete_effect = {
+				if = {
+					limit = { has_country_flag = TRI_expand_church_visible }
+					clr_country_flag = TRI_expand_church_visible
+				}
+				else = {
+					set_country_flag = TRI_expand_church_visible
+				}
+				
 			}
 		}
-		on_map_mode = map_and_decisions_view
-		visible = {
-			has_country_flag = TRI_expand_church_visible
-			has_country_flag = TRI_hear_and_command
-			NOT = { has_country_flag = TRI_expand_church_ongoing }
-		}
-		available = {
-			has_equipment = { support_equipment > 199 }
-			custom_override_tooltip = {
-				tooltip = only_one_state_same_time
+		TRI_expand_church = {
+			state_target = yes
+			target_array = TRI_region_present_state
+			target_trigger = {
+				FROM = {  is_controlled_by = ROOT }
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					check_variable = { state_region = PREV.FROM.state_region }
+				}
+			}
+			on_map_mode = map_only
+			visible = {
+				has_country_flag = TRI_expand_church_visible
+				has_country_flag = TRI_hear_and_command
 				NOT = { has_country_flag = TRI_expand_church_ongoing }
 			}
-		}
-		cost = 100
-		days_remove = 70
-		complete_effect = {
-			set_country_flag = TRI_expand_church_ongoing
-		}
-		remove_effect = {
-			clr_country_flag = TRI_expand_church_ongoing
-			random_controlled_state = {
-				limit = {
-					check_variable = { state_region = PREV.FROM.state_region }
+			available = {
+				has_equipment = { support_equipment > 199 }
+				custom_override_tooltip = {
+					tooltip = only_one_state_same_time
+					NOT = { has_country_flag = TRI_expand_church_ongoing }
 				}
-				add_extra_state_shared_building_slots = 1
 			}
-			random_controlled_state = {
-				limit = {
-					check_variable = { state_region = PREV.FROM.state_region }
+			cost = 100
+			days_remove = 70
+			complete_effect = {
+				set_country_flag = TRI_expand_church_ongoing
+			}
+			remove_effect = {
+				clr_country_flag = TRI_expand_church_ongoing
+				random_controlled_state = {
+					limit = {
+						check_variable = { state_region = PREV.FROM.state_region }
+					}
+					add_extra_state_shared_building_slots = 1
 				}
-				add_extra_state_shared_building_slots = 1
+				random_controlled_state = {
+					limit = {
+						check_variable = { state_region = PREV.FROM.state_region }
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+				set_temp_variable = { loyalty_change = 0.1 }
+				set_temp_variable = { radicalism_change = -0.15 }
+				set_temp_variable = { region = FROM.state_region }
+				TRI_region_get_ruling_association = yes
+				if = {
+					limit = { check_variable = { association = token:TRI_parliament_association_5 } }
+					add_to_temp_variable = { loyalty_change = 0.05 }
+					add_to_temp_variable = { radicalism_change = -0.05 }
+				}
+				else = {
+					custom_effect_tooltip = TRI_expand_church_tt
+				}
+				TRI_parliament_loyalty_change = yes
+				TRI_parliament_radicalism_change = yes
 			}
-			set_temp_variable = { loyalty_change = 0.1 }
-			set_temp_variable = { radicalism_change = -0.15 }
-			set_temp_variable = { region = FROM.state_region }
-			TRI_region_get_ruling_association = yes
-			if = {
-				limit = { check_variable = { association = token:TRI_parliament_association_5 } }
-				add_to_temp_variable = { loyalty_change = 0.05 }
-				add_to_temp_variable = { radicalism_change = -0.05 }
-			}
-			else = {
-				custom_effect_tooltip = TRI_expand_church_tt
-			}
-			TRI_parliament_loyalty_change = yes
-			TRI_parliament_radicalism_change = yes
 		}
-	}
 }

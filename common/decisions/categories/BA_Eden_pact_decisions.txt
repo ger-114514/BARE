@@ -1,0 +1,26 @@
+#伊甸条约谈判
+Eden_treaty_negotiation_decisions = {
+	icon = generic_research
+
+	allowed = {
+		OR = {
+			original_tag = GEH
+			original_tag = TRI
+		}
+	}
+	visible = {
+		has_global_flag = Eden_treaty_negotiation_ongoing
+	}
+	scripted_gui = Eden_treaty_negotiation_ui
+	visible_when_empty = yes
+	priority = 2000
+}
+#行将签署的伊甸条约
+Eden_treaty_to_be_signed_decisions = {
+	allowed = {
+		OR = {
+			original_tag = GEH
+			original_tag = TRI
+		}
+	}
+}

@@ -13,6 +13,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = -0.04 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0.35 }
 		set_variable = { TRI_unity_industrial_capacity_factory = -0.15 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = -0.5 }
 	}
 	else_if = {
 		limit = { check_variable = { TRI_unity < 40 } }
@@ -27,6 +28,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = -0.02 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0.2 }
 		set_variable = { TRI_unity_industrial_capacity_factory = -0.05 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = -0.125 }
 	}
 	else_if = {
 		limit = { check_variable = { TRI_unity < 60 } }
@@ -41,6 +43,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = 0 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0.1 }
 		set_variable = { TRI_unity_industrial_capacity_factory = 0 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = 0.25 }
 	}
 	else_if = {
 		limit = { check_variable = { TRI_unity < 80 } }
@@ -55,6 +58,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = 0.02 }
 		set_variable = { TRI_unity_consumer_goods_factor = 0 }
 		set_variable = { TRI_unity_industrial_capacity_factory = 0.05 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = 0.675 }
 	}
 	else = {
 		set_variable = { TRI_unity_rank = 4 }
@@ -68,6 +72,7 @@ TRI_generate_unity_rank = {
 		set_variable = { TRI_unity_land_reinforce_rate = 0.03 }
 		set_variable = { TRI_unity_consumer_goods_factor = -0.15 }
 		set_variable = { TRI_unity_industrial_capacity_factory = 0.1 }
+		set_variable = { TRI_unity_Eden_treaty_weights_gain_factor = 1 }
 	}
 	#【烽烟骤起】国策效果
 	if = {
@@ -86,19 +91,22 @@ TRI_generate_unity_rank = {
 }
 #自定义团结度增长
 TRI_change_unity = {
-	if = { #需要没有锁定团结度变化
-		limit = { NOT = { has_country_flag = TRI_unity_unchangeable } }
-		add_to_variable = { TRI_unity = TRI_unity_change }
-		custom_effect_tooltip = TRI_unity_change
-		clamp_variable = {
-			var = TRI_unity
-			min = 0
-			max = 100
+	if = {
+		limit = { has_country_flag = TRI_unity_system_visible }
+		if = { #需要没有锁定团结度变化
+			limit = { NOT = { has_country_flag = TRI_unity_unchangeable } }
+			add_to_variable = { TRI_unity = TRI_unity_change }
+			custom_effect_tooltip = TRI_unity_change
+			clamp_variable = {
+				var = TRI_unity
+				min = 0
+				max = 100
+			}
+			TRI_generate_unity_rank = yes
 		}
-		TRI_generate_unity_rank = yes
-	}
-	else = {
-		custom_effect_tooltip = TRI_unity_unchangeable_tt
+		else = {
+			custom_effect_tooltip = TRI_unity_unchangeable_tt
+		}
 	}
 }
 #团结度加减10/5

@@ -486,7 +486,7 @@ set_variable = { cf_army_core_attack_factor = 0.10 }
 set_variable = { cf_army_core_defence_factor = 0.10 }
 set_variable = { cf_experience_gain_army_factor = -0.3 }
 
-#【特殊事务调查部】民族精神变量
+#【圣三一情报局】民族精神变量
 set_variable = { ssi_operative_slot = 1 }
 set_variable = { ssi_agency_upgrade_time = -0.33 }
 set_variable = { ssi_political_power_gain = 0 }
@@ -669,6 +669,7 @@ recruit_character = TRI_sakurako
 recruit_character = TRI_mari
 recruit_character = TRI_commission_of_air_ground
 recruit_character = TRI_missing_nagisa
+recruit_character = TRI_ui2
 
 
 set_politics = {
@@ -677,3 +678,33 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
+TRI_nagisa = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+TRI_missing_nagisa = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+TRI_tsurugi  ={
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+
+
+TRI_hasumi = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+
+TRI_ichika = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_seia }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_nagisa }
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_mika }
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_seia }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_nagisa }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_missing_nagisa }
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mika }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_tsurugi }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_hasumi }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_ichika }

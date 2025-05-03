@@ -25,20 +25,21 @@ leader_traits = {
         
         stability_factor = 0.05
         opinion_gain_monthly_factor = -0.4
-        TRI_nagisa_paranoia_modifier_increase = 1
+        TRI_nagisa_paranoia_modifier_increase = 2
     }
     TRI_nagisa_Find_the_root_2 = {
         random = no
         
         stability_factor = 0.05
         opinion_gain_monthly_factor = -0.4
-        TRI_nagisa_paranoia_modifier_increase = 2
+        TRI_nagisa_paranoia_modifier_increase = 3
     }
     TRI_nagisa_Find_the_root_3 = {
         random = no
         
         stability_factor = 0.05
         opinion_gain_monthly_factor = -0.4
+        TRI_nagisa_paranoia_modifier_increase = 1
     }
     #风声鹤唳
     BA_TRI_nagisa_paranoid = {
@@ -74,7 +75,7 @@ leader_traits = {
         random = no
 
         #菲利乌斯派支持度+20%
-        #TODO：随机给予预言
+        #随机给予预言
         custom_modifier_tooltip = obscure_prophet_tt
         stability_factor = 0.1
         war_support_factor = -0.1

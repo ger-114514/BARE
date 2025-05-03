@@ -68,21 +68,21 @@ GEH_bop_decision_category = {
     #挪用经费用于生产
     GEH_bop_use_money_for_production = {
 		visible = {
-            has_completed_focus = GEH_highest_order_from_makoto
+                  has_completed_focus = GEH_highest_order_from_makoto
 		}
 		available = {
-            NOT = { has_decision = GEH_bop_use_money_for_investment }
-            power_balance_value = {
-                id = GEH_bp_between_chaos_and_order
-                value < 0.2
-            }
+                  NOT = { has_decision = GEH_bop_use_money_for_investment }
+                  power_balance_value = {
+                  id = GEH_bp_between_chaos_and_order
+                  value < 0.2
+                  }
 		}
 		cost = 100
             days_remove = 30
             days_re_enable = 150
 		remove_effect = {
-            add_offsite_building = { type = arms_factory level = 1 }
-            add_power_balance_value = {
+                  add_offsite_building = { type = arms_factory level = 1 }
+                  add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = 0.15
 			}
@@ -192,7 +192,9 @@ GEH_bop_decision_category = {
                         id = GEH_bp_between_chaos_and_order
                         value = -0.05
                   }
-                  #TODO:筹备度+10
+                  #筹备度+10
+                  set_temp_variable = { progress_change = 10 }
+                  Eden_treaty_change_progress = yes
             }
       }
 
@@ -215,8 +217,13 @@ GEH_bop_decision_category = {
                         id = GEH_bp_between_chaos_and_order
                         value = -0.05
                   }
-                  #TODO:筹备度+10
+                  #筹备度+10
+                  set_temp_variable = { progress_change = 10 }
+                  Eden_treaty_change_progress = yes
                   #TODO:隐藏效果：降低阿里乌斯的渗透度
+                  hidden_effect = {
+                        
+                  }
             }
       }
 }

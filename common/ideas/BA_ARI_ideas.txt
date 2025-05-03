@@ -294,7 +294,7 @@ ideas = {
 				experience_gain_air_factor = 0.15
 			}
 			equipment_bonus = {
-				small_uav = {
+				cat_eq_all_uav = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -308,7 +308,7 @@ ideas = {
 				war_support_factor = -0.2
 			}
 			on_add = {
-				every_controlled_state = {
+				every_owned_state = {
 					limit = {
 						check_variable = { ARI_state_control < 100 }
 					}
@@ -318,7 +318,7 @@ ideas = {
 				}
 			}
 			on_remove = {
-				every_controlled_state = {
+				every_owned_state = {
 					remove_dynamic_modifier = {
 						modifier = ARI_low_control_rank_state
 					}
@@ -333,19 +333,6 @@ ideas = {
 			picture = unkown
 			modifier = {
 				stability_factor = 0.2
-			}
-			on_add = {
-				every_owned_state = {
-					limit = {
-						check_variable = { ARI_state_control < 100 }
-					}
-					add_dynamic_modifier = { modifier = ARI_low_control_rank_state }
-				}
-			}
-			on_remove = {
-				every_owned_state = {
-					remove_dynamic_modifier = { modifier = ARI_low_control_rank_state }
-				}
 			}
 		}
 		

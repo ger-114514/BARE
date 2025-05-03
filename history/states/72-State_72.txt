@@ -10,8 +10,9 @@ state={
 	}
 	history = {
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 4
+			industrial_complex = 2
+			heavy_arms_factory = 2
 		}
 		owner = SRT
 		add_core_of=SRT

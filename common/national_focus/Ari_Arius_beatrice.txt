@@ -83,18 +83,18 @@ focus_tree = {
 	}
 
 }
-#第二阶段-夫人 需要1036天 游戏开始1127天
+#第二阶段-夫人
 focus_tree = {
 	id = Arius_stage_2_beatrice
 	country = {
 		factor = 0
 	}
 	default = no
-	#神秘研究部分
 	continuous_focus_position = {
 		x = 50
 		y = 3000
 	}
+	#神秘研究部分
 	###阶段1(RANK=1)
 		focus = { #力量之欲
 			id = ARI_desire_of_power
@@ -751,7 +751,6 @@ focus_tree = {
 					add_dynamic_modifier = {
 						modifier = ARI_Gematria_member
 					}
-					custom_effect_tooltip = ARI_Gematria_new_trade_tt
 					country_event = ARI_beatrice.7
 					hidden_effect = {
 						country_event = {
@@ -772,10 +771,7 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_ECO }
 				completion_reward = {
 					#开启数秘术交易面板
-					unlock_decision_tooltip = {
-						decision = ARI_black_suit_trade
-						show_effect_tooltip = yes
-					}
+					custom_effect_tooltip = ARI_Gematria_new_trade_tt
 				}
 			}
 			focus = { #巨匠的神秘造物
@@ -816,7 +812,7 @@ focus_tree = {
 			}
 			focus = { #数密术学术交流
 				id = ARI_Gematria_academic_exchange
-				#icon = GFX_goal_unknown
+				icon = GFX_goal_ARI_Gematria_academic_exchange
 				relative_position_id = ARI_Maesutoro
 				prerequisite = { focus = ARI_Maesutoro }
 				prerequisite = { focus = ARI_Gorukosoda }
@@ -831,7 +827,7 @@ focus_tree = {
 		#搞事部分
 			focus = { #暗区行动
 				id = ARI_operation_dark_zone
-				#icon = 
+				icon = GFX_goal_ARI_operation_dark_zone
 				cost = 3
 				relative_position_id = ARI_new_guide
 				prerequisite = { focus = ARI_new_guide }
@@ -890,7 +886,7 @@ focus_tree = {
 			}
 			focus = { #行动目标：格赫娜
 				id = ARI_Gehenna_operation
-				# icon = GFX_goal_Trinity_operation
+				icon = GFX_goal_ARI_Gehenna_operation
 				relative_position_id = ARI_Trinity_operation
 				prerequisite = { focus = ARI_Trinity_operation }
 				cost = 3
@@ -916,7 +912,7 @@ focus_tree = {
 			}
 			focus = { #格黑娜间谍
 				id = ARI_spies_in_Gehenna
-				#icon = 
+				icon = GFX_goal_ARI_spies_in_Gehenna
 				cost = 3
 				relative_position_id = ARI_Gehenna_operation
 				prerequisite = { focus = ARI_Gehenna_operation }
@@ -1065,7 +1061,7 @@ focus_tree = {
 
 			focus = { #圣三一行动的经验
 				id = ARI_experience_in_Trinity
-				#icon = GFX_goal_unknown
+				icon = GFX_goal_ARI_experience_in_Trinity
 				relative_position_id = ARI_collaborator_in_Trinity
 				prerequisite = { focus = ARI_collaborator_in_Trinity }
 				prerequisite = { focus = ARI_take_the_initiative }
@@ -1085,7 +1081,7 @@ focus_tree = {
 			}
 			focus = { #假旗行动
 				id = ARI_fake_flag_operation
-				#icon = 
+				icon = GFX_goal_ARI_fake_flag_operation
 				cost = 3
 				relative_position_id = ARI_experience_in_Trinity
 				prerequisite = { focus = ARI_secret_cooperation_with_Pandemonium }
@@ -1181,6 +1177,9 @@ focus_tree = {
 			#icon = GFX_goal_unknown
 			relative_position_id = ARI_traveller_operation
 			prerequisite = { focus = ARI_traveller_operation }
+			allow_branch = {
+				has_completed_focus = ARI_traveller_operation
+			}
 			available = {
 				always = no #自动跳过
 			}
@@ -1373,8 +1372,8 @@ focus_tree = {
 				unlock_decision_tooltip = ARI_deal_with_traitor_de
 
 				hidden_effect = {
-					#TODO:出现事件：叛徒的明天
-					#event = { id =  }
+					#出现事件：叛徒的明天
+					country_event = ARI_beatrice.11
 				}
 			}
 		}
@@ -1423,7 +1422,9 @@ focus_tree = {
 			relative_position_id = ARI_traveller_operation
 			prerequisite = { focus = ARI_traveller_operation }
 			prerequisite = { focus = ARI_fake_flag_operation}
-			prerequisite = { focus = ARI_experience_in_Trinity }
+			allow_branch = {
+				has_completed_focus = ARI_traveller_operation
+			}
 			available = {
 				always = no #自动跳过
 			}
@@ -1446,8 +1447,9 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 			completion_reward = {
-				#TODO
 				#圣三一现在可以反制阿里乌斯的渗透现在在不建立安全屋的情况下，对圣三一方的主动进攻行动会减少渗透度
+				custom_effect_tooltip = ARI_open_the_curtain_tt
+				TRI = { custom_effect_tooltip = TRI_anti_spy_available_tt }
 			}
 		}
 
@@ -1465,7 +1467,6 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 			completion_reward = {
-				#TODO
 				unlock_decision_tooltip = ARI_build_safe_home
 				unlock_decision_tooltip = ARI_send_sf_to_trinity
 			}
@@ -1485,7 +1486,6 @@ focus_tree = {
 			y = 2
 			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 			completion_reward = {
-				#TODO
 				unlock_decision_tooltip = ARI_disguise_conference_preparer
 				unlock_decision_tooltip = ARI_control_trinity_border
 			}
@@ -1751,6 +1751,24 @@ focus_tree = {
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
 				add_stability = 0.05
+				# add_advisor_role = {
+				# 	character = ARI_code_01
+				# 	advisor = {
+				# 		slot = political_advisor
+				# 		idea_token = ARI_code_01_ac
+				# 		traits = { arbitrary_supervisor }
+				# 		cost = 100
+				# 	}
+				# }
+				# add_advisor_role = {
+				# 	character = ARI_code_02
+				# 	advisor = {
+				# 		slot = political_advisor
+				# 		idea_token = ARI_code_02_ac
+				# 		traits = { local_ruler }
+				# 		cost = 100
+				# 	}
+				# }
 			}
 		}
 		#维稳部分
@@ -1841,6 +1859,7 @@ focus_tree = {
 						add_command_power = 5
 						custom_effect_tooltip = ARI_suppress_resistance_tt
 					}
+					
 				}
 				focus = { #贯彻夫人的意志
 					id = ARI_carry_out_the_will
@@ -1860,6 +1879,7 @@ focus_tree = {
 							ARI_control_modifier_increase_2 = yes
 						}
 					}
+					
 				}
 				focus = { #阿里乌斯信用体系
 					id = ARI_identity_system
@@ -1873,12 +1893,31 @@ focus_tree = {
 					completion_reward = {
 						add_stability = 0.1
 						#启用顾问蝙蝠07
-						custom_effect_tooltip = ARI_recruit_informants_tt
+						# custom_effect_tooltip = ARI_recruit_informants_tt
+						# add_advisor_role = {
+						# 	character = ARI_code_00
+						# 	advisor = {
+						# 		slot = political_advisor
+						# 		idea_token = ARI_code_00_ac
+						# 		traits = { positive_collaborator }
+						# 		cost = 100
+						# 	}
+						# }
+						# add_advisor_role = {
+						# 	character = ARI_code_07
+						# 	advisor = {
+						# 		slot = political_advisor
+						# 		idea_token = ARI_code_07_ac
+						# 		traits = { secret_agent }
+						# 		cost = 100
+						# 	}
+						# }
 						#提升隐蔽度提升的程度
 						every_owned_state = {
 							ARI_guard_modifier_increase_2 = yes
 						}
 					}
+					
 				}
 			#虚无主义部分
 				focus = { #虚无主义灌输

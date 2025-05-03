@@ -114,7 +114,7 @@ spriteTypes = {
 
 
 	spriteType = {
-		name = "GFX_goalARI_black_market_mercenaries_shine"
+		name = "GFX_goal_ARI_black_market_mercenaries_shine"
 		texturefile = "gfx/interface/goals/Arius/focus_ARI_black_market_mercenaries.png"
 	}
 
@@ -126,5 +126,36 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_ARI_black_market_intelligence_net_shine"
 		texturefile = "gfx/interface/goals/Arius/focus_ARI_black_market_intelligence_net.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ARI_spies_in_Gehenna_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_spies_in_Gehenna.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ARI_operation_dark_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zone.png"
+	}
+
+	
+	spriteType = {
+		name = "GFX_goal_ARI_Gematria_academic_exchange_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_Gematria_academic_exchange.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ARI_Gehenna_operation_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_Gehenna_operation.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ARI_experience_in_Trinity_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_experience_in_Trinity.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_ARI_Gematria_academic_exchange_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_Gematria_academic_exchange.png"
 	}
 }
