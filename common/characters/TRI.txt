@@ -1475,4 +1475,18 @@ characters={
 			}	
 		}
 	}
+	TRI_ui2 = {
+        portraits = {
+            army = {
+			    large=GFX_portrait_TRI_ui
+			    small=GFX_portrait_TRI_ui_small
+            }
+        }
+        scientist = {
+            traits = {  }
+            skills = {
+                specialization_ba_tech = 4
+            }
+        }
+    }
 }

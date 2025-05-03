@@ -1,20 +1,21 @@
-sp_ba_T2_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T2_air_project = {
+    specialization = specialization_air
     progect_tags = {
-        sp_tag_batech
+        sp_tag_aircraft
+        sp_tag_radar
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T1_production
-            has_tech = T1_opaz
+            has_tech = T1_electronic
+            has_tech = T1_drone
         }
         }
-        has_building = batech_facility
+        has_building = air_facility
     }
 
     breakthrough_cost = {
-        specialization_ba_tech = 1
+        specialization_air = 1
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -40,10 +41,10 @@ sp_ba_T2_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T2_production = 1
+               T23_electronic = 1
             }
             set_technology = {
-               T2_opaz = 1
+               T2_drone = 1
             }
         }
         facility_state_effects = {
@@ -57,26 +58,28 @@ sp_ba_T2_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+	
     }
 }
 
-sp_ba_T3_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T3_air_project = {
+    specialization = specialization_air
     progect_tags = {
-        sp_tag_batech
+        sp_tag_aircraft
+        sp_tag_radar
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T2_production
-            has_tech = T2_opaz
+            has_tech = T2_electronic
+            has_tech = T2_drone
         }
         }
-        has_building = batech_facility
+        has_building = air_facility
     }
+
     breakthrough_cost = {
-        specialization_ba_tech = 2
+        specialization_air = 2
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -102,10 +105,10 @@ sp_ba_T3_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T3_production = 1
+               T3_electronic = 1
             }
             set_technology = {
-               T3_opaz = 1
+               T3_drone = 1
             }
         }
         facility_state_effects = {
@@ -119,28 +122,29 @@ sp_ba_T3_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+	
     }
 }
 
 
-sp_ba_T4_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T4_air_project = {
+    specialization = specialization_air
     progect_tags = {
-        sp_tag_batech
+        sp_tag_aircraft
+        sp_tag_radar
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T3_production
-            has_tech = T3_opaz
+            has_tech = T3_electronic
+            has_tech = T3_drone
         }
         }
-        has_building = batech_facility
+        has_building = air_facility
     }
 
     breakthrough_cost = {
-        specialization_ba_tech = 3
+        specialization_air = 3
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -166,10 +170,10 @@ sp_ba_T4_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T4_production = 1
+               T4_electronic = 1
             }
             set_technology = {
-               T4_opaz = 1
+               T4_drone = 1
             }
         }
         facility_state_effects = {
@@ -183,27 +187,28 @@ sp_ba_T4_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+	
     }
 }
 
-sp_ba_T5_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T5_air_project = {
+    specialization = specialization_air
     progect_tags = {
-        sp_tag_batech
+        sp_tag_aircraft
+        sp_tag_radar
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T4_production
-            has_tech = T4_opaz
+            has_tech = T4_electronic
+            has_tech = T4_drone
         }
         }
-        has_building = batech_facility
+        has_building = air_facility
     }
 
     breakthrough_cost = {
-        specialization_ba_tech = 4
+        specialization_air = 4
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -229,10 +234,10 @@ sp_ba_T5_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T5_production = 1
+               T5_electronic = 1
             }
             set_technology = {
-               T5_opaz = 1
+               T5_drone = 1
             }
         }
         facility_state_effects = {
@@ -246,6 +251,6 @@ sp_ba_T5_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+	
     }
 }

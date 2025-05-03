@@ -1,20 +1,22 @@
-sp_ba_T2_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T2_land_project = {
+    specialization = specialization_land
     progect_tags = {
-        sp_tag_batech
+        sp_tag_tank
+	    sp_tag_artillery
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T1_production
-            has_tech = T1_opaz
+            has_tech = T1_infantry_weapon
+            has_tech = T1_mobile_vehicle
+            #has_tech = T1_assult_vehicle
         }
         }
-        has_building = batech_facility
+        has_building = land_facility
     }
 
     breakthrough_cost = {
-        specialization_ba_tech = 1
+        specialization_land = 1
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -40,10 +42,13 @@ sp_ba_T2_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T2_production = 1
+               T2_infantry_weapon = 1
             }
             set_technology = {
-               T2_opaz = 1
+               T2_mobile_vehicle = 1
+            }
+            set_technology = {
+               T2_assult_vehicle = 1
             }
         }
         facility_state_effects = {
@@ -57,26 +62,29 @@ sp_ba_T2_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+
     }
 }
 
-sp_ba_T3_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T3_land_project = {
+    specialization = specialization_land
     progect_tags = {
-        sp_tag_batech
+        	sp_tag_tank
+	sp_tag_artillery
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T2_production
-            has_tech = T2_opaz
+            has_tech = T2_infantry_weapon
+            has_tech = T2_mobile_vehicle
+            #has_tech = T2_assult_vehicle
         }
         }
-        has_building = batech_facility
+        has_building = land_facility
     }
+
     breakthrough_cost = {
-        specialization_ba_tech = 2
+        specialization_land = 2
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -102,10 +110,13 @@ sp_ba_T3_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T3_production = 1
+               T3_infantry_weapon = 1
             }
             set_technology = {
-               T3_opaz = 1
+               T3_mobile_vehicle = 1
+            }
+            set_technology = {
+               T3_assult_vehicle = 1
             }
         }
         facility_state_effects = {
@@ -119,28 +130,30 @@ sp_ba_T3_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+
     }
 }
 
 
-sp_ba_T4_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T4_land_project = {
+    specialization = specialization_land
     progect_tags = {
-        sp_tag_batech
+        	sp_tag_tank
+	sp_tag_artillery
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T3_production
-            has_tech = T3_opaz
+            has_tech = T3_infantry_weapon
+            has_tech = T3_mobile_vehicle
+            #has_tech = T3_assult_vehicle
         }
         }
-        has_building = batech_facility
+        has_building = land_facility
     }
 
     breakthrough_cost = {
-        specialization_ba_tech = 3
+        specialization_land = 3
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -166,10 +179,13 @@ sp_ba_T4_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T4_production = 1
+               T4_infantry_weapon = 1
             }
             set_technology = {
-               T4_opaz = 1
+               T4_mobile_vehicle = 1
+            }
+            set_technology = {
+               T4_assult_vehicle = 1
             }
         }
         facility_state_effects = {
@@ -183,27 +199,29 @@ sp_ba_T4_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+
     }
 }
 
-sp_ba_T5_industry_project = {
-    specialization = specialization_ba_tech
+sp_ba_T5_land_project = {
+    specialization = specialization_land
     progect_tags = {
-        sp_tag_batech
+        sp_tag_tank
+	    sp_tag_artillery
     }
     available = {
         FROM = {
         OR = {
-            has_tech = T4_production
-            has_tech = T4_opaz
+            has_tech = T4_infantry_weapon
+            has_tech = T4_mobile_vehicle
+            #has_tech = T4_assult_vehicle
         }
         }
-        has_building = batech_facility
+        has_building = land_facility
     }
 
     breakthrough_cost = {
-        specialization_ba_tech = 4
+        specialization_land = 4
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -229,10 +247,13 @@ sp_ba_T5_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T5_production = 1
+               T5_infantry_weapon = 1
             }
             set_technology = {
-               T5_opaz = 1
+               T5_mobile_vehicle = 1
+            }
+            set_technology = {
+               T5_assult_vehicle = 1
             }
         }
         facility_state_effects = {
@@ -246,6 +267,6 @@ sp_ba_T5_industry_project = {
 
     }
     generic_prototype_rewards = {
-        
+
     }
 }
