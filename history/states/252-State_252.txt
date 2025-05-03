@@ -4,10 +4,15 @@ state={
 	provinces={
 		1427 4181 4188 5504 5535 8161 8437 8460 9216 9532 10306 10366 
 	}
+	resources = {
+		resources_cm = 30
+		resources_rm = 10
+	}
 	history={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+			heary_arms_factory = 2
 		}
 		owner = A34
 		add_core_of=A34

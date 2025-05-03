@@ -2661,7 +2661,7 @@ ARI_suppress_resistance_eden_decisions = {
 				}
 			}
 			else = {
-				remove_idea = ARI_eden_action_chaos_2
+				remove_ideas = ARI_eden_action_chaos_2
 			}
 		}
 	}
