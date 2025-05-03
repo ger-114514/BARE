@@ -57,8 +57,9 @@ Test_time_decisions_categories = {
 
 	Test_unit_tech_decision = {
 		complete_effect = {
-			set_technology = {
-				test_unit_tech = 1
+			add_power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value = 1
 			}
 		}
 	}
@@ -92,6 +93,7 @@ Test_time_decisions_categories = {
 			BARE_SuperEvent_2_effect_7 = yes
 		}
 	}
+	
 	Test_nuke = {
 		complete_effect = {
 			ARI = {
