@@ -62,6 +62,7 @@ on_actions = {
 	}
 	on_monthly_TRI = {
 		effect = {
+			TRI_region_generate_state_modifiers = yes
 			TRI_region_generate_statistics = yes
 		}
 	}

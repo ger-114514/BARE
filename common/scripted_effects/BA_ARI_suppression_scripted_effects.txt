@@ -265,7 +265,6 @@ ARI_change_materials = {
 	clamp_variable = {
 		var = ARI_materials
 		min = 0
-		max = 1000
 	}
 }
 ARI_change_materials_monthly_modifier = {

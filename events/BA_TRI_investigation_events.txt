@@ -23,7 +23,7 @@ country_event = { #正义实现委员会的精英？
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -45,9 +45,14 @@ country_event = { #声名在外的怪人
 			localization_key = TRI_new_hoshubu_member_tt
 			NAME = TRI_hanako_name
 		}
+		hidden_effect = {
+			TRI_hanako = {
+				set_character_flag = TRI_character_arrested
+			}
+		}
 
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -69,8 +74,13 @@ country_event = { #举止诡异的新生
 			localization_key = TRI_new_hoshubu_member_tt
 			NAME = TRI_azusa_name
 		}
+		hidden_effect = {
+			TRI_azusa = {
+				set_character_flag = TRI_character_arrested
+			}
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -84,7 +94,7 @@ country_event = { #举止诡异的新生
 		
 		custom_effect_tooltip = TRI_azusa_fadian
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -109,9 +119,14 @@ country_event = { #必须且必要的...
 			localization_key = TRI_new_hoshubu_member_tt
 			NAME = TRI_hifumi_name
 		}
+		hidden_effect = {
+			TRI_hifumi = {
+				set_character_flag = TRI_character_arrested
+			}
+		}
 
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -143,10 +158,14 @@ country_event = { #小春1
 			NAME = TRI_koharu_name
 		}
 		TRI_paranoia_decrease_10 = yes
-    	#custom_effect_tooltip = koharu_safe_tooltip
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
     	ai_chance = {
-    		factor = 100
+    		base = 1
     	}
     }
 }
@@ -179,9 +198,14 @@ country_event = { #小春2
 			NAME = TRI_koharu_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -214,8 +238,14 @@ country_event = { #小春3
 			NAME = TRI_koharu_name
 		}
 		TRI_paranoia_decrease_10 = yes
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -249,9 +279,14 @@ country_event = { #小春4
 			NAME = TRI_koharu_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -286,9 +321,14 @@ country_event = { #花子1
 			NAME = TRI_hanako_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -322,9 +362,14 @@ country_event = { #花子2
 			NAME = TRI_hanako_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -351,9 +396,14 @@ country_event = { #花子3
 			NAME = TRI_hanako_name
 		}
 		TRI_paranoia_increase_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -380,9 +430,14 @@ country_event = { #花子4
 			NAME = TRI_hanako_name
 		}
 		TRI_paranoia_increase_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -417,9 +472,14 @@ country_event = { #梓1
 			NAME = TRI_azusa_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -436,7 +496,7 @@ country_event = { #梓1
 		TRI_paranoia_decrease_10 = yes
 
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -471,9 +531,14 @@ country_event = { #梓2
 			NAME = TRI_azusa_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -488,9 +553,14 @@ country_event = { #梓2
 			NAME = TRI_azusa_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -518,9 +588,14 @@ country_event = { #梓3
 			NAME = TRI_azusa_name
 		}
 		TRI_paranoia_increase_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -547,9 +622,14 @@ country_event = { #梓4
 			NAME = TRI_azusa_name
 		}
 		TRI_paranoia_increase_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -564,7 +644,7 @@ country_event = { #梓4
 		TRI_paranoia_increase_10 = yes
 
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 
@@ -600,9 +680,14 @@ country_event = { #日富美1
 			NAME = TRI_hifumi_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -636,9 +721,14 @@ country_event = { #日富美2
 			NAME = TRI_hifumi_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
     
@@ -653,9 +743,14 @@ country_event = { #日富美2
 			NAME = TRI_hifumi_name
 		}
 		TRI_paranoia_decrease_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -682,9 +777,14 @@ country_event = { #日富美3
 			NAME = TRI_hifumi_name
 		}
 		TRI_paranoia_increase_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }
@@ -711,9 +811,14 @@ country_event = { #日富美4
 			NAME = TRI_hifumi_name
 		}
 		TRI_paranoia_increase_10 = yes
-
+		if = {
+			limit = { 
+				NOT = { has_country_flag = TRI_investigate_open }
+			}
+			set_country_flag = TRI_investigate_open
+		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
     }
 }

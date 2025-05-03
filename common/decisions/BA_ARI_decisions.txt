@@ -2158,6 +2158,14 @@ ARI_foreign_operations_decisions = {
 				check_variable = { ARI_intelligence_in_TRI < 40 }
 			}
 			modifier = {
+				factor = 1.5
+				check_variable = { ARI_intelligence_in_TRI > 80 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { ARI_intelligence_in_TRI > 90 }
+			}
+			modifier = {
 				factor = 0.5
 				has_equipment = { infantry_equipment < 10000 }
 			}

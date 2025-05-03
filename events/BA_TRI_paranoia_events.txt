@@ -22,6 +22,29 @@ country_event = { #顾问被指控为不安定分子
 
 		add_political_power = -50
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 200
+			}
+		}
 	}
 }
 country_event = { #文职部员队伍中的阴谋
@@ -51,6 +74,29 @@ country_event = { #文职部员队伍中的阴谋
 
 		add_political_power = -50
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 200
+			}
+		}
 	}
 }
 country_event = { #圣三一情报局的背叛？
@@ -88,6 +134,29 @@ country_event = { #圣三一情报局的背叛？
 			flag = TRI_paranoia_3_cd
 			days = 240
 		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 40 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.2
+				has_political_power > 250
+			}
+		}
 	}
 }
 
@@ -113,6 +182,29 @@ unit_leader_event = { #将军被指控为不安定分子
 
 		add_political_power = -50
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 200
+			}
+		}
 	}
 }
 country_event = { #陆军成员中的流言
@@ -139,6 +231,29 @@ country_event = { #陆军成员中的流言
 
 		add_political_power = -50
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 200
+			}
+		}
 	}
 }
 country_event = { #反破坏分子运动（陆军）
@@ -168,6 +283,29 @@ country_event = { #反破坏分子运动（陆军）
 
 		add_political_power = -60
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 240
+			}
+		}
 	}
 }
 
@@ -195,6 +333,29 @@ country_event = { #空军成员中的流言
 
 		add_political_power = -50
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 200
+			}
+		}
 	}
 }
 country_event = { #反破坏分子运动（空军）
@@ -224,6 +385,29 @@ country_event = { #反破坏分子运动（空军）
 
 		add_political_power = -60
 		TRI_paranoia_increase_10 = yes
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 200
+			}
+		}
 	}
 }
 country_event = { #对社团的调查
@@ -257,14 +441,39 @@ country_event = { #对社团的调查
 		name = TRI_paranoia.31.a
 		TRI_unity_decrease_5 = yes
 
-		set_temp_variable = { loyalty_change = 0.2 }
 		set_temp_variable = { association = selected_association_t }
+		set_temp_variable = { loyalty_change = 0.2 }
 		TRI_parliament_loyalty_change = yes
+		set_temp_variable = { radicalism_change = 0.2 }
+		TRI_parliament_radicalism_change = yes
 		TRI_paranoia_decrease_20 = yes
 
 		clear_variable = selected_association_t
 		clr_country_flag = TRI_paranoia_association_inspection_flag
 		set_variable = { TRI_inspected_assosiation = TRI_paranoia_association^TRI_paranoia_selected_association }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total < 15 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_unity > 75 }
+			}
+		}
 	}
 	option = { #停停停
 		name = TRI_paranoia.31.b
@@ -277,6 +486,25 @@ country_event = { #对社团的调查
 		clear_variable = selected_association_t
 		clr_country_flag = TRI_paranoia_association_inspection_flag
 		set_variable = { TRI_inspected_assosiation = TRI_paranoia_association^TRI_paranoia_selected_association }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0.8
+				check_variable = { TRI_nagisa_paranoia_total < 50 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank < 2 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_unity > 75 }
+			}
+		}
 	}
 }
 country_event = {

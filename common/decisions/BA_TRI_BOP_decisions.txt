@@ -145,6 +145,29 @@ TRI_debug_decisions = {
 	}
 }
 TRI_BOP_system = {
+	TRI_next_house_election = {
+		priority = 1000
+		days_mission_timeout = 730
+		activation = {
+			has_country_flag = TRI_parliament_available
+		}
+		available = {
+			
+		}
+		selectable_mission = yes
+		cost = 50
+		complete_effect = {
+			TRI_parliament_house_election = yes
+			activate_mission = TRI_next_house_election
+		}
+		timeout_effect = {
+			TRI_parliament_house_election = yes
+			activate_mission = TRI_next_house_election
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
 	TRI_get_patel_details = {
 		visible = {
 			check_variable = { detail_ignored@TRI_parliament_association_0 = 1 }
@@ -157,22 +180,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_0
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_0 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_filius_details = {
@@ -187,22 +209,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_1
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_1 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_cootes_details = {
@@ -217,22 +238,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_2
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_2 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_justice_details = {
@@ -247,22 +267,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_3
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_3 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_sisterhood_details = {
@@ -277,22 +296,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_4
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_4 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_knights_details = {
@@ -307,22 +325,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_5
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_5 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_get_other_details = {
@@ -337,22 +354,21 @@ TRI_BOP_system = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = TRI_has_unity
-					UNITY = "2"
+					UNITY = "5"
 				}
 				check_variable = {
-					TRI_unity > 1.9
+					TRI_unity > 4.9
 				}
 			}
 		}
-		cost = 20
+		cost = 50
 		complete_effect = {
 			custom_effect_tooltip = {
 				localization_key = TRI_know_association_details
 				ASSOCIATION = TRI_parliament_association_6
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_6 = 0 }
-			set_temp_variable = { TRI_unity_change = -2 }
-			TRI_change_unity = yes
+			TRI_unity_decrease_5 = yes
 		}
 	}
 	TRI_invest_in_region_factory = {
@@ -442,7 +458,13 @@ TRI_BOP_system = {
 		# 	has_variable = TRI_parliament_focus
 		# }
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		complete_effect = {
 			if = {
@@ -458,9 +480,13 @@ TRI_BOP_system = {
 		# 	has_variable = TRI_parliament_focus
 		# }
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
-		}
-		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 			custom_trigger_tooltip = {
 				tooltip = TRI_BOP_strengthen_control_trigger_tt
 				OR = {
@@ -479,7 +505,13 @@ TRI_BOP_system = {
 			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 		}
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		complete_effect = {
 			for_each_loop = {
@@ -506,7 +538,13 @@ TRI_BOP_system = {
 			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 		}
 		available = {
-			has_country_flag = TRI_rebuild_communication_channel
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = has_completed_focus_tt
+					FOCUS = TRI_rebuild_communication_channel
+				}
+				has_country_flag = TRI_rebuild_communication_channel
+			}
 		}
 		complete_effect = {
 			country_event = TRI_BOP_decision.4
@@ -530,17 +568,21 @@ TRI_BOP_system = {
 		is_good = yes
 		activation = {
 			has_completed_focus = TRI_multi_association_exercise
+			hidden_trigger = {
+				has_country_flag = TRI_multi_association_exercise
+			}
 		}
 		available = { 
 			# any_country_division = {
 				
 			# }
 			has_army_experience > 50
-			command_power > 80
+			command_power > 79.9
 		}
 		days_mission_timeout = 180
 		fire_only_once = yes
 		complete_effect = {
+			clr_country_flag = TRI_multi_association_exercise
 			army_experience = -50
 			add_command_power = -80
 			add_doctrine_cost_reduction = {
@@ -556,6 +598,9 @@ TRI_BOP_system = {
 			add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
 			add_to_variable = { TRI_trinity_military_experience_loss_factor = -0.1 }
 
+		}
+		timeout_effect = {
+			activate_mission = TRI_joint_exercise
 		}
 	}
 }
@@ -696,7 +741,6 @@ TRI_region_interaction_decisions_category = {
 						check_variable = { TRI_tea_party_artillery_recruiting_count > 11 }
 					}
 					add_ideas = TRI_tea_party_artillery_4
-					}
 				}
 				else_if = {
 					limit = {

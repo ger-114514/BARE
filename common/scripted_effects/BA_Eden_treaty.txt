@@ -88,3 +88,24 @@ Eden_treaty_next_phase = {
 		}
 	}
 }
+Eden_treaty_formally_signed = {
+	custom_effect_tooltip = Eden_treaty_has_been_signed
+	set_global_flag = Eden_treaty_has_been_signed
+	for_each_scope_loop = {
+		array = global.Eden_treaty_negotiation_phase_leader
+		add_political_power = 100
+		add_to_variable = { Eden_treaty_modifier_political_power_factor = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_stability_factor = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_war_support_factor = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_research_speed_factor = 0.025 }
+	}
+	TRI = {
+		add_political_power = 100
+		add_dynamic_modifier = { modifier = Eden_treaty_modifier }
+	}
+	GEH = {
+		add_political_power = 100
+		add_dynamic_modifier = { modifier = Eden_treaty_modifier }
+	}
+}

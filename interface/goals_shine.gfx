@@ -1626,7 +1626,7 @@ spriteTypes = {
 
 
 	SpriteType = {
-		name = "GFX_TRI_flower_tea_artillery"
+		name = "GFX_TRI_flower_tea_artillery_shine"
 		texturefile = "gfx/interface/goals/鲜花，茶点与火炮的硝烟.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1660,7 +1660,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI__limited_military_preparation"
+		name = "GFX_TRI_limited_military_preparation_shine"
 		texturefile = "gfx/interface/goals/有条件的军事准备.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1694,7 +1694,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI__lorderly_mobilization"
+		name = "GFX_TRI_orderly_mobilization_shine"
 		texturefile = "gfx/interface/goals/有序动员.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1728,7 +1728,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_long_distance_aeronautics"
+		name = "GFX_TRI_long_distance_aeronautics_shine"
 		texturefile = "gfx/interface/goals/远端航空训练计划.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1762,7 +1762,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_refining_research"
+		name = "GFX_TRI_refining_research_shine"
 		texturefile = "gfx/interface/goals/精工研发小组.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1799,7 +1799,7 @@ spriteTypes = {
 
 		
 	SpriteType = {
-		name = "GFX_TRI_fortifications_building"
+		name = "GFX_TRI_fortifications_building_shine"
 		texturefile = "gfx/interface/goals/工事特训.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1833,7 +1833,7 @@ spriteTypes = {
 
 		
 	SpriteType = {
-		name = "GFX_TRI_multi_association_exercise"
+		name = "GFX_TRI_multi_association_exercise_shine"
 		texturefile = "gfx/interface/goals/多社团联合演习.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1867,7 +1867,7 @@ spriteTypes = {
 
 		
 	SpriteType = {
-		name = "GFX_TRI_commission_of_staffs"
+		name = "GFX_TRI_commission_of_staffs_shine"
 		texturefile = "gfx/interface/goals/参谋长委员会.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1901,7 +1901,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_air_ground_integration"
+		name = "GFX_TRI_air_ground_integration_shine"
 		texturefile = "gfx/interface/goals/圣三一空地一体化系统.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1935,7 +1935,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_advanced_armour"
+		name = "GFX_TRI_advanced_armour_shine"
 		texturefile = "gfx/interface/goals/先进性装甲.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -1969,7 +1969,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_air_force_projection"
+		name = "GFX_TRI_air_force_projection_shine"
 		texturefile = "gfx/interface/goals/重整空中力量投射.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2003,7 +2003,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_UAV_production"
+		name = "GFX_TRI_UAV_production_shine"
 		texturefile = "gfx/interface/goals/专业无人机生产集团.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -2037,7 +2037,7 @@ spriteTypes = {
 
 	
 	SpriteType = {
-		name = "GFX_TRI_UAV_control"
+		name = "GFX_TRI_UAV_control_shine"
 		texturefile = "gfx/interface/goals/无人机管制司令部.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

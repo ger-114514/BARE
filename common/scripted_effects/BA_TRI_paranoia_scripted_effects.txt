@@ -323,29 +323,44 @@ TRI_paranoia_check_association_state = {
 BA_TRI_remove_paranoia_system = {
 	custom_effect_tooltip = BA_TRI_remove_paranoia_system_tt
 	hidden_effect = {
-		clear_array = TRI_paranoia_association
-		clr_country_flag = TRI_paranoia_system_active
-		clear_variable = TRI_paranoia_change
-		clear_variable = TRI_nagisa_paranoia_total
-		clear_variable = TRI_paranoia_dial_frame
-		clear_variable = TRI_paranoia_nagisa_state
-		every_character = {
-			if = {
-				limit = { has_character_flag = TRI_character_arrested }
-				clr_character_flag = TRI_character_arrested
+		if = {
+			limit = { has_country_flag = TRI_paranoia_system_active }
+			clear_array = TRI_paranoia_association
+			clr_country_flag = TRI_paranoia_system_active
+			clear_variable = TRI_paranoia_change
+			clear_variable = TRI_nagisa_paranoia_total
+			clear_variable = TRI_paranoia_dial_frame
+			clear_variable = TRI_paranoia_nagisa_state
+			every_character = {
+				if = {
+					limit = { has_character_flag = TRI_character_arrested }
+					clr_character_flag = TRI_character_arrested
+				}
 			}
-		}
-		TRI_nagisa = {
-			if = {
-				limit = { has_trait = BA_TRI_nagisa_paranoid }
-				remove_trait = { trait = BA_TRI_nagisa_paranoid }
+			TRI_nagisa = {
+				if = {
+					limit = { has_trait = BA_TRI_nagisa_paranoid }
+					remove_trait = { trait = BA_TRI_nagisa_paranoid }
+				}
+				if = {
+					limit = { has_trait = TRI_nagisa_Find_the_root }
+					remove_trait = { trait = TRI_nagisa_Find_the_root }
+				}
+				else_if = {
+					limit = { has_trait = TRI_nagisa_Find_the_root_2 }
+					remove_trait = { trait = TRI_nagisa_Find_the_root_2 }
+				}
+				else_if = {
+					limit = { has_trait = TRI_nagisa_Find_the_root_3 }
+					remove_trait = { trait = TRI_nagisa_Find_the_root_3 }
+				}
 			}
+			remove_ideas = TRI_inspected_administration
+			remove_ideas = TRI_inspected_army
+			remove_ideas = TRI_training_activities_curtailed
+			remove_ideas = TRI_inspected_airforce
+			remove_ideas = TRI_ground_based_training
 		}
-		remove_ideas = TRI_inspected_administration
-		remove_ideas = TRI_inspected_army
-		remove_ideas = TRI_training_activities_curtailed
-		remove_ideas = TRI_inspected_airforce
-		remove_ideas = TRI_training_activities_curtailed
 	}
 	
 }

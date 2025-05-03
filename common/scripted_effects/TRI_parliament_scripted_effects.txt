@@ -171,6 +171,10 @@ TRI_parliament_party_seats = {
 		set_variable = { focus_position_distance@var:v = TRI_player_focus_position }
 		subtract_from_variable = { focus_position_distance@var:v = focus_position@var:v }
 		if = {
+			limit = { check_variable = { focus_position_distance@var:v < 0 } }
+			multiply_variable = { focus_position_distance@var:v = -1 }
+		}
+		if = {
 			limit = { check_variable = { focus_position_distance@var:v > 1 } }
 			set_variable = { view@var:v = token:view_against }
 			set_variable = { list_bg@var:v = 2 }
@@ -195,7 +199,7 @@ TRI_parliament_party_seats = {
 			subtract_from_temp_variable = { support_modifier = radicalism@var:v }
 			multiply_temp_variable = { focus_support@var:v = support_modifier }
 
-			clamp_variable = {
+			clamp_temp_variable = {
 				var = focus_support@var:v
 				min = 0
 				max = 1
@@ -332,7 +336,7 @@ TRI_add_main_faction_modifier = {
 				add_to_temp_variable = { support@var:v = conservative_support@var:v }
 				add_to_temp_variable = { support@var:v = moderate_support@var:v }
 				multiply_temp_variable = { support@var:v = loyalty@var:v }
-				clamp_variable = {
+				clamp_temp_variable = {
 					var = support@var:v
 					min = 0
 					max = 1
@@ -362,6 +366,11 @@ TRI_add_main_faction_modifier = {
 			min = 0
 			max = valid_seats@BA_TRI_house_seat
 		}
+	}
+	TRI_get_temp_bill_support = {
+		custom_effect_tooltip = TRI_get_temp_bill_support_tt
+		add_to_variable = { temp_support@var:parliament = support_get }
+		TRI_parliament_get_bill_positions = yes
 	}
 	TRI_pass_the_bill = {
 		hidden_effect = {
@@ -457,6 +466,28 @@ TRI_add_main_faction_modifier = {
 				if = {
 					limit = { 
 						check_variable = { faction@var:association = var:target_faction } 
+					}
+					TRI_parliament_loyalty_change = yes
+				}
+			}
+		}
+	}
+	#指定议院非指定派系社团
+	TRI_parliament_loyalty_change_parliament_non_faction = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_loyalty_change_parliament_non_faction_tt
+			TARGET = "[?target_faction.GetTokenLocalizedKey]"
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { 
+						NOT = {
+							check_variable = { faction@var:association = var:target_faction } 
+						}
+						check_variable = { status@var:association = var:target_parliament } 
 					}
 					TRI_parliament_loyalty_change = yes
 				}
@@ -573,10 +604,21 @@ TRI_add_main_faction_modifier = {
 			min = -1
 			max = 1
 		}
+		if = {
+			limit = { check_variable = { TRI_player_focus_position < -0.33 } }
+			set_variable = { TRI_player_focus_position_frame = 1 }
+			set_variable = { TRI_player_focus_faction = token:BOP_hardliner }
+		}
+		else_if = {
+			limit = { check_variable = { TRI_player_focus_position < 0.34 } }
+			set_variable = { TRI_player_focus_position_frame = 2 }
+			set_variable = { TRI_player_focus_faction = token:BOP_conservative }
+		}
+		else = {
+			set_variable = { TRI_player_focus_position_frame = 3 }
+			set_variable = { TRI_player_focus_faction = token:BOP_moderate }
+		}
 		set_variable = { TRI_player_focus_position_x = TRI_player_focus_position }
 		multiply_variable = { TRI_player_focus_position_x = 200 }
-		set_variable = { TRI_player_focus_position_frame = TRI_player_focus_position }
-		round_variable = TRI_player_focus_position_frame
-		add_to_variable = { TRI_player_focus_position_frame = 2 }
 		TRI_init_senate_house = yes
 	}

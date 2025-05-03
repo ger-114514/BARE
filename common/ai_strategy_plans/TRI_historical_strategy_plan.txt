@@ -1,0 +1,52 @@
+ARI_historical_plan = {
+	name = "Trinity Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TRI
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no 
+	}
+
+	ai_national_focuses = {
+		TRI_pax_trinity
+		TRI_1st_eden_pact
+		TRI_prepare_for_eden
+		TRI_calling_for_sisterhood
+		TRI_restart_domestic_struggle
+
+		TRI_expand_intellegence
+		TRI_Bill_of_copper_olive #法案
+		TRI_turncoat_in_trinity
+		TRI_authorize_dove_faction
+		TRI_invitation_for_discussion
+		TRI_limited_military_preparation
+		TRI_reorgnize_teaparty_mob
+		TRI_association_autonomy
+
+		TRI_Bill_of_disclosure #法案
+		
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		base = 1
+		factor = 1.0
+	}
+
+}

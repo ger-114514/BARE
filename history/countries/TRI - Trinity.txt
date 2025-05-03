@@ -677,3 +677,33 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
+TRI_nagisa = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS}
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+TRI_missing_nagisa = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+TRI_tsurugi  ={
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+
+
+TRI_hasumi = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+
+TRI_ichika = {
+	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+}
+
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_seia }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_nagisa }
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_ER = TRI_mika }
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_seia }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_nagisa }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_missing_nagisa }
+# # add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_mika }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_tsurugi }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_hasumi }
+# add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = TRI_ichika }
