@@ -1,0 +1,526 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_Portrait_aby_1"
+		texturefile = "gfx/random_leader/aby/aby_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_aby_1_small"
+		texturefile = "gfx/random_leader/aby/aby_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_ari_1"
+		texturefile = "gfx/random_leader/ari/ari_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_1"
+		texturefile = "gfx/random_leader/cah/cah_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_1_small"
+		texturefile = "gfx/random_leader/cah/cah_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_2"
+		texturefile = "gfx/random_leader/cah/cah_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_2_small"
+		texturefile = "gfx/random_leader/cah/cah_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_3"
+		texturefile = "gfx/random_leader/cah/cah_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_3_small"
+		texturefile = "gfx/random_leader/cah/cah_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_4"
+		texturefile = "gfx/random_leader/cah/cah_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_4_small"
+		texturefile = "gfx/random_leader/cah/cah_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_5"
+		texturefile = "gfx/random_leader/cah/cah_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_cah_5_small"
+		texturefile = "gfx/random_leader/cah/cah_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_1"
+		texturefile = "gfx/random_leader/geh/geh_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_1_small"
+		texturefile = "gfx/random_leader/geh/geh_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_2"
+		texturefile = "gfx/random_leader/geh/geh_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_2_small"
+		texturefile = "gfx/random_leader/geh/geh_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_3"
+		texturefile = "gfx/random_leader/geh/geh_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_3_small"
+		texturefile = "gfx/random_leader/geh/geh_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_4"
+		texturefile = "gfx/random_leader/geh/geh_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_4_small"
+		texturefile = "gfx/random_leader/geh/geh_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_5"
+		texturefile = "gfx/random_leader/geh/geh_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_geh_5_small"
+		texturefile = "gfx/random_leader/geh/geh_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gkt_1"
+		texturefile = "gfx/random_leader/gkt/gkt_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gkt_1_small"
+		texturefile = "gfx/random_leader/gkt/gkt_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gkt_2"
+		texturefile = "gfx/random_leader/gkt/gkt_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gkt_2_small"
+		texturefile = "gfx/random_leader/gkt/gkt_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gkt_3"
+		texturefile = "gfx/random_leader/gkt/gkt_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gkt_3_small"
+		texturefile = "gfx/random_leader/gkt/gkt_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gsc_1"
+		texturefile = "gfx/random_leader/gsc/gsc_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gsc_1_small"
+		texturefile = "gfx/random_leader/gsc/gsc_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gsc_2"
+		texturefile = "gfx/random_leader/gsc/gsc_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_gsc_2_small"
+		texturefile = "gfx/random_leader/gsc/gsc_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hd_1"
+		texturefile = "gfx/random_leader/hd/hd_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hd_1_small"
+		texturefile = "gfx/random_leader/hd/hd_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hd_2"
+		texturefile = "gfx/random_leader/hd/hd_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hd_2_small"
+		texturefile = "gfx/random_leader/hd/hd_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hd_3"
+		texturefile = "gfx/random_leader/hd/hd_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hd_3_small"
+		texturefile = "gfx/random_leader/hd/hd_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_1"
+		texturefile = "gfx/random_leader/hh/hh_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_1_small"
+		texturefile = "gfx/random_leader/hh/hh_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_2"
+		texturefile = "gfx/random_leader/hh/hh_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_2_small"
+		texturefile = "gfx/random_leader/hh/hh_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_3"
+		texturefile = "gfx/random_leader/hh/hh_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_3_small"
+		texturefile = "gfx/random_leader/hh/hh_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_4"
+		texturefile = "gfx/random_leader/hh/hh_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_4_small"
+		texturefile = "gfx/random_leader/hh/hh_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_5"
+		texturefile = "gfx/random_leader/hh/hh_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_5_small"
+		texturefile = "gfx/random_leader/hh/hh_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_6"
+		texturefile = "gfx/random_leader/hh/hh_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_6_small"
+		texturefile = "gfx/random_leader/hh/hh_6_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_7"
+		texturefile = "gfx/random_leader/hh/hh_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hh_7_small"
+		texturefile = "gfx/random_leader/hh/hh_7_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hld_1"
+		texturefile = "gfx/random_leader/hld/hld_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hld_1_small"
+		texturefile = "gfx/random_leader/hld/hld_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hld_2"
+		texturefile = "gfx/random_leader/hld/hld_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hld_2_small"
+		texturefile = "gfx/random_leader/hld/hld_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hld_3"
+		texturefile = "gfx/random_leader/hld/hld_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hld_3_small"
+		texturefile = "gfx/random_leader/hld/hld_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hvy_1"
+		texturefile = "gfx/random_leader/hvy/hvy_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hvy_1_small"
+		texturefile = "gfx/random_leader/hvy/hvy_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hvy_2"
+		texturefile = "gfx/random_leader/hvy/hvy_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hvy_2_small"
+		texturefile = "gfx/random_leader/hvy/hvy_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hvy_3"
+		texturefile = "gfx/random_leader/hvy/hvy_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_hvy_3_small"
+		texturefile = "gfx/random_leader/hvy/hvy_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_mil_1"
+		texturefile = "gfx/random_leader/mil/mil_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_mil_1_small"
+		texturefile = "gfx/random_leader/mil/mil_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_mil_2"
+		texturefile = "gfx/random_leader/mil/mil_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_mil_2_small"
+		texturefile = "gfx/random_leader/mil/mil_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_rwt_1"
+		texturefile = "gfx/random_leader/rwt/rwt_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_rwt_1_small"
+		texturefile = "gfx/random_leader/rwt/rwt_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_rwt_2"
+		texturefile = "gfx/random_leader/rwt/rwt_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_rwt_2_small"
+		texturefile = "gfx/random_leader/rwt/rwt_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_1"
+		texturefile = "gfx/random_leader/shj/sha_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_1_small"
+		texturefile = "gfx/random_leader/shj/sha_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_2"
+		texturefile = "gfx/random_leader/shj/sha_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_2_small"
+		texturefile = "gfx/random_leader/shj/sha_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_3"
+		texturefile = "gfx/random_leader/shj/sha_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_3_small"
+		texturefile = "gfx/random_leader/shj/sha_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_4"
+		texturefile = "gfx/random_leader/shj/sha_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_4_small"
+		texturefile = "gfx/random_leader/shj/sha_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_5"
+		texturefile = "gfx/random_leader/shj/sha_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_5_small"
+		texturefile = "gfx/random_leader/shj/sha_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_6"
+		texturefile = "gfx/random_leader/shj/sha_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sha_6_small"
+		texturefile = "gfx/random_leader/shj/sha_6_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_1"
+		texturefile = "gfx/random_leader/sm/sm_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_10"
+		texturefile = "gfx/random_leader/sm/sm_10.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_10_small"
+		texturefile = "gfx/random_leader/sm/sm_10_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_11"
+		texturefile = "gfx/random_leader/sm/sm_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_11_small"
+		texturefile = "gfx/random_leader/sm/sm_11_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_12"
+		texturefile = "gfx/random_leader/sm/sm_12.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_12_small"
+		texturefile = "gfx/random_leader/sm/sm_12_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_13"
+		texturefile = "gfx/random_leader/sm/sm_13.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_13_small"
+		texturefile = "gfx/random_leader/sm/sm_13_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_14"
+		texturefile = "gfx/random_leader/sm/sm_14.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_14_small"
+		texturefile = "gfx/random_leader/sm/sm_14_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_1_small"
+		texturefile = "gfx/random_leader/sm/sm_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_2"
+		texturefile = "gfx/random_leader/sm/sm_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_2_small"
+		texturefile = "gfx/random_leader/sm/sm_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_3"
+		texturefile = "gfx/random_leader/sm/sm_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_3_small"
+		texturefile = "gfx/random_leader/sm/sm_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_4"
+		texturefile = "gfx/random_leader/sm/sm_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_4_small"
+		texturefile = "gfx/random_leader/sm/sm_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_5"
+		texturefile = "gfx/random_leader/sm/sm_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_5_small"
+		texturefile = "gfx/random_leader/sm/sm_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_6"
+		texturefile = "gfx/random_leader/sm/sm_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_6_small"
+		texturefile = "gfx/random_leader/sm/sm_6_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_7"
+		texturefile = "gfx/random_leader/sm/sm_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_7_small"
+		texturefile = "gfx/random_leader/sm/sm_7_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_8"
+		texturefile = "gfx/random_leader/sm/sm_8.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_8_small"
+		texturefile = "gfx/random_leader/sm/sm_8_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_9"
+		texturefile = "gfx/random_leader/sm/sm_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_sm_9_small"
+		texturefile = "gfx/random_leader/sm/sm_9_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_szsm_1"
+		texturefile = "gfx/random_leader/szsm/szsm_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_szsm_1_small"
+		texturefile = "gfx/random_leader/szsm/szsm_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_1"
+		texturefile = "gfx/random_leader/tri/tri_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_1_small"
+		texturefile = "gfx/random_leader/tri/tri_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_2"
+		texturefile = "gfx/random_leader/tri/tri_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_2_small"
+		texturefile = "gfx/random_leader/tri/tri_2_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_3"
+		texturefile = "gfx/random_leader/tri/tri_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_3_small"
+		texturefile = "gfx/random_leader/tri/tri_3_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_4"
+		texturefile = "gfx/random_leader/tri/tri_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_4_small"
+		texturefile = "gfx/random_leader/tri/tri_4_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_5"
+		texturefile = "gfx/random_leader/tri/tri_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_5_small"
+		texturefile = "gfx/random_leader/tri/tri_5_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_6"
+		texturefile = "gfx/random_leader/tri/tri_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_tri_6_small"
+		texturefile = "gfx/random_leader/tri/tri_6_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_val_1"
+		texturefile = "gfx/random_leader/val/val_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_val_1_small"
+		texturefile = "gfx/random_leader/val/val_1_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_val_2"
+		texturefile = "gfx/random_leader/val/val_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_val_2_small"
+		texturefile = "gfx/random_leader/val/val_2_small.dds"
+	}
+}
