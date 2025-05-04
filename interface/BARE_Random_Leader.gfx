@@ -1,5 +1,5 @@
 spriteTypes = {
-	SpriteType = {
+	SpriteType = { #阿拜多斯
 		name = "GFX_Portrait_aby_1"
 		texturefile = "gfx/random_leader/aby/aby_1.dds"
 	}
@@ -7,11 +7,11 @@ spriteTypes = {
 		name = "GFX_Portrait_aby_1_small"
 		texturefile = "gfx/random_leader/aby/aby_1_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #阿里乌斯
 		name = "GFX_Portrait_ari_1"
 		texturefile = "gfx/random_leader/ari/ari_1.dds"
 	}
-	SpriteType = {
+	SpriteType = { #凯撒
 		name = "GFX_Portrait_cah_1"
 		texturefile = "gfx/random_leader/cah/cah_1.dds"
 	}
@@ -51,7 +51,7 @@ spriteTypes = {
 		name = "GFX_Portrait_cah_5_small"
 		texturefile = "gfx/random_leader/cah/cah_5_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #格黑娜
 		name = "GFX_Portrait_geh_1"
 		texturefile = "gfx/random_leader/geh/geh_1.dds"
 	}
@@ -95,7 +95,7 @@ spriteTypes = {
 		name = "GFX_Portrait_gkt_1"
 		texturefile = "gfx/random_leader/gkt/gkt_1.dds"
 	}
-	SpriteType = {
+	SpriteType = { #钢盔团
 		name = "GFX_Portrait_gkt_1_small"
 		texturefile = "gfx/random_leader/gkt/gkt_1_small.dds"
 	}
@@ -115,7 +115,7 @@ spriteTypes = {
 		name = "GFX_Portrait_gkt_3_small"
 		texturefile = "gfx/random_leader/gkt/gkt_3_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #联邦学生会
 		name = "GFX_Portrait_gsc_1"
 		texturefile = "gfx/random_leader/gsc/gsc_1.dds"
 	}
@@ -131,7 +131,7 @@ spriteTypes = {
 		name = "GFX_Portrait_gsc_2_small"
 		texturefile = "gfx/random_leader/gsc/gsc_2_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #黑道
 		name = "GFX_Portrait_hd_1"
 		texturefile = "gfx/random_leader/hd/hd_1.dds"
 	}
@@ -155,7 +155,7 @@ spriteTypes = {
 		name = "GFX_Portrait_hd_3_small"
 		texturefile = "gfx/random_leader/hd/hd_3_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #混混
 		name = "GFX_Portrait_hh_1"
 		texturefile = "gfx/random_leader/hh/hh_1.dds"
 	}
@@ -211,7 +211,7 @@ spriteTypes = {
 		name = "GFX_Portrait_hh_7_small"
 		texturefile = "gfx/random_leader/hh/hh_7_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #海兰德
 		name = "GFX_Portrait_hld_1"
 		texturefile = "gfx/random_leader/hld/hld_1.dds"
 	}
@@ -235,7 +235,7 @@ spriteTypes = {
 		name = "GFX_Portrait_hld_3_small"
 		texturefile = "gfx/random_leader/hld/hld_3_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #百鬼夜行
 		name = "GFX_Portrait_hvy_1"
 		texturefile = "gfx/random_leader/hvy/hvy_1.dds"
 	}
@@ -259,7 +259,7 @@ spriteTypes = {
 		name = "GFX_Portrait_hvy_3_small"
 		texturefile = "gfx/random_leader/hvy/hvy_3_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #千禧
 		name = "GFX_Portrait_mil_1"
 		texturefile = "gfx/random_leader/mil/mil_1.dds"
 	}
@@ -275,7 +275,7 @@ spriteTypes = {
 		name = "GFX_Portrait_mil_2_small"
 		texturefile = "gfx/random_leader/mil/mil_2_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #赤冬
 		name = "GFX_Portrait_rwt_1"
 		texturefile = "gfx/random_leader/rwt/rwt_1.dds"
 	}
@@ -291,7 +291,7 @@ spriteTypes = {
 		name = "GFX_Portrait_rwt_2_small"
 		texturefile = "gfx/random_leader/rwt/rwt_2_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #山海经
 		name = "GFX_Portrait_sha_1"
 		texturefile = "gfx/random_leader/shj/sha_1.dds"
 	}
@@ -339,7 +339,7 @@ spriteTypes = {
 		name = "GFX_Portrait_sha_6_small"
 		texturefile = "gfx/random_leader/shj/sha_6_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #市民
 		name = "GFX_Portrait_sm_1"
 		texturefile = "gfx/random_leader/sm/sm_1.dds"
 	}
@@ -451,7 +451,7 @@ spriteTypes = {
 		name = "GFX_Portrait_sm_9_small"
 		texturefile = "gfx/random_leader/sm/sm_9_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #十字神明
 		name = "GFX_Portrait_szsm_1"
 		texturefile = "gfx/random_leader/szsm/szsm_1.dds"
 	}
@@ -459,7 +459,7 @@ spriteTypes = {
 		name = "GFX_Portrait_szsm_1_small"
 		texturefile = "gfx/random_leader/szsm/szsm_1_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #圣三一
 		name = "GFX_Portrait_tri_1"
 		texturefile = "gfx/random_leader/tri/tri_1.dds"
 	}
@@ -507,7 +507,7 @@ spriteTypes = {
 		name = "GFX_Portrait_tri_6_small"
 		texturefile = "gfx/random_leader/tri/tri_6_small.dds"
 	}
-	SpriteType = {
+	SpriteType = { #瓦尔基里
 		name = "GFX_Portrait_val_1"
 		texturefile = "gfx/random_leader/val/val_1.dds"
 	}
