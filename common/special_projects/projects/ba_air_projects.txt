@@ -1,6 +1,6 @@
 sp_ba_T2_air_project = {
     specialization = specialization_air
-    progect_tags = {
+    project_tags = {
         sp_tag_aircraft
         sp_tag_radar
     }
@@ -11,7 +11,6 @@ sp_ba_T2_air_project = {
             has_tech = T1_drone
         }
         }
-        has_building = air_facility
     }
 
     breakthrough_cost = {
@@ -64,7 +63,7 @@ sp_ba_T2_air_project = {
 
 sp_ba_T3_air_project = {
     specialization = specialization_air
-    progect_tags = {
+    project_tags = {
         sp_tag_aircraft
         sp_tag_radar
     }
@@ -75,7 +74,6 @@ sp_ba_T3_air_project = {
             has_tech = T2_drone
         }
         }
-        has_building = air_facility
     }
 
     breakthrough_cost = {
@@ -129,7 +127,7 @@ sp_ba_T3_air_project = {
 
 sp_ba_T4_air_project = {
     specialization = specialization_air
-    progect_tags = {
+    project_tags = {
         sp_tag_aircraft
         sp_tag_radar
     }
@@ -140,7 +138,6 @@ sp_ba_T4_air_project = {
             has_tech = T3_drone
         }
         }
-        has_building = air_facility
     }
 
     breakthrough_cost = {
@@ -193,7 +190,7 @@ sp_ba_T4_air_project = {
 
 sp_ba_T5_air_project = {
     specialization = specialization_air
-    progect_tags = {
+    project_tags = {
         sp_tag_aircraft
         sp_tag_radar
     }
@@ -204,7 +201,6 @@ sp_ba_T5_air_project = {
             has_tech = T4_drone
         }
         }
-        has_building = air_facility
     }
 
     breakthrough_cost = {

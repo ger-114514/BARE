@@ -1,6 +1,6 @@
 sp_ba_T2_land_project = {
     specialization = specialization_land
-    progect_tags = {
+    project_tags = {
         sp_tag_tank
 	    sp_tag_artillery
     }
@@ -12,7 +12,6 @@ sp_ba_T2_land_project = {
             #has_tech = T1_assult_vehicle
         }
         }
-        has_building = land_facility
     }
 
     breakthrough_cost = {
@@ -68,7 +67,7 @@ sp_ba_T2_land_project = {
 
 sp_ba_T3_land_project = {
     specialization = specialization_land
-    progect_tags = {
+    project_tags = {
         	sp_tag_tank
 	sp_tag_artillery
     }
@@ -80,7 +79,6 @@ sp_ba_T3_land_project = {
             #has_tech = T2_assult_vehicle
         }
         }
-        has_building = land_facility
     }
 
     breakthrough_cost = {
@@ -137,7 +135,7 @@ sp_ba_T3_land_project = {
 
 sp_ba_T4_land_project = {
     specialization = specialization_land
-    progect_tags = {
+    project_tags = {
         	sp_tag_tank
 	sp_tag_artillery
     }
@@ -149,7 +147,6 @@ sp_ba_T4_land_project = {
             #has_tech = T3_assult_vehicle
         }
         }
-        has_building = land_facility
     }
 
     breakthrough_cost = {
@@ -205,7 +202,7 @@ sp_ba_T4_land_project = {
 
 sp_ba_T5_land_project = {
     specialization = specialization_land
-    progect_tags = {
+    project_tags = {
         sp_tag_tank
 	    sp_tag_artillery
     }
@@ -217,7 +214,6 @@ sp_ba_T5_land_project = {
             #has_tech = T4_assult_vehicle
         }
         }
-        has_building = land_facility
     }
 
     breakthrough_cost = {
