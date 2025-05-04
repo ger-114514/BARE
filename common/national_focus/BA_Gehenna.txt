@@ -1079,7 +1079,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         available = {
-            always = no
+            has_global_flag = Eden_treaty_has_been_signed
         }
 
         completion_reward = {
