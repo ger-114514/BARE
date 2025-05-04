@@ -90,7 +90,7 @@
  	desc = operation_infiltrate_civilian_desc
  	priority = 1
 
- 	days = 72
+ 	days = 90
  	network_strength = 35
  	operatives = 2
 
@@ -461,7 +461,7 @@
  	desc = operation_infiltrate_armed_forces_army_desc
  	priority = 4
 	
- 	days = 60
+ 	days = 72
  	network_strength = 50
  	operatives = 2
 
@@ -690,7 +690,7 @@
  	desc = operation_infiltrate_armed_forces_airforce_desc
  	priority = 6
 
- 	days = 60
+ 	days = 72
  	network_strength = 50
  	operatives = 2
 

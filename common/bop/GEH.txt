@@ -14,7 +14,7 @@ GEH_bp_between_chaos_and_order = {
 	}
 	side = { #秩序（左）
 		id = GEH_bp_order
-		icon = GEH_bp_order_pic
+		icon = GFX_GEH_bp_order_size
 		range = {
 			id = GEH_bp_completely_order
 			min = -1
@@ -25,8 +25,22 @@ GEH_bp_between_chaos_and_order = {
 				war_support_factor = 0.1
 				power_balance_weekly = 0.01
 				consumer_goods_factor = -0.05
-				Eden_treaty_weights_gain_factor = 1
 				custom_modifier_tooltip = GEH_bp_goodevents_2
+			}
+
+			on_activate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_order
+					gfx = GFX_GEH_bp_order_improved_size
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_order
+					gfx = GFX_GEH_bp_order_size
+				}
 			}
 		}
 
@@ -39,14 +53,28 @@ GEH_bp_between_chaos_and_order = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				power_balance_weekly = 0.005
-				Eden_treaty_weights_gain_factor = 0.6
 				custom_modifier_tooltip = GEH_bp_goodevents_1
+			}
+
+			on_activate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_order
+					gfx = GFX_GEH_bp_order_improved_size
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_order
+					gfx = GFX_GEH_bp_order_size
+				}
 			}
 		}
 	}
 	side = { #混乱（右）
 		id = GEH_bp_chaos
-		icon = GEH_bp_chaos_pic
+		icon = GFX_GEH_bp_chaos_size
 		range = {
 			id = GEH_bp_someways_chaos
 			min = 0.2
@@ -56,8 +84,22 @@ GEH_bp_between_chaos_and_order = {
 				stability_factor = -0.05
 				war_support_factor = -0.05
 				power_balance_weekly = -0.005
-				Eden_treaty_weights_gain_factor = -0.6
 				custom_modifier_tooltip = GEH_bp_badevents_1
+			}
+
+			on_activate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_chaos
+					gfx = GFX_GEH_bp_chaos_improved_size
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_chaos
+					gfx = GFX_GEH_bp_chaos_size
+				}
 			}
 		}
 
@@ -71,8 +113,22 @@ GEH_bp_between_chaos_and_order = {
 				war_support_factor = -0.1
 				power_balance_weekly = -0.01
 				consumer_goods_factor = 0.05
-				Eden_treaty_weights_gain_factor = -1
 				custom_modifier_tooltip = GEH_bp_badevents_2
+			}
+
+			on_activate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_chaos
+					gfx = GFX_GEH_bp_chaos_improved_size
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = GEH_bp_between_chaos_and_order
+					side = GEH_bp_chaos
+					gfx = GFX_GEH_bp_chaos_size
+				}
 			}
 		}
 	}

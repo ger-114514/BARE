@@ -1,0 +1,252 @@
+sp_ba_T2_air_project = {
+    specialization = specialization_air
+    project_tags = {
+        sp_tag_aircraft
+        sp_tag_radar
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T1_electronic
+            has_tech = T1_drone
+        }
+        }
+    }
+
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.short
+
+    resource_cost = {
+        resources = {
+            resources_cm = 10
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T23_electronic = 1
+            }
+            set_technology = {
+               T2_drone = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+	
+    }
+}
+
+sp_ba_T3_air_project = {
+    specialization = specialization_air
+    project_tags = {
+        sp_tag_aircraft
+        sp_tag_radar
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T2_electronic
+            has_tech = T2_drone
+        }
+        }
+    }
+
+    breakthrough_cost = {
+        specialization_air = 2
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_rm = 10
+        }
+    }
+    complexity = sp_complexity.medium
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T3_electronic = 1
+            }
+            set_technology = {
+               T3_drone = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+	
+    }
+}
+
+
+sp_ba_T4_air_project = {
+    specialization = specialization_air
+    project_tags = {
+        sp_tag_aircraft
+        sp_tag_radar
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T3_electronic
+            has_tech = T3_drone
+        }
+        }
+    }
+
+    breakthrough_cost = {
+        specialization_air = 3
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.long
+
+    resource_cost = {
+        resources = {
+            resources_ec = 10
+        }
+    }
+    complexity = sp_complexity.large
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T4_electronic = 1
+            }
+            set_technology = {
+               T4_drone = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+	
+    }
+}
+
+sp_ba_T5_air_project = {
+    specialization = specialization_air
+    project_tags = {
+        sp_tag_aircraft
+        sp_tag_radar
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T4_electronic
+            has_tech = T4_drone
+        }
+        }
+    }
+
+    breakthrough_cost = {
+        specialization_air = 4
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.very_long
+
+    resource_cost = {
+        resources = {
+            resources_mm = 4
+        }
+    }
+    complexity = sp_complexity.insane
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T5_electronic = 1
+            }
+            set_technology = {
+               T5_drone = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+	
+    }
+}
