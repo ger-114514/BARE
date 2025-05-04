@@ -362,42 +362,47 @@ ARI_change_intelligence_in_GEH = {
 	}
 }
 ARI_change_revenge_progress = {
-	custom_effect_tooltip = ARI_change_revenge_progress_tt
-	add_to_variable = { ARI_revenge_progress = revenge_progress_change }
-	clamp_variable = {
-		var = ARI_revenge_progress
-		min = 0
-		max = 100
-	}
 	if = {
-		limit = { check_variable = { ARI_revenge_progress < 33 } }
-		set_temp_variable = { revenge = 33 }
-		subtract_from_temp_variable = { revenge = ARI_revenge_progress }
-		divide_temp_variable = { revenge = 33 }
-		set_variable = { ARI_flame_of_revenge_stability_factor = revenge }
-		set_variable = { ARI_flame_of_revenge_war_support_factor = revenge }
-		set_variable = { ARI_flame_of_revenge_industrial_capacity_factory = revenge }
-		set_variable = { ARI_flame_of_revenge_army_org_factor = revenge }
-		set_variable = { ARI_flame_of_revenge_army_org_regain = 0 }
-		multiply_variable = { ARI_flame_of_revenge_stability_factor = -0.3 }
-		multiply_variable = { ARI_flame_of_revenge_war_support_factor = -0.3 }
-		multiply_variable = { ARI_flame_of_revenge_industrial_capacity_factory = -0.2 }
-		multiply_variable = { ARI_flame_of_revenge_army_org_factor = -0.2 }
-	}
-	else = {
-		set_temp_variable = { revenge = ARI_revenge_progress }
-		subtract_from_temp_variable = { revenge = 33 }
-		divide_temp_variable = { revenge = 67 }
-		set_variable = { ARI_flame_of_revenge_stability_factor = revenge }
-		set_variable = { ARI_flame_of_revenge_war_support_factor = revenge }
-		set_variable = { ARI_flame_of_revenge_industrial_capacity_factory = revenge }
-		set_variable = { ARI_flame_of_revenge_army_org_factor = revenge }
-		set_variable = { ARI_flame_of_revenge_army_org_regain = revenge }
-		multiply_variable = { ARI_flame_of_revenge_stability_factor = 0.1 }
-		multiply_variable = { ARI_flame_of_revenge_war_support_factor = 0.2 }
-		multiply_variable = { ARI_flame_of_revenge_industrial_capacity_factory = 0.15 }
-		multiply_variable = { ARI_flame_of_revenge_army_org_factor = 0.15 }
-		multiply_variable = { ARI_flame_of_revenge_army_org_regain = 0.15 }
+		limit = {
+			NOT = { has_country_flag = ARI_revenge_progress_locked }
+		}
+		custom_effect_tooltip = ARI_change_revenge_progress_tt
+		add_to_variable = { ARI_revenge_progress = revenge_progress_change }
+		clamp_variable = {
+			var = ARI_revenge_progress
+			min = 0
+			max = 100
+		}
+		if = {
+			limit = { check_variable = { ARI_revenge_progress < 33 } }
+			set_temp_variable = { revenge = 33 }
+			subtract_from_temp_variable = { revenge = ARI_revenge_progress }
+			divide_temp_variable = { revenge = 33 }
+			set_variable = { ARI_flame_of_revenge_stability_factor = revenge }
+			set_variable = { ARI_flame_of_revenge_war_support_factor = revenge }
+			set_variable = { ARI_flame_of_revenge_industrial_capacity_factory = revenge }
+			set_variable = { ARI_flame_of_revenge_army_org_factor = revenge }
+			set_variable = { ARI_flame_of_revenge_army_org_regain = 0 }
+			multiply_variable = { ARI_flame_of_revenge_stability_factor = -0.3 }
+			multiply_variable = { ARI_flame_of_revenge_war_support_factor = -0.3 }
+			multiply_variable = { ARI_flame_of_revenge_industrial_capacity_factory = -0.2 }
+			multiply_variable = { ARI_flame_of_revenge_army_org_factor = -0.2 }
+		}
+		else = {
+			set_temp_variable = { revenge = ARI_revenge_progress }
+			subtract_from_temp_variable = { revenge = 33 }
+			divide_temp_variable = { revenge = 67 }
+			set_variable = { ARI_flame_of_revenge_stability_factor = revenge }
+			set_variable = { ARI_flame_of_revenge_war_support_factor = revenge }
+			set_variable = { ARI_flame_of_revenge_industrial_capacity_factory = revenge }
+			set_variable = { ARI_flame_of_revenge_army_org_factor = revenge }
+			set_variable = { ARI_flame_of_revenge_army_org_regain = revenge }
+			multiply_variable = { ARI_flame_of_revenge_stability_factor = 0.1 }
+			multiply_variable = { ARI_flame_of_revenge_war_support_factor = 0.2 }
+			multiply_variable = { ARI_flame_of_revenge_industrial_capacity_factory = 0.15 }
+			multiply_variable = { ARI_flame_of_revenge_army_org_factor = 0.15 }
+			multiply_variable = { ARI_flame_of_revenge_army_org_regain = 0.15 }
+		}
 	}
 }
 random_intelligence_agency_upgrades = {

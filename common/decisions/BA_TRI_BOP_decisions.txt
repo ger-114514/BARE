@@ -4,6 +4,15 @@ TRI_debug_decisions = {
 			BA_TRI_initialize_paranoia_system = yes
 		}
 	}
+	TRI_remove_debuff = {
+		complete_effect = {
+			every_state = {
+				remove_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
+		}
+	}
 	#设置焦点，测试用
 	TRI_set_focus_signing_Eden = {
 		visible = {
@@ -497,57 +506,6 @@ TRI_BOP_system = {
 		}
 		complete_effect = {
 			country_event = TRI_BOP_decision.2
-		}
-	}
-	#确保宣传口径
-	TRI_BOP_ensure_propaganda = {
-		visible = {
-			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
-		}
-		available = {
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = has_completed_focus_tt
-					FOCUS = TRI_rebuild_communication_channel
-				}
-				has_country_flag = TRI_rebuild_communication_channel
-			}
-		}
-		complete_effect = {
-			for_each_loop = {
-				array = BA_TRI_non_against_association
-				value = v
-				if = {
-					limit = { check_variable = { resistance@var:v > 0.4 } }
-					set_temp_variable = { radicalism_change = 0.4 }
-					subtract_from_variable = { radicalism_change = resistance@var:v }
-					clamp_variable = {
-						var = radicalism_change
-						min = -0.05
-						max = 0
-					}
-					TRI_parliament_radicalism_change = yes
-				}
-			}
-			country_event = TRI_BOP_decision.3
-		}
-	}
-	#控制资源分配
-	TRI_BOP_resource_distribution = {
-		visible = {
-			check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
-		}
-		available = {
-			custom_override_tooltip = {
-				tooltip = {
-					localization_key = has_completed_focus_tt
-					FOCUS = TRI_rebuild_communication_channel
-				}
-				has_country_flag = TRI_rebuild_communication_channel
-			}
-		}
-		complete_effect = {
-			country_event = TRI_BOP_decision.4
 		}
 	}
 	#圣三一再生产运动

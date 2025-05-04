@@ -44,13 +44,6 @@ ARI_suppression_decisions = {
 	priority = 1001
 	visible_when_empty = yes
 }
-ARI_outside_recon = {
-	icon = generic_research
-	visible = {
-		original_tag = ARI
-	}
-	priority = 101
-}
 ARI_mystic_research_decisions = {
 	icon = generic_research
 	visible = {

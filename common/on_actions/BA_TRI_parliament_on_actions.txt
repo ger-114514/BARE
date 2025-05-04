@@ -64,6 +64,8 @@ on_actions = {
 		effect = {
 			TRI_region_generate_state_modifiers = yes
 			TRI_region_generate_statistics = yes
+			TRI_BOP_init_parliament = yes
+			TRI_init_senate_house = yes
 		}
 	}
 }

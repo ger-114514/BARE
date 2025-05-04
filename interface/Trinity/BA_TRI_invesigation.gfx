@@ -9,10 +9,19 @@ spriteTypes = {
 		name = "GFX_TRI_investigation_permission"
 		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/permission.png"
 	}
-
+	frameAnimatedSpriteType = {
+		name = "GFX_TRI_investigation_all_permission_animation"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/all_permission.png"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
 	SpriteType = {
-		name = "GFX_TRI_koharu"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu.png"
+		name = "GFX_TRI_investigation_all_permission"
+		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/all_permission_2.png"
 	}
 
 	SpriteType = {
@@ -38,11 +47,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_TRI_hanako_s"
 		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_s3.png"
-	}
-
-	SpriteType = {
-		name = "GFX_bukebu"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bukebu.png"
 	}
 
 	SpriteType = {
@@ -131,12 +135,12 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_bg"
+		name = "GFX_inv_bg"
 		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bg.png"
 	}
 
 	SpriteType = {
-		name = "GFX_exit"
+		name = "GFX_inv_exit"
 		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/exit2.png"
 	}
 
