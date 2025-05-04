@@ -1,0 +1,9 @@
+#伊甸条约
+Eden_treaty_modifier = { 
+	icon = "GFX_idea_unknown"
+	political_power_factor	 = Eden_treaty_modifier_political_power_factor	
+	stability_factor = Eden_treaty_modifier_stability_factor
+	war_support_factor = Eden_treaty_modifier_war_support_factor
+	industrial_capacity_factory = Eden_treaty_modifier_industrial_capacity_factory
+	research_speed_factor = Eden_treaty_modifier_research_speed_factor
+}

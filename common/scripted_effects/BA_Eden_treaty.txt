@@ -1,0 +1,111 @@
+Eden_treaty_change_progress = { #改变筹备度
+	custom_effect_tooltip = Eden_treaty_change_progress_tt
+	add_to_variable = { global.Eden_treaty_progress = progress_change }
+	clamp_variable = {
+		var = global.Eden_treaty_progress
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = { check_variable = { global.Eden_treaty_progress = 100 } }
+		Eden_treaty_next_phase = yes
+	}
+}
+Eden_treaty_change_weights = { #改变贡献度
+	set_temp_variable = { gain_factor = 1 }
+	add_to_temp_variable = { gain_factor = modifier@Eden_treaty_weights_gain_factor }
+	multiply_temp_variable = { weights_change = gain_factor }
+	custom_effect_tooltip = Eden_treaty_change_weights_tt
+	add_to_variable = { Eden_treaty_weights = weights_change }
+	clamp_variable = {
+		var = Eden_treaty_weights
+		min = 0
+	}
+}
+Eden_treaty_next_phase = {
+	hidden_effect = {
+		set_variable = { TRI_weights@var:global.Eden_treaty_phase = TRI.Eden_treaty_weights }
+		set_variable = { GEH_weights@var:global.Eden_treaty_phase = GEH.Eden_treaty_weights }
+		set_temp_variable = { TRI_point = TRI.Eden_treaty_weights }
+		set_temp_variable = { GEH_point = GEH.Eden_treaty_weights }
+		#开局阶段结束
+		if = {
+			limit = { check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening } }
+			set_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+			set_variable = { global.Eden_treaty_progress = 0 }
+		}
+		#谈判阶段结束
+		else_if = {
+			limit = { check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating } }
+			set_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+			set_variable = { global.Eden_treaty_progress = 0 }
+			if = {
+				limit = { check_variable = { global.Eden_treaty_negotiation_phase_leader^0 = TRI } }
+				set_temp_variable = { extra_point = GEH_weights@var:global.Eden_treaty_phase_opening }
+				multiply_temp_variable = { extra_point = 0.15 }
+				add_to_temp_variable = { GEH_point = extra_point }
+			}
+			else_if = {
+				limit = { check_variable = { global.Eden_treaty_negotiation_phase_leader^0 = GEH } }
+				set_temp_variable = { extra_point = TRI_weights@var:global.Eden_treaty_phase_opening }
+				multiply_temp_variable = { extra_point = 0.15 }
+				add_to_temp_variable = { TRI_point = extra_point }
+			}
+		}
+		#协议阶段结束
+		else = {
+			clr_global_flag = Eden_treaty_negotiation_ongoing
+			set_global_flag = Eden_treaty_negotiation_completed
+			if = {
+				limit = { check_variable = { global.Eden_treaty_negotiation_phase_leader^1 = TRI } }
+				set_temp_variable = { extra_point = GEH_weights@var:global.Eden_treaty_phase_negotiating }
+				multiply_temp_variable = { extra_point = 0.15 }
+				add_to_temp_variable = { GEH_point = extra_point }
+			}
+			else_if = {
+				limit = { check_variable = { global.Eden_treaty_negotiation_phase_leader^1 = GEH } }
+				set_temp_variable = { extra_point = TRI_weights@var:global.Eden_treaty_phase_negotiating }
+				multiply_temp_variable = { extra_point = 0.15 }
+				add_to_temp_variable = { TRI_point = extra_point }
+			}
+			clear_variable = global.Eden_treaty_phase
+			clear_variable = global.Eden_treaty_progress
+			TRI = { clear_variable = Eden_treaty_weights }
+			GEH = { clear_variable = Eden_treaty_weights }
+		}
+		if = {
+			limit = { check_variable = { TRI_point > GEH_point } }
+			add_to_array = { global.Eden_treaty_negotiation_phase_leader = TRI }
+			add_to_variable = { global.Eden_treaty_TRI_score = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { TRI_point < GEH_point } }
+			add_to_array = { global.Eden_treaty_negotiation_phase_leader = GEH }
+			add_to_variable = { global.Eden_treaty_GEH_score = 1 }
+		}
+		else = {
+			add_to_array = { global.Eden_treaty_negotiation_phase_leader = 0 }
+		}
+	}
+}
+Eden_treaty_formally_signed = {
+	custom_effect_tooltip = Eden_treaty_has_been_signed
+	set_global_flag = Eden_treaty_has_been_signed
+	for_each_scope_loop = {
+		array = global.Eden_treaty_negotiation_phase_leader
+		add_political_power = 100
+		add_to_variable = { Eden_treaty_modifier_political_power_factor = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_stability_factor = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_war_support_factor = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.05 }
+		add_to_variable = { Eden_treaty_modifier_research_speed_factor = 0.025 }
+	}
+	TRI = {
+		add_political_power = 100
+		add_dynamic_modifier = { modifier = Eden_treaty_modifier }
+	}
+	GEH = {
+		add_political_power = 100
+		add_dynamic_modifier = { modifier = Eden_treaty_modifier }
+	}
+}

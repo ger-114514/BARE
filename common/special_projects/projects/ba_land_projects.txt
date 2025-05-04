@@ -1,0 +1,272 @@
+sp_ba_T2_land_project = {
+    specialization = specialization_land
+    progect_tags = {
+        sp_tag_tank
+	    sp_tag_artillery
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T1_infantry_weapon
+            has_tech = T1_mobile_vehicle
+            #has_tech = T1_assult_vehicle
+        }
+        }
+        has_building = land_facility
+    }
+
+    breakthrough_cost = {
+        specialization_land = 1
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.short
+
+    resource_cost = {
+        resources = {
+            resources_cm = 10
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T2_infantry_weapon = 1
+            }
+            set_technology = {
+               T2_mobile_vehicle = 1
+            }
+            set_technology = {
+               T2_assult_vehicle = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T3_land_project = {
+    specialization = specialization_land
+    progect_tags = {
+        	sp_tag_tank
+	sp_tag_artillery
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T2_infantry_weapon
+            has_tech = T2_mobile_vehicle
+            #has_tech = T2_assult_vehicle
+        }
+        }
+        has_building = land_facility
+    }
+
+    breakthrough_cost = {
+        specialization_land = 2
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_rm = 10
+        }
+    }
+    complexity = sp_complexity.medium
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T3_infantry_weapon = 1
+            }
+            set_technology = {
+               T3_mobile_vehicle = 1
+            }
+            set_technology = {
+               T3_assult_vehicle = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+
+sp_ba_T4_land_project = {
+    specialization = specialization_land
+    progect_tags = {
+        	sp_tag_tank
+	sp_tag_artillery
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T3_infantry_weapon
+            has_tech = T3_mobile_vehicle
+            #has_tech = T3_assult_vehicle
+        }
+        }
+        has_building = land_facility
+    }
+
+    breakthrough_cost = {
+        specialization_land = 3
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.long
+
+    resource_cost = {
+        resources = {
+            resources_ec = 10
+        }
+    }
+    complexity = sp_complexity.large
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T4_infantry_weapon = 1
+            }
+            set_technology = {
+               T4_mobile_vehicle = 1
+            }
+            set_technology = {
+               T4_assult_vehicle = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T5_land_project = {
+    specialization = specialization_land
+    progect_tags = {
+        sp_tag_tank
+	    sp_tag_artillery
+    }
+    available = {
+        FROM = {
+        OR = {
+            has_tech = T4_infantry_weapon
+            has_tech = T4_mobile_vehicle
+            #has_tech = T4_assult_vehicle
+        }
+        }
+        has_building = land_facility
+    }
+
+    breakthrough_cost = {
+        specialization_land = 4
+    }
+    narrative = {
+        name = "my_project_name_loc_key"
+        desc = "my_project_desc_loc_key"
+    }
+    icon = GFX_sp_air_bouncing_bomb
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.very_long
+
+    resource_cost = {
+        resources = {
+            resources_mm = 4
+        }
+    }
+    complexity = sp_complexity.insane
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T5_infantry_weapon = 1
+            }
+            set_technology = {
+               T5_mobile_vehicle = 1
+            }
+            set_technology = {
+               T5_assult_vehicle = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
