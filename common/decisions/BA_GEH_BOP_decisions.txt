@@ -21,7 +21,7 @@ GEH_bop_decision_category = {
 				factor = 0
 				power_balance_value = {
 					id = GEH_bp_between_chaos_and_order
-					value < -0.9
+					value < -0.8
 				}
 			}
 			modifier = {
@@ -117,7 +117,7 @@ GEH_bop_decision_category = {
 				factor = 0
 				power_balance_value = {
 					id = GEH_bp_between_chaos_and_order
-					value < -0.9
+					value < -0.8
 				}
 			}
 			modifier = {
@@ -170,7 +170,7 @@ GEH_bop_decision_category = {
 				factor = 1.5
 				power_balance_value = {
 					id = GEH_bp_between_chaos_and_order
-					value < -0.9
+					value < -0.8
 				}
 			}
 			modifier = {
@@ -358,7 +358,7 @@ GEH_bop_decision_category = {
 				factor = 1.5
 				power_balance_value = {
 					id = GEH_bp_between_chaos_and_order
-					value < -0.9
+					value < -0.8
 				}
 			}
 			modifier = {
@@ -412,7 +412,7 @@ GEH_bop_decision_category = {
 				factor = 0.8
 				power_balance_value = {
 					id = GEH_bp_between_chaos_and_order
-					value < -0.9
+					value < -0.8
 				}
 			}
 			modifier = {

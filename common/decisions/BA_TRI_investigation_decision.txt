@@ -6,14 +6,7 @@ TRI_ai_bukebu_inv_decisions_categories = {
 		icon = generic_industry
 		visible = {
 			original_tag = TRI
-			is_ai = yes
-			has_country_flag = TRY_investigate_available
-			NOT = {
-				has_country_flag = koharu_invest_success
-				has_country_flag = azusa_invest_success
-				has_country_flag = hanako_invest_success
-				has_country_flag = hifumi_invest_success
-			}
+			check_variable = { TRI_permitted_hoshubu_member < 4 }
 		}
 		days_remove = 6 #7-1，因为决议要在下一天才回复
 
