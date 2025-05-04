@@ -1,0 +1,18 @@
+
+category = {
+    name = BA_UI
+    soundeffects = {
+        ui_stamp
+    }
+}
+sound = {
+    name = "ui_stamp"
+    file = "audiofiles/ui_stamp.wav"
+}
+soundeffect = {
+    name = ui_stamp
+    sounds = {
+        sound = ui_stamp
+    }
+    volume = 0.5
+}

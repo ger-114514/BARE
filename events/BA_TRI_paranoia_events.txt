@@ -444,7 +444,7 @@ country_event = { #对社团的调查
 		set_temp_variable = { association = selected_association_t }
 		set_temp_variable = { loyalty_change = 0.2 }
 		TRI_parliament_loyalty_change = yes
-		set_temp_variable = { radicalism_change = 0.2 }
+		set_temp_variable = { radicalism_change = 0.1 }
 		TRI_parliament_radicalism_change = yes
 		TRI_paranoia_decrease_20 = yes
 

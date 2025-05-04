@@ -70,3 +70,10 @@ combat_readiness_recovery = {
 	precision = 2
 	category = country
 }
+#BD科技数量上限
+BARE_BD_Research_limit = {
+	color_type = neutral
+	value_type = number
+	precision = 0
+	category = country
+}
