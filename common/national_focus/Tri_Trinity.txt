@@ -1891,19 +1891,66 @@ focus_tree = {
 					remove_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
 					add_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
 				}
-				#TODO:若机制：古圣堂突袭筹备中，阿里乌斯取得了最大成功
+				#古圣堂突袭筹备中，阿里乌斯取得了最大成功-()
 				if = {
-					limit = { has_global_flag = TRI_church_attacked_worst }
-					set_variable = { TRI_devastated_by_arius_stability_weekly = -0.003 }
+					limit = { has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi }
+					set_variable = { TRI_devastated_by_arius_stability_weekly = -0.25 }
 					set_variable = { TRI_devastated_by_arius_political_power_gain = -0.5 }
-					set_variable = { TRI_devastated_by_arius_industrial_capacity_factory = -0.2 }
+					set_variable = { TRI_devastated_by_arius_industrial_capacity_factory = -0.1 }
 					set_variable = { TRI_devastated_by_arius_consumer_goods_factor = 0.3 }
 					set_variable = { TRI_devastated_by_arius_army_org_factor = -0.1 }
 					set_variable = { TRI_devastated_by_arius_army_attack_factor = -0.15 }
 					set_variable = { TRI_devastated_by_arius_army_defence_factor = -0.15 }
 					set_variable = { TRI_devastated_by_arius_disabled_ideas = 1 }
+
+					remove_dynamic_modifier = {
+						modifier = eden_treaty_step_2_modifier
+					}
+					remove_dynamic_modifier = {
+						modifier = eden_treaty_step_0_modifier
+					}
+					remove_dynamic_modifier = {
+						modifier = eden_treaty_step_1_modifier
+					}
+					###修正eden_treaty_step_4_modifier(濒临破碎的伊甸条约)效果变化
+					set_variable = {#稳定度修正
+						var = eden_broken_weekly_stability
+						value = -0.25
+					}
+					set_variable = {#工厂产出修正
+						var = eden_broken_factory_output
+						value = -0.1
+					}
+					set_variable = {#顾问花费修正
+						var = eden_broken_advisor_cost
+						value = 1
+					}
+					set_variable = {#陆军总司令花费修正
+						var = eden_broken_army_chief_cost
+						value = 1
+					}
+					set_variable = {#空军总司令花费修正
+						var = eden_broken_air_chief_cost
+						value = 1
+					}
+					set_variable = {#经济法案花费修正
+						var = eden_broken_economy_cost
+						value = 1
+					}
+					set_variable = {#贸易法案花费修正
+						var = eden_broken_trade_laws_cost
+						value = 1
+					}
+					set_variable = {#军事动员法案修正
+						var = eden_broken_mobilization_laws_cost
+						value = 1
+					}
+					###结束###
 					add_dynamic_modifier = {
-						modifier = TRI_devastated_by_arius
+						modifier = eden_treaty_step_4_modifier #濒临破碎的伊甸条约
+					}
+					add_dynamic_modifier = {
+						modifier = TRI_devastated_by_arius #毁灭性打击
 					}
 				}
 				#补国策本地化效果
