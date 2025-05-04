@@ -3233,3 +3233,26 @@ focus_tree = {
 					}
 				}
 }
+
+focus_tree = {
+	id = ARI_NULL
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARI
+		}
+	}
+
+	focus = {
+		id = ARI_NULL_FOC
+		icon = GFX_idea_unknown
+		cost = 9999
+		x = 5
+		y = 5
+		completion_reward = { }
+		allow_branch = {
+			always = no
+		}
+	}
+}

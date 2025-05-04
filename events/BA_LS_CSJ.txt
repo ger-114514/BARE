@@ -81,6 +81,10 @@ country_event = {
 					modifier = GEH_a_unpredictable_attack #措手不及
 				}
 			}
+
+			ARI = {
+				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
+			}
 		}
 		else_if = {
 			limit = { 
@@ -127,6 +131,9 @@ country_event = {
 					character = GEH_JingJiZhuangTaiWeiYuanHui
 					ideology = no_ideology_type
 				}
+			}
+			ARI = {
+				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 			}
 		}
 
@@ -184,6 +191,16 @@ country_event = {
 			original_tag = ARI
 		}
 		name = LS_GST.3.a
+
+		declare_war_on = { #向指定国家宣战
+			target = GEH #被宣战国家TAG
+			type = annex_everything #战争目标类型 - 颠覆政权
+		}
+
+		declare_war_on = { #向指定国家宣战
+			target = TRI #被宣战国家TAG
+			type = annex_everything #战争目标类型 - 颠覆政权
+		}
 		
 		140 = {
 			transfer_state_to = ARI #转移控制者和拥有者给予指定TAG
@@ -267,20 +284,20 @@ country_event = {
 
 		country_event = {
 			id = LS_GST.7
-			days = 18
+			days = 7
 		}
-
-		declare_war_on = { #向指定国家宣战
-			target = GEH #被宣战国家TAG
-			type = annex_everything #战争目标类型 - 颠覆政权
+		GEH = {
+			country_event = {
+				id = LS_GST.8
+				days = 7
+			}
 		}
-
-		declare_war_on = { #向指定国家宣战
-			target = TRI #被宣战国家TAG
-			type = annex_everything #战争目标类型 - 颠覆政权
+		TRI = {
+			country_event = {
+				id = LS_GST.8
+				days = 7
+			}
 		}
-
-
 		ai_chance = {
 			base = 114
 		}
@@ -384,16 +401,24 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			for_each_loop = {
+			for_each_scope_loop = {
 				array = global.GST_JS_ZBH #为每个州执行效果
-				value = v
-	
-				var:v = {
-					add_dynamic_modifier = {
-						modifier = test_manpower_modifier
-					}
+				add_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
 				}
+				log = "成功应用修正"
 			}
 		}
+	}
+}
+
+country_event = {
+	id = LS_GST.8
+	title = LS_GST.8.t
+	desc = LS_GST.8.d
+	is_triggered_only = yes
+	timeout_days = 7
+	option = {
+		name = LS_GST.8.a
 	}
 }

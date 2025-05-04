@@ -1,11 +1,68 @@
+
+GEH_GST_LS_category = {
+	
+	#完成焦点 第二次伊甸园条约签订
+	GEH_LS_DEC_YDY_TY_QD = {
+		fire_only_once = yes
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+			complete_national_focus = GEH_open_second_eden_treaty_conference
+			mark_focus_tree_layout_dirty = yes #刷新国策树
+			140 = {
+				set_demilitarized_zone = yes
+			}
+			529 = {
+				set_demilitarized_zone = yes
+			}
+			TRI = {
+				country_event = {
+					id = LS_GST.1
+					days = 5
+				}
+			}
+
+			GEH = {
+				country_event = {
+					id = LS_GST.2
+					days = 5
+				}
+			}
+
+			ARI = {
+				country_event = {
+					id = LS_GST.2
+					days = 5
+				}
+				set_variable = {
+					var = ARI_ZhunBeiDu #准备度
+					value = 99
+				}
+			}
+		}
+	}
+}
+
+
 GST_LS_ZZ_category = {
-	GST_ZZ = {
+	GST_ZZ = {#僵持35天任务
 		icon = generic_research
 		priority = 10
 		activation = {
-			OR = {
-				has_war_with = GEH
-				has_war_with = TRI
+			AND = {
+				NOT = {
+					ARI = {
+						has_completed_focus = ARI_the_final_step #没有完成 最后一步 国策
+					}
+				}
+				NOT = {
+					original_tag = ARI
+				}
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
 			}
 		}
 		available = {
@@ -91,9 +148,442 @@ GST_LS_ZZ_category = {
 			}
 		}
 	}
+
+	GST_ZZ_XCJC_TRI_AND_GEH = {
+		icon = generic_research
+		priority = 36
+		activation = {
+			AND = {
+				OR = {
+					original_tag = TRI
+					original_tag = GEH
+				}
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
+				ARI = {
+					has_completed_focus = ARI_the_final_step #必须完成 最后一步 国策
+				}
+			}
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = WAIT_TRI_AND_GEH_GST_LOC
+			}
+		}
+		days_mission_timeout = 9999
+		is_good = no
+
+		cancel_trigger = {
+			OR = {
+				OR = {
+					GEH = {#投降倾向高于85%
+						surrender_progress > 0.85
+					}
+					TRI = {
+						surrender_progress > 0.85
+					}
+				}
+				OR = {
+					GEH = {#检测是否停止抵抗
+						has_capitulated = yes
+					}
+					TRI = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			SCH = {#夏莱
+				set_major = yes
+				create_faction = JWTS_FYLM
+				set_faction_spymaster = yes
+				add_to_faction = CEN #联合学生会
+				add_to_faction = CAE #凯撒总部
+				add_to_faction = MIL #千禧年
+				add_to_faction = SHA #山海经
+				add_to_faction = TRI #圣三一
+				add_to_faction = GEH #歌赫娜
+				add_to_faction = ABY #阿拜多斯
+				add_to_faction = RWT #赤冬
+				add_to_faction = HYA #百鬼夜行
+				for_each_scope_loop = {
+					array = ROOT.faction_members
+					add_to_war = {
+						targeted_alliance = TRI
+						enemy = ARI
+						hostility_reason = XMWX_LOC
+					}
+				}
+			}
+			if = {
+				limit = {
+					ARI = {
+						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+				}
+				GEH = {
+					promote_character = SCH_sensei
+				}
+				TRI = {
+					promote_character = SCH_sensei
+				}
+			}
+			else_if = {
+				limit = {
+					ARI = {
+						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+					}
+				}
+				GEH = {
+					promote_character = GEH_hina
+				}
+				TRI = {
+					promote_character = TRI_hasumi
+				}
+			}
+		}
+	}
+
+	GST_ZZ_ARI_XCJC = {
+		icon = generic_research
+		priority = 36
+		activation = {
+			AND = {
+				original_tag = ARI
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
+				ARI = {
+					has_completed_focus = ARI_the_final_step #必须完成 最后一步 国策
+				}
+			}
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = WAIT_ARI_GST_LOC
+			}
+		}
+		days_mission_timeout = 9999
+		is_good = no
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					has_war_with = GEH #不与歌赫娜处于战争
+					has_war_with = TRI #不与圣三一处于战争
+				}
+				AND = {
+					NOT = { #古圣堂(149)和其外围(529)完全不由阿里乌斯控制
+						140 = {
+							is_fully_controlled_by = ARI
+						}
+						529 = {
+							is_fully_controlled_by = ARI
+						}
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			white_peace = {
+				tag = GEH
+				tooltip = WAR_GST_JS_LOC
+			}
+			white_peace = {
+				tag = TRI
+				tooltip = WAR_GST_JS_LOC
+			}
+			if = {
+				limit = { 
+					TRI = {
+						has_war_with = GEH
+					}
+				}
+				TRI = {
+					white_peace = {
+						tag = GEH
+						tooltip = WAR_GST_JS_LOC
+					}
+				}
+			}
+			140 = {
+				transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+			}
+	
+			529 = {
+				transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+			}
+
+			###移出所有因古圣堂之战而出现的动态修正并自动营救所有学生###
+			for_each_scope_loop = {
+				array = ARI.controlled_states
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+				remove_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
+			for_each_scope_loop = {
+				array = TRI.controlled_states
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+				remove_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
+			for_each_scope_loop = {
+				array = GEH.controlled_states
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+				remove_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
+			for_each_loop = {
+				array = global.ARI_ShouHaiZheMingDan_SAN
+				value = v
+				var:v = {
+					clr_character_flag = ARI_BeiBangJia
+				}
+			}
+			for_each_loop = {
+				array = global.ARI_ShouHaiZheMingDan_ER
+				value = v
+				var:v = {
+					clr_character_flag = ARI_BeiBangJia
+				}
+			}
+
+			###结束###
+
+			load_focus_tree = ARI_NULL
+			mark_focus_tree_layout_dirty = yes
+			ARI = {
+				country_lock_all_division_template = yes
+			}
+		}
+	}
+}
+GST_LS_XC_DEBUFF_category = {
+	GST_XC_DM_JingPiLiJie = { #消除精疲力竭 - 拥有并控制
+		icon = generic_research
+		priority = 11
+		state_target = yes #这是州定向决议
+    	target_array = ROOT.controlled_states
+		visible = {
+			AND = {
+				any_of_scopes = {
+					array = controlled_states
+					tooltip = ANY_STATES_HAS_DEBUFF_JingPiLiJie
+					has_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+					}
+				}
+			}
+		}
+    	target_trigger = {
+        	AND = {#FROM代表定向的州
+				FROM = {
+					has_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+					}
+				}
+				OR = {#检测该州是否有部队存在
+					divisions_in_state = {
+						size > 0
+						state = FROM
+					}
+					FROM = {#检测该州周围是否有部队存在
+						any_neighbor_state = {
+							ROOT = {
+								divisions_in_state = {
+									size > 0
+									state = from
+								}
+							}
+						}
+					}
+				}
+			}
+    	}
+    	on_map_mode = map_and_decisions_view
+		days_remove = 2
+		complete_effect = {
+			add_command_power = -15
+		}
+
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+			}
+		}
+	}
+	GST_XC_DM_JingPiLiJie_AUTO = { #自动消除精疲力竭任务
+		icon = generic_research
+		priority = 20
+
+		days_mission_timeout = 2
+		activation = {
+			any_controlled_state = {
+				has_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+			}
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = WAIT_LOC
+			}
+		}
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = XC_DEBUFF_JingPiLiJie_LOC
+			hidden_effect = {
+				for_each_loop = {
+					array = ROOT.controlled_states
+					value = v
+					var:v = {
+						if = {
+							limit = { 
+								AND = {
+									has_dynamic_modifier = {
+										modifier = TRI_ARI_GEH_JingPiLiJie
+									}
+									OR = {
+										var:v = {#检测该州是否有部队存在
+											ROOT = {
+												divisions_in_state = {
+													size > 0
+													state = v
+												}
+											}
+										}
+										
+										var:v = {#检测该州周围是否有部队存在
+											any_neighbor_state = {
+												ROOT = {
+													divisions_in_state = {
+														size > 0
+														state = prev
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							var:v = {
+								remove_dynamic_modifier = {
+									modifier = TRI_ARI_GEH_JingPiLiJie
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = { 
+						any_controlled_state = {
+							has_dynamic_modifier = {
+								modifier = TRI_ARI_GEH_JingPiLiJie
+							}
+						}
+					}
+					activate_mission = GST_XC_DM_JingPiLiJie_AUTO_2
+				}
+			}
+		}
+	}
+
+	GST_XC_DM_JingPiLiJie_AUTO_2 = {#循环任务
+		icon = generic_research
+		priority = 20
+
+		days_mission_timeout = 2
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = WAIT_LOC
+			}
+		}
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = XC_DEBUFF_JingPiLiJie_LOC
+			hidden_effect = {
+				for_each_loop = {
+					array = ROOT.controlled_states
+					value = v
+					var:v = {
+						if = {
+							limit = { 
+								AND = {
+									has_dynamic_modifier = {
+										modifier = TRI_ARI_GEH_JingPiLiJie
+									}
+									OR = {
+										var:v = {#检测该州是否有部队存在
+											ROOT = {
+												divisions_in_state = {
+													size > 0
+													state = v
+												}
+											}
+										}
+										
+										var:v = {#检测该州周围是否有部队存在
+											any_neighbor_state = {
+												ROOT = {
+													divisions_in_state = {
+														size > 0
+														state = prev
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							var:v = {
+								remove_dynamic_modifier = {
+									modifier = TRI_ARI_GEH_JingPiLiJie
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = { 
+						any_controlled_state = {
+							has_dynamic_modifier = {
+								modifier = TRI_ARI_GEH_JingPiLiJie
+							}
+						}
+					}
+					activate_mission = GST_XC_DM_JingPiLiJie_AUTO
+				}
+			}
+		}
+	}
 }
 
-GST_LS_HelpStu_category = {
+GST_LS_HelpStu_category = { #营救学生
 	GST_YJ = {
 		icon = generic_research
 		priority = 10
@@ -122,6 +612,11 @@ GST_LS_HelpStu_category = {
 					has_character_flag = ARI_BeiBangJia
 				}
 				clr_character_flag = ARI_BeiBangJia
+				remove_from_array = {
+					array = global.ARI_ShouHaiZheMingDan_SAN
+					value = this
+				}
+				custom_effect_tooltip = HELP_STU_LOC
 			}
 		}
 	}
