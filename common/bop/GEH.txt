@@ -25,6 +25,7 @@ GEH_bp_between_chaos_and_order = {
 				war_support_factor = 0.1
 				power_balance_weekly = 0.01
 				consumer_goods_factor = -0.05
+				Eden_treaty_weights_gain_factor = 1
 				custom_modifier_tooltip = GEH_bp_goodevents_2
 			}
 		}
@@ -38,6 +39,7 @@ GEH_bp_between_chaos_and_order = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				power_balance_weekly = 0.005
+				Eden_treaty_weights_gain_factor = 0.6
 				custom_modifier_tooltip = GEH_bp_goodevents_1
 			}
 		}
@@ -54,6 +56,7 @@ GEH_bp_between_chaos_and_order = {
 				stability_factor = -0.05
 				war_support_factor = -0.05
 				power_balance_weekly = -0.005
+				Eden_treaty_weights_gain_factor = -0.6
 				custom_modifier_tooltip = GEH_bp_badevents_1
 			}
 		}
@@ -68,6 +71,7 @@ GEH_bp_between_chaos_and_order = {
 				war_support_factor = -0.1
 				power_balance_weekly = -0.01
 				consumer_goods_factor = 0.05
+				Eden_treaty_weights_gain_factor = -1
 				custom_modifier_tooltip = GEH_bp_badevents_2
 			}
 		}

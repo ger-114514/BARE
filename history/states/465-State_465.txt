@@ -4,6 +4,10 @@ state={
 	provinces={
 		704 1198 1444 1781 2569 3684 4494 4603 4634 4696 4979 6147 6196 6615 6723 6878 7271 7913 8304 8380 8472 8499 9082 9424 10271 10277 10285 10315 10350 10368 10415 
 	}
+	resources = {
+		resources_cm = 10
+		resources_pm = 5
+	}
 	history = {
 		buildings = {
 			infrastructure = 3

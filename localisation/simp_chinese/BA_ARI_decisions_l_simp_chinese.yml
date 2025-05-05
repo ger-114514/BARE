@@ -118,6 +118,7 @@
  ARI_join_food_seminar_club_activity_desc: "众所周知，美食研讨会很喜欢用“特殊”方式来探索和发明美食，在她们进行行动的时候，我们也可以加入其中来添点“乐子”，然后在她们因为黑暗料理而斗争时，我们就可以乘机搞事，顺便顺点物资，然后把一切甩给美食研究会就行"
  ARI_build_safe_home: "建立行动安全屋"
  ARI_build_safe_home_desc: "原先，我们依靠伪装成圣三一的学生，或者混混，快进快出就足以完成行动，但政变之后，圣三一全面加强的戒备，为此，我们需要额外的根据地来支持更长时间，更大规模的行动"
+ ARI_build_safe_home_tt: "建立§Y2§!个安全屋（目前已有[?ARI_safety_home_use_time|Y0]个）"
  ARI_send_sf_to_trinity: "部署外派特战部队"
  ARI_send_sf_to_trinity_desc: "原先，经过训练的对外行动处学生，就足以对付圣三一那些养尊处优的大小姐。但随着圣三一开始扩大正义实现委员会，并开始武装普通学生，行动的难度开始迅速扩大，为此，我们需要部署特战部队为我们的行动提供额外的支援。"
  ARI_control_trinity_border: "牵制圣三一边境巡逻队"
@@ -211,7 +212,7 @@
  ARI_clear_sky_operation_desc: "“净空”行动的主要内容是在行动发起前尽可能隐蔽的破坏圣三一的防空系统，尽管圣三一的防空系统的技术水平不足以拦截这枚高超音速导弹，但哪怕是得到了早期预警，她们也会会有足够的时间撤离重要目标，让打击效果大打折扣。为此，我们需要防空系统的位置和对应的守备力量的情报，并进行针对性的部署。"
  ARI_giving_operation: "“馈赠”行动"
  ARI_giving_operation_desc: "“馈赠”行动的主要内容是在行动发起前，确保万魔殿高层登上我们赠送的飞艇，并确保有足够的爆炸物可以引爆并足够摧毁飞艇。同时作为后备方案，一支小队会携带防空武器以确保行动可以顺利完成。因此，完成这次行动需要我们在万魔殿有足够的影响力"
- ARI_prepare_operation_eden: "必须完成§Y“誓言”行动§!、§Y“净空”行动§!与§Y“馈赠”行动§!"
+ ARI_must_finish_first_three_eden_operation: "必须完成§Y“誓言”行动§!、§Y“净空”行动§!与§Y“馈赠”行动§!"
  ARI_devil_hunting_operation: "“猎魔”行动"
  ARI_devil_hunting_operation_desc: "“猎魔”行动的主要目标是对任何在打击后仍有行动能力的高层进行打击，确保她们被制服，由于许多格黑娜高层预计不在导弹的有效杀伤范围内，因此她们会是主要的行动目标，尽管有圣徒会的支持，但这仍然可能会是一场苦战。"
  ARI_delusion_operation: "“妄想”行动"
@@ -220,3 +221,9 @@
  ARI_prepare_final_war_plan_desc: "这将会是我们的最终之战，我们必须要反复讨论和修正我们的计划，仔细地考虑每一个突发因素，确保计划能够完美地得到实施。"
  ARI_prepare_backup_plan: "准备后备计划"
  ARI_prepare_backup_plan_desc: "如果事情有变，我们将动用我们的决战武器，这会我们最后的筹码。"
+
+###乐园行动参战决议组###
+ ARI_suppress_resistance_eden_decisions: "进行中的乐园行动"
+ ARI_suppress_resistance_eden_decision: "压制残余抵抗"
+ ARI_enhance_contract_power_eden_decision: "加强契约力量"
+ ARI_enhance_contract_power_infinity_decision: "进一步加强契约力量"

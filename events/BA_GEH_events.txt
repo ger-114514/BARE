@@ -317,51 +317,52 @@ country_event = {
 
 
 #第二次《伊甸条约》会谈
-#TODO:我照抄的三一的，之后看看能不能运行
-country_event = {
-    id = GEH_dip_events.1000
-    title = GEH_dip_events.1000.t
-    desc = GEH_dip_events.1000.d
-    picture = GFX_GEH_events_pic
-    major = yes
-	is_triggered_only = yes
-	fire_only_once = yes
+#我照抄的三一的，之后看看能不能运行
+#已给出通用事件，注释
+# country_event = {
+#     id = GEH_dip_events.1000
+#     title = GEH_dip_events.1000.t
+#     desc = GEH_dip_events.1000.d
+#     picture = GFX_GEH_events_pic
+#     major = yes
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
 
 
-    immediate = {
-        hidden_effect = {
-            set_global_flag = BA_2st_eden_pact_begin
-        }
-    }
-    option = {
-		name = GEH_dip_events.1000.a
+#     immediate = {
+#         hidden_effect = {
+#             set_global_flag = BA_2st_eden_pact_begin
+#         }
+#     }
+#     option = {
+# 		name = GEH_dip_events.1000.a
 
-        trigger = {
-            original_tag = GEH
-        }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_2 = yes
-        }
+#         trigger = {
+#             original_tag = GEH
+#         }
+#         if = {
+#             limit = { is_ai = no }
+#             BARE_SuperEvent_2_effect_2 = yes
+#         }
 
-		ai_chance = {
-			factor = 100
-		}
-    }
+# 		ai_chance = {
+# 			factor = 100
+# 		}
+#     }
 
-    option = {
-		name = GEH_dip_events.1000.b
+#     option = {
+# 		name = GEH_dip_events.1000.b
 
-        trigger = {
-            NOT = { original_tag = GEH }
-        }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_2 = yes
-        }
+#         trigger = {
+#             NOT = { original_tag = GEH }
+#         }
+#         if = {
+#             limit = { is_ai = no }
+#             BARE_SuperEvent_2_effect_2 = yes
+#         }
 
-		ai_chance = {
-			factor = 100
-		}
-    }
-}
+# 		ai_chance = {
+# 			factor = 100
+# 		}
+#     }
+# }

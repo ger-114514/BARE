@@ -8,7 +8,7 @@ bookmarks = {
 		default = yes
 		"SRT"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}
@@ -19,7 +19,7 @@ bookmarks = {
 		
 		"GEH"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}
@@ -30,7 +30,7 @@ bookmarks = {
 		
 		"ABY"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}
@@ -40,19 +40,21 @@ bookmarks = {
 		}
 		
 		"TRI"={
-			history = ""
-			ideology = democratic
+			history = "TRI_GATHERING_STORM_DESC"
+			ideology = no_ideology
 			ideas = {
 
 			}
 			focuses = {
-				
+				TRI_pax_trinity
+				TRI_choosing_pact_place
+				TRI_Bill_of_regaining_trust
 			}
 		}
 		
 		"SHA"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}
@@ -63,7 +65,7 @@ bookmarks = {
 		
 		"HYA"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}
@@ -74,7 +76,7 @@ bookmarks = {
 		
 		"MIL"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}
@@ -85,7 +87,7 @@ bookmarks = {
 		
 		"RWT"={
 			history = ""
-			ideology = democratic
+			ideology = no_ideology
 			ideas = {
 
 			}

@@ -2,7 +2,7 @@ state={
 	id=503
 	name="STATE_503"
 	provinces={
-		1215 2790 3061 3624 11082 11097 11249 11279 
+		3061 3624 11097 11249 11279 
 	}
 	history = {
 		buildings = {
@@ -10,7 +10,7 @@ state={
 		}
 		owner = A41
 		add_core_of=A41
-		victory_points = {3061 15}
+		victory_points = {3061 5}
     }
 	manpower=14300
 	state_category = city

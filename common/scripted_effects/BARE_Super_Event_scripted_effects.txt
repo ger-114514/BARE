@@ -76,3 +76,11 @@ BARE_SuperEvent_2_effect_6 = {
 		BARE_SuperEvent_2_fire_super_event = yes
 	}
 }
+
+BARE_SuperEvent_2_effect_7 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_STRIKE }
+		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}

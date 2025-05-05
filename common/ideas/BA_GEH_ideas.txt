@@ -1,7 +1,6 @@
 ideas = {
     country = {
-    
-        ###政治线idea
+                ###政治线idea
 
         #激烈的内部斗争
         GEH_severe_inside_contradiction = {
@@ -126,7 +125,8 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.1
-                #TODO：贡献度获取+25%
+                #贡献度获取+25%
+                Eden_treaty_weights_gain_factor = 0.25
             }
         }
 
@@ -143,7 +143,8 @@ ideas = {
                 power_balance_weekly = -0.02
                 stability_factor = -0.1
                 war_support_factor = -0.1
-                #TODO：贡献度获取-25%
+                #贡献度获取-25%
+                Eden_treaty_weights_gain_factor = -0.25
             }
         }
 
@@ -162,7 +163,8 @@ ideas = {
                 stability_factor = 0.05
                 war_support_factor = 0.05
                 power_balance_weekly = 0.005
-                #TODO：贡献度获取+50%
+                #贡献度获取+50%
+                Eden_treaty_weights_gain_factor = 0.5
             }
         }
 
@@ -390,6 +392,7 @@ ideas = {
                 production_factory_max_efficiency_factor = -0.1
             }
         }
+
         
         #战时工业
         GEH_war_industry_modifier = {
@@ -517,6 +520,560 @@ ideas = {
                 out_of_supply_factor = -0.2
             }
         }
+        
+        #加固防御
+        GEH_Strengthen_your_defenses = {
+            name = GEH_Strengthen_your_defenses
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                production_speed_bunker_factor = 0.2
+            }
+        }
+
+        #培训医疗常识
+        GEH_Medical_knowledge_training = {
+            name = GEH_Medical_knowledge_training
+            picture = unknown
+
+            
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                combat_readiness_recovery_percentage = 0.1
+            }
+        }
+
+        #装甲先锋
+        GEH_Speed_is_everything = {
+            name = GEH_Speed_is_everything
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                unit_light_armor_design_cost_factor = -1
+				unit_medium_armor_design_cost_factor = -1
+				unit_modern_armor_design_cost_factor = -1
+				unit_heavy_armor_design_cost_factor = -1
+				unit_super_heavy_armor_design_cost_factor = -1
+				unit_motorized_design_cost_factor = -1
+				unit_mechanized_design_cost_factor = -1
+            }
+        }
+        
+        #巍峨如山
+        GEH_Towering_mountain_ideas = {
+            name = GEH_Towering_mountain_ideas
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                production_speed_bunker_factor = 0.2
+            }
+        }
+
+        #黑球快递
+        GEH_Black_Ball_Express_ideas = {
+            name = GEH_Black_Ball_Express_ideas
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            equipment_bonus = {
+			 train_equipment = {
+			   build_cost_ic = -0.10
+			   instant = yes
+			 }
+		        }
+
+            modifier = {
+                production_speed_supply_node_factor = 0.5
+                supply_consumption_factor = -0.2
+
+               
+
+
+               
+			
+            }
+        }
+
+        #伪装大师
+        GEH_Master_Disguise_ideas = {
+            name = GEH_Master_Disguise_ideas
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+               ground_attack_factor = 0.5
+               industry_free_repair_factor = 0.5
+               industry_air_damage_factor = -0.3
+			
+            }
+        }
+
+        #百战之师
+        GEH_Hundred_Battles_ideas = {
+            name =  GEH_Hundred_Battles_ideas
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+               army_org_factor = 0.1
+               army_morale_factor = 0.1
+               land_reinforce_rate = 0.02
+               org_loss_when_moving = -0.1
+               experience_gain_army_factor = 0.15
+               army_attack_factor = 0.10
+            }
+
+        }
+         
+        #部队整编
+        GEH_Reorganization_of_the_troops = {
+            name = GEH_Reorganization_of_the_troops
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                army_attack_factor = -0.1
+                army_defence_factor = -0.1
+                army_org_factor = -0.1
+            }
+        }
+
+        #轮换制度
+        GEH_Rotation_System = {
+            name = GEH_Rotation_System
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+             experience_gain_air_factor = 0.2
+             air_accidents = -0.2
+             
+            }
+        }
+
+        #整合社团
+        GEH_Integrate_the_community = {
+           name = GEH_Integrate_the_community
+           picture = unknown
+
+
+           allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+             line_change_production_efficiency_factor = 0.2
+             production_factory_efficiency_gain_factor = -0.1
+             production_factory_max_efficiency_factor = 0.1
+             
+            }
+        }
+
+        #实验型压制装备
+        GEH_text_Suppression_equipment_MK1 = {
+           name = GEH_text_Suppression_equipment_MK1
+           picture = unknown
+
+
+           allowed = {
+                original_tag = GEH
+            }
+
+           
+            equipment_bonus= {
+			    light_fire_support_equipment = {
+				reliability = -0.1
+                ap_attack = 0.1
+				instant = yes
+			    }
+		    }
+            
+        }
+        
+        #压制装备MK1
+        GEH_text_Suppression_equipment_MK2 = {
+           name = GEH_text_Suppression_equipment_MK2
+           picture = unknown
+
+
+           allowed = {
+                original_tag = GEH
+            }
+
+           
+            equipment_bonus= {
+			    light_fire_support_equipment = {
+				reliability = -0.1
+                ap_attack = 0.1
+				instant = yes
+			    }
+
+                heavy_fire_support_equipment = {
+                    reliability = -0.5
+                    maximum_speed = 0.1
+                    max_strength = -0.05
+                    entrenchment = -0.1
+                    instant = yes
+                }
+		    }
+            
+        }
+        
+        #格黑娜专属压制装备
+        GEH_text_Suppression_equipment_MK3 = {
+           name = GEH_text_Suppression_equipment_MK3
+           picture = unknown
+
+
+           allowed = {
+                original_tag = GEH
+            }
+
+           
+            equipment_bonus= {
+			    light_fire_support_equipment = {
+				reliability = -0.15
+                ap_attack = 0.1
+                maximum_speed = 0.05
+                build_cost_ic = -0.10
+				instant = yes
+			    }
+
+                heavy_fire_support_equipment = {
+                    reliability = -0.10
+                    maximum_speed = 0.15
+                    ap_attack = 0.05
+                    max_strength = -0.05
+                    entrenchment = -0.1
+                    build_cost_ic = -0.10
+                    instant = yes
+                }
+
+                special_fire_support_equipment = {
+                    reliability = -0.05
+                    maximum_speed = 0.05
+                    build_cost_ic = -0.10
+                    instant = yes
+                }
+
+                air_defense_weapons = {
+                    reliability = -0.05
+                    maximum_speed = 0.05
+                    build_cost_ic = -0.10
+                    instant = yes
+                }
+                
+		    }
+            
+        }
+
+        #改进型步枪配件
+        GEH_Improved_rifle_accessories_MK1 = {
+           name = GEH_Improved_rifle_accessories_MK1
+           picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+
+           equipment_bonus= {
+            infantry_equipment = {
+                soft_attack = 0.1
+                hard_attack = 0.05
+                instant = yes
+            }
+           }
+        }
+        
+        #普及改装化步枪
+        GEH_Improved_rifle_accessories_MK2 = {
+           name = GEH_Improved_rifle_accessories_MK2
+           picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+
+           equipment_bonus= {
+            infantry_equipment = {
+                soft_attack = 0.12
+                hard_attack = 0.05
+                breakthrough = 0.05
+                instant = yes
+            }
+           }
+        }
+        
+        #改进型夜视仪
+        GEH_Improved_rifle_accessories_MK3 = {
+           name = GEH_Improved_rifle_accessories_MK3
+           picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+
+           
+           modifier = {
+            land_night_attack = 0.12
+           }
+                
+            
+           
+        }
+
+        #第一代防空装备
+        GEH_Air_defense_equipment_MK1 = {
+            name = GEH_Air_defense_equipment_MK1
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+           equipment_bonus= {
+                air_defense_weapons = {
+                    reliability = -0.1
+                    defense = 0.05
+                    entrenchment = 0.05
+                    instant = yes
+                }
+           }
+
+        }
+        
+        #单兵化防空装备
+        GEH_Air_defense_equipment_MK2 = {
+            name = GEH_Air_defense_equipment_MK2
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+           equipment_bonus= {
+                air_defense_weapons = {
+                    reliability = -0.1
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.10
+                    max_strength = 0.10
+                    instant = yes
+                }
+           }
+
+        }
+
+        #新世纪“防空装备”
+
+        GEH_Air_defense_equipment_MK3 = {
+            name = GEH_Air_defense_equipment_MK3
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+            equipment_bonus= {
+                air_defense_weapons = {
+                    reliability = 0.2
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.10
+                    max_strength = 0.10
+                    breakthrough = 0.1
+                    instant = yes
+                }
+           }
+
+        }
+
+        #格黑娜特殊主战坦克
+        GEH_Special_Main_battle_Tank_MK1 = {
+            name = GEH_Special_Main_battle_Tank_MK1
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+
+            equipment_bonus= {
+              light_tank = {
+                reliability = -0.15
+                maximum_speed = 0.05
+                soft_attack = 0.1
+                instant = yes
+              }
+
+              heavy_tank = {
+               reliability = -0.20
+               defense = 0.2
+               instant = yes
+              }
+            }
+
+        }
+
+
+        #特殊改造主战坦克
+        GEH_Special_Main_battle_Tank_MK2 = {
+            name = GEH_Special_Main_battle_Tank_MK2
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+
+            equipment_bonus= {
+              light_tank = {
+                reliability = -0.10
+                maximum_speed = 0.1
+                soft_attack = 0.12
+                instant = yes
+              }
+
+              heavy_tank = {
+               reliability = -0.15
+               defense = 0.2
+               hardness = 0.1
+               instant = yes
+              }
+            }
+
+        }
+        
+        #格黑娜の終末決戰兵器
+        GEH_Special_Main_battle_Tank_MK3 = {
+            name = GEH_Special_Main_battle_Tank_MK3
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+
+            equipment_bonus= {
+              light_tank = {
+                reliability = 0.1
+                maximum_speed = 0.2
+                soft_attack = 0.12
+                ap_attack = 0.15
+                air_attack = 0.2
+                recon = 0.15
+                instant = yes
+              }
+
+              heavy_tank = {
+               reliability = -0.15
+               defense = 0.2
+               hardness = 0.1
+               max_strength = 0.1
+               armor_value = 0.3
+               breakthrough = 0.1
+               instant = yes
+              }
+            }
+
+
+
+        }
+
+        #运输载具规范化
+        GER_Standardization_of_transport_vehicles_MK1 = {
+            name =  GER_Standardization_of_transport_vehicles_MK1
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+            equipment_bonus= {
+             train_equipment = {
+			   reliability = 0.1
+			   instant = yes
+			 }
+            }
+
+        }
+
+        #加大投资
+        GER_Increase_investment = {
+            name = GER_Increase_investment
+            picture = unknown
+
+            allowed = {
+            original_tag = GEH
+           }
+
+           modifier = {
+            political_power_cost = 0.3
+           }
+           
+
+
+        }
+
+        #简化流程
+        GER_Standardization_of_transport_vehicles_MK2 = {
+            name =  GER_Standardization_of_transport_vehicles_MK2
+            picture = unknown
+
+
+           allowed = {
+            original_tag = GEH
+           }
+            equipment_bonus= {
+             train_equipment = {
+			   reliability = 0.1
+               build_cost_ic = -0.10
+			   instant = yes
+			 }
+
+             motorized_equipment = {
+                reliability = 0.1
+               build_cost_ic = -0.10
+			   instant = yes
+             }
+            }
+
+        }
+
+
 
     }
 }

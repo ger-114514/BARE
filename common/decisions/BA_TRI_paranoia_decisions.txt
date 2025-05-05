@@ -21,6 +21,24 @@ TRI_paranoia_system = {
 		timeout_effect = {
 			set_temp_variable = { TRI_paranoia_change = TRI_nagisa_paranoia_modifier_increase }
 			TRI_change_paranoia = yes
+			if = {
+				limit = { 
+					check_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week > 0 } 
+				}
+				add_to_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week = -1 }
+			}
+			else_if = {
+				limit = { 
+					check_variable = { TRI_nagisa_paranoia_modifier_increase_extra_week = 0 } 
+					has_country_flag = TRI_nagisa_paranoia_modifier_increase_extra_week
+				}
+				clr_country_flag = TRI_nagisa_paranoia_modifier_increase_extra_week
+				add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -5 }
+				custom_effect_tooltip = {
+					localization_key = TRI_nagisa_paranoia_modifier_increase_sub_tt
+					SUB = "5"
+				}
+			}
 			activate_mission = TRI_paranoia_weekly_change
 		}
 		
@@ -38,15 +56,43 @@ TRI_paranoia_system = {
 		}
 		days_remove = 7
 		remove_effect = {
+			clr_country_flag = TRI_the_way_to_get_trust
 			country_event = TRI_coup.23
 			effect_tooltip = {
-				TRI_nagisa = {
-					swap_ruler_traits = {
-						remove = TRI_nagisa_Find_the_root_2
-						add = TRI_nagisa_Find_the_root_3
-					}
+				swap_ruler_traits = {
+					remove = TRI_nagisa_Find_the_root_2
+					add = TRI_nagisa_Find_the_root_3
 				}
 			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	TRI_empty_nest_operation = { #空巢行动
+		visible = {
+			has_country_flag = TRI_empty_nest_operation
+		}
+		available = {
+			command_power > 75
+			has_equipment = { infantry_equipment > 2999 }
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = yes
+		complete_effect = {
+			add_command_power = -75
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3000
+			}
+		}
+		remove_effect = {
+			clr_country_flag = TRI_empty_nest_operation
+			country_event = TRI_coup.29
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 	BA_TRI_forge_investigation_reports = { #伪造调查报告
@@ -80,6 +126,29 @@ TRI_paranoia_system = {
 		complete_effect = {
 			set_temp_variable = { TRI_paranoia_change = -20 }
 			TRI_change_paranoia = yes
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total > 75 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_nagisa_paranoia_total > 50 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank > 1 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
 		}
 	}
 	TRI_inspection_in_the_administration = { #审查行政机构
@@ -118,6 +187,29 @@ TRI_paranoia_system = {
 
 			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total > 75 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_nagisa_paranoia_total > 50 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank > 1 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
+		}
 	}
 
 	TRI_inspection_in_the_army = { #审查陆军
@@ -150,6 +242,29 @@ TRI_paranoia_system = {
 				TRI_purge_army = yes
 			}
 			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total > 75 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_nagisa_paranoia_total > 50 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank > 1 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
 		}
 	}
 	TRI_inspection_in_the_airforce = { #审查空军
@@ -185,6 +300,47 @@ TRI_paranoia_system = {
 			}
 			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
 		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total > 75 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_nagisa_paranoia_total > 50 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank > 1 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
+		}
+	}
+	TRI_inspection_in_the_association_ai = {
+		visible = {
+			is_ai = yes
+		}
+		days_re_enable = 150
+		complete_effect = {
+			set_temp_variable_to_random = {
+				var = i
+				min = 3
+				max = 6
+				integer = yes
+			}
+			set_temp_variable = { TRI_inspected_assosiation = TRI_parliament_association^i }
+		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	TRI_inspection_in_the_association = { #审查社团
 		priority = 1
@@ -203,7 +359,7 @@ TRI_paranoia_system = {
 
 		cost = 20
 		days_remove = 7
-
+		days_re_enable = 180
 		complete_effect = {
 			set_country_flag = TRI_paranoia_conducting_inspection_flag
 			set_country_flag = TRI_paranoia_association_inspection_flag
@@ -216,6 +372,29 @@ TRI_paranoia_system = {
 				country_event = TRI_paranoia.31
 			}
 			custom_effect_tooltip = TRI_paranoia_inspection_cd_tt
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_total > 75 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_nagisa_paranoia_total > 50 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_nagisa_paranoia_rank > 3 }
+			}
+			modifier = {
+				factor = 1.2
+				check_variable = { TRI_nagisa_paranoia_rank > 1 }
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
 		}
 	}
 }

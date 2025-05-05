@@ -249,10 +249,19 @@ ARI_cut_down_sp_infrantry_debuff = {
 
 
 BA_ARI_Resourc_Item_Cost_Count = {
+	clamp_variable = {
+		var = BARE_ARI_Resource_Want_Array^i
+		min = 0
+	}
+	set_variable = {
+		BARE_ARI_Resource_Cost_Array^i = BARE_ARI_Resource_Want_Array^i
+	}
+	multiply_variable = {
+		BARE_ARI_Resource_Cost_Array^i  = 2
+	}
 	set_variable = {
 		BARE_ARI_Resource_Cost_all = 0
 	}
-
 	for_each_loop = {
 		array = BARE_ARI_Resource_Cost_Array
 		add_to_variable = {
