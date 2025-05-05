@@ -5,10 +5,13 @@ GEH_GST_LS_category = {
 	GEH_LS_DEC_YDY_TY_QD = {
 		fire_only_once = yes
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		complete_effect = {
-			complete_national_focus = GEH_open_second_eden_treaty_conference
+			GEH = {
+				complete_national_focus = GEH_open_second_eden_treaty_conference
+				mark_focus_tree_layout_dirty = yes #刷新国策树
+			}
 			mark_focus_tree_layout_dirty = yes #刷新国策树
 			140 = {
 				set_demilitarized_zone = yes
@@ -38,6 +41,62 @@ GEH_GST_LS_category = {
 				set_variable = {
 					var = ARI_ZhunBeiDu #准备度
 					value = 99
+				}
+			}
+		}
+	}
+
+	ARI_LS_DEC_ZHYB_WC = {
+		fire_only_once = yes
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			ARI = {
+				complete_national_focus = ARI_the_final_step
+			}
+		}
+	}
+
+	GEH_ARI_LS_DEC_YDY_TY_QD = {
+		fire_only_once = yes
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			GEH = {
+				complete_national_focus = GEH_open_second_eden_treaty_conference
+				mark_focus_tree_layout_dirty = yes #刷新国策树
+			}
+			mark_focus_tree_layout_dirty = yes #刷新国策树
+			140 = {
+				set_demilitarized_zone = yes
+			}
+			529 = {
+				set_demilitarized_zone = yes
+			}
+			ARI = {
+				complete_national_focus = ARI_the_final_step
+				country_event = {
+					id = LS_GST.2
+					days = 5
+				}
+				set_variable = {
+					var = ARI_ZhunBeiDu #准备度
+					value = 99
+				}
+			}
+			TRI = {
+				country_event = {
+					id = LS_GST.1
+					days = 5
+				}
+			}
+
+			GEH = {
+				country_event = {
+					id = LS_GST.2
+					days = 5
 				}
 			}
 		}
@@ -149,7 +208,7 @@ GST_LS_ZZ_category = {
 		}
 	}
 
-	GST_ZZ_XCJC_TRI_AND_GEH = {
+	GST_ZZ_XCJC_TRI_AND_GEH = {#古圣堂之战 - 圣三一 歌赫娜
 		icon = generic_research
 		priority = 36
 		activation = {
@@ -211,45 +270,123 @@ GST_LS_ZZ_category = {
 				add_to_faction = ABY #阿拜多斯
 				add_to_faction = RWT #赤冬
 				add_to_faction = HYA #百鬼夜行
+				declare_war_on = {#对目标国家宣战
+					target = ARI
+					type = XiaoMieWeiXie #消灭威胁
+				}
 				for_each_scope_loop = {
-					array = ROOT.faction_members
+					array = ROOT.faction_members #所有与此国家在同一阵营的成员
 					add_to_war = {
-						targeted_alliance = TRI
+						targeted_alliance = SCH
 						enemy = ARI
 						hostility_reason = XMWX_LOC
 					}
 				}
 			}
-			if = {
+			if = {#如果阿里乌斯准备度达到三阶段
 				limit = {
 					ARI = {
 						has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 					}
 				}
-				GEH = {
+				GEH = {#那么歌赫娜和茶会的领袖都切换为老师
 					promote_character = SCH_sensei
 				}
 				TRI = {
 					promote_character = SCH_sensei
 				}
 			}
-			else_if = {
+			else_if = {#如果阿里乌斯准备度达到二阶段
 				limit = {
 					ARI = {
 						has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
 					}
 				}
-				GEH = {
+				GEH = {#歌赫娜切换领袖为日奈
+					GEH_hina = {
+						clr_character_flag = ARI_BeiBangJia
+					}
 					promote_character = GEH_hina
 				}
-				TRI = {
+				TRI = {#圣三一切换领袖为莲见
+					TRI_hasumi = {
+						clr_character_flag = ARI_BeiBangJia
+					}
 					promote_character = TRI_hasumi
 				}
 			}
 		}
 	}
 
-	GST_ZZ_ARI_XCJC = {
+	GST_ZZ_XCJC_SCH_ALL = {#古圣堂之战 夏莱_所有学院_凯撒_势力
+		icon = generic_research
+		priority = 36
+		activation = {
+			AND = {
+				is_in_faction_with = SCH
+				ARI = {
+					OR = {
+						has_war_with = TRI
+						has_war_with = GEH
+					}
+				}
+				OR = {
+					OR = {
+						GEH = {#投降倾向高于85%
+							surrender_progress > 0.85
+						}
+						TRI = {
+							surrender_progress > 0.85
+						}
+					}
+					OR = {
+						GEH = {#检测是否停止抵抗
+							has_capitulated = yes
+						}
+						TRI = {
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = WAIT_ARI_GST_LOC
+			}
+		}
+		days_mission_timeout = 9999
+
+		is_good = no
+
+		cancel_trigger = {
+			ARI = {
+				NOT = {
+					has_war_with = TRI
+					has_war_with = GEH
+				}
+			}
+		}
+
+		cancel_effect = {
+			SCH = {
+				white_peace = {
+					tag = ARI
+					tooltip = WAR_GST_JS_LOC
+				}
+			}
+			for_each_scope_loop = {
+				array = SCH.faction_members
+				white_peace = {
+					tag = ARI
+					tooltip = WAR_GST_JS_LOC
+				}
+			}
+		}
+	}
+
+	GST_ZZ_ARI_XCJC_WQSL = {#古圣堂之战-阿里乌斯_完全失去古圣堂
 		icon = generic_research
 		priority = 36
 		activation = {
@@ -349,6 +486,15 @@ GST_LS_ZZ_category = {
 					modifier = TRI_BeiAliWuSiTuXi
 				}
 			}
+			for_each_scope_loop = {
+				array = GST_JS_ZBH
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+				remove_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
 			for_each_loop = {
 				array = global.ARI_ShouHaiZheMingDan_SAN
 				value = v
@@ -365,11 +511,173 @@ GST_LS_ZZ_category = {
 			}
 
 			###结束###
-
+			remove_mission = GST_ZZ_ARI_XCJC_LS_1
+			remove_mission = GST_ZZ_ARI_XCJC_LS_2
 			load_focus_tree = ARI_NULL
 			mark_focus_tree_layout_dirty = yes
 			ARI = {
 				country_lock_all_division_template = yes
+				add_ideas = {
+					ARI_JSL
+				}
+			}
+		}
+	}
+
+	GST_ZZ_ARI_XCJC_LS_1 = {#古圣堂之战 - 阿里乌斯循环
+		icon = generic_research
+		priority = 36
+		activation = {
+			AND = {
+				original_tag = ARI
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
+				ARI = {
+					has_completed_focus = ARI_the_final_step #必须完成 最后一步 国策
+				}
+			}
+		}
+		available = {
+			AND = {
+				140 = {
+					is_controlled_by = ARI
+				}
+				529 = {
+					is_controlled_by = ARI
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = WAIT_ARI_GST_LOC
+			}
+		}
+		complete_effect = {
+			set_variable = {
+				var = ARI_8DAYS_DIED
+				value = 0
+			}
+			activate_mission = GST_ZZ_ARI_XCJC_LS_2
+		}
+		days_mission_timeout = 9999
+		is_good = no
+
+		cancel_trigger = {
+			AND = {
+				NOT = {
+					140 = {
+						is_controlled_by = ARI
+					}
+					529 = {
+						is_controlled_by = ARI
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			if = {
+				limit = { 
+					check_variable = {
+						var = ARI_8DAYS_DIED
+						value = 8
+						compare = greater_than_or_equals
+					}
+				}
+				ARI = {
+					dismantle_faction = yes
+					delete_units = {
+						division_template = "圣徒会的投影"
+						disband = no
+					}
+				}
+				if = {
+					limit = { 
+						SCH = {
+							is_in_faction = no
+						}
+					}
+					TRI = {
+						create_faction = TRI_AND_GEH_FACTION_NAME
+						add_to_faction = GEH
+					}
+				}
+			}
+			else = {
+				add_to_variable = {
+					var = ARI_8DAYS_DIED
+					value = 1
+				}
+				custom_effect_tooltip = {
+					localization_key = ARI_SHIKONG_DIED
+				}
+				activate_mission = GST_ZZ_ARI_XCJC_LS_2
+			}
+		}
+	}
+
+	GST_ZZ_ARI_XCJC_LS_2 = {#古圣堂之战 - 阿里乌斯循环2
+		icon = generic_research
+		priority = 36
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = WAIT_ARI_GST_LOC
+			}
+		}
+		days_mission_timeout = 9999
+		is_good = no
+
+		cancel_trigger = {
+			AND = {
+				NOT = {
+					140 = {
+						is_controlled_by = ARI
+					}
+					529 = {
+						is_controlled_by = ARI
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			if = {
+				limit = { 
+					check_variable = {
+						var = ARI_8DAYS_DIED
+						value = 8
+						compare = greater_than_or_equals
+					}
+				}
+				ARI = {
+					dismantle_faction = yes
+					delete_units = {
+						division_template = "圣徒会的投影"
+						disband = no
+					}
+				}
+				if = {
+					limit = { 
+						SCH = {
+							is_in_faction = no
+						}
+					}
+					TRI = {
+						create_faction = ARI_FACTION_NAME
+						add_to_faction = GEH
+					}
+				}
+			}
+			else = {
+				add_to_variable = {
+					var = ARI_8DAYS_DIED
+					value = 1
+				}
+				activate_mission = GST_ZZ_ARI_XCJC_LS_1
 			}
 		}
 	}
