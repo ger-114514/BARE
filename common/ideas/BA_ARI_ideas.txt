@@ -1,5 +1,18 @@
 ideas = {
 	country = {
+		#结束了
+		ARI_JSL = {
+			picture = unkown
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				army_org_factor = -0.5
+				stability_weekly = -1
+				war_support_factor = -1
+				custom_modifier_tooltip = JSL_NOT_ARMY
+			}
+		}
+
 		#缺乏目标
 		ARI_unclear_target = {
 			#picture = unkown
@@ -440,6 +453,8 @@ ideas = {
 			}
 		}
 	}
+
+
 	
 	hidden_ideas = {
 		ALR_resistance_state = {}
@@ -497,8 +512,7 @@ ideas = {
 					instant = yes
 				}
 			}
-
 		}
-
+	
 	}
 }

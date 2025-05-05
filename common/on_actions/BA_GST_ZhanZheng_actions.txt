@@ -92,4 +92,33 @@ on_actions = {
 			}
 		}
 	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = TRI
+				}
+				SCH = {
+					set_major = yes
+					become_exiled_in = {
+						target = TRI
+						legitimacy = 100
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					original_tag = GEH
+				}
+				SCH = {
+					set_major = yes
+					become_exiled_in = {
+						target = GEH
+						legitimacy = 100
+					}
+				}
+			}
+		}
+	}
 }
