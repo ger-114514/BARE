@@ -75,17 +75,6 @@ GEH_GST_LS_category = {
 			529 = {
 				set_demilitarized_zone = yes
 			}
-			ARI = {
-				complete_national_focus = ARI_the_final_step
-				country_event = {
-					id = LS_GST.2
-					days = 5
-				}
-				set_variable = {
-					var = ARI_ZhunBeiDu #准备度
-					value = 99
-				}
-			}
 			TRI = {
 				country_event = {
 					id = LS_GST.1
@@ -97,6 +86,19 @@ GEH_GST_LS_category = {
 				country_event = {
 					id = LS_GST.2
 					days = 5
+				}
+			}
+
+			ARI = {
+				complete_national_focus = ARI_the_final_step
+				mark_focus_tree_layout_dirty = yes #刷新国策树
+				country_event = {
+					id = LS_GST.2
+					days = 5
+				}
+				set_variable = {
+					var = ARI_ZhunBeiDu #准备度
+					value = 99
 				}
 			}
 		}

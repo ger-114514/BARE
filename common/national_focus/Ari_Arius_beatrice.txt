@@ -647,21 +647,21 @@ focus_tree = {
 			#现在需要彻底击败阿里乌斯才能结束古圣堂之战
 			#完成4阶段突破时游戏进入结局
 
-			hidden_effect = {
-				country_event = {
-					id = ARI_beatrice.100
-					days = 2
-				}
+			#hidden_effect = {
+			#	country_event = {
+			#		id = ARI_beatrice.100
+			#		days = 2
+			#	}
 
-				country_event = {
-					id = ARI_beatrice.101
-					days = 3
-				}
+			#	country_event = {
+			#		id = ARI_beatrice.101
+			#		days = 3
+			#	}
 
-				country_event = {
-					id = ARI_beatrice.102
-					days = 5
-				}
+			#	country_event = {
+			#		id = ARI_beatrice.102
+			#		days = 5
+			#	}
 
 				division_template = {
 					name = "阿里乌斯神秘步兵大队"
