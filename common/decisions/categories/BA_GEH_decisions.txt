@@ -78,6 +78,10 @@ GST_LS_ZZ_category = {
 					has_war_with = TRI
 				}
 			}
+			AND = {
+				has_war_with = ARI
+				
+			}
 		}
 	}
 	priority = 114515
