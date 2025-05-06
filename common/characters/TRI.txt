@@ -78,23 +78,12 @@ characters={
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
 						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
-					}
-					NOT = {
-						AND = {
-							OR = {
-								has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-								has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
-							}
-							NOT = {
-						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
-					}
-						}
 					}
 				}
 			}
@@ -150,6 +139,19 @@ characters={
 					NOT = { has_country_flag = TRI_mika_arrested }
 				}
 			}
+			visible = {
+				OR = {
+					NOT = {
+						OR = {
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
 			traits = {
 				innocent_princess
 			}
@@ -172,7 +174,20 @@ characters={
         field_marshal = {
 			traits = { trait_reckless war_hero fortress_buster infantry_officer }
 			visible = {
-				NOT = { has_country_flag = TRI_mika_arrested }
+				OR = {
+					NOT = { has_country_flag = TRI_mika_arrested }
+					NOT = {
+						OR = {
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+				
+				
 			}
 			skill = 3
 			attack_skill = 4
@@ -850,13 +865,14 @@ characters={
 				small=GFX_portrait_TRI_tsurugi_small
 			}	
 		}
-
+		
         advisor = {
 			slot = army_chief
 			idea_token = TRI_tsurugi_ac
 			allowed = {
 				original_tag = TRI
 			}
+			
 			available = {
 				custom_override_tooltip = {
 					tooltip = {
@@ -883,6 +899,17 @@ characters={
 					}
 				}
 			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+				
+			}
 			traits = {
 				screaming_death
 			}
@@ -895,9 +922,21 @@ characters={
         field_marshal = {
 			traits = { trait_cautious career_officer war_hero harsh_leader }
 			visible = {
-				TRI_tsurugi = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					TRI_tsurugi = {
+						NOT = {
+							has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+						}
+						NOT = { has_character_flag = TRI_character_arrested }
+					}
 				}
+				
 			}
 			skill = 3
 			attack_skill = 5
@@ -918,6 +957,7 @@ characters={
 		}
 
         advisor = {
+			
 			slot = army_chief
 			idea_token = TRI_hasumi_ac
 			allowed = {
@@ -949,6 +989,16 @@ characters={
 					}
 				}
 			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
 			traits = {
 				serious_vice_chairman
 			}
@@ -961,8 +1011,16 @@ characters={
         field_marshal = {
 			traits = { trait_cautious infantry_officer }
 			visible = {
-				TRI_hasumi = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					TRI_hasumi = {
+						NOT = { has_character_flag = TRI_character_arrested }
+					}
 				}
 			}
 			skill = 2
@@ -984,6 +1042,7 @@ characters={
 		}
 
         advisor = {
+			
 			slot = army_chief
 			idea_token = TRI_mashiro_ac
 			allowed = {
@@ -1008,6 +1067,16 @@ characters={
 					}
 				}
 			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
 			traits = {
 				long_range_justice_supporter
 			}
@@ -1020,8 +1089,19 @@ characters={
         corps_commander = {
 			traits = { infantry_officer commando }
 			visible = {
-				TRI_mashiro = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					TRI_mashiro = {
+						NOT = {
+							has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+						}
+						NOT = { has_character_flag = TRI_character_arrested }
+					}
 				}
 			}
 			skill = 2
@@ -1067,6 +1147,16 @@ characters={
 					}
 				}
 			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
 			traits = {
 				restraint_arbiter
 			}
@@ -1079,9 +1169,21 @@ characters={
         corps_commander = {
 			traits = { infantry_officer skilled_staffer }
 			visible = {
-				TRI_ichika = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+					TRI_ichika = {
+						NOT = {
+							has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+						}
+						NOT = { has_character_flag = TRI_character_arrested }
+					}
 				}
+				
 			}
 			skill = 3
 			attack_skill = 3

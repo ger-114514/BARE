@@ -35,17 +35,15 @@ country_event = { #古圣堂遭受聚变打击
 		else_if = {
 			limit = { 
 				ARI = {
-					AND = {
-						check_variable = {
-							var = ARI_ZhunBeiDu #准备度
-							value = 46
-							compare = greater_than_or_equals #大于等于
-						}
-						check_variable = {
-							var = ARI_ZhunBeiDu #准备度
-							value = 91
-							compare = less_than_or_equals #小于等于
-						}
+					check_variable = {
+						var = ARI_ZhunBeiDu #准备度
+						value = 46
+						compare = greater_than_or_equals #大于等于
+					}
+					check_variable = {
+						var = ARI_ZhunBeiDu #准备度
+						value = 91
+						compare = less_than_or_equals #小于等于
 					}
 				}
 			}
@@ -56,9 +54,8 @@ country_event = { #古圣堂遭受聚变打击
 					set_character_flag = ARI_BeiBangJia
 				}
 			}
-
+			set_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
 			TRI = {
-				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
 				declare_war_on = { #向指定国家宣战
 					target = GEH #被宣战国家TAG
 					type = topple_government #战争目标类型 - 颠覆政权
@@ -72,7 +69,6 @@ country_event = { #古圣堂遭受聚变打击
 			}
 
 			GEH = {
-				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
 				promote_character = {
 					character = GEH_ako
 					ideology = no_ideology_type
@@ -80,10 +76,6 @@ country_event = { #古圣堂遭受聚变打击
 				add_dynamic_modifier = {
 					modifier = GEH_a_unpredictable_attack #措手不及
 				}
-			}
-
-			ARI = {
-				set_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi
 			}
 		}
 		else_if = {
@@ -96,7 +88,7 @@ country_event = { #古圣堂遭受聚变打击
 					}
 				}
 			}
-
+			set_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 			for_each_loop = {
 				array = global.ARI_ShouHaiZheMingDan_SAN
 				value = v
@@ -107,7 +99,6 @@ country_event = { #古圣堂遭受聚变打击
 			}
 			
 			TRI = {
-				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 				declare_war_on = { #向指定国家宣战
 					target = GEH #被宣战国家TAG
 					type = topple_government #战争目标类型 - 颠覆政权
@@ -118,9 +109,9 @@ country_event = { #古圣堂遭受聚变打击
 					keep_completed = yes #保持已完成的共享国策
 					copy_completed_from = root #从当前国家复制国策完成状态
 				}
+				promote_character = TRI_hanako
 			}
 			GEH = {
-				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 				add_ideas = {
 					GEH_army_in_chaos
 				}
@@ -131,9 +122,6 @@ country_event = { #古圣堂遭受聚变打击
 					character = GEH_JingJiZhuangTaiWeiYuanHui
 					ideology = no_ideology_type
 				}
-			}
-			ARI = {
-				set_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 			}
 		}
 
