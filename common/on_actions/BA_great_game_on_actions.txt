@@ -1,0 +1,102 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			CEN = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A36 }
+				add_to_array = { BA_trusteeship_areas = A37 }
+				add_to_array = { BA_trusteeship_areas = A38 }
+				add_to_array = { BA_trusteeship_areas = A39 }
+				add_to_array = { BA_trusteeship_areas = A40 }
+				add_to_array = { BA_trusteeship_areas = A41 }
+				add_to_array = { BA_trusteeship_areas = A42 }
+				add_to_array = { BA_trusteeship_areas = A43 }
+				add_to_array = { BA_trusteeship_areas = WLH }
+				add_to_array = { BA_trusteeship_areas = HIL }
+			}
+			ABY = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A25 }
+			}
+			TRI = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A01 }
+				add_to_array = { BA_trusteeship_areas = A02 }
+				add_to_array = { BA_trusteeship_areas = A04 }
+				add_to_array = { BA_trusteeship_areas = A05 }
+			}
+			GEH = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A06 }
+				add_to_array = { BA_trusteeship_areas = A08 }
+				add_to_array = { BA_trusteeship_areas = A09 }
+				add_to_array = { BA_trusteeship_areas = A11 }
+			}
+			MIL = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A03 }
+				add_to_array = { BA_trusteeship_areas = A07 }
+				add_to_array = { BA_trusteeship_areas = A20 }
+			}
+			RWT = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A28 }
+				add_to_array = { BA_trusteeship_areas = A29 }
+				add_to_array = { BA_trusteeship_areas = A30 }
+				add_to_array = { BA_trusteeship_areas = A31 }
+				add_to_array = { BA_trusteeship_areas = A32 }
+				add_to_array = { BA_trusteeship_areas = A33 }
+				add_to_array = { BA_trusteeship_areas = A34 }
+				add_to_array = { BA_trusteeship_areas = A35 }
+			}
+			HYA = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A12 }
+				add_to_array = { BA_trusteeship_areas = A13 }
+				add_to_array = { BA_trusteeship_areas = A14 }
+				add_to_array = { BA_trusteeship_areas = A15 }
+				add_to_array = { BA_trusteeship_areas = A16 }
+			}
+			SHA = {
+				add_to_array = { global.BA_college_region = THIS }
+				add_to_array = { BA_trusteeship_areas = A17 }
+				add_to_array = { BA_trusteeship_areas = A18 }
+				add_to_array = { BA_trusteeship_areas = A19 }
+			}
+			for_each_scope_loop = {
+				array = global.BA_college_region
+				for_each_loop = {
+					array = BA_trusteeship_areas
+					value = v
+					set_autonomy = {
+						target = v
+						autonomy_state = autonomy_bare_trusteeship_area
+					}
+				}
+			}
+		}
+	}
+	on_puppet = {
+		effect = {
+			ROOT = {
+				every_controlled_state = {
+					ROOT = {
+						give_resource_rights = {
+							receiver = overlord
+							state = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	on_subject_free = {
+		effect = {
+			ROOT = {
+				every_controlled_state = {
+					ROOT = { remove_resource_rights = PREV }
+				}
+			}
+		}
+	}
+}

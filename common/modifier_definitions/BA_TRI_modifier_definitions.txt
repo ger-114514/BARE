@@ -56,3 +56,8 @@ Eden_treaty_progress_modifier = {
 	value_type = number
 	precision = 0
 }
+Eden_treaty_progress_modifier = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+}

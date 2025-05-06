@@ -1177,7 +1177,36 @@ focus_tree = {
             #混乱的工厂
             remove_ideas = GEH_factory_management_in_chaos
             #启动一个动态的精神：【格黑娜产能利用率】 这个我不会写
-
+			if = {
+				limit = { has_stability < 0.01 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.5 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = -0.1 }
+			}
+			else_if = {
+				limit = { has_stability < 0.26 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.3 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = -0.05 }
+			}
+			else_if = {
+				limit = { has_stability < 0.51 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.1 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0 }
+			}
+			else_if = {
+				limit = { has_stability < 0.76 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.2 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.05 }
+			}
+			else_if = {
+				limit = { has_stability < 1 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.3 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.1 }
+			}
+			else = {
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.5 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.15 }
+			}
+            add_dynamic_modifier = { modifier = GEH_production_efficiency }
         }		
     }
 
@@ -1654,24 +1683,6 @@ focus_tree = {
     }
 
 
-    #社团任务
-    focus = {
-        id = GEH_club_missions
-        icon = GFX_goal_GEH_club_missions
-        cost = 10
-        x = 0
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-
-        relative_position_id = GEH_change_the_nature
-        prerequisite = {  focus = GEH_change_the_nature }
-
-        completion_reward = {
-            #TODO:缺乏效果
-        }		
-    }
-
-
     #学园翻新
     focus = {
         id = GEH_renew_our_academia
@@ -1681,8 +1692,8 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
 
-        relative_position_id = GEH_club_missions
-        prerequisite = {  focus = GEH_club_missions }
+        relative_position_id = GEH_change_the_nature
+        prerequisite = {  focus = GEH_change_the_nature }
 
         completion_reward = {
             every_core_state = {
