@@ -137,6 +137,12 @@ script_enum_equipment_category = {
 	anti_tank
 	rocket
 	flame
+	land_cruiser
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	missile_launcher
 }
 
 script_enum_equipment_bonus_type = {
@@ -209,11 +215,7 @@ script_enum_equipment_bonus_type = {
 	special_fire_support_equipment
 	special_fire_support_equipment_0
 	special_fire_support_equipment_1
-	air_defense_weapons
 
-	light_tank
-	heavy_tank
-	modern_tank_chassis
 	land_cruiser
 	emplacement_gun_ammo
 	ballistic_missile

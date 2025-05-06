@@ -177,6 +177,9 @@ focus_tree = {
 					set_temp_variable = { TRI_policy_change_num = 0.05 }
 					TRI_BOP_change_moderate_both_parliament = yes
 				}
+				ai_will_do = {
+					factor = 3
+				}
 			}
 			focus = { #召开圣三一联合会议	
 				id = TRI_calling_for_convention
@@ -228,7 +231,10 @@ focus_tree = {
 					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
 					set_temp_variable = { loyalty_change = 0.1 }
 					TRI_parliament_loyalty_change_parliament = yes
-				}			
+				}	
+				ai_will_do = {
+					factor = 5
+				}		
 			}
 			focus = { #举杯邀议	
 				id = TRI_invitation_for_discussion
@@ -257,7 +263,10 @@ focus_tree = {
 						add_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
 					}
 					custom_effect_tooltip = TRI_invitation_for_discussion_tt
-				}			
+				}
+				ai_will_do = {
+					factor = 3
+				}
 			}
 			focus = { #开诚布公法案	
 				id = TRI_Bill_of_disclosure
@@ -288,7 +297,14 @@ focus_tree = {
 						custom_effect_tooltip = TRI_Bill_of_disclosure_tt
 					}
 					custom_effect_tooltip = TRI_need_detail_tt
-				}			
+				}
+				ai_will_do = {
+					factor = 20
+					modifier = {
+						factor = 0
+						TRI_can_submit_a_bill = no
+					}
+				}
 			}
 			focus = { #纳听宣策	
 				id = TRI_hear_and_command
@@ -336,7 +352,10 @@ focus_tree = {
 						}	
 					}
 					set_country_flag = TRI_hear_and_command
-				}			
+				}
+				ai_will_do = {
+					factor = 3
+				}
 			}
 			focus = { #重建议会沟通渠道	
 				id = TRI_rebuild_communication_channel
@@ -383,6 +402,9 @@ focus_tree = {
 						add_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
 					}
 				}
+				ai_will_do = {
+					factor = 3
+				}
 			}
 			focus = { #会晤前的筹备
 				id = TRI_choosing_pact_place
@@ -419,7 +441,14 @@ focus_tree = {
 							news_event = Eden_pact.1001
 						}
 					}
-				}			
+				}
+				ai_will_do = {
+					factor = 20
+					modifier = {
+						factor = 0
+						date < 2023.7.1
+					}
+				}
 			}
 			focus = { #筹备物资调配
 				id = TRI_deploy_materials
@@ -540,7 +569,10 @@ focus_tree = {
 					country_event = TRI_events.6
 					set_temp_variable = { loyalty_change = -0.06 }
 					TRI_parliament_all_loyalty_change = yes
-				}			
+				}
+				ai_will_do = {
+					factor = 3
+				}
 			}
 			focus = { #潜藏于圣三一的叛徒
 				id = TRI_turncoat_in_trinity
@@ -593,6 +625,9 @@ focus_tree = {
 							days = 35
 						}
 					}
+				}
+				ai_will_do = {
+					factor = 3
 				}
 			}
 			focus = { #详勘细查，防微杜渐
@@ -2426,6 +2461,13 @@ focus_tree = {
 					}
 				}
 			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					TRI_can_submit_a_bill = no
+				}
+			}
 		}
 		focus = { #重整茶话会亲卫队
 			id = TRI_reorgnize_teaparty_mob
@@ -3096,7 +3138,14 @@ focus_tree = {
 						uses = 1
 					}
 				}
-			}		
+			}
+			ai_will_do = {
+				factor = 8
+				modifier = {
+					factor = 0
+					TRI_can_submit_a_bill = no
+				}
+			}
 		}
 		focus = {  #遏制无节制福利开支
 			id = TRI_welfare_cutting
