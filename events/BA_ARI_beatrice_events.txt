@@ -321,8 +321,10 @@ country_event = {
         hidden_effect = {
             every_country = {
                 limit = {
-                    NOT = { original_tag = ARI }
-                    NOT = { has_war_with = ARI }
+                    AND = {
+                        NOT = { original_tag = ARI }
+                        NOT = { has_war_with = ARI }
+                    }
                 }
 
                 #TODO:要排除掉所有的废墟地区

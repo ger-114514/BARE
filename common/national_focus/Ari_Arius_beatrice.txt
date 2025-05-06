@@ -663,6 +663,13 @@ focus_tree = {
 			#		days = 5
 			#	}
 
+			remove_ideas = {
+				ARI_Gematria_member
+				ARI_armed_students_modifier
+				ARI_special_force
+				ARI_Intelligence_department
+			}
+
 				division_template = {
 					name = "阿里乌斯神秘步兵大队"
 				
@@ -1171,7 +1178,7 @@ focus_tree = {
 
 
 					
-		###3.17新增
+	###3.17新增
 		focus = { #行动的教训
 			id = ARI_traveller_operation_lost
 			#icon = GFX_goal_unknown
@@ -1553,7 +1560,7 @@ focus_tree = {
 			}
 		}
 
-		#TODO：需要在什么时候完成这个国策
+	#TODO：需要在什么时候完成这个国策
 		focus = { #行动时刻
 			id = ARI_time_for_final_action
 			#icon = GFX_goal_unknown
@@ -3136,14 +3143,14 @@ focus_tree = {
 							category = land_doctrine
 						}
 						#解锁T2小型无人机科技
-						 set_technology = {
+						set_technology = {
 							fighting_drone_MK2 = 1
-						 }
+						}
 						#100架制空小型无人机
-						 add_equipment_to_stockpile = {
-						 	type = medium_uav_equipment_2
-						 	amount = 100
-						 }
+						add_equipment_to_stockpile = {
+							type = medium_uav_equipment_2
+							amount = 100
+						}
 					}
 				}
 				focus = { #炸飞她们
@@ -3198,7 +3205,7 @@ focus_tree = {
 				}
 				focus = { #本地生产无人机
 					id = ARI_UAV_production
-					#icon = GFX_goal_unknown
+					icon = GFX_goal_unknown
 					relative_position_id = ARI_air_force
 					prerequisite = { focus = ARI_air_force }
 					cost = 3
@@ -3232,7 +3239,6 @@ focus_tree = {
 						}
 					}
 				}
-}
 
 focus_tree = {
 	id = ARI_NULL
