@@ -26,3 +26,8 @@ GEH_a_unpredictable_attack = {
 	land_reinforce_rate = GEH_a_unpredictable_attack_land_reinforce_rate
 	breakthrough_factor = GEH_a_unpredictable_attack_breakthrough_factor
 }
+
+GEH_gehenna_club_activity = {
+	icon = "GFX_idea_GEH_gehenna_club_activity"
+	enable = { always = yes }
+}

@@ -19,8 +19,8 @@ ideas = {
 
         #内部斗争
         GEH_mild_inside_contradiction = {
-            name = GEH_severe_inside_contradiction
-            picture = unknown
+            name = GEH_mild_inside_contradiction
+            picture =  GEH_severe_inside_contradiction
 
             allowed = {
                 original_tag = GEH
