@@ -2436,7 +2436,7 @@ focus_tree = {
 	focus = {
 		#学园性死亡
 		id = ARI_social_death
-		icon = GFX_goal_ ARI_social_death
+		icon = GFX_goal_ARI_social_death
 		relative_position_id = ARI_Nihilism_thought
 		prerequisite = {
 			focus = ARI_Nihilism_thought
