@@ -1,0 +1,31 @@
+add_namespace = gui_test
+
+news_event = {
+	id = gui_test.1
+	picture = GFX_news_event_gui_test
+	#title = gui_testT.1.t
+	title = "总之这是很长很长很长很长很长很长很长的标题五字十五字十五字"
+	#desc = gui_test.1.d
+	desc = "总之非常多的字数十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字十五字"
+	is_triggered_only = yes
+
+	option = {
+		#name = gui_test.1.a
+		name = "总之非常多的字数十五字十五字十五字十五字十五字十五字十五字十五字十五字"
+	}
+}
+
+news_event = {
+	id = gui_test.2
+	picture = GFX_news_event_gui_test
+	#title = gui_testT.1.t
+	title = "花耶造反了哇！"
+	#desc = gui_test.1.d
+	desc = "我测，我要看花耶痛打阿罗娜啊，这样就算爆发四散也值回票价辣！"
+	is_triggered_only = yes
+
+	option = {
+		#name = gui_test.1.a
+		name = "我草这粉毛怎么这么坏啊！"
+	}
+}

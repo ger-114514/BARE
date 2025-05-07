@@ -321,4 +321,19 @@ spriteTypes = {
 		name = "GFX_goal_TRI_UAV_control"
 		texturefile = "gfx/interface/goals/无人机管制司令部.png"
 	}
+
+	###2025-07-05注册###
+	SpriteType = {
+		name = "GFX_goal_TRI_the_way_to_glory"
+		texturefile = "gfx/interface/goals/focus_TRI_the_way_to_glory.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_fatal_strike_of_arius"
+		texturefile = "gfx/interface/goals/focus_TRI_fatal_strike_of_arius.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_aftermath_of_rebellion"
+		texturefile = "gfx/interface/goals/focus_TRI_aftermath_of_rebellion.dds"
+	}
+
 }
