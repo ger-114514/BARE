@@ -5,10 +5,8 @@ news_event = {
     id = Eden_pact.1000
     title = Eden_pact.1000.t
     desc = Eden_pact.1000.d
-    picture = GFX_TRI_events_pic
+    #picture = GFX_TRI_events_pic
 	is_triggered_only = yes
-    major = yes
-	fire_only_once = yes
     #这里需要进一步完善
     option = {
 		name = Eden_pact.1000.a
@@ -36,9 +34,7 @@ news_event = {
     title = Eden_pact.1001.t
     desc = Eden_pact.1001.d
     #picture = GFX_TRI_events_pic
-    major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
     immediate = {
         hidden_effect = {
 			if = {
@@ -134,9 +130,7 @@ news_event = {
     title = Eden_pact.1002.t
     desc = Eden_pact.1002.d
     #picture = GFX_TRI_events_pic
-    major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
     immediate = {
         
     }
