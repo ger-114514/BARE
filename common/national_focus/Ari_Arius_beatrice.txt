@@ -1441,6 +1441,9 @@ focus_tree = {
 			else = {
 				ARITRI_coup_effect = yes
 			}
+			hidden_effect = {
+				
+			}
 		}
 	}
 	###3.17新增
@@ -2187,7 +2190,7 @@ focus_tree = {
 	focus = {
 		#虚无永存
 		id = ARI_Nihilism_forever
-		#icon = 
+		icon = GFX_goal_ARI_Nihilism_forever
 		relative_position_id = ARI_meeting_with_supervisor
 		prerequisite = {
 			focus = ARI_meeting_with_supervisor
@@ -2213,7 +2216,7 @@ focus_tree = {
 	focus = {
 		#记住我们的敌人
 		id = ARI_remember_our_rivals
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_remember_our_rivals
 		relative_position_id = ARI_Nihilism_forever
 		prerequisite = {
 			focus = ARI_Nihilism_forever
@@ -2243,7 +2246,7 @@ focus_tree = {
 	focus = {
 		#夫人的历史课
 		id = ARI_history_education
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_history_education
 		relative_position_id = ARI_remember_our_rivals
 		prerequisite = {
 			focus = ARI_remember_our_rivals
@@ -2266,7 +2269,7 @@ focus_tree = {
 	focus = {
 		#保持热情
 		id = ARI_maintain_enthusiasm
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_maintain_enthusiasm
 		relative_position_id = ARI_history_education
 		prerequisite = {
 			focus = ARI_history_education
@@ -2290,7 +2293,7 @@ focus_tree = {
 	focus = {
 		#搜捕背叛者
 		id = ARI_arrest_rebels
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_arrest_rebels
 		relative_position_id = ARI_Nihilism_forever
 		prerequisite = {
 			focus = ARI_Nihilism_forever
@@ -2310,7 +2313,7 @@ focus_tree = {
 	focus = {
 		#贯彻夫人的意志
 		id = ARI_carry_out_the_will
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_carry_out_the_will
 		relative_position_id = ARI_arrest_rebels
 		prerequisite = {
 			focus = ARI_arrest_rebels
@@ -2334,7 +2337,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯信用体系
 		id = ARI_identity_system
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_identity_system
 		relative_position_id = ARI_arrest_rebels
 		prerequisite = {
 			focus = ARI_arrest_rebels
@@ -2400,7 +2403,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯式考试
 		id = ARI_Nihilism_examination
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_Nihilism_examination
 		relative_position_id = ARI_Nihilism_thought
 		prerequisite = {
 			focus = ARI_Nihilism_thought
@@ -2433,7 +2436,7 @@ focus_tree = {
 	focus = {
 		#学园性死亡
 		id = ARI_social_death
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ ARI_social_death
 		relative_position_id = ARI_Nihilism_thought
 		prerequisite = {
 			focus = ARI_Nihilism_thought
@@ -2462,7 +2465,7 @@ focus_tree = {
 	focus = {
 		#于骷髅头上盛开的玫瑰
 		id = ARI_roses_on_the_skeleton
-		#icon = GFX_goal_unknown
+		icon = GFX_goal_ARI_roses_on_the_skeleton
 		relative_position_id = ARI_identity_system
 		prerequisite = {
 			focus = ARI_carry_out_the_will
