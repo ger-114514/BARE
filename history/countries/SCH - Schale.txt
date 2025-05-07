@@ -235,9 +235,12 @@ for_each_scope_loop = {
 		}
 	}
 	#禁运阿里乌斯
-	diplomatic_relation = {
-		country = ARI
-		relation = embargo
-		active = yes
+	if = {
+		limit = { NOT = { is_embargoing = ARI } }
+		diplomatic_relation = {
+			country = ARI
+			relation = embargo
+			active = yes
+		}
 	}
 }
