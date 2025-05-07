@@ -2384,7 +2384,7 @@ focus_tree = {
 		}
 		focus = { #光耀之途
 			id = TRI_the_way_to_glory
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_the_way_to_glory
 			allow_branch = { #拥有焦点：胜利签订的《伊甸条约》
 				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_successfully_signed_Eden }
 			}
@@ -2402,7 +2402,7 @@ focus_tree = {
 		}
 		focus = { #阿里乌斯之殇
 			id = TRI_fatal_strike_of_arius
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_fatal_strike_of_arius
 			relative_position_id = TRI_the_way_to_glory
 			prerequisite = { focus = TRI_the_way_to_glory }
 			cost = 5
@@ -2419,7 +2419,7 @@ focus_tree = {
 		}
 		focus = { #叛乱的余波
 			id = TRI_aftermath_of_rebellion
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_aftermath_of_rebellion
 			relative_position_id = TRI_the_way_to_glory
 			prerequisite = { focus = TRI_the_way_to_glory }
 			cost = 5

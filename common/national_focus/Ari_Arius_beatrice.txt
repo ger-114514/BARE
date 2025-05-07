@@ -12,9 +12,9 @@ focus_tree = {
 		y = 3000
 	}
 	default = no
-
-##第一阶段 需要91天
-	focus = { #夫人的铁幕
+	##第一阶段 需要91天
+	focus = {
+		#夫人的铁幕
 		id = ARI_iron_curtain_of_beatrice
 		icon = GFX_goal_ARI_iron_curtain_of_beatrice
 		cost = 1
@@ -24,44 +24,52 @@ focus_tree = {
 			country_event = ARI_beatrice.1
 		}
 	}
-
-	focus = { #被奴役者们
+	focus = {
+		#被奴役者们
 		id = ARI_the_enslaved
 		icon = GFX_goal_ARI_the_enslaved
 		relative_position_id = ARI_iron_curtain_of_beatrice
-		prerequisite = { focus = ARI_iron_curtain_of_beatrice }
+		prerequisite = {
+			focus = ARI_iron_curtain_of_beatrice
+		}
 		cost = 1
 		x = 0
 		y = 1
 		completion_reward = {
 			country_event = ARI_beatrice.3
-		}			
+		}
 	}
-
-	focus = { #特殊小队
+	focus = {
+		#特殊小队
 		id = ARI_special_team
 		icon = GFX_goal_ARI_special_team
 		relative_position_id = ARI_the_enslaved
-		prerequisite = { focus = ARI_the_enslaved }
+		prerequisite = {
+			focus = ARI_the_enslaved
+		}
 		cost = 1
 		x = 0
 		y = 1
 		completion_reward = {
 			country_event = ARI_beatrice.4
-		}			
+		}
 	}
-
-	focus = { #希望已死
+	focus = {
+		#希望已死
 		id = ARI_the_death_of_hope
 		icon = GFX_goal_ARI_the_death_of_hope
 		relative_position_id = ARI_special_team
-		prerequisite = { focus = ARI_special_team }
+		prerequisite = {
+			focus = ARI_special_team
+		}
 		cost = 10
 		x = 0
 		y = 1
 		select_effect = {
 			if = {
-				limit = { has_country_flag = ALR_resistance_option_3 }
+				limit = {
+					has_country_flag = ALR_resistance_option_3
+				}
 				country_event = {
 					id = ARI_beatrice.5
 					days = 35
@@ -75,14 +83,14 @@ focus_tree = {
 			load_focus_tree = Arius_stage_2_beatrice
 			hidden_effect = {
 				country_event = {
-					id =  ARI_beatrice_revolt.1
+					id = ARI_beatrice_revolt.1
 					days = 30
 				}
 			}
 		}
 	}
-
 }
+
 #第二阶段-夫人
 focus_tree = {
 	id = Arius_stage_2_beatrice
@@ -96,527 +104,646 @@ focus_tree = {
 	}
 	#神秘研究部分
 	###阶段1(RANK=1)
-		focus = { #力量之欲
-			id = ARI_desire_of_power
-			icon = GFX_goal_ARI_desire_of_power
-			cost = 3
-			x = -5
-			y = -1
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				set_variable = { ARI_mystic_progress = 0 }
-				set_variable = { ARI_mystic_rank = 1 }
-				hidden_effect = {
-					add_dynamic_modifier = {
-						modifier = ARI_power_chaser
-						scope = ARI
+	focus = {
+		#力量之欲
+		id = ARI_desire_of_power
+		icon = GFX_goal_ARI_desire_of_power
+		cost = 3
+		x = -5
+		y = -1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			set_variable = {
+				ARI_mystic_progress = 0
+			}
+			set_variable = {
+				ARI_mystic_rank = 1
+			}
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ARI_power_chaser
+					scope = ARI
+				}
+				#通过增加变量影响动态修正效果
+			}
+			custom_effect_tooltip = ARI_power_chaser_effect_change_1
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_research_speed_factor = 0.03
+				}
+				add_to_variable = {
+					ARI_power_chaser_army_attack_factor = 0.03
+				}
+			}
+			custom_effect_tooltip = ARI_desire_of_power_tt
+			country_event = ARI_beatrice.6
+		}
+	}
+	focus = {
+		#阿里乌斯皇室的遗产
+		id = ARI_royal_blood
+		icon = GFX_goal_ARI_royal_blood
+		cost = 3
+		relative_position_id = ARI_desire_of_power
+		prerequisite = {
+			focus = ARI_desire_of_power
+		}
+		x = -2
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			# set_temp_variable = { mystic_progress_change = 10 }
+			# ARI_change_mystic_progress = yes
+			# unlock_decision_category_tooltip = ARI_mystic_research_decisions
+			#unlock_decision_tooltip = ARI_research_the_royal_blood
+			custom_effect_tooltip = ARI_royal_blood_tt
+			set_temp_variable = {
+				mystic_progress_change = 10
+			}
+			ARI_change_mystic_progress = yes
+			unlock_decision_tooltip = ARI_research_the_royal_blood
+			custom_effect_tooltip = ARI_power_chaser_effect_change_4
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_research_speed_factor = 0.05
+				}
+			}
+		}
+	}
+	focus = {
+		#利用“神秘”资源
+		id = ARI_harness_mystic_resources
+		icon = GFX_goal_ARI_harness_mystic_resources
+		cost = 3
+		relative_position_id = ARI_desire_of_power
+		prerequisite = {
+			focus = ARI_desire_of_power
+		}
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			set_temp_variable = {
+				mystic_progress_change = 10
+			}
+			ARI_change_mystic_progress = yes
+			add_ideas = ARI_mystery_reseacher
+		}
+	}
+	focus = {
+		#逆向研究反光环武器
+		id = ARI_anti_halo_reverse_engineering
+		icon = GFX_goal_ARI_anti_halo_reverse_engineering
+		cost = 3
+		relative_position_id = ARI_harness_mystic_resources
+		prerequisite = {
+			focus = ARI_harness_mystic_resources
+		}
+		x = -2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			set_temp_variable = {
+				mystic_progress_change = 10
+			}
+			ARI_change_mystic_progress = yes
+			custom_effect_tooltip = ARI_power_chaser_effect_change_2
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_army_attack_factor = 0.03
+				}
+			}
+		}
+	}
+	focus = {
+		#尤斯蒂娜的投影
+		id = ARI_justyna_projection
+		icon = GFX_goal_ARI_justyna_projection
+		cost = 3
+		relative_position_id = ARI_anti_halo_reverse_engineering
+		prerequisite = {
+			focus = ARI_royal_blood
+		}
+		prerequisite = {
+			focus = ARI_anti_halo_reverse_engineering
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_progress
+					PROGRESS = "80"
+				}
+				NOT = {
+					check_variable = {
+						ARI_mystic_progress < 80
 					}
-					#通过增加变量影响动态修正效果
-				}
-
-
-				custom_effect_tooltip = ARI_power_chaser_effect_change_1
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_research_speed_factor = 0.03 }
-					add_to_variable = { ARI_power_chaser_army_attack_factor = 0.03 }
-				}
-				custom_effect_tooltip = ARI_desire_of_power_tt
-				country_event = ARI_beatrice.6
-			}
-		}
-		focus = { #阿里乌斯皇室的遗产
-			id = ARI_royal_blood
-			icon = GFX_goal_ARI_royal_blood
-			cost = 3
-			relative_position_id = ARI_desire_of_power
-			prerequisite = { focus = ARI_desire_of_power }
-			x = -2
-			y = 3
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				# set_temp_variable = { mystic_progress_change = 10 }
-				# ARI_change_mystic_progress = yes
-				# unlock_decision_category_tooltip = ARI_mystic_research_decisions
-
-				#unlock_decision_tooltip = ARI_research_the_royal_blood
-				custom_effect_tooltip = ARI_royal_blood_tt
-				set_temp_variable = { mystic_progress_change = 10 }
-				ARI_change_mystic_progress = yes
-				unlock_decision_tooltip = ARI_research_the_royal_blood
-				custom_effect_tooltip = ARI_power_chaser_effect_change_4
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_research_speed_factor  = 0.05 }
 				}
 			}
 		}
-		focus = { #利用“神秘”资源
-			id = ARI_harness_mystic_resources
-			icon = GFX_goal_ARI_harness_mystic_resources
-			cost = 3
-			relative_position_id = ARI_desire_of_power
-			prerequisite = { focus = ARI_desire_of_power }
-			x = 2
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				set_temp_variable = { mystic_progress_change = 10 }
-				ARI_change_mystic_progress = yes
-
-				add_ideas = ARI_mystery_reseacher
-			}
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+			FOCUS_FILTER_RESEARCH
 		}
-		focus = { #逆向研究反光环武器
-			id = ARI_anti_halo_reverse_engineering
-			icon = GFX_goal_ARI_anti_halo_reverse_engineering
-			cost = 3
-			relative_position_id = ARI_harness_mystic_resources
-			prerequisite = { focus = ARI_harness_mystic_resources }
-			x = -2
-			y = 1
-			search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				set_temp_variable = { mystic_progress_change = 10 }
-				ARI_change_mystic_progress = yes
-
-				custom_effect_tooltip = ARI_power_chaser_effect_change_2
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_army_attack_factor = 0.03 }
+		completion_reward = {
+			custom_effect_tooltip = ARI_power_chaser_effect_change_3
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.03
 				}
 			}
-		}
-		focus = { #尤斯蒂娜的投影
-			id = ARI_justyna_projection
-			icon = GFX_goal_ARI_justyna_projection
-			cost = 3
-			relative_position_id = ARI_anti_halo_reverse_engineering
-			prerequisite = { focus = ARI_royal_blood }
-			prerequisite = { focus = ARI_anti_halo_reverse_engineering }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_progress
-						PROGRESS = "80"
-					}
-					NOT = { check_variable = { ARI_mystic_progress < 80 } }
+			if = {
+				limit = {
+					has_tech = mystical_infantry_weapons_T1
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = mystical
 				}
 			}
-			x = -1
-			y = 1
-			search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				custom_effect_tooltip = ARI_power_chaser_effect_change_3
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.03 }
-				}
-
-				if = {
-					limit = { has_tech = mystical_infantry_weapons_T1 }
-					add_tech_bonus = {
-						bonus = 0.5
-						uses = 1
-						category = mystical
-					}
-				}
-				else = {
-					set_technology = {
+			else = {
+				set_technology = {
 					mystical_infantry_weapons_T1 = 1
+				}
+			}
+			division_template = {
+				name = "阿里乌斯神秘步兵小队"
+				regiments = {
+					infantry_sp = {
+						x = 0
+						y = 0
+					}
+					infantry_sp = {
+						x = 0
+						y = 1
+					}
+					infantry_sp = {
+						x = 1
+						y = 0
+					}
+					infantry_sp = {
+						x = 1
+						y = 1
+					}
+					fire_support_team_sp = {
+						x = 2
+						y = 1
 					}
 				}
-
-				division_template = {
-					name = "阿里乌斯神秘步兵小队"
-				
-					regiments = {
-				
-						infantry_sp = { x = 0 y = 0 } 
-						infantry_sp = { x = 0 y = 1 }
-						infantry_sp = { x = 1 y = 0 }
-						infantry_sp = { x = 1 y = 1 }
-						fire_support_team_sp = { x = 2 y = 1 }
+				support = {
+					recon = {
+						x = 0
+						y = 0
 					}
-					support = {
-						recon = {x=0 y=0}
-						fire_support_team_su_sa = {x=0 y=1}
-				
-				
-					}
-				
-					
-				}
-
-				#大教堂出现两个神秘步兵小队
-				138 = {
-					create_unit = {
-						division = "division_template = \"阿里乌斯神秘步兵小队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = ROOT
-						count = 2
+					fire_support_team_su_sa = {
+						x = 0
+						y = 1
 					}
 				}
-
-
+			}
+			#大教堂出现两个神秘步兵小队
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯神秘步兵小队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 2
+				}
 			}
 		}
-		focus = { #渴望突破
-			id = ARI_desiring_breakthrough
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_justyna_projection
-			prerequisite = { focus = ARI_justyna_projection }
-			available = {
-				# custom_override_tooltip = {
-				# 	tooltip = {
-				# 		localization_key =  ARI_has_mystic_progress
-				# 		PROGRESS = "100"
-				# 	}
-				# 	check_variable = { ARI_mystic_progress = 100 }
-				# }
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "2"
-					}
-					check_variable = { ARI_mystic_rank = 2 }
+	}
+	focus = {
+		#渴望突破
+		id = ARI_desiring_breakthrough
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_justyna_projection
+		prerequisite = {
+			focus = ARI_justyna_projection
+		}
+		available = {
+			# custom_override_tooltip = {
+			# 	tooltip = {
+			# 		localization_key =  ARI_has_mystic_progress
+			# 		PROGRESS = "100"
+			# 	}
+			# 	check_variable = { ARI_mystic_progress = 100 }
+			# }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "2"
 				}
-			}
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				# custom_effect_tooltip = ARI_change_mystic_rank_tt
-				# add_to_variable = { ARI_mystic_rank = 1 }
-				# set_variable = { ARI_mystic_progress = 0 }
-
-				custom_effect_tooltip = ARI_power_chaser_effect_change_5
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_research_speed_factor = 0.05 }
+				check_variable = {
+					ARI_mystic_rank = 2
 				}
-
 			}
 		}
-
-		###3.14研发阶段国策补全###
-
-		###第二阶段（RANK=2）
-		focus = { #研究圣三一的典籍
-			id = ARI_research_trinity_books
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_desiring_breakthrough
-			prerequisite = { focus = ARI_desiring_breakthrough }
-			prerequisite = { focus = ARI_traveller_operation }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "2"
-					}
-					check_variable = { ARI_mystic_rank = 2 }
-				}
-				custom_trigger_tooltip = {
-					tooltip = ARI_traveller_operation_Has_Completed_Trigger
-					has_global_flag = ARI_traveller_operation_Has_Completed
-				}
-				
-			}
-			x = 0
-			y = 3
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				#解锁决议，解读圣三一古书，30pp90天，10%进度
-				swap_ideas = {
-					remove_idea = ARI_mystery_reseacher
-					add_idea = ARI_mystery_reseacher_2
-				}
-				
-
-			}
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
 		}
-
-
-		focus = { #共享“崇高”的知识
-			id = ARI_share_highest_knowledge
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_research_trinity_books
-			prerequisite = { focus = ARI_research_trinity_books }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "2"
-					}
-					check_variable = { ARI_mystic_rank = 2 }
-				}
-			}
-			x = -2
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
+		completion_reward = {
+			# custom_effect_tooltip = ARI_change_mystic_rank_tt
+			# add_to_variable = { ARI_mystic_rank = 1 }
+			# set_variable = { ARI_mystic_progress = 0 }
+			custom_effect_tooltip = ARI_power_chaser_effect_change_5
+			hidden_effect = {
 				add_to_variable = {
-					ARI_mystic_progress = 10
+					ARI_power_chaser_research_speed_factor = 0.05
 				}
-
-				unlock_decision_tooltip = ARI_more_communication_with_gamatia
-
-				custom_effect_tooltip = ARI_power_chaser_effect_change_6
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_industrial_capacity_factory = 0.1 }
-				}
-				
-				136 = {
-					add_resource = {
-						type = resources_mm
-						amount = 24
-					}
-				}
-
 			}
 		}
-
-		focus = { #圣徒会与“契约”？
-			id = ARI_mystery_and_contrast
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_research_trinity_books
-			prerequisite = { focus = ARI_research_trinity_books }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "2"
-					}
-					check_variable = { ARI_mystic_rank = 2 }
+	}
+	###3.14研发阶段国策补全###
+	###第二阶段（RANK=2）
+	focus = {
+		#研究圣三一的典籍
+		id = ARI_research_trinity_books
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_desiring_breakthrough
+		prerequisite = {
+			focus = ARI_desiring_breakthrough
+		}
+		prerequisite = {
+			focus = ARI_traveller_operation
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "2"
+				}
+				check_variable = {
+					ARI_mystic_rank = 2
 				}
 			}
-			x = 2
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
+			custom_trigger_tooltip = {
+				tooltip = ARI_traveller_operation_Has_Completed_Trigger
+				has_global_flag = ARI_traveller_operation_Has_Completed
+			}
+		}
+		x = 0
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			#解锁决议，解读圣三一古书，30pp90天，10%进度
+			swap_ideas = {
+				remove_idea = ARI_mystery_reseacher
+				add_idea = ARI_mystery_reseacher_2
+			}
+		}
+	}
+	focus = {
+		#共享“崇高”的知识
+		id = ARI_share_highest_knowledge
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_research_trinity_books
+		prerequisite = {
+			focus = ARI_research_trinity_books
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "2"
+				}
+				check_variable = {
+					ARI_mystic_rank = 2
+				}
+			}
+		}
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_to_variable = {
+				ARI_mystic_progress = 10
+			}
+			unlock_decision_tooltip = ARI_more_communication_with_gamatia
+			custom_effect_tooltip = ARI_power_chaser_effect_change_6
+			hidden_effect = {
 				add_to_variable = {
-					ARI_mystic_progress = 20
-				}
-
-				unlock_decision_tooltip = ARI_find_memory_of_past
-
-				custom_effect_tooltip = ARI_power_chaser_effect_change_7
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.05 }
-					add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_max_org_factor = 0.05 }
-				}
-				
-
-			}
-		}
-
-		focus = { #为“投影”更换新设备
-			id = ARI_new_weapon_for_projection
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_research_trinity_books
-			prerequisite = { focus = ARI_mystery_and_contrast }
-			prerequisite = { focus = ARI_share_highest_knowledge }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "2"
-					}
-					check_variable = { ARI_mystic_rank = 2 }
+					ARI_power_chaser_industrial_capacity_factory = 0.1
 				}
 			}
-			x = 0
-			y = 4
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				unlock_decision_tooltip = ARI_new_weapons_for_projections
-				#解锁决议，圣徒会的新武器
-				custom_effect_tooltip = ARI_unlock_new_weapon_decisions_tt
-				hidden_effect = {
-					set_variable = {
-						ARI_new_weapon_for_projection_count = 0
-					}
+			136 = {
+				add_resource = {
+					type = resources_mm
+					amount = 24
 				}
 			}
 		}
-
-		###三阶段国策（RANK=3)###
-		focus = { #“神秘”的投影
-			id = ARI_projection_of_mystery
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_new_weapon_for_projection
-			prerequisite = { focus = ARI_new_weapon_for_projection }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "3"
-					}
-					check_variable = { ARI_mystic_rank = 3 }
+	}
+	focus = {
+		#圣徒会与“契约”？
+		id = ARI_mystery_and_contrast
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_research_trinity_books
+		prerequisite = {
+			focus = ARI_research_trinity_books
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "2"
 				}
-			}
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				custom_effect_tooltip = ARI_power_chaser_effect_change_8
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.05 }
-					add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_attack_factor = 0.05 }
-					add_to_variable = { ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_max_org_factor = 0.1 }
+				check_variable = {
+					ARI_mystic_rank = 2
 				}
 			}
 		}
-
-		focus = { #仪式准备
-			id = ARI_preparation_of_ritual
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_projection_of_mystery
-			prerequisite = { focus = ARI_projection_of_mystery }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "3"
-					}
-					check_variable = { ARI_mystic_rank = 3 }
-				}
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_to_variable = {
+				ARI_mystic_progress = 20
 			}
-			x = -2
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				136 = {
-					add_resource = {
-						type = resources_mm
-						amount = 24
-					}
+			unlock_decision_tooltip = ARI_find_memory_of_past
+			custom_effect_tooltip = ARI_power_chaser_effect_change_7
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.05
 				}
-
-				custom_effect_tooltip = ARI_power_chaser_effect_change_9
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_war_support_factor = 0.1 }
-					add_to_variable = { ARI_power_chaser_goods_factor = 0.1 }
+				add_to_variable = {
+					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_max_org_factor = 0.05
 				}
 			}
 		}
-
-		focus = { #仪式实验
-			id = ARI_experiment_of_ritual
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_projection_of_mystery
-			prerequisite = { focus = ARI_projection_of_mystery }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "3"
-					}
-					check_variable = { ARI_mystic_rank = 3 }
-				}
-			}
-			x = 2
-			y = 2
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				custom_effect_tooltip = ARI_power_chaser_effect_change_10
-				hidden_effect = {
-					add_to_variable = { ARI_power_chaser_war_support_factor = 0.05 }
-					add_to_variable = { ARI_power_chaser_stability = 0.05 }
-				}
-
-				country_event = {
-					id = ARI_beatrice.6
-				}
-			}
-			
+	}
+	focus = {
+		#为“投影”更换新设备
+		id = ARI_new_weapon_for_projection
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_research_trinity_books
+		prerequisite = {
+			focus = ARI_mystery_and_contrast
 		}
-
-
-		###四阶段（RANK=4）###
-		focus = { #准备决战兵器
-			id = ARI_prepare_the_final_weapon
-			#icon = 
-			cost = 3
-			relative_position_id = ARI_projection_of_mystery
-			prerequisite = { focus = ARI_preparation_of_ritual }
-			prerequisite = { focus = ARI_experiment_of_ritual }
-			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key =  ARI_has_mystic_rank
-						RANK = "4"
-					}
-					check_variable = { ARI_mystic_rank = 4 }
+		prerequisite = {
+			focus = ARI_share_highest_knowledge
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "2"
 				}
-			}
-			x = 0
-			y = 4
-			search_filters = { FOCUS_FILTER_RESEARCH }
-			completion_reward = {
-				custom_effect_tooltip = ARI_prepare_the_final_weapon_tt
-				hidden_effect = {
-				   set_technology = {
-						ARI_infantry_sp_bbl = 1
-						popup = no
-				   }
+				check_variable = {
+					ARI_mystic_rank = 2
 				}
-				#允许招募圣女的投影
-				#部署三个1营圣女投影（但没有该兵种）
-				division_template = {
-					name = "圣女的投影"
-					is_locked = yes
-				
-					regiments = {
-				
-						infantry_sp_bbl = { x = 0 y = 0 } 
-					}
-					support = {
-					}
-				
-					
-				}
-
-				#大教堂部署三个1营圣女投影
-				138 = {
-					create_unit = {
-						division = "division_template = \"圣女的投影\" start_experience_factor = 1 start_equipment_factor = 0.2 start_manpower_factor = 1"
-						owner = ROOT
-						count = 3
-					}
-				}
-				
 			}
 		}
-
-
-		focus = { #最后一步
+		x = 0
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ARI_new_weapons_for_projections
+			#解锁决议，圣徒会的新武器
+			custom_effect_tooltip = ARI_unlock_new_weapon_decisions_tt
+			hidden_effect = {
+				set_variable = {
+					ARI_new_weapon_for_projection_count = 0
+				}
+			}
+		}
+	}
+	###三阶段国策（RANK=3)###
+	focus = {
+		#“神秘”的投影
+		id = ARI_projection_of_mystery
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_new_weapon_for_projection
+		prerequisite = {
+			focus = ARI_new_weapon_for_projection
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "3"
+				}
+				check_variable = {
+					ARI_mystic_rank = 3
+				}
+			}
+		}
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_power_chaser_effect_change_8
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_defence_factor = 0.05
+				}
+				add_to_variable = {
+					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_attack_factor = 0.05
+				}
+				add_to_variable = {
+					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_max_org_factor = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		#仪式准备
+		id = ARI_preparation_of_ritual
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_projection_of_mystery
+		prerequisite = {
+			focus = ARI_projection_of_mystery
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "3"
+				}
+				check_variable = {
+					ARI_mystic_rank = 3
+				}
+			}
+		}
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			136 = {
+				add_resource = {
+					type = resources_mm
+					amount = 24
+				}
+			}
+			custom_effect_tooltip = ARI_power_chaser_effect_change_9
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_war_support_factor = 0.1
+				}
+				add_to_variable = {
+					ARI_power_chaser_goods_factor = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		#仪式实验
+		id = ARI_experiment_of_ritual
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_projection_of_mystery
+		prerequisite = {
+			focus = ARI_projection_of_mystery
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "3"
+				}
+				check_variable = {
+					ARI_mystic_rank = 3
+				}
+			}
+		}
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_power_chaser_effect_change_10
+			hidden_effect = {
+				add_to_variable = {
+					ARI_power_chaser_war_support_factor = 0.05
+				}
+				add_to_variable = {
+					ARI_power_chaser_stability = 0.05
+				}
+			}
+			country_event = {
+				id = ARI_beatrice.6
+			}
+		}
+	}
+	###四阶段（RANK=4）###
+	focus = {
+		#准备决战兵器
+		id = ARI_prepare_the_final_weapon
+		#icon = 
+		cost = 3
+		relative_position_id = ARI_projection_of_mystery
+		prerequisite = {
+			focus = ARI_preparation_of_ritual
+		}
+		prerequisite = {
+			focus = ARI_experiment_of_ritual
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = ARI_has_mystic_rank
+					RANK = "4"
+				}
+				check_variable = {
+					ARI_mystic_rank = 4
+				}
+			}
+		}
+		x = 0
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_prepare_the_final_weapon_tt
+			hidden_effect = {
+				set_technology = {
+					ARI_infantry_sp_bbl = 1
+					popup = no
+				}
+			}
+			#允许招募圣女的投影
+			#部署三个1营圣女投影（但没有该兵种）
+			division_template = {
+				name = "圣女的投影"
+				is_locked = yes
+				regiments = {
+					infantry_sp_bbl = {
+						x = 0
+						y = 0
+					}
+				}
+				support = {
+				}
+			}
+			#大教堂部署三个1营圣女投影
+			138 = {
+				create_unit = {
+					division = "division_template = \"圣女的投影\" start_experience_factor = 1 start_equipment_factor = 0.2 start_manpower_factor = 1"
+					owner = ROOT
+					count = 3
+				}
+			}
+		}
+	}
+	focus = {
+		#最后一步
 		id = ARI_the_final_step
 		#icon = 
 		cost = 3
 		relative_position_id = ARI_prepare_the_final_weapon
-		prerequisite = { focus = ARI_prepare_the_final_weapon }
+		prerequisite = {
+			focus = ARI_prepare_the_final_weapon
+		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key =  ARI_has_mystic_rank
+					localization_key = ARI_has_mystic_rank
 					RANK = "4"
 				}
-				check_variable = { ARI_mystic_rank = 4 }
+				check_variable = {
+					ARI_mystic_rank = 4
+				}
 			}
-
 			##和两大校交战
 			has_war_with = GEH
 			has_war_with = TRI
-
 			##两大学校任意一个投降
 			OR = {
 				TRI = {
 					surrender_progress > 0.99
 				}
-
 				GEH = {
 					surrender_progress > 0.99
 				}
@@ -624,17 +751,15 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 		completion_reward = {
-			
-
 			custom_effect_tooltip = ARI_this_is_final_war_tt
 			#TODO:触发事件“举世皆敌”
 			#大概就是数秘术知道夫人要干什么了，把她踢出了数秘术【完成】
 			#同时部分知道会发生什么的学生也选择逃跑【完成】
 			#夏莱会带着其他学园和凯撒加入战斗【完成】
-
 			#移除民族精神“数秘术成员”【完成】
 			#移除民族精神“阿里乌斯武装学生部队”【完成】
 			#移除民族精神“阿里乌斯特战部队”【完成】
@@ -646,45 +771,72 @@ focus_tree = {
 			#每个月四阶段进度+1%
 			#现在需要彻底击败阿里乌斯才能结束古圣堂之战
 			#完成4阶段突破时游戏进入结局
-
 			hidden_effect = {
-				country_event = {
-					id = ARI_beatrice.100
-					days = 2
+				#	country_event = {
+				#		id = ARI_beatrice.100
+				#		days = 2
+				#	}
+				#	country_event = {
+				#		id = ARI_beatrice.101
+				#		days = 3
+				#	}
+				#	country_event = {
+				#		id = ARI_beatrice.102
+				#		days = 5
+				#	}
+				remove_ideas = {
+					ARI_Gematria_member
+					ARI_armed_students_modifier
+					ARI_special_force
+					ARI_Intelligence_department
 				}
-
-				country_event = {
-					id = ARI_beatrice.101
-					days = 3
-				}
-
-				country_event = {
-					id = ARI_beatrice.102
-					days = 5
-				}
-
 				division_template = {
 					name = "阿里乌斯神秘步兵大队"
-				
 					regiments = {
-				
-						infantry_sp = { x = 0 y = 0 } 
-						infantry_sp = { x = 0 y = 1 }
-						infantry_sp = { x = 0 y = 2 } 
-						infantry_sp = { x = 0 y = 3 }
-						infantry_sp = { x = 1 y = 0 }
-						infantry_sp = { x = 1 y = 1 }
-						infantry_sp = { x = 1 y = 2 }
-						infantry_sp = { x = 1 y = 3 }
-						infantry_sp = { x = 2 y = 0 } 
-						infantry_sp = { x = 1 y = 1 }
+						infantry_sp = {
+							x = 0
+							y = 0
+						}
+						infantry_sp = {
+							x = 0
+							y = 1
+						}
+						infantry_sp = {
+							x = 0
+							y = 2
+						}
+						infantry_sp = {
+							x = 0
+							y = 3
+						}
+						infantry_sp = {
+							x = 1
+							y = 0
+						}
+						infantry_sp = {
+							x = 1
+							y = 1
+						}
+						infantry_sp = {
+							x = 1
+							y = 2
+						}
+						infantry_sp = {
+							x = 1
+							y = 3
+						}
+						infantry_sp = {
+							x = 2
+							y = 0
+						}
+						infantry_sp = {
+							x = 1
+							y = 1
+						}
 					}
 					support = {
 					}
-				
-					
 				}
-
 				#获得36个10连神秘步兵
 				138 = {
 					create_unit = {
@@ -693,7 +845,6 @@ focus_tree = {
 						count = 36
 					}
 				}
-
 				#大教堂部署5个1营圣女投影
 				138 = {
 					create_unit = {
@@ -702,2557 +853,3304 @@ focus_tree = {
 						count = 5
 					}
 				}
-
 			}
-
 		}
 	}
-
-
 	#国外行动部分
-		focus = { #新一届“向导”
-			id = ARI_new_guide
-			icon = GFX_goal_ARI_new_guide
-			cost = 3
-			x = 2
-			y = -1
-			search_filters = { FOCUS_FILTER_POLITICAL }
-			completion_reward = {
-				add_war_support = 0.05
-				#custom_effect_tooltip = ARI_new_guide_tt
-				set_country_flag = ARI_foreign_operations_available
-				set_variable = { ARI_materials = 0 }
-				set_variable = { ARI_materials_monthly_modifier = 0 }
-				unlock_decision_tooltip = ARI_outside_recon
-				add_dynamic_modifier = {
-					modifier = ARI_Intelligence_department
+	focus = {
+		#新一届“向导”
+		id = ARI_new_guide
+		icon = GFX_goal_ARI_new_guide
+		cost = 3
+		x = 2
+		y = -1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			#custom_effect_tooltip = ARI_new_guide_tt
+			set_country_flag = ARI_foreign_operations_available
+			set_variable = {
+				ARI_materials = 0
+			}
+			set_variable = {
+				ARI_materials_monthly_modifier = 0
+			}
+			unlock_decision_tooltip = ARI_outside_recon
+			add_dynamic_modifier = {
+				modifier = ARI_Intelligence_department
+			}
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.1
+					days = 5
 				}
-				hidden_effect = {
+			}
+		}
+	}
+	#数秘术部分
+	focus = {
+		#与数密术的交易
+		id = ARI_Gematria
+		icon = GFX_goal_ARI_Gematria
+		cost = 5
+		relative_position_id = ARI_new_guide
+		prerequisite = {
+			focus = ARI_new_guide
+		}
+		x = -3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			#获得国家精神“数秘术成员”
+			add_dynamic_modifier = {
+				modifier = ARI_Gematria_member
+			}
+			country_event = ARI_beatrice.7
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.8
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		#黑服的补给交易
+		id = ARI_black_suit
+		icon = GFX_goal_ARI_black_suit
+		relative_position_id = ARI_Gematria
+		prerequisite = {
+			focus = ARI_Gematria
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#开启数秘术交易面板
+			custom_effect_tooltip = ARI_Gematria_new_trade_tt
+		}
+	}
+	focus = {
+		#巨匠的神秘造物
+		id = ARI_Maesutoro
+		icon = GFX_goal_ARI_Maesutoro
+		relative_position_id = ARI_black_suit
+		prerequisite = {
+			focus = ARI_harness_mystic_resources
+		}
+		prerequisite = {
+			focus = ARI_black_suit
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			#开启数秘术交易新面板
+			unlock_decision_tooltip = {
+				decision = ARI_Maesutoro_trade
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#戈尔孔达的禁忌装备
+		id = ARI_Gorukosoda
+		icon = GFX_goal_ARI_Gorukosoda
+		relative_position_id = ARI_black_suit
+		prerequisite = {
+			focus = ARI_black_suit
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#开启数秘术交易新面板
+			unlock_decision_tooltip = ARI_Gorukosoda_cluster_bomb
+			unlock_decision_tooltip = ARI_Gorukosoda_anaesthetic_gas
+			unlock_decision_tooltip = ARI_Gorukosoda_halo_depression_device
+			unlock_decision_tooltip = ARI_Gorukosoda_mystery_strengthen_device
+			unlock_decision_tooltip = ARI_Gorukosoda_anti_halo_bomb
+		}
+	}
+	focus = {
+		#数密术学术交流
+		id = ARI_Gematria_academic_exchange
+		icon = GFX_goal_ARI_Gematria_academic_exchange
+		relative_position_id = ARI_Maesutoro
+		prerequisite = {
+			focus = ARI_Maesutoro
+		}
+		prerequisite = {
+			focus = ARI_Gorukosoda
+		}
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	#搞事部分
+	focus = {
+		#暗区行动
+		id = ARI_operation_dark_zone
+		icon = GFX_goal_ARI_operation_dark_zone
+		cost = 3
+		relative_position_id = ARI_new_guide
+		prerequisite = {
+			focus = ARI_new_guide
+		}
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+			}
+			set_country_flag = ARI_black_market_available
+			unlock_decision_tooltip = ARI_black_market_guns_in
+			unlock_decision_tooltip = ARI_black_market_guns_out
+			unlock_decision_tooltip = ARI_black_market_support_in
+			unlock_decision_tooltip = ARI_black_market_support_out
+			custom_effect_tooltip = ARI_operation_dark_zone_tt
+			add_to_variable = {
+				ARI_Intelligence_department_industrial_factory_donations = 1
+			}
+			add_to_variable = {
+				ARI_Intelligence_department_ARI_materials_monthly_modifier = 20
+			}
+			add_to_variable = {
+				ARI_materials_monthly_modifier = 20
+			}
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.2
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		#行动目标：圣三一
+		id = ARI_Trinity_operation
+		icon = GFX_goal_ARI_Trinity_intelligence
+		relative_position_id = ARI_operation_dark_zone
+		prerequisite = {
+			focus = ARI_operation_dark_zone
+		}
+		cost = 3
+		x = -1
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = ARI_intelligence_in_TRI_0
+			set_variable = {
+				ARI_intelligence_in_TRI_rank = 0
+			}
+			country_event = ARI_beatrice.8
+			#解锁对外行动决议
+			unlock_decision_tooltip = {
+				decision = ARI_intelligence_Trinity_branch
+				show_effect_tooltip = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.3
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		#行动目标：格赫娜
+		id = ARI_Gehenna_operation
+		icon = GFX_goal_ARI_Gehenna_operation
+		relative_position_id = ARI_Trinity_operation
+		prerequisite = {
+			focus = ARI_Trinity_operation
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = ARI_intelligence_in_GEH_0
+			set_variable = {
+				ARI_intelligence_in_GEH_rank = 0
+			}
+			country_event = ARI_beatrice.9
+			#解锁对外行动决议
+			unlock_decision_tooltip = {
+				decision = ARI_intelligence_Gehenna_branch
+				show_effect_tooltip = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.4
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		#格黑娜间谍
+		id = ARI_spies_in_Gehenna
+		icon = GFX_goal_ARI_spies_in_Gehenna
+		cost = 3
+		relative_position_id = ARI_Gehenna_operation
+		prerequisite = {
+			focus = ARI_Gehenna_operation
+		}
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_temp_variable = {
+				intelligence_change = 10
+			}
+			ARI_change_intelligence_in_GEH = yes
+			#对外行动和情报部修正 特工位+1 特工被发现修正-10% 格黑娜渗透度+10%
+			custom_effect_tooltip = ARI_spies_in_Gehenna_tt
+			add_to_variable = {
+				ARI_Intelligence_department_operative_slot = 1
+			}
+			add_to_variable = {
+				ARI_Intelligence_department_own_operative_detection_chance_factor = -0.1
+			}
+		}
+	}
+	focus = {
+		#万魔殿秘密合作
+		id = ARI_secret_cooperation_with_Pandemonium
+		icon = GFX_goal_ARI_secret_cooperation_with_Pandemonium
+		cost = 3
+		relative_position_id = ARI_spies_in_Gehenna
+		prerequisite = {
+			focus = ARI_spies_in_Gehenna
+		}
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			#解锁对外行动：万魔殿秘密合作
+			unlock_decision_tooltip = {
+				decision = ARI_Pandemonium_students_training
+				show_effect_tooltip = yes
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_suppress_Prefect_Team
+				show_effect_tooltip = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.5
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		#圣三一的内应
+		id = ARI_collaborator_in_Trinity
+		icon = GFX_goal_ARI_collaborator_in_Trinity
+		cost = 3
+		relative_position_id = ARI_Trinity_operation
+		prerequisite = {
+			focus = ARI_Trinity_operation
+		}
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = ARI_min_intelligence_tt
+				TAG = TRI
+			}
+			set_variable = {
+				ARI_min_intelligence_in_TRI = 30
+			}
+			clamp_variable = {
+				var = ARI_intelligence_in_TRI
+				min = var:ARI_min_intelligence_in_TRI
+				max = 100
+			}
+			#解锁对外行动决议：加强圣三一情报网络
+			unlock_decision_tooltip = {
+				decision = ARI_connect_with_mika
+				show_effect_tooltip = yes
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_Trinity_intelligence_net
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#黑市情报网络
+		id = ARI_black_market_intelligence_net
+		icon = GFX_goal_ARI_black_market_intelligence_net
+		relative_position_id = ARI_operation_dark_zone
+		prerequisite = {
+			focus = ARI_operation_dark_zone
+		}
+		cost = 3
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 25
+			create_intelligence_agency = yes
+			hidden_effect = {
+				random_intelligence_agency_upgrades = yes
+				random_intelligence_agency_upgrades = yes
+				country_event = {
+					id = ARI_beatrice_diplomacy.6
+					days = 5
+				}
+			}
+			custom_effect_tooltip = ARI_black_market_intelligence_net_tt
+			add_to_variable = {
+				ARI_Intelligence_department_operative_slot = 1
+			}
+			unlock_decision_tooltip = ARI_spread_rumours_TRI
+			unlock_decision_tooltip = ARI_spread_rumours_GEH
+			#解锁对外行动决议-黑市情报交流（事件）
+			unlock_decision_tooltip = {
+				decision = ARI_intelligence_exchange
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#渗透黑市佣兵团
+		id = ARI_black_market_mercenaries
+		icon = GFX_goal_ARI_black_market_mercenaries
+		relative_position_id = ARI_black_market_intelligence_net
+		prerequisite = {
+			focus = ARI_black_market_intelligence_net
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_ideas = ARI_mercenaries_in_black_market
+			custom_effect_tooltip = ARI_black_market_mercenaries_tt
+			add_to_variable = {
+				ARI_Intelligence_department_experience_gain_army_factor = 0.05
+			}
+			#解锁对外行动决议：参与佣兵作战
+			unlock_decision_tooltip = {
+				decision = ARI_engage_in_mercenaries
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#主动出击
+		id = ARI_take_the_initiative
+		icon = GFX_goal_Trinity_operation
+		cost = 3
+		relative_position_id = ARI_black_market_mercenaries
+		prerequisite = {
+			focus = ARI_Trinity_operation
+		}
+		prerequisite = {
+			focus = ARI_black_market_mercenaries
+		}
+		prerequisite = {
+			focus = ARI_remember_our_rivals
+		}
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			army_experience = 10
+			#解锁对外行动-绑架圣三一学生 攻击圣三一设施
+			unlock_decision_tooltip = ARI_kidnap_Trinity_students
+			unlock_decision_tooltip = ARI_attack_Trinity_facilities
+		}
+	}
+	focus = {
+		#圣三一行动的经验
+		id = ARI_experience_in_Trinity
+		icon = GFX_goal_ARI_experience_in_Trinity
+		relative_position_id = ARI_collaborator_in_Trinity
+		prerequisite = {
+			focus = ARI_collaborator_in_Trinity
+		}
+		prerequisite = {
+			focus = ARI_take_the_initiative
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+		}
+		completion_reward = {
+			army_experience = 25
+			#对外行动和情报部修正：圣三一攻防+5%，侦查+10%，+1地图外工厂
+			add_ideas = ARI_experience_in_Trinity_modifier
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+	focus = {
+		#假旗行动
+		id = ARI_fake_flag_operation
+		icon = GFX_goal_ARI_fake_flag_operation
+		cost = 3
+		relative_position_id = ARI_experience_in_Trinity
+		prerequisite = {
+			focus = ARI_secret_cooperation_with_Pandemonium
+		}
+		prerequisite = {
+			focus = ARI_experience_in_Trinity
+		}
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#解锁对外行动：假旗行动
+			unlock_decision_tooltip = {
+				decision = ARI_operation_fake_flag_decision
+				show_effect_tooltip = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_diplomacy.7
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		#“旅者”行动
+		id = ARI_traveller_operation
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_experience_in_Trinity
+		prerequisite = {
+			focus = ARI_experience_in_Trinity
+		}
+		prerequisite = {
+			focus = ARI_desiring_breakthrough
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_traveller_operation_1_trigger_tt
+				check_variable = {
+					ARI_traveller_operation_prepare_progress = 100
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = ARI_traveller_operation_2_trigger_tt
+				check_variable = {
+					ARI_traveller_operation_progress = 1260
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = ARI_traveller_operation_3_trigger_tt
+				not = {
+					has_global_flag = ARITRI_Coup_Side_Lock_TRI
+				}
+			}
+		}
+		cost = 3
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		cancelable = no
+		select_effect = {
+			#由三一确定路线
+			#ARITRI_coup_effect_lock = yes
+			hidden_effect = {
+				TRI = {
+					mark_focus_tree_layout_dirty = yes
+					set_country_flag = TRI_investigation_normal_ending
+					activate_shine_on_focus = TRI_dissonance
 					country_event = {
-						id = ARI_beatrice_diplomacy.1
-						days = 5
+						id = TRI_autofocus.1
+						days = 7
 					}
 				}
 			}
 		}
-		
-		#数秘术部分
-			focus = { #与数密术的交易
-				id = ARI_Gematria
-				icon = GFX_goal_ARI_Gematria
-				cost = 5
-				relative_position_id = ARI_new_guide
-				prerequisite = { focus = ARI_new_guide }
-				x = -3
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					#获得国家精神“数秘术成员”
-					add_dynamic_modifier = {
-						modifier = ARI_Gematria_member
-					}
-					country_event = ARI_beatrice.7
-					hidden_effect = {
-						country_event = {
-							id = ARI_beatrice_diplomacy.8
-							days = 5
-						}
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						ARI_traveller_operation_prepare_progress < 100
 					}
 				}
+				custom_effect_tooltip = ARI_traveller_operation_1_progress_low_tt
 			}
-			focus = { #黑服的补给交易
-				id = ARI_black_suit
-				icon = GFX_goal_ARI_black_suit
-				relative_position_id = ARI_Gematria
-				prerequisite = { focus = ARI_Gematria }
-				cost = 3
-				x = 0
-				y = 1
-				search_filters = { FOCUS_FILTER_ECO }
-				completion_reward = {
-					#开启数秘术交易面板
-					custom_effect_tooltip = ARI_Gematria_new_trade_tt
+			if = {
+				limit = {
+					check_variable = {
+						ARI_traveller_operation_progress < 1260
+					}
 				}
+				custom_effect_tooltip = ARI_traveller_operation_2_progress_low_tt
 			}
-			focus = { #巨匠的神秘造物
-				id = ARI_Maesutoro
-				icon = GFX_goal_ARI_Maesutoro
-				relative_position_id = ARI_black_suit
-				prerequisite = { focus = ARI_harness_mystic_resources }
-				prerequisite = { focus = ARI_black_suit }
-				cost = 3
-				x = -1
-				y = 1
-				search_filters = { FOCUS_FILTER_RESEARCH }
-				completion_reward = {
-					#开启数秘术交易新面板
-					unlock_decision_tooltip = {
-						decision = ARI_Maesutoro_trade
-						show_effect_tooltip = yes
-					}
-				}
+			#需要对应事件（“旅者”行动）
+			else = {
+				ARITRI_coup_effect = yes
 			}
-			focus = { #戈尔孔达的禁忌装备
-				id = ARI_Gorukosoda
-				icon = GFX_goal_ARI_Gorukosoda
-				relative_position_id = ARI_black_suit
-				prerequisite = { focus = ARI_black_suit }
-				cost = 3
-				x = 1
-				y = 1
-				search_filters = { FOCUS_FILTER_ARMY }
-				completion_reward = {
-					#开启数秘术交易新面板
-					unlock_decision_tooltip = ARI_Gorukosoda_cluster_bomb
-					unlock_decision_tooltip = ARI_Gorukosoda_anaesthetic_gas
-					unlock_decision_tooltip = ARI_Gorukosoda_halo_depression_device
-					unlock_decision_tooltip = ARI_Gorukosoda_mystery_strengthen_device
-					unlock_decision_tooltip = ARI_Gorukosoda_anti_halo_bomb
-				}
-			}
-			focus = { #数密术学术交流
-				id = ARI_Gematria_academic_exchange
-				icon = GFX_goal_ARI_Gematria_academic_exchange
-				relative_position_id = ARI_Maesutoro
-				prerequisite = { focus = ARI_Maesutoro }
-				prerequisite = { focus = ARI_Gorukosoda }
-				cost = 5
-				x = 1
-				y = 1
-				search_filters = { FOCUS_FILTER_RESEARCH }
-				completion_reward = {
-					add_research_slot = 1
-				}
-			}
-		#搞事部分
-			focus = { #暗区行动
-				id = ARI_operation_dark_zone
-				icon = GFX_goal_ARI_operation_dark_zone
-				cost = 3
-				relative_position_id = ARI_new_guide
-				prerequisite = { focus = ARI_new_guide }
-				x = 2
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					add_political_power = 25
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 200
-					}
-					set_country_flag = ARI_black_market_available
-					unlock_decision_tooltip = ARI_black_market_guns_in
-					unlock_decision_tooltip = ARI_black_market_guns_out
-					unlock_decision_tooltip = ARI_black_market_support_in
-					unlock_decision_tooltip = ARI_black_market_support_out
-					custom_effect_tooltip = ARI_operation_dark_zone_tt
-					add_to_variable = { ARI_Intelligence_department_industrial_factory_donations = 1 }
-					add_to_variable = { ARI_Intelligence_department_ARI_materials_monthly_modifier = 20 }
-					add_to_variable = { ARI_materials_monthly_modifier = 20 }
-					hidden_effect = {
-						country_event = {
-							id = ARI_beatrice_diplomacy.2
-							days = 5
-						}
-					}
-				}
-			}
-	
-			focus = { #行动目标：圣三一
-				id = ARI_Trinity_operation
-				icon = GFX_goal_ARI_Trinity_intelligence
-				relative_position_id = ARI_operation_dark_zone
-				prerequisite = { focus = ARI_operation_dark_zone }
-				cost = 3
-				x = -1
-				y = 2
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					add_ideas = ARI_intelligence_in_TRI_0
-					set_variable = { ARI_intelligence_in_TRI_rank = 0 }
-					country_event = ARI_beatrice.8
-					#解锁对外行动决议
-					unlock_decision_tooltip = {
-						decision = ARI_intelligence_Trinity_branch
-						show_effect_tooltip = yes
-					}
-					hidden_effect = {
-						country_event = {
-							id = ARI_beatrice_diplomacy.3
-							days = 5
-						}
-					}
-				}
-			}
-			focus = { #行动目标：格赫娜
-				id = ARI_Gehenna_operation
-				icon = GFX_goal_ARI_Gehenna_operation
-				relative_position_id = ARI_Trinity_operation
-				prerequisite = { focus = ARI_Trinity_operation }
-				cost = 3
-				x = -1
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					add_ideas = ARI_intelligence_in_GEH_0
-					set_variable = { ARI_intelligence_in_GEH_rank = 0 }
-					country_event = ARI_beatrice.9
-					#解锁对外行动决议
-					unlock_decision_tooltip = {
-						decision = ARI_intelligence_Gehenna_branch
-						show_effect_tooltip = yes
-					}
-					hidden_effect = {
-						country_event = {
-							id = ARI_beatrice_diplomacy.4
-							days = 5
-						}
-					}
-				}
-			}
-			focus = { #格黑娜间谍
-				id = ARI_spies_in_Gehenna
-				icon = GFX_goal_ARI_spies_in_Gehenna
-				cost = 3
-				relative_position_id = ARI_Gehenna_operation
-				prerequisite = { focus = ARI_Gehenna_operation }
-				x = 0
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					set_temp_variable = { intelligence_change = 10 }
-					ARI_change_intelligence_in_GEH = yes
-					#对外行动和情报部修正 特工位+1 特工被发现修正-10% 格黑娜渗透度+10%
-					custom_effect_tooltip = ARI_spies_in_Gehenna_tt
-					add_to_variable = { ARI_Intelligence_department_operative_slot = 1 }
-					add_to_variable = { ARI_Intelligence_department_own_operative_detection_chance_factor = -0.1 }
-				}
-			}
-			focus = { #万魔殿秘密合作
-				id = ARI_secret_cooperation_with_Pandemonium
-				icon = GFX_goal_ARI_secret_cooperation_with_Pandemonium
-				cost = 3
-				relative_position_id = ARI_spies_in_Gehenna
-				prerequisite = { focus = ARI_spies_in_Gehenna }
-				x = 0
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					#解锁对外行动：万魔殿秘密合作
-					unlock_decision_tooltip = {
-						decision = ARI_Pandemonium_students_training
-						show_effect_tooltip = yes
-					}
-					unlock_decision_tooltip = {
-						decision = ARI_suppress_Prefect_Team
-						show_effect_tooltip = yes
-					}
-					hidden_effect = {
-						country_event = {
-							id = ARI_beatrice_diplomacy.5
-							days = 5
-						}
-					}
-				}
-			}
-
-			focus = { #圣三一的内应
-				id = ARI_collaborator_in_Trinity
-				icon = GFX_goal_ARI_collaborator_in_Trinity
-				cost = 3
-				relative_position_id = ARI_Trinity_operation
-				prerequisite = { focus = ARI_Trinity_operation }
-				x = 1
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					custom_effect_tooltip = {
-						localization_key = ARI_min_intelligence_tt
-						TAG = TRI
-					}
-					set_variable = { ARI_min_intelligence_in_TRI = 30 }
-					clamp_variable = {
-						var = ARI_intelligence_in_TRI
-						min = var:ARI_min_intelligence_in_TRI
-						max = 100
-					}
-					#解锁对外行动决议：加强圣三一情报网络
-					unlock_decision_tooltip = {
-						decision = ARI_connect_with_mika
-						show_effect_tooltip = yes
-					}
-					unlock_decision_tooltip = {
-						decision = ARI_Trinity_intelligence_net
-						show_effect_tooltip = yes
-					}
-				}
-			}
-
-			focus = { #黑市情报网络
-				id = ARI_black_market_intelligence_net
-				icon = GFX_goal_ARI_black_market_intelligence_net
-				relative_position_id = ARI_operation_dark_zone
-				prerequisite = { focus = ARI_operation_dark_zone }
-				cost = 3
-				x = 2
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					add_political_power = 25
-					create_intelligence_agency = yes
-					hidden_effect = {
-						random_intelligence_agency_upgrades = yes
-						random_intelligence_agency_upgrades = yes
-						country_event = {
-							id = ARI_beatrice_diplomacy.6
-							days = 5
-						}
-					}
-					
-					custom_effect_tooltip = ARI_black_market_intelligence_net_tt
-					add_to_variable = { ARI_Intelligence_department_operative_slot = 1 }
-					unlock_decision_tooltip = ARI_spread_rumours_TRI
-					unlock_decision_tooltip = ARI_spread_rumours_GEH
-					#解锁对外行动决议-黑市情报交流（事件）
-					unlock_decision_tooltip = {
-						decision = ARI_intelligence_exchange
-						show_effect_tooltip = yes
-					}
-				}
-			}
-			focus = { #渗透黑市佣兵团
-				id = ARI_black_market_mercenaries
-				icon = GFX_goal_ARI_black_market_mercenaries
-				relative_position_id = ARI_black_market_intelligence_net
-				prerequisite = { focus = ARI_black_market_intelligence_net }
-				cost = 3
-				x = 0
-				y = 1
-				search_filters = { FOCUS_FILTER_ARMY }
-				completion_reward = {
-					add_ideas = ARI_mercenaries_in_black_market
-					custom_effect_tooltip = ARI_black_market_mercenaries_tt
-					add_to_variable = { ARI_Intelligence_department_experience_gain_army_factor = 0.05 }
-					#解锁对外行动决议：参与佣兵作战
-					unlock_decision_tooltip = {
-						decision = ARI_engage_in_mercenaries
-						show_effect_tooltip = yes
-					}
-				}
-			}
-			focus = { #主动出击
-				id = ARI_take_the_initiative
-				icon = GFX_goal_Trinity_operation
-				cost = 3
-				relative_position_id = ARI_black_market_mercenaries
-				prerequisite = { focus = ARI_Trinity_operation }
-				prerequisite = { focus = ARI_black_market_mercenaries }
-				prerequisite = { focus = ARI_remember_our_rivals }
-				x = 0
-				y = 1
-				search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_ARMY }
-				completion_reward = {
-					army_experience = 10
-					#解锁对外行动-绑架圣三一学生 攻击圣三一设施
-					unlock_decision_tooltip = ARI_kidnap_Trinity_students
-					unlock_decision_tooltip = ARI_attack_Trinity_facilities
-				}
-			}
-
-			focus = { #圣三一行动的经验
-				id = ARI_experience_in_Trinity
-				icon = GFX_goal_ARI_experience_in_Trinity
-				relative_position_id = ARI_collaborator_in_Trinity
-				prerequisite = { focus = ARI_collaborator_in_Trinity }
-				prerequisite = { focus = ARI_take_the_initiative }
-				cost = 3
-				x = 0
-				y = 2
-				search_filters = { FOCUS_FILTER_ARMY_XP }
-				completion_reward = {
-					army_experience = 25
-					#对外行动和情报部修正：圣三一攻防+5%，侦查+10%，+1地图外工厂
-					add_ideas = ARI_experience_in_Trinity_modifier
-					add_offsite_building = {
-						type = industrial_complex
-						level = 1
-					}
-				}
-			}
-			focus = { #假旗行动
-				id = ARI_fake_flag_operation
-				icon = GFX_goal_ARI_fake_flag_operation
-				cost = 3
-				relative_position_id = ARI_experience_in_Trinity
-				prerequisite = { focus = ARI_secret_cooperation_with_Pandemonium }
-				prerequisite = { focus = ARI_experience_in_Trinity }
-				x = 1
-				y = 1
-				search_filters = { FOCUS_FILTER_ARMY }
-				completion_reward = {
-					#解锁对外行动：假旗行动
-					unlock_decision_tooltip = {
-						decision = ARI_operation_fake_flag_decision
-						show_effect_tooltip = yes
-					}
-					hidden_effect = {
-						country_event = {
-							id = ARI_beatrice_diplomacy.7
-							days = 5
-						}
-					}
-				}
-			}
-		focus = { #“旅者”行动
-			id = ARI_traveller_operation
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_experience_in_Trinity
-			prerequisite = { focus = ARI_experience_in_Trinity }
-			prerequisite = { focus = ARI_desiring_breakthrough }
-			available = {
-				custom_override_tooltip = {
-					tooltip =  ARI_traveller_operation_1_trigger_tt
-					check_variable = { ARI_traveller_operation_prepare_progress = 100 }
-				}
-				custom_override_tooltip = {
-					tooltip =  ARI_traveller_operation_2_trigger_tt
-					check_variable = { ARI_traveller_operation_progress = 1260 }
-				}
-				custom_override_tooltip = {
-					tooltip =  ARI_traveller_operation_3_trigger_tt
-					not = {
-						has_global_flag = ARITRI_Coup_Side_Lock_TRI
-					}
-				}
-			}
-			cost = 3
-			x = -2
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			cancelable = no
-			select_effect = {
-				#由三一确定路线
-				#ARITRI_coup_effect_lock = yes
-				hidden_effect = {
-					TRI = {
-						mark_focus_tree_layout_dirty = yes
-						set_country_flag = TRI_investigation_normal_ending
-						activate_shine_on_focus = TRI_dissonance
-						country_event = {
-							id = TRI_autofocus.1
-							days = 7
-						}
-					}
-				}
-			}
-			completion_reward = {
-				if = {
-					limit = { 
-						check_variable = {
-							ARI_traveller_operation_prepare_progress < 100
-						}
-					 }
-					custom_effect_tooltip = ARI_traveller_operation_1_progress_low_tt
-				}
-				if = {
-					limit = { 
-						check_variable = {
-							ARI_traveller_operation_progress < 1260
-						}
-					 }
-					custom_effect_tooltip = ARI_traveller_operation_2_progress_low_tt
-				}
-				#需要对应事件（“旅者”行动）
-				else = {
-					ARITRI_coup_effect = yes
-				}
-			}
-		}
-
-
-					
-		###3.17新增
-		focus = { #行动的教训
-			id = ARI_traveller_operation_lost
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_traveller_operation
-			prerequisite = { focus = ARI_traveller_operation }
-			allow_branch = {
-				has_completed_focus = ARI_traveller_operation
-			}
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = -1
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
+			hidden_effect = {
 				
 			}
 		}
-
-		focus = { #收回临机指挥权
-			id = ARI_get_back_command_power
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_traveller_operation_lost
-			prerequisite = { focus = ARI_traveller_operation_lost }
-			available = {
+	}
+	###3.17新增
+	focus = {
+		#行动的教训
+		id = ARI_traveller_operation_lost
+		icon = GFX_goal_unknown
+		relative_position_id = ARI_traveller_operation
+		prerequisite = {
+			focus = ARI_traveller_operation
+		}
+		allow_branch = {
+			has_completed_focus = ARI_traveller_operation
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = -1
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		#收回临机指挥权
+		id = ARI_get_back_command_power
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_traveller_operation_lost
+		prerequisite = {
+			focus = ARI_traveller_operation_lost
+		}
+		available = {
+			has_dynamic_modifier = {
+				modifier = ARI_catastrophic_traveller_operation
+			}
+		}
+		bypass = {
+			NOT = {
 				has_dynamic_modifier = {
 					modifier = ARI_catastrophic_traveller_operation
 				}
 			}
-			bypass = {
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_catastrophic_traveller_operation
-					}
+		}
+		cost = 3
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_command_power = 20
+			#减少“旅者”行动的灾难的效果
+			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_1
+			hidden_effect = {
+				add_to_variable = {
+					ARI_catastrophic_traveller_operation_army_org_factor = 0.2
 				}
-			}
-			cost = 3
-			x = -2
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				add_command_power = 20
-				#减少“旅者”行动的灾难的效果
-				custom_effect_tooltip = ARI_cut_traveller_operation_debuff_1
-				hidden_effect = {
-					add_to_variable = { ARI_catastrophic_traveller_operation_army_org_factor = 0.2 }
-					ARI_check_if_traveller_idea_replaced = yes
-				}
+				ARI_check_if_traveller_idea_replaced = yes
 			}
 		}
-
-		focus = { #回收特战队
-			id = ARI_get_back_special_force
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_traveller_operation_lost
-			prerequisite = { focus = ARI_traveller_operation_lost }
-			available = {
+	}
+	focus = {
+		#回收特战队
+		id = ARI_get_back_special_force
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_traveller_operation_lost
+		prerequisite = {
+			focus = ARI_traveller_operation_lost
+		}
+		available = {
+			has_dynamic_modifier = {
+				modifier = ARI_catastrophic_traveller_operation
+			}
+		}
+		bypass = {
+			NOT = {
 				has_dynamic_modifier = {
 					modifier = ARI_catastrophic_traveller_operation
 				}
 			}
-			bypass = {
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_catastrophic_traveller_operation
-					}
-				}
-			}
-			cost = 3
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				#解锁决议以减少“旅者”行动的灾难的效果
-				army_experience = 10
-
-				unlock_decision_tooltip = ARI_get_back_special_force_de
-
-				hidden_effect = {
-					set_variable = {
-						ARI_get_back_special_force_count = 0
-					}
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#解锁决议以减少“旅者”行动的灾难的效果
+			army_experience = 10
+			unlock_decision_tooltip = ARI_get_back_special_force_de
+			hidden_effect = {
+				set_variable = {
+					ARI_get_back_special_force_count = 0
 				}
 			}
 		}
-
-		focus = { #重申复仇理想
-			id = ARI_get_back_revenge_spirit
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_traveller_operation_lost
-			prerequisite = { focus = ARI_traveller_operation_lost }
-			available = {
+	}
+	focus = {
+		#重申复仇理想
+		id = ARI_get_back_revenge_spirit
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_traveller_operation_lost
+		prerequisite = {
+			focus = ARI_traveller_operation_lost
+		}
+		available = {
+			has_dynamic_modifier = {
+				modifier = ARI_catastrophic_traveller_operation
+			}
+		}
+		bypass = {
+			NOT = {
 				has_dynamic_modifier = {
 					modifier = ARI_catastrophic_traveller_operation
 				}
 			}
-			bypass = {
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_catastrophic_traveller_operation
-					}
-				}
-			}
-			cost = 3
-			x = 2
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				add_stability = 0.2
-				add_war_support = 0.2
-				#减少“旅者”行动的灾难的效果
-				unlock_decision_tooltip = ARI_get_back_revenge_spirit_de
+		}
+		cost = 3
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.2
+			#减少“旅者”行动的灾难的效果
+			unlock_decision_tooltip = ARI_get_back_revenge_spirit_de
+		}
+	}
+	focus = {
+		#弥补物资缺口
+		id = ARI_solve_supply_shorting
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_get_back_special_force
+		prerequisite = {
+			focus = ARI_get_back_special_force
+		}
+		prerequisite = {
+			focus = ARI_get_back_command_power
+		}
+		available = {
+			has_dynamic_modifier = {
+				modifier = ARI_lesson_traveller_operation
 			}
 		}
-
-		
-		focus = { #弥补物资缺口
-			id = ARI_solve_supply_shorting
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_get_back_special_force
-			prerequisite = { focus = ARI_get_back_special_force }
-			prerequisite = { focus = ARI_get_back_command_power }
-			available = {
+		bypass = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = ARI_catastrophic_traveller_operation
+				}
+			}
+			NOT = {
 				has_dynamic_modifier = {
 					modifier = ARI_lesson_traveller_operation
 				}
 			}
-			bypass = {
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_catastrophic_traveller_operation
+		}
+		cost = 3
+		x = -1
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		cancelable = no
+		select_effect = {
+			if = {
+				limit = {
+					has_completed_focus = ARI_march_towards_the_goal
+					NOT = {
+						has_country_flag = ARI_have_skiped_solve_supply_shorting
 					}
 				}
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_lesson_traveller_operation
-					}
-				}
-			}
-			cost = 3
-			x = -1
-			y = 2
-			search_filters = { FOCUS_FILTER_ECO }
-
-			cancelable = no
-
-			select_effect = {
-				if = { 
-					limit = { 
-						has_completed_focus = ARI_march_towards_the_goal 
-						NOT = { has_country_flag = ARI_have_skiped_solve_supply_shorting }
-					} 
-
-					complete_national_focus = ARI_solve_supply_shorting
-					set_country_flag = ARI_have_skiped_solve_supply_shorting
-				}
-			}
-
-			completion_reward = {
-				#减少“旅者”行动的灾难的效果
-				#解锁决议：重整物资供应
-				#花费物资或民工或军工(捐赠)减少“旅者”行动的教训的debuff如果已完成国策
-				#“向目标前进”立刻完成该国策并消完debuff
-				custom_effect_tooltip = ARI_immeditly_skip_debuff_supply_tooltip
-				unlock_decision_tooltip = ARI_fix_our_supply
+				complete_national_focus = ARI_solve_supply_shorting
+				set_country_flag = ARI_have_skiped_solve_supply_shorting
 			}
 		}
-
-		focus = { #处理“叛徒”
-			id = ARI_deal_with_traitor
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_get_back_special_force
-			prerequisite = { focus = ARI_get_back_special_force }
-			prerequisite = { focus = ARI_get_back_revenge_spirit }
-			available = {
+		completion_reward = {
+			#减少“旅者”行动的灾难的效果
+			#解锁决议：重整物资供应
+			#花费物资或民工或军工(捐赠)减少“旅者”行动的教训的debuff如果已完成国策
+			#“向目标前进”立刻完成该国策并消完debuff
+			custom_effect_tooltip = ARI_immeditly_skip_debuff_supply_tooltip
+			unlock_decision_tooltip = ARI_fix_our_supply
+		}
+	}
+	focus = {
+		#处理“叛徒”
+		id = ARI_deal_with_traitor
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_get_back_special_force
+		prerequisite = {
+			focus = ARI_get_back_special_force
+		}
+		prerequisite = {
+			focus = ARI_get_back_revenge_spirit
+		}
+		available = {
+			has_dynamic_modifier = {
+				modifier = ARI_lesson_traveller_operation
+			}
+		}
+		bypass = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = ARI_catastrophic_traveller_operation
+				}
+			}
+			NOT = {
 				has_dynamic_modifier = {
 					modifier = ARI_lesson_traveller_operation
 				}
 			}
-			bypass = {
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_catastrophic_traveller_operation
-					}
-				}
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_lesson_traveller_operation
-					}
-				}
+		}
+		cost = 3
+		x = 1
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ARI_deal_with_traitor_de
+			hidden_effect = {
+				#出现事件：叛徒的明天
+				country_event = ARI_beatrice.11
 			}
-			cost = 3
-			x = 1
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				unlock_decision_tooltip = ARI_deal_with_traitor_de
-
-				hidden_effect = {
-					#出现事件：叛徒的明天
-					country_event = ARI_beatrice.11
+		}
+	}
+	focus = {
+		#总结经验教训
+		id = ARI_conclude_our_experience
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_deal_with_traitor
+		prerequisite = {
+			focus = ARI_deal_with_traitor
+		}
+		prerequisite = {
+			focus = ARI_solve_supply_shorting
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_has_solved_traveller_problems
+				##debuff消完了
+				check_variable = {
+					ARI_lesson_traveller_operation_army_attack_factor = 0
+				}
+				check_variable = {
+					ARI_lesson_traveller_operation_army_defence_factor = 0
+				}
+				check_variable = {
+					ARI_lesson_traveller_operation_army_org_factor = 0
+				}
+				check_variable = {
+					ARI_lesson_traveller_operation_industrial_capacity_factory = 0
+				}
+				check_variable = {
+					ARI_lesson_traveller_operation_war_support_factor = 0
+				}
+				check_variable = {
+					ARI_lesson_traveller_operation_stability = 0
+				}
+				check_variable = {
+					ARI_lesson_traveller_operation_goods_factor = 0
 				}
 			}
 		}
-
-
-		focus = { #总结经验教训
-			id = ARI_conclude_our_experience
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_deal_with_traitor
-			prerequisite = { focus = ARI_deal_with_traitor }
-			prerequisite = { focus = ARI_solve_supply_shorting }
-			available = {
-				custom_override_tooltip = {
-					tooltip = ARI_has_solved_traveller_problems
-					##debuff消完了
-					check_variable = { ARI_lesson_traveller_operation_army_attack_factor = 0 }
-					check_variable = { ARI_lesson_traveller_operation_army_defence_factor = 0 }
-					check_variable = { ARI_lesson_traveller_operation_army_org_factor = 0 }
-					check_variable = { ARI_lesson_traveller_operation_industrial_capacity_factory = 0 }
-					check_variable = { ARI_lesson_traveller_operation_war_support_factor = 0 }
-					check_variable = { ARI_lesson_traveller_operation_stability = 0 }
-					check_variable = { ARI_lesson_traveller_operation_goods_factor = 0 }
-				}
-			}
-			cost = 3
-			x = -1
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				#修正“旅者”行动的教训的民族精神
-				army_experience = 50
-
-				add_ideas = ARI_a_lesson_from_traveller_operation
-
-				hidden_effect = {
-					remove_dynamic_modifier = {
-						modifier = ARI_lesson_traveller_operation
-					}
+		cost = 3
+		x = -1
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#修正“旅者”行动的教训的民族精神
+			army_experience = 50
+			add_ideas = ARI_a_lesson_from_traveller_operation
+			hidden_effect = {
+				remove_dynamic_modifier = {
+					modifier = ARI_lesson_traveller_operation
 				}
 			}
 		}
-
-		focus = { #解开帷幕
-			id = ARI_open_the_curtain
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_traveller_operation
-			prerequisite = { focus = ARI_traveller_operation }
-			prerequisite = { focus = ARI_fake_flag_operation}
-			allow_branch = {
-				has_completed_focus = ARI_traveller_operation
-			}
-			available = {
-				always = no #自动跳过
-			}
-
-			bypass = {
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_lesson_traveller_operation
-					}
-				}
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = ARI_catastrophic_traveller_operation
-					}
+	}
+	focus = {
+		#解开帷幕
+		id = ARI_open_the_curtain
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_traveller_operation
+		prerequisite = {
+			focus = ARI_traveller_operation
+		}
+		prerequisite = {
+			focus = ARI_fake_flag_operation
+		}
+		allow_branch = {
+			has_completed_focus = ARI_traveller_operation
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		bypass = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = ARI_lesson_traveller_operation
 				}
 			}
-
-			cost = 3
-			x = 5
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				#圣三一现在可以反制阿里乌斯的渗透现在在不建立安全屋的情况下，对圣三一方的主动进攻行动会减少渗透度
-				custom_effect_tooltip = ARI_open_the_curtain_tt
-				TRI = { custom_effect_tooltip = TRI_anti_spy_available_tt }
-			}
-		}
-
-		focus = { #重新审视行动方针
-			id = ARI_revise_our_operation_plan
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_open_the_curtain
-			prerequisite = { focus = ARI_open_the_curtain }
-
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = -2
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				unlock_decision_tooltip = ARI_build_safe_home
-				unlock_decision_tooltip = ARI_send_sf_to_trinity
-			}
-		}
-
-		focus = { #灵活行动限制
-			id = ARI_relax_operation_restrictions
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_revise_our_operation_plan
-			prerequisite = { focus = ARI_revise_our_operation_plan }
-
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				unlock_decision_tooltip = ARI_disguise_conference_preparer
-				unlock_decision_tooltip = ARI_control_trinity_border
-			}
-		}
-
-		focus = { #进一步强化合作
-			id = ARI_further_strengthen_cooperation
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_open_the_curtain
-			prerequisite = { focus = ARI_open_the_curtain }
-			prerequisite = { focus = ARI_secret_cooperation_with_Pandemonium }
-
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = 2
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				#
-				unlock_decision_tooltip = ARI_pandaemonium_secret_material_change
-				unlock_decision_tooltip = ARI_a_trip_to_gehenna
-			}
-		}
-
-		focus = { #参加格黑娜社团活动
-			id = ARI_join_gehenna_club_fake
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_further_strengthen_cooperation
-			prerequisite = { focus = ARI_further_strengthen_cooperation }
-
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				#
-				unlock_decision_tooltip = ARI_join_spring_club_activity
-				unlock_decision_tooltip = ARI_join_food_seminar_club_activity
-			}
-		}
-
-		focus = { #准备乐园行动
-			id = ARI_prepare_operation_eden
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_relax_operation_restrictions
-			prerequisite = { focus = ARI_relax_operation_restrictions }
-			prerequisite = { focus = ARI_conclude_our_experience }
-			prerequisite = { focus = ARI_join_gehenna_club_fake }
-
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = 0
-			y = 4
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-			completion_reward = {
-				#解锁准备决议5
-				unlock_decision_category_tooltip = ARI_preparation_of_operation_eden_decisions
-			}
-		}
-
-		#TODO：需要在什么时候完成这个国策
-		focus = { #行动时刻
-			id = ARI_time_for_final_action
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_prepare_operation_eden
-
-			available = {
-				always = no #自动跳过
-			}
-			cost = 3
-			x = 0
-			y = 4
-			search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
-
-			
-
-			completion_reward = {
-				unlock_decision_category_tooltip  = ARI_suppress_resistance_eden_decisions
-				#古圣堂获得48个10连神秘步兵营
-				138 = {
-					create_unit = {
-						division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = ROOT
-						count = 48
-					}
-				}
-
-				add_ideas = ARI_eden_action_chaos
-
-				hidden_effect = {
-					country_event = {
-						id = ARI_beatrice_operations.50
-						days = 5
-					}
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = ARI_catastrophic_traveller_operation
 				}
 			}
 		}
-
-		focus = { #压制残余抵抗
-			id = ARI_suppress_resistance_eden_operation
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_time_for_final_action
-			prerequisite = { focus = ARI_time_for_final_action }
-			available = {
-			}
-			cost = 3
-			x = -2
-			y = 2
-			search_filters = { FOCUS_FILTER_ARMY }
-
-			completion_reward = {
-				unlock_decision_tooltip  = ARI_suppress_resistance_eden_decision
+		cost = 3
+		x = 5
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#圣三一现在可以反制阿里乌斯的渗透现在在不建立安全屋的情况下，对圣三一方的主动进攻行动会减少渗透度
+			custom_effect_tooltip = ARI_open_the_curtain_tt
+			TRI = {
+				custom_effect_tooltip = TRI_anti_spy_available_tt
 			}
 		}
-
-		focus = { #加强“契约”的力量
-			id = ARI_enhance_contract_power
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_time_for_final_action
-			prerequisite = { focus = ARI_time_for_final_action }
-			available = {
+	}
+	focus = {
+		#重新审视行动方针
+		id = ARI_revise_our_operation_plan
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_open_the_curtain
+		prerequisite = {
+			focus = ARI_open_the_curtain
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ARI_build_safe_home
+			unlock_decision_tooltip = ARI_send_sf_to_trinity
+		}
+	}
+	focus = {
+		#灵活行动限制
+		id = ARI_relax_operation_restrictions
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_revise_our_operation_plan
+		prerequisite = {
+			focus = ARI_revise_our_operation_plan
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ARI_disguise_conference_preparer
+			unlock_decision_tooltip = ARI_control_trinity_border
+		}
+	}
+	focus = {
+		#进一步强化合作
+		id = ARI_further_strengthen_cooperation
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_open_the_curtain
+		prerequisite = {
+			focus = ARI_open_the_curtain
+		}
+		prerequisite = {
+			focus = ARI_secret_cooperation_with_Pandemonium
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#
+			unlock_decision_tooltip = ARI_pandaemonium_secret_material_change
+			unlock_decision_tooltip = ARI_a_trip_to_gehenna
+		}
+	}
+	focus = {
+		#参加格黑娜社团活动
+		id = ARI_join_gehenna_club_fake
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_further_strengthen_cooperation
+		prerequisite = {
+			focus = ARI_further_strengthen_cooperation
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#
+			unlock_decision_tooltip = ARI_join_spring_club_activity
+			unlock_decision_tooltip = ARI_join_food_seminar_club_activity
+		}
+	}
+	focus = {
+		#准备乐园行动
+		id = ARI_prepare_operation_eden
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_relax_operation_restrictions
+		prerequisite = {
+			focus = ARI_relax_operation_restrictions
+		}
+		prerequisite = {
+			focus = ARI_conclude_our_experience
+		}
+		prerequisite = {
+			focus = ARI_join_gehenna_club_fake
+		}
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = 0
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#解锁准备决议5
+			unlock_decision_category_tooltip = ARI_preparation_of_operation_eden_decisions
+		}
+	}
+	#TODO：需要在什么时候完成这个国策
+	focus = {
+		#行动时刻
+		id = ARI_time_for_final_action
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_prepare_operation_eden
+		available = {
+			always = no			#自动跳过
+		}
+		cost = 3
+		x = 0
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = ARI_suppress_resistance_eden_decisions
+			#古圣堂获得48个10连神秘步兵营
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 48
+				}
 			}
-			cost = 3
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_ARMY }
-
-			completion_reward = {
-				unlock_decision_tooltip  = ARI_enhance_contract_power_eden_decision
+			add_ideas = ARI_eden_action_chaos
+			hidden_effect = {
+				country_event = {
+					id = ARI_beatrice_operations.50
+					days = 5
+				}
 			}
 		}
-
-		focus = { #协调增援部队
-			id = ARI_coordinate_reinforcement_troops
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_time_for_final_action
-			prerequisite = { focus = ARI_time_for_final_action }
-			available = {
-			}
-			cost = 3
-			x = 2
-			y = 2
-			search_filters = { FOCUS_FILTER_ARMY }
-
-			completion_reward = {
-				#TODO:允许阿里乌斯通过解除未经计划的攻势
-			}
+	}
+	focus = {
+		#压制残余抵抗
+		id = ARI_suppress_resistance_eden_operation
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_time_for_final_action
+		prerequisite = {
+			focus = ARI_time_for_final_action
 		}
-
-		focus = { #赌上一切
-			id = ARI_put_evenything_on_bet
-			#icon = GFX_goal_unknown
-			relative_position_id = ARI_enhance_contract_power
-			prerequisite = { focus = ARI_suppress_resistance_eden_operation }
-			prerequisite = { focus = ARI_enhance_contract_power }
-			prerequisite = { focus = ARI_coordinate_reinforcement_troops }
-			available = {
-			}
-			cost = 3
-			x = 0
-			y = 2
-			search_filters = { FOCUS_FILTER_ARMY }
-
-			completion_reward = {
-				division_template = {
-					name = "阿里乌斯重装混成步兵营"
-
-					is_locked = yes
-
-					regiments = {
-						infantry_heavy = { x = 0 y = 0 } 
-						infantry_heavy = { x = 0 y = 1 }
-						infantry_heavy = { x = 0 y = 2 } 
-						infantry_heavy = { x = 1 y = 0 }
-						infantry_heavy = { x = 1 y = 1 }
-						medium_armor = { x = 2 y = 0 }
-						medium_armor = { x = 2 y = 1 }
-						medium_armor = { x = 2 y = 2 } 
-						medium_armor = { x = 3 y = 0 }
-						medium_armor = { x = 3 y = 1 }
-					}
-					support = {
-					}
-				}
-
-				division_template = {
-					name = "阿里乌斯火力支援步兵营"
-
-					is_locked = yes
-
-					regiments = {
-						infantry = { x = 0 y = 0 } 
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 } 
-						infantry = { x = 0 y = 3 } 
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						fire_support_team_la = { x = 2 y = 0 }
-						fire_support_team_la = { x = 2 y = 1 }
-					}
-					support = {
-					}
-				}
-
-				#获得2个5坦5重装步兵营连
-				138 = {
-					create_unit = {
-						division = "division_template = \"阿里乌斯重装混成步兵营\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = ROOT
-						count = 2
-					}
-				}
-
-				#获得4个10连特战步兵大队
-				138 = {
-					create_unit = {
-						division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = ROOT
-						count = 4
-					}
-				}
-
-				#10个特战步兵
-				138 = {
-					create_unit = {
-						division = "division_template = \"阿里乌斯特战部队\" start_experience_factor = 0.6 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = ROOT
-						count = 10
-					}
-				}
-
-				#8个7步兵压制2火力支援连
-				138 = {
-					create_unit = {
-						division = "division_template = \"阿里乌斯火力支援步兵营\" start_experience_factor = 0.6 start_equipment_factor = 1 start_manpower_factor = 1"
-						owner = ROOT
-						count = 8
-					}
-				}
-				
-
-				unlock_decision_tooltip  = ARI_enhance_contract_power_infinity_decision
-
-				#TODO：解锁决议“部署希罗尼穆斯”
-			}
+		available = {
 		}
-			
-	#内政部分
-		focus = { #面见“监工”
-			id = ARI_meeting_with_supervisor
-			icon = GFX_goal_ARI_meeting_with_farmers
-			cost = 5
-			x = 16
-			y = 0
-			search_filters = { FOCUS_FILTER_POLITICAL }
-			completion_reward = {
-				add_stability = 0.05
-				# add_advisor_role = {
-				# 	character = ARI_code_01
-				# 	advisor = {
-				# 		slot = political_advisor
-				# 		idea_token = ARI_code_01_ac
-				# 		traits = { arbitrary_supervisor }
-				# 		cost = 100
-				# 	}
-				# }
-				# add_advisor_role = {
-				# 	character = ARI_code_02
-				# 	advisor = {
-				# 		slot = political_advisor
-				# 		idea_token = ARI_code_02_ac
-				# 		traits = { local_ruler }
-				# 		cost = 100
-				# 	}
-				# }
-			}
+		cost = 3
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY
 		}
-		#维稳部分
-			focus = { #虚无永存
-				id = ARI_Nihilism_forever
-				#icon = 
-				relative_position_id = ARI_meeting_with_supervisor
-				prerequisite = { focus = ARI_meeting_with_supervisor }
-				cost = 3
-				x = -2
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					add_political_power = 50
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 1000
+		completion_reward = {
+			unlock_decision_tooltip = ARI_suppress_resistance_eden_decision
+		}
+	}
+	focus = {
+		#加强“契约”的力量
+		id = ARI_enhance_contract_power
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_time_for_final_action
+		prerequisite = {
+			focus = ARI_time_for_final_action
+		}
+		available = {
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ARI_enhance_contract_power_eden_decision
+		}
+	}
+	focus = {
+		#协调增援部队
+		id = ARI_coordinate_reinforcement_troops
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_time_for_final_action
+		prerequisite = {
+			focus = ARI_time_for_final_action
+		}
+		available = {
+		}
+		cost = 3
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#TODO:允许阿里乌斯通过解除未经计划的攻势
+		}
+	}
+	focus = {
+		#赌上一切
+		id = ARI_put_evenything_on_bet
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_enhance_contract_power
+		prerequisite = {
+			focus = ARI_suppress_resistance_eden_operation
+		}
+		prerequisite = {
+			focus = ARI_enhance_contract_power
+		}
+		prerequisite = {
+			focus = ARI_coordinate_reinforcement_troops
+		}
+		available = {
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			division_template = {
+				name = "阿里乌斯重装混成步兵营"
+				is_locked = yes
+				regiments = {
+					infantry_heavy = {
+						x = 0
+						y = 0
 					}
-					hidden_effect = {
-						ARI_initialize_suppression_system = yes
-					}
-				}
-			}
-			#复仇主义部分
-				focus = { #记住我们的敌人
-					id = ARI_remember_our_rivals
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_Nihilism_forever
-					prerequisite = { focus = ARI_Nihilism_forever }
-					cost = 3
-					x = -6
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						remove_ideas = ARI_unclear_target
-						#开启复仇之焰机制
-						custom_effect_tooltip = ARI_remember_our_rivals_tt
-						set_variable = { ARI_flame_of_revenge_monthly_decay = 0.075 }
-						set_temp_variable = { revenge_progress_change = 33 }
-						ARI_change_revenge_progress = yes
-						add_dynamic_modifier = { modifier = ARI_flame_of_revenge }
-					}
-				}
-				focus = { #夫人的历史课
-					id = ARI_history_education
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_remember_our_rivals
-					prerequisite = { focus = ARI_remember_our_rivals }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						set_temp_variable = { revenge_progress_change = -15 }
-						ARI_change_revenge_progress = yes
-						#复仇之焰获得永久buff 5%攻击，5%低HP组织度减少Buff，复仇之焰进度-15%
-						add_ideas = ARI_history_education
-					}
-				}
-				focus = { #保持热情
-					id = ARI_maintain_enthusiasm
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_history_education
-					prerequisite = { focus = ARI_history_education }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						add_war_support = 0.05
-						#减少复仇之焰减少的程度
-						custom_effect_tooltip = ARI_maintain_enthusiasm_tt
-						set_variable = { ARI_flame_of_revenge_monthly_decay = 0.05 }
-					}
-				}
-			#平叛部分
-				focus = { #搜捕背叛者
-					id = ARI_arrest_rebels
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_Nihilism_forever
-					prerequisite = { focus = ARI_Nihilism_forever }
-					cost = 3
-					x = -2
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						add_political_power = 25
-						add_command_power = 5
-						custom_effect_tooltip = ARI_suppress_resistance_tt
-					}
-					
-				}
-				focus = { #贯彻夫人的意志
-					id = ARI_carry_out_the_will
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_arrest_rebels
-					prerequisite = { focus = ARI_arrest_rebels }
-					cost = 3
-					x = -1
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						add_political_power = 150
-						add_stability = 0.05
-						add_war_support = 0.05
-						#减少GUI1控制度减少的程度
-						every_owned_state = {
-							ARI_control_modifier_increase_2 = yes
-						}
-					}
-					
-				}
-				focus = { #阿里乌斯信用体系
-					id = ARI_identity_system
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_arrest_rebels
-					prerequisite = { focus = ARI_arrest_rebels }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						add_stability = 0.1
-						#启用顾问蝙蝠07
-						# custom_effect_tooltip = ARI_recruit_informants_tt
-						# add_advisor_role = {
-						# 	character = ARI_code_00
-						# 	advisor = {
-						# 		slot = political_advisor
-						# 		idea_token = ARI_code_00_ac
-						# 		traits = { positive_collaborator }
-						# 		cost = 100
-						# 	}
-						# }
-						# add_advisor_role = {
-						# 	character = ARI_code_07
-						# 	advisor = {
-						# 		slot = political_advisor
-						# 		idea_token = ARI_code_07_ac
-						# 		traits = { secret_agent }
-						# 		cost = 100
-						# 	}
-						# }
-						#提升隐蔽度提升的程度
-						every_owned_state = {
-							ARI_guard_modifier_increase_2 = yes
-						}
-					}
-					
-				}
-			#虚无主义部分
-				focus = { #虚无主义灌输
-					id = ARI_Nihilism_thought
-					icon = GFX_goal_ARI_Nihilism_thought
-					relative_position_id = ARI_Nihilism_forever
-					prerequisite = { focus = ARI_Nihilism_forever }
-					cost = 3
-					x = 2
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						add_political_power = 50
-						#虚无主义精神强化
-						custom_effect_tooltip = ARI_Nihilism_thought_tt
-						add_to_variable = { ARI_nihilism_supply_consumption_factor = -0.05 }
-					}
-				}
-				focus = { #阿里乌斯式考试
-					id = ARI_Nihilism_examination
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_Nihilism_thought
-					prerequisite = { focus = ARI_Nihilism_thought }
-					cost = 3
-					x = -1
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						#虚无主义精神强化
-						custom_effect_tooltip = ARI_Nihilism_examination_tt
-						add_to_variable = { ARI_nihilism_political_power_factor = 0.05 }
-						add_to_variable = { ARI_nihilism_org_loss_at_low_org_factor = -0.05 }
-						add_to_variable = { ARI_nihilism_stability_factor = 0.05 }
-						add_tech_bonus = {
-							bonus = 1
-							uses = 2
-							category = bd
-						}
-					}
-				}
-				focus = { #学园性死亡
-					id = ARI_social_death
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_Nihilism_thought
-					prerequisite = { focus = ARI_Nihilism_thought }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_POLITICAL }
-					completion_reward = {
-						add_stability = 0.05
-						#虚无主义精神强化
-						custom_effect_tooltip = ARI_social_death_tt
-						add_to_variable = { ARI_nihilism_surrender_limit = 0.1 }
-						add_to_variable = { ARI_nihilism_stability_factor = 0.05 }
-						add_to_variable = { ARI_nihilism_war_support_factor = 0.05 }
-					}
-				}
-			focus = { #于骷髅头上盛开的玫瑰
-				id = ARI_roses_on_the_skeleton
-				#icon = GFX_goal_unknown
-				relative_position_id = ARI_identity_system
-				prerequisite = { focus = ARI_carry_out_the_will }
-				prerequisite = { focus = ARI_identity_system }
-				prerequisite = { focus = ARI_Nihilism_examination }
-				prerequisite = { focus = ARI_social_death }
-				cost = 3
-				x = 1
-				y = 1
-				search_filters = { FOCUS_FILTER_POLITICAL }
-				completion_reward = {
-					add_political_power = 150
-					#虚无主义精神强化
-					custom_effect_tooltip = ARI_roses_on_the_skeleton_tt
-					add_to_variable = { ARI_nihilism_political_power_factor = 0.1 }
-					add_to_variable = { ARI_nihilism_org_loss_at_low_org_factor = -0.025 }
-				}
-			}
-		#经济部分
-			focus = { #应对物资紧缺
-				id = ARI_deal_with_shortage
-				#icon = 
-				relative_position_id = ARI_meeting_with_supervisor
-				prerequisite = { focus = ARI_meeting_with_supervisor }
-				cost = 3
-				x = 4
-				y = 1
-				search_filters = { FOCUS_FILTER_ECO }
-				completion_reward = {
-					#修正物资紧缺民族精神
-					custom_effect_tooltip = ARI_deal_with_shortage_tt
-					add_to_variable = { ARI_broken_provisioning_system_stability_factor = 0.05 }
-					unlock_decision_category_tooltip = ARI_deal_with_shortage_decisions
-					set_variable = { ARI_deal_with_shortage_decisions_count = 3 }
-				}
-			}
-			focus = { #自给自足的目标
-				id = ARI_self_sufficient
-				#icon = 
-				relative_position_id = ARI_deal_with_shortage
-				prerequisite = { focus = ARI_deal_with_shortage }
-				available = {
-					custom_override_tooltip = {
-						tooltip = ARI_self_sufficient_trigger_tt
-						has_variable = ARI_deal_with_shortage_decisions_count
-						check_variable = { ARI_deal_with_shortage_decisions_count = 0 }
-					}
-				}
-				cost = 3
-				x = 0
-				y = 2
-				search_filters = { FOCUS_FILTER_ECO FOCUS_FILTER_INDUSTRY }
-				completion_reward = {
-					clear_variable = ARI_deal_with_shortage_decisions_count
-					remove_dynamic_modifier = { modifier = ARI_broken_provisioning_system }
-					add_political_power = 25
-					random_controlled_state = {
-						limit = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-						}
-					}
-					random_controlled_state = {
-						limit = {
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-						}
-					}
-				}
-			}
-			#能治工人部分
-				focus = { #扩大征收额度
-					id = ARI_tax_quota
-					icon = GFX_goal_ARI_tax_quota
-					relative_position_id = ARI_self_sufficient
-					prerequisite = { focus = ARI_self_sufficient }
-					cost = 3
-					x = -2
-					y = 2
-					search_filters = { FOCUS_FILTER_ECO }
-					completion_reward = {
-						add_political_power = -50
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_tax_quota_tt
-						add_to_variable = { ARI_tax_farming_production_factory_max_efficiency_factor = 0.05 }
-						add_to_variable = { ARI_tax_farming_industrial_capacity_factory = 0.05 }
-					}
-				}
-				focus = { #萝卜
-					id = ARI_carrot
-					#icon = 
-					relative_position_id = ARI_tax_quota
-					prerequisite = { focus = ARI_tax_quota }
-					mutually_exclusive = { focus = ARI_stick }
-					cost = 3
-					x = -1
-					y = 1
-					search_filters = { FOCUS_FILTER_ECO }
-					completion_reward = {
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_carrot_tt
-						add_to_variable = { ARI_tax_farming_production_factory_max_efficiency_factor = 0.05 }
-						add_to_variable = { ARI_tax_farming_industrial_capacity_factory = 0.1 }
-						add_to_variable = { ARI_tax_farming_consumer_goods_factor = 0.075 }
-					}
-				}
-				focus = { #大棒
-					id = ARI_stick
-					#icon = 
-					relative_position_id = ARI_tax_quota
-					prerequisite = { focus = ARI_tax_quota }
-					mutually_exclusive = { focus = ARI_carrot }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_ECO }
-					completion_reward = {
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_stick_tt
-						add_to_variable = { ARI_tax_farming_production_factory_max_efficiency_factor = 0.05 }
-						add_to_variable = { ARI_tax_farming_industrial_capacity_factory = 0.1 }
-						add_to_variable = { ARI_tax_farming_combat_readiness_recovery_percentage = -0.1 }
-						add_to_variable = { modifier@combat_readiness_recovery_percentage = -0.1 }
-					}
-				}
-				focus = { #阿里乌斯工兵队
-					id = ARI_engineers
-					#icon = 
-					relative_position_id = ARI_carrot
-					prerequisite = { 
-						focus = ARI_carrot 
-						focus = ARI_stick 
-					}
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_ECO }
-					completion_reward = {
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_engineers_tt
-						add_to_variable = { ARI_tax_farming_production_speed_buildings_factor = 0.05 }
-						add_to_variable = { ARI_tax_farming_production_speed_arms_factory_factor = 0.1 }
-						add_to_variable = { ARI_tax_farming_production_speed_bunker_factor = 0.2 }
-					}
-				}
-				focus = { #改善宿舍环境
-					id = ARI_improve_domitories
-					#icon = 
-					relative_position_id = ARI_engineers
-					prerequisite = { focus = ARI_engineers }
-					cost = 3
-					x = -1
-					y = 1
-					search_filters = { FOCUS_FILTER_ECO FOCUS_FILTER_INDUSTRY }
-					completion_reward = {
-						random_controlled_state = {
-							limit = {
-								free_building_slots = {
-									building = infrastructure
-									size > 0
-								}
-							}
-							add_building_construction = {
-								type = infrastructure
-								level = 1
-							}
-						}
-						random_controlled_state = {
-							limit = {
-								free_building_slots = {
-									building = infrastructure
-									size > 0
-								}
-							}
-							add_building_construction = {
-								type = infrastructure
-								level = 1
-							}
-						}
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_improve_domitories_tt
-						add_to_variable = { ARI_tax_farming_production_factory_start_efficiency_factor = 0.1 }
-						add_to_variable = { ARI_tax_farming_production_speed_infrastructure_factor = 0.1 }
-						if = {
-							limit = { has_completed_focus = ARI_production_emulation }
-							add_timed_idea = {
-								idea = ARI_Pleasant_cooperation
-								days = 365
-							}
-							add_political_power = 75
-						}
-						else = {
-							custom_effect_tooltip = {
-								localization_key = ARI_Pleasant_cooperation_focus_tt
-								FOCUS = ARI_production_emulation
-							}
-							effect_tooltip = {
-								add_timed_idea = {
-									idea = ARI_Pleasant_cooperation
-									days = 365
-								}
-								add_political_power = 75
-							}
-						}
-					}
-				}
-				focus = { #生产竞赛
-					id = ARI_production_emulation
-					#icon = 
-					relative_position_id = ARI_engineers
-					prerequisite = { focus = ARI_engineers }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_ECO }
-					completion_reward = {
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_production_emulation_tt
-						add_to_variable = { ARI_tax_farming_production_factory_efficiency_gain_factor = 0.1 }
-						add_to_variable = { ARI_tax_farming_line_change_production_efficiency_factor = 0.1 }
-						if = {
-							limit = { has_completed_focus = ARI_improve_domitories }
-							add_timed_idea = {
-								idea = ARI_Pleasant_cooperation
-								days = 365
-							}
-							add_political_power = 75
-						}
-						else = {
-							custom_effect_tooltip = {
-								localization_key = ARI_Pleasant_cooperation_focus_tt
-								FOCUS = ARI_improve_domitories
-							}
-							effect_tooltip = {
-								add_timed_idea = {
-									idea = ARI_Pleasant_cooperation
-									days = 365
-								}
-								add_political_power = 75
-							}
-						}
-					}
-				}
-				focus = { #监工生产交流会
-					id = ARI_supervisor_experience_exchanging_meeting
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_improve_domitories
-					prerequisite = { focus = ARI_improve_domitories }
-					prerequisite = { focus = ARI_production_emulation }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_ECO }
-					completion_reward = {
-						#强化精神“阿里乌斯包税体系”
-						custom_effect_tooltip = ARI_supervisor_experience_exchanging_meeting_tt
-						add_to_variable = { ARI_tax_farming_production_factory_efficiency_gain_factor = 0.05 }
-						add_to_variable = { ARI_tax_farming_consumer_goods_factor = -0.1 }
-					}
-				}
-			#建设部分
-				focus = { #生产跃进计划
-					id = ARI_leaps_and_bounds
-					#icon = 
-					relative_position_id = ARI_self_sufficient
-					prerequisite = { focus = ARI_self_sufficient }
-					cost = 3
-					x = 2
-					y = 2
-					search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-					completion_reward = {
-						add_tech_bonus = {
-							bonus = 1
-							uses = 2
-							category = industry
-						}
-					}
-				}
-				#产业部分
-					focus = { #扩建阿里乌斯通讯网络
-						id = ARI_communication_network
-						#icon = 
-						relative_position_id = ARI_leaps_and_bounds
-						prerequisite = { focus = ARI_leaps_and_bounds }
-						cost = 3
+					infantry_heavy = {
 						x = 0
 						y = 1
-						search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-						completion_reward = {
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = industrial_complex
-									level = 2
-								}
-							}
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = industrial_complex
-									level = 2
-								}
-							}
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = electronic_component_factory
-										size > 0
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 1
-								add_building_construction = {
-									type = electronic_component_factory
-									level = 1
-								}
-							}
-							add_tech_bonus = {
-								bonus = 0.5
-								uses = 2
-								category = electronics
-							}
-						}
 					}
-					focus = { #义务施工队
-						id = ARI_compulsory_labor
-						#icon = 
-						relative_position_id = ARI_communication_network
-						prerequisite = { focus = ARI_communication_network }
-						cost = 3
+					infantry_heavy = {
 						x = 0
-						y = 1
-						search_filters = { FOCUS_FILTER_ECO }
-						completion_reward = {
-							136 = {
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = construction_center
-									level = 2
-								}
-							}
-							138 = {
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = construction_center
-									level = 2
-								}
-							}
-							every_controlled_state = {
-								add_extra_state_shared_building_slots = 1
-							}
-							#强化精神“阿里乌斯包税体系”
-							custom_effect_tooltip = ARI_compulsory_labor_tt
-							add_to_variable = { ARI_tax_farming_global_building_slots = 1 }
-							add_to_variable = { ARI_tax_farming_global_building_slots_factor = 0.2 }
-						}
+						y = 2
 					}
-				#资源部分
-					focus = { #往地下挖！
-						id = ARI_deep_mineral
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_leaps_and_bounds
-						prerequisite = { focus = ARI_leaps_and_bounds }
-						cost = 3
-						x = 0
-						y = 1
-						search_filters = { FOCUS_FILTER_INDUSTRY }
-						completion_reward = {
-							531 = {
-								add_resource = {
-									type = resources_cm
-									amount = 20
-								}
-								add_resource = {
-									type = resources_rm
-									amount = 8
-								}
-							}
-							532 = {
-								add_resource = {
-									type = resources_fe
-									amount = 2
-								}
-							}
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = resource_distribution_center
-										size > 0
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 1
-								add_building_construction = {
-									type = resource_distribution_center
-									level = 1
-								}
-							}
-						}
+					infantry_heavy = {
+						x = 1
+						y = 0
 					}
-					focus = { #解决原料问题
-						id = ARI_raw_material
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_deep_mineral
-						prerequisite = { focus = ARI_deep_mineral }
-						cost = 3
-						x = -2
+					infantry_heavy = {
+						x = 1
 						y = 1
-						search_filters = { FOCUS_FILTER_INDUSTRY }
-						completion_reward = {
-							#强化精神“阿里乌斯包税体系”
-							custom_effect_tooltip = ARI_raw_material_tt
-							add_to_variable = { ARI_tax_farming_production_speed_resource_distribution_center_factor = 0.15 }
-							unlock_decision_tooltip = {
-								decision = ARI_processing_factories
-								show_effect_tooltip = yes
-							}
-							unlock_decision_tooltip = {
-								decision = ARI_power_station
-								show_effect_tooltip = yes
-							}
-						}
 					}
-					
-					focus = { #化工园区建设
-						id = ARI_chemical_industry_park
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_deep_mineral
-						prerequisite = { focus = ARI_deep_mineral }
-						cost = 3
-						x = 0
-						y = 1
-						search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-						completion_reward = {
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = synthetic_refinery
-										size > 1
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = synthetic_refinery
-									level = 2
-								}
-							}
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = synthetic_refinery
-										size > 0
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 1
-								add_building_construction = {
-									type = synthetic_refinery
-									level = 1
-								}
-							}
-							
-							#1张50石油加速卡
-							add_tech_bonus = {
-								bonus = 0.5
-								uses = 1
-								category = synth_resources
-							}
-						}
+					medium_armor = {
+						x = 2
+						y = 0
 					}
-					focus = { #引入欧帕兹技术
-						id = ARI_ooparts_technology
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_deep_mineral
-						prerequisite = { focus = ARI_deep_mineral }
-						cost = 3
+					medium_armor = {
 						x = 2
 						y = 1
-						search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-						completion_reward = {
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = opatz_synthesis_center
-										size > 0
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 1
-								add_building_construction = {
-									type = opatz_synthesis_center
-									level = 1
-								}
-							}
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = opaz_power_station
-										size > 0
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 1
-								add_building_construction = {
-									type = opaz_power_station
-									level = 1
-								}
-							}
-							unlock_decision_tooltip = {
-								decision = ARI_explore_ruins_ooparts
-								show_effect_tooltip = yes
-							}
-						}
 					}
-					focus = { #外界先进加工技术
-						id = ARI_import_advanced_technologies
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_chemical_industry_park
-						prerequisite = { focus = ARI_raw_material }
-						prerequisite = { focus = ARI_chemical_industry_park }
-						prerequisite = { focus = ARI_ooparts_technology }
-						cost = 3
+					medium_armor = {
+						x = 2
+						y = 2
+					}
+					medium_armor = {
+						x = 3
+						y = 0
+					}
+					medium_armor = {
+						x = 3
+						y = 1
+					}
+				}
+				support = {
+				}
+			}
+			division_template = {
+				name = "阿里乌斯火力支援步兵营"
+				is_locked = yes
+				regiments = {
+					infantry = {
+						x = 0
+						y = 0
+					}
+					infantry = {
 						x = 0
 						y = 1
-						search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-						completion_reward = {
-							add_tech_bonus = {
-								bonus = 1
-								uses = 2
-								category = excavation_tech
-							}
-							#强化精神“阿里乌斯包税体系”
-							custom_effect_tooltip = ARI_import_advanced_technologies_tt
-							add_to_variable = { ARI_tax_farming_local_resources_factor = 0.1 }
-						}
 					}
-				#军工部分
-					focus = { #铸犁为剑
-						id = ARI_build_arms_factory
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_leaps_and_bounds
-						prerequisite = { focus = ARI_leaps_and_bounds }
-						cost = 3
-						x = 4
-						y = 2
-						search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-						completion_reward = {
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = arms_factory
-									level = 2
-								}
-							}
-							random_controlled_state = {
-								limit = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-								}
-								add_extra_state_shared_building_slots = 1
-								add_building_construction = {
-									type = arms_factory
-									level = 1
-								}
-							}
-							#步兵武器卡，火炮，装甲100%加速*1
-							add_tech_bonus = {
-								bonus = 1
-								uses = 1
-								category = infantry_weapons
-								category = armor
-								category = fire_support
-							}
-						}
-					}
-					focus = { #扩建载具工厂
-						id = ARI_vehicle_factory
-						#icon = GFX_goal_unknown
-						relative_position_id = ARI_build_arms_factory
-						prerequisite = { focus = ARI_build_arms_factory }
-						cost = 3
+					infantry = {
 						x = 0
 						y = 2
-						search_filters = { FOCUS_FILTER_INDUSTRY }
-						completion_reward = {
-							138 = {
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = heavy_arms_factory
-									level = 2
-								}
-							}
-							#强化精神“阿里乌斯包税体系”，重工厂产出+40%
-							custom_effect_tooltip = ARI_vehicle_factory_tt
-							set_country_flag = ARI_tax_farming_hic
-							set_variable = { ARI_tax_farming_resources_hic = resource_produced@resources_hic }
-							multiply_variable = { ARI_tax_farming_resources_hic = 0.4 }
-						}
 					}
-			focus = { #向目标前进！
-				id = ARI_march_towards_the_goal
-				#icon = GFX_goal_unknown
-				relative_position_id = ARI_import_advanced_technologies
-				prerequisite = { focus = ARI_supervisor_experience_exchanging_meeting }
-				prerequisite = { focus = ARI_import_advanced_technologies }
-				prerequisite = { focus = ARI_vehicle_factory }
-				cost = 3
-				x = 0
-				y = 2
-				search_filters = { FOCUS_FILTER_INDUSTRY }
-				completion_reward = {
-					add_political_power = 150
-					add_offsite_building = {
-						type = industrial_complex
-						level = 2
+					infantry = {
+						x = 0
+						y = 3
 					}
-					add_offsite_building = {
-						type = arms_factory
-						level = 2
+					infantry = {
+						x = 1
+						y = 0
 					}
+					infantry = {
+						x = 1
+						y = 1
+					}
+					infantry = {
+						x = 1
+						y = 2
+					}
+					fire_support_team_la = {
+						x = 2
+						y = 0
+					}
+					fire_support_team_la = {
+						x = 2
+						y = 1
+					}
+				}
+				support = {
 				}
 			}
-		#军事部分
-			focus = { #小队重新分组
-				id = ARI_restructure_teams
-				icon = GFX_goal_ARI_restructure_teams
-				relative_position_id = ARI_meeting_with_supervisor
-				prerequisite = { focus = ARI_meeting_with_supervisor }
-				cost = 3
-				x = 17
-				y = 1
-				search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_ARMY }
-				completion_reward = {
-					army_experience = 50
-					#降低GUI1中每周期抵抗运动增长
-					every_owned_state = {
-						ARI_control_modifier_increase_2 = yes
-					}
+			#获得2个5坦5重装步兵营连
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯重装混成步兵营\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 2
 				}
 			}
-			#学生部队部分
-				focus = { #阿里乌斯武装学生部队
-					id = ARI_armed_students
-					#icon = 
-					relative_position_id = ARI_restructure_teams
-					prerequisite = { focus = ARI_restructure_teams }
-					cost = 3
-					x = -2
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						add_political_power = 50
-						add_command_power = 15
-						add_stability = 0.05
-						country_event = ARI_beatrice.10
-					}
+			#获得4个10连特战步兵大队
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 4
 				}
-
-				focus = { #保证指挥官的能力
-					id = ARI_commander_ability
-					#icon = 
-					relative_position_id = ARI_armed_students
-					prerequisite = { focus = ARI_armed_students }
-					mutually_exclusive = { focus = ARI_driven_by_revanchism }
-					available = {
-						custom_override_tooltip = {
-							tooltip = focus_completed_by_event
-							always = no
-						}
-					}
-					cost = 1
-					x = -3
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						#计划线
-						custom_effect_tooltip = ARI_commander_ability_tt
-					}
+			}
+			#10个特战步兵
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯特战部队\" start_experience_factor = 0.6 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 10
 				}
-				focus = { #新指挥官课程
-					id = ARI_commander_lessons
-					#icon = 
-					relative_position_id = ARI_commander_ability
-					prerequisite = { focus = ARI_commander_ability }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_ARMY_XP }
-					completion_reward = {
-						army_experience = 20
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_commander_lessons_tt
-						add_to_variable = { ARI_armed_students_modifier_army_leader_start_level = 1 }
-						add_to_variable = { ARI_armed_students_modifier_max_planning_factor = 0.15 }
-						every_unit_leader = {
-							add_trait = {
-								trait = ARI_commander_lessons_1
-							}
-							add_attack = 1
-							add_defense = 1
-							add_planning = 1
-							add_logistics = 1
-						}
-					}
+			}
+			#8个7步兵压制2火力支援连
+			138 = {
+				create_unit = {
+					division = "division_template = \"阿里乌斯火力支援步兵营\" start_experience_factor = 0.6 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 8
 				}
-				focus = { #能者自有奖赏
-					id = ARI_reward_the_capable
-					#icon = 
-					relative_position_id = ARI_commander_lessons
-					prerequisite = { focus = ARI_commander_lessons }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						add_timed_idea = {
-							idea = ARI_improving_reward_and_punishment
-							days = 90
-						}
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_reward_the_capable_tt
-						add_to_variable = { ARI_armed_students_modifier_max_command_power = 30 }
-						add_to_variable = { ARI_armed_students_modifier_army_org_factor = 0.1 }
-						add_to_variable = { ARI_armed_students_modifier_planning_speed = 0.1 }
-						every_unit_leader = {
-							add_trait = {
-								trait = ARI_commander_lessons_2
-							}
-						}
-					}
-				}
-				focus = { #指挥保障队
-					id = ARI_support_troops
-					#icon = 
-					relative_position_id = ARI_reward_the_capable
-					prerequisite = { focus = ARI_reward_the_capable }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						
-						#解锁机动安保支队
-						#给3个机动安保支队
-						division_template = {
-							name = "机动安保支队"
-						
-							regiments = {
-						
-								infantry_heavy = { x = 0 y = 0 } 
-								infantry_heavy = { x = 0 y = 1 }
-								infantry_heavy = { x = 1 y = 0 }
-								infantry_heavy = { x = 1 y = 1 }
-							}
-							support = {
-								signal_company = {x=0 y=0}
-						
-							}
-						}
-
-						138 = {
-							create_unit = {
-								division = "division_template= \"机动安保支队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = ROOT
-								count = 3
-							}
-						}
-
-
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_support_troops_tt
-						add_to_variable = { ARI_armed_students_modifier_army_defence_factor = 0.1 }
-						add_to_variable = { ARI_armed_students_modifier_land_reinforce_rate = 0.01 }
-					}
-				}
-
-				focus = { #复仇驱动前进
-					id = ARI_driven_by_revanchism
-					#icon = 
-					relative_position_id = ARI_armed_students
-					prerequisite = { focus = ARI_armed_students }
-					mutually_exclusive = { focus = ARI_commander_ability }
-					available = {
-						custom_override_tooltip = {
-							tooltip = focus_completed_by_event
-							always = no
-						}
-					}
-					cost = 1
-					x = 3
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						#攻防线
-						custom_effect_tooltip = ARI_driven_by_revanchism_tt
-					}
-				}
-				focus = { #额外战术课程
-					id = ARI_popularize_tactic_lessons
-					#icon = 
-					relative_position_id = ARI_driven_by_revanchism
-					prerequisite = { focus = ARI_driven_by_revanchism }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_ARMY_XP }
-					completion_reward = {
-						army_experience = 20
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_popularize_tactic_lessons_tt
-						add_to_variable = { ARI_armed_students_modifier_army_defence_factor = 0.1 }
-						add_to_variable = { ARI_armed_students_modifier_army_org_regain = 0.1 }
-					}
-				}
-				focus = { #共同的复仇意志
-					id = ARI_spirit_of_revenge
-					#icon = 
-					relative_position_id = ARI_popularize_tactic_lessons
-					prerequisite = { focus = ARI_popularize_tactic_lessons }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						add_timed_idea = {
-							idea = ARI_revanchism_education
-							days = 90
-						}
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_spirit_of_revenge_tt
-						add_to_variable = { ARI_armed_students_modifier_army_attack_factor = 0.05 }
-						add_to_variable = { ARI_armed_students_modifier_army_defence_factor = 0.1 }
-					}
-				}
-				focus = { #复仇冲锋队
-					id = ARI_charge_of_revenge
-					#icon = 
-					relative_position_id = ARI_spirit_of_revenge
-					prerequisite = { focus = ARI_spirit_of_revenge }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						#解锁阿里乌斯版暴风突击队
-						#给2个精英6步
-						division_template = {
-							name = "暴风突击队"
-						
-							regiments = {
-								infantry_sf = { x = 0 y = 0 } 
-								infantry_sf = { x = 0 y = 1 }
-								infantry_sf = { x = 0 y = 2 }
-								infantry_sf = { x = 1 y = 0 }
-								infantry_sf = { x = 1 y = 1 }
-								infantry_sf = { x = 1 y = 2 }
-							}
-							support = {
-						
-							}
-						}
-
-						138 = {
-							create_unit = {
-								division = "division_template = \"暴风突击队\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = ROOT
-								count = 2
-							}
-						}
-
-
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_charge_of_revenge_tt
-						add_to_variable = { ARI_armed_students_modifier_org_loss_when_moving = -0.2 }
-						add_to_variable = { ARI_armed_students_modifier_army_attack_factor = 0.05 }
-						add_to_variable = { ARI_armed_students_modifier_breakthrough_factor = 0.1 }
-					}
-				}
-
-				focus = { #外界的战斗经验
-					id = ARI_foreign_combat_experience
-					#icon = 
-					relative_position_id = ARI_armed_students
-					prerequisite = { focus = ARI_armed_students }
-					cost = 3
-					x = 0
-					y = 2
-					search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_ARMY_XP }
-					completion_reward = {
-						army_experience = 25
-						add_doctrine_cost_reduction = {
-							cost_reduction = 0.5
-							uses = 2
-							category = land_doctrine
-						}
-					}
-				}
-				focus = { #强化单兵战斗力
-					id = ARI_individual_effectiveness
-					#icon = 
-					relative_position_id = ARI_foreign_combat_experience
-					prerequisite = { focus = ARI_foreign_combat_experience }
-					cost = 3
-					x = -1
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						unlock_decision_tooltip = {
-							decision = ARI_assault_rifle
-							show_effect_tooltip = yes
-						}
-						unlock_decision_tooltip = {
-							decision = ARI_light_support_equipment
-							show_effect_tooltip = yes
-						}
-						unlock_decision_tooltip = {
-							decision = ARI_logistics_teams
-							show_effect_tooltip = yes
-						}
-					}
-				}
-				focus = { #推进等级现象
-					id = ARI_hierarchy
-					#icon = 
-					relative_position_id = ARI_foreign_combat_experience
-					prerequisite = { focus = ARI_foreign_combat_experience }
-					cost = 3
-					x = 0
-					y = 2
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						add_stability = -0.05
-						add_war_support = 0.1
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_hierarchy_tt
-						add_to_variable = { ARI_armed_students_modifier_army_org_factor = 0.15 }
-						add_to_variable = { ARI_armed_students_modifier_army_org_regain = -0.05 }
-						add_to_variable = { ARI_armed_students_modifier_land_reinforce_rate = -0.005 }
-					}
-				}
-				focus = { #重建阿里乌斯重装镇暴队
-					id = ARI_anti_riot_squads
-					#icon = 
-					relative_position_id = ARI_foreign_combat_experience
-					prerequisite = { focus = ARI_foreign_combat_experience }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						#解锁5中坦5重步的编制，并获得一个精英部队
-
-						division_template = {
-							name = "重装镇暴队"
-						
-							regiments = {
-								infantry_heavy = { x = 0 y = 0 } 
-								infantry_heavy = { x = 0 y = 1 }
-								infantry_heavy = { x = 0 y = 2 }
-								infantry_heavy = { x = 1 y = 0 }
-								infantry_heavy = { x = 1 y = 1 }
-								medium_armor = { x = 2 y = 0 } 
-								medium_armor = { x = 2 y = 1 }
-								medium_armor = { x = 2 y = 2 }
-								medium_armor = { x = 3 y = 0 }
-								medium_armor = { x = 3 y = 1 }
-							}
-							support = {
-						
-							}
-						}
-
-						138 = {
-							create_unit = {
-								division = "division_template = \"重装镇暴队\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = ROOT
-								count = 1
-							}
-						}
-
-						add_ideas = ARI_merkava_main_battle_tank
-						unlock_decision_tooltip = {
-							decision = ARI_old_production_line
-							show_effect_tooltip = yes
-						}
-					}
-				}
-			#特战部队部分
-				focus = { #阿里乌斯特战部队
-					id = ARI_special_battle_brigade
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_restructure_teams
-					prerequisite = { focus = ARI_restructure_teams }
-					cost = 3
-					x = 3
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
-					completion_reward = {
-						army_experience = 25
-						air_experience = 25
-						custom_effect_tooltip = ARI_special_battle_brigade_tt
-						add_to_variable = { ARI_special_force_special_forces_cap = 0.1 }
-
-						#获得5特战的编制和2个师
-
-						division_template = {
-							name = "特战部队"
-						
-							regiments = {
-								infantry_sf = { x = 0 y = 0 } 
-								infantry_sf = { x = 0 y = 1 }
-								infantry_sf = { x = 0 y = 2 }
-								infantry_sf = { x = 1 y = 0 }
-								infantry_sf = { x = 1 y = 1 }
-							}
-							support = {
-								recon = { x = 0 y = 0 }
-							}
-						}
-
-						138 = {
-							create_unit = {
-								division = "division_template = \"特战部队\" start_experience_factor = 0.6 start_equipment_factor = 1 start_manpower_factor = 1"
-								owner = ROOT
-								count = 2
-							}
-						}
-					}
-				}
-				focus = { #夫人的直接教导
-					id = ARI_taught_by_beatrice
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_special_battle_brigade
-					prerequisite = { focus = ARI_special_battle_brigade }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						#TODO:2张50特战学说卡，暂时用陆军学说代替
-						add_doctrine_cost_reduction = {
-							cost_reduction = 0.5
-							uses = 2
-							category = land_doctrine
-						}
-					}
-				}
-				focus = { #斯巴达式训练法
-					id = ARI_Sparta_discipline
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_taught_by_beatrice
-					prerequisite = { focus = ARI_taught_by_beatrice }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_ARMY_XP }
-					completion_reward = {
-						army_experience = 25
-						unlock_decision_category_tooltip = ARI_special_training_decisions
-						set_variable = { ARI_special_training_decisions_count = 5 }
-						custom_effect_tooltip = ARI_Sparta_discipline_tt
-						add_to_variable = { ARI_special_force_special_forces_attack_factor = 0.05 }
-						add_to_variable = { ARI_special_force_special_forces_defence_factor = 0.05 }
-					}
-				}
-				focus = { #阿里乌斯游骑兵
-					id = ARI_ranger
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_Sparta_discipline
-					prerequisite = { focus = ARI_Sparta_discipline }
-					available = {
-						custom_override_tooltip = {
-							tooltip = ARI_ranger_trigger_tt
-							has_variable = ARI_special_training_decisions_count
-							check_variable = { ARI_special_training_decisions_count = 0 }
-						}
-					}
-					
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_ARMY }
-					completion_reward = {
-						clear_variable = ARI_special_training_decisions_count
-						#强化精神“阿里乌斯武装学生部队”
-						custom_effect_tooltip = ARI_ranger_tt
-						add_to_variable = { ARI_armed_students_modifier_recon_factor = 0.15 }
-						add_to_variable = { ARI_armed_students_modifier_army_org_regain = 0.05 }
-						add_to_variable = { ARI_armed_students_modifier_army_attack_factor = 0.05 }
-					}
-				}
-				
-				focus = { #占据天空
-					id = ARI_rule_the_sky
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_special_battle_brigade
-					prerequisite = { focus = ARI_special_battle_brigade }
-					cost = 3
-					x = 3
-					y = 1
-					search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
-					completion_reward = {
-						add_political_power = -50
-						air_experience = 25
-						137 = {
-							add_building_construction = {
-								type = air_base
-								level = 3
-							}
-						}
-						#TODO:2张50特战学说卡，暂时用陆军学说代替
-						add_tech_bonus = {
-							bonus  = 0.5
-							uses = 2
-							category = land_doctrine
-						}
-						#解锁T2小型无人机科技
-						 set_technology = {
-							fighting_drone_MK2 = 1
-						 }
-						#100架制空小型无人机
-						 add_equipment_to_stockpile = {
-						 	type = medium_uav_equipment_2
-						 	amount = 100
-						 }
-					}
-				}
-				focus = { #炸飞她们
-					id = ARI_bomber
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_rule_the_sky
-					prerequisite = { focus = ARI_rule_the_sky }
-					mutually_exclusive = { focus = ARI_fighter }
-					cost = 3
-					x = -1
-					y = 1
-					search_filters = { FOCUS_FILTER_AIR_XP }
-					completion_reward = {
-						custom_effect_tooltip = ARI_bomber_tt
-						add_to_variable = { ARI_special_force_bomber = 0.1 }
-					}
-				}
-				focus = { #晴空万里
-					id = ARI_fighter
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_rule_the_sky
-					prerequisite = { focus = ARI_rule_the_sky }
-					mutually_exclusive = { focus = ARI_bomber }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_AIR_XP }
-					completion_reward = {
-						custom_effect_tooltip = ARI_fighter_tt
-						add_to_variable = { ARI_special_force_fighter = 0.1 }
-					}
-				}
-				focus = { #阿里乌斯航空兵部队
-					id = ARI_air_force
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_bomber
-					prerequisite = { focus = ARI_bomber }
-					prerequisite = { focus = ARI_fighter }
-					cost = 3
-					x = 1
-					y = 1
-					search_filters = { FOCUS_FILTER_AIR_XP }
-					completion_reward = {
-						#空军学说-50%*2
-						add_doctrine_cost_reduction = {
-							cost_reduction = 0.5
-							uses = 2
-							category = air_doctrine
-						}
-						add_ideas = ARI_air_force_0
-					}
-				}
-				focus = { #本地生产无人机
-					id = ARI_UAV_production
-					#icon = GFX_goal_unknown
-					relative_position_id = ARI_air_force
-					prerequisite = { focus = ARI_air_force }
-					cost = 3
-					x = 0
-					y = 1
-					search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
-					completion_reward = {
-						swap_ideas = {
-							remove_idea = ARI_air_force_0
-							add_idea = ARI_air_force_1
-						}
-						random_controlled_state = {
-							limit = {
-								free_building_slots = {
-									building = arms_factory
-									size > 0
-									include_locked = yes
-								}
-							}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = arms_factory
-								level = 1
-							}
-						}
-						#无人机科技卡75%*2
-						add_tech_bonus = {
-							bonus = 0.75
-							uses = 2
-							category = uav
-						}
-					}
-				}
-}
-
-focus_tree = {
-	id = ARI_NULL
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = ARI
+			}
+			unlock_decision_tooltip = ARI_enhance_contract_power_infinity_decision
+			#TODO：解锁决议“部署希罗尼穆斯”
 		}
 	}
-
+	#内政部分
 	focus = {
-		id = ARI_NULL_FOC
-		icon = GFX_idea_unknown
-		cost = 9999
-		x = 5
-		y = 5
-		completion_reward = { }
-		allow_branch = {
-			always = no
+		#面见“监工”
+		id = ARI_meeting_with_supervisor
+		icon = GFX_goal_ARI_meeting_with_farmers
+		cost = 5
+		x = 16
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+			# add_advisor_role = {
+			# 	character = ARI_code_01
+			# 	advisor = {
+			# 		slot = political_advisor
+			# 		idea_token = ARI_code_01_ac
+			# 		traits = { arbitrary_supervisor }
+			# 		cost = 100
+			# 	}
+			# }
+			# add_advisor_role = {
+			# 	character = ARI_code_02
+			# 	advisor = {
+			# 		slot = political_advisor
+			# 		idea_token = ARI_code_02_ac
+			# 		traits = { local_ruler }
+			# 		cost = 100
+			# 	}
+			# }
+		}
+	}
+	#维稳部分
+	focus = {
+		#虚无永存
+		id = ARI_Nihilism_forever
+		icon = GFX_goal_ARI_Nihilism_forever
+		relative_position_id = ARI_meeting_with_supervisor
+		prerequisite = {
+			focus = ARI_meeting_with_supervisor
+		}
+		cost = 3
+		x = -2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			hidden_effect = {
+				ARI_initialize_suppression_system = yes
+			}
+		}
+	}
+	#复仇主义部分
+	focus = {
+		#记住我们的敌人
+		id = ARI_remember_our_rivals
+		icon = GFX_goal_ARI_remember_our_rivals
+		relative_position_id = ARI_Nihilism_forever
+		prerequisite = {
+			focus = ARI_Nihilism_forever
+		}
+		cost = 3
+		x = -6
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = ARI_unclear_target
+			#开启复仇之焰机制
+			custom_effect_tooltip = ARI_remember_our_rivals_tt
+			set_variable = {
+				ARI_flame_of_revenge_monthly_decay = 0.075
+			}
+			set_temp_variable = {
+				revenge_progress_change = 33
+			}
+			ARI_change_revenge_progress = yes
+			add_dynamic_modifier = {
+				modifier = ARI_flame_of_revenge
+			}
+		}
+	}
+	focus = {
+		#夫人的历史课
+		id = ARI_history_education
+		icon = GFX_goal_ARI_history_education
+		relative_position_id = ARI_remember_our_rivals
+		prerequisite = {
+			focus = ARI_remember_our_rivals
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_temp_variable = {
+				revenge_progress_change = -15
+			}
+			ARI_change_revenge_progress = yes
+			#复仇之焰获得永久buff 5%攻击，5%低HP组织度减少Buff，复仇之焰进度-15%
+			add_ideas = ARI_history_education
+		}
+	}
+	focus = {
+		#保持热情
+		id = ARI_maintain_enthusiasm
+		icon = GFX_goal_ARI_maintain_enthusiasm
+		relative_position_id = ARI_history_education
+		prerequisite = {
+			focus = ARI_history_education
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			#减少复仇之焰减少的程度
+			custom_effect_tooltip = ARI_maintain_enthusiasm_tt
+			set_variable = {
+				ARI_flame_of_revenge_monthly_decay = 0.05
+			}
+		}
+	}
+	#平叛部分
+	focus = {
+		#搜捕背叛者
+		id = ARI_arrest_rebels
+		icon = GFX_goal_ARI_arrest_rebels
+		relative_position_id = ARI_Nihilism_forever
+		prerequisite = {
+			focus = ARI_Nihilism_forever
+		}
+		cost = 3
+		x = -2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_command_power = 5
+			custom_effect_tooltip = ARI_suppress_resistance_tt
+		}
+	}
+	focus = {
+		#贯彻夫人的意志
+		id = ARI_carry_out_the_will
+		icon = GFX_goal_ARI_carry_out_the_will
+		relative_position_id = ARI_arrest_rebels
+		prerequisite = {
+			focus = ARI_arrest_rebels
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			add_war_support = 0.05
+			#减少GUI1控制度减少的程度
+			every_owned_state = {
+				ARI_control_modifier_increase_2 = yes
+			}
+		}
+	}
+	focus = {
+		#阿里乌斯信用体系
+		id = ARI_identity_system
+		icon = GFX_goal_ARI_identity_system
+		relative_position_id = ARI_arrest_rebels
+		prerequisite = {
+			focus = ARI_arrest_rebels
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.1
+			#启用顾问蝙蝠07
+			# custom_effect_tooltip = ARI_recruit_informants_tt
+			# add_advisor_role = {
+			# 	character = ARI_code_00
+			# 	advisor = {
+			# 		slot = political_advisor
+			# 		idea_token = ARI_code_00_ac
+			# 		traits = { positive_collaborator }
+			# 		cost = 100
+			# 	}
+			# }
+			# add_advisor_role = {
+			# 	character = ARI_code_07
+			# 	advisor = {
+			# 		slot = political_advisor
+			# 		idea_token = ARI_code_07_ac
+			# 		traits = { secret_agent }
+			# 		cost = 100
+			# 	}
+			# }
+			#提升隐蔽度提升的程度
+			every_owned_state = {
+				ARI_guard_modifier_increase_2 = yes
+			}
+		}
+	}
+	#虚无主义部分
+	focus = {
+		#虚无主义灌输
+		id = ARI_Nihilism_thought
+		icon = GFX_goal_ARI_Nihilism_thought
+		relative_position_id = ARI_Nihilism_forever
+		prerequisite = {
+			focus = ARI_Nihilism_forever
+		}
+		cost = 3
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 50
+			#虚无主义精神强化
+			custom_effect_tooltip = ARI_Nihilism_thought_tt
+			add_to_variable = {
+				ARI_nihilism_supply_consumption_factor = -0.05
+			}
+		}
+	}
+	focus = {
+		#阿里乌斯式考试
+		id = ARI_Nihilism_examination
+		icon = GFX_goal_ARI_Nihilism_examination
+		relative_position_id = ARI_Nihilism_thought
+		prerequisite = {
+			focus = ARI_Nihilism_thought
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			#虚无主义精神强化
+			custom_effect_tooltip = ARI_Nihilism_examination_tt
+			add_to_variable = {
+				ARI_nihilism_political_power_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_nihilism_org_loss_at_low_org_factor = -0.05
+			}
+			add_to_variable = {
+				ARI_nihilism_stability_factor = 0.05
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = bd
+			}
+		}
+	}
+	focus = {
+		#学园性死亡
+		id = ARI_social_death
+		icon = GFX_goal_ ARI_social_death
+		relative_position_id = ARI_Nihilism_thought
+		prerequisite = {
+			focus = ARI_Nihilism_thought
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+			#虚无主义精神强化
+			custom_effect_tooltip = ARI_social_death_tt
+			add_to_variable = {
+				ARI_nihilism_surrender_limit = 0.1
+			}
+			add_to_variable = {
+				ARI_nihilism_stability_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_nihilism_war_support_factor = 0.05
+			}
+		}
+	}
+	focus = {
+		#于骷髅头上盛开的玫瑰
+		id = ARI_roses_on_the_skeleton
+		icon = GFX_goal_ARI_roses_on_the_skeleton
+		relative_position_id = ARI_identity_system
+		prerequisite = {
+			focus = ARI_carry_out_the_will
+		}
+		prerequisite = {
+			focus = ARI_identity_system
+		}
+		prerequisite = {
+			focus = ARI_Nihilism_examination
+		}
+		prerequisite = {
+			focus = ARI_social_death
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 150
+			#虚无主义精神强化
+			custom_effect_tooltip = ARI_roses_on_the_skeleton_tt
+			add_to_variable = {
+				ARI_nihilism_political_power_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_nihilism_org_loss_at_low_org_factor = -0.025
+			}
+		}
+	}
+	#经济部分
+	focus = {
+		#应对物资紧缺
+		id = ARI_deal_with_shortage
+		#icon = 
+		relative_position_id = ARI_meeting_with_supervisor
+		prerequisite = {
+			focus = ARI_meeting_with_supervisor
+		}
+		cost = 3
+		x = 4
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#修正物资紧缺民族精神
+			custom_effect_tooltip = ARI_deal_with_shortage_tt
+			add_to_variable = {
+				ARI_broken_provisioning_system_stability_factor = 0.05
+			}
+			unlock_decision_category_tooltip = ARI_deal_with_shortage_decisions
+			set_variable = {
+				ARI_deal_with_shortage_decisions_count = 3
+			}
+		}
+	}
+	focus = {
+		#自给自足的目标
+		id = ARI_self_sufficient
+		#icon = 
+		relative_position_id = ARI_deal_with_shortage
+		prerequisite = {
+			focus = ARI_deal_with_shortage
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_self_sufficient_trigger_tt
+				has_variable = ARI_deal_with_shortage_decisions_count
+				check_variable = {
+					ARI_deal_with_shortage_decisions_count = 0
+				}
+			}
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ECO
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			clear_variable = ARI_deal_with_shortage_decisions_count
+			remove_dynamic_modifier = {
+				modifier = ARI_broken_provisioning_system
+			}
+			add_political_power = 25
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	#能治工人部分
+	focus = {
+		#扩大征收额度
+		id = ARI_tax_quota
+		icon = GFX_goal_ARI_tax_quota
+		relative_position_id = ARI_self_sufficient
+		prerequisite = {
+			focus = ARI_self_sufficient
+		}
+		cost = 3
+		x = -2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			add_political_power = -50
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_tax_quota_tt
+			add_to_variable = {
+				ARI_tax_farming_production_factory_max_efficiency_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_tax_farming_industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	focus = {
+		#萝卜
+		id = ARI_carrot
+		#icon = 
+		relative_position_id = ARI_tax_quota
+		prerequisite = {
+			focus = ARI_tax_quota
+		}
+		mutually_exclusive = {
+			focus = ARI_stick
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_carrot_tt
+			add_to_variable = {
+				ARI_tax_farming_production_factory_max_efficiency_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_tax_farming_industrial_capacity_factory = 0.1
+			}
+			add_to_variable = {
+				ARI_tax_farming_consumer_goods_factor = 0.075
+			}
+		}
+	}
+	focus = {
+		#大棒
+		id = ARI_stick
+		#icon = 
+		relative_position_id = ARI_tax_quota
+		prerequisite = {
+			focus = ARI_tax_quota
+		}
+		mutually_exclusive = {
+			focus = ARI_carrot
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_stick_tt
+			add_to_variable = {
+				ARI_tax_farming_production_factory_max_efficiency_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_tax_farming_industrial_capacity_factory = 0.1
+			}
+			add_to_variable = {
+				ARI_tax_farming_combat_readiness_recovery_percentage = -0.1
+			}
+			add_to_variable = {
+				modifier@combat_readiness_recovery_percentage = -0.1
+			}
+		}
+	}
+	focus = {
+		#阿里乌斯工兵队
+		id = ARI_engineers
+		#icon = 
+		relative_position_id = ARI_carrot
+		prerequisite = {
+			focus = ARI_carrot
+			focus = ARI_stick
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_engineers_tt
+			add_to_variable = {
+				ARI_tax_farming_production_speed_buildings_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_tax_farming_production_speed_arms_factory_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_tax_farming_production_speed_bunker_factor = 0.2
+			}
+		}
+	}
+	focus = {
+		#改善宿舍环境
+		id = ARI_improve_domitories
+		#icon = 
+		relative_position_id = ARI_engineers
+		prerequisite = {
+			focus = ARI_engineers
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_improve_domitories_tt
+			add_to_variable = {
+				ARI_tax_farming_production_factory_start_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_tax_farming_production_speed_infrastructure_factor = 0.1
+			}
+			if = {
+				limit = {
+					has_completed_focus = ARI_production_emulation
+				}
+				add_timed_idea = {
+					idea = ARI_Pleasant_cooperation
+					days = 365
+				}
+				add_political_power = 75
+			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = ARI_Pleasant_cooperation_focus_tt
+					FOCUS = ARI_production_emulation
+				}
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = ARI_Pleasant_cooperation
+						days = 365
+					}
+					add_political_power = 75
+				}
+			}
+		}
+	}
+	focus = {
+		#生产竞赛
+		id = ARI_production_emulation
+		#icon = 
+		relative_position_id = ARI_engineers
+		prerequisite = {
+			focus = ARI_engineers
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_production_emulation_tt
+			add_to_variable = {
+				ARI_tax_farming_production_factory_efficiency_gain_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_tax_farming_line_change_production_efficiency_factor = 0.1
+			}
+			if = {
+				limit = {
+					has_completed_focus = ARI_improve_domitories
+				}
+				add_timed_idea = {
+					idea = ARI_Pleasant_cooperation
+					days = 365
+				}
+				add_political_power = 75
+			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = ARI_Pleasant_cooperation_focus_tt
+					FOCUS = ARI_improve_domitories
+				}
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = ARI_Pleasant_cooperation
+						days = 365
+					}
+					add_political_power = 75
+				}
+			}
+		}
+	}
+	focus = {
+		#监工生产交流会
+		id = ARI_supervisor_experience_exchanging_meeting
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_improve_domitories
+		prerequisite = {
+			focus = ARI_improve_domitories
+		}
+		prerequisite = {
+			focus = ARI_production_emulation
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_supervisor_experience_exchanging_meeting_tt
+			add_to_variable = {
+				ARI_tax_farming_production_factory_efficiency_gain_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_tax_farming_consumer_goods_factor = -0.1
+			}
+		}
+	}
+	#建设部分
+	focus = {
+		#生产跃进计划
+		id = ARI_leaps_and_bounds
+		#icon = 
+		relative_position_id = ARI_self_sufficient
+		prerequisite = {
+			focus = ARI_self_sufficient
+		}
+		cost = 3
+		x = 2
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	#产业部分
+	focus = {
+		#扩建阿里乌斯通讯网络
+		id = ARI_communication_network
+		#icon = 
+		relative_position_id = ARI_leaps_and_bounds
+		prerequisite = {
+			focus = ARI_leaps_and_bounds
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = electronic_component_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = electronic_component_factory
+					level = 1
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		#义务施工队
+		id = ARI_compulsory_labor
+		#icon = 
+		relative_position_id = ARI_communication_network
+		prerequisite = {
+			focus = ARI_communication_network
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ECO
+		}
+		completion_reward = {
+			136 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = construction_center
+					level = 2
+				}
+			}
+			138 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = construction_center
+					level = 2
+				}
+			}
+			every_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_compulsory_labor_tt
+			add_to_variable = {
+				ARI_tax_farming_global_building_slots = 1
+			}
+			add_to_variable = {
+				ARI_tax_farming_global_building_slots_factor = 0.2
+			}
+		}
+	}
+	#资源部分
+	focus = {
+		#往地下挖！
+		id = ARI_deep_mineral
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_leaps_and_bounds
+		prerequisite = {
+			focus = ARI_leaps_and_bounds
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			531 = {
+				add_resource = {
+					type = resources_cm
+					amount = 20
+				}
+				add_resource = {
+					type = resources_rm
+					amount = 8
+				}
+			}
+			532 = {
+				add_resource = {
+					type = resources_fe
+					amount = 2
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = resource_distribution_center
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = resource_distribution_center
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		#解决原料问题
+		id = ARI_raw_material
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_deep_mineral
+		prerequisite = {
+			focus = ARI_deep_mineral
+		}
+		cost = 3
+		x = -2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_raw_material_tt
+			add_to_variable = {
+				ARI_tax_farming_production_speed_resource_distribution_center_factor = 0.15
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_processing_factories
+				show_effect_tooltip = yes
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_power_station
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#化工园区建设
+		id = ARI_chemical_industry_park
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_deep_mineral
+		prerequisite = {
+			focus = ARI_deep_mineral
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+			#1张50石油加速卡
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		#引入欧帕兹技术
+		id = ARI_ooparts_technology
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_deep_mineral
+		prerequisite = {
+			focus = ARI_deep_mineral
+		}
+		cost = 3
+		x = 2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = opatz_synthesis_center
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = opatz_synthesis_center
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = opaz_power_station
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = opaz_power_station
+					level = 1
+				}
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_explore_ruins_ooparts
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#外界先进加工技术
+		id = ARI_import_advanced_technologies
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_chemical_industry_park
+		prerequisite = {
+			focus = ARI_raw_material
+		}
+		prerequisite = {
+			focus = ARI_chemical_industry_park
+		}
+		prerequisite = {
+			focus = ARI_ooparts_technology
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+			#强化精神“阿里乌斯包税体系”
+			custom_effect_tooltip = ARI_import_advanced_technologies_tt
+			add_to_variable = {
+				ARI_tax_farming_local_resources_factor = 0.1
+			}
+		}
+	}
+	#军工部分
+	focus = {
+		#铸犁为剑
+		id = ARI_build_arms_factory
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_leaps_and_bounds
+		prerequisite = {
+			focus = ARI_leaps_and_bounds
+		}
+		cost = 3
+		x = 4
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			#步兵武器卡，火炮，装甲100%加速*1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				category = armor
+				category = fire_support
+			}
+		}
+	}
+	focus = {
+		#扩建载具工厂
+		id = ARI_vehicle_factory
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_build_arms_factory
+		prerequisite = {
+			focus = ARI_build_arms_factory
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			138 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = heavy_arms_factory
+					level = 2
+				}
+			}
+			#强化精神“阿里乌斯包税体系”，重工厂产出+40%
+			custom_effect_tooltip = ARI_vehicle_factory_tt
+			set_country_flag = ARI_tax_farming_hic
+			set_variable = {
+				ARI_tax_farming_resources_hic = resource_produced@resources_hic
+			}
+			multiply_variable = {
+				ARI_tax_farming_resources_hic = 0.4
+			}
+		}
+	}
+	focus = {
+		#向目标前进！
+		id = ARI_march_towards_the_goal
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_import_advanced_technologies
+		prerequisite = {
+			focus = ARI_supervisor_experience_exchanging_meeting
+		}
+		prerequisite = {
+			focus = ARI_import_advanced_technologies
+		}
+		prerequisite = {
+			focus = ARI_vehicle_factory
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	}
+	#军事部分
+	focus = {
+		#小队重新分组
+		id = ARI_restructure_teams
+		icon = GFX_goal_ARI_restructure_teams
+		relative_position_id = ARI_meeting_with_supervisor
+		prerequisite = {
+			focus = ARI_meeting_with_supervisor
+		}
+		cost = 3
+		x = 17
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			army_experience = 50
+			#降低GUI1中每周期抵抗运动增长
+			every_owned_state = {
+				ARI_control_modifier_increase_2 = yes
+			}
+		}
+	}
+	#学生部队部分
+	focus = {
+		#阿里乌斯武装学生部队
+		id = ARI_armed_students
+		#icon = 
+		relative_position_id = ARI_restructure_teams
+		prerequisite = {
+			focus = ARI_restructure_teams
+		}
+		cost = 3
+		x = -2
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_command_power = 15
+			add_stability = 0.05
+			country_event = ARI_beatrice.10
+		}
+	}
+	focus = {
+		#保证指挥官的能力
+		id = ARI_commander_ability
+		#icon = 
+		relative_position_id = ARI_armed_students
+		prerequisite = {
+			focus = ARI_armed_students
+		}
+		mutually_exclusive = {
+			focus = ARI_driven_by_revanchism
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = focus_completed_by_event
+				always = no
+			}
+		}
+		cost = 1
+		x = -3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#计划线
+			custom_effect_tooltip = ARI_commander_ability_tt
+		}
+	}
+	focus = {
+		#新指挥官课程
+		id = ARI_commander_lessons
+		#icon = 
+		relative_position_id = ARI_commander_ability
+		prerequisite = {
+			focus = ARI_commander_ability
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+			FOCUS_FILTER_ARMY_XP
+		}
+		completion_reward = {
+			army_experience = 20
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_commander_lessons_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_army_leader_start_level = 1
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_max_planning_factor = 0.15
+			}
+			every_unit_leader = {
+				add_trait = {
+					trait = ARI_commander_lessons_1
+				}
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1
+				add_logistics = 1
+			}
+		}
+	}
+	focus = {
+		#能者自有奖赏
+		id = ARI_reward_the_capable
+		#icon = 
+		relative_position_id = ARI_commander_lessons
+		prerequisite = {
+			focus = ARI_commander_lessons
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ARI_improving_reward_and_punishment
+				days = 90
+			}
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_reward_the_capable_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_max_command_power = 30
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_org_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_planning_speed = 0.1
+			}
+			every_unit_leader = {
+				add_trait = {
+					trait = ARI_commander_lessons_2
+				}
+			}
+		}
+	}
+	focus = {
+		#指挥保障队
+		id = ARI_support_troops
+		#icon = 
+		relative_position_id = ARI_reward_the_capable
+		prerequisite = {
+			focus = ARI_reward_the_capable
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#解锁机动安保支队
+			#给3个机动安保支队
+			division_template = {
+				name = "机动安保支队"
+				regiments = {
+					infantry_heavy = {
+						x = 0
+						y = 0
+					}
+					infantry_heavy = {
+						x = 0
+						y = 1
+					}
+					infantry_heavy = {
+						x = 1
+						y = 0
+					}
+					infantry_heavy = {
+						x = 1
+						y = 1
+					}
+				}
+				support = {
+					signal_company = {
+						x = 0
+						y = 0
+					}
+				}
+			}
+			138 = {
+				create_unit = {
+					division = "division_template= \"机动安保支队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 3
+				}
+			}
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_support_troops_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_army_defence_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_land_reinforce_rate = 0.01
+			}
+		}
+	}
+	focus = {
+		#复仇驱动前进
+		id = ARI_driven_by_revanchism
+		#icon = 
+		relative_position_id = ARI_armed_students
+		prerequisite = {
+			focus = ARI_armed_students
+		}
+		mutually_exclusive = {
+			focus = ARI_commander_ability
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = focus_completed_by_event
+				always = no
+			}
+		}
+		cost = 1
+		x = 3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#攻防线
+			custom_effect_tooltip = ARI_driven_by_revanchism_tt
+		}
+	}
+	focus = {
+		#额外战术课程
+		id = ARI_popularize_tactic_lessons
+		#icon = 
+		relative_position_id = ARI_driven_by_revanchism
+		prerequisite = {
+			focus = ARI_driven_by_revanchism
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+			FOCUS_FILTER_ARMY_XP
+		}
+		completion_reward = {
+			army_experience = 20
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_popularize_tactic_lessons_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_army_defence_factor = 0.1
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_org_regain = 0.1
+			}
+		}
+	}
+	focus = {
+		#共同的复仇意志
+		id = ARI_spirit_of_revenge
+		#icon = 
+		relative_position_id = ARI_popularize_tactic_lessons
+		prerequisite = {
+			focus = ARI_popularize_tactic_lessons
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ARI_revanchism_education
+				days = 90
+			}
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_spirit_of_revenge_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_army_attack_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_defence_factor = 0.1
+			}
+		}
+	}
+	focus = {
+		#复仇冲锋队
+		id = ARI_charge_of_revenge
+		#icon = 
+		relative_position_id = ARI_spirit_of_revenge
+		prerequisite = {
+			focus = ARI_spirit_of_revenge
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#解锁阿里乌斯版暴风突击队
+			#给2个精英6步
+			division_template = {
+				name = "暴风突击队"
+				regiments = {
+					infantry_sf = {
+						x = 0
+						y = 0
+					}
+					infantry_sf = {
+						x = 0
+						y = 1
+					}
+					infantry_sf = {
+						x = 0
+						y = 2
+					}
+					infantry_sf = {
+						x = 1
+						y = 0
+					}
+					infantry_sf = {
+						x = 1
+						y = 1
+					}
+					infantry_sf = {
+						x = 1
+						y = 2
+					}
+				}
+				support = {
+				}
+			}
+			138 = {
+				create_unit = {
+					division = "division_template = \"暴风突击队\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 2
+				}
+			}
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_charge_of_revenge_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_org_loss_when_moving = -0.2
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_attack_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_breakthrough_factor = 0.1
+			}
+		}
+	}
+	focus = {
+		#外界的战斗经验
+		id = ARI_foreign_combat_experience
+		#icon = 
+		relative_position_id = ARI_armed_students
+		prerequisite = {
+			focus = ARI_armed_students
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY
+			FOCUS_FILTER_ARMY_XP
+		}
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		#强化单兵战斗力
+		id = ARI_individual_effectiveness
+		#icon = 
+		relative_position_id = ARI_foreign_combat_experience
+		prerequisite = {
+			focus = ARI_foreign_combat_experience
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = ARI_assault_rifle
+				show_effect_tooltip = yes
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_light_support_equipment
+				show_effect_tooltip = yes
+			}
+			unlock_decision_tooltip = {
+				decision = ARI_logistics_teams
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	focus = {
+		#推进等级现象
+		id = ARI_hierarchy
+		#icon = 
+		relative_position_id = ARI_foreign_combat_experience
+		prerequisite = {
+			focus = ARI_foreign_combat_experience
+		}
+		cost = 3
+		x = 0
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_hierarchy_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_army_org_factor = 0.15
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_org_regain = -0.05
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_land_reinforce_rate = -0.005
+			}
+		}
+	}
+	focus = {
+		#重建阿里乌斯重装镇暴队
+		id = ARI_anti_riot_squads
+		#icon = 
+		relative_position_id = ARI_foreign_combat_experience
+		prerequisite = {
+			focus = ARI_foreign_combat_experience
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#解锁5中坦5重步的编制，并获得一个精英部队
+			division_template = {
+				name = "重装镇暴队"
+				regiments = {
+					infantry_heavy = {
+						x = 0
+						y = 0
+					}
+					infantry_heavy = {
+						x = 0
+						y = 1
+					}
+					infantry_heavy = {
+						x = 0
+						y = 2
+					}
+					infantry_heavy = {
+						x = 1
+						y = 0
+					}
+					infantry_heavy = {
+						x = 1
+						y = 1
+					}
+					medium_armor = {
+						x = 2
+						y = 0
+					}
+					medium_armor = {
+						x = 2
+						y = 1
+					}
+					medium_armor = {
+						x = 2
+						y = 2
+					}
+					medium_armor = {
+						x = 3
+						y = 0
+					}
+					medium_armor = {
+						x = 3
+						y = 1
+					}
+				}
+				support = {
+				}
+			}
+			138 = {
+				create_unit = {
+					division = "division_template = \"重装镇暴队\" start_experience_factor = 0.8 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+			}
+			add_ideas = ARI_merkava_main_battle_tank
+			unlock_decision_tooltip = {
+				decision = ARI_old_production_line
+				show_effect_tooltip = yes
+			}
+		}
+	}
+	#特战部队部分
+	focus = {
+		#阿里乌斯特战部队
+		id = ARI_special_battle_brigade
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_restructure_teams
+		prerequisite = {
+			focus = ARI_restructure_teams
+		}
+		cost = 3
+		x = 3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_AIR_XP
+		}
+		completion_reward = {
+			army_experience = 25
+			air_experience = 25
+			custom_effect_tooltip = ARI_special_battle_brigade_tt
+			add_to_variable = {
+				ARI_special_force_special_forces_cap = 0.1
+			}
+			#获得5特战的编制和2个师
+			division_template = {
+				name = "特战部队"
+				regiments = {
+					infantry_sf = {
+						x = 0
+						y = 0
+					}
+					infantry_sf = {
+						x = 0
+						y = 1
+					}
+					infantry_sf = {
+						x = 0
+						y = 2
+					}
+					infantry_sf = {
+						x = 1
+						y = 0
+					}
+					infantry_sf = {
+						x = 1
+						y = 1
+					}
+				}
+				support = {
+					recon = {
+						x = 0
+						y = 0
+					}
+				}
+			}
+			138 = {
+				create_unit = {
+					division = "division_template = \"特战部队\" start_experience_factor = 0.6 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 2
+				}
+			}
+		}
+	}
+	focus = {
+		#夫人的直接教导
+		id = ARI_taught_by_beatrice
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_special_battle_brigade
+		prerequisite = {
+			focus = ARI_special_battle_brigade
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			#TODO:2张50特战学说卡，暂时用陆军学说代替
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		#斯巴达式训练法
+		id = ARI_Sparta_discipline
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_taught_by_beatrice
+		prerequisite = {
+			focus = ARI_taught_by_beatrice
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+			FOCUS_FILTER_ARMY_XP
+		}
+		completion_reward = {
+			army_experience = 25
+			unlock_decision_category_tooltip = ARI_special_training_decisions
+			set_variable = {
+				ARI_special_training_decisions_count = 5
+			}
+			custom_effect_tooltip = ARI_Sparta_discipline_tt
+			add_to_variable = {
+				ARI_special_force_special_forces_attack_factor = 0.05
+			}
+			add_to_variable = {
+				ARI_special_force_special_forces_defence_factor = 0.05
+			}
+		}
+	}
+	focus = {
+		#阿里乌斯游骑兵
+		id = ARI_ranger
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_Sparta_discipline
+		prerequisite = {
+			focus = ARI_Sparta_discipline
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = ARI_ranger_trigger_tt
+				has_variable = ARI_special_training_decisions_count
+				check_variable = {
+					ARI_special_training_decisions_count = 0
+				}
+			}
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ARMY
+		}
+		completion_reward = {
+			clear_variable = ARI_special_training_decisions_count
+			#强化精神“阿里乌斯武装学生部队”
+			custom_effect_tooltip = ARI_ranger_tt
+			add_to_variable = {
+				ARI_armed_students_modifier_recon_factor = 0.15
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_org_regain = 0.05
+			}
+			add_to_variable = {
+				ARI_armed_students_modifier_army_attack_factor = 0.05
+			}
+		}
+	}
+	focus = {
+		#占据天空
+		id = ARI_rule_the_sky
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_special_battle_brigade
+		prerequisite = {
+			focus = ARI_special_battle_brigade
+		}
+		cost = 3
+		x = 3
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_political_power = -50
+			air_experience = 25
+			137 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+			#TODO:2张50特战学说卡，暂时用陆军学说代替
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			#解锁T2小型无人机科技
+			set_technology = {
+				fighting_drone_MK2 = 1
+			}
+			#100架制空小型无人机
+			add_equipment_to_stockpile = {
+				type = medium_uav_equipment_2
+				amount = 100
+			}
+		}
+	}
+	focus = {
+		#炸飞她们
+		id = ARI_bomber
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_rule_the_sky
+		prerequisite = {
+			focus = ARI_rule_the_sky
+		}
+		mutually_exclusive = {
+			focus = ARI_fighter
+		}
+		cost = 3
+		x = -1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_bomber_tt
+			add_to_variable = {
+				ARI_special_force_bomber = 0.1
+			}
+		}
+	}
+	focus = {
+		#晴空万里
+		id = ARI_fighter
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_rule_the_sky
+		prerequisite = {
+			focus = ARI_rule_the_sky
+		}
+		mutually_exclusive = {
+			focus = ARI_bomber
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+		}
+		completion_reward = {
+			custom_effect_tooltip = ARI_fighter_tt
+			add_to_variable = {
+				ARI_special_force_fighter = 0.1
+			}
+		}
+	}
+	focus = {
+		#阿里乌斯航空兵部队
+		id = ARI_air_force
+		#icon = GFX_goal_unknown
+		relative_position_id = ARI_bomber
+		prerequisite = {
+			focus = ARI_bomber
+		}
+		prerequisite = {
+			focus = ARI_fighter
+		}
+		cost = 3
+		x = 1
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+		}
+		completion_reward = {
+			#空军学说-50%*2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			add_ideas = ARI_air_force_0
+		}
+	}
+	focus = {
+		#本地生产无人机
+		id = ARI_UAV_production
+		icon = GFX_goal_unknown
+		relative_position_id = ARI_air_force
+		prerequisite = {
+			focus = ARI_air_force
+		}
+		cost = 3
+		x = 0
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_AIR_XP
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARI_air_force_0
+				add_idea = ARI_air_force_1
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			#无人机科技卡75%*2
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = uav
+			}
 		}
 	}
 }
