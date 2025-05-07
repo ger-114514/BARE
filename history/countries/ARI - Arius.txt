@@ -120,7 +120,6 @@ set_popularities = {
 	set_variable = { ARI_nihilism_surrender_limit = 0.1 }
 	set_variable = { ARI_nihilism_org_loss_at_low_org_factor = -0.025 }
 	every_country = {
-		limit = { NOT = { is_puppet_of = ARI } }
 		ARI = {
 			add_opinion_modifier = {
 				target = PREV
