@@ -50,7 +50,7 @@ GEH_GST_LS_category = {
 	visible = {
 		original_tag = TRI
 	}
-	priority = 114514
+	priority = 114512
 }
 
 #古圣堂之战临时触发任务类别 - fgvfgfs
@@ -79,7 +79,7 @@ GST_LS_ZZ_category = {
 			}
 			AND = {
 				has_war_with = ARI
-				
+				is_in_faction_with = SCH
 			}
 		}
 	}
