@@ -1,0 +1,22 @@
+add_namespace = bare_hidden_event
+
+
+
+country_event = {
+    id = bare_hidden_event.1
+    title = bare_hidden_event.1.t
+    desc = bare_hidden_event.1.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		mark_focus_tree_layout_dirty = yes
+	}
+    option = {
+		name = bare_hidden_event.1.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
