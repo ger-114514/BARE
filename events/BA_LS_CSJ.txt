@@ -462,4 +462,10 @@ country_event = { #第二次伊甸条约签订
 		}
 		name = LS_GST.9.c
 	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = DEC_YD_TX_YWC #第二次伊甸条约签订完成
+		}
+	}
 }

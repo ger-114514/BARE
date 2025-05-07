@@ -234,328 +234,334 @@ GST_LS_ZZ_category = {
 		}
 	}
 
-	GST_ZZ_XCJC_TRI_AND_GEH = {#古圣堂之战 - 圣三一 歌赫娜
-		icon = generic_research
-		priority = 36
-		activation = {
-			AND = {
-				OR = {
-					original_tag = TRI
-					original_tag = GEH
-				}
-				OR = {
-					has_war_with = GEH
-					has_war_with = TRI
-				}
-				ARI = {
-					has_completed_focus = ARI_the_final_step #必须完成 最后一步 国策
-				}
-				SCH = {
-					NOT = {
-						has_war_with = ARI
-					}
-				}
-			}
-		}
-		available = {
-			always = no
-			custom_trigger_tooltip = {
-				tooltip = WAIT_TRI_AND_GEH_GST_LOC
-			}
-		}
-		days_mission_timeout = 9999
-		is_good = no
+	# GST_ZZ_XCJC_TRI_AND_GEH = {#古圣堂之战 - 圣三一 歌赫娜
+	# 	icon = generic_research
+	# 	priority = 36
+	# 	activation = {
+	# 		AND = {
+	# 			OR = {
+	# 				original_tag = TRI
+	# 				original_tag = GEH
+	# 			}
+	# 			OR = {
+	# 				has_war_with = GEH
+	# 				has_war_with = TRI
+	# 			}
+	# 			ARI = {
+	# 				has_completed_focus = ARI_the_final_step #必须完成 最后一步 国策
+	# 			}
+	# 			SCH = {
+	# 				NOT = {
+	# 					has_war_with = ARI
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	available = {
+	# 		always = no
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = WAIT_TRI_AND_GEH_GST_LOC
+	# 		}
+	# 	}
+	# 	days_mission_timeout = 9999
+	# 	is_good = no
 
-		cancel_trigger = {
-			OR = {
-				OR = {
-					GEH = {#投降倾向高于85%
-						surrender_progress > 0.85
-					}
-					TRI = {
-						surrender_progress > 0.85
-					}
-				}
-				OR = {
-					GEH = {#检测是否停止抵抗
-						has_capitulated = yes
-					}
-					TRI = {
-						has_capitulated = yes
-					}
-				}
-			}
-		}
+	# 	cancel_trigger = {
+	# 		OR = {
+	# 			OR = {
+	# 				GEH = {#投降倾向高于85%
+	# 					surrender_progress > 0.85
+	# 				}
+	# 				TRI = {
+	# 					surrender_progress > 0.85
+	# 				}
+	# 			}
+	# 			OR = {
+	# 				GEH = {#检测是否停止抵抗
+	# 					has_capitulated = yes
+	# 				}
+	# 				TRI = {
+	# 					has_capitulated = yes
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-		cancel_effect = {
-			SCH = {#夏莱
-				set_major = yes
-				create_faction = JWTS_FYLM
-				set_faction_spymaster = yes
-				TRI = {
-					if = {
-						limit = { 
-							has_war_with = GEH
-						}
-						white_peace = {
-							tag = GEH
-							message = pec_bec
-						}
-					}
+	# 	cancel_effect = {
+	# 		SCH = {#夏莱
+	# 			set_major = yes
+	# 			create_faction = JWTS_FYLM
+	# 			set_faction_spymaster = yes
+	# 			TRI = {
+	# 				if = {
+	# 					limit = { 
+	# 						has_war_with = GEH
+	# 					}
+	# 					white_peace = {
+	# 						tag = GEH
+	# 						message = pec_bec
+	# 					}
+	# 				}
 
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = TRI.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = TRI_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = TRI_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = TRI.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = TRI_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = TRI_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				CEN = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = CEN.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = CEN_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = CEN_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			CEN = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = CEN.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = CEN_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = CEN_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				CAE = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = CAE.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = CAE_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = CAE_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			CAE = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = CAE.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = CAE_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = CAE_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				MIL = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = MIL.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = MIL_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = MIL_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			MIL = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = MIL.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = MIL_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = MIL_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				SHA = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = SHA.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = SHA_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = SHA_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			SHA = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = SHA.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = SHA_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = SHA_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 				
-				GEH = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = GEH.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = GEH_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = GEH_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
-				
-
-				ABY = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = ABY.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = ABY_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = ABY_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			GEH = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = GEH.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = GEH_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = GEH_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				RWT = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = RWT.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = RWT_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = RWT_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			ABY = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = ABY.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = ABY_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = ABY_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				HYA = {
-					if = {
-						limit = { 
-							is_in_faction = yes
-						}
-						for_each_loop = {
-							array = HYA.faction_members #所有与此国家在同一阵营的成员
-							value = v
-							add_to_array = {
-								array = HYA_YX_ZY
-								value = var:v
-							}
-						}
-						add_to_array = {
-							array = HYA_YX_ZY
-							value = 114514
-						}
-						dismantle_faction = yes
-					}
-				}
+	# 			RWT = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = RWT.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = RWT_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = RWT_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
 				
 
-				add_to_faction = TRI #圣三一
-				add_to_faction = CEN #联合学生会
-				add_to_faction = CAE #凯撒总部
-				add_to_faction = MIL #千禧年
-				add_to_faction = SHA #山海经
-				add_to_faction = GEH #歌赫娜
-				add_to_faction = ABY #阿拜多斯
-				add_to_faction = RWT #赤冬
-				add_to_faction = HYA #百鬼夜行
-				declare_war_on = {#对目标国家宣战
-					target = ARI
-					type = XiaoMieWeiXie #消灭威胁
-				}
-				for_each_scope_loop = {
-					array = ROOT.faction_members #所有与此国家在同一阵营的成员
-					add_to_war = {
-						targeted_alliance = SCH
-						enemy = ARI
-						hostility_reason = XMWX_LOC
-					}
-				}
-			}
-			if = {#如果阿里乌斯准备度达到三阶段
-				limit = {
-					ARI = {
-						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
-					}
-				}
-				GEH = {#那么歌赫娜和茶会的领袖都切换为老师
-					promote_character = SCH_sensei
-				}
-				TRI = {
-					promote_character = SCH_sensei
-				}
-			}
-			else_if = {#如果阿里乌斯准备度达到二阶段
-				limit = {
-					ARI = {
-						has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-					}
-				}
-				GEH = {#歌赫娜切换领袖为日奈
-					GEH_hina = {
-						clr_character_flag = ARI_BeiBangJia
-					}
-					promote_character = GEH_hina
-				}
-				TRI = {#圣三一切换领袖为莲见
-					TRI_hasumi = {
-						clr_character_flag = ARI_BeiBangJia
-					}
-					promote_character = TRI_hasumi
-				}
-			}
-		}
-	}
+	# 			HYA = {
+	# 				if = {
+	# 					limit = { 
+	# 						is_in_faction = yes
+	# 					}
+	# 					for_each_loop = {
+	# 						array = HYA.faction_members #所有与此国家在同一阵营的成员
+	# 						value = v
+	# 						add_to_array = {
+	# 							array = HYA_YX_ZY
+	# 							value = var:v
+	# 						}
+	# 					}
+	# 					add_to_array = {
+	# 						array = HYA_YX_ZY
+	# 						value = 114514
+	# 					}
+	# 					dismantle_faction = yes
+	# 				}
+	# 			}
+				
+
+	# 			add_to_faction = TRI #圣三一
+	# 			add_to_faction = CEN #联合学生会
+	# 			add_to_faction = CAE #凯撒总部
+	# 			add_to_faction = MIL #千禧年
+	# 			add_to_faction = SHA #山海经
+	# 			add_to_faction = GEH #歌赫娜
+	# 			add_to_faction = ABY #阿拜多斯
+	# 			add_to_faction = RWT #赤冬
+	# 			add_to_faction = HYA #百鬼夜行
+	# 			declare_war_on = {#对目标国家宣战
+	# 				target = ARI
+	# 				type = XiaoMieWeiXie #消灭威胁
+	# 			}
+	# 			for_each_scope_loop = {
+	# 				array = ROOT.faction_members #所有与此国家在同一阵营的成员
+	# 				add_to_war = {
+	# 					targeted_alliance = SCH
+	# 					enemy = ARI
+	# 					hostility_reason = XMWX_LOC
+	# 				}
+	# 			}
+	# 		}
+	# 		if = {#如果阿里乌斯准备度达到三阶段
+	# 			limit = {
+	# 				ARI = {
+	# 					has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+	# 				}
+	# 			}
+	# 			GEH = {#那么歌赫娜和茶会的领袖都切换为老师
+	# 				SCH_sensei = {
+	# 					set_nationality = GEH
+	# 				}
+	# 				promote_character = SCH_sensei
+	# 			}
+	# 			TRI = {
+	# 				SCH_sensei = {
+	# 					set_nationality = TRI
+	# 				}
+	# 				promote_character = SCH_sensei
+	# 			}
+	# 		}
+	# 		else_if = {#如果阿里乌斯准备度达到二阶段
+	# 			limit = {
+	# 				ARI = {
+	# 					has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+	# 				}
+	# 			}
+	# 			GEH = {#歌赫娜切换领袖为日奈
+	# 				GEH_hina = {
+	# 					clr_character_flag = ARI_BeiBangJia
+	# 				}
+	# 				promote_character = GEH_hina
+	# 			}
+	# 			TRI = {#圣三一切换领袖为莲见
+	# 				TRI_hasumi = {
+	# 					clr_character_flag = ARI_BeiBangJia
+	# 				}
+	# 				promote_character = TRI_hasumi
+	# 			}
+	# 		}
+	# 	}
+	# }
 
 	GST_ZZ_XCJC_SCH_ALL = {#古圣堂之战 夏莱_所有学院_凯撒_势力
 		icon = generic_research
@@ -589,6 +595,7 @@ GST_LS_ZZ_category = {
 				NOT = {
 					has_war_with = TRI
 					has_war_with = GEH
+					has_war_with = SCH
 				}
 			}
 		}
@@ -816,6 +823,93 @@ GST_LS_ZZ_category = {
 					}
 				}
 			}
+
+			ARI = {
+				if = {
+					limit = { 
+						TRI = {
+							has_war_with = GEH
+						}
+					}
+					TRI = {
+						white_peace = {
+							tag = GEH
+							tooltip = WAR_GST_JS_LOC
+						}
+					}
+				}
+				140 = {
+					transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+				}
+		
+				529 = {
+					transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+				}
+	
+				###移出所有因古圣堂之战而出现的动态修正并自动营救所有学生###
+				for_each_scope_loop = {
+					array = ARI.controlled_states
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_BeiAliWuSiTuXi
+					}
+				}
+				for_each_scope_loop = {
+					array = TRI.controlled_states
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_BeiAliWuSiTuXi
+					}
+				}
+				for_each_scope_loop = {
+					array = GEH.controlled_states
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_BeiAliWuSiTuXi
+					}
+				}
+				for_each_scope_loop = {
+					array = GST_JS_ZBH
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_BeiAliWuSiTuXi
+					}
+				}
+				for_each_loop = {
+					array = global.ARI_ShouHaiZheMingDan_SAN
+					value = v
+					var:v = {
+						clr_character_flag = ARI_BeiBangJia
+					}
+				}
+				for_each_loop = {
+					array = global.ARI_ShouHaiZheMingDan_ER
+					value = v
+					var:v = {
+						clr_character_flag = ARI_BeiBangJia
+					}
+				}
+	
+				###结束###
+				remove_mission = GST_ZZ_ARI_XCJC_LS_1
+				remove_mission = GST_ZZ_ARI_XCJC_LS_2
+				load_focus_tree = ARI_NULL
+				mark_focus_tree_layout_dirty = yes
+				ARI = {
+					country_lock_all_division_template = yes
+					add_ideas = {
+						ARI_JSL
+					}
+				}
+			}
 		}
 	}
 
@@ -981,7 +1075,6 @@ GST_LS_ZZ_category = {
 			}
 		}
 	}
-
 	GST_ZZ_ARI_XCJC_LS_1 = {#古圣堂之战 - 阿里乌斯循环
 		icon = generic_research
 		priority = 36
@@ -1140,6 +1233,89 @@ GST_LS_ZZ_category = {
 					localization_key = ARI_SHIKONG_DIED
 				}
 				activate_mission = GST_ZZ_ARI_XCJC_LS_1
+			}
+		}
+	}
+
+
+	GST_ZZ_ARI_ZHYB_TS_JDRW = {#阿里乌斯-完成最后一步国策-每月阶段进度增加任务
+		icon = generic_research
+		priority = 36
+		activation = {
+			AND = {
+				original_tag = ARI
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
+				ARI = {
+					has_completed_focus = ARI_the_final_step #必须完成 最后一步 国策
+				}
+				NOT = {
+					has_global_flag = DEC_YD_TX_YWC #第二次伊甸条约已经签订
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				has_global_flag = DEC_YD_TX_YWC #第二次伊甸条约已经签订
+			}
+		}
+		days_mission_timeout = 29
+		
+		timeout_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_global_flag = DEC_YD_TX_YWC #第二次伊甸条约已经签订
+					}
+				}
+				for_each_scope_loop = {
+					array = ARI.controlled_states
+					ARI = { #每月进度+1
+						add_to_variable = {
+							var = ARI_mystic_progress
+							value = 1
+						}
+					}
+				}
+				activate_mission = GST_ZZ_ARI_ZHYB_TS_JDRW_2
+			}
+		}
+	}
+
+	GST_ZZ_ARI_ZHYB_TS_JDRW_2 = {#阿里乌斯-完成最后一步国策-每月阶段进度增加任务 - 循环
+		icon = generic_research
+		priority = 36
+		activation = {
+			always = no
+		}
+
+		available = {
+			NOT = {
+				has_global_flag = DEC_YD_TX_YWC #第二次伊甸条约已经签订
+			}
+		}
+		days_mission_timeout = 29
+		
+		timeout_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_global_flag = DEC_YD_TX_YWC #第二次伊甸条约已经签订
+					}
+				}
+				for_each_scope_loop = {
+					array = ARI.controlled_states
+					ARI = { #每月进度+1
+						add_to_variable = {
+							var = ARI_mystic_progress
+							value = 1
+						}
+					}
+				}
+				activate_mission = GST_ZZ_ARI_ZHYB_TS_JDRW
 			}
 		}
 	}
