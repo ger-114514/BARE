@@ -1,0 +1,18 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+
+	#TRI
+
+	SpriteType = {
+		name = "GFX_news_event_eden_pact_attack"
+		texturefile = "gfx/event_pictures/news_event/news_event_eden_pact_attack.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_news_event_eden_pact_ruin"
+		texturefile = "gfx/event_pictures/news_event/news_event_eden_pact_ruin.dds"			
+	}
+
+}
