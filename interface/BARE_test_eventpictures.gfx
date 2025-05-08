@@ -3,6 +3,10 @@ spriteTypes = {
 		name = "GFX_news_event_gui_test"
 		texturefile = "gfx/event_pictures/news_event/news_event_gui_test.dds"
 	}
+	spriteType = {
+		name = "GFX_common_event_gui_test"
+		texturefile = "gfx/event_pictures/common_event/common_event_gui_test.dds"
+	}
 }
 
 

@@ -202,4 +202,77 @@ spriteTypes = {
 		name = "GFX_goal_ARI_roses_on_the_skeleton"
 		texturefile = "gfx/interface/goals/Arius/focus_ARI_roses_on_the_skeleton.png"
 	}
+
+	##20250508注册##
+	
+	SpriteType = {
+		name = "GFX_focus_ARI_deal_with_shortage"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_deal_with_shortage.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_self_sufficient"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_self_sufficient.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_leaps_and_bounds"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_leaps_and_bounds.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_deep_mineral"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_deep_mineral.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_chemical_industry_park"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_chemical_industry_park.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_march_towards_the_goal"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_march_towards_the_goal.dds"
+	}
+
+	##20250508新注册##
+	SpriteType = {
+		name = "GFX_focus_ARI_raw_material"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_raw_material.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_ooparts_technology"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_ooparts_technology.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_import_advanced_technologies"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_import_advanced_technologies.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_build_arms_factory"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_build_arms_factory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_vehicle_factory"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_vehicle_factory.dds"
+	}
+    SpriteType = {
+		name = "GFX_focus_ARI_carrot"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_carrot.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_stick"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_stick.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_engineers"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_improve_domitories"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_improve_domitories.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_production_emulation"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_production_emulation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_supervisor_experience_exchanging_meeting"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_supervisor_experience_exchanging_meeting.dds"
+	}
 }
