@@ -13,12 +13,12 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_loadingstatus_bg"
-		texturefile = "gfx/interface/LoadScr/顶部加载界面.dds"
+		texturefile = "gfx/interface/LoadScr/Loadingscreen_loadingstatus.dds"
 	}
 	
 	spriteType = {
 		name = "GFX_loadingtip_bg"
-		texturefile = "gfx/interface/Loadingscreen_loadingtip.dds"
+		texturefile = "gfx/interface/LoadScr/Loadingscreen_loadingtip.dds"
 	}
 	
 	spriteType = {
@@ -35,8 +35,8 @@ spriteTypes = {
 		name = "GFX_loadingstatus_progress"
 		color = { 0.0 0.0 0.0 }
 		colortwo = { 0.0 0.0 0.0 }
-		textureFile1 = "gfx//interface//LoadScr//加载进度条-完全.dds"
-		textureFile2 = "gfx//interface//LoadScr//加载进度条.dds"
+		textureFile1 = "gfx//interface//LoadScr//LoadingScreen_Progress_2.dds"
+		textureFile2 = "gfx//interface//LoadScr//LoadingScreen_Progress_1.dds"
 		size = { x = 934 y = 15 }
 		effectFile = "gfx//FX//progress.lua"
 		horizontal = yes

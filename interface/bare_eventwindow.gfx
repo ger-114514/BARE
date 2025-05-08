@@ -1,0 +1,22 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_bare_event_report_top_win"
+		texturefile = "gfx/interface/event_window/bare_event_report_top_win.dds"
+		alwaystransparent = yes			
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_bare_event_report_tileable_midsection"
+		size = { x = 580 y = 66 }		
+		textureFile = "gfx/interface/event_window/bare_event_report_tileable_midsection.dds"
+		borderSize = { x = 290 y = 16 }
+		alwaystransparent = yes			
+	}
+
+	spriteType = {
+		name = "GFX_bare_event_report_bottom_win"
+		texturefile = "gfx/interface/event_window/bare_event_report_bottom_win.dds"
+		alwaystransparent = yes	
+	}
+}

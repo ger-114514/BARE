@@ -2501,7 +2501,7 @@ focus_tree = {
 	focus = {
 		#应对物资紧缺
 		id = ARI_deal_with_shortage
-		#icon = 
+		icon = GFX_focus_ARI_deal_with_shortage
 		relative_position_id = ARI_meeting_with_supervisor
 		prerequisite = {
 			focus = ARI_meeting_with_supervisor
@@ -2527,7 +2527,7 @@ focus_tree = {
 	focus = {
 		#自给自足的目标
 		id = ARI_self_sufficient
-		#icon = 
+		icon = GFX_focus_ARI_self_sufficient
 		relative_position_id = ARI_deal_with_shortage
 		prerequisite = {
 			focus = ARI_deal_with_shortage
@@ -2614,7 +2614,7 @@ focus_tree = {
 	focus = {
 		#萝卜
 		id = ARI_carrot
-		#icon = 
+		icon = GFX_focus_ARI_carrot
 		relative_position_id = ARI_tax_quota
 		prerequisite = {
 			focus = ARI_tax_quota
@@ -2645,7 +2645,7 @@ focus_tree = {
 	focus = {
 		#大棒
 		id = ARI_stick
-		#icon = 
+		icon = GFX_focus_ARI_stick
 		relative_position_id = ARI_tax_quota
 		prerequisite = {
 			focus = ARI_tax_quota
@@ -2679,7 +2679,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯工兵队
 		id = ARI_engineers
-		#icon = 
+		icon = GFX_focus_ARI_engineers
 		relative_position_id = ARI_carrot
 		prerequisite = {
 			focus = ARI_carrot
@@ -2708,7 +2708,7 @@ focus_tree = {
 	focus = {
 		#改善宿舍环境
 		id = ARI_improve_domitories
-		#icon = 
+		icon = GFX_focus_ARI_improve_domitories
 		relative_position_id = ARI_engineers
 		prerequisite = {
 			focus = ARI_engineers
@@ -2781,7 +2781,7 @@ focus_tree = {
 	focus = {
 		#生产竞赛
 		id = ARI_production_emulation
-		#icon = 
+		icon = GFX_focus_ARI_production_emulation
 		relative_position_id = ARI_engineers
 		prerequisite = {
 			focus = ARI_engineers
@@ -2829,7 +2829,7 @@ focus_tree = {
 	focus = {
 		#监工生产交流会
 		id = ARI_supervisor_experience_exchanging_meeting
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_supervisor_experience_exchanging_meeting
 		relative_position_id = ARI_improve_domitories
 		prerequisite = {
 			focus = ARI_improve_domitories
@@ -2858,7 +2858,7 @@ focus_tree = {
 	focus = {
 		#生产跃进计划
 		id = ARI_leaps_and_bounds
-		#icon = 
+		icon = GFX_focus_ARI_leaps_and_bounds
 		relative_position_id = ARI_self_sufficient
 		prerequisite = {
 			focus = ARI_self_sufficient
@@ -2990,7 +2990,7 @@ focus_tree = {
 	focus = {
 		#往地下挖！
 		id = ARI_deep_mineral
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_deep_mineral
 		relative_position_id = ARI_leaps_and_bounds
 		prerequisite = {
 			focus = ARI_leaps_and_bounds
@@ -3037,7 +3037,7 @@ focus_tree = {
 	focus = {
 		#解决原料问题
 		id = ARI_raw_material
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_raw_material
 		relative_position_id = ARI_deep_mineral
 		prerequisite = {
 			focus = ARI_deep_mineral
@@ -3067,7 +3067,7 @@ focus_tree = {
 	focus = {
 		#化工园区建设
 		id = ARI_chemical_industry_park
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_chemical_industry_park
 		relative_position_id = ARI_deep_mineral
 		prerequisite = {
 			focus = ARI_deep_mineral
@@ -3119,7 +3119,7 @@ focus_tree = {
 	focus = {
 		#引入欧帕兹技术
 		id = ARI_ooparts_technology
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_ooparts_technology
 		relative_position_id = ARI_deep_mineral
 		prerequisite = {
 			focus = ARI_deep_mineral
@@ -3169,7 +3169,7 @@ focus_tree = {
 	focus = {
 		#外界先进加工技术
 		id = ARI_import_advanced_technologies
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_import_advanced_technologies
 		relative_position_id = ARI_chemical_industry_park
 		prerequisite = {
 			focus = ARI_raw_material
@@ -3204,7 +3204,7 @@ focus_tree = {
 	focus = {
 		#铸犁为剑
 		id = ARI_build_arms_factory
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_build_arms_factory
 		relative_position_id = ARI_leaps_and_bounds
 		prerequisite = {
 			focus = ARI_leaps_and_bounds
@@ -3258,7 +3258,7 @@ focus_tree = {
 	focus = {
 		#扩建载具工厂
 		id = ARI_vehicle_factory
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_vehicle_factory
 		relative_position_id = ARI_build_arms_factory
 		prerequisite = {
 			focus = ARI_build_arms_factory
@@ -3291,7 +3291,7 @@ focus_tree = {
 	focus = {
 		#向目标前进！
 		id = ARI_march_towards_the_goal
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_march_towards_the_goal
 		relative_position_id = ARI_import_advanced_technologies
 		prerequisite = {
 			focus = ARI_supervisor_experience_exchanging_meeting

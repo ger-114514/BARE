@@ -1,0 +1,10 @@
+bookmarks = {
+	##哦天哪你必须有这个剧本才能让剧本选择界面正常工作
+	bookmark = {
+		name = "BLITZKRIEG_NAME"
+		desc = "BLITZKRIEG_DESC"
+		date = 2099.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "TRI"
+	}
+}
