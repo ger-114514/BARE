@@ -174,15 +174,68 @@ news_event = {
 news_event = {
     id = Eden_pact.1003
     title = Eden_pact.1003.t
-    desc = Eden_pact.1003.d
+    desc = {
+        text = Eden_pact.1003.d.a
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    desc = {
+        text = Eden_pact.1003.d.b
+    }
     picture = GFX_news_event_eden_pact_attack
 	is_triggered_only = yes
-    major = yes
-	fire_only_once = yes
-    #这里需要进一步完善
+
+    immediate = {
+        hidden_effect = {
+            set_global_flag = WOR_ancient_cathedral_has_been_attacked
+            #给格黑娜、圣三一刷新一下国策
+            if = {
+                limit = { original_tag = GEH }
+                mark_focus_tree_layout_dirty = yes
+            }
+            else_if = {
+                limit = { original_tag = TRI }
+                #切换议会焦点为：《伊甸条约》的威胁
+                TRI_set_focus_Eden_threat = yes
+                complete_national_focus = TRI_unexpected_accident
+            }
+            else_if = {
+                limit = { original_tag = ARI }
+                set_country_flag = ARI_lock_foreign_operation
+                set_country_flag = ARI_revenge_progress_locked
+            }
+        }
+    }
     option = {
 		name = Eden_pact.1003.a
-        
+        trigger = {
+            original_tag = TRI
+        }
+        hidden_effect = {
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_6 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.1003.a
+        trigger = {
+            NOT = {
+                original_tag = TRI
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_6 = yes
+            }
+        }
 		ai_chance = {
 			base = 100
 		}
@@ -197,7 +250,6 @@ news_event = {
     picture = GFX_news_event_eden_pact_ruin
 	is_triggered_only = yes
     major = yes
-	fire_only_once = yes
     #这里需要进一步完善
     option = {
 		name = Eden_pact.1004.a
