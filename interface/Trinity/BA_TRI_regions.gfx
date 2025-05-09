@@ -1,115 +1,74 @@
 spriteTypes = {
     spriteType = {
         name = "TRI_regions_bg"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_regions_bg.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_regions_bg.dds"
     }
     spriteType = {
         name = "TRI_center_campus_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_center_campus_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_center_campus_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_northern_campus_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_northern_campus_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_northern_campus_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_eastern_campus_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_eastern_campus_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_eastern_campus_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_southern_campus_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_southern_campus_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_southern_campus_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_living_area_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_living_area_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_living_area_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_industrial_park_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_industrial_park_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_industrial_park_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_business_district_region_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_business_district_region_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_business_district_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
         name = "TRI_church_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_church_button.png"
+        texturefile = "gfx/interface/Trinity/regions/TRI_church_button.dds"
         transparencecheck = yes
     }
-    # spriteType = {
-    #     name = "TRI_northwestern_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_northwestern_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_cultural_center_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_cultural_center_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_dormitory_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_dormitory_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_doria_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_doria_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_southwestern_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_southwestern_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_coastal_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_coastal_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_southern_living_quarters_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_southern_living_quarters_region_button.png"
-    #     transparencecheck = yes
-    # }
-    # spriteType = {
-    #     name = "TRI_southern_business_district_region_button"
-    #     texturefile = "gfx/interface/Trinity/BA_TRI_regions/TRI_southern_business_district_region_button.png"
-    #     transparencecheck = yes
-    # }
-    
     progressbartype = {
 		name = "TRI_regions_justice_pie"
-        textureFile1 = "gfx/interface/Trinity/BA_TRI_regions/TRI_regions_justice_pie.png"
-        textureFile2 = "gfx/interface/Trinity/BA_TRI_regions/120_120_blue_round_frame.png"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_justice_pie.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/gfx/interface/Trinity/regions/120_120_empty_bg.dds"
 		size = { x = 120 y = 120 }
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes
 	}
     progressbartype = {
 		name = "TRI_regions_sisterhood_pie"
-        textureFile1 = "gfx/interface/Trinity/BA_TRI_regions/TRI_regions_sisterhood_pie.png"
-        textureFile2 = "gfx/interface/Trinity/BA_TRI_regions/120_120_blue_round_frame.png"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_sisterhood_pie.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/gfx/interface/Trinity/regions/120_120_empty_bg.dds"
 		size = { x = 120 y = 120 }
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes
 	}
     progressbartype = {
 		name = "TRI_regions_knights_pie"
-        textureFile1 = "gfx/interface/Trinity/BA_TRI_regions/TRI_regions_knights_pie.png"
-        textureFile2 = "gfx/interface/Trinity/BA_TRI_regions/120_120_blue_round_frame.png"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_knights_pie.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/gfx/interface/Trinity/regions/120_120_empty_bg.dds"
 		size = { x = 120 y = 120 }
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes
 	}
     spriteType = {
         name = "120_120_blue_round_frame"
-        texturefile = "gfx/interface/Trinity/BA_TRI_regions/120_120_blue_round_frame.png"
+        texturefile = "gfx/interface/Trinity/regions/120_120_blue_round_frame.dds"
     }
 }

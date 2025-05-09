@@ -1,15 +1,15 @@
 spriteTypes = {
     spriteType = {
         name = "TRI_parliament_open_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_parliament/TRI_parliament_open_button.png"
+        texturefile = "gfx/interface/Trinity/parliament/parliament_open_button.dds"
     }
     spriteType = {
         name = "decision_category_tri_bop"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/decision_category_tri_bop.dds"
+        texturefile = "gfx/interface/Trinity/BOP/decision_category_tri_bop.dds"
     }
     spriteType = {
 		name = "TRI_BOP_Seat"
-		texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_seat.png"
+		texturefile = "gfx/interface/Trinity/BOP/BOP_seat.dds"
 		noOfFrames = 4
 	}
     spriteType = {
@@ -18,7 +18,7 @@ spriteTypes = {
     }
     spriteType = {
         name = "TRI_mika_arrested_parliament_leader_portrait"
-        texturefile = "gfx/leaders/TRI/mika_arrested.png"
+        texturefile = "gfx/leaders/TRI/mika_arrested.dds"
     }
     spriteType = {
         name = "TRI_nagisa_parliament_leader_portrait"
@@ -46,8 +46,8 @@ spriteTypes = {
     }
     progressbartype = {
 		name = "TRI_BOP_faction_weight_pie_1"
-        textureFile1 = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_1.png"
-        textureFile2 = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_bg.png"
+        textureFile1 = "gfx/interface/Trinity/BOP/BOP_association_pie_1.dds"
+        textureFile2 = "gfx/interface/Trinity/BOP/BOP_association_pie_bg.dds"
 		size = { x = 100 y = 100 }
 		effectFile = "gfx/FX/progress_radial.lua"
         steps = 600
@@ -55,8 +55,8 @@ spriteTypes = {
 	}
     progressbartype = {
 		name = "TRI_BOP_faction_weight_pie_2"
-        textureFile1 = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_2.png"
-        textureFile2 = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_bg.png"
+        textureFile1 = "gfx/interface/Trinity/BOP/BOP_association_pie_2.dds"
+        textureFile2 = "gfx/interface/Trinity/BOP/BOP_association_pie_bg.dds"
 		size = { x = 100 y = 100 }
 		effectFile = "gfx/FX/progress_radial.lua"
         steps = 600
@@ -64,8 +64,8 @@ spriteTypes = {
 	}
     progressbartype = {
 		name = "TRI_BOP_faction_weight_pie_3"
-        textureFile1 = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_3.png"
-        textureFile2 = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_bg.png"
+        textureFile1 = "gfx/interface/Trinity/BOP/BOP_association_pie_3.dds"
+        textureFile2 = "gfx/interface/Trinity/BOP/BOP_association_pie_bg.dds"
 		size = { x = 100 y = 100 }
 		effectFile = "gfx/FX/progress_radial.lua"
         steps = 600
@@ -73,44 +73,44 @@ spriteTypes = {
 	}
     spriteType = {
         name = "TRI_BOP_faction_weight_pie_4"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_4.png"
+        texturefile = "gfx/interface/Trinity/BOP/BOP_association_pie_4.dds"
     }
     spriteType = {
         name = "TRI_BOP_faction_weight_pie_cover"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_BOP_association_pie_cover.png"
+        texturefile = "gfx/interface/Trinity/BOP/BOP_association_pie_cover.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_0_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_0_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_0_BOP_icon.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_1_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_1_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_1_BOP_icon.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_2_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_2_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_2_BOP_icon.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_3_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_3_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_3_BOP_icon.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_4_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_4_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_4_BOP_icon.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_5_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_5_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_5_BOP_icon.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_6_BOP_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_BOP/BA_TRI_parliament_association_6_BOP_icon.png"
+        texturefile = "gfx/interface/Trinity/BOP/parliament_association_6_BOP_icon.dds"
     }
 
 	spriteType = {
 		name = "GFX_Parliament_Seat"
-		texturefile = "gfx/interface/Trinity/BA_TRI_parliament/parliament_seat.png"
+		texturefile = "gfx/interface/Trinity/parliament/parliament_seat.dds"
 		noOfFrames = 3
 	}
 	spriteType = {
@@ -118,62 +118,79 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Trinity/TRI_parliament_focus_0.png"
 	}
 	spriteType = {
-		name = "TRI_parliament_association_seats_bg"
-		texturefile = "gfx/interface/Trinity/BA_TRI_parliament/BA_TRI_parliament_association_seats_bg.png"
-        noOfFrames = 2
-	}
-	spriteType = {
-        name = "TRI_parliament_association_seats_button"
-        texturefile = "gfx/interface/Trinity/BA_TRI_parliament/BA_TRI_parliament_association_seats_button.png"
-    }
-	spriteType = {
 		name = "TRI_parliament_position_bg"
-		texturefile = "gfx/interface/Trinity/BA_TRI_parliament/TRI_parliament_position_bg.png"
+		texturefile = "gfx/interface/Trinity/parliament/parliament_position_bg.dds"
 	}
 	spriteType = {
 		name = "TRI_parliament_position_frame"
-		texturefile = "gfx/interface/Trinity/BA_TRI_parliament/TRI_parliament_position_frame.png"
+		texturefile = "gfx/interface/Trinity/parliament/parliament_position_frame.dds"
         noOfFrames = 2
         transparencecheck = yes
 	}
-	spriteType = {
-		name = "TRI_parliament_position_player_arrowhead"
-		texturefile = "gfx/interface/Trinity/BA_TRI_parliament/TRI_parliament_position_player_arrowhead.png"
-        noOfFrames = 3
-	}
     spriteType = {
         name = "TRI_parliament_association_0_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_0.png"
-        legacy_lazy_load = no
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_tea_party.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_1_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_1.png"
-        legacy_lazy_load = no
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_tea_party.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_2_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_2.png"
-        legacy_lazy_load = no
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_tea_party.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_3_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_3.png"
-        legacy_lazy_load = no
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_3.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_4_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_4.png"
-        legacy_lazy_load = no
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_4.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_5_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_5.png"
-        legacy_lazy_load = no
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_5.dds"
     }
     spriteType = {
         name = "TRI_parliament_association_6_icon"
-        texturefile = "gfx/interface/Trinity/BA_TRI_unity/BA_TRI_parliament_association_6.png"
+        texturefile = "gfx/interface/Trinity/parliament/parliament_association_6.dds"
+    }
+	spriteType = {
+		name = "TRI_parliament_position_player_arrowhead"
+		texturefile = "gfx/interface/Trinity/parliament/parliament_position_player_arrowhead.dds"
+        noOfFrames = 3
+	}
+    spriteType = {
+        name = "TRI_unity_progress_bar_icon_0"
+        texturefile = "gfx/interface/Trinity/parliament/unity_progress_bar_icon_0.dds"
         legacy_lazy_load = no
     }
+    spriteType = {
+        name = "TRI_unity_progress_bar_icon_1"
+        texturefile = "gfx/interface/Trinity/parliament/unity_progress_bar_icon_1.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_unity_progress_bar_icon_2"
+        texturefile = "gfx/interface/Trinity/parliament/unity_progress_bar_icon_2.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_unity_progress_bar_icon_3"
+        texturefile = "gfx/interface/Trinity/parliament/unity_progress_bar_icon_3.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "TRI_unity_progress_bar_icon_4"
+        texturefile = "gfx/interface/Trinity/parliament/unity_progress_bar_icon_4.dds"
+        legacy_lazy_load = no
+    }
+    progressbartype = {
+		name = "TRI_unity_progress_bar"
+		textureFile1 = "gfx/interface/Trinity/parliament/unity_progress_bar.dds"
+		textureFile2 = "gfx/interface/Trinity/parliament/unity_progress_bar_bg.dds"
+		size = { x = 410 y = 70 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
 }
