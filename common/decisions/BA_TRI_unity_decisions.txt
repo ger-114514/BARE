@@ -62,6 +62,22 @@ TRI_unity_system = {
 				amount = -108
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 4
+				surrender_progress > 0.2
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { infantry_equipment > 4000 }
+				has_equipment = { light_fire_support_equipment > 500 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { TRI_unity < 60 }
+			}
+		}
 	}
 	#征用社团物资
 	TRI_raise_association = {
@@ -92,6 +108,24 @@ TRI_unity_system = {
 				amount = 72
 			}
 			add_manpower = 1160
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_war = yes
+			}
+			modifier = {
+				add = 1
+				OR = {
+					has_equipment = { infantry_equipment < 2000 }
+					has_equipment = { light_fire_support_equipment < 200 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { TRI_unity < 60 }
+			}
 		}
 	}
 }

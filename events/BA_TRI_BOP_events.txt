@@ -493,7 +493,7 @@ country_event = {
 	option = {
 		name = TRI_region.101.a
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		hidden_effect = {
 			every_controlled_state = {
@@ -518,7 +518,7 @@ country_event = {
 	option = {
 		name = TRI_region.101.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		hidden_effect = {
 			every_controlled_state = {
@@ -543,7 +543,7 @@ country_event = {
 	option = {
 		name = TRI_region.101.c
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		hidden_effect = {
 			every_controlled_state = {
@@ -568,7 +568,7 @@ country_event = {
 	option = {
 		name = TRI_region.101.d
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		clear_array = global.TRI_invest_regions
 		clear_array = global.TRI_region_investment_building
@@ -620,6 +620,13 @@ country_event = { #委派更多权利
 			}
 		}
 		TRI_BOP_change_hardliner_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position < -0.33 }
+			}
+		}
 	}
 	option = {
 		name = TRI_BOP_decision.1.b
@@ -627,6 +634,9 @@ country_event = { #委派更多权利
 		multiply_temp_variable = { TRI_policy_change_num = TRI_BOP_transfer_right_effect_factor }
 		TRI_BOP_change_hardliner_both_parliament = yes
 		TRI_BOP_change_moderate_both_parliament = yes
+		ai_chance = {
+			base = 2
+		}
 	}
 	option = {
 		name = TRI_BOP_decision.1.c
@@ -647,6 +657,13 @@ country_event = { #委派更多权利
 			}
 		}
 		TRI_BOP_change_moderate_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position > 0.33 }
+			}
+		}
 	}
 }
 country_event = { #确保可控状态
@@ -662,6 +679,13 @@ country_event = { #确保可控状态
 		TRI_BOP_change_hardliner_both_parliament = yes
 		set_temp_variable = { TRI_policy_change_num = -0.01 }
 		TRI_BOP_change_moderate_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position > 0.33 }
+			}
+		}
 	}
 	#主要鸽派转中立
 	option = {
@@ -670,6 +694,13 @@ country_event = { #确保可控状态
 		TRI_BOP_change_moderate_both_parliament = yes
 		set_temp_variable = { TRI_policy_change_num = -0.01 }
 		TRI_BOP_change_hardliner_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position < -0.33 }
+			}
+		}
 	}
 }
 country_event = { #确保宣传口径
@@ -687,6 +718,13 @@ country_event = { #确保宣传口径
 			max = 0.05
 		}
 		TRI_BOP_change_hardliner_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position < -0.33 }
+			}
+		}
 	}
 	option = {
 		name = TRI_BOP_decision.3.b
@@ -702,6 +740,14 @@ country_event = { #确保宣传口径
 			max = -0.01
 		}
 		TRI_BOP_change_moderate_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position > -0.34 }
+				check_variable = { TRI_player_focus_position < 0.34 }
+			}
+		}
 	}
 	option = {
 		name = TRI_BOP_decision.3.c
@@ -711,6 +757,13 @@ country_event = { #确保宣传口径
 			max = 0.05
 		}
 		TRI_BOP_change_moderate_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position > 0.33 }
+			}
+		}
 	}
 }
 country_event = { #控制资源分配
@@ -723,7 +776,7 @@ country_event = { #控制资源分配
 	option = {
 		name = TRI_BOP_decision.4.a
 		if = {
-			limit = { check_variable = { TRI_against_faction = token:BOP_hardliner } }
+			limit = { check_variable = { TRI_player_focus_position > 0.33 } }
 			set_temp_variable_to_random = {
 				var = TRI_policy_change_num
 				min = 0.04
@@ -742,6 +795,13 @@ country_event = { #控制资源分配
 			TRI_parliament_non_against_radicalism_change = yes
 		}
 		TRI_BOP_change_hardliner_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position < -0.33 }
+			}
+		}
 	}
 	option = {
 		name = TRI_BOP_decision.4.b
@@ -759,11 +819,19 @@ country_event = { #控制资源分配
 		TRI_BOP_change_moderate_both_parliament = yes
 		set_temp_variable = { radicalism_change = -0.05 }
 		TRI_parliament_non_against_radicalism_change = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position > -0.34 }
+				check_variable = { TRI_player_focus_position < 0.34 }
+			}
+		}
 	}
 	option = {
 		name = TRI_BOP_decision.4.c
 		if = {
-			limit = { check_variable = { TRI_against_faction = token:BOP_moderate } }
+			limit = { check_variable = { TRI_player_focus_position < -0.33 } }
 			set_temp_variable_to_random = {
 				var = TRI_policy_change_num
 				min = 0.04
@@ -782,6 +850,13 @@ country_event = { #控制资源分配
 			TRI_parliament_non_against_radicalism_change = yes
 		}
 		TRI_BOP_change_moderate_both_parliament = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = { TRI_player_focus_position > 0.33 }
+			}
+		}
 	}
 }
 country_event = { #安抚社团成员

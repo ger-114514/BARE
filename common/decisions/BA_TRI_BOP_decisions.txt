@@ -205,6 +205,21 @@ TRI_BOP_system = {
 			set_variable = { detail_ignored@TRI_parliament_association_0 = 0 }
 			TRI_unity_decrease_5 = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
+		}
 	}
 	TRI_get_filius_details = {
 		visible = {
@@ -233,6 +248,21 @@ TRI_BOP_system = {
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_1 = 0 }
 			TRI_unity_decrease_5 = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
 		}
 	}
 	TRI_get_cootes_details = {
@@ -263,6 +293,21 @@ TRI_BOP_system = {
 			set_variable = { detail_ignored@TRI_parliament_association_2 = 0 }
 			TRI_unity_decrease_5 = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
+		}
 	}
 	TRI_get_justice_details = {
 		visible = {
@@ -291,6 +336,21 @@ TRI_BOP_system = {
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_3 = 0 }
 			TRI_unity_decrease_5 = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
 		}
 	}
 	TRI_get_sisterhood_details = {
@@ -321,6 +381,21 @@ TRI_BOP_system = {
 			set_variable = { detail_ignored@TRI_parliament_association_4 = 0 }
 			TRI_unity_decrease_5 = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
+		}
 	}
 	TRI_get_knights_details = {
 		visible = {
@@ -350,6 +425,21 @@ TRI_BOP_system = {
 			set_variable = { detail_ignored@TRI_parliament_association_5 = 0 }
 			TRI_unity_decrease_5 = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
+		}
 	}
 	TRI_get_other_details = {
 		visible = {
@@ -378,6 +468,21 @@ TRI_BOP_system = {
 			}
 			set_variable = { detail_ignored@TRI_parliament_association_6 = 0 }
 			TRI_unity_decrease_5 = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity > 75 }
+			}
+			modifier = {
+				factor = 0.3
+				check_variable = { TRI_unity < 50 }
+			}
 		}
 	}
 	TRI_invest_in_region_factory = {
@@ -463,9 +568,6 @@ TRI_BOP_system = {
 	}
 	#委派更多权利
 	TRI_BOP_transfer_right = {
-		# visible = {
-		# 	has_variable = TRI_parliament_focus
-		# }
 		available = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -482,12 +584,16 @@ TRI_BOP_system = {
 			}
 			country_event = TRI_BOP_decision.1
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				check_variable = { TRI_unity < 60 }
+			}
+		}
 	}
 	#确保可控状态
 	TRI_BOP_strengthen_control = {
-		# visible = {
-		# 	has_variable = TRI_parliament_focus
-		# }
 		available = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -507,6 +613,18 @@ TRI_BOP_system = {
 		complete_effect = {
 			country_event = TRI_BOP_decision.2
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				add = 4
+				check_variable = { TRI_player_focus_position < 0.33 }
+				check_variable = { TRI_player_focus_position > -0.33 }
+			}
+		}
 	}
 	#圣三一再生产运动
 	TRI_reproduction_movement = {
@@ -518,6 +636,22 @@ TRI_BOP_system = {
 		cost = 50
 		modifier = {
 			country_resource_resources_rm = 5
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				add = 10
+				has_resources_in_country = {
+					resource = resources_rm
+					amount < 0
+					buildings = yes
+					extracted = no
+				}
+			}
 		}
 	}
 	#联合演习
@@ -567,6 +701,9 @@ TRI_region_interaction_decisions_category = {
 		TRI_switch_rebuilding_subsidy_decision = {
 			visible = {
 				has_country_flag = TRI_rebuilding_subsidy
+				any_owned_state = {
+					NOT = { has_state_flag = TRI_rebuilding_subsidy_fired }
+				}
 			}
 			complete_effect = {
 				if = {
@@ -576,7 +713,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_rebuilding_subsidy_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_rebuilding_subsidy_visible
+				}
 			}
 		}
 		TRI_rebuilding_subsidy_decision = {
@@ -629,6 +772,17 @@ TRI_region_interaction_decisions_category = {
 				TRI_change_region_association_influence = yes
 				add_to_variable = { TRI_rebuilding_subsidy_fire_count = 1 }
 			}
+			ai_will_do = {
+				base = 3
+				modifier = {
+					factor = 1.5
+					has_political_power > 100
+				}
+				modifier = {
+					factor = 1.5
+					command_power > 50
+				}
+			}
 		}
 	#茶话会直属炮兵部队建设
 		TRI_switch_tea_party_artillery_recruiting = {
@@ -645,6 +799,13 @@ TRI_region_interaction_decisions_category = {
 					set_country_flag = TRI_tea_party_artillery_recruiting_visible
 				}
 				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_tea_party_artillery_recruiting_visible
+				}
 			}
 		}
 		TRI_tea_party_artillery_recruiting = {
@@ -719,6 +880,9 @@ TRI_region_interaction_decisions_category = {
 					add_ideas = TRI_tea_party_artillery_1
 				}
 			}
+			ai_will_do = {
+				base = 10
+			}
 		}
 	#征募守护者
 		TRI_switch_mobilize_guardians = {
@@ -733,7 +897,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_mobilize_guardians_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_mobilize_guardians_visible
+				}
 			}
 		}
 		TRI_mobilize_guardians = {
@@ -865,6 +1035,23 @@ TRI_region_interaction_decisions_category = {
 					custom_effect_tooltip = TRI_mobilize_guardians_on_tea_party_tt
 				}
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					factor = 2
+					FROM = { TRI_is_tea_party_state = no }
+				}
+				modifier = {
+					add = 2
+					has_war = yes
+				}
+				modifier = {
+					factor = 3
+					has_equipment = { infantry_equipment > 20000 }
+					has_equipment = { support_equipment > 2500 }
+					has_equipment = { light_fire_support_equipment > 2500 }
+				}
+			}
 		}
 	#集结护校军
 		TRI_switch_mobilize_elites = {
@@ -879,7 +1066,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_mobilize_elites_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_mobilize_elites_visible
+				}
 			}
 		}
 		TRI_mobilize_elites = {
@@ -982,6 +1175,21 @@ TRI_region_interaction_decisions_category = {
 					custom_effect_tooltip = TRI_mobilize_elites_on_association_tt
 				}
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					factor = 2
+					FROM = { TRI_is_tea_party_state = yes }
+				}
+				modifier = {
+					add = 2
+					has_war = yes
+				}
+				modifier = {
+					factor = 3
+					command_power > 100
+				}
+			}
 		}
 	#增派部队
 		TRI_switch_send_more_troops = {
@@ -996,7 +1204,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_send_more_troops_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_send_more_troops_visible
+				}
 			}
 		}
 		TRI_send_more_troops = {
@@ -1044,6 +1258,21 @@ TRI_region_interaction_decisions_category = {
 				set_temp_variable = { radicalism_change = -0.2 }
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 2
+					FROM = {
+						TRI_is_tea_party_state = no
+						check_variable = { loyalty@ruling_association@var:state_region > 1.1 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.19 }
+					}
+				}
+				modifier = {
+					factor = 3
+					has_equipment = { infantry_equipment > 2000 }
+				}
+			}
 		}
 	#减少物资调配
 		TRI_switch_deploy_less_materials = {
@@ -1058,7 +1287,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_deploy_less_materials_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_deploy_less_materials_visible
+				}
 			}
 		}
 		TRI_deploy_less_materials = {
@@ -1114,6 +1349,21 @@ TRI_region_interaction_decisions_category = {
 				set_temp_variable = { radicalism_change = -0.1 }
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 2
+					FROM = {
+						TRI_is_tea_party_state = no
+						check_variable = { loyalty@ruling_association@var:state_region > 1.05 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+					}
+				}
+				modifier = {
+					factor = 2
+					has_political_power > 100
+				}
+			}
 		}
 	#加强地区监控
 		TRI_switch_strengthen_state_monitor = {
@@ -1128,7 +1378,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_strengthen_state_monitor_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_strengthen_state_monitor_visible
+				}
 			}
 		}
 		TRI_strengthen_state_monitor = {
@@ -1184,6 +1440,28 @@ TRI_region_interaction_decisions_category = {
 				set_temp_variable = { radicalism_change = -0.1 }
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					FROM = {
+						TRI_is_tea_party_state = no
+						check_variable = { stability@var:state_region < 0.9 }
+					}
+				}
+				modifier = {
+					add = 1
+					FROM = {
+						TRI_is_tea_party_state = no
+						check_variable = { loyalty@ruling_association@var:state_region > 1.05 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+					}
+				}
+				modifier = {
+					factor = 2
+					command_power > 50
+				}
+			}
 		}
 	
 	#执行“反间谍”活动
@@ -1202,7 +1480,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_anti_spy_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_anti_spy_visible
+				}
 			}
 		}
 		TRI_anti_spy = {
@@ -1249,7 +1533,17 @@ TRI_region_interaction_decisions_category = {
 					ARI = {
 						country_event = ARI_coup.100
 					}
-					
+				}
+			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 5
+					FROM = {
+						TRI_is_tea_party_state = no
+						check_variable = { loyalty@ruling_association@var:state_region > 1.05 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.24 }
+					}
 				}
 			}
 		}
@@ -1266,7 +1560,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_deploy_more_materials_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_deploy_more_materials_visible
+				}
 			}
 		}
 		TRI_deploy_more_materials = {
@@ -1322,6 +1622,23 @@ TRI_region_interaction_decisions_category = {
 				set_temp_variable = { radicalism_change = -0.1 }
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 2
+				modifier = {
+					factor = 5
+					FROM = {
+						TRI_is_tea_party_state = no
+						OR = {
+							check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+							check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+						}
+					}
+				}
+				modifier = {
+					factor = 3
+					has_political_power > 200
+				}
+			}
 		}
 	#提升地区政治地位
 		TRI_switch_promote_political_status = {
@@ -1336,7 +1653,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_promote_political_status_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_promote_political_status_visible
+				}
 			}
 		}
 		TRI_promote_political_status = {
@@ -1389,6 +1712,27 @@ TRI_region_interaction_decisions_category = {
 				set_temp_variable = { radicalism_change = -0.1 }
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					FROM = {
+						TRI_is_tea_party_state = no
+						OR = {
+							check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+							check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+						}
+					}
+				}
+				modifier = {
+					factor = 3
+					has_political_power > 150
+				}
+				modifier = {
+					factor = 1.5
+					check_variable = { TRI_unity > 75 }
+				}
+			}
 		}
 	#为当地社团输送新的装备
 		TRI_switch_send_equipments_to_association = {
@@ -1403,7 +1747,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_send_equipments_to_association_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_send_equipments_to_association_visible
+				}
 			}
 		}
 		TRI_send_equipments_to_association = {
@@ -1463,6 +1813,30 @@ TRI_region_interaction_decisions_category = {
 				TRI_parliament_loyalty_change = yes
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					FROM = {
+						TRI_is_tea_party_state = no
+						OR = {
+							check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+							check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					FROM = {
+						check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_3 }
+					}
+				}
+				modifier = {
+					factor = 1.5
+					has_equipment = { infantry_equipment > 4500 }
+					has_equipment = { light_fire_support_equipment > 500 }
+				}
+			}
 		}
 	
 	#完善地区医疗设施
@@ -1478,7 +1852,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_improve_medical_facilities_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_improve_medical_facilities_visible
+				}
 			}
 		}
 		TRI_improve_medical_facilities = {
@@ -1535,6 +1915,29 @@ TRI_region_interaction_decisions_category = {
 				TRI_parliament_loyalty_change = yes
 				TRI_parliament_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					FROM = {
+						TRI_is_tea_party_state = no
+						OR = {
+							check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+							check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					FROM = {
+						check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_5 }
+					}
+				}
+				modifier = {
+					factor = 1.5
+					has_equipment = { support_equipment > 800 }
+				}
+			}
 		}
 	#扩建本地教堂
 		TRI_switch_expand_church = {
@@ -1549,7 +1952,13 @@ TRI_region_interaction_decisions_category = {
 				else = {
 					set_country_flag = TRI_expand_church_visible
 				}
-				
+			}
+			ai_will_do = {
+				base = 100
+				modifier = {
+					factor = 0
+					has_country_flag = TRI_expand_church_visible
+				}
 			}
 		}
 		TRI_expand_church = {
@@ -1609,6 +2018,29 @@ TRI_region_interaction_decisions_category = {
 				}
 				TRI_parliament_loyalty_change = yes
 				TRI_parliament_radicalism_change = yes
+			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					FROM = {
+						TRI_is_tea_party_state = no
+						OR = {
+							check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+							check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					FROM = {
+						check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_4 }
+					}
+				}
+				modifier = {
+					factor = 1.5
+					has_political_power > 300
+				}
 			}
 		}
 }

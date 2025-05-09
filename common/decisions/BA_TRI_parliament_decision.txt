@@ -19,6 +19,21 @@ TRI_parliament_decisions_categories = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = TRI_senate_promise_task_1
+			}
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { TRI_unity > 80 }
+			}
+		}
 	}
 	TRI_senate_limited_lesson_adjustment = { #允许上议院有限度的调整课程
 		visible = {
@@ -47,6 +62,21 @@ TRI_parliament_decisions_categories = {
 					localization_key = TRI_complete_promise_task_tt
 					PARLIAMENT = BA_TRI_senate_seat
 				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = TRI_senate_promise_task_2
+			}
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { TRI_unity > 80 }
 			}
 		}
 	}
@@ -83,8 +113,23 @@ TRI_parliament_decisions_categories = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = TRI_senate_promise_task_3
+			}
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { TRI_unity > 80 }
+			}
+		}
 	}
-	TRI_house_task = { #上议院任务1
+	TRI_house_task = { #下议院任务1
 		visible = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -102,6 +147,21 @@ TRI_parliament_decisions_categories = {
 					localization_key = TRI_complete_promise_task_tt
 					PARLIAMENT = BA_TRI_house_seat
 				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = TRI_house_promise_task_1
+			}
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { TRI_unity > 80 }
 			}
 		}
 	}
@@ -132,6 +192,21 @@ TRI_parliament_decisions_categories = {
 					localization_key = TRI_complete_promise_task_tt
 					PARLIAMENT = BA_TRI_house_seat
 				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = TRI_house_promise_task_2
+			}
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { TRI_unity > 80 }
 			}
 		}
 	}
@@ -168,6 +243,21 @@ TRI_parliament_decisions_categories = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 100
+				has_country_flag = TRI_house_promise_task_3
+			}
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { TRI_unity > 80 }
+			}
+		}
 	}
 	#确保宣传口径
 	TRI_BOP_ensure_propaganda = {
@@ -185,13 +275,13 @@ TRI_parliament_decisions_categories = {
 		}
 		complete_effect = {
 			for_each_loop = {
-				array = BA_TRI_non_against_association
+				array = TRI_non_against_association
 				value = v
 				if = {
 					limit = { check_variable = { resistance@var:v > 0.4 } }
 					set_temp_variable = { radicalism_change = 0.4 }
 					subtract_from_variable = { radicalism_change = resistance@var:v }
-					clamp_variable = {
+					clamp_temp_variable = {
 						var = radicalism_change
 						min = -0.05
 						max = 0
@@ -200,6 +290,17 @@ TRI_parliament_decisions_categories = {
 				}
 			}
 			country_event = TRI_BOP_decision.3
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { TRI_unity > 80 }
+			}
 		}
 	}
 	#控制资源分配
@@ -218,6 +319,17 @@ TRI_parliament_decisions_categories = {
 		}
 		complete_effect = {
 			country_event = TRI_BOP_decision.4
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { TRI_unity > 80 }
+			}
 		}
 	}
 	#安抚社团成员
@@ -244,6 +356,17 @@ TRI_parliament_decisions_categories = {
 			}
 			set_variable = { appease_association_target = TRI_parliament_association^i }
 			country_event = TRI_BOP_decision.5
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { TRI_unity > 80 }
+			}
 		}
 	}
 	TRI_compaign_for_meeting = {
@@ -278,6 +401,21 @@ TRI_parliament_decisions_categories = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { TRI_unity > 80 }
+			}
+			modifier = {
+				factor = 2
+				has_political_power > 200
+			}
+		}
 	}
 	#准备筹码
 	TRI_prepare_counters = {
@@ -300,6 +438,13 @@ TRI_parliament_decisions_categories = {
 			add_political_power = 50
 			add_to_variable = { TRI_prepare_counters_fire_count = 1 }
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_political_power < 100
+			}
+		}
 	}
 	#树立即行方针
 	TRI_BOP_set_current_policy = {
@@ -317,6 +462,9 @@ TRI_parliament_decisions_categories = {
             #我们的抉择
 			country_event = TRI_BOP_decision.1000
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	#施行紧急状态管制
 	TRI_BOP_martial_law = {
@@ -330,6 +478,17 @@ TRI_parliament_decisions_categories = {
 		}
 		complete_effect = {
 			country_event = TRI_BOP_decision.6
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { TRI_unity > 80 }
+			}
 		}
 	}
 	#稳定社团关系
@@ -352,6 +511,17 @@ TRI_parliament_decisions_categories = {
 			}
 			set_variable = { association_stability_target = TRI_parliament_association^i }
 			country_event = TRI_BOP_decision.7
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { TRI_unity > 80 }
+			}
 		}
 	}
 	#维持学院内稳定——稳定
@@ -640,6 +810,9 @@ TRI_hanako_decisions = {
 			TRI_parliament_all_radicalism_change = yes
 			add_stability = -0.05
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	#收拢正义实现委员会残部
 	TRI_organize_the_remnants = {
@@ -656,6 +829,9 @@ TRI_hanako_decisions = {
 				amount = 2000
 			}
 			country_event = TRI_BOP_decision.101
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 	#正义实现委员会部员暴乱
@@ -739,6 +915,9 @@ TRI_hanako_decisions = {
 				TRI_parliament_radicalism_change = yes
 				TRI_parliament_all_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 100
+			}
 		}
 		#压制暴动学生的动乱
 		TRI_supress_revolting_students = {
@@ -764,6 +943,9 @@ TRI_hanako_decisions = {
 				set_temp_variable = { radicalism_change = -0.05 }
 				TRI_parliament_radicalism_change = yes
 				TRI_parliament_all_radicalism_change = yes
+			}
+			ai_will_do = {
+				base = 100
 			}
 		}
 		#发布公告并澄清流言
@@ -791,6 +973,9 @@ TRI_hanako_decisions = {
 				TRI_parliament_all_loyalty_change = yes
 				TRI_parliament_all_radicalism_change = yes
 			}
+			ai_will_do = {
+				base = 100
+			}
 		}
 	#为救护骑士团增派物资
 	TRI_send_equipment_to_khights = {
@@ -801,6 +986,17 @@ TRI_hanako_decisions = {
 		modifier = {
 			mobilization_speed = 0.2
 			weekly_manpower = 250
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				surrender_progress > 0.1
+			}
+			modifier = {
+				factor = 2
+				has_equipment = { support_equipment > 2000 }
+			}
 		}
 	}
 	#要求救护骑士团优先关注前线
@@ -819,6 +1015,20 @@ TRI_hanako_decisions = {
 			TRI_parliament_loyalty_change = yes
 			TRI_parliament_radicalism_change = yes
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 4
+				surrender_progress > 0.1
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					check_variable = { loyalty@TRI_parliament_association_5 < 1 }
+					check_variable = { radicalism@TRI_parliament_association_5 > 0.19 }
+				}
+			}
+		}
 	}
 	#向自警团等社团下放权力
 	TRI_delegate_power_to_other_associations = {
@@ -835,6 +1045,20 @@ TRI_hanako_decisions = {
 			TRI_parliament_all_loyalty_change = yes
 			TRI_parliament_all_radicalism_change = yes
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = { TRI_unity < 60 }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					check_variable = { loyalty@TRI_parliament_association_4 < 0.9 }
+					check_variable = { radicalism@TRI_parliament_association_4 > 0.29 }
+				}
+			}
+		}
 	}
 	#征召其它社团成员
 	TRI_call_up_other_associations = {
@@ -847,6 +1071,17 @@ TRI_hanako_decisions = {
 			set_temp_variable = { radicalism_change = 0.1 }
 			TRI_parliament_all_loyalty_change = yes
 			TRI_parliament_all_radicalism_change = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				surrender_progress > 0.1
+			}
+			modifier = {
+				add = 2
+				has_manpower < 50000
+			}
 		}
 	}
 }
