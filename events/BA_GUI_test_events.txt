@@ -29,3 +29,17 @@ news_event = {
 		name = "我草这粉毛怎么这么坏啊！"
 	}
 }
+
+add_namespace = gui_event_test
+
+country_event = {
+	id = gui_event_test.1
+	picture = GFX_common_event_gui_test
+	title = gui_event_test.1.t
+	desc = gui_event_test.1.desc
+	is_triggered_only = yes
+
+	option = {
+		name = gui_event_test.1.a
+	}
+}
