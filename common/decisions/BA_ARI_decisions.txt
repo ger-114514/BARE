@@ -499,7 +499,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_fe
 					amount < 0
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -540,7 +540,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_fe
 					amount > 5
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -583,7 +583,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_ec
 					amount < 0
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -624,7 +624,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_ec
 					amount > 5
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -667,7 +667,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_pm
 					amount < 0
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -708,7 +708,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_pm
 					amount > 5
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -751,7 +751,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_rm
 					amount < 0
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -792,7 +792,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_rm
 					amount > 5
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -835,7 +835,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_cm
 					amount < 0
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -876,7 +876,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_cm
 					amount > 5
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}
@@ -919,6 +919,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_mm
 					amount < 0
 					buildings = yes
+					extracted = no
 				}
 			}
 		}
@@ -959,7 +960,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 					resource = resources_mm
 					amount > 5
 					buildings = yes
-					extracted = yes
+					extracted = no
 				}
 			}
 		}

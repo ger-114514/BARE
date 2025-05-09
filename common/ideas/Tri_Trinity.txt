@@ -143,6 +143,12 @@ ideas = {
                     soft_attack = 0.08
                 }
             }
+            cancel = {
+                check_variable = { TRI_tea_party_artillery_recruiting_count > 2 }
+            }
+            on_remove = {
+                add_ideas = TRI_tea_party_artillery_2
+            }
         }
         TRI_tea_party_artillery_2 = {
             picture = unknown
@@ -153,6 +159,12 @@ ideas = {
                 artillery = {
                     soft_attack = 0.16
                 }
+            }
+            cancel = {
+                check_variable = { TRI_tea_party_artillery_recruiting_count > 5 }
+            }
+            on_remove = {
+                add_ideas = TRI_tea_party_artillery_3
             }
         }
         TRI_tea_party_artillery_3 = {
@@ -165,6 +177,12 @@ ideas = {
                     soft_attack = 0.24
                 }
             }
+            cancel = {
+                check_variable = { TRI_tea_party_artillery_recruiting_count > 8 }
+            }
+            on_remove = {
+                add_ideas = TRI_tea_party_artillery_4
+            }
         }
         TRI_tea_party_artillery_4 = {
             picture = unknown
@@ -175,6 +193,12 @@ ideas = {
                 artillery = {
                     soft_attack = 0.32
                 }
+            }
+            cancel = {
+                check_variable = { TRI_tea_party_artillery_recruiting_count > 11 }
+            }
+            on_remove = {
+                add_ideas = TRI_tea_party_artillery_5
             }
         }
         TRI_tea_party_artillery_5 = {

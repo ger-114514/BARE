@@ -842,45 +842,6 @@ TRI_region_interaction_decisions_category = {
 				custom_effect_tooltip = TRI_tea_party_artillery_recruiting_tt
 				add_to_variable = { TRI_tea_party_artillery_cap = 2 }
 				add_to_variable = { TRI_tea_party_artillery_recruiting_count = 1 }
-				hidden_effect = {
-					remove_ideas = {
-						TRI_tea_party_artillery_1
-						TRI_tea_party_artillery_2
-						TRI_tea_party_artillery_3
-						TRI_tea_party_artillery_4
-						TRI_tea_party_artillery_5
-					}
-				}
-				if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 14 }
-					}
-					add_ideas = TRI_tea_party_artillery_5
-				}
-				else_if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 11 }
-					}
-					add_ideas = TRI_tea_party_artillery_4
-				}
-				else_if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 8 }
-					}
-					add_ideas = TRI_tea_party_artillery_3
-				}
-				else_if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 5 }
-					}
-					add_ideas = TRI_tea_party_artillery_2
-				}
-				else_if = {
-					limit = {
-						check_variable = { TRI_tea_party_artillery_recruiting_count > 2 }
-					}
-					add_ideas = TRI_tea_party_artillery_1
-				}
 			}
 			ai_will_do = {
 				base = 10

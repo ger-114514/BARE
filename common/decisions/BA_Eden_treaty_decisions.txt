@@ -1320,7 +1320,7 @@ Eden_treaty_to_be_signed_decisions = {
 			hidden_effect = {
 				if = {
 					limit = { original_tag = TRI }
-					news_event = TRI_events.1002
+					news_event = Eden_pact.1003
 				}
 			}
 		}
