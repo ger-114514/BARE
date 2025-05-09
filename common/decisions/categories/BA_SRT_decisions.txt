@@ -1,0 +1,54 @@
+SRT_debug_decisions = {
+	priority = 1001
+	allowed = {
+		original_tag = SRT
+	}
+	visible = {
+		is_debug = yes
+	}
+}
+SRT_training_decisions = {
+	priority = 100
+	allowed = {
+		original_tag = SRT
+	}
+	visible = {
+		has_completed_focus = SRT_guarantee_military_training
+	}
+}
+SRT_blackmarket_decisions = {
+	priority = 101
+	allowed = {
+		original_tag = SRT
+	}
+	visible = {
+		has_completed_focus = SRT_black_market_trading
+	}
+}
+SRT_shiratori_decisions = {
+	priority = 104
+	allowed = {
+		original_tag = SRT
+	}
+	visible = {
+		has_completed_focus = SRT_operation_shiratori
+	}
+}
+SRT_aoba_decisions = {
+	priority = 103
+	allowed = {
+		original_tag = SRT
+	}
+	visible = {
+		has_completed_focus = SRT_operation_aoba
+	}
+}
+SRT_business_decisions = {
+	priority = 102
+	allowed = {
+		original_tag = SRT
+	}
+	visible = {
+		has_completed_focus = SRT_operation_cafe
+	}
+}
