@@ -1,0 +1,65 @@
+SRT_training_decisions = {
+	SRT_army_training = {
+    complete_effect = {
+			army_experience = 50
+		}
+  }
+  SRT_air_training= {
+    complete_effect = {
+			air_experience = 50
+		}
+  }
+}
+SRT_blackmarket_decisions = {
+  SRT_support_equipment_sell = {
+    complete_effect = {
+      add_political_power = 100
+    }
+  }
+  SRT_infanty_equipment_sell = {
+    complete_effect = {
+      add_political_power = 100
+    }
+  }
+  SRT_armor_equipment_sell = {
+    complete_effect = {
+      add_political_power = 100
+    }
+  }
+}
+SRT_shiratori_decisions = {
+  SRT_shiratori_decision1 = {
+
+  }
+  SRT_shiratori_decision2 = {
+
+  }
+  SRT_shiratori_decision3 = {
+
+  }
+}
+SRT_aoba_decisions = {
+  SRT_aoba_decision1 = {
+
+  }
+  SRT_aoba_decision2 = {
+
+  }
+  SRT_aoba_decision3 = {
+
+  } 
+}
+SRT_business_decisions = {
+  SRT_business_decision1 = {
+
+  }
+  SRT_business_decision2 = {
+
+  }
+  SRT_business_decision3 = {
+
+  }
+  SRT_business_decision4 = {
+    
+  }
+}

@@ -1,5 +1,5 @@
 focus_tree = {
-	id = SRT_Rabbit_base
+	id = SRT_have_base
 	country = {
 		factor = 0
 		modifier = {
@@ -8,289 +8,704 @@ focus_tree = {
 		}
 	}
 	default = no
-	##以下为序章剧情线
-	focus = {
-		id = SRT_head_to_rabbit_town #向小兔子镇出发
-		#icon = GFX_goal_unknown
-		cost = 5
-		x = 10
+    focus = {
+		id = SRT_unknown_furture
+		icon = GFX_SRT_unknown_furture
+        available = {
+			always = yes
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SRT_the_great_rain
+			}
+		}
+		x = 14
 		y = 0
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-				army_experience  = 25
-			}			
+            country_event = SRT_Stage1_1
 		}
-		focus = {
-			id = SRT_rabbit_park #小兔子公园
-			#icon = GFX_goal_unknown
-			relative_position_id = SRT_head_to_rabbit_town
-			prerequisite = {
-                focus = SRT_head_to_rabbit_town
-			}			
-			cost = 5
-			x = 0
-			y = 1
-			search_filters = { FOCUS_FILTER_POLITICAL }
-			completion_reward = {
-
-				}			
 	}
 	focus = {
-		id = SRT_ensure_water #确保水源
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_rabbit_park
-		prerequisite = {
-			focus = SRT_rabbit_park
-		}			
-		cost = 5
-		x = -1
+		id = SRT_special_military_training
+		icon = GFX_SRT_special_military_training
+		x = 8
 		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}	
-	focus = {
-		id = SRT_search_food #寻找食物
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_rabbit_park
-		prerequisite = {
-			focus = SRT_rabbit_park
-		}			
-		cost = 5
-		x = 1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}	
-	focus = {
-		id = SRT_armed_demonstration #武装示威
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_ensure_water
-		relative_position_id = SRT_search_food
-		prerequisite = {
-			focus = SRT_search_food
+		prerequisite = {  
+			focus = SRT_unknown_furture
 		}
-		prerequisite = {
-			focus = SRT_ensure_water
-		}			
-		cost = 5
-		x = -1
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-		
-			}		
-	}	
-	focus = {
-		id = SRT_back_to_rabbit_park #回到小兔子公园
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_armed_demonstration
-		prerequisite = {
-			focus = SRT_armed_demonstration
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}	
-	focus = {
-		id = SRT_hobo_attack #所确幸袭击
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_back_to_rabbit_park
-		prerequisite = {
-			focus = SRT_back_to_rabbit_park
-		}			
-
-		cost = 5
-		x = -2
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
+		}
 	}
 	focus = {
-		id = SRT_operation_carrot #胡萝卜作战
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_back_to_rabbit_park
-		prerequisite = {
-			focus = SRT_back_to_rabbit_park
-		}			
-
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		id = SRT_electronic_warfare_training
+		icon = GFX_SRT_electronic_warfare_training
+		x = 4
+		y = 2
+		prerequisite = {  
+			focus = SRT_special_military_training
+		}
 		completion_reward = {
-		
-			}		
+		}
 	}
-		focus = {
-		id = SRT_measure_schale #衡量夏莱的援助
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_back_to_rabbit_park
-		prerequisite = {
-			focus = SRT_back_to_rabbit_park
-		}			
-		cost = 5
+	focus = {
+		id = SRT_intelligence_warfare
+		icon = GFX_SRT_intelligence_warfare
+		x = 6
+		y = 3
+		prerequisite = {  
+			focus = SRT_electronic_warfare_training
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_proficient_in_drone
+		icon = GFX_SRT_proficient_in_drone
 		x = 2
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		y = 3
+		prerequisite = {  
+			focus = SRT_electronic_warfare_training
+		}
 		completion_reward = {
-		
-			}		
+		}
 	}
-		focus = {
-		id = SRT_flood_of_rain #大雨倾盆
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_operation_carrot
-		prerequisite = {
-			focus = SRT_hobo_attack
-		}			
-		prerequisite = {
+	focus = {
+		id = SRT_expanded_research_of_electrony
+		icon = GFX_SRT_expanded_research_of_electrony
+		x = 4
+		y = 4
+		prerequisite = {  
+			focus = SRT_proficient_in_drone
+		}
+		prerequisite = {  
+			focus = SRT_intelligence_warfare
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_infantry_skills_training
+		icon = GFX_SRT_infantry_skills_training
+		x = 12
+		y = 2
+		prerequisite = {  
+			focus = SRT_special_military_training
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_proficient_in_supporting_equipment
+		icon = GFX_SRT_proficient_in_supporting_equipment
+		x = 10
+		y = 3
+		prerequisite = {  
+			focus = SRT_infantry_skills_training
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_expanded_research_of_supporting_equipment
+		icon = GFX_SRT_expanded_research_of_supporting_equipment
+		x = 10
+		y = 4
+		prerequisite = {  
+			focus = SRT_proficient_in_supporting_equipment
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_poficient_in_guns
+		icon = GFX_SRT_poficient_in_guns
+		x = 14
+		y = 3
+		prerequisite = {  
+			focus = SRT_infantry_skills_training
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_expanded_research_of_guns
+		icon = GFX_SRT_expanded_research_of_guns
+		x = 14
+		y = 4
+		prerequisite = {  
+			focus = SRT_poficient_in_guns
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_expanded_research_of_heavy_weapons
+		icon = GFX_SRT_expanded_research_of_heavy_weapons
+		x = 12
+		y = 5
+		prerequisite = {  
+			focus = SRT_expanded_research_of_guns
+		}
+		prerequisite = {  
+			focus = SRT_expanded_research_of_supporting_equipment
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_plan_ahead
+		icon = GFX_SRT_plan_ahead
+		x = 20
+		y = 1
+		prerequisite = {  
+			focus = SRT_unknown_furture
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_grass_operation
+		icon = GFX_SRT_grass_operation
+		x = 18
+		y = 2
+		prerequisite = {  
+			focus = SRT_plan_ahead
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SRT_guarantee_military_training
+		icon = GFX_SRT_guarantee_military_training
+		x = 18
+		y = 3
+		prerequisite = {  
+			focus = SRT_grass_operation
+		}
+		completion_reward = {
+			unlock_decision_tooltip = SRT_training_decisions
+		}
+	}
+	focus = {
+		id = SRT_elite_equipment_maintenance
+		icon = GFX_SRT_elite_equipment_maintenance
+		x = 18
+		y = 4
+		prerequisite = {  
+			focus = SRT_guarantee_military_training
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_2
+		}
+	}
+	focus = {
+		id = SRT_rabbit_fights_the_eagle
+		icon = GFX_SRT_rabbit_fights_the_eagle
+		x = 18
+		y = 5
+		prerequisite = {  
+			focus = SRT_elite_equipment_maintenance
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_3
+		}
+	}
+	focus = {
+		id = SRT_secret_conversation_with_kaya
+		icon = GFX_SRT_secret_conversation_with_kaya
+		x = 24
+		y = 2
+		prerequisite = {  
+			focus = SRT_plan_ahead
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_4
+		}
+	}
+	focus = {
+		id = SRT_sharp_knife_operation
+		icon = GFX_SRT_sharp_knife_operation
+		x = 22
+		y = 3
+		prerequisite = {  
+			focus = SRT_secret_conversation_with_kaya
+		}
+		completion_reward = {
+            country_event = SRT_Stage1_5
+		}
+	}
+	focus = {
+		id = SRT_the_game_of_the_brave
+		icon = GFX_SRT_the_game_of_the_brave
+		x = 22
+		y = 4
+		prerequisite = {  
+			focus = SRT_sharp_knife_operation
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_6
+		}
+	}
+	focus = {
+		id = SRT_the_value_of_justice
+		icon = GFX_SRT_the_value_of_justice
+		x = 22
+		y = 5
+		prerequisite = {  
+			focus = SRT_the_game_of_the_brave
+		}
+		completion_reward = {
+            country_event = SRT_Stage1_7
+		}
+	}
+	focus = {
+		id = SRT_protective_umbrella_of_the_black_market
+		icon = GFX_SRT_protective_umbrella_of_the_black_market
+		x = 26
+		y = 3
+		prerequisite = {  
+			focus = SRT_secret_conversation_with_kaya
+		}
+		completion_reward = {
+            country_event = SRT_Stage1_8            
+		}
+	}
+	focus = {
+		id = SRT_pancakes_as_prison
+		icon = GFX_SRT_pancakes_as_prison
+		x = 26
+		y = 5
+		prerequisite = {  
+			focus = SRT_protective_umbrella_of_the_black_market
+		}
+		completion_reward = {
+            country_event = SRT_Stage1_9
+		}
+	}
+	focus = {
+		id = SRT_fox_fire_boundless
+		icon = GFX_SRT_fox_fire_boundless
+		x = 24
+		y = 6
+		prerequisite = {  
+			focus = SRT_pancakes_as_prison
+		}
+		prerequisite = {  
+			focus = SRT_the_value_of_justice
+		}
+		completion_reward = {
+		    country_event = SRT_Stage1_10
+		}
+	}
+	focus = {
+		id = SRT_find_rescue_in_desperate_circumstances
+		icon = GFX_SRT_find_rescue_in_desperate_circumstances
+		x = 20
+		y = 7
+		prerequisite = {  
+			focus = SRT_fox_fire_boundless
+		}
+		prerequisite = {  
+			focus = SRT_rabbit_fights_the_eagle
+		}
+		completion_reward = {
+		    country_event = SRT_Stage1_11
+		}
+	}
+	focus = {
+		id = SRT_the_final_test
+		icon = GFX_SRT_the_final_test
+		x = 8
+		y = 7
+		prerequisite = {  
+			focus = SRT_expanded_research_of_heavy_weapons
+		}
+		prerequisite = {  
+			focus = SRT_expanded_research_of_electrony
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_12
+		}
+	}
+	focus = {
+		id = SRT_emergency_transfer_of_equipment
+		icon = GFX_SRT_emergency_transfer_of_equipment
+		x = 14
+		y = 8
+		prerequisite = {  
+			focus = SRT_the_final_test
+		}
+		prerequisite = {  
+			focus = SRT_find_rescue_in_desperate_circumstances
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_13			
+		}
+	}
+	focus = {
+		id = SRT_late_justice
+		icon = GFX_SRT_late_justice
+		x = 14
+		y = 9
+		prerequisite = {  
+			focus = SRT_emergency_transfer_of_equipment
+		}
+		completion_reward = {
+			country_event = SRT_Stage1_14
+		}
+	}
+}
+####################兔子队国策树
+focus_tree = {
+	id = SRT_Rabiit_team1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SRT
+		}
+	}
+	default = no
+	focus = {
+		id = SRT_the_great_rain
+		icon = GFX_SRT_the_great_rain
+		x = 16
+		y = 0
+		completion_reward = {
+			country_event = SRT_Stage2_1
+		}
+	}
+	focus = {
+		id = SRT_the_defense_of_rabbit
+		icon = GFX_SRT_the_defense_of_rabbit
+		x = 16
+		y = 1
+		prerequisite = {  
+			focus = SRT_the_great_rain
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_2
+		}
+	}
+	focus = {
+		id = SRT_temporary_camp_of_the_rabbit
+		icon = GFX_SRT_temporary_camp_of_the_rabbit
+		x = 12
+		y = 2
+		prerequisite = {  
+			focus = SRT_the_defense_of_rabbit
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_3
+		}
+	}
+	focus = {
+		id = SRT_survival_in_the_wild
+		icon = GFX_SRT_survival_in_the_wild
+		x = 12
+		y = 3
+		prerequisite = {  
+			focus = SRT_temporary_camp_of_the_rabbit
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_4
+		}
+	}
+	focus = {
+		id = SRT_fresh_water_into_the_canal
+		icon = GFX_SRT_fresh_water_into_the_canal
+		x = 12
+		y = 4
+		prerequisite = {  
+			focus = SRT_survival_in_the_wild
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_5
+		}
+	}
+	focus = {
+		id = SRT_the_rabbit_hole_of_carbanno
+		icon = GFX_SRT_the_rabbit_hole_of_carbanno
+		x = 12
+		y = 5
+		prerequisite = {  
+			focus = SRT_fresh_water_into_the_canal
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_6
+		}
+	}
+	focus = {
+		id = SRT_the_most_detestable_adult
+		icon = GFX_SRT_the_most_detestable_adult
+		x = 20
+		y = 2
+		prerequisite = {  
+			focus = SRT_the_defense_of_rabbit
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_7
+		}
+	}
+	focus = {
+		id = SRT_angel_24_cleanup
+		icon = GFX_SRT_angel_24_cleanup
+		x = 20
+		y = 3
+		prerequisite = {  
+			focus = SRT_the_most_detestable_adult
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_8
+		}
+	}
+	focus = {
+		id = SRT_operation_carrot
+		icon = GFX_SRT_operation_carrot
+		x = 20
+		y = 4
+		prerequisite = {  
+			focus = SRT_angel_24_cleanup
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_9
+		}
+	}
+	focus = {
+		id = SRT_shadow_of_the_walk
+		icon = GFX_SRT_shadow_of_the_walk
+		x = 20
+		y = 5
+		prerequisite = {  
 			focus = SRT_operation_carrot
-		}	
-		prerequisite = {
-			focus = SRT_measure_schale
-		}	
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-			focus = {
-		id = SRT_sale_soggy_weapons #出售浸水设备
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_flood_of_rain
-		prerequisite = {
-			focus = SRT_flood_of_rain
-		}			
-		cost = 5
-		x = -2
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-		focus = {
-		id = SRT_search_for_buyer #寻找可靠买家
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_sale_soggy_weapons
-		prerequisite = {
-			focus = SRT_sale_soggy_weapons
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-		focus = {
-		id = SRT_prevent_hobo_attacks #应对所确幸袭击
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_flood_of_rain
-		prerequisite = {
-			focus = SRT_flood_of_rain
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-		focus = {
-		id = SRT_beat_back_hobo #反击
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_prevent_hobo_attacks
-		prerequisite = {
-			focus = SRT_prevent_hobo_attacks
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-		focus = {
-		id = SRT_investigating_valkyrie #调查瓦尔基里
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_flood_of_rain
-		prerequisite = {
-			focus = SRT_flood_of_rain
-		}			
-		cost = 5
-		x = 2
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-		focus = {
-		id = SRT_develop_strike_plan #制定突袭方案
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_investigating_valkyrie
-		prerequisite = {
-			focus = SRT_investigating_valkyrie
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
-	}
-		focus = {
-		id = SRT_inari_sushi #稻荷寿司
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_beat_back_hobo
-		prerequisite = {
-			focus = SRT_search_for_buyer
 		}
-		prerequisite = {
-			focus = SRT_beat_back_hobo
+		completion_reward = {
+			country_event = SRT_Stage2_10
 		}
-		prerequisite = {
-			focus = SRT_develop_strike_plan
-		}	
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-		
-			}		
 	}
-		focus = {
-		id = SRT_operation_clover #三叶草作战
-		#icon = GFX_goal_unknown
-		relative_position_id = SRT_inari_sushi
-		prerequisite = {
-			focus = SRT_inari_sushi
-		}			
-		cost = 5
-		x = 0
-		y = 1
-		search_filters = { FOCUS_FILTER_POLITICAL }
+	focus = {
+		id = SRT_heavy_rain_warning
+		icon = GFX_SRT_heavy_rain_warning
+		x = 16
+		y = 6
+		prerequisite = {  
+			focus = SRT_shadow_of_the_walk
+		}
+		prerequisite = {  
+			focus = SRT_the_rabbit_hole_of_carbanno
+		}
 		completion_reward = {
-		
-			}		
+			country_event = SRT_Stage2_11
+		}
+	}
+	focus = {
+		id = SRT_black_market_trading
+		icon = GFX_SRT_black_market_trading
+		x = 16
+		y = 7
+		prerequisite = {  
+			focus = SRT_heavy_rain_warning
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SRT_clover_action
+		icon = GFX_SRT_clover_action
+		x = 16
+		y = 8
+		prerequisite = {  
+			focus = SRT_black_market_trading
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_12
+		}
+	}
+	focus = {
+		id = SRT_operation_shiratori
+		icon = GFX_SRT_operation_shiratori
+		x = 12
+		y = 9
+		prerequisite = {  
+			focus = SRT_clover_action
+		}
+		completion_reward = {
+			unlock_decision_tooltip = SRT_shiratori_decisions
+		}
+	}
+	focus = {
+		id = SRT_operation_shrimp_trap
+		icon = GFX_SRT_operation_shrimp_trap
+		x = 12
+		y = 10
+		prerequisite = {  
+			focus = SRT_operation_shiratori
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_13
+		}
+	}
+	focus = {
+		id = SRT_rabbit_team_of_the_shiratori
+		icon = GFX_SRT_rabbit_team_of_the_shiratori
+		x = 12
+		y = 11
+		prerequisite = {  
+			focus = SRT_operation_shrimp_trap
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_14
+		}
+	}
+	focus = {
+		id = SRT_white_horse_from_the_sky
+		icon = GFX_SRT_white_horse_from_the_sky
+		x = 12
+		y = 12
+		prerequisite = {  
+			focus = SRT_rabbit_team_of_the_shiratori
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_15
+		}
+	}
+	focus = {
+		id = SRT_operation_aoba
+		icon = GFX_SRT_operation_aoba
+		x = 16
+		y = 9
+		prerequisite = {  
+			focus = SRT_clover_action
+		}
+		completion_reward = {
+			unlock_decision_tooltip = SRT_aoba_decisions
+		}
+	}
+	focus = {
+		id = SRT_operation_clover
+		icon = GFX_SRT_operation_clover
+		x = 16
+		y = 10
+		prerequisite = {  
+			focus = SRT_operation_aoba
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_16
+		}
+	}
+	focus = {
+		id = SRT_rabbit_team_of_the_aoba
+		icon = GFX_SRT_rabbit_team_of_the_aoba
+		x = 16
+		y = 11
+		prerequisite = {  
+			focus = SRT_operation_clover
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_17
+		}
+	}
+	focus = {
+		id = SRT_burning_and_liberating
+		icon = GFX_SRT_burning_and_liberating
+		x = 16
+		y = 12
+		prerequisite = {  
+			focus = SRT_rabbit_team_of_the_aoba
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_18
+		}
+	}
+	focus = {
+		id = SRT_operation_cafe
+		icon = GFX_SRT_operation_cafe
+		x = 20
+		y = 9
+		prerequisite = {  
+			focus = SRT_clover_action
+		}
+		completion_reward = {
+			unlock_decision_tooltip = SRT_business_decisions
+		}
+	}
+	focus = {
+		id = SRT_operation_nest_grass_plant
+		icon = GFX_SRT_operation_nest_grass_plant
+		x = 20
+		y = 10
+		prerequisite = {  
+			focus = SRT_operation_cafe
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_19
+		}
+	}
+	focus = {
+		id = SRT_rabbit_team_of_the_business
+		icon = GFX_SRT_rabbit_team_of_the_business
+		x = 20
+		y = 11
+		prerequisite = {  
+			focus = SRT_operation_nest_grass_plant
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_20
+		}
+	}
+	focus = {
+		id = SRT_everyone_in_rabbit_team
+		icon = GFX_SRT_everyone_in_rabbit_team
+		x = 20
+		y = 12
+		prerequisite = {  
+			focus = SRT_rabbit_team_of_the_business
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_21
+		}
+	}
+	focus = {
+		id = SRT_operation_knife2
+		icon = GFX_SRT_operation_knife2
+		x = 16
+		y = 13
+		prerequisite = {  
+			focus = SRT_everyone_in_rabbit_team
+		}
+		prerequisite = {  
+			focus = SRT_burning_and_liberating
+		}
+		prerequisite = {  
+			focus = SRT_white_horse_from_the_sky
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_22
+		}
+	}
+	focus = {
+		id = SRT_the_determination_to_protect
+		icon = GFX_SRT_the_determination_to_protect
+		x = 16
+		y = 14
+		prerequisite = {  
+			focus = SRT_operation_knife2
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_23
+		}
+	}
+	focus = {
+		id = SRT_knight_of_Kivotos
+		icon = GFX_SRT_knight_of_Kivotos
+		x = 16
+		y = 15
+		prerequisite = {  
+			focus = SRT_the_determination_to_protect
+		}
+		completion_reward = {
+			country_event = SRT_Stage2_24
+		}
 	}
 }
