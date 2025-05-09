@@ -577,6 +577,7 @@ TRI_BOP_system = {
 				has_country_flag = TRI_rebuild_communication_channel
 			}
 		}
+		days_re_enable = 120
 		complete_effect = {
 			if = {
 				limit = { check_variable = { TRI_BOP_transfer_right_effect_factor < 4 } }
@@ -610,6 +611,7 @@ TRI_BOP_system = {
 				}
 			}
 		}
+		days_re_enable = 120
 		complete_effect = {
 			country_event = TRI_BOP_decision.2
 		}

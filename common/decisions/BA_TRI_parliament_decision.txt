@@ -273,6 +273,7 @@ TRI_parliament_decisions_categories = {
 				has_country_flag = TRI_rebuild_communication_channel
 			}
 		}
+		days_re_enable = 180
 		complete_effect = {
 			for_each_loop = {
 				array = TRI_non_against_association
@@ -317,6 +318,7 @@ TRI_parliament_decisions_categories = {
 				has_country_flag = TRI_rebuild_communication_channel
 			}
 		}
+		days_re_enable = 180
 		complete_effect = {
 			country_event = TRI_BOP_decision.4
 		}
@@ -476,6 +478,7 @@ TRI_parliament_decisions_categories = {
 		available = {
 			has_country_flag = TRI_rebuild_communication_channel
 		}
+		days_re_enable = 60
 		complete_effect = {
 			country_event = TRI_BOP_decision.6
 		}
@@ -501,6 +504,7 @@ TRI_parliament_decisions_categories = {
 		available = {
 			has_country_flag = TRI_rebuild_communication_channel
 		}
+		days_re_enable = 60
 		
 		complete_effect = {
 			set_variable_to_random = {
@@ -534,6 +538,7 @@ TRI_parliament_decisions_categories = {
 		available = {
 			has_country_flag = TRI_rebuild_communication_channel
 		}
+		days_re_enable = 60
 		
 		complete_effect = {
 			country_event = TRI_BOP_decision.8
@@ -549,6 +554,7 @@ TRI_parliament_decisions_categories = {
 		available = {
 			has_country_flag = TRI_rebuild_communication_channel
 		}
+		days_re_enable = 60
 		
 		complete_effect = {
 			country_event = TRI_BOP_decision.9

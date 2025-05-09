@@ -1279,6 +1279,7 @@ focus_tree = {
 					else = {
 						country_event = TRI_coup.5
 					}
+					BA_TRI_remove_paranoia_system = yes
 				}
 			}
 
@@ -1365,7 +1366,6 @@ focus_tree = {
 				y = 2
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
-					BA_TRI_remove_paranoia_system = yes
 				}
 			}
 	#拥有焦点：【对现任茶话会领袖的支持】时显示的国策
