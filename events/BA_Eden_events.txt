@@ -174,3 +174,78 @@ news_event = {
 		}
     }
 }
+
+
+
+news_event = {
+    id = Eden_pact.1003
+    title = Eden_pact.1003.t
+    desc = Eden_pact.1003.d
+    picture = GFX_news_event_eden_pact_attack
+	is_triggered_only = yes
+    major = yes
+	fire_only_once = yes
+    #这里需要进一步完善
+    option = {
+		name = Eden_pact.1003.a
+        
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+
+news_event = {
+    id = Eden_pact.1004
+    title = Eden_pact.1004.t
+    desc = Eden_pact.1004.d
+    picture = GFX_news_event_eden_pact_ruin
+	is_triggered_only = yes
+    major = yes
+	fire_only_once = yes
+    #这里需要进一步完善
+    option = {
+		name = Eden_pact.1004.a
+        
+        trigger = {
+            not = {
+                tag = TRI
+                tag = ARI
+                tag = GEH
+            }
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = Eden_pact.1004.b
+        trigger = {
+            or = {
+                tag = TRI
+                tag = GEH
+            }
+        }
+
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+    option = {
+		name = Eden_pact.1004.c
+        
+        trigger = {
+            tag = ARI
+        }
+
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}

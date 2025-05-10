@@ -1,73 +1,6 @@
 characters = {
 	###格黑娜GEH 开始###
-	GEH_makoto = { #万魔殿 - 羽沼真琴
-		name = GEH_makoto_name
-		portraits = {
-			civilian = {
-				large = GFX_portrait_GEH_makoto
-				small = GFX_portrait_GEH_makoto_small
-			}
-		}
-		country_leader = {
-			ideology = no_ideology_type
-			traits = {
-				leader_of_gehena_cl
-			}
-			expire = "9999.1.1.1"
-			id = -1
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = GEH_makoto_ac
-			allowed = {
-				original_tag = GEH
-			}
-			available = {
-				original_tag = GEH
-			}
-			visible = {
-				OR = {
-					NOT = {
-						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
-						}
-					}
-					NOT = {
-						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
-					}
-				}
-			}
-			traits = {
-				leader_of_gehena_ac
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		corps_commander = {
-			traits = {old_guard inflexible_strategist media_personality thorough_planner}
-			visible = {
-				OR = {
-					NOT = {
-						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
-						}
-					}
-					NOT = {
-						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
-					}
-				}
-			}
-			skill = 3
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 1
-		}
-	}
+
 	GEH_JingJiZhuangTaiWeiYuanHui = { #歌赫娜紧急状态委员会
 		name = GEH_JingJiZhuangTaiWeiYuanHui_name
 		portraits = {
@@ -115,7 +48,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -138,7 +71,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -175,7 +108,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -204,7 +137,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -225,7 +158,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -261,7 +194,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -284,7 +217,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -320,7 +253,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -343,7 +276,7 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -355,6 +288,74 @@ characters = {
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	GEH_makoto = { #万魔殿 - 羽沼真琴
+		name = GEH_makoto_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEH_makoto
+				small = GFX_portrait_GEH_makoto_small
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			traits = {
+				leader_of_gehena_cl
+			}
+			expire = "9999.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = GEH_makoto_ac
+			allowed = {
+				original_tag = GEH
+			}
+			available = {
+				original_tag = GEH
+			}
+			visible = {
+				OR = {
+					NOT = {
+						OR = {
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
+			traits = {
+				leader_of_gehena_ac
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {old_guard inflexible_strategist media_personality thorough_planner}
+			visible = {
+				OR = {
+					NOT = {
+						OR = {
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
 			logistics_skill = 1
 		}
 	}
@@ -379,8 +380,8 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -412,8 +413,8 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -432,8 +433,8 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -471,8 +472,8 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {
@@ -502,8 +503,8 @@ characters = {
 				OR = {
 					NOT = {
 						OR = {
-							has_country_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-							has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 						}
 					}
 					NOT = {

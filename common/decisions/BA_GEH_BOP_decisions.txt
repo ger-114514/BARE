@@ -1,18 +1,42 @@
 GEH_bop_decision_category = {
 
     #开启对话
-    GEH_bop_open_communication = {
-		visible = {
-		}
-		available = {
-		}
+      GEH_bop_open_communication = {
 		cost = 25
-            days_remove = 10
-            days_re_enable = 30
+		days_remove = 10
+		days_re_enable = 30
 		remove_effect = {
-            add_power_balance_value = {
+			add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = -0.1
+			}
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 0
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
+			modifier = {
+				factor = 1.2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.6
+				}
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > 0
+				}
 			}
 		}
     }
@@ -30,13 +54,34 @@ GEH_bop_decision_category = {
             }
 		}
 		cost = 100
-            days_remove = 30
-            days_re_enable = 150
+		days_remove = 30
+		days_re_enable = 150
 		remove_effect = {
             add_offsite_building = { type = industrial_complex level = 1 }
             add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = 0.15
+			}
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
+			}
+			modifier = {
+				factor = 1.2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.75
+				}
+			}
+			modifier = {
+				factor = 0.2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
 			}
 		}
     }
@@ -53,13 +98,41 @@ GEH_bop_decision_category = {
             }
 		}
 		cost = 75
-            days_remove = 30
-            days_re_enable = 90
+		days_remove = 30
+		days_re_enable = 90
 		remove_effect = {
             add_stability = 0.1
             add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = -0.1
+			}
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 0
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
+			modifier = {
+				factor = 1.2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.6
+				}
+			}
+			modifier = {
+				factor = 1.5
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
 			}
 		}
     }
@@ -68,23 +141,44 @@ GEH_bop_decision_category = {
     #挪用经费用于生产
     GEH_bop_use_money_for_production = {
 		visible = {
-                  has_completed_focus = GEH_highest_order_from_makoto
+            has_completed_focus = GEH_highest_order_from_makoto
 		}
 		available = {
-                  NOT = { has_decision = GEH_bop_use_money_for_investment }
-                  power_balance_value = {
-                  id = GEH_bp_between_chaos_and_order
-                  value < 0.2
-                  }
+			NOT = { has_decision = GEH_bop_use_money_for_investment }
+			power_balance_value = {
+			id = GEH_bp_between_chaos_and_order
+			value < 0.2
+			}
 		}
 		cost = 100
-            days_remove = 30
-            days_re_enable = 150
+		days_remove = 30
+		days_re_enable = 150
 		remove_effect = {
-                  add_offsite_building = { type = arms_factory level = 1 }
-                  add_power_balance_value = {
+            add_offsite_building = { type = arms_factory level = 1 }
+			add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = 0.15
+			}
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
+			}
+			modifier = {
+				factor = 1.5
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
+			modifier = {
+				factor = 0.2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
 			}
 		}
     }
@@ -102,13 +196,38 @@ GEH_bop_decision_category = {
             }
 		}
 		cost = 75
-            days_remove = 30
-            days_re_enable = 90
+		days_remove = 30
+		days_re_enable = 90
 		remove_effect = {
             add_manpower = 10000
             add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				add = 15
+				has_manpower < 10000
+			}
+			modifier = {
+				factor = 1.5
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.7
+				}
+			}
+			modifier = {
+				factor = 0.5
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > 0
+				}
 			}
 		}
     }
@@ -126,11 +245,11 @@ GEH_bop_decision_category = {
             }
 		}
 		cost = 50
-            days_remove = 90
-            days_re_enable = 90
-            modifier = {
+		days_remove = 90
+		days_re_enable = 90
+		modifier = {
 			stability_weekly = 0.005
-                  political_power_factor = -0.1
+            political_power_factor = -0.1
 		}
         complete_effect = {
 			add_stability = -0.1
@@ -139,6 +258,24 @@ GEH_bop_decision_category = {
             add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = -0.15
+			}
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 1.5
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.75
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > 0.6
+				}
 			}
 		}
     }
@@ -155,10 +292,10 @@ GEH_bop_decision_category = {
                 value > 0.2
             }
 		}
-            cost = 100
-            days_remove = 60
-            days_re_enable = 30
-            modifier = {
+		cost = 100
+		days_remove = 60
+		days_re_enable = 30
+		modifier = {
 			consumer_goods_factor = 0.1
 		}
 		remove_effect = {
@@ -167,63 +304,131 @@ GEH_bop_decision_category = {
 				value = -0.2
 			}
 		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > 0.6
+				}
+			}
+		}
     }
 
-      #伊甸条约宣传
-      GEH_bop_eden_treaty_propoganda = {
-            visible = {
-                  has_completed_focus = GEH_gehinna_is_on_action
-            }
-            available = {
-                  power_balance_value = {
-                        id = GEH_bp_between_chaos_and_order
-                        value < -0.2
-                  }
-            }
-            cost = 50
-            days_remove = 7
-            days_re_enable = 30
-            modifier = {
-                  political_power_factor = -0.1
-                  stability_weekly = -0.01
-            }
-            remove_effect = {
-                  add_power_balance_value = {
-                        id = GEH_bp_between_chaos_and_order
-                        value = -0.05
-                  }
-                  #筹备度+10
-                  set_temp_variable = { progress_change = 10 }
-                  Eden_treaty_change_progress = yes
-            }
-      }
+    #伊甸条约宣传
+    GEH_bop_eden_treaty_propoganda = {
+        visible = {
+            has_completed_focus = GEH_gehinna_is_on_action
+            has_global_flag = Eden_treaty_negotiation_ongoing
+        }
+		available = {
+			power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value < -0.2
+			}
+		}
+		cost = 50
+		days_remove = 7
+		days_re_enable = 30
+		modifier = {
+			political_power_factor = -0.1
+			stability_weekly = -0.01
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value = -0.05
+			}
+			#筹备度+10
+			set_temp_variable = { progress_change = 10 }
+			Eden_treaty_change_progress = yes
+		}
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 2
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 1.5
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
+			modifier = {
+				factor = 1.2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.6
+				}
+			}
+		}
+    }
 
       #风纪委巡逻
-      GEH_bop_patrol_in_gehnna = {
-            visible = {
-                  has_completed_focus = GEH_fight_rogue_across_board
-            }
-            available = {
-            }
-            cost = 30
-            days_remove = 15
-            days_re_enable = 15
-            modifier = {
-                  army_org_regain = -0.1
-                  stability_weekly = 0.01
-            }
-            remove_effect = {
-                  add_power_balance_value = {
-                        id = GEH_bp_between_chaos_and_order
-                        value = -0.05
-                  }
-                  #筹备度+10
-                  set_temp_variable = { progress_change = 10 }
-                  Eden_treaty_change_progress = yes
-                  #TODO:隐藏效果：降低阿里乌斯的渗透度
-                  hidden_effect = {
-                        
-                  }
-            }
-      }
+    GEH_bop_patrol_in_gehnna = {
+        visible = {
+            has_completed_focus = GEH_fight_rogue_across_board
+            has_global_flag = Eden_treaty_negotiation_ongoing
+        }
+		available = {
+		}
+		cost = 30
+		days_remove = 15
+		days_re_enable = 15
+		modifier = {
+			army_org_regain = -0.1
+			stability_weekly = 0.01
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = GEH_bp_between_chaos_and_order
+				value = -0.05
+			}
+			#筹备度+10
+			set_temp_variable = { progress_change = 10 }
+			Eden_treaty_change_progress = yes
+			#隐藏效果：降低阿里乌斯的渗透度
+			hidden_effect = {
+				ARI = {
+					set_temp_variable = { intelligence_change = -5 }
+					ARI_change_intelligence_in_GEH = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 4
+			modifier = {
+				factor = 2
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 0.8
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
+			modifier = {
+				factor = 1.5
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > 0.2
+				}
+			}
+		}
+	}
 }

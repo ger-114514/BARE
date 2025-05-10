@@ -15,198 +15,13 @@ guiTypes = {
 
 		background = {
 			name = "background"
-			spriteType = "GFX_bg"
+			spriteType = "GFX_inv_bg"
 		}
-
-		# iconType = {
-		# 	name = "noa_koharu"
-		# 	position = { x = 305 y = 145 }
-		# 	spriteType = "GFX_koharu_s"
-		# 	orientation = UPPER_LEFT
-		# 	pdx_tooltip = "koharu_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# 	scale = 0.5
-		# }
-
-		# buttonType = {
-		# 	name = "koharu_inv_1"
-		# 	position = { x = 300 y = 75 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_koharu_inv1"
-		# 	pdx_tooltip = "koharu_inv1_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "koharu_inv_2"
-		# 	position = { x = 235 y = 125 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_koharu_inv2"
-		# 	pdx_tooltip = "koharu_inv2_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }		
-
-		# buttonType = {
-		# 	name = "koharu_inv_3"
-		# 	position = { x = 365 y = 75 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_koharu_inv3"
-		# 	pdx_tooltip = "koharu_inv3_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "koharu_inv_4"
-		# 	position = { x = 235 y = 195 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_koharu_inv4"
-		# 	pdx_tooltip = "koharu_inv4_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# iconType = {
-		# 	name = "noa_hanako"
-		# 	position = { x = 955 y = 145 }
-		# 	spriteType = "GFX_hanako_s"
-		# 	orientation = UPPER_LEFT
-		# 	pdx_tooltip = "hanako_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# 	scale = 0.5
-		# }
-
-		# buttonType = {
-		# 	name = "hanako_inv_1"
-		# 	position = { x = 940 y = 75 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hanako_inv1"
-		# 	pdx_tooltip = "hanako_inv1_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "hanako_inv_2"
-		# 	position = { x = 1005 y = 75 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hanako_inv2"
-		# 	pdx_tooltip = "hanako_inv2_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }		
-
-		# buttonType = {
-		# 	name = "hanako_inv_3"
-		# 	position = { x = 1085 y = 125 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hanako_inv3"
-		# 	pdx_tooltip = "hanako_inv3_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "hanako_inv_4"
-		# 	position = { x = 1085 y = 195 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hanako_inv4"
-		# 	pdx_tooltip = "hanako_inv4_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# iconType = {
-		# 	name = "noa_azusa"
-		# 	position = { x = 305 y = 535 }
-		# 	spriteType = "GFX_azusa_s"
-		# 	orientation = UPPER_LEFT
-		# 	pdx_tooltip = "azusa_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# 	scale = 0.5
-		# }
-
-		# buttonType = {
-		# 	name = "azusa_inv_1"
-		# 	position = { x = 235 y = 570 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_azusa_inv1"
-		# 	pdx_tooltip = "azusa_inv1_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "azusa_inv_2"
-		# 	position = { x = 235 y = 640 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_azusa_inv2"
-		# 	pdx_tooltip = "azusa_inv2_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }		
-
-		# buttonType = {
-		# 	name = "azusa_inv_3"
-		# 	position = { x = 290 y = 705 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_azusa_inv3"
-		# 	pdx_tooltip = "azusa_inv3_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "azusa_inv_4"
-		# 	position = { x = 365 y = 705 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_azusa_inv4"
-		# 	pdx_tooltip = "azusa_inv4_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# iconType = {
-		# 	name = "noa_hifumi"
-		# 	position = { x = 955 y = 535 }
-		# 	spriteType = "GFX_hifumi_s"
-		# 	orientation = UPPER_LEFT
-		# 	pdx_tooltip = "hifumi_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# 	scale = 0.5
-		# }
-
-		# buttonType = {
-		# 	name = "hifumi_inv_1"
-		# 	position = { x = 1085 y = 570 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hifumi_inv1"
-		# 	pdx_tooltip = "hifumi_inv1_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "hifumi_inv_2"
-		# 	position = { x = 1085 y = 640 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hifumi_inv2"
-		# 	pdx_tooltip = "hifumi_inv2_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }		
-
-		# buttonType = {
-		# 	name = "hifumi_inv_3"
-		# 	position = { x = 1025 y = 705 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hifumi_inv3"
-		# 	pdx_tooltip = "hifumi_inv3_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
-		# buttonType = {
-		# 	name = "hifumi_inv_4"
-		# 	position = { x = 950 y = 705 }
-		# 	orientation = UPPER_LEFT
-		# 	spriteType = "GFX_hifumi_inv4"
-		# 	pdx_tooltip = "hifumi_inv4_desc"
-		# 	#pdx_tooltip = "CLOSE"
-		# }
-
 
 		buttonType = {
 			name = "noa_exit"
 			position = { x = 100 y = 100 }
-			spriteType = "GFX_exit"
+			spriteType = "GFX_inv_exit"
 			orientation = UPPER_LEFT
 			clicksound = click_close
 			shortcut = "ESCAPE"
@@ -218,6 +33,18 @@ guiTypes = {
 			spriteType = "GFX_bukebu_s"
 			orientation = UPPER_LEFT
 			pdx_tooltip = "bukebu_inv_desc"
+		}
+		buttonType = {
+			name = "all_permission_button"
+			position = { x = 430 y = 305 }
+			spriteType = "GFX_TRI_investigation_all_permission_animation"
+			clicksound = ui_stamp
+			pdx_tooltip = "all_permission_button_tt"
+		}
+		iconType = {
+			name = "all_permission"
+			position = { x = 430 y = 305 }
+			spriteType = "GFX_TRI_investigation_all_permission"
 		}
 		gridBoxType = {
 			name = "TRI_investigation_portraits"

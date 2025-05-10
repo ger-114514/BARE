@@ -6,14 +6,28 @@ sp_ba_T2_land_project = {
     }
     available = {
         FROM = {
+            OR = {
         OR = {
             has_tech = T1_infantry_weapon
             has_tech = T1_mobile_vehicle
-            #has_tech = T1_assult_vehicle
+        }
+        has_tech = T1_assult_vehicle
+            }
+        }
+    }
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            AND = {
+            has_tech = T2_infantry_weapon
+            has_tech = T2_mobile_vehicle            
+            }
+            has_tech = T2_assult_vehicle 
+            }
         }
         }
     }
-
     breakthrough_cost = {
         specialization_land = 1
     }
@@ -73,14 +87,28 @@ sp_ba_T3_land_project = {
     }
     available = {
         FROM = {
+            OR = {
         OR = {
             has_tech = T2_infantry_weapon
             has_tech = T2_mobile_vehicle
-            #has_tech = T2_assult_vehicle
+        }
+        has_tech = T2_assult_vehicle
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            AND = {
+            has_tech = T3_infantry_weapon
+            has_tech = T3_mobile_vehicle          
+            }
+            has_tech = T3_assult_vehicle
+            }   
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_land = 2
     }
@@ -148,7 +176,19 @@ sp_ba_T4_land_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            AND = {
+            has_tech = T4_infantry_weapon
+            has_tech = T4_mobile_vehicle           
+            }
+            has_tech = T4_assult_vehicle  
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_land = 3
     }
@@ -209,13 +249,27 @@ sp_ba_T5_land_project = {
     available = {
         FROM = {
         OR = {
+        OR = {
             has_tech = T4_infantry_weapon
             has_tech = T4_mobile_vehicle
-            #has_tech = T4_assult_vehicle
+        }
+        has_tech = T4_assult_vehicle
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            AND = {
+            has_tech = T5_infantry_weapon
+            has_tech = T5_mobile_vehicle            
+            }
+            has_tech = T5_assult_vehicle 
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_land = 4
     }

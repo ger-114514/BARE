@@ -19,8 +19,8 @@ ideas = {
 
         #内部斗争
         GEH_mild_inside_contradiction = {
-            name = GEH_severe_inside_contradiction
-            picture = unknown
+            name = GEH_mild_inside_contradiction
+            picture =  GEH_severe_inside_contradiction
 
             allowed = {
                 original_tag = GEH
@@ -78,6 +78,7 @@ ideas = {
                 political_power_cost = 0.1
                 stability_factor = -0.1
                 power_balance_weekly = -0.01
+                Eden_treaty_progress_modifier = 2
             }
         }
 
@@ -98,6 +99,7 @@ ideas = {
                 power_balance_weekly = -0.01
                 production_speed_buildings_factor = 0.2
                 production_factory_efficiency_gain_factor = 0.2
+                Eden_treaty_progress_modifier = 2
             }
         }
 

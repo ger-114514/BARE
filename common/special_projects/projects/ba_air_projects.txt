@@ -12,7 +12,16 @@ sp_ba_T2_air_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+                has_tech = T2_electronic
+                has_tech = T2_drone               
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_air = 1
     }
@@ -75,7 +84,16 @@ sp_ba_T3_air_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+                has_tech = T3_electronic
+                has_tech = T3_drone               
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_air = 2
     }
@@ -139,7 +157,16 @@ sp_ba_T4_air_project = {
         }
         }
     }
-
+    visible = {
+        FROM = {
+        NOT = {
+            AND = {
+                has_tech = T4_electronic
+                has_tech = T4_drone               
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_air = 3
     }
@@ -202,7 +229,16 @@ sp_ba_T5_air_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+                has_tech = T5_electronic
+                has_tech = T5_drone               
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_air = 4
     }

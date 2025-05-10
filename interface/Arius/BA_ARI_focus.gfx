@@ -160,4 +160,119 @@ spriteTypes = {
 		name = "GFX_goal_ARI_Gematria_academic_exchange"
 		texturefile = "gfx/interface/goals/Arius/focus_ARI_Gematria_academic_exchange.png"
 	}
+
+	###2025-07-05注册###
+	spriteType = {
+		name = "GFX_goal_ARI_Nihilism_forever"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_Nihilism_forever.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_remember_our_rivals"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_remember_our_rivals.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_history_education"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_history_education.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_maintain_enthusiasm"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_maintain_enthusiasm.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_arrest_rebels"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_arrest_rebels.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_carry_out_the_will"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_carry_out_the_will.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_identity_system"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_identity_system.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_Nihilism_examination"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_Nihilism_examination.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_social_death"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_social_death.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ARI_roses_on_the_skeleton"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_roses_on_the_skeleton.png"
+	}
+
+	##20250508注册##
+	
+	SpriteType = {
+		name = "GFX_focus_ARI_deal_with_shortage"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_deal_with_shortage.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_self_sufficient"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_self_sufficient.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_leaps_and_bounds"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_leaps_and_bounds.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_deep_mineral"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_deep_mineral.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_chemical_industry_park"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_chemical_industry_park.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_march_towards_the_goal"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_march_towards_the_goal.dds"
+	}
+
+	##20250508新注册##
+	SpriteType = {
+		name = "GFX_focus_ARI_raw_material"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_raw_material.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_ooparts_technology"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_ooparts_technology.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_import_advanced_technologies"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_import_advanced_technologies.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_build_arms_factory"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_build_arms_factory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_vehicle_factory"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_vehicle_factory.dds"
+	}
+    SpriteType = {
+		name = "GFX_focus_ARI_carrot"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_carrot.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_stick"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_stick.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_engineers"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_improve_domitories"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_improve_domitories.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_production_emulation"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_production_emulation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ARI_supervisor_experience_exchanging_meeting"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_supervisor_experience_exchanging_meeting.dds"
+	}
 }

@@ -11,7 +11,16 @@ sp_ba_T2_industry_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            has_tech = T2_production
+            has_tech = T2_opaz            
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_ba_tech = 1
     }
@@ -70,6 +79,16 @@ sp_ba_T3_industry_project = {
         OR = {
             has_tech = T2_production
             has_tech = T2_opaz
+        }
+        }
+    }
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            has_tech = T3_production
+            has_tech = T3_opaz            
+            }
         }
         }
     }
@@ -135,7 +154,16 @@ sp_ba_T4_industry_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            has_tech = T4_production
+            has_tech = T4_opaz            
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_ba_tech = 3
     }
@@ -197,7 +225,16 @@ sp_ba_T5_industry_project = {
         }
         }
     }
-
+    visible = {
+        FROM= {
+        NOT = {
+            AND = {
+            has_tech = T5_production
+            has_tech = T5_opaz            
+            }
+        }
+        }
+    }
     breakthrough_cost = {
         specialization_ba_tech = 4
     }

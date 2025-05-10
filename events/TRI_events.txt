@@ -1196,6 +1196,11 @@ news_event = {
                 TRI_set_focus_Eden_threat = yes
                 complete_national_focus = TRI_unexpected_accident
             }
+            if = {
+                limit = { original_tag = ARI }
+                set_country_flag = ARI_lock_foreign_operation
+                set_country_flag = ARI_revenge_progress_locked
+            }
         }
     }
 

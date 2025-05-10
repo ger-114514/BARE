@@ -2,7 +2,6 @@
 GEH_bop_decision_category = {
 	icon = generic_research
 
-	visible_when_empty = yes
 
 	visible = {
 		original_tag = GEH
@@ -51,7 +50,7 @@ GEH_GST_LS_category = {
 	visible = {
 		original_tag = TRI
 	}
-	priority = 114514
+	priority = 114512
 }
 
 #古圣堂之战临时触发任务类别 - fgvfgfs
@@ -60,14 +59,45 @@ GST_LS_ZZ_category = {
 
 	visible_when_empty = yes
 	visible = {
-		AND = {
-			OR = {
-				original_tag = TRI
-				original_tag = GEH
+		OR = {
+			AND = {
+				OR = {
+					original_tag = TRI
+					original_tag = GEH
+				}
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
 			}
-			OR = {
-				has_war_with = GEH
-				has_war_with = TRI
+			AND = {
+				original_tag = ARI
+				OR = {
+					has_war_with = GEH
+					has_war_with = TRI
+				}
+			}
+			AND = {
+				has_war_with = ARI
+				is_in_faction_with = SCH
+			}
+		}
+	}
+	priority = 114515
+}
+#古圣堂之战临时触发消除地区debuff决议类别 - fgvfgfs
+GST_LS_XC_DEBUFF_category = {
+	icon = generic_research
+
+	visible_when_empty = yes
+	visible = {
+		AND = {
+			any_of_scopes = {
+				array = controlled_states
+				tooltip = ANY_STATES_HAS_DEBUFF_JingPiLiJie
+				has_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
 			}
 		}
 	}

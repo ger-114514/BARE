@@ -148,7 +148,10 @@ recruit_character = GEH_JingJiZhuangTaiWeiYuanHui #歌赫娜紧急状态委员�
 
 
 add_dynamic_modifier = {
-  modifier = GEH_army_Armed_Forces
+   modifier = GEH_army_Armed_Forces
+}
+add_dynamic_modifier = {
+	modifier = GEH_gehenna_club_activity
 }
 
 set_politics = {

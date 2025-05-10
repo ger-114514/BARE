@@ -17,6 +17,28 @@ spriteTypes = {
 		name = "GFX_idea_advisor_GEH_hina"
 		texturefile = "gfx/interface/ideas/GEH/hina.dds"
 	}
+
+	
+	spriteType = {
+		name = "GFX_idea_GEH_factory_management_in_chaos"
+		texturefile = "gfx/interface/ideas/GEH/GEH_factory_management_in_chaos.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GEH_severe_inside_contradiction"
+		texturefile = "gfx/interface/ideas/GEH/GEH_severe_inside_contradiction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GEH_army_Armed_Forces"
+		texturefile = "gfx/interface/ideas/GEH/GEH_army_Armed_Forces.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GEH_gehenna_club_activity"
+		texturefile = "gfx/interface/ideas/GEH/GEH_gehenna_club_activity.dds"
+	}
+	
 	
 	### MIL
 	spriteType = {
@@ -70,6 +92,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_advisor_CEN_rin"
 		texturefile = "gfx/interface/ideas/CEN/rin.dds"
+	}
+
+	### ALL
+	spriteType = {
+		name = "GFX_idea_BARE_Global_College_Autonomous_Region"
+		texturefile = "gfx/interface/ideas/CEN/BARE_Global_College_Autonomous_Region.dds"
 	}
 	
 }

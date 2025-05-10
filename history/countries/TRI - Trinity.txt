@@ -1,5 +1,6 @@
 capital = 118
 oob = "TRI_2019"
+set_air_oob = "TRI_AIR_2019"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -591,6 +592,7 @@ set_technology = {
 	light_attack_drone = 1
 	fighting_drone = 1
 	attack_drone = 1
+	transport_drone = 1
 
 	#装甲车辆（坦克）
 	light_tank_MK1 = 1

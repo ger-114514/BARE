@@ -31,14 +31,7 @@ technologies = {
 
 
     bd_level_T2 = {
-
-		custom_modifier_tooltip = BARE_BD_Research_limit_Get
-
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = 4
-			}
-		}
+		BARE_BD_Research_limit = 4
 
 		folder = {
 			name = bd_folder
@@ -63,15 +56,7 @@ technologies = {
 
 
     bd_level_T3 = {
-
-		
-		custom_modifier_tooltip = BARE_BD_Research_limit_Get
-
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = 4
-			}
-		}
+		BARE_BD_Research_limit = 4
 
 		dependencies = {
 			T3_electronic = 1
@@ -96,16 +81,7 @@ technologies = {
 
 
     bd_level_T4 = {
-
-
-		
-		custom_modifier_tooltip = BARE_BD_Research_limit_Get
-
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = 4
-			}
-		}
+		BARE_BD_Research_limit = 4
 
 		dependencies = {
 			T4_electronic = 1
@@ -127,15 +103,8 @@ technologies = {
 	}
 
 	bd_level_T5 = {
+		BARE_BD_Research_limit = 4
 
-		
-		custom_modifier_tooltip = BARE_BD_Research_limit_Get
-
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = 4
-			}
-		}
 
 		dependencies = {
 			T5_electronic = 1
@@ -162,25 +131,21 @@ technologies = {
 
 		political_power_factor = 0.075
 		max_planning_factor = 0.075
+		BARE_BD_Research_limit = -1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -248,25 +213,20 @@ technologies = {
 
 		consumer_goods_factor = -0.1
 		army_artillery_attack_factor = 0.1
-
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -336,24 +296,20 @@ technologies = {
 		army_strength_factor = 0.05
 		army_morale_factor = 0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -426,24 +382,20 @@ technologies = {
 		stability_factor = 0.05
 		opinion_gain_monthly_factor = 0.2
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -517,23 +469,19 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05
 		production_speed_buildings_factor = 0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -605,24 +553,20 @@ technologies = {
 		production_factory_efficiency_gain_factor = 0.1
 		industrial_capacity_factory = 0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -691,23 +635,19 @@ technologies = {
 
 		stability_weekly_factor = 0.001
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -777,23 +717,19 @@ technologies = {
 		political_power_gain = 0.15
 		opinion_gain_monthly_factor = 0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -864,24 +800,20 @@ technologies = {
 		political_power_factor = 0.1
 		political_power_cost = -0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -953,24 +885,20 @@ technologies = {
 		research_speed_factor = 0.05
 		planning_speed = 0.05
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -1042,24 +970,20 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industrial_capacity_factory = 0.05
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -1131,23 +1055,19 @@ technologies = {
 		experience_loss_factor = -0.05
 		can_use_combat_readiness_percentage = 0.05
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -1219,23 +1139,19 @@ technologies = {
 		research_speed_factor = 0.05
 		industrial_capacity_factory = 0.075
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -1308,23 +1224,19 @@ technologies = {
 		stability_factor = 0.05
 		political_power_cost = -0.15
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -1397,23 +1309,19 @@ technologies = {
 		free_cost_combat_readiness_percentage = 0.1
 		command_power_gain_mult = 0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
@@ -1485,24 +1393,20 @@ technologies = {
 		experience_loss_factor = -0.15
 		combat_readiness_recovery_percentage = 0.1
 
-		on_research_complete = {
-			add_to_variable = {
-				BARE_BD_Research_limit = -1
-			}
-		}
+		BARE_BD_Research_limit = -1
 
 
 		allow = {
 			if = {
 				limit = {
 					check_variable = {
-						BARE_BD_Research_limit < 1
+						modifier@BARE_BD_Research_limit < 1
 					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = BARE_BD_Research_limit_Tooltip_1
 					check_variable = {
-						BARE_BD_Research_limit > 0
+						modifier@BARE_BD_Research_limit > 0
 					}
 				}
 			}
