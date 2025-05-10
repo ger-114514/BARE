@@ -1,0 +1,88 @@
+guiTypes = {
+    scrollbarType = {
+        name = "BA_welcome_ipad_scroll"	
+        slider = "pad_scrollbar_scroll"
+        track= "pad_track_scroll"
+        leftbutton = "pad_downButton"
+		rightbutton = "pad_upButton"
+        size = {x =8 y =8 }
+        position = {x= 0 y =0}
+        priority = 100			
+        borderSize = {x = 8 y = 8}	
+        maxValue =1 
+        minValue =0
+        stepSize =0.1
+        scroll_speed = 40
+        startValue = 0
+        horizontal = 0
+        
+        
+        
+        # guiButtonType = {
+        #     name = "pad_scrollbar_scroll"	
+        #     quadTextureSprite = "GFX_pad_scrollbar_scroll"
+        #     position ={ x=-12 y =0}
+        # }
+
+        # guiButtonType = {
+        #     name = "pad_track_scroll"
+        #     quadTextureSprite = "GFX_pad_scrollbar_scroll"
+        #     position = { x=12 y =12}	
+        # }	
+
+        guiButtonType = {
+            name = "pad_scrollbar_scroll"	
+            quadTextureSprite = "GFX_pad_scrollbar_scroll"
+            position ={ x=0 y =0}
+        }
+
+        guiButtonType = {
+            name = "pad_track_scroll"
+            quadTextureSprite = "GFX_pad_scrollbar_axis"
+            position = { x=0 y =12}	
+        }	
+
+        guiButtonType = {
+            parent = "pad_scrollbar_scroll"
+            name = "pad_upButton"
+            quadTextureSprite = "GFX_null_button"
+            position = { x=0 y =0}	
+		}
+			
+        guiButtonType = {
+            parent = "pad_scrollbar_scroll"
+            name = "pad_downButton"
+            quadTextureSprite = "GFX_null_button"
+            position = { x=0 y =120}	
+        }
+    }
+
+
+    extendedScrollbarType = {
+        name = "BA_welcome_ipad_scroll_RIGHT"
+        position = { x =4 y = 0 }
+        size = { width = 5 height = 18 }
+        startValue = 0
+        orientation = upper_right
+        origo = upper_right
+        smooth_scrolling = 0.25
+
+        background = {
+            name = "Background"	
+            quadTextureSprite = "GFX_pad_scrollbar_axis"
+        }
+        
+        slider = {
+            name = "Slider"	
+            quadTextureSprite = "GFX_pad_scrollbar_scroll"
+            position = { x = -10 y = -8 }
+        }
+
+        track = {
+            name = "Track"
+            quadTextureSprite = "GFX_tiled_window_transparent"
+            position = { x = 10 y = 0 }
+            alwaystransparent = yes
+        }
+    }
+}

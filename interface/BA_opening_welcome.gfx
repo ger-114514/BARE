@@ -1,0 +1,28 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ipad_bg"
+		textureFile = "gfx/interface/opening_welcome/ipad_bg.png"
+	}
+	spriteType = {
+		name = "GFX_pad_button1"
+		textureFile = "gfx/interface/opening_welcome/pad_button1.png"
+	}
+    spriteType = {
+		name = "GFX_pad_button2"
+		textureFile = "gfx/interface/opening_welcome/pad_button2.png"
+	}
+    spriteType = {
+		name = "GFX_pad_button3"
+		textureFile = "gfx/interface/opening_welcome/pad_button3.png"
+	}
+    spriteType = {
+		name = "GFX_pad_button4"
+		textureFile = "gfx/interface/opening_welcome/pad_button4.png"
+	}
+    spriteType = {
+		name = "GFX_pad_exitbar"
+		textureFile = "gfx/interface/opening_welcome/pad_exitbar.png"
+	}
+	
+}
+
