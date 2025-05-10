@@ -1,0 +1,29 @@
+add_namespace = CEN
+
+country_event = {
+	id = CEN.9999
+	picture = GFX_common_event_gui_test
+	title = CEN.9999.t
+	desc = CEN.9999.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN.9999.a
+	}
+}
+
+country_event = {
+	id = CEN.6666
+	#picture = GFX_common_event_gui_test
+	title = CEN.6666.t
+	desc = CEN.6666.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN.6666.a
+	}
+
+	option = {
+		name = CEN.6666.b
+	}
+}
