@@ -140,6 +140,9 @@ focus_tree = {
 			custom_effect_tooltip = ARI_desire_of_power_tt
 			country_event = ARI_beatrice.6
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		#阿里乌斯皇室的遗产
@@ -173,6 +176,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		#利用“神秘”资源
@@ -194,6 +200,9 @@ focus_tree = {
 			}
 			ARI_change_mystic_progress = yes
 			add_ideas = ARI_mystery_reseacher
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = {
@@ -222,6 +231,9 @@ focus_tree = {
 					ARI_power_chaser_army_attack_factor = 0.03
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = {
@@ -321,6 +333,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		#渴望突破
@@ -365,6 +380,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	###3.14研发阶段国策补全###
 	###第二阶段（RANK=2）
@@ -406,6 +424,9 @@ focus_tree = {
 				remove_idea = ARI_mystery_reseacher
 				add_idea = ARI_mystery_reseacher_2
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = {
@@ -451,6 +472,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		#圣徒会与“契约”？
@@ -492,6 +516,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		#为“投影”更换新设备
@@ -530,6 +557,9 @@ focus_tree = {
 					ARI_new_weapon_for_projection_count = 0
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	###三阶段国策（RANK=3)###
@@ -571,6 +601,9 @@ focus_tree = {
 					ARI_power_chaser_modifier_army_sub_unit_category_special_infantry_max_org_factor = 0.1
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = {
@@ -615,6 +648,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		#仪式实验
@@ -654,6 +690,9 @@ focus_tree = {
 			country_event = {
 				id = ARI_beatrice.6
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	###四阶段（RANK=4）###
@@ -715,6 +754,9 @@ focus_tree = {
 					count = 3
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = {
@@ -855,6 +897,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	#国外行动部分
 	focus = {
@@ -888,6 +933,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 5
+		}
 	}
 	#数秘术部分
 	focus = {
@@ -917,6 +965,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 5
+		}
 	}
 	focus = {
 		#黑服的补给交易
@@ -935,6 +986,9 @@ focus_tree = {
 		completion_reward = {
 			#开启数秘术交易面板
 			custom_effect_tooltip = ARI_Gematria_new_trade_tt
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 	focus = {
@@ -961,6 +1015,9 @@ focus_tree = {
 				show_effect_tooltip = yes
 			}
 		}
+		ai_will_do = {
+			factor = 5
+		}
 	}
 	focus = {
 		#戈尔孔达的禁忌装备
@@ -984,6 +1041,9 @@ focus_tree = {
 			unlock_decision_tooltip = ARI_Gorukosoda_mystery_strengthen_device
 			unlock_decision_tooltip = ARI_Gorukosoda_anti_halo_bomb
 		}
+		ai_will_do = {
+			factor = 5
+		}
 	}
 	focus = {
 		#数密术学术交流
@@ -1004,6 +1064,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	#搞事部分
@@ -1049,6 +1112,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 5
+		}
 	}
 	focus = {
 		#行动目标：圣三一
@@ -1080,6 +1146,12 @@ focus_tree = {
 					id = ARI_beatrice_diplomacy.3
 					days = 5
 				}
+			}
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2020.1.1
 			}
 		}
 	}
@@ -1115,6 +1187,12 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2020.1.1
+			}
+		}
 	}
 	focus = {
 		#格黑娜间谍
@@ -1142,6 +1220,12 @@ focus_tree = {
 			}
 			add_to_variable = {
 				ARI_Intelligence_department_own_operative_detection_chance_factor = -0.1
+			}
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2021.1.1
 			}
 		}
 	}
@@ -1174,6 +1258,12 @@ focus_tree = {
 					id = ARI_beatrice_diplomacy.5
 					days = 5
 				}
+			}
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2021.1.1
 			}
 		}
 	}
@@ -1214,6 +1304,12 @@ focus_tree = {
 				show_effect_tooltip = yes
 			}
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2020.1.1
+			}
+		}
 	}
 	focus = {
 		#黑市情报网络
@@ -1252,6 +1348,12 @@ focus_tree = {
 				show_effect_tooltip = yes
 			}
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2020.1.1
+			}
+		}
 	}
 	focus = {
 		#渗透黑市佣兵团
@@ -1277,6 +1379,12 @@ focus_tree = {
 			unlock_decision_tooltip = {
 				decision = ARI_engage_in_mercenaries
 				show_effect_tooltip = yes
+			}
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2020.1.1
 			}
 		}
 	}
@@ -1307,6 +1415,12 @@ focus_tree = {
 			unlock_decision_tooltip = ARI_kidnap_Trinity_students
 			unlock_decision_tooltip = ARI_attack_Trinity_facilities
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2020.1.1
+			}
+		}
 	}
 	focus = {
 		#圣三一行动的经验
@@ -1332,6 +1446,12 @@ focus_tree = {
 			add_offsite_building = {
 				type = industrial_complex
 				level = 1
+			}
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 3
+				date > 2021.1.1
 			}
 		}
 	}
@@ -1364,6 +1484,9 @@ focus_tree = {
 					days = 5
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 3
 		}
 	}
 	focus = {
@@ -1445,6 +1568,13 @@ focus_tree = {
 				country_event = bare_hidden_event.1
 			}
 		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				date < 2021.7.1
+			}
+		}
 	}
 	###3.17新增
 	focus = {
@@ -1469,6 +1599,9 @@ focus_tree = {
 			FOCUS_FILTER_ARMY
 		}
 		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 2
 		}
 	}
 	focus = {
@@ -1509,6 +1642,9 @@ focus_tree = {
 				ARI_check_if_traveller_idea_replaced = yes
 			}
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#回收特战队
@@ -1547,6 +1683,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#重申复仇理想
@@ -1580,6 +1719,9 @@ focus_tree = {
 			add_war_support = 0.2
 			#减少“旅者”行动的灾难的效果
 			unlock_decision_tooltip = ARI_get_back_revenge_spirit_de
+		}
+		ai_will_do = {
+			factor = 2
 		}
 	}
 	focus = {
@@ -1637,6 +1779,9 @@ focus_tree = {
 			custom_effect_tooltip = ARI_immeditly_skip_debuff_supply_tooltip
 			unlock_decision_tooltip = ARI_fix_our_supply
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#处理“叛徒”
@@ -1679,6 +1824,9 @@ focus_tree = {
 				#出现事件：叛徒的明天
 				country_event = ARI_beatrice.11
 			}
+		}
+		ai_will_do = {
+			factor = 2
 		}
 	}
 	focus = {
@@ -1736,6 +1884,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#解开帷幕
@@ -1780,6 +1931,9 @@ focus_tree = {
 				custom_effect_tooltip = TRI_anti_spy_available_tt
 			}
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#重新审视行动方针
@@ -1803,6 +1957,9 @@ focus_tree = {
 			unlock_decision_tooltip = ARI_build_safe_home
 			unlock_decision_tooltip = ARI_send_sf_to_trinity
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#灵活行动限制
@@ -1825,6 +1982,9 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = ARI_disguise_conference_preparer
 			unlock_decision_tooltip = ARI_control_trinity_border
+		}
+		ai_will_do = {
+			factor = 2
 		}
 	}
 	focus = {
@@ -1853,6 +2013,9 @@ focus_tree = {
 			unlock_decision_tooltip = ARI_pandaemonium_secret_material_change
 			unlock_decision_tooltip = ARI_a_trip_to_gehenna
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#参加格黑娜社团活动
@@ -1876,6 +2039,9 @@ focus_tree = {
 			#
 			unlock_decision_tooltip = ARI_join_spring_club_activity
 			unlock_decision_tooltip = ARI_join_food_seminar_club_activity
+		}
+		ai_will_do = {
+			factor = 2
 		}
 	}
 	focus = {
@@ -1905,6 +2071,9 @@ focus_tree = {
 		completion_reward = {
 			#解锁准备决议5
 			unlock_decision_category_tooltip = ARI_preparation_of_operation_eden_decisions
+		}
+		ai_will_do = {
+			factor = 2
 		}
 	}
 	#TODO：需要在什么时候完成这个国策
@@ -2242,6 +2411,12 @@ focus_tree = {
 				modifier = ARI_flame_of_revenge
 			}
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 5
+				date > 2020.1.1
+			}
+		}
 	}
 	focus = {
 		#夫人的历史课
@@ -2265,6 +2440,12 @@ focus_tree = {
 			#复仇之焰获得永久buff 5%攻击，5%低HP组织度减少Buff，复仇之焰进度-15%
 			add_ideas = ARI_history_education
 		}
+		ai_will_do = {
+			modifier = {
+				factor = 5
+				date > 2020.1.1
+			}
+		}
 	}
 	focus = {
 		#保持热情
@@ -2287,6 +2468,9 @@ focus_tree = {
 			set_variable = {
 				ARI_flame_of_revenge_monthly_decay = 0.05
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	#平叛部分
@@ -2399,6 +2583,9 @@ focus_tree = {
 				ARI_nihilism_supply_consumption_factor = -0.05
 			}
 		}
+		ai_will_do = {
+			factor = 2
+		}
 	}
 	focus = {
 		#阿里乌斯式考试
@@ -2432,6 +2619,13 @@ focus_tree = {
 				category = bd
 			}
 		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_completed_focus = ARI_social_death
+			}
+		}
 	}
 	focus = {
 		#学园性死亡
@@ -2459,6 +2653,13 @@ focus_tree = {
 			}
 			add_to_variable = {
 				ARI_nihilism_war_support_factor = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				has_completed_focus = ARI_Nihilism_examination
 			}
 		}
 	}
@@ -2495,6 +2696,9 @@ focus_tree = {
 			add_to_variable = {
 				ARI_nihilism_org_loss_at_low_org_factor = -0.025
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	#经济部分
@@ -2582,6 +2786,9 @@ focus_tree = {
 					level = 1
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 4
 		}
 	}
 	#能治工人部分
@@ -2888,8 +3095,8 @@ focus_tree = {
 			focus = ARI_leaps_and_bounds
 		}
 		cost = 3
-		x = 0
-		y = 1
+		x = 4
+		y = 2
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_RESEARCH
@@ -2954,7 +3161,7 @@ focus_tree = {
 		}
 		cost = 3
 		x = 0
-		y = 1
+		y = 2
 		search_filters = {
 			FOCUS_FILTER_ECO
 		}
@@ -3210,8 +3417,8 @@ focus_tree = {
 			focus = ARI_leaps_and_bounds
 		}
 		cost = 3
-		x = 4
-		y = 2
+		x = 3
+		y = 1
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 			FOCUS_FILTER_RESEARCH
@@ -3302,6 +3509,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_vehicle_factory
 		}
+		prerequisite = {
+			focus = ARI_compulsory_labor
+		}
 		cost = 3
 		x = 0
 		y = 2
@@ -3318,6 +3528,9 @@ focus_tree = {
 				type = arms_factory
 				level = 2
 			}
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 	#军事部分

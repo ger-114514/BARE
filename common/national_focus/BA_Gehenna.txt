@@ -43,6 +43,9 @@ focus_tree = {
         completion_reward = {
 
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
     #政治线
@@ -61,6 +64,9 @@ focus_tree = {
             add_political_power = 100
             add_stability = -0.1
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
     #万魔殿与风纪委之争
@@ -77,6 +83,9 @@ focus_tree = {
         completion_reward = {
             add_ideas = GEH_severe_inside_contradiction
             add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -100,6 +109,9 @@ focus_tree = {
         completion_reward = {
             
         }
+        ai_will_do = {
+            factor = 3
+        }
     }
 
     #平稳前行
@@ -118,6 +130,9 @@ focus_tree = {
                 remove_idea = GEH_severe_inside_contradiction
                 add_idea = GEH_mild_inside_contradiction
             }
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -140,6 +155,9 @@ focus_tree = {
                 set_value = 0.3
             }
             
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -164,6 +182,9 @@ focus_tree = {
             unlock_decision_tooltip = GEH_bop_use_money_for_production
             unlock_decision_tooltip = GEH_bop_recruit_temperatory
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -187,6 +208,9 @@ focus_tree = {
             unlock_decision_tooltip = GEH_bop_use_money_for_investment
             unlock_decision_tooltip = GEH_bop_ensure_stability
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -202,6 +226,9 @@ focus_tree = {
 
         completion_reward = {
             add_political_power = 200
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -220,6 +247,9 @@ focus_tree = {
             add_political_power = 100
             unlock_decision_tooltip = GEH_bop_great_feast
             unlock_decision_tooltip = GEH_bop_mediate_conflicts
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -251,6 +281,9 @@ focus_tree = {
                 modifier = GEH_gehenna_daily_life
             }
         }
+        ai_will_do = {
+            factor = 10
+        }
 	}
 
 
@@ -269,6 +302,9 @@ focus_tree = {
                 id = GEH_events.1
             }
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -286,6 +322,9 @@ focus_tree = {
             country_event = {
                 id = GEH_events.7
             }
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -306,6 +345,9 @@ focus_tree = {
                 id = GEH_bp_between_chaos_and_order
                 value = -0.05
             }
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -345,6 +387,13 @@ focus_tree = {
             add_ideas = GEH_ideas_prepare_for_conference_1
             add_ideas = GEH_ideas_conference_support_1
         }
+        ai_will_do = {
+            factor = 20
+            modifier = {
+                factor = 0
+                date < 2024.1.1
+            }
+        }
 	}
 
 
@@ -372,6 +421,9 @@ focus_tree = {
             }
             #每月向决议：第二次《伊甸条约》会谈筹备中添加2点筹备度
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -398,6 +450,9 @@ focus_tree = {
                 add_idea = GEH_ideas_conference_support_2
             }
             unlock_decision_tooltip = GEH_bop_eden_treaty_propoganda
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -427,6 +482,9 @@ focus_tree = {
             }
             add_stability = -0.05
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -455,6 +513,9 @@ focus_tree = {
             add_stability = 0.1
             unlock_decision_tooltip = GEH_bop_patrol_in_gehnna
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -482,6 +543,9 @@ focus_tree = {
                 }
             }
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
     
 
@@ -508,6 +572,9 @@ focus_tree = {
                 add_idea = GEH_ideas_prepare_for_conference_3
             }
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -531,6 +598,9 @@ focus_tree = {
 
         completion_reward = {
             custom_effect_tooltip = GEH_will_sign_2nd_eden_treaty #在无数的准备后，我们将签署这份世纪条约！
+        }
+        ai_will_do = {
+            factor = 100
         }
 	}
 
@@ -652,6 +722,9 @@ focus_tree = {
             }
             unlock_decision_category_tooltip = GEH_emergency_time_decision_category
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -668,6 +741,9 @@ focus_tree = {
 
         completion_reward = {
             unlock_decision_tooltip = GEH_save_our_vip_students
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -686,6 +762,9 @@ focus_tree = {
         completion_reward = {
             unlock_decision_tooltip = GEH_reorganization_our_troop
             unlock_decision_tooltip = GEH_reorganization_our_attack
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -706,6 +785,9 @@ focus_tree = {
                 idea = GEH_fight_to_the_end
                 days = 180
             }
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -768,6 +850,9 @@ focus_tree = {
             }
             custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_2_1_tt       
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -825,6 +910,9 @@ focus_tree = {
             }
             custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_2_2_tt       
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -859,6 +947,9 @@ focus_tree = {
                 }
             }
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -882,6 +973,9 @@ focus_tree = {
                 add_ideas = GEH_army_factory_cooperation
             }
 
+        }
+        ai_will_do = {
+            factor = 3
         }
 	}
 
@@ -950,6 +1044,9 @@ focus_tree = {
             }
             custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_1_1_tt       
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -1008,6 +1105,9 @@ focus_tree = {
             }
             custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_1_2_tt       
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -1038,6 +1138,9 @@ focus_tree = {
             }
 
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -1064,6 +1167,9 @@ focus_tree = {
             }
 
         }
+        ai_will_do = {
+            factor = 3
+        }
 	}
 
 
@@ -1085,6 +1191,9 @@ focus_tree = {
         completion_reward = {
             #＃超事件：“《伊甸条约》的成功签订”触发后才可以被激活。
             add_ideas = GEH_gehenna_stands_forever
+        }
+        ai_will_do = {
+            factor = 5
         }
 	}
 
@@ -1177,7 +1286,36 @@ focus_tree = {
             #混乱的工厂
             remove_ideas = GEH_factory_management_in_chaos
             #启动一个动态的精神：【格黑娜产能利用率】 这个我不会写
-
+			if = {
+				limit = { has_stability < 0.01 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.5 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = -0.1 }
+			}
+			else_if = {
+				limit = { has_stability < 0.26 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.3 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = -0.05 }
+			}
+			else_if = {
+				limit = { has_stability < 0.51 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.1 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0 }
+			}
+			else_if = {
+				limit = { has_stability < 0.76 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.2 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.05 }
+			}
+			else_if = {
+				limit = { has_stability < 1 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.3 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.1 }
+			}
+			else = {
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.5 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.15 }
+			}
+            add_dynamic_modifier = { modifier = GEH_production_efficiency }
         }		
     }
 
@@ -1654,24 +1792,6 @@ focus_tree = {
     }
 
 
-    #社团任务
-    focus = {
-        id = GEH_club_missions
-        icon = GFX_goal_GEH_club_missions
-        cost = 10
-        x = 0
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-
-        relative_position_id = GEH_change_the_nature
-        prerequisite = {  focus = GEH_change_the_nature }
-
-        completion_reward = {
-            #TODO:缺乏效果
-        }		
-    }
-
-
     #学园翻新
     focus = {
         id = GEH_renew_our_academia
@@ -1681,8 +1801,8 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
 
-        relative_position_id = GEH_club_missions
-        prerequisite = {  focus = GEH_club_missions }
+        relative_position_id = GEH_change_the_nature
+        prerequisite = {  focus = GEH_change_the_nature }
 
         completion_reward = {
             every_core_state = {

@@ -1,0 +1,36 @@
+on_actions = {
+	on_monthly_GEH = {
+		effect = {
+			if = {
+				limit = { has_stability < 0.01 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.5 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = -0.1 }
+			}
+			else_if = {
+				limit = { has_stability < 0.26 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.3 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = -0.05 }
+			}
+			else_if = {
+				limit = { has_stability < 0.51 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = -0.1 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0 }
+			}
+			else_if = {
+				limit = { has_stability < 0.76 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.2 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.05 }
+			}
+			else_if = {
+				limit = { has_stability < 1 }
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.3 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.1 }
+			}
+			else = {
+				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.5 }
+				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.15 }
+			}
+		}
+	}
+
+}

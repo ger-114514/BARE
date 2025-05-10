@@ -2,16 +2,16 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "TRI_investigation_open_button"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/TRI_investigation_open_button.png"
+		texturefile = "gfx/interface/Trinity/investigation/TRI_investigation_open_button.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_investigation_permission"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/permission.png"
+		texturefile = "gfx/interface/Trinity/investigation/permission.dds"
 	}
 	frameAnimatedSpriteType = {
 		name = "GFX_TRI_investigation_all_permission_animation"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/all_permission.png"
+		texturefile = "gfx/interface/Trinity/investigation/all_permission.dds"
 		noOfFrames = 2
 		animation_rate_fps = 1
 		looping = yes
@@ -21,127 +21,127 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_TRI_investigation_all_permission"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/all_permission_2.png"
+		texturefile = "gfx/interface/Trinity/investigation/all_permission_2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_koharu_s"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_s3.png"
+		texturefile = "gfx/interface/Trinity/investigation/koharu_s3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_azusa_s"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_s3.png"
+		texturefile = "gfx/interface/Trinity/investigation/azusa_s3.dds"
 	}
 	SpriteType = {
 		name = "GFX_azusa_fadian"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_fadian.png"
+		texturefile = "gfx/interface/Trinity/investigation/azusa_fadian.dds"
 		legacy_lazy_load = no
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hifumi_s"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_s3.png"
+		texturefile = "gfx/interface/Trinity/investigation/hifumi_s3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hanako_s"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_s3.png"
+		texturefile = "gfx/interface/Trinity/investigation/hanako_s3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_bukebu_s"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bukebu_s.png"
+		texturefile = "gfx/interface/Trinity/investigation/bukebu_s.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_azusa_inv1"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_1.png"
+		texturefile = "gfx/interface/Trinity/investigation/azusa_inv_1.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_azusa_inv2"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_2.png"
+		texturefile = "gfx/interface/Trinity/investigation/azusa_inv_2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_azusa_inv3"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_3.png"
+		texturefile = "gfx/interface/Trinity/investigation/azusa_inv_3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_azusa_inv4"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/azusa_inv_4.png"
+		texturefile = "gfx/interface/Trinity/investigation/azusa_inv_4.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hifumi_inv1"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_1.png"
+		texturefile = "gfx/interface/Trinity/investigation/hifumi_inv_1.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hifumi_inv2"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_2.png"
+		texturefile = "gfx/interface/Trinity/investigation/hifumi_inv_2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hifumi_inv3"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_3.png"
+		texturefile = "gfx/interface/Trinity/investigation/hifumi_inv_3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hifumi_inv4"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hifumi_inv_4.png"
+		texturefile = "gfx/interface/Trinity/investigation/hifumi_inv_4.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_koharu_inv1"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_1.png"
+		texturefile = "gfx/interface/Trinity/investigation/koharu_inv_1.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_koharu_inv2"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_2.png"
+		texturefile = "gfx/interface/Trinity/investigation/koharu_inv_2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_koharu_inv3"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_3.png"
+		texturefile = "gfx/interface/Trinity/investigation/koharu_inv_3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_koharu_inv4"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/koharu_inv_4.png"
+		texturefile = "gfx/interface/Trinity/investigation/koharu_inv_4.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hanako_inv1"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_1.png"
+		texturefile = "gfx/interface/Trinity/investigation/hanako_inv_1.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hanako_inv2"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_2.png"
+		texturefile = "gfx/interface/Trinity/investigation/hanako_inv_2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hanako_inv3"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_3.png"
+		texturefile = "gfx/interface/Trinity/investigation/hanako_inv_3.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_TRI_hanako_inv4"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/hanako_inv_4.png"
+		texturefile = "gfx/interface/Trinity/investigation/hanako_inv_4.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_inv_bg"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/bg.png"
+		texturefile = "gfx/interface/Trinity/investigation/bg.png"
 	}
 
 	SpriteType = {
 		name = "GFX_inv_exit"
-		texturefile = "gfx/interface/Trinity/BA_TRI_investigation/exit2.png"
+		texturefile = "gfx/interface/Trinity/investigation/exit2.dds"
 	}
 
 

@@ -68,6 +68,21 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				check_variable = { TRI_unity_weekly_modifier > 1 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights > 50 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
+		}
 	}
 	Eden_TRI_ask_conservative_to_cooperate = { #要求保守派配合
 		visible = {
@@ -95,6 +110,21 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				check_variable = { TRI_unity_weekly_modifier > 1 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights > 50 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
+		}
 	}
 	Eden_TRI_ask_moderate_to_cooperate = { #要求温和派配合
 		visible = {
@@ -121,6 +151,21 @@ Eden_treaty_negotiation_decisions = {
 			Eden_treaty_change_weights = yes
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				check_variable = { TRI_unity_weekly_modifier > 1 }
+			}
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights > 50 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
 		}
 	}
 	Eden_TRI_benefit_hardliner = { #让渡部分利益给强硬派
@@ -155,6 +200,21 @@ Eden_treaty_negotiation_decisions = {
 			clr_country_flag = Eden_common_decision_CD
 			add_war_support = 0.05
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				check_variable = { TRI_unity_weekly_modifier < 0 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 75 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
+		}
 	}
 	Eden_TRI_benefit_conservative = { #让渡部分利益给保守派
 		visible = {
@@ -187,6 +247,21 @@ Eden_treaty_negotiation_decisions = {
 		remove_effect = {
 			clr_country_flag = Eden_common_decision_CD
 			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				check_variable = { TRI_unity_weekly_modifier < 0 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 75 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
 		}
 	}
 	Eden_TRI_benefit_moderate = { #让渡部分利益给温和派
@@ -223,6 +298,21 @@ Eden_treaty_negotiation_decisions = {
 		remove_effect = {
 			clr_country_flag = Eden_common_decision_CD
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				check_variable = { TRI_unity_weekly_modifier < 0 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 75 }
+			}
+			modifier = {
+				factor = 0.2
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
+		}
 	}
 	Eden_GEH_call_for_solidarity = { #呼吁团结一致
 		visible = {
@@ -241,6 +331,38 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_GEH_call_for_solidarity
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				political_power_daily > 1
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 0
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
+			modifier = {
+				factor = 0.8
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.6
+				}
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
+			}
+		}
 	}
 	Eden_GEH_cancel_call_for_solidarity = { #暂停呼吁团结一致
 		visible = {
@@ -249,6 +371,20 @@ Eden_treaty_negotiation_decisions = {
 		}
 		complete_effect = {
 			clr_country_flag = Eden_GEH_call_for_solidarity
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				political_power_daily < 0
+			}
+			modifier = {
+				add = 100
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.8
+				}
+			}
 		}
 	}
 	Eden_GEH_invite_Schale = { #请求夏莱协调谈判
@@ -269,6 +405,25 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { weights_change = -25 }
 			Eden_treaty_change_weights = yes
 			add_political_power = 150
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 2
+				political_power_daily < 0
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0.1
+				check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+			}
 		}
 	}
 	Eden_enhance_publicising = { #加大对外宣传
@@ -327,6 +482,51 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { weights_change = 10 }
 			Eden_treaty_change_weights = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 2
+				has_political_power > 150
+			}
+			modifier = {
+				factor = 0
+				political_power_daily < 0
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 1.5
+				original_tag = TRI
+				OR = {
+					has_country_flag = Eden_treaty_no_unity_cost
+					check_variable = { TRI_unity_weekly_modifier > 1 }
+					check_variable = { TRI_unity > 60 }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				original_tag = GEH
+				OR = {
+					has_country_flag = Eden_treaty_no_BOP_change
+					power_balance_value = {
+						id = GEH_bp_between_chaos_and_order
+						value < -0.3
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
+		}
 	}
 
 	Eden_reduce_border_conflict = { #减少边境摩擦
@@ -344,6 +544,27 @@ Eden_treaty_negotiation_decisions = {
 			Eden_treaty_change_progress = yes
 			set_temp_variable = { weights_change = 10 }
 			Eden_treaty_change_weights = yes
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				add = 3
+				command_power > 100
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights < 75 }
+			}
+			modifier = {
+				factor = 1.5
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
 		}
 	}
 	Eden_persuade_parliament_of_treaty = { #说服院内群体
@@ -378,6 +599,59 @@ Eden_treaty_negotiation_decisions = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 1.2
+				original_tag = TRI
+				OR = {
+					check_variable = { TRI_unity_weekly_modifier < 0 }
+					check_variable = { TRI_unity < 50 }
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = TRI
+				OR = {
+					check_variable = { TRI_unity_weekly_modifier > 2 }
+					check_variable = { TRI_unity > 80 }
+				}
+			}
+			modifier = {
+				factor = 1.2
+				original_tag = GEH
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = GEH
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.7
+				}
+			}
+			modifier = {
+				factor = 0.4
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
+		}
 	}
 	Eden_TRI_suppress_dissent = { #暂时压制异议
 		visible = {
@@ -399,6 +673,43 @@ Eden_treaty_negotiation_decisions = {
 			Eden_treaty_change_weights = yes
 			TRI_unity_increase_5 = yes
 			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0.4
+				has_stability > 0.8
+			}
+			modifier = {
+				factor = 1.5
+				has_stability < 0.6
+			}
+			modifier = {
+				factor = 1.2
+				OR = {
+					check_variable = { TRI_unity_weekly_modifier < 0 }
+					check_variable = { TRI_unity < 50 }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					check_variable = { TRI_unity_weekly_modifier > 2 }
+					check_variable = { TRI_unity > 80 }
+				}
+			}
+			modifier = {
+				factor = 0.4
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
 		}
 	}
 	Eden_GEH_regulate_media = { #暂时性媒体约束
@@ -428,6 +739,43 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { weights_change = 10 }
 			Eden_treaty_change_weights = yes
 		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 0.8
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 1.5
+				has_stability > 0.8
+			}
+			modifier = {
+				factor = 0.4
+				has_stability < 0.6
+			}
+			modifier = {
+				factor = 0
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.7
+				}
+			}
+			modifier = {
+				factor = 1.5
+				check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+			}
+		}
 	}
 
 	Eden_TRI_point_out_error = { #提出对方的不妥
@@ -454,6 +802,13 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { progress_change = -3 }
 			Eden_treaty_change_progress = yes
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+			}
+		}
 	}
 	Eden_GEH_refute_the_doubt = { #反驳对方的质疑
 		visible = {
@@ -479,6 +834,13 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { progress_change = -3 }
 			Eden_treaty_change_progress = yes
 		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+			}
+		}
 	}
 	Eden_research_cooperation = { #促进科研合作
 		visible = {
@@ -498,7 +860,7 @@ Eden_treaty_negotiation_decisions = {
 			}
 		}
 		cancel_trigger = {
-			has_global_flag = Eden_treaty_signed
+			has_global_flag = Eden_treaty_negotiation_completed
 		}
 		modifier = {
 			research_speed_factor = 0.05
@@ -510,15 +872,32 @@ Eden_treaty_negotiation_decisions = {
 			if = {
 				limit = { original_tag = GEH }
 				add_political_power = -50
-				set_temp_variable = { weights_change = 10 }
-				Eden_treaty_change_weights = yes
 			}
-			else = {
-				set_temp_variable = { weights_change = -10 }
-				Eden_treaty_change_weights = yes
-			}
+			set_temp_variable = { weights_change = -10 }
+			Eden_treaty_change_weights = yes
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0.4
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
 		}
 	}
 	Eden_economic_cooperation = { #加强经济合作
@@ -545,10 +924,30 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0.4
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
+		}
 	}
 	Eden_propagate_our_effort = { #宣传我们的努力
 		visible = {
-			original_tag = TRI
 			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
 		}
 		available = {
@@ -583,6 +982,9 @@ Eden_treaty_negotiation_decisions = {
 				set_country_flag = Eden_treaty_no_BOP_change
 				custom_effect_tooltip = Eden_treaty_no_BOP_change
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 
@@ -623,6 +1025,59 @@ Eden_treaty_negotiation_decisions = {
 					id = GEH_bp_between_chaos_and_order
 					value = -0.02
 					tooltip_side = GEH_bp_order
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 1.2
+				original_tag = TRI
+				OR = {
+					check_variable = { TRI_unity_weekly_modifier < 0 }
+					check_variable = { TRI_unity < 50 }
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = TRI
+				OR = {
+					check_variable = { TRI_unity_weekly_modifier > 2 }
+					check_variable = { TRI_unity > 80 }
+				}
+			}
+			modifier = {
+				factor = 1.2
+				original_tag = GEH
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value > -0.2
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = GEH
+				power_balance_value = {
+					id = GEH_bp_between_chaos_and_order
+					value < -0.7
+				}
+			}
+			modifier = {
+				factor = 0.75
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
 				}
 			}
 		}
@@ -683,6 +1138,67 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { weights_change = 20 }
 			Eden_treaty_change_weights = yes
 		}
+		ai_will_do = {
+			base = 4
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0
+				original_tag = TRI
+				OR = {
+					has_country_flag = Eden_treaty_no_unity_cost
+					check_variable = { TRI_unity_weekly_modifier < 0 }
+					check_variable = { TRI_unity < 50 }
+				}
+			}
+			modifier = {
+				factor = 1.2
+				original_tag = TRI
+				OR = {
+					has_country_flag = Eden_treaty_no_unity_cost
+					check_variable = { TRI_unity_weekly_modifier > 2 }
+					check_variable = { TRI_unity > 80 }
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = GEH
+				OR = {
+					has_country_flag = Eden_treaty_no_BOP_change
+					power_balance_value = {
+						id = GEH_bp_between_chaos_and_order
+						value > -0.2
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				original_tag = GEH
+				OR = {
+					has_country_flag = Eden_treaty_no_BOP_change
+					power_balance_value = {
+						id = GEH_bp_between_chaos_and_order
+						value < -0.7
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
+		}
 	}
 	Eden_research_cooperation_2 = { #进一步促进科研合作
 		visible = {
@@ -698,7 +1214,7 @@ Eden_treaty_negotiation_decisions = {
 			}
 		}
 		cancel_trigger = {
-			has_global_flag = Eden_treaty_signed
+			has_global_flag = Eden_treaty_negotiation_completed
 		}
 		modifier = {
 			research_speed_factor = 0.05
@@ -707,11 +1223,31 @@ Eden_treaty_negotiation_decisions = {
 		days_remove = -1
 		fire_only_once = yes
 		complete_effect = {
-			add_ideas = Eden_treaty_research_cooperation_2
 			set_temp_variable = { weights_change = -10 }
 			Eden_treaty_change_weights = yes
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0.4
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
 		}
 	}
 	Eden_economic_cooperation_2 = { #进一步加强经济合作
@@ -738,6 +1274,27 @@ Eden_treaty_negotiation_decisions = {
 			set_temp_variable = { progress_change = 5 }
 			Eden_treaty_change_progress = yes
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.5
+				check_variable = { Eden_treaty_weights < 50 }
+			}
+			modifier = {
+				factor = 3
+				check_variable = { Eden_treaty_weights > 100 }
+			}
+			modifier = {
+				factor = 0.4
+				if = {
+					limit = { original_tag = TRI }
+					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				}
+				else = {
+					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				}
+			}
+		}
 	}
 }
 Eden_treaty_to_be_signed_decisions = {
@@ -763,7 +1320,7 @@ Eden_treaty_to_be_signed_decisions = {
 			hidden_effect = {
 				if = {
 					limit = { original_tag = TRI }
-					news_event = TRI_events.1002
+					news_event = Eden_pact.1003
 				}
 			}
 		}

@@ -8,8 +8,13 @@ GEH_gehenna_daily_life = {
 	consumer_goods_factor = GEH_gehenna_daily_life_consumer_goods_factor
 	power_balance_weekly = GEH_gehenna_daily_life_power_balance_weekly_factor
 }
+#格黑娜产能利用率
+GEH_production_efficiency = {
+	icon = "GFX_idea_unknown"
 
-
+	production_speed_buildings_factor =  GEH_production_efficiency_production_speed_buildings_factor
+	industrial_capacity_factory = GEH_production_efficiency_industrial_capacity_factory
+}
 #措手不及
 GEH_a_unpredictable_attack = {
 	army_attack_factor = GEH_a_unpredictable_attack_army_attack_factor

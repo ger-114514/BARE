@@ -196,7 +196,7 @@ TRI_parliament_party_seats = {
 			divide_temp_variable = { focus_support@var:v = 2 }
 			set_temp_variable = { support_modifier = 1 }
 			multiply_temp_variable = { support_modifier = loyalty@var:v }
-			subtract_from_temp_variable = { support_modifier = radicalism@var:v }
+			#subtract_from_temp_variable = { support_modifier = radicalism@var:v }
 			multiply_temp_variable = { focus_support@var:v = support_modifier }
 
 			clamp_temp_variable = {

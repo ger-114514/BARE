@@ -129,6 +129,9 @@ TRI_mika_investigation = {
 		remove_effect = {
 			country_event = TRI_events.400
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	TRI_mika_what_she_did = { #询问圣园未花做了什么
 		ai_will_do = {
@@ -143,7 +146,7 @@ TRI_mika_investigation = {
 
 		remove_effect = {
 			country_event = TRI_events.401
-		set_country_flag = TRI_mika_investigation_2
+			set_country_flag = TRI_mika_investigation_2
 		}
 	}
 	TRI_mika_what_she_would_do = { #询问后续计划

@@ -16,7 +16,7 @@ script_enum_advisor_slot_type = {
 }
 
 script_enum_equipment_stat = {	
-								#Viktors note for modders and future CDs: If you want to use a stat in the MIOs it has to be in the equipment category itself, not on the battalion level. So stuff like defense works because its contained within the equipment, but stuff like recon will not work because its owned by the battalion. Adding stuff like recon will not throw an error, but it will _not_ work. Moving stats to the equipment level from the bat-level might fix this if you are brave enough, but it is very risk and might break other stuff. Ive commented what is currently on the battalion level below and should not be used with MIOs.
+	#Viktors note for modders and future CDs: If you want to use a stat in the MIOs it has to be in the equipment category itself, not on the battalion level. So stuff like defense works because its contained within the equipment, but stuff like recon will not work because its owned by the battalion. Adding stuff like recon will not throw an error, but it will _not_ work. Moving stats to the equipment level from the bat-level might fix this if you are brave enough, but it is very risk and might break other stuff. Ive commented what is currently on the battalion level below and should not be used with MIOs.
 
 	default_morale 					#Cannot be used with MIOS
 	defense
@@ -34,6 +34,8 @@ script_enum_equipment_stat = {
 	suppression_factor 				#Cannot be used with MIOS
 	experience_loss_factor 			#Cannot be used with MIOS
 	equipment_capture_factor 		#Cannot be used with MIOS
+	recovery
+	additional_collateral_damage
 	fuel_capacity
 	surface_detection
 	sub_detection
@@ -70,7 +72,9 @@ script_enum_equipment_stat = {
 	air_ground_attack
 	air_visibility_factor
 	railway_gun_attack 			#Cannot be used with MIOS
-	railway_gun_attack_range 	#I think this needs to be changed in a define, not here since its cached at start
+	railway_gun_attack_range_index_in_define # This cannot be used with MIOs or equipment_bonus - only in equipment definition
+	railway_gun_annex_ratio
+	railway_gun_hours_between_redistribution
 	max_organisation			#Cannot be used with MIOS
 	max_strength				##Cannot be used with MIOS
 	maximum_speed	
@@ -133,6 +137,12 @@ script_enum_equipment_category = {
 	anti_tank
 	rocket
 	flame
+	land_cruiser
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	missile_launcher
 }
 
 script_enum_equipment_bonus_type = {
@@ -196,13 +206,270 @@ script_enum_equipment_bonus_type = {
 	special_infantry_equipment_2
 	special_infantry_equipment_3
 
-	light_support_equipment
-	light_support_equipment_0
-	light_support_equipment_1
-	heavy_support_equipment
-	heavy_support_equipment_0
-	heavy_support_equipment_1
-	special_support_equipment
-	special_support_equipment_0
-	special_support_equipment_1
+	light_fire_support_equipment
+	light_fire_support_equipment_0
+	light_fire_support_equipment_1
+	heavy_fire_support_equipment
+	heavy_fire_support_equipment_0
+	heavy_fire_support_equipment_1
+	special_fire_support_equipment
+	special_fire_support_equipment_0
+	special_fire_support_equipment_1
+
+	land_cruiser
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	missile_launcher
+	small_uav_airframe
+	medium_uav_airframe
+	heavy_uav_airframe
+	small_uav_cas_airframe
+	small_uav_recon_airframe
+	medium_uav_cas_airframe
+	heavy_uav_cas_airframe
+	apc_equipment
+	apc_equipment_1
+	apc_equipment_2
+	apc_equipment_3
+	apc_equipment_4
+	apc_artillery_equipment
+	apc_artillery_equipment_1
+	apc_artillery_equipment_2
+	apc_artillery_equipment_3
+	apc_artillery_equipment_4
+	apc_at_equipment
+	apc_at_equipment_1
+	apc_at_equipment_2
+	apc_at_equipment_3
+	apc_at_equipment_4
+	apc_aa_equipment
+	apc_aa_equipment_1
+	apc_aa_equipment_2
+	apc_aa_equipment_3
+	apc_aa_equipment_4
+	auto_mech
+	auto_mech_1
+	auto_mech_2
+	heavy_bm_chassis
+	heavy_bm_equipment_1
+	heavy_bm_equipment_2
+	heavy_bm_equipment_3
+	heavy_bm_equipment_4
+	heavy_bm_artillery_chassis
+	heavy_bm_artillery_equipment_1
+	heavy_bm_artillery_equipment_2
+	heavy_bm_artillery_equipment_3
+	heavy_bm_artillery_equipment_4
+	heavy_bm_destroyer_chassis
+	heavy_bm_destroyer_equipment_1
+	heavy_bm_destroyer_equipment_2
+	heavy_bm_destroyer_equipment_3
+	heavy_bm_destroyer_equipment_4
+	heavy_bm_aa_chassis
+	heavy_bm_aa_equipment_1
+	heavy_bm_aa_equipment_2
+	heavy_bm_aa_equipment_3
+	heavy_bm_aa_equipment_4
+	heavy_tank_chassis
+	heavy_tank_equipment_1
+	heavy_tank_equipment_2
+	heavy_tank_equipment_3
+	heavy_tank_equipment_4
+	heavy_tank_artillery_chassis
+	heavy_tank_artillery_equipment_1
+	heavy_tank_artillery_equipment_2
+	heavy_tank_artillery_equipment_3
+	heavy_tank_artillery_equipment_4
+	heavy_tank_destroyer_chassis
+	heavy_tank_destroyer_equipment_1
+	heavy_tank_destroyer_equipment_2
+	heavy_tank_destroyer_equipment_3
+	heavy_tank_destroyer_equipment_4
+	heavy_tank_aa_chassis
+	heavy_tank_aa_equipment_1
+	heavy_tank_aa_equipment_2
+	heavy_tank_aa_equipment_3
+	heavy_tank_aa_equipment_4
+	heavy_uav_equipment_1
+	heavy_uav_equipment_2
+	heavy_uav_equipment_3
+	heavy_uav_equipment_4
+	heavy_uav_cas_equipment_1
+	heavy_uav_cas_equipment_2
+	heavy_uav_cas_equipment_3
+	heavy_uav_cas_equipment_4
+	transport_plane_equipment_2
+	transport_plane_equipment_3
+	transport_plane_equipment_4
+	helicopter_airframe
+	helicopter_airframe_1
+	helicopter_airframe_2
+	helicopter_equipment
+	helicopter_equipment_1
+	helicopter_equipment_2
+	helicopter_equipment_3
+	helicopter_equipment_4
+	attack_helicopter_equipment
+	attack_helicopter_equipment_1
+	attack_helicopter_equipment_2
+	attack_helicopter_equipment_3
+	attack_helicopter_equipment_4
+	ifv_equipment
+	ifv_equipment_1
+	ifv_equipment_2
+	ifv_equipment_3
+	ifv_equipment_4
+	ifv_artillery_equipment
+	ifv_artillery_equipment_1
+	ifv_artillery_equipment_2
+	ifv_artillery_equipment_3
+	ifv_artillery_equipment_4
+	ifv_at_equipment
+	ifv_at_equipment_1
+	ifv_at_equipment_2
+	ifv_at_equipment_3
+	ifv_at_equipment_4
+	ifv_aa_equipment
+	ifv_aa_equipment_1
+	ifv_aa_equipment_2
+	ifv_aa_equipment_3
+	ifv_aa_equipment_4
+	infantry_equipment_4
+	special_infantry_equipment_4
+	infantry_anti_air_equipment
+	infantry_anti_air_equipment_1
+	infantry_anti_air_equipment_2
+	infantry_anti_air_equipment_3
+	light_bm_chassis
+	light_bm_equipment_1
+	light_bm_equipment_2
+	light_bm_equipment_3
+	light_bm_equipment_4
+	light_bm_artillery_chassis
+	light_bm_artillery_equipment_1
+	light_bm_artillery_equipment_2
+	light_bm_artillery_equipment_3
+	light_bm_artillery_equipment_4
+	light_bm_destroyer_chassis
+	light_bm_destroyer_equipment_1
+	light_bm_destroyer_equipment_2
+	light_bm_destroyer_equipment_3
+	light_bm_destroyer_equipment_4
+	light_bm_aa_chassis
+	light_bm_aa_equipment_1
+	light_bm_aa_equipment_2
+	light_bm_aa_equipment_3
+	light_bm_aa_equipment_4
+	light_tank_chassis
+	light_tank_equipment_1
+	light_tank_equipment_2
+	light_tank_equipment_3
+	light_tank_equipment_4
+	light_tank_artillery_chassis
+	light_tank_artillery_equipment_1
+	light_tank_artillery_equipment_2
+	light_tank_artillery_equipment_3
+	light_tank_artillery_equipment_4
+	light_tank_destroyer_chassis
+	light_tank_destroyer_equipment_1
+	light_tank_destroyer_equipment_2
+	light_tank_destroyer_equipment_3
+	light_tank_destroyer_equipment_4
+	light_tank_aa_chassis
+	light_tank_aa_equipment_1
+	light_tank_aa_equipment_2
+	light_tank_aa_equipment_3
+	light_tank_aa_equipment_4
+	mbt_chassis
+	mbt_chassis_1
+	mbt_chassis_2
+	medium_bm_chassis
+	medium_bm_equipment_1
+	medium_bm_equipment_2
+	medium_bm_equipment_3
+	medium_bm_equipment_4
+	medium_bm_artillery_chassis
+	medium_bm_artillery_equipment_1
+	medium_bm_artillery_equipment_2
+	medium_bm_artillery_equipment_3
+	medium_bm_artillery_equipment_4
+	medium_bm_destroyer_chassis
+	medium_bm_destroyer_equipment_1
+	medium_bm_destroyer_equipment_2
+	medium_bm_destroyer_equipment_3
+	medium_bm_destroyer_equipment_4
+	medium_bm_aa_chassis
+	medium_bm_aa_equipment_1
+	medium_bm_aa_equipment_2
+	medium_bm_aa_equipment_3
+	medium_bm_aa_equipment_4
+	medium_tank_chassis
+	medium_tank_equipment_1
+	medium_tank_equipment_2
+	medium_tank_equipment_3
+	medium_tank_equipment_4
+	medium_tank_artillery_chassis
+	medium_tank_artillery_equipment_1
+	medium_tank_artillery_equipment_2
+	medium_tank_artillery_equipment_3
+	medium_tank_artillery_equipment_4
+	medium_tank_destroyer_chassis
+	medium_tank_destroyer_equipment_1
+	medium_tank_destroyer_equipment_2
+	medium_tank_destroyer_equipment_3
+	medium_tank_destroyer_equipment_4
+	medium_tank_aa_chassis
+	medium_tank_aa_equipment_1
+	medium_tank_aa_equipment_2
+	medium_tank_aa_equipment_3
+	medium_tank_aa_equipment_4
+	medium_uav_equipment_1
+	medium_uav_equipment_2
+	medium_uav_equipment_3
+	medium_uav_equipment_4
+	medium_uav_cas_equipment_1
+	medium_uav_cas_equipment_2
+	medium_uav_cas_equipment_3
+	medium_uav_cas_equipment_4
+	motorized_equipment
+	motorized_equipment_1
+	railway_gun_equipment
+	railway_gun_equipment_1
+	railway_gun_equipment_2
+	small_uav_equipment_1
+	small_uav_equipment_2
+	small_uav_equipment_3
+	small_uav_equipment_4
+	small_uav_cas_equipment_1
+	small_uav_cas_equipment_2
+	small_uav_cas_equipment_3
+	small_uav_cas_equipment_4
+	small_uav_recon_equipment_1
+	small_uav_recon_equipment_2
+	small_uav_recon_equipment_3
+	small_uav_recon_equipment_4
+	support_engineer_equipment
+	support_engineer_equipment_1
+	support_logistics_equipment
+	support_logistics_equipment_1
+	support_security_equipment
+	support_security_equipment_1
+	light_fire_support_equipment
+	light_fire_support_equipment_0
+	light_fire_support_equipment_1
+	light_fire_support_equipment_2
+	heavy_fire_support_equipment
+	heavy_fire_support_equipment_0
+	heavy_fire_support_equipment_1
+	heavy_fire_support_equipment_2
+	special_fire_support_equipment
+	special_fire_support_equipment_0
+	special_fire_support_equipment_1
+	special_fire_support_equipment_2
+	train_equipment
+	train_equipment_1
+	train_equipment_3
+	train_equipment_2
 }

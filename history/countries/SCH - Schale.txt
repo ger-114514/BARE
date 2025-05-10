@@ -7,7 +7,7 @@ set_research_slots = 4
 set_fuel_ratio = 0.5
 set_convoys = 20
 starting_train_buffer = 0.5
-starting_truck_buffer = 0.5
+
 
 # Starting tech
 set_technology = {
@@ -126,45 +126,121 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
-add_to_array = { global.BA_college_countries = GEH }
-add_to_array = { global.BA_college_countries = ABY }
-add_to_array = { global.BA_college_countries = VAL }
-add_to_array = { global.BA_college_countries = ODY }
-add_to_array = { global.BA_college_countries = KRO }
-add_to_array = { global.BA_college_countries = SHA }
-add_to_array = { global.BA_college_countries = TRI }
-add_to_array = { global.BA_college_countries = HYA }
-add_to_array = { global.BA_college_countries = MIL }
-add_to_array = { global.BA_college_countries = RWT }
-add_to_array = { global.BA_college_countries = SRT }
-add_to_array = { global.BA_college_countries = CEN }
-add_to_array = { global.BA_college_countries = SCH }
-add_to_array = { global.BA_college_countries = WLH }
-add_to_array = { global.BA_college_countries = HIL }
-add_to_array = { global.BA_college_countries = AUR }
-add_to_array = { global.BA_college_countries = A04 }
-add_to_array = { global.BA_college_countries = A36 }
-add_to_array = { global.BA_college_countries = A37 }
-add_to_array = { global.BA_college_countries = A38 }
-add_to_array = { global.BA_college_countries = A39 }
-add_to_array = { global.BA_college_countries = A40 }
-add_to_array = { global.BA_college_countries = A41 }
-add_to_array = { global.BA_college_countries = A42 }
-add_to_array = { global.BA_college_countries = A43 }
+CEN = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A36 }
+	add_to_array = { BA_trusteeship_areas = A37 }
+	add_to_array = { BA_trusteeship_areas = A38 }
+	add_to_array = { BA_trusteeship_areas = A39 }
+	add_to_array = { BA_trusteeship_areas = A40 }
+	add_to_array = { BA_trusteeship_areas = A41 }
+	add_to_array = { BA_trusteeship_areas = A42 }
+	add_to_array = { BA_trusteeship_areas = A43 }
+	add_to_array = { BA_trusteeship_areas = WLH }
+	add_to_array = { BA_trusteeship_areas = HIL }
+}
+ABY = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A25 }
+}
+TRI = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A01 }
+	add_to_array = { BA_trusteeship_areas = A02 }
+	add_to_array = { BA_trusteeship_areas = A04 }
+	add_to_array = { BA_trusteeship_areas = A05 }
+}
+GEH = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A06 }
+	add_to_array = { BA_trusteeship_areas = A08 }
+	add_to_array = { BA_trusteeship_areas = A09 }
+	add_to_array = { BA_trusteeship_areas = A11 }
+}
+MIL = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A03 }
+	add_to_array = { BA_trusteeship_areas = A07 }
+	add_to_array = { BA_trusteeship_areas = A20 }
+}
+RWT = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A28 }
+	add_to_array = { BA_trusteeship_areas = A29 }
+	add_to_array = { BA_trusteeship_areas = A30 }
+	add_to_array = { BA_trusteeship_areas = A31 }
+	add_to_array = { BA_trusteeship_areas = A32 }
+	add_to_array = { BA_trusteeship_areas = A33 }
+	add_to_array = { BA_trusteeship_areas = A34 }
+	add_to_array = { BA_trusteeship_areas = A35 }
+}
+HYA = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A12 }
+	add_to_array = { BA_trusteeship_areas = A13 }
+	add_to_array = { BA_trusteeship_areas = A14 }
+	add_to_array = { BA_trusteeship_areas = A15 }
+	add_to_array = { BA_trusteeship_areas = A16 }
+}
+SHA = {
+	add_to_array = { global.BA_main_college_region = THIS }
+	add_to_array = { BA_trusteeship_areas = A17 }
+	add_to_array = { BA_trusteeship_areas = A18 }
+	add_to_array = { BA_trusteeship_areas = A19 }
+}
 for_each_scope_loop = {
-	array = global.BA_college_countries
+	array = global.BA_main_college_region
+	for_each_loop = {
+		array = BA_trusteeship_areas
+		value = v
+		set_autonomy = {
+			target = v
+			autonomy_state = autonomy_bare_trusteeship_area
+		}
+	}
+}
+add_to_array = { global.BA_college_region = GEH }
+add_to_array = { global.BA_college_region = ABY }
+add_to_array = { global.BA_college_region = VAL }
+add_to_array = { global.BA_college_region = ODY }
+add_to_array = { global.BA_college_region = KRO }
+add_to_array = { global.BA_college_region = SHA }
+add_to_array = { global.BA_college_region = TRI }
+add_to_array = { global.BA_college_region = HYA }
+add_to_array = { global.BA_college_region = MIL }
+add_to_array = { global.BA_college_region = RWT }
+add_to_array = { global.BA_college_region = SRT }
+add_to_array = { global.BA_college_region = CEN }
+add_to_array = { global.BA_college_region = SCH }
+add_to_array = { global.BA_college_region = WLH }
+add_to_array = { global.BA_college_region = HIL }
+add_to_array = { global.BA_college_region = AUR }
+add_to_array = { global.BA_college_region = A04 }
+add_to_array = { global.BA_college_region = A36 }
+add_to_array = { global.BA_college_region = A37 }
+add_to_array = { global.BA_college_region = A38 }
+add_to_array = { global.BA_college_region = A39 }
+add_to_array = { global.BA_college_region = A40 }
+add_to_array = { global.BA_college_region = A41 }
+add_to_array = { global.BA_college_region = A42 }
+add_to_array = { global.BA_college_region = A43 }
+for_each_scope_loop = {
+	array = global.BA_college_region
 	#学园地区互给军通
 	for_each_scope_loop = {
-		array = global.BA_college_countries
+		array = global.BA_college_region
 		if = {
 			limit = { NOT = { original_tag = PREV } }
 			give_military_access = PREV
 		}
 	}
 	#禁运阿里乌斯
-	diplomatic_relation = {
-		country = ARI
-		relation = embargo
-		active = yes
+	if = {
+		limit = { NOT = { is_embargoing = ARI } }
+		diplomatic_relation = {
+			country = ARI
+			relation = embargo
+			active = yes
+		}
 	}
 }

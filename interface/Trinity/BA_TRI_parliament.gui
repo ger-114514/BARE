@@ -221,76 +221,16 @@ guiTypes = {
 			quadTextureSprite = "GFX_Parliament_Seat"
 		}
 	}
-	
 	containerWindowType = {
-		name = "TRI_parliament_association_list_container"
+		name = "TRI_unity_progress_bar_icon_container"
 		position = { x = 0 y = 0 }
+		size = { width = 80 height = 60 }
+
 		iconType = {
-			name = "TRI_parliament_association_seats_bg"
-			spriteType = "TRI_parliament_association_seats_bg"
+			name = "TRI_unity_progress_bar_icon"
 			position = { x = 0 y = 0 }
-		}
-		iconType = {
-			name = "TRI_parliament_association_list_icon"
-			spriteType = "TRI_parliament_association_0_icon"
-			position = { x = 0 y = 0 }
-		}
-		instantTextBoxType = {
-			name = "TRI_parliament_association_list_name"
-			position = { x = 30 y = 4 }
-			text = "TRI_association_name"
-			font = "hoi_20bs"
-			format = center
-			maxWidth = 140
-			maxHeight = 18
-		}
-		buttonType = {
-			name = "TRI_parliament_association_list_button"
-			spriteType = "TRI_parliament_association_seats_button"
-			position = { x = 0 y = 0 }
-			pdx_tooltip = TRI_parliament_association_list_button_tt
-		}
-		instantTextBoxType = {
-			name = "TRI_parliament_association_list_positon"
-			position = { x = 170 y = 6 }
-			text = "TRI_parliament_association_list_position"
-			font = "hoi_18mbs"
-			format = center
-			maxWidth = 60
-			maxHeight = 18
-		}
-		instantTextBoxType = {
-			name = "TRI_parliament_association_list_agree"
-			position = { x = 230 y = 6 }
-			text = "TRI_parliament_association_list_agree"
-			font = "hoi_18mbs"
-			format = center
-			maxWidth = 30
-			maxHeight = 18
-			pdx_tooltip = TRI_parliament_association_list_agree_tt
-		}
-		instantTextBoxType = {
-			name = "TRI_parliament_association_list_abstentions"
-			position = { x = 260 y = 6 }
-			text = "TRI_parliament_association_list_abstentions"
-			font = "hoi_18mbs"
-			format = center
-			maxWidth = 30
-			maxHeight = 18
-			pdx_tooltip = TRI_parliament_association_list_abstentions_tt
-		}
-		instantTextBoxType = {
-			name = "TRI_parliament_association_list_against"
-			position = { x = 290 y = 6 }
-			text = "TRI_parliament_association_list_against"
-			font = "hoi_18mbs"
-			format = center
-			maxWidth = 30
-			maxHeight = 18
-			pdx_tooltip = TRI_parliament_association_list_against_tt
+			quadTextureSprite = "TRI_unity_progress_bar_icon_0"
+			alwaystransparent = yes
 		}
 	}
-	
-
-	
 }
