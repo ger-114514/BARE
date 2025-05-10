@@ -171,9 +171,9 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "resources_grid"
-				position = { x = 80 y = 0 }
+				position = { x = 71 y = 0 }
 				size = { width = 422 height = 100%% }
-				slotsize = { width = 58 height = 156 }
+				slotsize = { width = 62 height = 156 }
 				max_slots = { x = 7 y = 1 }
 				format = "UPPER_LEFT"
 			}
@@ -603,7 +603,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "produced"
-			position = { x=20 y=37 }
+			position = { x=18 y=37 }
 			font = "hoi_16mbs"
 			maxWidth = 50
 			maxHeight = 18
@@ -612,7 +612,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "imported"
-			position = { x=20 y=56 }
+			position = { x=18 y=56 }
 			font = "hoi_16mbs"
 			maxWidth = 50
 			maxHeight = 18
@@ -622,7 +622,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "exported"
 			font = "hoi_16mbs"
-			position = { x=20 y=75 }
+			position = { x=18 y=75 }
 			maxWidth = 50
 			maxHeight = 18
 			format = right
@@ -631,7 +631,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "special_project"
 			font = "hoi_16mbs"
-			position = { x=20 y=94 }
+			position = { x=18 y=94 }
 			maxWidth = 50
 			maxHeight = 18
 			format = right
@@ -640,7 +640,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "production_line"
 			font = "hoi_16mbs"
-			position = { x=20 y=113 }
+			position = { x=18 y=113 }
 			maxWidth = 50
 			maxHeight = 18
 			format = right
@@ -648,7 +648,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "needed"
-			position = { x=20 y=130 }
+			position = { x=18 y=130 }
 			font = "hoi_16mbs"
 			maxWidth = 50
 			maxHeight = 28
