@@ -1369,7 +1369,7 @@ focus_tree = {
 	focus = {
 		#“旅者”行动
 		id = ARI_traveller_operation
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_traveller_operation
 		relative_position_id = ARI_experience_in_Trinity
 		prerequisite = {
 			focus = ARI_experience_in_Trinity
@@ -1450,7 +1450,7 @@ focus_tree = {
 	focus = {
 		#行动的教训
 		id = ARI_traveller_operation_lost
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_traveller_operation_lost
 		relative_position_id = ARI_traveller_operation
 		prerequisite = {
 			focus = ARI_traveller_operation
@@ -1474,7 +1474,7 @@ focus_tree = {
 	focus = {
 		#收回临机指挥权
 		id = ARI_get_back_command_power
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_get_back_command_power
 		relative_position_id = ARI_traveller_operation_lost
 		prerequisite = {
 			focus = ARI_traveller_operation_lost
@@ -1513,7 +1513,7 @@ focus_tree = {
 	focus = {
 		#回收特战队
 		id = ARI_get_back_special_force
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_get_back_special_force
 		relative_position_id = ARI_traveller_operation_lost
 		prerequisite = {
 			focus = ARI_traveller_operation_lost
@@ -1551,7 +1551,7 @@ focus_tree = {
 	focus = {
 		#重申复仇理想
 		id = ARI_get_back_revenge_spirit
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_get_back_revenge_spirit
 		relative_position_id = ARI_traveller_operation_lost
 		prerequisite = {
 			focus = ARI_traveller_operation_lost
@@ -1585,7 +1585,7 @@ focus_tree = {
 	focus = {
 		#弥补物资缺口
 		id = ARI_solve_supply_shorting
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_solve_supply_shorting
 		relative_position_id = ARI_get_back_special_force
 		prerequisite = {
 			focus = ARI_get_back_special_force
@@ -1641,7 +1641,7 @@ focus_tree = {
 	focus = {
 		#处理“叛徒”
 		id = ARI_deal_with_traitor
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_deal_with_traitor
 		relative_position_id = ARI_get_back_special_force
 		prerequisite = {
 			focus = ARI_get_back_special_force
@@ -1684,7 +1684,7 @@ focus_tree = {
 	focus = {
 		#总结经验教训
 		id = ARI_conclude_our_experience
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_conclude_our_experience
 		relative_position_id = ARI_deal_with_traitor
 		prerequisite = {
 			focus = ARI_deal_with_traitor
@@ -1740,7 +1740,7 @@ focus_tree = {
 	focus = {
 		#解开帷幕
 		id = ARI_open_the_curtain
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_open_the_curtain
 		relative_position_id = ARI_traveller_operation
 		prerequisite = {
 			focus = ARI_traveller_operation
@@ -1784,7 +1784,7 @@ focus_tree = {
 	focus = {
 		#重新审视行动方针
 		id = ARI_revise_our_operation_plan
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_revise_our_operation_plan
 		relative_position_id = ARI_open_the_curtain
 		prerequisite = {
 			focus = ARI_open_the_curtain
@@ -1807,7 +1807,7 @@ focus_tree = {
 	focus = {
 		#灵活行动限制
 		id = ARI_relax_operation_restrictions
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_relax_operation_restrictions
 		relative_position_id = ARI_revise_our_operation_plan
 		prerequisite = {
 			focus = ARI_revise_our_operation_plan
@@ -1830,7 +1830,7 @@ focus_tree = {
 	focus = {
 		#进一步强化合作
 		id = ARI_further_strengthen_cooperation
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_further_strengthen_cooperation
 		relative_position_id = ARI_open_the_curtain
 		prerequisite = {
 			focus = ARI_open_the_curtain
@@ -1857,7 +1857,7 @@ focus_tree = {
 	focus = {
 		#参加格黑娜社团活动
 		id = ARI_join_gehenna_club_fake
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_join_gehenna_club_fake
 		relative_position_id = ARI_further_strengthen_cooperation
 		prerequisite = {
 			focus = ARI_further_strengthen_cooperation
@@ -1881,7 +1881,7 @@ focus_tree = {
 	focus = {
 		#准备乐园行动
 		id = ARI_prepare_operation_eden
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_prepare_operation_eden
 		relative_position_id = ARI_relax_operation_restrictions
 		prerequisite = {
 			focus = ARI_relax_operation_restrictions
@@ -1911,7 +1911,7 @@ focus_tree = {
 	focus = {
 		#行动时刻
 		id = ARI_time_for_final_action
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_time_for_final_action
 		relative_position_id = ARI_prepare_operation_eden
 		available = {
 			always = no			#自动跳过
@@ -1945,7 +1945,7 @@ focus_tree = {
 	focus = {
 		#压制残余抵抗
 		id = ARI_suppress_resistance_eden_operation
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_suppress_resistance_eden_operation
 		relative_position_id = ARI_time_for_final_action
 		prerequisite = {
 			focus = ARI_time_for_final_action
@@ -1965,7 +1965,7 @@ focus_tree = {
 	focus = {
 		#加强“契约”的力量
 		id = ARI_enhance_contract_power
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_enhance_contract_power
 		relative_position_id = ARI_time_for_final_action
 		prerequisite = {
 			focus = ARI_time_for_final_action
@@ -1985,7 +1985,7 @@ focus_tree = {
 	focus = {
 		#协调增援部队
 		id = ARI_coordinate_reinforcement_troops
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_coordinate_reinforcement_troops
 		relative_position_id = ARI_time_for_final_action
 		prerequisite = {
 			focus = ARI_time_for_final_action
@@ -2005,7 +2005,7 @@ focus_tree = {
 	focus = {
 		#赌上一切
 		id = ARI_put_evenything_on_bet
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_put_evenything_on_bet
 		relative_position_id = ARI_enhance_contract_power
 		prerequisite = {
 			focus = ARI_suppress_resistance_eden_operation
