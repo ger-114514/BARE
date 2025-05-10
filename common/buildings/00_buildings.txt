@@ -711,14 +711,6 @@ buildings = {
 			state_max = 1
 			group_by = special_project_facility
 		}
-		construction_speed_modifier = {
-            bonus = 0.2
-            has_resources_amount = {
-                resource = resources_rm
-                amount > 0
-                delivered = yes
-            }
-        }
 	}
 
 	land_facility = {
@@ -742,14 +734,6 @@ buildings = {
 			state_max = 1
 			group_by = special_project_facility
 		}
-		construction_speed_modifier = {
-            bonus = 0.2
-            has_resources_amount = {
-                resource = resources_cm
-                amount > 0
-                delivered = yes
-            }
-        }
 	}
 
 	batech_facility = {
@@ -773,14 +757,6 @@ buildings = {
 			state_max = 1
 			group_by = special_project_facility
 		}
-		construction_speed_modifier = {
-            bonus = 0.2
-            has_resources_amount = {
-                resource = resources_mm
-                amount > 0
-                delivered = yes
-            }
-        }
 	}
 
 	dam = {

@@ -1,0 +1,22 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_pad_scrollbar_scroll"
+		textureFile = "gfx/interface/opening_welcome/pad_scrollbar_scroll.png"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_null_button"
+		textureFile = "gfx/interface/opening_welcome/null_updown_button.png"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_pad_scrollbar_axis"
+		size = {x=10 y=430}
+		textureFile = "gfx/interface/opening_welcome/pad_scrollbar_axis.png"
+		borderSize = { x=5 y=52 }
+		tilingCenter = yes
+	}
+
+}

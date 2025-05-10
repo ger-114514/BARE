@@ -22,7 +22,7 @@ focus_tree = {
 		x = 14
 		y = 0
 		completion_reward = {
-            country_event = SRT_Stage1_1
+            country_event = SRT_stageone.1
 		}
 	}
 	focus = {
@@ -195,7 +195,7 @@ focus_tree = {
 			focus = SRT_guarantee_military_training
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_2
+			country_event = SRT_stageone.2
 		}
 	}
 	focus = {
@@ -207,7 +207,7 @@ focus_tree = {
 			focus = SRT_elite_equipment_maintenance
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_3
+			country_event = SRT_stageone.3
 		}
 	}
 	focus = {
@@ -219,7 +219,7 @@ focus_tree = {
 			focus = SRT_plan_ahead
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_4
+			country_event = SRT_stageone.4
 		}
 	}
 	focus = {
@@ -231,7 +231,7 @@ focus_tree = {
 			focus = SRT_secret_conversation_with_kaya
 		}
 		completion_reward = {
-            country_event = SRT_Stage1_5
+            country_event = SRT_stageone.5
 		}
 	}
 	focus = {
@@ -243,7 +243,7 @@ focus_tree = {
 			focus = SRT_sharp_knife_operation
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_6
+			country_event = SRT_stageone.6
 		}
 	}
 	focus = {
@@ -255,7 +255,7 @@ focus_tree = {
 			focus = SRT_the_game_of_the_brave
 		}
 		completion_reward = {
-            country_event = SRT_Stage1_7
+            country_event = SRT_stageone.7
 		}
 	}
 	focus = {
@@ -267,7 +267,7 @@ focus_tree = {
 			focus = SRT_secret_conversation_with_kaya
 		}
 		completion_reward = {
-            country_event = SRT_Stage1_8            
+            country_event = SRT_stageone.8            
 		}
 	}
 	focus = {
@@ -279,7 +279,7 @@ focus_tree = {
 			focus = SRT_protective_umbrella_of_the_black_market
 		}
 		completion_reward = {
-            country_event = SRT_Stage1_9
+            country_event = SRT_stageone.9
 		}
 	}
 	focus = {
@@ -294,7 +294,7 @@ focus_tree = {
 			focus = SRT_the_value_of_justice
 		}
 		completion_reward = {
-		    country_event = SRT_Stage1_10
+		    country_event = SRT_stageone.10
 		}
 	}
 	focus = {
@@ -309,7 +309,7 @@ focus_tree = {
 			focus = SRT_rabbit_fights_the_eagle
 		}
 		completion_reward = {
-		    country_event = SRT_Stage1_11
+		    country_event = SRT_stageone.11
 		}
 	}
 	focus = {
@@ -324,7 +324,7 @@ focus_tree = {
 			focus = SRT_expanded_research_of_electrony
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_12
+			country_event = SRT_stageone.12
 		}
 	}
 	focus = {
@@ -339,7 +339,7 @@ focus_tree = {
 			focus = SRT_find_rescue_in_desperate_circumstances
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_13			
+			country_event = SRT_stageone.13			
 		}
 	}
 	focus = {
@@ -351,7 +351,7 @@ focus_tree = {
 			focus = SRT_emergency_transfer_of_equipment
 		}
 		completion_reward = {
-			country_event = SRT_Stage1_14
+			country_event = SRT_stageone.14
 		}
 	}
 }
@@ -372,7 +372,7 @@ focus_tree = {
 		x = 16
 		y = 0
 		completion_reward = {
-			country_event = SRT_Stage2_1
+			country_event = SRT_stagetwo.1
 		}
 	}
 	focus = {
@@ -384,7 +384,7 @@ focus_tree = {
 			focus = SRT_the_great_rain
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_2
+			country_event = SRT_stagetwo.2
 		}
 	}
 	focus = {
@@ -396,7 +396,7 @@ focus_tree = {
 			focus = SRT_the_defense_of_rabbit
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_3
+			country_event = SRT_stagetwo.3
 		}
 	}
 	focus = {
@@ -408,7 +408,7 @@ focus_tree = {
 			focus = SRT_temporary_camp_of_the_rabbit
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_4
+			country_event = SRT_stagetwo.4
 		}
 	}
 	focus = {
@@ -420,7 +420,7 @@ focus_tree = {
 			focus = SRT_survival_in_the_wild
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_5
+			country_event = SRT_stagetwo.5
 		}
 	}
 	focus = {
@@ -432,7 +432,7 @@ focus_tree = {
 			focus = SRT_fresh_water_into_the_canal
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_6
+			country_event = SRT_stagetwo.6
 		}
 	}
 	focus = {
@@ -444,7 +444,7 @@ focus_tree = {
 			focus = SRT_the_defense_of_rabbit
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_7
+			country_event = SRT_stagetwo.7
 		}
 	}
 	focus = {
@@ -456,7 +456,7 @@ focus_tree = {
 			focus = SRT_the_most_detestable_adult
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_8
+			country_event = SRT_stagetwo.8
 		}
 	}
 	focus = {
@@ -468,7 +468,7 @@ focus_tree = {
 			focus = SRT_angel_24_cleanup
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_9
+			country_event = SRT_stagetwo.9
 		}
 	}
 	focus = {
@@ -480,7 +480,7 @@ focus_tree = {
 			focus = SRT_operation_carrot
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_10
+			country_event = SRT_stagetwo.10
 		}
 	}
 	focus = {
@@ -495,7 +495,7 @@ focus_tree = {
 			focus = SRT_the_rabbit_hole_of_carbanno
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_11
+			country_event = SRT_stagetwo.11
 		}
 	}
 	focus = {
@@ -519,7 +519,7 @@ focus_tree = {
 			focus = SRT_black_market_trading
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_12
+			country_event = SRT_stagetwo.12
 		}
 	}
 	focus = {
@@ -543,7 +543,7 @@ focus_tree = {
 			focus = SRT_operation_shiratori
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_13
+			country_event = SRT_stagetwo.13
 		}
 	}
 	focus = {
@@ -555,7 +555,7 @@ focus_tree = {
 			focus = SRT_operation_shrimp_trap
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_14
+			country_event = SRT_stagetwo.14
 		}
 	}
 	focus = {
@@ -567,7 +567,7 @@ focus_tree = {
 			focus = SRT_rabbit_team_of_the_shiratori
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_15
+			country_event = SRT_stagetwo.15
 		}
 	}
 	focus = {
@@ -591,7 +591,7 @@ focus_tree = {
 			focus = SRT_operation_aoba
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_16
+			country_event = SRT_stagetwo.16
 		}
 	}
 	focus = {
@@ -603,7 +603,7 @@ focus_tree = {
 			focus = SRT_operation_clover
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_17
+			country_event = SRT_stagetwo.17
 		}
 	}
 	focus = {
@@ -615,7 +615,7 @@ focus_tree = {
 			focus = SRT_rabbit_team_of_the_aoba
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_18
+			country_event = SRT_stagetwo.18
 		}
 	}
 	focus = {
@@ -639,7 +639,7 @@ focus_tree = {
 			focus = SRT_operation_cafe
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_19
+			country_event = SRT_stagetwo.19
 		}
 	}
 	focus = {
@@ -651,7 +651,7 @@ focus_tree = {
 			focus = SRT_operation_nest_grass_plant
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_20
+			country_event = SRT_stagetwo.20
 		}
 	}
 	focus = {
@@ -663,7 +663,7 @@ focus_tree = {
 			focus = SRT_rabbit_team_of_the_business
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_21
+			country_event = SRT_stagetwo.21
 		}
 	}
 	focus = {
@@ -681,7 +681,7 @@ focus_tree = {
 			focus = SRT_white_horse_from_the_sky
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_22
+			country_event = SRT_stagetwo.22
 		}
 	}
 	focus = {
@@ -693,7 +693,7 @@ focus_tree = {
 			focus = SRT_operation_knife2
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_23
+			country_event = SRT_stagetwo.23
 		}
 	}
 	focus = {
@@ -705,7 +705,7 @@ focus_tree = {
 			focus = SRT_the_determination_to_protect
 		}
 		completion_reward = {
-			country_event = SRT_Stage2_24
+			country_event = SRT_stagetwo.24
 		}
 	}
 }

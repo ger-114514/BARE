@@ -66,7 +66,7 @@ technologies = {
 			leads_to_tech = artillery_15
 			research_cost_coeff = 1
 		}
-		category_artillery = { 
+		category_self_propelled_artillery = { 
 			soft_attack = 0.10
 		}
 		signal_company = {
@@ -155,6 +155,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_light_infantry = {
+			soft_attack = 0.05
 			max_organisation = 10
 		}
 		minimum_training_level = -0.1
@@ -211,6 +212,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_light_infantry = {
+			soft_attack = 0.05
 			max_organisation = 5
 			defense = 0.05
 		}
@@ -300,6 +302,7 @@ technologies = {
 		}
 		
 		category_mech = {
+			max_organisation = 2
 			breakthrough = 0.20
 		}
 		planning_speed = 0.3
@@ -447,6 +450,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_bm {
+			max_organisation = 5
 			supply_consumption = -0.1
 		}
 		max_dig_in = 5
@@ -502,7 +506,7 @@ technologies = {
 		}
 		category_bm {
 			max_organisation = 5
-			soft_attack = 0.05
+			defense = 0.1
 		}
 		land_reinforce_rate = 0.02
 		max_planning = 0.1
@@ -1095,7 +1099,7 @@ technologies = {
 			breakthrough = 0.20
 		}
 		category_self_propelled_artillery = {
-            maximum_speed = 0.20	
+            soft_attack = 0.05	
 		}
 		recon = {
 			maximum_speed = 0.20
@@ -1185,11 +1189,14 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 		}
-		category_bm {
+		category_tank_destroyers {
 			hard_attack = 0.05
 		}
+		category_bm = {
+			defense = 0.05
+		}
 		max_planning = 0.1
-		out_of_supply_factor = -0.20
+		out_of_supply_factor = -0.10
 		doctrine = yes
 		research_cost = 4.5
 		categories = {
@@ -1294,7 +1301,7 @@ technologies = {
 			breakthrough = 0.10
 		}
 		category_attack_heil = {
-            soft_attack = 0.15
+            soft_attack = 0.2
 		}
 		coordination_bonus = 0.05
 		doctrine = yes
@@ -1346,11 +1353,14 @@ technologies = {
 			recon = 1 
 		} 
 		category_support_battalions = {
-            maximum_speed = 2
+            maximum_speed = 1
 		}
 		category_bm {
-			soft_attack = 0.05
+			soft_attack = 0.1
 		}	
+		category_tank_destroyers = {
+			hard_attack = 0.1
+		}
 		supply_consumption_factor = -0.10
 		land_night_attack = 0.25
 		enable_tactic = tactic_robot_23
@@ -1493,9 +1503,10 @@ technologies = {
 			leads_to_tech = artillery_35
 			research_cost_coeff = 1
 		}
-		category_artillery = { 
+		category_self_propelled_artillery = { 
 			soft_attack = 0.05
-			defense = 0.20
+			hard_attack = 0.05
+			breakthrough = 0.20
 		}
 		category_recon = {
 			recon = 0.5
@@ -1550,7 +1561,7 @@ technologies = {
 			 soft_attack = 0.15
 			 max_organisation = 5
 		}
-		category_artillery = { 
+		category_self_propelled_artillery = { 
 			hard_attack = 0.10
 			max_organisation = 10
 		}
@@ -1581,8 +1592,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_all_infantry = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 			defense = 0.10
 			max_organisation = 10
 		}
@@ -1691,8 +1702,8 @@ technologies = {
 		}
 
 		category_all_infantry = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 		}
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1
 		out_of_supply_factor = -0.20
@@ -1950,8 +1961,8 @@ technologies = {
 			default_morale = 0.1
 		}
 		category_tanks = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 			max_organisation = 10
 		}
 		enable_tactic = tactic_tank_33
@@ -2182,7 +2193,9 @@ technologies = {
 		enable_tactic = tactic_tank_22
 		category_all_armor = {
 			max_organisation = 2
-			maximum_speed = 0.20
+		}
+		category_tanks = {
+			soft_attack = 0.1
 		}
 		no_supply_grace = 48
 		planning_speed = 0.5
@@ -2212,6 +2225,11 @@ technologies = {
 		categories = {
 			land_doctrine
 		}
+		category_tanks = {
+			soft_attack = 0.1
+			max_organisation = 5
+		}
+		org_loss_when_moving = -0.2
 		folder = {
 			name = land_doctrine_folder
 			position = {
@@ -2229,7 +2247,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_support_battalions = {
-			soft_attack = 0.15
+			soft_attack = 0.3
 		}
 		category_anti_air = {
 			air_attack = 0.1
@@ -2261,6 +2279,12 @@ technologies = {
 		categories = {
 			land_doctrine
 		}
+		category_self_propelled_artillery = {
+            soft_attack = 0.2
+		}
+		category_support_battalions = {
+			soft_attack = 0.2
+		}
 		folder = {
 			name = land_doctrine_folder
 			position = {
@@ -2278,11 +2302,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_bm = {
+			soft_attack = 0.05
 			defense = 0.1
 			max_organisation = 5
 		}
-		category_artillery = {
-			hard_attack = 0.05
+        category_tank_destroyers = {
+			hard_attack = 0.1
 		}
 		max_planning = 0.2
 		enable_tactic = tactic_robot_22
@@ -2334,6 +2359,7 @@ technologies = {
 			land_doctrine
 		}
 		category_light_infantry = {
+			soft_attack = 0.1
 			maximum_speed = 0.5
 			max_organisation = 10
 		}
@@ -2511,11 +2537,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		category_attack_heil = {
-			hard_attack = 0.15
+			hard_attack = 0.25
 			soft_attack = 0.25
 		}
 		category_assist_heil = {
 			max_organisation = 5
+			soft_attack = 0.2
 		}
 		enable_tactic = tactic_infantry_22
 		doctrine = yes
@@ -2608,8 +2635,8 @@ technologies = {
 		doctrine = yes
 		research_cost = 4.5
 		category_special_infantry = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.1
 			max_organisation = 5
 		}
 		enable_tactic = tactic_infantry_21
@@ -2637,6 +2664,11 @@ technologies = {
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
+		}
+		category_all_infantry = {
+			soft_attack = 0.3
+			defense = -0.3
+			hard_attack = 0.3
 		}
 		folder = {
 			name = land_doctrine_folder

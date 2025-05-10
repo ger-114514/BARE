@@ -99,7 +99,7 @@ guiTypes = {
 			iconType = {
 				name ="event_picture"
 				spriteType = "GFX_report_event_001"
-				position = { x = 185 y = 32 }
+				position = { x = 145 y = 25 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes				
 			}
@@ -107,14 +107,14 @@ guiTypes = {
 			iconType = {
 				name ="event_pic_clip"
 				spriteType = "GFX_event_pic_clip"
-				position = { x = 180 y = 20 }
+				position = { x = 150 y = 30 }
 				Orientation = "UPPER_LEFT"
 			}
 
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 270 y = 220 }
+				position = { x = 375 y = 30 }
 				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1

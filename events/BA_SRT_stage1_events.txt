@@ -1,17 +1,17 @@
+add_namespace = SRT_stageone
+
 country_event = {
-    id = SRT_Stage1_1
-    title = SRT_Stage1_1
-    desc = SRT_Stage1_1_desc
+    id = SRT_stageone.1
+    title = SRT_stageone.1.t
+    desc = SRT_stageone.1.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_1_name
+		name = SRT_stageone.1.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -21,19 +21,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_2
-    title = SRT_Stage1_2
-    desc = SRT_Stage1_2_desc
+    id = SRT_stageone.2
+    title = SRT_stageone.2.t
+    desc = SRT_stageone.2.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_2_name
+		name = SRT_stageone.2.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -43,19 +41,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_3
-    title = SRT_Stage1_3
-    desc = SRT_Stage1_3_desc
+    id = SRT_stageone.3
+    title = SRT_stageone.3.t
+    desc = SRT_stageone.3.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_3_name
+		name = SRT_stageone.3.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -65,19 +61,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_4
-    title = SRT_Stage1_4
-    desc = SRT_Stage1_4_desc
+    id = SRT_stageone.4
+    title = SRT_stageone.4.t
+    desc = SRT_stageone.4.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_4_name
+		name = SRT_stageone.4.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -87,19 +81,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_5
-    title = SRT_Stage1_5
-    desc = SRT_Stage1_5_desc
+    id = SRT_stageone.5
+    title = SRT_stageone.5.t
+    desc = SRT_stageone.5.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_5_name
+		name = SRT_stageone.5.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -109,19 +101,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_6
-    title = SRT_Stage1_6
-    desc = SRT_Stage1_6_desc
+    id = SRT_stageone.6
+    title = SRT_stageone.6.t
+    desc = SRT_stageone.6.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_6_name
+		name = SRT_stageone.6.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -131,19 +121,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_7
-    title = SRT_Stage1_7
-    desc = SRT_Stage1_7_desc
+    id = SRT_stageone.7
+    title = SRT_stageone.7.t
+    desc = SRT_stageone.7.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_7_name
+		name = SRT_stageone.7.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -153,19 +141,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_8
-    title = SRT_Stage1_8
-    desc = SRT_Stage1_8_desc
+    id = SRT_stageone.8
+    title = SRT_stageone.8.t
+    desc = SRT_stageone.8.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_8_name
+		name = SRT_stageone.8.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -175,19 +161,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_9
-    title = SRT_Stage1_9
-    desc = SRT_Stage1_9_desc
+    id = SRT_stageone.9
+    title = SRT_stageone.9.t
+    desc = SRT_stageone.9.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_9_name
+		name = SRT_stageone.9.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -197,19 +181,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_10
-    title = SRT_Stage1_10
-    desc = SRT_Stage1_10_desc
+    id = SRT_stageone.10
+    title = SRT_stageone.10.t
+    desc = SRT_stageone.10.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_10_name
+		name = SRT_stageone.10.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -219,19 +201,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_11
-    title = SRT_Stage1_11
-    desc = SRT_Stage1_11_desc
+    id = SRT_stageone.11
+    title = SRT_stageone.11.t
+    desc = SRT_stageone.11.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_11_name
+		name = SRT_stageone.11.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -241,19 +221,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_12
-    title = SRT_Stage1_12
-    desc = SRT_Stage1_12_desc
+    id = SRT_stageone.12
+    title = SRT_stageone.12.t
+    desc = SRT_stageone.12.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_12_name
+		name = SRT_stageone.12.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -263,19 +241,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_13
-    title = SRT_Stage1_13
-    desc = SRT_Stage1_13_desc
+    id = SRT_stageone.13
+    title = SRT_stageone.13.t
+    desc = SRT_stageone.13.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_13_name
+		name = SRT_stageone.13.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -285,19 +261,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_14
-    title = SRT_Stage1_14
-    desc = SRT_Stage1_14_desc
+    id = SRT_stageone.14
+    title = SRT_stageone.14.t
+    desc = SRT_stageone.14.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_14_name
+		name = SRT_stageone.14.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}
@@ -307,19 +281,17 @@ country_event = {
     }
 }
 country_event = {
-    id = SRT_Stage1_15
-    title = SRT_Stage1_15
-    desc = SRT_Stage1_15_desc
+    id = SRT_stageone.15
+    title = SRT_stageone.15.t
+    desc = SRT_stageone.15.d
 
 	is_triggered_only = yes
 
 	fire_only_once = yes
     option = {
-		name = SRT_Stage1_15_name
+		name = SRT_stageone.15.a
 		
-		custom_effect_tooltip = {
-
-		}
+ 
 		hidden_effect = {
 
 		}

@@ -309,4 +309,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/guerilla_warfare.dds"
 		alwaystransparent = yes
 	}
+ ##############空军用#############
+	SpriteType = {
+		name = "GFX_scout_plane_new_tactics_medium"
+		texturefile = "gfx/interface/technologies/naval_strike_torpedo_tactics.dds"
+	}
+	SpriteType = {
+		name = "GFX_scout_plane_direct_tactics_medium"
+		texturefile = "gfx/interface/technologies/naval_strike_tactics.dds"
+	}	
+	SpriteType = {
+		name = "GFX_scout_plane_new_tactics_oi_medium"
+		texturefile = "gfx/interface/technologies/naval_strike_torpedo_tactics.dds"
+	}	
 }
