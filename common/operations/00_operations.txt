@@ -2050,8 +2050,6 @@
  				steal_random_tech_bonus = {
  					folder = armour_folder
  					folder = ifv_folder
- 					folder = armour_folder
- 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2081,7 +2079,6 @@
  						steal_random_tech_bonus = {
  							folder = armour_folder
  							folder = ifv_folder
- 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 
@@ -2098,8 +2095,6 @@
  				else = {
  					ROOT = {
  						steal_random_tech_bonus = {
- 							folder = armour_folder
- 							folder = ifv_folder
  							folder = armour_folder
  							folder = ifv_folder
  							folder = infantry_folder
@@ -2125,7 +2120,6 @@
  						steal_random_tech_bonus = {
  							folder = armour_folder
  							folder = ifv_folder
- 							folder = ifv_folder
  							folder = infantry_folder
  							folder = support_folder
 	
@@ -2142,8 +2136,6 @@
  				else = {
  					ROOT = {
  						steal_random_tech_bonus = {
- 							folder = armour_folder
- 							folder = ifv_folder
  							folder = armour_folder
  							folder = ifv_folder
  							folder = infantry_folder
@@ -2170,7 +2162,6 @@
  				steal_random_tech_bonus = {
  					folder = armour_folder
  					folder = ifv_folder
- 					folder = ifv_folder
  					folder = infantry_folder
  					folder = support_folder
  					bonus = 3.0
@@ -2185,8 +2176,6 @@
  		else = {
  			ROOT = {
  				steal_random_tech_bonus = {
- 					folder = armour_folder
- 					folder = ifv_folder
  					folder = armour_folder
  					folder = ifv_folder
  					folder = infantry_folder

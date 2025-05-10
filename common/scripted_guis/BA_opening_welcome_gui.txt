@@ -1,0 +1,53 @@
+scripted_gui = {
+	BA_welcome_splash = {
+		context_type = player_context
+		window_name = "BA_welcome_splash_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = BA_show_welcome_splash
+		}
+
+		effects = {
+			exit_button_click = {
+				clr_country_flag = BA_show_welcome_splash
+			}
+
+            intro_button_1_click = {
+				clr_country_flag = BA_intro_button_1_clicked
+                clr_country_flag = BA_intro_button_2_clicked
+                clr_country_flag = BA_intro_button_3_clicked
+                clr_country_flag = BA_intro_button_4_clicked
+                set_country_flag = BA_intro_button_1_clicked
+			}
+
+            intro_button_2_click = {
+				clr_country_flag = BA_intro_button_1_clicked
+                clr_country_flag = BA_intro_button_2_clicked
+                clr_country_flag = BA_intro_button_3_clicked
+                clr_country_flag = BA_intro_button_4_clicked
+                set_country_flag = BA_intro_button_2_clicked
+			}
+
+            intro_button_3_click = {
+				clr_country_flag = BA_intro_button_1_clicked
+                clr_country_flag = BA_intro_button_2_clicked
+                clr_country_flag = BA_intro_button_3_clicked
+                clr_country_flag = BA_intro_button_4_clicked
+                set_country_flag = BA_intro_button_3_clicked
+			}
+
+            intro_button_4_click = {
+				clr_country_flag = BA_intro_button_1_clicked
+                clr_country_flag = BA_intro_button_2_clicked
+                clr_country_flag = BA_intro_button_3_clicked
+                clr_country_flag = BA_intro_button_4_clicked
+                set_country_flag = BA_intro_button_4_clicked
+			}
+		}
+	}
+}
+

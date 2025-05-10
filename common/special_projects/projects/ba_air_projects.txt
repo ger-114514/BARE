@@ -101,7 +101,7 @@ sp_ba_T3_air_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_nuclear_radar
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
 
@@ -174,7 +174,7 @@ sp_ba_T4_air_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_rockets_flying_bomb
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.long
 
@@ -246,7 +246,7 @@ sp_ba_T5_air_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_rockets_rocket_engine
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.very_long
 
