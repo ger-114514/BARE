@@ -28,7 +28,7 @@ sp_ba_T2_industry_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_commercial_nuclear_reactor
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.short
 
@@ -99,7 +99,7 @@ sp_ba_T3_industry_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_naval_aip_engine
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
 
@@ -171,7 +171,7 @@ sp_ba_T4_industry_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_nuclear_reactor
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.long
 
@@ -242,7 +242,7 @@ sp_ba_T5_industry_project = {
         name = "my_project_name_loc_key"
         desc = "my_project_desc_loc_key"
     }
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_naval_anechoic_tiles
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.very_long
 

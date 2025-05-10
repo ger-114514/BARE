@@ -4,6 +4,7 @@ SRT_debug_decisions = {
 			is_debug = yes
 		}
 		complete_effect = {
+			
 			if = {
 				limit = {
 					NOT = { has_focus_tree = SRT_Rabiit_team1 }
