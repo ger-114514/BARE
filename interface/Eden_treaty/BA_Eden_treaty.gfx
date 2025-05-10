@@ -1,20 +1,20 @@
 spriteTypes = {	
     spriteType = {
         name = "Eden_treaty_negotiation_bg"
-        texturefile = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_bg.png"
+        texturefile = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_bg.dds"
     }
     spriteType = {
         name = "Eden_treaty_negotiation_victory_mark_GEH"
-        texturefile = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_victory_mark_GEH.png"
+        texturefile = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_victory_mark_GEH.dds"
     }
     spriteType = {
         name = "Eden_treaty_negotiation_victory_mark_TRI"
-        texturefile = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_victory_mark_TRI.png"
+        texturefile = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_victory_mark_TRI.dds"
     }
 	progressbartype = {
 		name = "Eden_treaty_negotiation_progress_bar"
-		textureFile1 = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_progress_bar_1.png"
-		textureFile2 = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_progress_bar_2.png"
+		textureFile1 = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_progress_bar_1.dds"
+		textureFile2 = "gfx/interface/Eden_treaty/Eden_treaty_negotiation_progress_bar_2.dds"
 		size = { x = 424 y = 25 }
 		effectFile = "gfx/FX/progress.lua"
 		steps = 100

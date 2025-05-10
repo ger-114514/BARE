@@ -1,0 +1,344 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+
+	#TRI
+
+	SpriteType = {
+		name = "GFX_goal_TRI_reorgnize_teaparty_mob"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_reorgnize_teaparty_mob.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_cooperation_with_justice_club"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_cooperation_with_justice_club.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_teaparty_leading"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_teaparty_leading.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_standing_guard"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_standing_guard.dds"			
+	}
+
+	
+	
+	SpriteType = {
+		name = "GFX_goal_TRI_pax_trinity"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_pax_trinity.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_TRI_prepare_for_eden"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_prepare_for_eden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_1st_eden_pact"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_1st_eden_pact.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_calling_for_sisterhood"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_calling_for_sisterhood.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_restart_domestic_struggle"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_restart_domestic_struggle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_expand_intellegence"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_expand_intellegence.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_authorize_eagle_faction"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_authorize_eagle_faction.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_authorize_dove_faction"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_authorize_dove_faction.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_restart_inschool_debate"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_restart_inschool_debate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_turncoat_in_trinity"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_turncoat_in_trinity.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_calling_for_convention"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_calling_for_convention.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_TRI_calling_for_Schale"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_calling_for_Schale.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_buy_time"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_buy_time.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_investigation_in_care"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_investigation_in_care.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_examination_for_training_club"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_examination_for_training_club.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_reunion_of_trinity"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_reunion_of_trinity.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_choosing_pact_place"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_choosing_pact_place.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_2st_eden_pact"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_2st_eden_pact.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_dissonance"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_dissonance.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_Unintentional_windfall"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_Unintentional_windfall.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_goal_TRI_welfare_cutting"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_welfare_cutting.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_weapons_nomalization"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_weapons_nomalization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_production_specialization"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_production_specialization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_carryon_package_facilitation"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_carryon_package_facilitation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_sufficient_sweets_supply"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_sufficient_sweets_supply.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_vast_land"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_vast_land.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_expand_reproduction"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_expand_reproduction.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_amazing"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_amazing.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_gorgeous"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_gorgeous.dds"
+	}
+
+	#不知道为啥一堆地方用到这个
+	SpriteType = {
+		name = "GFX_goal_generic_trade"
+		texturefile = "gfx/interface/thisisdog.dds"			
+	}		
+
+	#不知道为啥一堆地方用到这个
+	SpriteType = {
+		name = "GFX_goal_unknown"
+		texturefile = "gfx/interface/thisisdog.dds"			
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_goal_TRI_investigation_focus_koharu"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_investigation_focus_koharu.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_investigation_focus_hanako"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_investigation_focus_hanako.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_investigation_focus_azusa"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_investigation_focus_azusa.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_investigation_focus_hifumi"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_investigation_focus_hifumi.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_establish_hoshubu"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_establish_hoshubu.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_steady_as_she_goes"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_steady_as_she_goes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_rebuild_communication_channel"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_rebuild_communication_channel.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_deploy_materials"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_deploy_materials.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_precise_and_perfect_compaign"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_precise_and_perfect_compaign.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_hear_and_command"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_hear_and_command.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_Bill_of_disclosure"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_Bill_of_disclosure.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_invitation_for_discussion"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_invitation_for_discussion.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_goal_TRI_Bill_of_copper_olive"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_Bill_of_copper_olive.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_elite_army"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_elite_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_expand_training_area"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_expand_training_area.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_mass_army"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_mass_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_association_autonomy"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_association_autonomy.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_goal_TRI_flower_tea_artillery"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_flower_tea_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_limited_military_preparation"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_limited_military_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_orderly_mobilization"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_orderly_mobilization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_long_distance_aeronautics"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_long_distance_aeronautics.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_refining_research"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_refining_research.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_fortifications_building"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_fortifications_building.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_multi_association_exercise"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_multi_association_exercise.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_commission_of_staffs"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_commission_of_staffs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_air_ground_integration"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_air_ground_integration.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_advanced_armour"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_advanced_armour.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_air_force_projection"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_air_force_projection.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_UAV_production"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_UAV_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_UAV_control"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_UAV_control.dds"
+	}
+
+	###2025-07-05注册###
+	SpriteType = {
+		name = "GFX_goal_TRI_the_way_to_glory"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_the_way_to_glory.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_fatal_strike_of_arius"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_fatal_strike_of_arius.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_aftermath_of_rebellion"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_aftermath_of_rebellion.dds"
+	}
+
+}
