@@ -1,0 +1,72 @@
+BA_welcome_text = {
+	name = BA_welcome_text
+	text = {
+		trigger = { 
+			has_country_flag = BA_intro_button_1_clicked
+			tag = TRI
+		}
+		localization_key = TRI_wecome_text_1
+	}
+	text = {
+		trigger = { 
+			has_country_flag = BA_intro_button_2_clicked
+			tag = TRI
+		}
+		localization_key = TRI_wecome_text_2
+	}
+	text = {
+		trigger = { 
+			has_country_flag = BA_intro_button_3_clicked
+			tag = TRI
+		}
+		localization_key = TRI_wecome_text_3
+	}
+	text = {
+		trigger = { 
+			has_country_flag = BA_intro_button_4_clicked
+			tag = TRI
+		}
+		localization_key = TRI_wecome_text_4
+	}
+}
+
+
+BA_pad_button1_text = {
+	name = BA_pad_button1_text
+	text = {
+		trigger = { 
+			tag = TRI
+		}
+		localization_key = BA_pad_button1_text_TRI
+	}
+}
+
+BA_pad_button2_text = {
+	name = BA_pad_button2_text
+	text = {
+		trigger = { 
+			tag = TRI
+		}
+		localization_key = BA_pad_button2_text_TRI
+	}
+}
+
+BA_pad_button3_text = {
+	name = BA_pad_button3_text
+	text = {
+		trigger = { 
+			tag = TRI
+		}
+		localization_key = BA_pad_button3_text_TRI
+	}
+}
+
+BA_pad_button4_text = {
+	name = BA_pad_button4_text
+	text = {
+		trigger = { 
+			tag = TRI
+		}
+		localization_key = BA_pad_button4_text_TRI
+	}
+}
