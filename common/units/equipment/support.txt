@@ -40,7 +40,7 @@ equipments = {
 	}
 
 
-	support_engineer_equipment = { #工程支援装备
+	support_engineer_equipment = { #专用工程器械
 		year = 2000
 
 		is_archetype = yes
@@ -77,14 +77,13 @@ equipments = {
 		priority = 20	
 	}
 
-	support_logistics_equipment = { #工程支援装备
+	support_logistics_equipment = { #专业保障器材
 		year = 2000
 
 		is_archetype = yes
 		picture = archetype_support_logistics_equipment
 		is_buildable = no
 		type = {
-			infantry
 			motorized
 			support
 		}
@@ -114,15 +113,13 @@ equipments = {
 		priority = 20	
 	}
 
-	support_security_equipment = { #工程支援装备
+	support_security_equipment = { #不对称作战装备
 		year = 2000
 
 		is_archetype = yes
 		picture = archetype_support_security_equipment
 		is_buildable = no
 		type = {
-			infantry
-			motorized
 			support
 		}
 		group_by = archetype
