@@ -27,3 +27,21 @@ country_event = {
 		name = CEN.6666.b
 	}
 }
+
+country_event = {
+	id = CEN.15
+	#picture = GFX_common_event_gui_test
+	title = CEN.15.t
+	desc = CEN.15.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN.15.a
+		custom_effect_tooltip = Rins_presidency
+	}
+
+	option = {
+		name = CEN.15.b
+		custom_effect_tooltip = Kayas_presidency
+	}
+}

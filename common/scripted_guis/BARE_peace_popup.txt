@@ -1,0 +1,28 @@
+scripted_gui = {
+	BARE_peace_popup_window = {
+		window_name = "BARE_peace_popup_window"
+		context_type = player_context
+		#parent_window_token = top_bar
+		dirty = global.peace_popup_dirty # Please trigger the dirty var when manually triggering the popup.
+		properties = {
+			flag_1 = {
+				image = "[winning_country.GetFlag]"
+			}
+			flag_2 = {
+				image = "[losing_country.GetFlag]"
+			}
+		}
+		visible = {
+			is_ai = no
+			has_global_flag = show_peace_popup_alert
+		}
+		effects = {
+			close_button_click = {
+				clr_global_for_peace_popup = yes
+				clear_global_event_target = winning_country
+				clear_global_event_target = losing_country
+				add_to_variable = { global.peace_popup_dirty = 1 }
+			}
+		}
+	}
+}
