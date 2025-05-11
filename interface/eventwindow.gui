@@ -24,7 +24,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "top_Window"
 			position = { x=0 y=0 }	
-			size = { width = 740 height =245 }
+			size = { width = 740 height =131 }
 			moveable = yes
 			Orientation = UPPER_LEFT
 
@@ -35,7 +35,7 @@ guiTypes = {
 		
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 170 y = 175 }
+				position = { x = 170 y = 76 }
 				font = "hoi_24header"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
@@ -46,7 +46,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=663 y=70}
+				position = {x=663 y=20}
 				spriteType = "GFX_event_button_minimize"
 				clicksound = click_default
 				pdx_tooltip = "MINIMIZE_EVENT"
@@ -55,7 +55,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "midsection"
-			position = { x=0 y=245 }	
+			position = { x=0 y=131 }	
 			size = { width = 740 height = 70 }
 			moveable = yes
 			clipping = no
@@ -81,7 +81,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "bottom_Window"
 			position = { x=0 y=315 }	
-			size = { width = 740 height = 310 }
+			size = { width = 740 height = 254 }
 			moveable = yes
 			clipping = no
 			Orientation = UPPER_LEFT
@@ -99,7 +99,7 @@ guiTypes = {
 			iconType = {
 				name ="event_picture"
 				spriteType = "GFX_report_event_001"
-				position = { x = 145 y = 25 }
+				position = { x = 150 y = 5 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes				
 			}
@@ -114,7 +114,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 375 y = 30 }
+				position = { x = 375 y = 47 }
 				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1
@@ -490,7 +490,7 @@ guiTypes = {
 			{
 				name ="event_picture"
 				spriteType = "GFX_news_event_001"
-				position = { x = -251 y = 124 }
+				position = { x = -253 y = 124 }
 				Orientation = "UPPER_RIGHT"
 				alwaystransparent = yes
 			}
@@ -566,13 +566,13 @@ guiTypes = {
 		
 		background = {
 			name = "event_option_background"	
-			spriteType ="GFX_event_option_entry"
+			spriteType ="GFX_event_option_entry_1"
 		}
 		
 		instantTextBoxType = {
 			name = "Name"
 			position = { x = 5 y = 2}
-			font = "hoi_20bs"
+			font = "LXGW_975_18bf_b"
 			maxWidth = 340
 			maxHeight = 40
 			format = center

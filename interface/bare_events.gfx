@@ -1,7 +1,12 @@
 spriteTypes = {	
 
 	#### Generic continuous goal icons
-
+	#GUI 
+	
+	SpriteType = {
+		name = "GFX_event_option_entry_1"
+		texturefile = "gfx/interface/event_option_entry_1.dds"			
+	}
 
 	#TRI
 
