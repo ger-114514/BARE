@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+ ###
+ BARE_PEACE_POPUP_TITLE:0 "外交警告"
+ BARE_PEACE_POPUP_FLAVOR:0 "[BARE_PEACE_POPUP_FLAVOR]"
+ BARE_PEACE_POPUP_DESCRIPTION:0 "[BARE_PEACE_POPUP_WAR_DESCRIPTION]"
+ ###
+ BPW_DEFAULT_WAR_DESC:0 "在正在进行的冲突中，§Y[winning_country.GetNameWithFlag]§!在战场上击败了§Y[losing_country.GetNameWithFlag]§!。"
+ BPW_TRI_wins_ARI_in_Total_War_DESC:0 "在属于反抗与解放的冲突中，§Y[winning_country.GetNameWithFlag]§!击败了§Y[losing_country.GetNameWithFlag]§!。"
+
+ ###
+ BPW_DEFAULT_WAR_FLAVOR:0 "狭路相逢勇者胜。"
+ BPW_TRI_wins_ARI_in_Total_War_FLAVOR:0 "恶魔已遭驱逐，但其罪恶仍徘徊人间。"
+ 
+ ###
+ BARE_PEACE_POPUP_CLOSE:0 "尘埃落定…"
