@@ -446,7 +446,7 @@ focus_tree = {
 					factor = 20
 					modifier = {
 						factor = 0
-						date < 2023.7.1
+						date < 2021.7.1
 					}
 				}
 			}
@@ -900,7 +900,7 @@ focus_tree = {
 			}
 			focus = { #争取时间
 				id = TRI_buy_time
-				#icon = 
+				icon = GFX_goal_TRI_buy_time
 				relative_position_id = TRI_love_for_students
 				prerequisite = { focus = TRI_love_for_students }
 				
@@ -2642,7 +2642,7 @@ focus_tree = {
 			}
 			completion_reward = {
 				custom_effect_tooltip = TRI_mass_army_tt
-				add_to_variable = { TRI_trinity_military_can_use_combat_readiness_percentage = 0.05 }
+				add_to_variable = { TRI_trinity_military_conscription_factor = 0.05 }
 				add_to_variable = { TRI_trinity_military_combat_readiness_recovery_percentage = 0.1 }
 				add_to_variable = { TRI_trinity_military_training_time_factor = -0.1 }
 				add_to_variable = { TRI_house_decision_effect_factor = 0.25 }
@@ -2806,7 +2806,7 @@ focus_tree = {
 					bonus = 0.5
 				}
 				custom_effect_tooltip = TRI_orderly_mobilization_tt
-				add_to_variable = { TRI_trinity_military_can_use_combat_readiness_percentage = 0.05 }
+				add_to_variable = { TRI_trinity_military_conscription_factor = 0.05 }
 				add_to_variable = { TRI_trinity_military_mobilization_speed = 0.05 }
 			}			
 		}

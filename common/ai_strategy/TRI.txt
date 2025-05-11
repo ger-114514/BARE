@@ -1,0 +1,156 @@
+TRI_unit_production = {
+
+	allowed = {	original_tag = TRI }
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 300
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 140
+		value = -20
+	}
+	ai_strategy = {
+		type = factory_build_score_factor
+		target = 529
+		value = -20
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 70
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 50
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 30
+	}
+}
+TRI_armored_production = {
+	enable = {
+		original_tag = TRI
+		num_of_military_factories > 69
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+}
+TRI_after_arius_coup = {
+	allowed = {	original_tag = TRI }
+	enable = {
+		has_country_flag = TRI_mika_arrested
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = antagonize
+		id = ARI
+		value = 1000
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 30
+	}
+	ai_strategy = {
+		type = building_target
+		id = heavy_arms_factory
+		value = 30
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 20
+	}
+}
+TRI_before_eden_negotiation = {
+	allowed = {	original_tag = TRI }
+	enable = {
+		NOT = { has_global_flag = BA_2st_eden_pact_begin }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = prepare_for_war
+		id = GEH
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 50
+	}
+}
+TRI_before_eden_signed = {
+	allowed = {	original_tag = TRI }
+	enable = {
+		has_global_flag = Eden_treaty_negotiation_completed
+		NOT = { has_global_flag = Eden_treaty_has_been_signed }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = area_priority
+		id = around_ancient_cathedral
+		value = 50
+	}
+}

@@ -147,10 +147,21 @@ country_event = {
 country_event = {
 	id = TRI_region.2
 	title = TRI_region.2.t
-	desc = TRI_region.2.desc
+	desc = {
+		text = TRI_region.2.desc.a
+		trigger = {
+			NOT = { has_country_flag = TRI_region_2_fired }
+		}
+	}
+	desc = {
+		text = TRI_region.2.desc.b
+	}
 	is_triggered_only = yes
 	option = {
 		name = TRI_region.2.a
+		trigger = {
+			NOT = { has_country_flag = TRI_region_2_fired }
+		}
 		for_each_loop = {
 			array = TRI_regions
 			value = region
@@ -180,6 +191,42 @@ country_event = {
 				days = 60
 				random_days = 10
 			}
+			set_country_flag = TRI_region_2_fired
+		}
+	}
+	option = {
+		name = TRI_region.2.b
+		trigger = { has_country_flag = TRI_region_2_fired }
+		for_each_loop = {
+			array = TRI_regions
+			value = region
+			add_to_temp_array = { regions_stability = region_stability@var:region }
+		}
+		find_lowest_in_array = {
+			array = regions_stability
+			index = i
+		}
+		set_temp_variable = { region = TRI_regions^i }
+		custom_effect_tooltip = TRI_region_2_tt
+		hidden_effect = {
+			set_temp_variable = { stability_change = 0.1 }
+			TRI_change_region_stability = yes
+
+			set_temp_variable = { association = token:TRI_parliament_association_3 }
+			set_temp_variable = { influence_change = 15 }
+			TRI_change_region_association_influence = yes
+		}
+		set_country_flag = {
+			flag = TRI_region_event_2_cd
+			days = 360
+		}
+		hidden_effect = {
+			country_event = {
+				id = TRI_region.0
+				days = 60
+				random_days = 10
+			}
+			set_country_flag = TRI_region_2_fired
 		}
 	}
 }

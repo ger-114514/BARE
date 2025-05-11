@@ -1,0 +1,67 @@
+ai_focus_defense_TRI = {
+	research = {
+		defensive = 5.0	
+		electronics = 1.0
+		construction_tech = 2.0
+		fire_support = 2.0
+	}
+}
+
+ai_focus_aggressive_TRI = {
+	research = {
+		offensive = 5.0
+		synth_resources = 1.0
+		ifv = 2.0
+		apc = 2.0
+		armor = 2.0
+	}
+}
+
+ai_focus_war_production_TRI = {
+	research = {
+		industry = 10.0
+		construction_tech = 2.0
+		electronics = 2.0
+	}
+}
+
+ai_focus_military_equipment_TRI = {
+	research = {
+		infantry_weapons = 50.0
+		fire_support = 8.0
+		support_all = 6.5
+	}
+}
+
+ai_focus_military_advancements_TRI = {
+	research = {
+		armor = 12.0
+		land_doctrine = 100.0
+		electronics = 5.0
+		synth_resources = 3.0
+		ifv = 4.0
+		apc = 4.0
+		industry = 2.0
+	}
+}
+
+
+ai_focus_peaceful_TRI = {
+	research = {
+		industry = 15.0
+		construction_tech = 5.0
+		electronics = 10.0
+	}
+}
+
+ai_focus_aviation_TRI = {
+	research = {
+		air_doctrine = 50.0
+		small_uav = 20.0
+		fight_uav = 20.0
+		cas_uav = 2.0		
+		meidum_uav = 4.0
+		heavy_uav = 1.5
+		uav_upgrade = 5.0
+	}
+}
