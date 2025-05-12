@@ -142,7 +142,7 @@ add_ideas = ARI_unclear_target
 	set_variable = { ARI_broken_provisioning_system_stability_factor = -0.15 }
 	set_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = -0.2 }
 	set_variable = { ARI_broken_provisioning_system_consumer_goods_factor = 0.2 }
-	set_variable = { ARI_broken_provisioning_system_conscription_factor = -0.2 }
+	set_variable = { ARI_broken_provisioning_system_combat_readiness_factor = -0.2 }
 # #改宗兵制度
 # 	set_variable = { ARI_converts_army_army_org_factor = -0.1 }
 # 	set_variable = { ARI_converts_army_army_org_regain = -0.1 }

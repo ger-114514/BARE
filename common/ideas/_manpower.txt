@@ -22,7 +22,7 @@
 
 # 				can_use_combat_readiness_percentage = 0.1 #可动员战备比例
 # 				free_cost_combat_readiness_percentage = 0.05 #免费战备比例
-# 				conscription_factor = 0.1
+# 				combat_readiness_factor = 0.1
 # 				free_cost_combat_readiness = 2 #免惩罚占用战备
 
 # 				combat_readiness_recovery_percentage = 0.2 #战备恢复速度比例
@@ -93,7 +93,9 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.05 #战备系数
+				 #战备系数
+
+				combat_readiness_factor = 0.05 #战备系数
 				can_use_combat_readiness_percentage = 0.01 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.01 #常备战备比例
 				free_cost_combat_readiness = 20 #额外常备战备值（k）
@@ -124,7 +126,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.1 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.1 #战备系数
 				can_use_combat_readiness_percentage = 0.1 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.05 #常备战备比例
 				free_cost_combat_readiness = 2 #额外常备战备值（k）
@@ -156,7 +159,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.15 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.15 #战备系数
 				can_use_combat_readiness_percentage = 0.1 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.05 #常备战备比例
 				free_cost_combat_readiness = 2 #额外常备战备值（k）
@@ -184,7 +188,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.2 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.2 #战备系数
 				can_use_combat_readiness_percentage = 0.15 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.1 #常备战备比例
 				free_cost_combat_readiness = 2 #额外常备战备值（k）
@@ -211,7 +216,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.25 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.25 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.1 #常备战备比例
 				free_cost_combat_readiness = 1 #额外常备战备值（k）
@@ -238,7 +244,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.3 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.3 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.15 #常备战备比例
 				free_cost_combat_readiness = 1 #额外常备战备值（k）
@@ -268,7 +275,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.4 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.4 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.2 #常备战备比例
 				free_cost_combat_readiness = 1 #额外常备战备值（k）
@@ -310,7 +318,8 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.4 #战备系数
+				 #战备系数
+				combat_readiness_factor = 0.4 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.2 #常备战备比例
 				free_cost_combat_readiness = 1 #额外常备战备值（k）
