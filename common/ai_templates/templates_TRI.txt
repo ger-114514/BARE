@@ -248,13 +248,6 @@ infantry_TRI = {
 				factor = 1
 			}
 		}
-		production_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 1
-			}
-		}
 		
 		target_template = {
 			
@@ -308,7 +301,7 @@ infantry_TRI = {
 	infantry_advanced_TRI = {
 	
 		upgrade_prio = {
-			factor = 5
+			factor = 1
 
 			modifier = {
 				factor = 0
