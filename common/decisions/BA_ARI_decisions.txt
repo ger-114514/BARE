@@ -3100,14 +3100,14 @@ ARI_deal_with_shortage_decisions = {
 		modifier = {
 			stability_factor = -0.1
 			industrial_capacity_factory = -0.2
-			conscription_factor = -0.2
+			combat_readiness_factor = -0.2
 		}
 		remove_effect = {
 			subtract_from_variable = { ARI_deal_with_shortage_decisions_count = 1 }
 			custom_effect_tooltip = ARI_emergency_allocation_tt
 			add_to_variable = { ARI_broken_provisioning_system_stability_factor = 0.05 }
 			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
-			add_to_variable = { ARI_broken_provisioning_system_conscription_factor = 0.1 }
+			add_to_variable = { ARI_broken_provisioning_system_combat_readiness_factor = 0.1 }
 		}
 		ai_will_do = {
 			base = 100
@@ -3138,7 +3138,7 @@ ARI_deal_with_shortage_decisions = {
 			custom_effect_tooltip = ARI_earn_Trinity_supply_tt
 			add_to_variable = { ARI_broken_provisioning_system_industrial_capacity_factory = 0.05 }
 			add_to_variable = { ARI_broken_provisioning_system_consumer_goods_factor = -0.05 }
-			add_to_variable = { ARI_broken_provisioning_system_conscription_factor = 0.05 }
+			add_to_variable = { ARI_broken_provisioning_system_combat_readiness_factor = 0.05 }
 		}
 		ai_will_do = {
 			base = 100

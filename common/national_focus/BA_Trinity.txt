@@ -140,7 +140,7 @@ focus_tree = {
 
 					hidden_effect = {
 						add_to_variable = { eden_stability = -0.05 }
-						add_to_variable = { eden_conscription_factor = 0.10 }
+						add_to_variable = { eden_combat_readiness_factor = 0.10 }
 					}
 					custom_effect_tooltip = eden_step_0_authorize_eagle
 					
@@ -2642,7 +2642,7 @@ focus_tree = {
 			}
 			completion_reward = {
 				custom_effect_tooltip = TRI_mass_army_tt
-				add_to_variable = { TRI_trinity_military_conscription_factor = 0.05 }
+				add_to_variable = { TRI_trinity_military_combat_readiness_factor = 0.05 }
 				add_to_variable = { TRI_trinity_military_combat_readiness_recovery_percentage = 0.1 }
 				add_to_variable = { TRI_trinity_military_training_time_factor = -0.1 }
 				add_to_variable = { TRI_house_decision_effect_factor = 0.25 }
@@ -2668,7 +2668,7 @@ focus_tree = {
 			}
 			completion_reward = {
 				custom_effect_tooltip = TRI_elite_army_tt
-				add_to_variable = { TRI_trinity_military_conscription_factor = -0.1 }
+				add_to_variable = { TRI_trinity_military_combat_readiness_factor = -0.1 }
 				add_to_variable = { TRI_trinity_military_army_org_regain = 0.1 }
 				add_to_variable = { TRI_trinity_military_training_time_factor = 0.2 }
 				add_to_variable = { TRI_trinity_military_minimum_training_level = 0.15 }
@@ -2806,7 +2806,7 @@ focus_tree = {
 					bonus = 0.5
 				}
 				custom_effect_tooltip = TRI_orderly_mobilization_tt
-				add_to_variable = { TRI_trinity_military_conscription_factor = 0.05 }
+				add_to_variable = { TRI_trinity_military_combat_readiness_factor = 0.05 }
 				add_to_variable = { TRI_trinity_military_mobilization_speed = 0.05 }
 			}			
 		}

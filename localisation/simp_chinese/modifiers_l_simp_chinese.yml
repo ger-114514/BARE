@@ -591,12 +591,12 @@
  MODIFIER_MAX_TRAINING_XP_FACTOR: "最大训练"
  MODIFIER_MIN_EXPORT_FACTOR: "出口资源"
  min_export_tt: "$MODIFIER_MIN_EXPORT_FACTOR$：$RIGHT|Y=%1$"
- MODIFIER_CONSCRIPTION_FACTOR: "战备值"
- MODIFIER_CONSCRIPTION_FACTOR_DESC: "可以从各地获取的战备值量。"
- conscription_tt: "$MODIFIER_CONSCRIPTION_FACTOR$：$RIGHT|Y=%1$"
+ MODIFIER_combat_readiness_factor: "战备值"
+ MODIFIER_combat_readiness_factor_DESC: "可以从各地获取的战备值量。"
+ conscription_tt: "$MODIFIER_combat_readiness_factor$：$RIGHT|Y=%1$"
  MODIFIER_CONSCRIPTION_TOTAL_FACTOR: "战备值系数"
  MODIFIER_CONSCRIPTION_TOTAL_FACTOR_DESC: "改变可以从各地获取的战备值量。"
- conscription_factor_tt: "$MODIFIER_CONSCRIPTION_TOTAL_FACTOR$：$RIGHT|+=%1$"
+ combat_readiness_factor_tt: "$MODIFIER_CONSCRIPTION_TOTAL_FACTOR$：$RIGHT|+=%1$"
  MODIFIER_TRADE_OPINION_FACTOR: "贸易影响力系数"
  MODIFIER_TRADE_OPINION_FACTOR_DESC: "贸易影响力的修正系数"
  MODIFIER_FACTION_TRADE_OPINION_FACTOR: "阵营贸易影响力系数"
@@ -2360,3 +2360,4 @@ free_cost_combat_readiness_percentage: "常备战备比例" #将获得一部分�
 free_cost_combat_readiness: "额外常备战备值(K)" #上面的数值版，单位是千
 combat_readiness_recovery_percentage: "战备恢复速度" #每个月恢复的战备值的修正，基础值是最大战备上限的1%加战备缺口的8%
 combat_readiness_recovery: "每月额外恢复战备值(K)" #上面的数值版，单位是千
+combat_readiness_factor: "战备比例" #适役人口比例

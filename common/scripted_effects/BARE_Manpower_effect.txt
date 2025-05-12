@@ -38,7 +38,7 @@ BARE_Combat_Readiness_count_State = { #手动计算可服役人口
 			PREV.BARE_Combat_Readiness_State_K_modifier_conscription_temp  = modifier@can_use_combat_readiness_percentage
 		}
 		set_temp_variable = { #人口
-			PREV.BARE_Combat_Readiness_State_K_modifier_count_country_temp = modifier@conscription_factor
+			PREV.BARE_Combat_Readiness_State_K_modifier_count_country_temp = modifier@combat_readiness_factor
 		}
 		add_to_temp_variable = {
 			PREV.BARE_Combat_Readiness_State_K_modifier_count_country_temp = 1
@@ -1114,7 +1114,7 @@ BARE_Combat_Readiness_Start_Manpower_Count = {
 		limit = {
 			has_idea = BARE_Combat_Readiness_Start_Idea
 		}
-		remove_ideas = BARE_Combat_Readiness_Start_Idea
+		add_ideas = BARE_Combat_Readiness_End_Idea
 		add_ideas = BARE_Combat_Readiness_Mid_Idea
 		set_temp_variable = {
 			BARE_Combat_Readiness_Start_Manpower_Count_K = manpower_k

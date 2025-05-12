@@ -77,3 +77,11 @@ BARE_BD_Research_limit = {
 	precision = 0
 	category = country
 }
+
+#战备修正
+combat_readiness_factor = {
+    color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}

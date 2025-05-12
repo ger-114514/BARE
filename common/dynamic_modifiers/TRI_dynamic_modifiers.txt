@@ -43,7 +43,7 @@ eden_treaty_step_0_modifier = { #【争辩无休的《伊甸条约》方针】
 	research_speed_factor = eden_research_speed
 
 	#军队方面
-	conscription_factor = eden_conscription_factor
+	combat_readiness_factor = eden_combat_readiness_factor
 }
 
 eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
@@ -63,7 +63,7 @@ eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
 	research_speed_factor = eden_research_speed
 
 	#军队方面
-	conscription_factor = eden_conscription_factor
+	combat_readiness_factor = eden_combat_readiness_factor
 }
 
 eden_treaty_step_2_modifier = { #【方略周详的《伊甸条约》方针】
@@ -83,7 +83,7 @@ eden_treaty_step_2_modifier = { #【方略周详的《伊甸条约》方针】
 	research_speed_factor = eden_research_speed
 
 	#军队方面
-	conscription_factor = eden_conscription_factor
+	combat_readiness_factor = eden_combat_readiness_factor
 }
 
 eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
@@ -103,7 +103,7 @@ eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
 	research_speed_factor = eden_research_speed
 
 	#军队方面
-	conscription_factor = eden_conscription_factor
+	combat_readiness_factor = eden_combat_readiness_factor
 }
 
 eden_treaty_step_4_modifier = { #【濒临破灭的《伊甸条约》】
@@ -351,7 +351,7 @@ TRI_trinity_military = {
 	icon = "GFX_idea_unknown"
 	mobilization_speed = TRI_trinity_military_mobilization_speed
 	consumer_goods_factor = TRI_trinity_military_consumer_goods_factor
-	conscription_factor = TRI_trinity_military_conscription_factor
+	combat_readiness_factor = TRI_trinity_military_combat_readiness_factor
 	combat_readiness_recovery_percentage = TRI_trinity_military_combat_readiness_recovery_percentage
 	can_use_combat_readiness_percentage = TRI_trinity_military_can_use_combat_readiness_percentage
 	land_doctrine_cost_factor = TRI_trinity_military_land_doctrine_cost_factor

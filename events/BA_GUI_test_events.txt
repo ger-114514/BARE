@@ -43,3 +43,17 @@ country_event = {
 		name = gui_event_test.1.a
 	}
 }
+
+##测试外交警告用弹窗，勿动
+country_event = {  
+	id = gui_event_test.2
+	picture = GFX_common_event_gui_test
+	title = gui_event_test.2.t
+	desc = gui_event_test.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = gui_event_test.2.a
+		TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
+	}
+}

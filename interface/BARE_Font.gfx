@@ -460,6 +460,26 @@ bitmapfonts = { # 界面字体
 			r = {142 91 56}
 		}
 	}
+
+		bitmapfont = {
+		name = "LXGW_975_18bf_b"
+		fontfiles = { 
+			"gfx/fonts/LXGW_975_18bf"
+		}
+		color = 0xff525252
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 203 35 }
+			T = { 131 131 131 }
+			N = { 48 152 255}
+			P = { 255 155 181 }
+			p = { 136 0 230 }
+			L = {50 50 50}
+			r = {142 91 56}
+		}
+	}
 	bitmapfont = {
 		name = "LXGW_975_20"
 		fontfiles = { 

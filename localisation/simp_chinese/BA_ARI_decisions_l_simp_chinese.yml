@@ -142,10 +142,10 @@
  ARI_spread_production_technologies_tt: "§Y$ARI_broken_provisioning_system$§!追加效果：\n $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：§G+10.0%§!\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-5.0%§!"
  ARI_emergency_allocation: "紧急配给政策"
  ARI_emergency_allocation_desc: "虽然我们平时的物资补给就是卡着基本所需的下限来发放的，但如果是特殊时期，配给其实还有下降的空间，制定临时的配给政策尽管会影响我们的生产，但会给我们争取解决问题的时间。"
- ARI_emergency_allocation_tt: "§Y$ARI_broken_provisioning_system$§!追加效果：\n $MODIFIER_STABILITY_FACTOR$：§G+5.0%§!\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-5.0%§!\n $MODIFIER_CONSCRIPTION_FACTOR$：§G+10.0%§!"
+ ARI_emergency_allocation_tt: "§Y$ARI_broken_provisioning_system$§!追加效果：\n $MODIFIER_STABILITY_FACTOR$：§G+5.0%§!\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-5.0%§!\n $MODIFIER_combat_readiness_factor$：§G+10.0%§!"
  ARI_earn_Trinity_supply: "争取更多圣三一补给"
  ARI_earn_Trinity_supply_trigger_tt: "由于未建立§Y圣三一分部§!，该决议需要额外§Y75§!政治点数！"
- ARI_earn_Trinity_supply_tt: "§Y$ARI_broken_provisioning_system$§!追加效果：\n $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：§G+5.0%§!\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-5.0%§!\n $MODIFIER_CONSCRIPTION_FACTOR$：§G+5.0%§!"
+ ARI_earn_Trinity_supply_tt: "§Y$ARI_broken_provisioning_system$§!追加效果：\n $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：§G+5.0%§!\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-5.0%§!\n $MODIFIER_combat_readiness_factor$：§G+5.0%§!"
 
  ARI_raw_material_decisions: "解决原料问题"
  ARI_processing_factories: "建设加工厂"

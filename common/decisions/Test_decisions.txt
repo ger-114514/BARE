@@ -104,6 +104,12 @@ Test_time_decisions_categories = {
 			}
 		}
 	}
+
+	Test_open_gui = {
+		complete_effect = {
+			set_country_flag = BA_show_welcome_splash
+		}
+	}
 	Test_log = {
 		complete_effect = {
 

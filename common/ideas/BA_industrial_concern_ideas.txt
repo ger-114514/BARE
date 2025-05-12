@@ -1,0 +1,175 @@
+ideas = {
+
+    industrial_concern = {
+        # 通用工业企业
+        ba_angel_24_enterprise = {
+            allowed = {
+                not = {
+                    original_tag = ARI
+                }
+            }
+            research_bonus = {
+                industry = 0.10
+            }
+            traits = { industrial_concern }
+            modifier = {
+                production_speed_buildings_factor = 0.05
+            }
+        }
+
+        ba_kaiser_outsourcing_heavy_industry = {
+            allowed = {
+                not = {
+                    original_tag = ARI
+                }
+            }
+            traits = { industrial_concern }
+            modifier = {
+                local_resources_factor = 0.15
+            }
+        }
+
+        ba_electric_fire_society = {
+            allowed = {
+                not = {
+                    original_tag = ARI
+                }
+            }
+            research_bonus = {
+                electronics = 0.10
+            }
+            traits = { electronics_concern }
+            modifier = {
+                research_speed_factor = 0.05
+            }
+        }
+
+        ba_momo_enterprise = {
+            allowed = {
+                not = {
+                    original_tag = ARI
+                }
+            }
+            traits = { industrial_concern }
+            modifier = {
+                political_power_factor = 0.15
+                stability_weekly = 0.005
+            }
+        }
+
+        ba_highland_local_depot = {
+            allowed = {
+                not = {
+                    original_tag = ARI
+                }
+            }
+            traits = { railway_company }
+            modifier = {
+                state_production_speed_rail_way_factor   = 0.15
+                state_production_speed_infrastructure_factor  = 0.10
+            }
+            equipment_bonus = {
+                train_equipment ={
+                    build_cost_ic = -0.20
+                }
+            }
+        }
+
+        ba_octopus_bank = {
+            allowed = {
+                not = {
+                    original_tag = ARI
+                }
+            }
+            traits = { industrial_concern }
+            modifier = {
+                political_power_factor = -0.20
+                consumer_goods_factor = -0.25
+            }
+        }
+        # 专属工业企业
+        ba_gehenna_onsen_development = {
+            allowed = {
+                original_tag = GEH
+            }
+            traits = { industrial_concern }
+            modifier = {
+                political_power_factor = -0.10
+                production_speed_buildings_factor = 0.15
+            }
+        }
+
+        ba_trinity_tea_chain = {
+            allowed = {
+                original_tag = TRI
+            }
+            traits = { industrial_concern }
+            modifier = {
+                stability_weekly = 0.01
+                consumer_goods_factor = 0.10
+            }
+        }
+
+        ba_millennium_engineering_construction = {
+            allowed = {
+                original_tag = MIL
+            }
+            traits = { industrial_concern }
+            modifier = {
+                production_speed_buildings_factor = 0.25
+            }
+            research_bonus = {
+                industry = -0.10
+            }
+        }
+
+        ba_millennium_truth_security_research = {
+            allowed = {
+                original_tag = MIL
+            }
+            research_bonus = {
+                electronics = 0.20
+            }
+            traits = { electronics_concern }
+            modifier = {
+            }
+        }
+
+        ba_arius_construction_team_213 = {
+            allowed = {
+                original_tag = ARI
+            }
+            traits = { industrial_concern }
+            modifier = {
+                production_speed_buildings_factor = 0.15
+                weekly_manpower = -300
+            }
+        }
+
+        ba_arius_research_group_18 = {
+            allowed = {
+                original_tag = ARI
+            }
+            research_bonus = {
+                industry = 0.10
+            }
+            traits = { industrial_concern }
+            modifier = {
+                weekly_manpower = -300
+            }
+        }
+
+        ba_arius_electrical_team_44 = {
+            allowed = {
+                original_tag = ARI
+            }
+            research_bonus = {
+                electronics = 0.15
+            }
+            traits = { electronics_concern }
+            modifier = {
+                weekly_manpower = -300
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ ideas = {
 			picture = unkown
 
 			modifier = {
-				conscription_factor = 0.2 #战备上限
+				combat_readiness_factor = 0.2 #战备上限
 				land_reinforce_rate = 0.05 #增援率
 				army_strength_factor = 0.1 #陆军生命值
 				stability_factor = 1 #稳定度

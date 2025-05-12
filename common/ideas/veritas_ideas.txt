@@ -8,6 +8,14 @@ ideas = {
                 conscription = 1
             }
 		}
+		BARE_Combat_Readiness_End_Idea = { #你们只需要上一天班
+            allowed = {
+                always = no
+            }
+			modifier = {
+                conscription_factor  = -10
+            }
+		}
 		BARE_Combat_Readiness_Mid_Idea = { #然后就给我滚回家
 			allowed = {
 				always = no

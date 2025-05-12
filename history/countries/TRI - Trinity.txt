@@ -460,7 +460,7 @@ set_variable = { eden_stability = -0.15 }
 set_variable = { eden_goods_factor = 0.20 }
 set_variable = { eden_war_support = 0 }
 set_variable = { eden_research_speed = 0 }
-set_variable = { eden_conscription_factor = 0 }
+set_variable = { eden_combat_readiness_factor = 0 }
 
 #【濒临破灭的《伊甸条约》】及其后续的全部民族精神变量
 set_variable = { eden_broken_daily_power_gain = -0.5 }

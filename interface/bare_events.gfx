@@ -1,7 +1,12 @@
 spriteTypes = {	
 
 	#### Generic continuous goal icons
-
+	#GUI 
+	
+	SpriteType = {
+		name = "GFX_event_option_entry_1"
+		texturefile = "gfx/interface/event_option_entry_1.dds"			
+	}
 
 	#TRI
 
@@ -14,5 +19,14 @@ spriteTypes = {
 		name = "GFX_news_event_eden_pact_ruin"
 		texturefile = "gfx/event_pictures/news_event/news_event_eden_pact_ruin.dds"			
 	}
+	#ari
+	SpriteType = {
+		name = "GFX_news_event_eden_pact_attack"
+		texturefile = "gfx/event_pictures/news_event/news_event_eden_pact_attack.dds"			
+	}
 
+	SpriteType = {
+		name = "GFX_event_ARI_beatrice_operations_20_event_pic"
+		texturefile = "gfx/event_pictures/Arisu/ARI_beatrice_operations_20_event_pic.dds"			
+	}
 }

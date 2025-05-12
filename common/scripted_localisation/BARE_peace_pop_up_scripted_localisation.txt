@@ -1,0 +1,45 @@
+##注意了！分为标题、描述、评价3个主干！
+##独特结算需要如示例进行独特定义
+##不可以动最下方的DEFAULT文本，这是必须有的默认文本。
+
+##描述
+defined_text = {
+	name = BARE_PEACE_POPUP_WAR_DESCRIPTION
+	##示例：圣三一战胜了阿里乌斯
+	text = {
+		trigger = {
+			event_target:winning_country = {
+				tag = TRI
+			}
+			event_target:losing_country = {
+				tag = ARI
+			}
+		}
+		localization_key = BPW_TRI_wins_ARI_in_Total_War_DESC
+	}
+	
+	text = {
+	    localization_key = BPW_DEFAULT_WAR_DESC
+	}
+}
+
+
+##评语
+defined_text = {
+	name = BARE_PEACE_POPUP_FLAVOR
+	text = {
+		trigger = {
+			event_target:winning_country = {
+				tag = TRI
+			}
+			event_target:losing_country = {
+				tag = ARI
+			}
+		}
+		localization_key = BPW_TRI_wins_ARI_in_Total_War_FLAVOR
+	}
+	##默认##
+	text = {
+	    localization_key = BPW_DEFAULT_WAR_FLAVOR
+	}
+}

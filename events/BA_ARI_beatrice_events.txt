@@ -872,9 +872,18 @@ country_event = {
     id = ARI_beatrice_operations.20
     title = ARI_beatrice_operations.20.t
     desc = ARI_beatrice_operations.20.desc
-    #picture =
+    picture = GFX_event_ARI_beatrice_operations_20_event_pic
 
     is_triggered_only = yes
+    option = {
+        name = ARI_beatrice_operations.20.a
+    }
+    option = {
+        name = ARI_beatrice_operations.20.a
+    }
+    option = {
+        name = ARI_beatrice_operations.20.a
+    }
     option = {
         name = ARI_beatrice_operations.20.a
     }
