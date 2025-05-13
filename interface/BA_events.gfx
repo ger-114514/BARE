@@ -4,19 +4,95 @@ spriteTypes = {
 	#GEH
 
 	SpriteType = {
-		name = "GFX_daily_news_event_1"
+		name = "GFX_GEH_daily_news_event_1"
 		texturefile = "gfx/interface/GEH/GFX_daily_news_event_1.dds"			
 	}
 	SpriteType = {
-		name = "GFX_daily_news_event_2"
+		name = "GFX_GEH_daily_news_event_2"
 		texturefile = "gfx/interface/GEH/GFX_daily_news_event_2.dds"			
 	}
 	SpriteType = {
-		name = "GFX_daily_news_event_3"
+		name = "GFX_GEH_daily_news_event_3"
 		texturefile = "gfx/interface/GEH/GFX_daily_news_event_3.dds"			
 	}
 		SpriteType = {
-		name = "GFX_daily_news_event_4"
+		name = "GFX_GEH_daily_news_event_4"
 		texturefile = "gfx/interface/GEH/GFX_daily_news_event_4.dds"			
 	}		
+
+	#TRI & ARI 混用（ 
+	#本来就是一家嘛（
+	#对吧（
+
+	SpriteType = {
+		name = "GFX_TRI_event_1"
+		texturefile = "gfx/interface/TRI/TRI_news_event_1"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_2"
+		texturefile = "gfx/interface/TRI/TRI_news_event_2"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_3"
+		texturefile = "gfx/interface/TRI/TRI_news_event_3"			
+	}
+		SpriteType = {
+		name = "GFX_TRI_event_4"
+		texturefile = "gfx/interface/TRI/TRI_news_event_4"			
+	}		
+		SpriteType = {
+		name = "GFX_TRI_event_5"
+		texturefile = "gfx/interface/TRI/TRI_news_event_5"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_6"
+		texturefile = "gfx/interface/TRI/TRI_news_event_6"		
+			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_7"
+		texturefile = "gfx/interface/TRI/TRI_news_event_7"		
+			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_8"
+		texturefile = "gfx/interface/TRI/TRI_news_event_8"		
+			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_9"
+		texturefile = "gfx/interface/TRI/TRI_news_event_9"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_10"
+		texturefile = "gfx/interface/TRI/TRI_news_event_10"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_11"
+		texturefile = "gfx/interface/TRI/TRI_news_event_11"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_12"
+		texturefile = "gfx/interface/TRI/TRI_news_event_12"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_13"
+		texturefile = "gfx/interface/TRI/TRI_news_event_13"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_14"
+		texturefile = "gfx/interface/TRI/TRI_news_event_14"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_15"
+		texturefile = "gfx/interface/TRI/TRI_news_event_15"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_16"
+		texturefile = "gfx/interface/TRI/TRI_news_event_16"			
+	}	
+		SpriteType = {
+		name = "GFX_TRI_event_17"
+		texturefile = "gfx/interface/TRI/TRI_news_event_17"			
+	}	
 }
