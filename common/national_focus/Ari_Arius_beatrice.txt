@@ -340,7 +340,7 @@ focus_tree = {
 	focus = {
 		#渴望突破
 		id = ARI_desiring_breakthrough
-		#icon = 
+		icon = GFX_focus_ARI_desiring_breakthrough
 		cost = 3
 		relative_position_id = ARI_justyna_projection
 		prerequisite = {
@@ -389,7 +389,7 @@ focus_tree = {
 	focus = {
 		#研究圣三一的典籍
 		id = ARI_research_trinity_books
-		#icon = 
+		icon = GFX_focus_ARI_research_trinity_books
 		cost = 3
 		relative_position_id = ARI_desiring_breakthrough
 		prerequisite = {
@@ -432,7 +432,7 @@ focus_tree = {
 	focus = {
 		#共享“崇高”的知识
 		id = ARI_share_highest_knowledge
-		#icon = 
+		icon = GFX_focus_ARI_share_highest_knowledge
 		cost = 3
 		relative_position_id = ARI_research_trinity_books
 		prerequisite = {
@@ -479,7 +479,7 @@ focus_tree = {
 	focus = {
 		#圣徒会与“契约”？
 		id = ARI_mystery_and_contrast
-		#icon = 
+		icon = GFX_focus_ARI_mystery_and_contrast
 		cost = 3
 		relative_position_id = ARI_research_trinity_books
 		prerequisite = {
@@ -523,7 +523,7 @@ focus_tree = {
 	focus = {
 		#为“投影”更换新设备
 		id = ARI_new_weapon_for_projection
-		#icon = 
+		icon = GFX_focus_ARI_new_weapon_for_projection
 		cost = 3
 		relative_position_id = ARI_research_trinity_books
 		prerequisite = {
@@ -566,7 +566,7 @@ focus_tree = {
 	focus = {
 		#“神秘”的投影
 		id = ARI_projection_of_mystery
-		#icon = 
+		icon = GFX_focus_ARI_projection_of_mystery
 		cost = 3
 		relative_position_id = ARI_new_weapon_for_projection
 		prerequisite = {
@@ -609,7 +609,7 @@ focus_tree = {
 	focus = {
 		#仪式准备
 		id = ARI_preparation_of_ritual
-		#icon = 
+		icon = GFX_focus_ARI_preparation_of_ritual
 		cost = 3
 		relative_position_id = ARI_projection_of_mystery
 		prerequisite = {
@@ -655,7 +655,7 @@ focus_tree = {
 	focus = {
 		#仪式实验
 		id = ARI_experiment_of_ritual
-		#icon = 
+		icon = GFX_focus_ARI_experiment_of_ritual
 		cost = 3
 		relative_position_id = ARI_projection_of_mystery
 		prerequisite = {
@@ -699,7 +699,7 @@ focus_tree = {
 	focus = {
 		#准备决战兵器
 		id = ARI_prepare_the_final_weapon
-		#icon = 
+		icon = GFX_focus_ARI_prepare_the_final_weapon
 		cost = 3
 		relative_position_id = ARI_projection_of_mystery
 		prerequisite = {
@@ -762,7 +762,7 @@ focus_tree = {
 	focus = {
 		#最后一步
 		id = ARI_the_final_step
-		#icon = 
+		icon = GFX_focus_ARI_the_final_step
 		cost = 3
 		relative_position_id = ARI_prepare_the_final_weapon
 		prerequisite = {
@@ -3561,7 +3561,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯武装学生部队
 		id = ARI_armed_students
-		#icon = 
+		icon = GFX_focus_ARI_armed_students
 		relative_position_id = ARI_restructure_teams
 		prerequisite = {
 			focus = ARI_restructure_teams
@@ -3582,7 +3582,7 @@ focus_tree = {
 	focus = {
 		#保证指挥官的能力
 		id = ARI_commander_ability
-		#icon = 
+		icon = GFX_focus_ARI_commander_ability
 		relative_position_id = ARI_armed_students
 		prerequisite = {
 			focus = ARI_armed_students
@@ -3610,7 +3610,7 @@ focus_tree = {
 	focus = {
 		#新指挥官课程
 		id = ARI_commander_lessons
-		#icon = 
+		icon = GFX_focus_ARI_commander_lessons
 		relative_position_id = ARI_commander_ability
 		prerequisite = {
 			focus = ARI_commander_ability
@@ -3646,7 +3646,7 @@ focus_tree = {
 	focus = {
 		#能者自有奖赏
 		id = ARI_reward_the_capable
-		#icon = 
+		icon = GFX_focus_ARI_reward_the_capable
 		relative_position_id = ARI_commander_lessons
 		prerequisite = {
 			focus = ARI_commander_lessons
@@ -3683,7 +3683,7 @@ focus_tree = {
 	focus = {
 		#指挥保障队
 		id = ARI_support_troops
-		#icon = 
+		icon = GFX_focus_ARI_support_troops
 		relative_position_id = ARI_reward_the_capable
 		prerequisite = {
 			focus = ARI_reward_the_capable
@@ -3744,7 +3744,7 @@ focus_tree = {
 	focus = {
 		#复仇驱动前进
 		id = ARI_driven_by_revanchism
-		#icon = 
+		icon = GFX_focus_ARI_driven_by_revanchism
 		relative_position_id = ARI_armed_students
 		prerequisite = {
 			focus = ARI_armed_students
@@ -3772,7 +3772,7 @@ focus_tree = {
 	focus = {
 		#额外战术课程
 		id = ARI_popularize_tactic_lessons
-		#icon = 
+		icon = GFX_focus_ARI_popularize_tactic_lessons
 		relative_position_id = ARI_driven_by_revanchism
 		prerequisite = {
 			focus = ARI_driven_by_revanchism
@@ -3799,7 +3799,7 @@ focus_tree = {
 	focus = {
 		#共同的复仇意志
 		id = ARI_spirit_of_revenge
-		#icon = 
+		icon = GFX_focus_ARI_spirit_of_revenge
 		relative_position_id = ARI_popularize_tactic_lessons
 		prerequisite = {
 			focus = ARI_popularize_tactic_lessons
@@ -3828,7 +3828,7 @@ focus_tree = {
 	focus = {
 		#复仇冲锋队
 		id = ARI_charge_of_revenge
-		#icon = 
+		icon = GFX_focus_ARI_charge_of_revenge
 		relative_position_id = ARI_spirit_of_revenge
 		prerequisite = {
 			focus = ARI_spirit_of_revenge
@@ -3896,7 +3896,7 @@ focus_tree = {
 	focus = {
 		#外界的战斗经验
 		id = ARI_foreign_combat_experience
-		#icon = 
+		icon = GFX_focus_ARI_foreign_combat_experience
 		relative_position_id = ARI_armed_students
 		prerequisite = {
 			focus = ARI_armed_students
@@ -3920,7 +3920,7 @@ focus_tree = {
 	focus = {
 		#强化单兵战斗力
 		id = ARI_individual_effectiveness
-		#icon = 
+		icon = GFX_focus_ARI_individual_effectiveness
 		relative_position_id = ARI_foreign_combat_experience
 		prerequisite = {
 			focus = ARI_foreign_combat_experience
@@ -3949,7 +3949,7 @@ focus_tree = {
 	focus = {
 		#推进等级现象
 		id = ARI_hierarchy
-		#icon = 
+		icon = GFX_focus_ARI_hierarchy
 		relative_position_id = ARI_foreign_combat_experience
 		prerequisite = {
 			focus = ARI_foreign_combat_experience
@@ -3979,7 +3979,7 @@ focus_tree = {
 	focus = {
 		#重建阿里乌斯重装镇暴队
 		id = ARI_anti_riot_squads
-		#icon = 
+		icon = GFX_focus_ARI_anti_riot_squads
 		relative_position_id = ARI_foreign_combat_experience
 		prerequisite = {
 			focus = ARI_foreign_combat_experience
@@ -4057,7 +4057,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯特战部队
 		id = ARI_special_battle_brigade
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_special_battle_brigade
 		relative_position_id = ARI_restructure_teams
 		prerequisite = {
 			focus = ARI_restructure_teams
@@ -4120,7 +4120,7 @@ focus_tree = {
 	focus = {
 		#夫人的直接教导
 		id = ARI_taught_by_beatrice
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_taught_by_beatrice
 		relative_position_id = ARI_special_battle_brigade
 		prerequisite = {
 			focus = ARI_special_battle_brigade
@@ -4143,7 +4143,7 @@ focus_tree = {
 	focus = {
 		#斯巴达式训练法
 		id = ARI_Sparta_discipline
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_Sparta_discipline
 		relative_position_id = ARI_taught_by_beatrice
 		prerequisite = {
 			focus = ARI_taught_by_beatrice
@@ -4173,7 +4173,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯游骑兵
 		id = ARI_ranger
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_ranger
 		relative_position_id = ARI_Sparta_discipline
 		prerequisite = {
 			focus = ARI_Sparta_discipline
@@ -4211,7 +4211,7 @@ focus_tree = {
 	focus = {
 		#占据天空
 		id = ARI_rule_the_sky
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_rule_the_sky
 		relative_position_id = ARI_special_battle_brigade
 		prerequisite = {
 			focus = ARI_special_battle_brigade
@@ -4252,7 +4252,7 @@ focus_tree = {
 	focus = {
 		#炸飞她们
 		id = ARI_bomber
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_bomber
 		relative_position_id = ARI_rule_the_sky
 		prerequisite = {
 			focus = ARI_rule_the_sky
@@ -4276,7 +4276,7 @@ focus_tree = {
 	focus = {
 		#晴空万里
 		id = ARI_fighter
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_fighter
 		relative_position_id = ARI_rule_the_sky
 		prerequisite = {
 			focus = ARI_rule_the_sky
@@ -4300,7 +4300,7 @@ focus_tree = {
 	focus = {
 		#阿里乌斯航空兵部队
 		id = ARI_air_force
-		#icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_air_force
 		relative_position_id = ARI_bomber
 		prerequisite = {
 			focus = ARI_bomber
@@ -4327,7 +4327,7 @@ focus_tree = {
 	focus = {
 		#本地生产无人机
 		id = ARI_UAV_production
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ARI_UAV_production
 		relative_position_id = ARI_air_force
 		prerequisite = {
 			focus = ARI_air_force
