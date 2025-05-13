@@ -98,13 +98,17 @@ bookmarks = {
 
 		ARI = {
 			minor = yes
-			history = ""
+			history = "ARI_GATHERING_STORM_DESC"
 			ideology = no_ideology
 			ideas = {
-				
+				ARI_nihilism_showcase
+				ARI_armed_students_modifier_showcase
+				ARI_forbidden_weapons_showcase
 			}
 			focuses = {
-				
+				ARI_operation_dark_zone
+				ARI_traveller_operation
+				ARI_prepare_operation_eden
 			}
 		}
 

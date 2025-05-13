@@ -4,7 +4,12 @@
  JSL_NOT_ARMY: "无法训练,编辑,解散部队"
  ARI_nihilism: "虚无主义"
  ARI_nihilism_desc: "夫人教导学生们，世界上的万物都是虚无，没有真正的意义或价值。她强调无论是物质财富、人际关系还是个人成就都是微不足道而转瞬即逝。这种观念旨在剥夺学生们对正常生活和人际关系的渴望，让他们认为追求这些东西是徒劳无益的。"
- non_puppet_opnion: "与所有非傀儡势力评价"
+ 
+ ARI_nihilism_showcase: "虚无主义"
+ ARI_nihilism_showcase_desc: "夫人教导学生们，世界上的万物都是虚无，没有真正的意义或价值。她强调无论是物质财富、人际关系还是个人成就都是微不足道而转瞬即逝。这种观念旨在剥夺学生们对正常生活和人际关系的渴望，让他们认为追求这些东西是徒劳无益的。"
+
+
+non_puppet_opnion: "与所有非傀儡势力评价"
 
  ARI_tax_farming: "阿里乌斯包税制"
  ARI_tax_farming_desc: "出于各种原因，夫人并不热衷于管理阿里乌斯自治区的经济，因此她将各个工厂以及农地的生产指标转包给了下属的忠诚于她的阿里乌斯学生，俗称“监工”。这些学生被提拔的原因大多是出卖朋友或者以某些手段超额完成夫人任务。她们在被夫人委派的领地上有较大的自主权来选择满足夫人生产指标要求的办法，同时也负责承包当地学生训练和战斗任务。"
@@ -30,6 +35,9 @@
 
  ARI_armed_students_modifier: "阿里乌斯武装学生部队"
  ARI_armed_students_modifier_desc: "阿里乌斯的常规步兵归属于夫人或是在夫人体系下充当“监工”学生们，通常承担地方防卫，清缴游击队，或者在必要时间留在战壕里为特战小队争取行动时间的任务。他们的主要来源是当年被袭击的阿里乌斯自治区里的小孩子们，在接受夫人的洗脑后放弃了当年的圣三一阿里乌斯分院的信仰，只能改宗夫人的虚无主义。\n这些阿里乌斯步兵完全没有受过除战斗外的任何课程教学，所以她们的行动极其依靠受过指挥课程并且忠诚的学生来领导，通常装备是冲锋枪及单兵榴弹发射器，而指挥官可以使用配备附加型榴弹发射器的突击步枪，这些突击步枪外形上与圣三一古书馆文献上记载的曾经圣徒会所使用的略微类似，配合严酷的战斗训练，这使得她们在有组织的情况下战斗能力异常强悍，但如果指挥官失去战斗力或被策反，其战斗力就会大大下降，甚至在极度的慌乱中出现成建制投降或者大规模溃退的情况。"
+
+ ARI_armed_students_modifier_showcase: "阿里乌斯武装学生部队"
+ ARI_armed_students_modifier_showcase_desc: "阿里乌斯的常规步兵归属于夫人或是在夫人体系下充当“监工”学生们，通常承担地方防卫，清缴游击队，或者在必要时间留在战壕里为特战小队争取行动时间的任务。他们的主要来源是当年被袭击的阿里乌斯自治区里的小孩子们，在接受夫人的洗脑后放弃了当年的圣三一阿里乌斯分院的信仰，只能改宗夫人的虚无主义。\n这些阿里乌斯步兵完全没有受过除战斗外的任何课程教学，所以她们的行动极其依靠受过指挥课程并且忠诚的学生来领导，通常装备是冲锋枪及单兵榴弹发射器，而指挥官可以使用配备附加型榴弹发射器的突击步枪，这些突击步枪外形上与圣三一古书馆文献上记载的曾经圣徒会所使用的略微类似，配合严酷的战斗训练，这使得她们在有组织的情况下战斗能力异常强悍，但如果指挥官失去战斗力或被策反，其战斗力就会大大下降，甚至在极度的慌乱中出现成建制投降或者大规模溃退的情况。"
 
  ARI_commander_lessons_1: "新指挥官课程"
  ARI_commander_lessons_2: "优待忠诚指挥官"
@@ -89,7 +97,11 @@
 
  ARI_forbidden_weapons: "禁忌武器储备"
  ARI_forbidden_weapons_desc: "尽管基沃托斯各学院共同签署了禁止大规模杀伤性武器的公约，然而这对潜藏在地下的阿里乌斯自治区并不适用，夫人的武器工厂正在制造这些禁忌武器。燃烧时难以扑灭的剧烈火焰和产生的有毒烟雾的白磷弹，利用空气炸药的温度和压力效应提高爆轰威力、产生杀伤效果的温压弹，大量使用能使人昏迷的芬太奴气体，这些都是夫人为其未来的对手准备的小惊喜。"
- ARI_red_winter_overwhelming_fire: "红冬炮火压制"
+ 
+ ARI_forbidden_weapons_showcase: "禁忌武器储备"
+ ARI_forbidden_weapons_showcase_desc: "尽管基沃托斯各学院共同签署了禁止大规模杀伤性武器的公约，然而这对潜藏在地下的阿里乌斯自治区并不适用，夫人的武器工厂正在制造这些禁忌武器。燃烧时难以扑灭的剧烈火焰和产生的有毒烟雾的白磷弹，利用空气炸药的温度和压力效应提高爆轰威力、产生杀伤效果的温压弹，大量使用能使人昏迷的芬太奴气体，这些都是夫人为其未来的对手准备的小惊喜。"
+ 
+ARI_red_winter_overwhelming_fire: "红冬炮火压制"
  ARI_red_winter_overwhelming_fire_desc: "来自红冬联邦学院的火炮正在压制我们的炮兵！我们的火炮却对此束手无策！"
  ARI_red_winter_overwhelming_fire_tt: "§R每20天将发生恶性事件，导致部队兵力损失§!"
  ARI_asymmetric_warfare: "被不对称作战袭扰"
@@ -144,15 +156,9 @@
  ARI_power_chaser_effect_change_10: "$ARI_power_chaser$\n追加效果：\n战争支持度：§G+5%§!\n稳定度：§Y+5%§!"
  ARI_power_chaser_effect_change_11: "$ARI_power_chaser$\n追加效果：\n神秘步兵攻击：§G+3%§!\n神秘步兵防御：§G+3%§!\n此外神秘步兵武器的造价额外下降§G2%§!"
 
-ARI_catastrophic_traveller_operation: "“旅者”行动的灾难"
 
-
-ARI_lesson_traveller_operation: "“旅者”行动的教训"
-
- ARI_cut_traveller_operation_debuff_1: "$ARI_catastrophic_traveller_operation$追加效果：\n部队组织度：§G+20%§!"
- ARI_cut_traveller_operation_debuff_2: "$ARI_catastrophic_traveller_operation$追加效果：\n部队攻击：§G+5%§!\n部队防御：§G+5%§!"
- ARI_cut_traveller_operation_debuff_3: "$ARI_catastrophic_traveller_operation$追加效果：\n工厂产出：§G+25%§!\n消费品需求：§Y-25%§!"
- ARI_cut_traveller_operation_debuff_4: "$ARI_catastrophic_traveller_operation$追加效果：\n战争支持度：§G+20%§!\n稳定度：§Y+20%§!"
+ ARI_a_lesson_from_traveller_operation: "“旅者”行动的教训"
+ ARI_a_lesson_from_traveller_operation_desc: "显而易见，我们在这场失败中付出了足够的代价。现在，我们已经做好了准备，确保同样的事件不会再次发生——摊牌的时间近了。"
 
  ARI_catastrophic_traveller_operation: "“旅者”行动的灾难"
  ARI_catastrophic_traveller_operation_desc: "阿里乌斯鲁莽的行动最后变成了一场彻头彻尾的灾难，并导致了从工厂到军队的全面骚动。如果不迅速给这场灾难善后，那它所激起的涟漪很可能会掀翻整个阿里乌斯。"
