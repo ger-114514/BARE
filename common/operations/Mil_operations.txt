@@ -1,0 +1,134 @@
+ operation_capture_cipher = { ## 3 1/55
+ 	icon = GFX_operations_capture_ciphers
+ 	map_icon = GFX_operations_capture_ciphers_map
+ 	name = operation_capture_cipher
+ 	desc = operation_capture_cipher_desc
+ 	priority = 3
+
+ 	days = 45
+ 	network_strength = 40
+ 	operatives = 1
+ 	is_captured_cipher = yes
+
+ 	visible = {
+        ROOT = {
+            tag = MIL
+        }
+ 		network_strength = {
+ 			target = FROM
+ 			value > 25
+ 		}
+ 		has_done_agency_upgrade = upgrade_form_department
+ 		NOT = {
+ 			ROOT = { is_fully_decrypted = FROM }
+ 		}
+ 	}
+
+ 	equipment = {
+		
+ 	}
+ 	risk_chance = 0.2
+ 	outcome_extra_chance = 0.25
+ 	outcome_execute = {
+ 		ROOT = {
+ 			add_decryption = {
+ 				target = FROM
+ 				ratio = 0.5
+ 			}
+            random_list = {
+ 				25 = {
+ 					add_intel = {
+ 						target = FROM
+ 						civilian_intel = 10
+ 					}
+ 				}
+ 				25 = {
+ 					add_intel = {
+ 						target = FROM
+ 						army_intel = 10
+ 					}
+ 				}
+ 				25 = {
+ 					add_intel = {
+ 						target = FROM
+ 						airforce_intel = 10
+ 					}
+ 				}
+ 			}
+ 		}
+ 	}
+ 	outcome_extra_execute = {    
+ 		random_list = {
+ 			33 = {
+ 				ROOT = {
+ 					add_decryption = {
+ 						target = FROM
+ 						ratio = 0.5
+ 					}
+ 					random_list = {
+ 						25 = {
+ 							add_intel = {
+ 								target = FROM
+ 								civilian_intel = 30
+ 							}
+ 						}
+ 						25 = {
+ 							add_intel = {
+ 								target = FROM
+ 								army_intel = 30
+ 							}
+ 						}
+ 						25 = {
+ 							add_intel = {
+ 								target = FROM
+ 								airforce_intel = 30
+ 							}
+ 						}
+ 					}
+ 				}
+ 			}
+ 			67 = {
+ 				ROOT = {
+ 					add_decryption = {
+ 						target = FROM
+ 						ratio = 0.6
+ 					}
+ 				}
+ 			}
+ 		}	
+ 	}
+
+ 	outcome_potential = {
+ 		ROOT = {
+ 			add_decryption = {
+ 				target = FROM
+ 				ratio = 0.3
+ 			}
+ 		}
+ 	}
+
+ 	phases = { #infiltration
+ 		infiltration_border = { base = 50 }
+ 		infiltration_paradrop = { 
+ 			base = 50 
+ 		}
+ 	}
+ 	phases = { #capturing cyphers
+ 		capture_cyphers_raid = {
+ 			base = 50
+ 			modifier = {
+ 				ROOT = { has_war = no }
+ 				factor = 0
+ 			}
+ 		}
+ 		capture_cyphers_reverse_engineer = { base = 50 }
+ 	}
+
+ 	phases = { #exfiltration
+ 		exfiltration_air_pickup = { 
+ 			base = 50 
+ 
+ 		}
+ 		exfiltration_border = { base = 50 }
+ 	}
+ }

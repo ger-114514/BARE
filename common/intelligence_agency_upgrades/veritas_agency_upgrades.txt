@@ -48,27 +48,27 @@ branch_intelligence = {
 		}
 	}
 	
-	upgrade_naval_department = {
+#	upgrade_naval_department = {
 	
-		picture = GFX_agency_naval_department
-		frame = GFX_upgrade_frame_naval
-		sound = Spy_Agency_Intel_Upgrades_Confirm
+#		picture = GFX_agency_naval_department
+#		frame = GFX_upgrade_frame_naval
+#		sound = Spy_Agency_Intel_Upgrades_Confirm
 		
-		ai_will_do = {
-			factor = 1
-		}
+#		ai_will_do = {
+#			factor = 1
+#		}
 		
-		modifiers_during_progress = {
-			civilian_factory_use = 3
-		}
+#		modifiers_during_progress = {
+#			civilian_factory_use = 3
+#		}
 		
-		level = {
-			modifier = {
-				navy_intel_factor = 0.25
-			}
-		}
+#		level = {
+#			modifier = {
+#				navy_intel_factor = 0.25
+#			}
+#		}
 		
-	}
+#	}
 	
 	upgrade_airforce_department = {
 	

@@ -69,7 +69,7 @@ news_event = {
                     original_tag = GEH
                 }
                 unlock_national_focus = GEH_restart_eden_treaty_negotiation
-                #TODO:格赫娜未能触发的惩罚
+                #TODO:格黑娜未能触发的惩罚
             }
             set_global_flag = BA_2st_eden_pact_begin
             set_global_flag = Eden_treaty_negotiation_ongoing

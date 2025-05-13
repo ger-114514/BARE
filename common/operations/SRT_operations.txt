@@ -1,0 +1,93 @@
+
+ operation_coordinated_strike = { ## 11 2/70
+ 	icon = GFX_operations_coordinated_strike
+ 	map_icon = GFX_operations_coordinated_strike_map
+ 	name = operation_coordinated_strike
+ 	desc = operation_coordinated_strike_desc
+ 	priority = 11
+
+ 	days = 3
+ 	network_strength = 70
+ 	operatives = 2
+
+ 	visible = {
+ 		network_strength = {
+ 			target = FROM
+ 			value > 35
+ 		}
+ 		NOT = {
+ 			has_war_with = FROM
+ 		}
+	    ROOT = {
+			tag = SRT
+		}
+ 		has_operation_token = {
+ 			tag = FROM
+ 			token = token_airforce
+ 		}
+ 	}
+
+ 	equipment = {
+ 		civilian_factories = {
+ 			amount = 15
+ 			days = 5
+ 		}
+ 	}
+
+ 	available = {
+ 		NOT = {
+ 			has_war_with = FROM
+ 		}
+ 		has_wargoal_against = FROM
+ 		#can_declare_war_on = FROM
+ 	}
+
+ 	required_tokens = {
+ 		token_airforce
+ 	}
+
+ 	target_type = strategic_region
+
+ 	selection_target = {
+ 		targets = { FROM }
+ 	}
+
+ 	will_lead_to_war_with = yes
+ 	risk_chance = 0.3
+ 	experience = 2
+ 	outcome_execute = {    
+ 		ROOT = {
+ 			declare_war_on = { target = FROM type = annex_everything }
+ 		}
+		
+ 		execute_operation_coordinated_strike = {
+ 			amount = 12 #1 attack per 6 hours --> 12 attacks = 3 days
+ 		}
+
+ 		ROOT = {
+ 			remove_operation_token = {
+ 				tag = FROM
+ 				token = token_airforce
+ 			}
+ 		}
+ 	}
+
+ 	outcome_potential = {
+ 		custom_effect_tooltip = coordinated_strike_tt
+ 	}
+
+ 	phases = { #infiltration
+ 		infiltration_border = { base = 50 }
+ 		infiltration_paradrop = { 
+ 			base = 50 
+ 
+ 		}
+ 	}
+ 	phases = { #preparing
+ 		coordinate_strike_mark_targets = { base = 50 }
+ 	}
+
+ 	phases = { #execution
+ 		coordinated_strike_direct_units = { base = 50 }
+ 	}
+ }
