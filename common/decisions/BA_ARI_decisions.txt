@@ -1306,7 +1306,7 @@ ARI_foreign_operations_decisions = {
 			base = 100
 		}
 	}
-	ARI_intelligence_Gehenna_branch = { #建立格赫娜分部
+	ARI_intelligence_Gehenna_branch = { #建立格黑娜分部
 		visible = {
 			has_completed_focus = ARI_Gehenna_operation
 			has_country_flag = ARI_outside_recon_fired
@@ -1409,7 +1409,7 @@ ARI_foreign_operations_decisions = {
 			}
 		}
 	}
-	ARI_spread_rumours_GEH = { #散布不实谣言（格赫娜）
+	ARI_spread_rumours_GEH = { #散布不实谣言（格黑娜）
 		highlight_states = {
 			highlight_states_trigger = {
 				is_controlled_by = GEH

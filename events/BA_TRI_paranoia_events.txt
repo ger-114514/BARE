@@ -4,6 +4,7 @@ country_event = { #顾问被指控为不安定分子
 	id = TRI_paranoia.1
 	title = TRI_paranoia.1.t
 	desc = TRI_paranoia.1.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -51,6 +52,7 @@ country_event = { #文职部员队伍中的阴谋
 	id = TRI_paranoia.2
 	title = TRI_paranoia.2.t
 	desc = TRI_paranoia.2.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -103,6 +105,7 @@ country_event = { #圣三一情报局的背叛？
 	id = TRI_paranoia.3
 	title = TRI_paranoia.3.t
 	desc = TRI_paranoia.3.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -164,6 +167,7 @@ unit_leader_event = { #将军被指控为不安定分子
 	id = TRI_paranoia.11
 	title = TRI_paranoia.11.t
 	desc = TRI_paranoia.11.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -211,6 +215,7 @@ country_event = { #陆军成员中的流言
 	id = TRI_paranoia.12
 	title = TRI_paranoia.12.t
 	desc = TRI_paranoia.12.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -260,6 +265,7 @@ country_event = { #反破坏分子运动（陆军）
 	id = TRI_paranoia.13
 	title = TRI_paranoia.13.t
 	desc = TRI_paranoia.13.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -313,6 +319,7 @@ country_event = { #空军成员中的流言
 	id = TRI_paranoia.22
 	title = TRI_paranoia.22.t
 	desc = TRI_paranoia.22.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -362,6 +369,7 @@ country_event = { #反破坏分子运动（空军）
 	id = TRI_paranoia.23
 	title = TRI_paranoia.23.t
 	desc = TRI_paranoia.23.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	option = { #鲨鲨鲨
@@ -414,6 +422,7 @@ country_event = { #对社团的调查
 	id = TRI_paranoia.31
 	title = TRI_paranoia.31.t
 	desc = TRI_paranoia.31.desc
+	picture = GFX_TRI_event_3
 	is_triggered_only = yes
 
 	immediate = {
