@@ -1,0 +1,22 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+	#GEH
+
+	SpriteType = {
+		name = "GFX_daily_news_event_1"
+		texturefile = "gfx/interface/GEH/GFX_daily_news_event_1.dds"			
+	}
+	SpriteType = {
+		name = "GFX_daily_news_event_2"
+		texturefile = "gfx/interface/GEH/GFX_daily_news_event_2.dds"			
+	}
+	SpriteType = {
+		name = "GFX_daily_news_event_3"
+		texturefile = "gfx/interface/GEH/GFX_daily_news_event_3.dds"			
+	}
+		SpriteType = {
+		name = "GFX_daily_news_event_4"
+		texturefile = "gfx/interface/GEH/GFX_daily_news_event_4.dds"			
+	}		
+}
