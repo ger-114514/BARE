@@ -360,6 +360,7 @@ country_event = {
         #桐藤渚偏执度-5%
         set_temp_variable = { TRI_paranoia_change = -5 }
         TRI_change_paranoia = yes
+		country_event = TRI_events.12
 		ai_chance = {
 			base = 100
 		}
@@ -458,15 +459,6 @@ country_event = {
 	fire_only_once = yes
     option = {
 		name = TRI_events.26.a
-        custom_effect_tooltip =  event_immediately_happened_tt
-        effect_tooltip = {
-            140 = {
-                set_demilitarized_zone = yes
-            }
-            529 = {
-                set_demilitarized_zone = yes
-            }
-        }
 		ai_chance = {
 			base = 100
 		}
@@ -1179,10 +1171,8 @@ country_event = {
         }
         add_to_variable = { TRI_shaked_nagisa_belief_stability_weekly = 0.005 }
         add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.35 }
-        add_to_variable = { TRI_shaked_nagisa_belief_paranoia_modifier_increase = -1 }
         add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
         add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
-        add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -1 }
         add_dynamic_modifier = {
             modifier = TRI_shaked_nagisa_belief_2
         }

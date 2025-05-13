@@ -53,7 +53,7 @@ news_event = {
 				set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
                 activate_mission = Eden_treaty_mutual_negotiation
                 if = {
-                    limit = { NOT = { has_completed_focus = TRI_choosing_pact_place } }
+                    limit = { has_global_flag = BA_2st_eden_pact_GEH_leader }
                     unlock_national_focus = TRI_choosing_pact_place
                     add_stability = -0.1
                     set_temp_variable = { loyalty_change = -0.05 }
@@ -73,7 +73,7 @@ news_event = {
 				set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
                 activate_mission = Eden_treaty_mutual_negotiation
                 if = {
-                    limit = { NOT = { has_completed_focus = GEH_restart_eden_treaty_negotiation } }
+                    limit = { has_global_flag = BA_2st_eden_pact_TRI_leader }
                     unlock_national_focus = GEH_restart_eden_treaty_negotiation
                     #TODO:格赫娜未能触发的惩罚
                 }
@@ -89,13 +89,6 @@ news_event = {
         if = {
             limit = { is_ai = no }
             BARE_SuperEvent_2_effect_2 = yes
-        }
-        custom_effect_tooltip = event_immediately_happened_tt
-        effect_tooltip = {
-            add_stability = -0.1
-            set_temp_variable = { loyalty_change = -0.05 }
-            TRI_parliament_all_loyalty_change = yes
-            TRI_unity_decrease_5 = yes
         }
 
 		ai_chance = {
@@ -321,6 +314,15 @@ country_event = {
         trigger = {
             original_tag = TRI
         }
+        custom_effect_tooltip =  event_immediately_happened_tt
+        effect_tooltip = {
+            140 = {
+                set_demilitarized_zone = yes
+            }
+            529 = {
+                set_demilitarized_zone = yes
+            }
+        }
         Eden_treaty_get_winner = yes
     }
     option = {
@@ -328,7 +330,15 @@ country_event = {
         trigger = {
             original_tag = GEH
         }
-
+        custom_effect_tooltip =  event_immediately_happened_tt
+        effect_tooltip = {
+            140 = {
+                set_demilitarized_zone = yes
+            }
+            529 = {
+                set_demilitarized_zone = yes
+            }
+        }
     }
 }
 #圣三一优势

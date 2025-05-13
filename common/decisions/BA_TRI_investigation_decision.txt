@@ -283,7 +283,7 @@ TRI_mika_investigation = {
 		}
 
 		visible = {
-			has_country_flag = TRI_mika_investigation_2
+			has_country_flag = TRI_mika_investigation_3
 		}
 		fire_only_once = yes
 		days_remove = 2
@@ -292,6 +292,8 @@ TRI_mika_investigation = {
 			country_event = TRI_events.403
 			clr_country_flag = TRI_mika_investigation_1
 			clr_country_flag = TRI_mika_investigation_2
+			clr_country_flag = TRI_mika_investigation_3
+			set_country_flag = TRI_mika_investigation_completed
 		}
 	}
 }

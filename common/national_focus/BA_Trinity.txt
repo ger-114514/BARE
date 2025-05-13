@@ -527,12 +527,6 @@ focus_tree = {
 				x = 0
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
-				allow_branch = {
-					OR = {
-						has_completed_focus = TRI_lure_the_enemy
-						has_completed_focus = TRI_conspiracy_against_conspiracy
-					}
-				}
 				select_effect = {
 				}
 				completion_reward = {
@@ -874,7 +868,6 @@ focus_tree = {
 				y = 2
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
-					country_event = TRI_events.12
 					TRI_paranoia_decrease_20 = yes
 					custom_effect_tooltip = TRI_hoshubu_progress_tt
 				}
@@ -949,7 +942,6 @@ focus_tree = {
 							add_to_array = { TRI_hoshubu_focus_line = token:TRI_silence }
 							add_to_array = { TRI_hoshubu_focus_line = token:TRI_unexpected_one }
 							add_to_array = { TRI_hoshubu_focus_line = token:TRI_daring_plan_meticulous_action }
-							add_to_array = { TRI_hoshubu_focus_line = token:TRI_lure_the_enemy }
 							activate_shine_on_focus = TRI_silence
 							country_event = {
 								id = TRI_autofocus.1
@@ -981,6 +973,7 @@ focus_tree = {
 				
 				allow_branch = {
 					has_country_flag = TRI_investigation_normal_ending
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				available = {
 					custom_override_tooltip = {
@@ -1013,6 +1006,7 @@ focus_tree = {
 				
 				allow_branch = {
 					has_country_flag = TRI_investigation_normal_ending
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				available = {
 					custom_override_tooltip = {
@@ -1139,6 +1133,7 @@ focus_tree = {
 				prerequisite = { focus = TRI_examination_for_training_club }
 				allow_branch = {
 					has_country_flag = TRI_investigation_perfect_ending
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				available = {
 					custom_override_tooltip = {
@@ -1416,6 +1411,11 @@ focus_tree = {
 			}
 			completion_reward = {
 				add_stability = 0.1
+				unlock_decision_tooltip = {
+					decision = TRI_prepare_counters
+					show_effect_tooltip = yes
+					show_modifiers = yes
+				}
 				custom_effect_tooltip = when_completed_if_tt
 				custom_effect_tooltip = {
 					localization_key = TRI_focus_support_trigger
@@ -1456,11 +1456,6 @@ focus_tree = {
 							PARLIAMENT = BA_TRI_house_seat
 						}
 					}
-				}
-				unlock_decision_tooltip = {
-					decision = TRI_prepare_counters
-					show_effect_tooltip = yes
-					show_modifiers = yes
 				}
 			}			
 		}
@@ -1529,7 +1524,7 @@ focus_tree = {
 						complete_national_focus = TRI_bouncing_back
 					}
 				}
-				#TODO:于议会中添加“对派系的许诺”决议，解锁玩家选择接受上议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
+				#于议会中添加“对派系的许诺”决议，解锁玩家选择接受上议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
 				set_country_flag = TRI_threading_a_needle
 				set_country_flag = TRI_senate_promise_task_1
 				set_country_flag = TRI_senate_promise_task_2
@@ -1626,7 +1621,7 @@ focus_tree = {
 						complete_national_focus = TRI_making_the_best_use
 					}
 				}
-				#TODO:于议会中添加“对派系的许诺”决议，解锁玩家选择接受下议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
+				#于议会中添加“对派系的许诺”决议，解锁玩家选择接受下议院派系提出的条件的决议。该条件包括其以较慢的速度自动完成某些可以完成的国策。
 				set_country_flag = TRI_return_a_favor
 				set_country_flag = TRI_house_promise_task_1
 				set_country_flag = TRI_house_promise_task_2
@@ -1662,7 +1657,6 @@ focus_tree = {
 				add_to_variable = { TRI_shaked_nagisa_belief_political_power_cost = -0.2 }
 				add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
 				add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
-				custom_effect_tooltip = TRI_making_the_best_use_tt
 				add_ideas = TRI_making_the_best_use_idea
 			}
 		}

@@ -378,6 +378,7 @@ TRI_parliament_decisions_categories = {
 	TRI_compaign_for_meeting = {
 		visible = {
 			has_country_flag = TRI_compaign_for_meeting
+			has_global_flag = Eden_treaty_negotiation_ongoing
 		}
 		available = {
 			command_power > 24.9
