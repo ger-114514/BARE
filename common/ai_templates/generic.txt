@@ -1,7 +1,9 @@
 armor_generic = {
 
 	blocked_for = {
+		ARI
 		TRI
+		GEH
 	}
 
 	role = armor
@@ -12,18 +14,12 @@ armor_generic = {
 		modifier = {
 			factor = 3
 			OR = {
-				has_tech = basic_medium_tank
-				has_tech = basic_medium_tank_chassis
+				has_tech = light_tank_MK1
+				has_tech = medium_tank_MK1
+				has_tech = heavy_tank_MK1
 			}
 		}
 		
-		modifier = {
-			factor = 2
-			OR = {
-				has_tech = main_battle_tank
-				has_tech = main_battle_tank_chassis
-			}
-		}
 	}
 
 	light_armor_early = {
@@ -43,14 +39,14 @@ armor_generic = {
 			
 			support = {
 				engineer = 1
-				mot_recon = 1
-				artillery = 1
-				anti_tank = 1
+				apc_recon = 1
+				fire_support_team_su_la = 1
+				fire_support_team_su_ha = 1
 			}
 			
 			regiments = {
-				light_armor = 5
-				motorized = 4
+				light_armor = 3
+				apc_unit = 5
 			}
 		}
 		
@@ -66,10 +62,7 @@ armor_generic = {
 
 			modifier = {
 				factor = 3
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
+				has_tech = medium_tank_MK1
 			}
 		}
 
@@ -77,15 +70,14 @@ armor_generic = {
 			
 			support = {
 				engineer = 1
-				mot_recon = 1
+				apc_recon = 1
 				maintenance_company = 1
 				logistics_company = 1
 			}
 			
 			regiments = {
 				medium_armor = 4
-				light_armor = 2
-				motorized = 4
+				apc_unit = 4
 			}
 		}
 		
@@ -101,15 +93,12 @@ armor_generic = {
 
 			modifier = {
 				factor = 4
-				OR = {
-					has_tech = improved_medium_tank
-					has_tech = improved_medium_tank_chassis
-				}
+				has_tech = medium_tank_MK2
 			}
 
 			modifier = {
 				factor = 0
-				NOT = { has_tech = armored_car1 }
+				NOT = { has_tech = Infantry_fighting_vehicle_T1 }
 			}
 		}
 
@@ -117,14 +106,15 @@ armor_generic = {
 			
 			support = {
 				engineer = 1
-				armored_car_recon = 1
+				ifv_recon = 1
 				maintenance_company = 1
 				logistics_company = 1
 			}
 			
 			regiments = {
-				medium_armor = 6
-				motorized = 4
+				medium_armor = 2
+				apc_unit = 4
+				medium_sp_artillery_brigade = 2
 			}
 		}
 		
@@ -136,14 +126,14 @@ armor_generic = {
 	modern_armor_default = {
 	
 		upgrade_prio = {
-			base = 1
-
+			base = 2
 			modifier = {
-				factor = 5
-				OR = {
-					has_tech = main_battle_tank
-					has_tech = main_battle_tank_chassis
-				}
+				factor = 0.1
+				date < 2024.1.1
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories > 100
 			}
 		}
 
@@ -151,25 +141,283 @@ armor_generic = {
 			
 			support = {
 				engineer = 1
-				light_tank_recon = 1
+				mbt_recon = 1
 				maintenance_company = 1
 				logistics_company = 1
 				signal_company = 1
 			}
 			
 			regiments = {
-				modern_armor = 6
-				mechanized = 4
-				modern_sp_artillery_brigade = 1
+				medium_armor = 5
+				ifv_unit = 5
+				medium_sp_artillery_brigade = 2
+				medium_tank_destroyer_brigade = 1
+				medium_sp_anti_air_brigade = 1
 			}
 		}
 	}
 }
+mobile_generic = {
 
+	blocked_for = {
+		ARI
+		TRI
+		GEH
+	}
+	
+	role = mobile
+
+	upgrade_prio = {
+		factor = 2
+	}
+
+	mobile_default_generic = {
+	
+		upgrade_prio = {
+			factor = 1
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				maintenance_company = 1
+				fire_support_team_su_la = 1
+			}
+			
+			regiments = {
+				apc_artillery_unit = 2
+				apc_recon = 5
+			}
+		}
+		
+		reinforce_prio = 2
+		replace_at_match = 0.5
+		replace_with = mobile_1_generic
+		target_min_match = 0.5
+	}
+	mobile_1_generic = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 4
+				has_tech = light_tank_MK2
+			}
+			modifier = {
+				factor = 0.1
+				num_of_military_factories < 60
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				apc_recon = 1
+				maintenance_company = 1
+				fire_support_team_su_ha = 1
+			}
+			
+			regiments = {
+				light_armor = 2
+				light_sp_artillery_brigade = 2
+				ifv_unit = 4
+			}
+		}
+		
+		reinforce_prio = 2
+		replace_at_match = 0.8
+		replace_with = mobile_2_generic
+		target_min_match = 0.7
+	}
+	mobile_2_generic = {
+	
+		upgrade_prio = {
+			factor = 3
+
+			modifier = {
+				factor = 4
+				has_tech = light_tank_MK3
+			}
+			modifier = {
+				factor = 0.1
+				num_of_military_factories < 80
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				mbt_recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+				fire_support_team_su_ha = 1
+			}
+			
+			regiments = {
+				light_armor = 5
+				ifv_unit = 5
+				light_sp_artillery_brigade = 2
+				light_tank_destroyer_brigade = 1
+				light_sp_anti_air_brigade = 1
+			}
+		}
+		
+		reinforce_prio = 2
+		replace_at_match = 0.8
+		target_min_match = 0.7
+	}
+
+}
+infantry_generic = {
+
+	blocked_for = {
+		ARI
+		TRI
+		GEH
+	}
+
+	role = infantry
+	
+	upgrade_prio = {
+		base = 5
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 2
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				fire_support_team_su_la = 1
+			}
+			
+			regiments = {
+				infantry = 8
+				fire_support_team_la = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_mid
+		target_min_match = 0.9
+	}
+
+	infantry_mid = {
+
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 3
+				date > 2021.1.1
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 40
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				fire_support_team_su_ha = 1
+			}
+			
+			regiments = {
+				infantry = 8
+				fire_support_team_la = 2
+				fire_support_team_ha = 1
+			}
+		}
+	}
+	infantry_improved = {
+	
+		upgrade_prio = {
+			factor = 2
+			modifier = {
+				factor = 2
+				num_of_military_factories > 60
+			}
+			modifier = {
+				factor = 1.5
+				date > 2023.1.1
+			}
+
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				maintenance_company = 1
+				fire_support_team_su_ha = 1
+				fire_support_team_su_la = 1
+			}
+			
+			regiments = {
+				infantry = 9
+				fire_support_team_la = 3
+				fire_support_team_ha = 2
+				fire_support_team_aa = 1
+			}
+		}
+	}
+	heavy_infantry_default = {
+	
+		upgrade_prio = {
+			factor = 2
+			modifier = {
+				factor = 2
+				num_of_military_factories > 80
+			}
+			modifier = {
+				factor = 0
+				date < 2024.1.1
+			}
+
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				maintenance_company = 1
+				fire_support_team_su_ha = 1
+				fire_support_team_su_la = 1
+			}
+			
+			regiments = {
+				infantry_heavy = 9
+				fire_support_team_la = 3
+				fire_support_team_ha = 2
+				fire_support_team_aa = 1
+			}
+		}
+	}
+}
 garrison_generic = {
 
 	blocked_for = {
+		ARI
 		TRI
+		GEH
 	}
 	
 	role = garrison
@@ -211,9 +459,7 @@ garrison_generic = {
 suppression_generic = {
 	
 	role = suppression
-	blocked_for = {
-		TRI
-	}
+
 	upgrade_prio = {
 		base = 0.5
 
@@ -222,23 +468,6 @@ suppression_generic = {
 			has_war = yes
 		}
 
-		modifier = {
-			factor = 50
-			tag = GER
-			OR = {
-				AND = {
-					has_completed_focus = GER_anschluss
-					NOT = { ai_has_role_template = garrison }
-				}
-
-				AND = {
-					any_country = {
-						is_justifying_wargoal_against = ROOT
-					}
-					NOT = { ai_has_role_template = garrison }
-				}
-			}
-		}
 	}
 
 	suppression_generic = {
@@ -257,83 +486,12 @@ suppression_generic = {
 			}
 
 			regiments = {
-				cavalry = 4
+				infantry = 4
 			}
 		}
 	}
 }
 
-infantry_generic = {
-
-	blocked_for = {
-		TRI
-	}
-
-	role = infantry
-	
-	upgrade_prio = {
-		base = 5
-	}
-	
-	infantry_early = {
-	
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 2
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				recon = 1
-				logistics_company = 1
-				anti_air = 1
-				artillery = 1
-			}
-			
-			regiments = {
-				infantry = 9
-				artillery_brigade = 1
-			}
-		}
-
-		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
-		replace_with = infantry_mid
-		target_min_match = 0.9
-	}
-
-	infantry_mid = {
-
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 3
-				date > 1940.1.1
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				recon = 1
-				logistics_company = 1
-				anti_air = 1
-				anti_tank = 1
-			}
-			
-			regiments = {
-				infantry = 9
-				artillery_brigade = 2
-			}
-		}
-	}
-}
 
 
 
@@ -345,22 +503,14 @@ infantry_generic = {
 # - light_armor
 # - medium_armor
 # - heavy_armor
-# - super_heavy_armor
-# - modern_armor
-# - cavalry
-# - motorized
-# - mechanized
-# - marine
-# - mountaineers
-# - paratrooper
-# - artillery_brigade
-# - anti_air_brigade
-# - anti_tank_brigade
+# - apc_unit
+# - ifv_unit
+# - fire_support_team_la
+# - fire_support_team_aa
+# - fire_support_team_ha
 # - light_tank_destroyer_brigade
 # - medium_tank_destroyer_brigade
 # - heavy_tank_destroyer_brigade
-# - super_heavy_tank_destroyer_brigade
-# - modern_tank_destroyer_brigade
 # - light_sp_anti_air_brigade
 # - light_sp_artillery_brigade
 
@@ -369,10 +519,9 @@ infantry_generic = {
 # - recon
 # - signal_company
 # - maintenance_company
-# - artillery
-# - anti_air
-# - anti_tank
+# - fire_support_team_su_la
+# - fire_support_team_su_aa
+# - fire_support_team_su_ha
 # - field_hospital
 # - logistics_company
 # - military_police
-# - rocket_artillery

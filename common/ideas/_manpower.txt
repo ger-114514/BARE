@@ -106,7 +106,6 @@ ideas = {
 				army_org_regain = 0.1
 				production_speed_buildings_factor = 0.3
 				industrial_capacity_factory = 0.1
-				ai_desired_divisions_factor = 1
 			}
 		}
 
@@ -328,6 +327,7 @@ ideas = {
 
 				army_org_factor = 0.1
 				army_org_regain = 0.1
+				ai_desired_divisions_factor = 1.5
 			}
 		}
 	}

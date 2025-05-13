@@ -417,6 +417,9 @@ focus_tree = {
 						has_country_flag = TRI_mika_arrested
 					}
 				}
+				bypass = {
+					has_global_flag = BA_2st_eden_pact_begin
+				}
 				cost = 5
 				x = 0
 				y = 1
@@ -446,7 +449,7 @@ focus_tree = {
 					factor = 20
 					modifier = {
 						factor = 0
-						date < 2021.7.1
+						date < 2021.8.1
 					}
 				}
 			}
@@ -2624,6 +2627,9 @@ focus_tree = {
 				add_to_variable = { TRI_tea_party_artillery_recruiting_use = 7 }
 				custom_effect_tooltip = TRI_standing_guard_tt
 				show_ideas_tooltip = TRI_tea_party_artillery_5
+				hidden_effect = {
+					add_ideas = TRI_tea_party_artillery_1
+				}
 			}		
 		}
 		focus = { #全面准备
