@@ -73,8 +73,12 @@ Eden_treaty_next_phase = {
 			}
 			clear_variable = global.Eden_treaty_phase
 			clear_variable = global.Eden_treaty_progress
-			TRI = { clear_variable = Eden_treaty_weights }
-			GEH = { clear_variable = Eden_treaty_weights }
+			TRI = {
+				clear_variable = Eden_treaty_weights
+			}
+			GEH = {
+				clear_variable = Eden_treaty_weights
+			}
 		}
 		if = {
 			limit = { check_variable = { TRI_point > GEH_point } }
@@ -88,6 +92,56 @@ Eden_treaty_next_phase = {
 		}
 		else = {
 			add_to_array = { global.Eden_treaty_negotiation_phase_leader = 0 }
+		}
+	}
+}
+Eden_treaty_get_winner = {
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { global.Eden_treaty_TRI_score > global.Eden_treaty_GEH_score } }
+			set_global_flag = Eden_treaty_negotiation_TRI_win
+			TRI = {
+				country_event = {
+					id = Eden_pact.101
+					days = 2
+				}
+			}
+			GEH = {
+				country_event = {
+					id = Eden_pact.101
+					days = 2
+				}
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.Eden_treaty_TRI_score < global.Eden_treaty_GEH_score } }
+			set_global_flag = Eden_treaty_negotiation_GEH_win
+			TRI = {
+				country_event = {
+					id = Eden_pact.102
+					days = 2
+				}
+			}
+			GEH = {
+				country_event = {
+					id = Eden_pact.102
+					days = 2
+				}
+			}
+		}
+		else = {
+			TRI = {
+				country_event = {
+					id = Eden_pact.103
+					days = 2
+				}
+			}
+			GEH = {
+				country_event = {
+					id = Eden_pact.103
+					days = 2
+				}
+			}
 		}
 	}
 }

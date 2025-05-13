@@ -30,35 +30,20 @@ focus_tree = {
 	#}
 	#}
 
-
-        #PS:空国策，防止报错的
-    #第一次伊甸条约
-    focus = {
-		id = GEH_fisrt_eden_treaty
-        cost = 5
-        x = 40
-        y = 0
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        completion_reward = {
-
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
     #政治线
     #回眼内部
     focus = {
 		id = GEH_go_back_to_inside
-	    relative_position_id = GEH_fisrt_eden_treaty
         cost = 5
-        x = 0
-        y = 1
-        prerequisite = {  focus = GEH_fisrt_eden_treaty }
+        x = 40
+        y = 0
         search_filters = { FOCUS_FILTER_POLITICAL }
-        
+        available = {
+            custom_override_tooltip = {
+                tooltip = BA_1st_eden_pact_begin_tt
+                has_global_flag = BA_1st_eden_pact_begin
+            }
+        }
 
         completion_reward = {
             add_political_power = 100
@@ -380,8 +365,8 @@ focus_tree = {
 
         completion_reward = {
             #触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
-            if = {
-                limit = { NOT = { has_global_flag = BA_2st_eden_pact_begin } }
+            hidden_effect = {
+                set_global_flag = BA_2st_eden_pact_GEH_leader
                 news_event = Eden_pact.1001
             }
             add_ideas = GEH_ideas_prepare_for_conference_1
@@ -591,10 +576,19 @@ focus_tree = {
 
         allow_branch = {
             NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
-        } 
+            has_global_flag = Eden_treaty_negotiation_GEH_win
+        }
         #隐藏国策树,配合mark_focus_tree_layout_dirty = yes 刷新国策树
         
         search_filters = { FOCUS_FILTER_POLITICAL }
+        select_effect = {
+            hidden_effect = {
+                news_event = {
+                    id = Eden_pact.1003
+                    days = 24
+                }
+            }
+        }
 
         completion_reward = {
             custom_effect_tooltip = GEH_will_sign_2nd_eden_treaty #在无数的准备后，我们将签署这份世纪条约！

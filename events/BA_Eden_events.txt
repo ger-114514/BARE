@@ -309,3 +309,87 @@ news_event = {
     }
 
 }
+#结算
+country_event = {
+    id = Eden_pact.100
+    title = Eden_pact.100.t
+    desc = Eden_pact.100.d
+    #picture = 
+    option = {
+		name = Eden_pact.100.a
+        trigger = {
+            original_tag = TRI
+        }
+        Eden_treaty_get_winner = yes
+    }
+    option = {
+		name = Eden_pact.100.b
+        trigger = {
+            original_tag = GEH
+        }
+
+    }
+}
+#圣三一优势
+country_event = {
+    id = Eden_pact.101
+    title = Eden_pact.101.t
+    desc = Eden_pact.101.d
+    timeout_days = 3
+    #picture = 
+    option = {
+		name = Eden_pact.101.a
+        trigger = {
+            original_tag = TRI
+        }
+        mark_focus_tree_layout_dirty = yes
+    }
+    option = {
+		name = Eden_pact.101.b
+        trigger = {
+            original_tag = GEH
+        }
+
+    }
+}
+#格赫娜优势
+country_event = {
+    id = Eden_pact.102
+    title = Eden_pact.102.t
+    desc = Eden_pact.102.d
+    timeout_days = 3
+    #picture = 
+    option = {
+		name = Eden_pact.102.a
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    option = {
+		name = Eden_pact.102.b
+        trigger = {
+            original_tag = GEH
+        }
+        mark_focus_tree_layout_dirty = yes
+    }
+}
+#平局
+country_event = {
+    id = Eden_pact.103
+    title = Eden_pact.103.t
+    desc = Eden_pact.103.d
+    timeout_days = 3
+    #picture = 
+    option = {
+		name = Eden_pact.103.a
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    option = {
+		name = Eden_pact.103.b
+        trigger = {
+            original_tag = GEH
+        }
+    }
+}

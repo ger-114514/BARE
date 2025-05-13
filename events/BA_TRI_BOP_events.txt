@@ -105,7 +105,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #正义委-巡逻任务
 	id = TRI_region.1
 	title = TRI_region.1.t
 	desc = TRI_region.1.desc
@@ -144,7 +144,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #正义委-清除混混组织
 	id = TRI_region.2
 	title = TRI_region.2.t
 	desc = {
@@ -230,7 +230,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #修女会-宣讲教义
 	id = TRI_region.11
 	title = TRI_region.11.t
 	desc = TRI_region.11.desc
@@ -261,7 +261,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #修女会-组织祷告
 	id = TRI_region.12
 	title = TRI_region.12.t
 	desc = TRI_region.12.desc
@@ -294,7 +294,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #骑士团-社区活动
 	id = TRI_region.21
 	title = TRI_region.21.t
 	desc = TRI_region.21.desc
@@ -327,7 +327,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #骑士团-公益救治
 	id = TRI_region.22
 	title = TRI_region.22.t
 	desc = TRI_region.22.desc
@@ -364,7 +364,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #骑士团-团长烂活
 	id = TRI_region.23
 	title = TRI_region.23.t
 	desc = TRI_region.23.desc
@@ -397,7 +397,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #社团要求建设
 	id = TRI_region.101
 	title = TRI_region.101.t
 	desc = TRI_region.101.desc

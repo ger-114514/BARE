@@ -379,7 +379,7 @@ country_event = {
 
     option = {
 		name = TRI_events.12.a
-
+        complete_national_focus = TRI_guide_of_hoshubu
 		ai_chance = {
 			base = 100
 		}
@@ -456,16 +456,6 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
-    immediate = {
-        hidden_effect = {
-            140 = {
-                set_demilitarized_zone = yes
-            }
-            529 = {
-                set_demilitarized_zone = yes
-            }
-        }
-    }
     option = {
 		name = TRI_events.26.a
         custom_effect_tooltip =  event_immediately_happened_tt
@@ -945,7 +935,7 @@ country_event = {
 
     option = {
 		name = TRI_events.100.a
-        add_political_power = -150
+        add_political_power = -25
         random_controlled_state = {
             limit = {
                 TRI_is_tea_party_state = yes
@@ -1005,22 +995,93 @@ country_event = {
     }
     option = {
 		name = TRI_events.100.b
-        add_political_power = -40
+        add_political_power = -75
         random_controlled_state = {
             limit = {
                 TRI_is_tea_party_state = yes
-                free_building_slots = {
-                    building = arms_factory
-                    size > 0
-                    include_locked = yes
-                }
             }
             add_extra_state_shared_building_slots = 1
-            add_building_construction = {
-                type = arms_factory
-                level = 1
-                instant_build = yes
-            }	
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                        free_building_slots = {
+                            building = synthetic_refinery
+                            size = 0
+                            include_locked = yes
+                        }
+                    }
+                    add_building_construction = {
+                        type = synthetic_refinery
+                        level = 1
+                        instant_build = yes
+                    }	
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        free_building_slots = {
+                            building = metal_processing_plant
+                            size = 0
+                            include_locked = yes
+                        }
+                    }
+                    add_building_construction = {
+                        type = metal_processing_plant
+                        level = 1
+                        instant_build = yes
+                    }	
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        free_building_slots = {
+                            building = rare_metal_processing_plant
+                            size = 0
+                            include_locked = yes
+                        }
+                    }
+                    add_building_construction = {
+                        type = rare_metal_processing_plant
+                        level = 1
+                        instant_build = yes
+                    }	
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        free_building_slots = {
+                            building = electronic_component_factory
+                            size = 0
+                            include_locked = yes
+                        }
+                    }
+                    add_building_construction = {
+                        type = electronic_component_factory
+                        level = 1
+                        instant_build = yes
+                    }	
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        free_building_slots = {
+                            building = opatz_synthesis_center
+                            size = 0
+                            include_locked = yes
+                        }
+                    }
+                    add_building_construction = {
+                        type = opatz_synthesis_center
+                        level = 1
+                        instant_build = yes
+                    }	
+                }
+            }
+        }
+        add_offsite_building = {
+            type = arms_factory
+            level = 2
         }
         set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
         set_temp_variable = { loyalty_change = 0.01 }
@@ -1069,19 +1130,31 @@ country_event = {
 	fire_only_once = yes
     option = {
 		name = TRI_events.51.a
+        TRI_set_focus_trust_on_current_leader = yes
         set_variable = { TRI_shaked_nagisa_belief_stability_weekly = -0.005 }
         set_variable = { TRI_shaked_nagisa_belief_political_advisor_cost_factor = 0.75 }
         set_variable = { TRI_shaked_nagisa_belief_political_power_cost = 0.5 }
-        set_variable = { TRI_shaked_nagisa_belief_paranoia_modifier_increase = 1 }
         set_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = -2 }
         set_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = -2 }
-        add_dynamic_modifier = {
-            modifier = TRI_shaked_nagisa_belief_1
+        add_dynamic_modifier = { modifier = TRI_shaked_nagisa_belief_1 }
+        if = {
+            limit = { has_country_flag = TRI_investigation_perfect_ending }
+            complete_national_focus = TRI_repair_trust
+            complete_national_focus = TRI_threading_a_needle
+            complete_national_focus = TRI_bouncing_back
+            complete_national_focus = TRI_return_a_favor
+            complete_national_focus = TRI_making_the_best_use
+            clr_country_flag = TRI_senate_promise_task_1
+            clr_country_flag = TRI_senate_promise_task_2
+            clr_country_flag = TRI_senate_promise_task_3
+            clr_country_flag = TRI_house_promise_task_1
+            clr_country_flag = TRI_house_promise_task_2
+            clr_country_flag = TRI_house_promise_task_3
+
         }
-        add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 1 }
-        add_to_variable = { TRI_other_unity_modifiers = -2 }
+        
         TRI_unity_decrease_10 = yes
-        TRI_set_focus_trust_on_current_leader = yes
+
 		ai_chance = {
 			base = 100
 		}
@@ -1110,7 +1183,6 @@ country_event = {
         add_to_variable = { TRI_shaked_nagisa_belief_unity_weekly_modifier = 1 }
         add_to_variable = { TRI_shaked_nagisa_belief_Eden_treaty_progress_modifier = 1 }
         add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -1 }
-        add_to_variable = { TRI_other_unity_modifiers = 1 }
         add_dynamic_modifier = {
             modifier = TRI_shaked_nagisa_belief_2
         }

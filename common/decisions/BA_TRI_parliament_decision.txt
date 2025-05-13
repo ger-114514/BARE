@@ -1,5 +1,5 @@
 TRI_parliament_decisions_categories = {
-	TRI_senate_task = { #上议院任务1
+	TRI_senate_military_investment = { #支持上议院军备
 		visible = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -9,6 +9,8 @@ TRI_parliament_decisions_categories = {
 				has_country_flag = TRI_threading_a_needle
 			}
 		}
+		cost = 75
+		days_re_enable = 120
 		complete_effect = {
 			if = {
 				limit = { has_country_flag = TRI_senate_promise_task_1 }
@@ -18,6 +20,10 @@ TRI_parliament_decisions_categories = {
 					PARLIAMENT = BA_TRI_senate_seat
 				}
 			}
+			add_tech_bonus = {
+				category = fire_support
+				bonus = 0.5
+			}
 		}
 		ai_will_do = {
 			base = 1
@@ -26,12 +32,8 @@ TRI_parliament_decisions_categories = {
 				has_country_flag = TRI_senate_promise_task_1
 			}
 			modifier = {
-				factor = 3
-				check_variable = { TRI_unity < 60 }
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { TRI_unity > 80 }
+				factor = 0.5
+				has_political_power < 150
 			}
 		}
 	}
@@ -129,7 +131,7 @@ TRI_parliament_decisions_categories = {
 			}
 		}
 	}
-	TRI_house_task = { #下议院任务1
+	TRI_house_military_investment = { #支持下议院军备
 		visible = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -139,6 +141,8 @@ TRI_parliament_decisions_categories = {
 				has_country_flag = TRI_threading_a_needle
 			}
 		}
+		cost = 75
+		days_re_enable = 120
 		complete_effect = {
 			if = {
 				limit = { has_country_flag = TRI_house_promise_task_1 }
@@ -148,6 +152,10 @@ TRI_parliament_decisions_categories = {
 					PARLIAMENT = BA_TRI_house_seat
 				}
 			}
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 0.5
+			}
 		}
 		ai_will_do = {
 			base = 1
@@ -156,12 +164,8 @@ TRI_parliament_decisions_categories = {
 				has_country_flag = TRI_house_promise_task_1
 			}
 			modifier = {
-				factor = 3
-				check_variable = { TRI_unity < 60 }
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { TRI_unity > 80 }
+				factor = 0.5
+				has_political_power < 150
 			}
 		}
 	}

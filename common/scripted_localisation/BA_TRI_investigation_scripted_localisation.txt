@@ -3,13 +3,13 @@
     text = {
         trigger = {
             check_variable = { pemission@TRI_koharu = 1 }
-			#has_country_flag = koharu_invest_success
+			#check_variable = { pemission@TRI_koharu = 1 }
         }
         localization_key = noa_test_koharu_ok
     }
     text = {
         # trigger = {
-		# 	NOT = { has_country_flag = koharu_invest_success }
+		# 	NOT = { check_variable = { pemission@TRI_koharu = 1 } }
         # }
         localization_key = noa_test_koharu_not_ok
     }
@@ -25,7 +25,7 @@ defined_text = {
     }
     text = {
         # trigger = {
-		# 	NOT = { has_country_flag = hanako_invest_success }
+		# 	NOT = { check_variable = { pemission@TRI_hanako = 1 } }
         # }
         localization_key = noa_test_hanako_not_ok
     }
@@ -41,7 +41,7 @@ defined_text = {
     }
     text = {
         trigger = {
-			NOT = { has_country_flag = azusa_invest_success }
+			NOT = { check_variable = { pemission@TRI_azusa = 1 } }
         }
         localization_key = noa_test_azusa_not_ok
     }
@@ -57,7 +57,7 @@ defined_text = {
     }
     text = {
         trigger = {
-			NOT = { has_country_flag = hifumi_invest_success }
+			NOT = { check_variable = { pemission@TRI_hifumi = 1 } }
         }
         localization_key = noa_test_hifumi_not_ok
     }
