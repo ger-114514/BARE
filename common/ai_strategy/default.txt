@@ -1,36 +1,31 @@
 default_unit_production = {
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
-	enable = {
-		always = yes
+	allowed = {
 		NOT = {
-			OR = {
-				original_tag = TRI
-			}
+			original_tag = ARI
+			original_tag = TRI
+			original_tag = GEH
 		}
 	}
-	abort_when_not_enabled = yes
 
-	# Land division factors
 	ai_strategy = {
 		type = role_ratio
-		id = paratroopers
-		value = 0
+		id = garrison
+		value = 5
+	}
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = 1
 	}
 
 	ai_strategy = {
 		type = role_ratio
-		id = mountaineers
-		value = 4
+		id = armor
+		value = 10
 	}
-
 	ai_strategy = {
-		type = role_ratio
-		id = marines
-		value = 0
-	}
-
-	ai_strategy = {
-		type = role_ratio
+		type = build_army
 		id = armor
 		value = 2
 	}
@@ -39,6 +34,11 @@ default_unit_production = {
 		type = role_ratio
 		id = infantry
 		value = 80
+	}
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 10
 	}
 
 	# Air unit factors
@@ -148,11 +148,6 @@ default_surplus_management = {
 #		value = 2
 #	}
 
-	ai_strategy = {
-		type = equipment_production_surplus_management
-		id = convoy
-		value = 5
-	}
 }
 
 bba_air_prod_1 = {
@@ -222,8 +217,6 @@ bba_air_prod_1 = {
 		id = heavy_uav_airframe
 		value = 1
 	}
-
-
 }
 
 bba_support_boosts = {
@@ -260,26 +253,12 @@ default_pp_spend_amount = {
 	}
 }
 
-build_patrol_bombers = {
-	enable = {
-		has_dlc = "By Blood Alone"
-		has_navy_size = {
-			size > 1
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = unit_ratio
-		id = maritime_patrol_plane
-		value = 2
-	}
-}
-
 default_garrison_production = {
 	enable = {
 		NOT = {
+			original_tag = ARI
 			original_tag = TRI
+			original_tag = GEH
 		}
 		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
@@ -299,7 +278,9 @@ default_garrison_production = {
 default_mobile_production = {
 	enable = {
 		NOT = {
+			original_tag = ARI
 			original_tag = TRI
+			original_tag = GEH
 		}
 		ai_wants_divisions > 11
 	}
@@ -317,7 +298,9 @@ default_mobile_production = {
 default_armored_production = {
 	enable = {
 		NOT = {
+			original_tag = ARI
 			original_tag = TRI
+			original_tag = GEH
 		}
 		ai_wants_divisions > 49
 	}
@@ -335,7 +318,9 @@ default_armored_production = {
 highered_armored_production = {
 	enable = {
 		NOT = {
+			original_tag = ARI
 			original_tag = TRI
+			original_tag = GEH
 		}
 		num_of_military_factories > 69
 	}
@@ -478,27 +463,15 @@ default_market_stockpile_management_if_at_war = {
 	}
 }
 
-default_market_convoy_purchases = {
-	enable = {
-		naval_base > 0  # not land-locked
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_market_buying_threshold
-		id = convoy
-		value = 30  # Consider buying if we have too few (less than 30) convoys. Also interacts with the EQUIPMENT_MARKET_WANTED_CONVOY_USAGE_RATIO define.
-	}
-}
-
-
 DEFAULT_early_template_design = {
-	enable = {
+	allowed = {
 		NOT = {
-			OR = {
-				tag = TRI
-			}
+			original_tag = ARI
+			original_tag = TRI
+			original_tag = GEH
 		}
+	}
+	enable = {
 		date < 1940.1.1
 	}
 	abort = {
@@ -551,9 +524,9 @@ DEFAULT_early_template_design = {
 DEFAULT_midlate_template_design = {
 	enable = {
 		NOT = {
-			OR = {
-				tag = TRI
-			}
+			original_tag = ARI
+			original_tag = TRI
+			original_tag = GEH
 		}
 		date > 1940.1.1
 	}
@@ -764,11 +737,11 @@ add_intelligence_agency_normal_upgrade_prio = {
 ask_foreign_manpower_as_major = {
 	enable = {
 		is_major = yes
-		garrison_manpower_need > 200000
+		garrison_manpower_need > 20000
 	}
 
 	abort = {
-		garrison_manpower_need < 100000
+		garrison_manpower_need < 10000
 	}
 
 	ai_strategy = {
@@ -799,7 +772,6 @@ more_upgrades_as_spymaster = {
 	}
 }
 
-
 put_garrisons_on_high_prio = {
 	enable = {
 		always = yes
@@ -809,79 +781,6 @@ put_garrisons_on_high_prio = {
 	ai_strategy = {
 		type = garrison_reinforcement_priority
 		value = 100 # positive is high prio, negative is low prio
-	}
-}
-
-default_spyplanes_production = {
-	enable = {
-		OR = {
-			has_tech = scout_plane1
-			has_tech = photo_reconnaisance
-		}
-		is_major = yes
-		#OR = {
-		#	has_equipment = {
-		#		scout_plane_equipment > 50
-		#	}
-		#	has_deployed_air_force_size = {
-		#		size > 50
-		#		type = scout_plane
-		#	}
-		#}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = unit_ratio
-		id = scout_plane
-		value = -99
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = scout_plane
-		value = -99
-	}
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = scout_plane
-		value = 1
-	}
-}
-
-minors_dont_spy = {
-	enable = {
-		OR = {
-			has_tech = scout_plane1
-			has_tech = photo_reconnaisance
-		}
-		is_major = no
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = unit_ratio
-		id = scout_plane
-		value = -10
-	}
-}
-
-### SPECIAL PROJECT STRATEGIES
-default_build_a_nl_facility = {
-	enable = {
-		has_tech = atomic_research
-		num_of_civilian_factories > 25
-		num_of_military_factories > 25 # Even if we have the base tech, let's wait until we have some kind of capacity
-		nuclear_facility < 1  # one is enough
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = nuclear_facility
-		value = 100
 	}
 }
 
@@ -916,75 +815,7 @@ default_build_fortfications = {
 		value = 1
 	}
 }
-default_build_a_nav_facility = {
-	enable = {
-		num_of_naval_factories > 25 # Only Naval Powers should bother with these unless specifically told to do otherwise
-		naval_facility < 1 # one is enough
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = naval_facility
-		value = 100
-	}
-}
 
-# TODO MANU or THOMAS
-default_build_a_gun_emplacement = {
-	enable = {
-		is_major = yes
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = mega_gun_emplacement
-		value = 1
-	}
-}
-
-default_build_a_lw_facility = {
-	enable = {
-		is_major = yes
-		num_of_civilian_factories > 40
-		num_of_military_factories > 40
-		OR = { # Don't start until we can build decent tanks of some kind
-			has_tech = improved_light_tank_chassis
-			has_tech = basic_medium_tank_chassis
-			has_tech = improved_heavy_tank_chassis
-		}
-		land_facility < 1 # one is enough
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = land_facility
-		value = 1
-	}
-}
-
-default_build_an_air_facility = {
-	allowed = {
-		always = yes
-	}
-	enable = {
-
-		is_major = yes # Minors don't bother until strong enough to be considered major
-		num_of_military_factories > 40 # We should first build up our military industry
-
-		OR = { # Don't start until we can build decent aircraft
-			has_tech = basic_small_airframe
-			has_tech = basic_medium_airframe
-			has_tech = basic_large_airframe
-		}
-		air_facility < 1 # one is enough
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = air_facility
-		value = 1
-	}
-}
 
 default_become_spymaster = {
 	enable = {
@@ -1008,7 +839,6 @@ default_recruit_land_scientist = {
 		value = 100
 	}
 }
-
 
 default_recruit_air_scientist = {
 	enable = {
@@ -1037,7 +867,7 @@ default_produce_some_trucks_for_buffer = {
 	}
 }
 
-default_building_ecolaws_civilian_economy = {
+default_building_ecolaws_civilian = {
 	enable = {
 		has_idea = ecolaws_civilian_economy
 	}
@@ -1046,12 +876,12 @@ default_building_ecolaws_civilian_economy = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 10
+		value = 15
 	}
 	ai_strategy = {
 		type = building_target
 		id = infrastructure
-		value = 10
+		value = 15
 	}
 }
 default_building_ecolaws_army = {
@@ -1066,29 +896,41 @@ default_building_ecolaws_army = {
 	ai_strategy = {
 		type = building_target
 		id = heavy_arms_factory
-		value = 10
+		value = 20
 	}
 	ai_strategy = {
 		type = building_target
 		id = arms_factory
-		value = 10
+		value = 20
 	}
 }
 default_early_building = { #前两年造民工
+	allowed = {
+		NOT = {
+			original_tag = ARI
+		}
+	}
 	enable = {
 		date < 2021.1.1
+	}
+	abort = {
+		num_of_civilian_factories_available_for_projects > 120
 	}
 	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 20
+		value = 60
 	}
 	ai_strategy = {
 		type = building_target
 		id = infrastructure
-		value = 30
+		value = 60
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -50
 	}
 }
 default_civilian_building = {
@@ -1119,6 +961,10 @@ default_civilian_building = {
 	}
 	abort_when_not_enabled = yes
 	
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -30
+	}
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
@@ -1162,6 +1008,10 @@ default_arms_building = {
 	ai_strategy = {
 		type = building_target
 		id = arms_factory
+		value = 10
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
 		value = 10
 	}
 }

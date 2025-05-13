@@ -1,7 +1,7 @@
-armor_TRI = {
+armor_GEH = {
 
 	available_for = {
-		TRI
+		GEH
 	}
 	
 	role = armor
@@ -11,10 +11,10 @@ armor_TRI = {
 
 	}
 
-	medium_armor_1_TRI = {
+	medium_armor_1_GEH = {
 	
 		upgrade_prio = {
-			factor = 1.5
+			factor = 2
 		}
 
 		target_template = {
@@ -27,29 +27,78 @@ armor_TRI = {
 			
 			regiments = {
 				medium_armor = 2
-				medium_sp_artillery_brigade = 1
-				apc_unit = 5
+				heavy_armor = 2
+				apc_unit = 4
 			}
 		}
 		
 		reinforce_prio = 2
 		replace_at_match = 0.7
-		replace_with = medium_armor_2_TRI
+		replace_with = medium_armor_2_GEH
 		target_min_match = 0.7
 	}
-	medium_armor_2_TRI = {
+	medium_armor_2_GEH = {
 	
 		upgrade_prio = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				has_tech = medium_tank_MK3
+				factor = 1.5
+				has_tech = heavy_bm_artillery_MK1
+			}
+			modifier = {
+				factor = 1.5
+				has_tech = heavy_bm_aa_MK1
 			}
 
 			modifier = {
 				factor = 0.1
-				num_of_military_factories < 80
+				num_of_military_factories < 60
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				maintenance_company = 1
+				mbt_recon = 1
+				helicopter_logistics_company = 1
+			}
+			
+			regiments = {
+				heavy_armor = 2
+				heavy_sp_artillery_brigade = 1
+				heavy_sp_anti_air_brigade = 1
+				ifv_unit = 4
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.8
+		replace_with = medium_armor_3_GEH
+		target_min_match = 0.7
+		
+	}
+	medium_armor_3_GEH = {
+	
+		upgrade_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				num_of_military_factories > 100
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_tech = General_helicopter_T2
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_tech = special_fire_support_weapons_T1
+				}
 			}
 		}
 		
@@ -64,11 +113,10 @@ armor_TRI = {
 			}
 			
 			regiments = {
-				medium_armor = 5
-				ifv_unit = 5
-				medium_sp_artillery_brigade = 2
-				medium_tank_destroyer_brigade = 1
-				medium_sp_anti_air_brigade = 1
+				heavy_armor = 5
+				heavy_sp_artillery_brigade = 3
+				heavy_sp_anti_air_brigade = 1
+				ifv_unit = 6
 			}
 		}
 		reinforce_prio = 2
@@ -77,10 +125,10 @@ armor_TRI = {
 		
 	}
 }
-mobile_TRI = {
+mobile_GEH = {
 
 	available_for = {
-		TRI
+		GEH
 	}
 	
 	role = mobile
@@ -90,10 +138,10 @@ mobile_TRI = {
 
 	}
 
-	mobile_1_TRI = {
+	mobile_1_GEH = {
 	
 		upgrade_prio = {
-			factor = 3
+			factor = 1
 		}
 
 		target_template = {
@@ -105,25 +153,28 @@ mobile_TRI = {
 			}
 			
 			regiments = {
-				light_armor = 3
-				light_sp_artillery_brigade = 1
-				infantry = 5
+				apc_artillery_unit = 3
+				apc_unit = 8
 			}
 		}
 		
 		reinforce_prio = 2
-		replace_at_match = 0.5
-		replace_with = mobile_2_TRI
-		target_min_match = 0.5
+		replace_at_match = 0.6
+		replace_with = mobile_2_GEH
+		target_min_match = 0.6
 	}
-	mobile_2_TRI = {
+	mobile_2_GEH = {
 	
 		upgrade_prio = {
-			factor = 4
+			factor = 2
 
 			modifier = {
+				factor = 4
+				has_tech = Infantry_fighting_vehicle_T2
+			}
+			modifier = {
 				factor = 0.1
-				num_of_military_factories < 60
+				num_of_military_factories < 70
 			}
 		}
 
@@ -131,31 +182,30 @@ mobile_TRI = {
 			
 			support = {
 				engineer = 1
-				mbt_recon = 1
+				apc_recon = 1
 				maintenance_company = 1
 				fire_support_team_su_sa = 1
 			}
 			
 			regiments = {
-				light_armor = 2
-				light_sp_artillery_brigade = 2
-				ifv_unit = 4
+				ifv_artillery_unit = 3
+				ifv_unit = 8
 			}
 		}
 		
 		reinforce_prio = 2
 		replace_at_match = 0.8
-		replace_with = mobile_3_TRI
+		replace_with = mobile_3_GEH
 		target_min_match = 0.7
 	}
-	mobile_3_TRI = {
+	mobile_3_GEH = {
 	
 		upgrade_prio = {
 			factor = 2
 
 			modifier = {
-				factor = 4
-				has_tech = light_tank_MK2
+				factor = 5
+				has_tech = Infantry_fighting_vehicle_T2
 			}
 			modifier = {
 				factor = 0.1
@@ -174,11 +224,11 @@ mobile_TRI = {
 			}
 			
 			regiments = {
-				light_armor = 5
-				ifv_unit = 5
-				light_sp_artillery_brigade = 2
-				light_tank_destroyer_brigade = 1
-				light_sp_anti_air_brigade = 1
+				light_armor = 2
+				ifv_unit = 8
+				ifv_artillery_unit = 2
+				ifv_at_unit = 2
+				ifv_aa_unit = 2
 			}
 		}
 		
@@ -189,10 +239,10 @@ mobile_TRI = {
 
 }
 
-infantry_TRI = {
+infantry_GEH = {
 
 	available_for = {
-		TRI
+		GEH
 	}
 
 	role = infantry
@@ -201,47 +251,13 @@ infantry_TRI = {
 		base = 5
 	}
 	
-	infantry_1_TRI = {
+	infantry_1_GEH = {
 	
 		upgrade_prio = {
 			base = 1
 
 			modifier = {
 				factor = 1.5
-			}
-		}
-		
-		target_template = {
-			
-			support = {
-				engineer = 1
-				recon = 1
-				fire_support_team_su_la = 1
-			}
-			
-			regiments = {
-				infantry = 9
-				fire_support_team_la = 1
-			}
-		}
-
-		replace_at_match = 0.5
-		replace_with = infantry_2_TRI
-		target_min_match = 0.5
-	}
-
-	infantry_2_TRI = {
-
-		upgrade_prio = {
-			base = 1
-
-			modifier = {
-				factor = 3
-				date > 2020.1.1
-			}
-			modifier = {
-				factor = 2
-				num_of_military_factories > 40
 			}
 		}
 		
@@ -254,26 +270,27 @@ infantry_TRI = {
 			}
 			
 			regiments = {
-				infantry = 8
-				fire_support_team_la = 2
-				fire_support_team_ha = 1
+				infantry = 9
+				fire_support_team_la = 3
 			}
 		}
-		replace_at_match = 0.8
-		replace_with = infantry_3_TRI
-		target_min_match = 0.8
+
+		replace_at_match = 0.5
+		replace_with = infantry_2_GEH
+		target_min_match = 0.5
 	}
-	infantry_3_TRI = {
+
+	infantry_2_GEH = {
 	
 		upgrade_prio = {
 			factor = 2
 			modifier = {
-				factor = 2
+				factor = 4
 				num_of_military_factories > 70
 			}
 			modifier = {
 				factor = 1.5
-				date > 2021.1.1
+				date > 2022.1.1
 			}
 
 		}
@@ -284,27 +301,28 @@ infantry_TRI = {
 				engineer = 1
 				apc_recon = 1
 				maintenance_company = 1
-				field_hospital = 1
 				fire_support_team_su_ha = 1
+				fire_support_team_su_la = 1
 			}
 			
 			regiments = {
-				infantry = 8
-				fire_support_team_la = 5
+				infantry = 10
+				fire_support_team_la = 3
+				fire_support_team_ha = 1
 				fire_support_team_aa = 1
 			}
 		}
 		replace_at_match = 0.8
-		replace_with = heavy_infantry_TRI
+		replace_with = heavy_infantry_GEH
 		target_min_match = 0.8
 	}
-	heavy_infantry_TRI = {
+	heavy_infantry_GEH = {
 	
 		upgrade_prio = {
-			factor = 3
+			factor = 2
 			modifier = {
-				factor = 2
-				num_of_military_factories > 80
+				factor = 5
+				num_of_military_factories > 90
 			}
 			modifier = {
 				factor = 0
@@ -325,23 +343,24 @@ infantry_TRI = {
 				engineer = 1
 				apc_recon = 1
 				maintenance_company = 1
-				field_hospital = 1
+				fire_support_team_su_ha = 1
 				fire_support_team_su_sa = 1
 			}
 			
 			regiments = {
-				infantry_heavy = 8
-				fire_support_team_la = 5
+				infantry_heavy = 10
+				fire_support_team_la = 3
+				fire_support_team_ha = 1
 				fire_support_team_aa = 1
 			}
 		}
 	}
 }
 
-garrison_TRI = {
+garrison_GEH = {
 
 	available_for = {
-		TRI
+		GEH
 	}
 	
 	role = garrison
@@ -354,14 +373,33 @@ garrison_TRI = {
 			NOT = { ai_has_role_template = garrison }
 		}
 	}
-	
-	garrison_TRI = {
+	garrison_1_GEH = {
 	
 		upgrade_prio = {
 			factor = 2
+		}
+		
+		reinforce_prio = 0
+		
+		target_template = {
+			
+			regiments = {
+				infantry = 6
+			}
+		}
+		replace_at_match = 0.7
+		replace_with = garrison_2_GEH
+		target_min_match = 0.7
+	}
+	
+	garrison_2_GEH = {
+	
+		upgrade_prio = {
+			factor = 1
 
 			modifier = {
-				factor = 1
+				factor = 3
+				num_of_military_factories > 60
 			}
 		}
 		

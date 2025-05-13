@@ -179,7 +179,7 @@ TRI_generate_unity_modifier = {
 		}
 		add_to_variable = { TRI_unity_weekly_modifier = unity_modifier }
 	}
-	add_to_variable = { TRI_unity_weekly_modifier = TRI_other_unity_modifiers }
+	add_to_variable = { TRI_unity_weekly_modifier = modifier@TRI_unity_weekly_modifier }
 	#鸽派主导的修正
 	if = {
 		limit = { has_idea = TRI_main_faction_BOP_moderate_3 }

@@ -8,7 +8,6 @@ scripted_gui = {
             original_tag = TRI
             has_country_flag = TRI_investigate_available #在开启补课部调查的时候才可用
             is_ai = no
-            #check_variable = { TRI_permitted_hoshubu_member < 4 }
         }
         effects = {
             TRI_investigation_open_button_click = {
@@ -60,6 +59,32 @@ scripted_gui = {
                         }
                     }
                     event_id = "[?event@var:decision]"
+                }
+                if = {
+                    limit = { has_country_flag = TRI_the_way_to_get_trust }
+                    random_list = {
+                        1 = {
+                            modifier = {
+                                factor = 0
+                                BA_TRI_can_purge_administration = no
+                            }
+                            TRI_purge_administration = yes
+                        }
+                        1 = {
+                            modifier = {
+                                factor = 0
+                                BA_TRI_can_purge_army = no
+                            }
+                            TRI_purge_army = yes
+                        }
+                        1 = {
+                            modifier = {
+                                factor = 0
+                                BA_TRI_can_purge_airforce = no
+                            }
+                            TRI_purge_airforce = yes
+                        }
+                    }
                 }
             }
             all_permission_button_click = {

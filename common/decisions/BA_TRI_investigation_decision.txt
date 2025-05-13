@@ -16,40 +16,152 @@ TRI_ai_bukebu_inv_decisions_categories = {
 					#调查小春成功，减少偏执度
 					modifier = {
 						factor = 0
-						has_country_flag = koharu_invest_success
+						check_variable = { pemission@TRI_koharu = 1 }
 					}
 					set_country_flag = koharu_invest_success
 					add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+					if = {
+						limit = { has_country_flag = TRI_the_way_to_get_trust }
+						random_list = {
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_administration = no
+								}
+								TRI_purge_administration = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_army = no
+								}
+								TRI_purge_army = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_airforce = no
+								}
+								TRI_purge_airforce = yes
+							}
+						}
+					}
 				}
 				10 = {
 					#同上
 					modifier = {
 						factor = 0
-						has_country_flag = azusa_invest_success
+						check_variable = { pemission@TRI_azusa = 1 }
 					}
 					set_country_flag = azusa_invest_success
 					add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+					if = {
+						limit = { has_country_flag = TRI_the_way_to_get_trust }
+						random_list = {
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_administration = no
+								}
+								TRI_purge_administration = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_army = no
+								}
+								TRI_purge_army = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_airforce = no
+								}
+								TRI_purge_airforce = yes
+							}
+						}
+					}
 				}
 				10 = {
 					modifier = {
 						factor = 0
-						has_country_flag = hanako_invest_success
+						check_variable = { pemission@TRI_hanako = 1 }
 					}
 					set_country_flag = hanako_invest_success
 					add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+					if = {
+						limit = { has_country_flag = TRI_the_way_to_get_trust }
+						random_list = {
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_administration = no
+								}
+								TRI_purge_administration = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_army = no
+								}
+								TRI_purge_army = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_airforce = no
+								}
+								TRI_purge_airforce = yes
+							}
+						}
+					}
 				}
 				10 = {
 					modifier = {
 						factor = 0
-						has_country_flag = hifumi_invest_success
+						check_variable = { pemission@TRI_hifumi = 1 }
 					}
 					set_country_flag = hifumi_invest_success
 					add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+					if = {
+						limit = { has_country_flag = TRI_the_way_to_get_trust }
+						random_list = {
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_administration = no
+								}
+								TRI_purge_administration = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_army = no
+								}
+								TRI_purge_army = yes
+							}
+							1 = {
+								modifier = {
+									factor = 0
+									BA_TRI_can_purge_airforce = no
+								}
+								TRI_purge_airforce = yes
+							}
+						}
+					}
 				}
 				10 = {
+					modifier = {
+						factor = 0
+						has_country_flag = TRI_the_way_to_get_trust
+					}
 					#什么都不发生
 				}
 				10 = {
+					modifier = {
+						factor = 0
+						has_country_flag = TRI_the_way_to_get_trust
+					}
 					#略微增加偏执度
 					TRI_paranoia_increase_10 = yes
 				}
@@ -171,7 +283,7 @@ TRI_mika_investigation = {
 		}
 
 		visible = {
-			has_country_flag = TRI_mika_investigation_2
+			has_country_flag = TRI_mika_investigation_3
 		}
 		fire_only_once = yes
 		days_remove = 2
@@ -180,6 +292,8 @@ TRI_mika_investigation = {
 			country_event = TRI_events.403
 			clr_country_flag = TRI_mika_investigation_1
 			clr_country_flag = TRI_mika_investigation_2
+			clr_country_flag = TRI_mika_investigation_3
+			set_country_flag = TRI_mika_investigation_completed
 		}
 	}
 }

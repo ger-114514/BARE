@@ -353,8 +353,12 @@ country_event = { #完美落幕
 
     option = {
 		name = TRI_coup.11.a
+        if = {
+            limit = { has_country_flag = TRI_investigate_available }
+            clr_country_flag = TRI_investigate_available
+            custom_effect_tooltip = TRY_event_remove_hoshubu_to_survey
+        }
 
-        custom_effect_tooltip = TRY_event_remove_hoshubu_to_survey
 
 		ai_chance = {
 			base = 100
@@ -384,6 +388,76 @@ country_event = { #动摇
     is_triggered_only = yes
     option = {
         name = TRI_coup.20.a
+        #于【GUI：圣三一情报局】的界面中揭示【浦和花子】的真实状态，若【浦和花子】已被揭示，则在剩余被调查学生中随机揭示一个学生真实状态。
+        if = {
+            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            set_variable = { pemission@TRI_hanako = 1 }
+            add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+            set_variable = { enable@TRI_hanako_inv1 = 1 }
+            set_variable = { enable@TRI_hanako_inv2 = 1 }
+            set_variable = { enable@TRI_hanako_inv3 = 1 }
+            set_variable = { enable@TRI_hanako_inv4 = 1 }
+            custom_effect_tooltip = {
+                localization_key = TRI_investigation_safe_tt
+                SAFE = TRI_safe
+                NAME = TRI_hanako_name
+            }
+        }
+        else = {
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                        check_variable = { pemission@TRI_azusa = 1 }
+                    }
+                    set_variable = { pemission@TRI_azusa = 1 }
+                    add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+                    set_variable = { enable@TRI_azusa_inv1 = 1 }
+                    set_variable = { enable@TRI_azusa_inv2 = 1 }
+                    set_variable = { enable@TRI_azusa_inv3 = 1 }
+                    set_variable = { enable@TRI_azusa_inv4 = 1 }
+                    custom_effect_tooltip = {
+                        localization_key = TRI_investigation_safe_tt
+                        SAFE = TRI_safe
+                        NAME = TRI_azusa_name
+                    }
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        check_variable = { pemission@TRI_koharu = 1 }
+                    }
+                    set_variable = { pemission@TRI_koharu = 1 }
+                    add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+                    set_variable = { enable@TRI_koharu_inv1 = 1 }
+                    set_variable = { enable@TRI_koharu_inv2 = 1 }
+                    set_variable = { enable@TRI_koharu_inv3 = 1 }
+                    set_variable = { enable@TRI_koharu_inv4 = 1 }
+                    custom_effect_tooltip = {
+                        localization_key = TRI_investigation_safe_tt
+                        SAFE = TRI_safe
+                        NAME = TRI_koharu_name
+                    }
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        check_variable = { pemission@TRI_hifumi = 1 }
+                    }
+                    set_variable = { pemission@TRI_hifumi = 1 }
+                    add_to_variable = { TRI_permitted_hoshubu_member = 1 }
+                    set_variable = { enable@TRI_hifumi_inv1 = 1 }
+                    set_variable = { enable@TRI_hifumi_inv2 = 1 }
+                    set_variable = { enable@TRI_hifumi_inv3 = 1 }
+                    set_variable = { enable@TRI_hifumi_inv4 = 1 }
+                    custom_effect_tooltip = {
+                        localization_key = TRI_investigation_safe_tt
+                        SAFE = TRI_safe
+                        NAME = TRI_hifumi_name
+                    }
+                }
+            }
+        }
     }
 }
 country_event = { #说者有心
@@ -433,7 +507,13 @@ country_event = { #可疑的邀约
     option = {
         name = TRI_coup.22.a
         #于【GUI：圣三一情报局】下添加一个决议任务：【取信之道】，该决议需要调查完补习部全部4名学生之后才可以激活，激活后持续7天，然后激活事件：【离巢】，通过选项对桐藤渚特质【追根溯源】追加效果：每周偏执度－2％并移除该决议。
-        #TODO:在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
+        #在决议任务出现期间，对补习部学生调查仅会出现正确选项，且在完成对该学生的调查后必定触发一次普通的负面偏执度事件
+		set_variable = { enable@TRI_hanako_inv3 = 1 }
+		set_variable = { enable@TRI_hanako_inv4 = 1 }
+		set_variable = { enable@TRI_azusa_inv3 = 1 }
+		set_variable = { enable@TRI_azusa_inv4 = 1 }
+		set_variable = { enable@TRI_hifumi_inv3 = 1 }
+		set_variable = { enable@TRI_hifumi_inv4 = 1 }
         set_country_flag = TRI_the_way_to_get_trust
         unlock_decision_tooltip = {
             decision = TRI_the_way_to_get_trust
@@ -537,6 +617,11 @@ country_event = { #负面事件3-百喙如一
     option = {
         name = TRI_coup.27.a
         add_political_power = -20
+        custom_effect_tooltip = {
+            localization_key = TRI_nagisa_paranoia_modifier_increase_sub_tt
+            SUB = "4"
+        }
+        add_to_variable = { TRI_nagisa_paranoia_modifier_increase = -4 }
         clr_country_flag = TRI_negative_paranoia_event_2
         set_temp_variable = { TRI_paranoia_change = -40 }
         TRI_change_paranoia = yes
@@ -562,8 +647,15 @@ country_event = { #措以惑敌
         TRI_parliament_loyalty_change_parliament = yes
         add_dynamic_modifier = { modifier = TRI_dissonance_modifier }
         #立即激活阿里乌斯提前发动政变的事件链或是国策
+            
         hidden_effect = {
             ARITRI_coup_effect = yes
+            add_to_array = { TRI_hoshubu_focus_line = token:TRI_lure_the_enemy }
+            activate_shine_on_focus = TRI_lure_the_enemy
+            country_event = {
+                id = TRI_autofocus.1
+                days = 7
+            }
         }
     }
 }
@@ -607,7 +699,20 @@ country_event = { #空巢行动
                 id = TRI_autofocus.1
                 days = 7
             }
+            ARI = {
+                country_event = ARI_coup.7
+            }
         }
+    }
+}
+country_event = { #羊入虎口
+    id = ARI_coup.7
+    title = ARI_coup.7.t
+    desc = ARI_coup.7.desc
+    #picture =
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.7.a
     }
 }
 country_event = { #暗处涌流
@@ -619,10 +724,13 @@ country_event = { #暗处涌流
     is_triggered_only = yes
     option = {
         name = TRI_coup.30.a
-        country_event = TRI_coup.31
+        country_event = {
+            id = TRI_coup.31
+            days = 3
+        }
     }
 }
-country_event = { #电话
+country_event = { #大师技艺
     id = TRI_coup.31
     title = TRI_coup.31.t
     desc = TRI_coup.31.desc
@@ -631,10 +739,13 @@ country_event = { #电话
     is_triggered_only = yes
     option = {
         name = TRI_coup.31.a
-        country_event = TRI_coup.32
+        country_event = {
+            id = TRI_coup.32
+            days = 3
+        }
     }
 }
-country_event = { #对决
+country_event = { #解脱之途
     id = TRI_coup.32
     title = TRI_coup.32.t
     desc = TRI_coup.32.desc
@@ -643,9 +754,107 @@ country_event = { #对决
     is_triggered_only = yes
     option = {
         name = TRI_coup.32.a
-        TRI_mika = { 
-            custom_effect_tooltip = TRI_mika_arrested_tt
+        country_event = {
+            id = TRI_coup.33
+            days = 3
         }
+    }
+}
+country_event = { #意外
+    id = TRI_coup.33
+    title = TRI_coup.33.t
+    desc = TRI_coup.33.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.33.a
+        country_event = {
+            id = TRI_coup.34
+            days = 3
+        }
+    }
+}
+country_event = { #死斗
+    id = TRI_coup.34
+    title = TRI_coup.34.t
+    desc = TRI_coup.34.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.34.a
+        country_event = {
+            id = TRI_coup.35
+            days = 3
+        }
+    }
+}
+country_event = { #不虞之隙
+    id = TRI_coup.35
+    title = TRI_coup.35.t
+    desc = TRI_coup.35.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.35.a
+        country_event = {
+            id = TRI_coup.36
+            days = 3
+        }
+    }
+}
+country_event = { #最终时刻·其一
+    id = TRI_coup.36
+    title = TRI_coup.36.t
+    desc = TRI_coup.36.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.36.a
+        country_event = {
+            id = TRI_coup.37
+            days = 3
+        }
+    }
+}
+country_event = { #最终时刻·其二
+    id = TRI_coup.37
+    title = TRI_coup.37.t
+    desc = TRI_coup.37.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.37.a
+        hidden_effect = {
+            add_to_array = { TRI_hoshubu_focus_line = token:TRI_moon_fall_sun_rise }
+            activate_shine_on_focus = TRI_moon_fall_sun_rise
+            country_event = {
+                id = TRI_autofocus.1
+                days = 7
+            }
+        }
+    }
+}
+country_event = { #风卷云散见月升
+    id = TRI_coup.38
+    title = TRI_coup.38.t
+    desc = TRI_coup.38.desc
+    #picture =
+
+    is_triggered_only = yes
+    option = {
+        name = TRI_coup.38.a
+        set_country_flag = TRI_seia_available
+        custom_effect_tooltip = {
+            localization_key = advisor_available_tt
+            CHAR = TRI_seia_name
+            JOB = political_advisor
+        }
+        TRI_mika = { custom_effect_tooltip = TRI_mika_arrested_tt }
         custom_effect_tooltip = TRY_event_add_mika_to_survey
         set_variable = { leader@TRI_parliament_association_0 = token:TRI_mika_arrested }
         set_country_flag = TRI_mika_arrested

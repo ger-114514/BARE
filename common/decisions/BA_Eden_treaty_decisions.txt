@@ -575,15 +575,15 @@ Eden_treaty_negotiation_decisions = {
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = Eden_treaty_has_weights_tt
-					WEIGHTS = "10"
+					WEIGHTS = "5"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = { Eden_treaty_weights > 4.9 }
 			}
 		}
 		days_remove = 14
 		days_re_enable = 60
 		complete_effect = {
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = { weights_change = -5 }
 			Eden_treaty_change_weights = yes
 		}
 		remove_effect = {
@@ -1305,6 +1305,10 @@ Eden_treaty_to_be_signed_decisions = {
 			NOT = { has_global_flag = Eden_treaty_has_been_signed }
 			hidden_trigger = {
 				NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+				OR = {
+					original_tag = GEH
+					original_tag = TRI
+				}
 			}
 			has_global_flag = Eden_treaty_negotiation_completed
 		}

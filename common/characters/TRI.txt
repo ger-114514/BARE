@@ -19,7 +19,7 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_seia_available_tt
-					always = no
+					has_country_flag = TRI_seia_available
 				}
 			}
 			traits = {

@@ -6,6 +6,7 @@ news_event = {
     title = Eden_pact.1000.t
     desc = Eden_pact.1000.d
     #picture = GFX_TRI_events_pic
+	major = yes
 	is_triggered_only = yes
     #这里需要进一步完善
     option = {
@@ -34,6 +35,7 @@ news_event = {
     title = Eden_pact.1001.t
     desc = Eden_pact.1001.d
     #picture = GFX_TRI_events_pic
+	major = yes
 	is_triggered_only = yes
     immediate = {
         hidden_effect = {
@@ -41,21 +43,17 @@ news_event = {
 				limit = { original_tag = TRI }
 				set_variable = { global.Eden_treaty_progress = 0 }
 				set_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+                set_global_flag = BA_2st_eden_pact_begin
+                set_global_flag = Eden_treaty_negotiation_ongoing
 				set_variable = { Eden_treaty_weights = 0 }
 				set_variable = { Eden_treaty_modifier_political_power_factor = 0.1 }
 				set_variable = { Eden_treaty_modifier_stability_factor = 0.1 }
 				set_variable = { Eden_treaty_modifier_war_support_factor = 0.1 }
 				set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
 				set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
-				set_variable = { GEH.Eden_treaty_weights = 0 }
-				set_variable = { GEH.Eden_treaty_modifier_political_power_factor = 0.1 }
-				set_variable = { GEH.Eden_treaty_modifier_stability_factor = 0.1 }
-				set_variable = { GEH.Eden_treaty_modifier_war_support_factor = 0.1 }
-				set_variable = { GEH.Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
-				set_variable = { GEH.Eden_treaty_modifier_research_speed_factor = 0.05 }
                 activate_mission = Eden_treaty_mutual_negotiation
                 if = {
-                    limit = { NOT = { has_completed_focus = TRI_choosing_pact_place } }
+                    limit = { has_global_flag = BA_2st_eden_pact_GEH_leader }
                     unlock_national_focus = TRI_choosing_pact_place
                     add_stability = -0.1
                     set_temp_variable = { loyalty_change = -0.05 }
@@ -65,14 +63,21 @@ news_event = {
 			}
             else_if = {
                 limit = { 
-                    NOT = { has_completed_focus = TRI_choosing_pact_place }
                     original_tag = GEH
                 }
-                unlock_national_focus = GEH_restart_eden_treaty_negotiation
-                #TODO:格黑娜未能触发的惩罚
+				set_variable = { Eden_treaty_weights = 0 }
+				set_variable = { Eden_treaty_modifier_political_power_factor = 0.1 }
+				set_variable = { Eden_treaty_modifier_stability_factor = 0.1 }
+				set_variable = { Eden_treaty_modifier_war_support_factor = 0.1 }
+				set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
+				set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
+                activate_mission = Eden_treaty_mutual_negotiation
+                if = {
+                    limit = { has_global_flag = BA_2st_eden_pact_TRI_leader }
+                    unlock_national_focus = GEH_restart_eden_treaty_negotiation
+                    #TODO:格黑娜未能触发的惩罚
+                }
             }
-            set_global_flag = BA_2st_eden_pact_begin
-            set_global_flag = Eden_treaty_negotiation_ongoing
         }
     }
     option = {
@@ -130,6 +135,7 @@ news_event = {
     title = Eden_pact.1002.t
     desc = Eden_pact.1002.d
     #picture = GFX_TRI_events_pic
+	major = yes
 	is_triggered_only = yes
     immediate = {
         
@@ -184,6 +190,7 @@ news_event = {
         text = Eden_pact.1003.d.b
     }
     picture = GFX_news_event_eden_pact_attack
+	major = yes
 	is_triggered_only = yes
 
     immediate = {
@@ -294,4 +301,109 @@ news_event = {
 		}
     }
 
+}
+#结算
+country_event = {
+    id = Eden_pact.100
+    title = Eden_pact.100.t
+    desc = Eden_pact.100.d
+    is_triggered_only = yes
+    #picture = 
+    option = {
+		name = Eden_pact.100.a
+        trigger = {
+            original_tag = TRI
+        }
+        custom_effect_tooltip =  event_immediately_happened_tt
+        effect_tooltip = {
+            140 = {
+                set_demilitarized_zone = yes
+            }
+            529 = {
+                set_demilitarized_zone = yes
+            }
+        }
+        Eden_treaty_get_winner = yes
+    }
+    option = {
+		name = Eden_pact.100.b
+        trigger = {
+            original_tag = GEH
+        }
+        custom_effect_tooltip =  event_immediately_happened_tt
+        effect_tooltip = {
+            140 = {
+                set_demilitarized_zone = yes
+            }
+            529 = {
+                set_demilitarized_zone = yes
+            }
+        }
+    }
+}
+#圣三一优势
+country_event = {
+    id = Eden_pact.101
+    title = Eden_pact.101.t
+    desc = Eden_pact.101.d
+    timeout_days = 3
+    is_triggered_only = yes
+    #picture = 
+    option = {
+		name = Eden_pact.101.a
+        trigger = {
+            original_tag = TRI
+        }
+        mark_focus_tree_layout_dirty = yes
+    }
+    option = {
+		name = Eden_pact.101.b
+        trigger = {
+            original_tag = GEH
+        }
+
+    }
+}
+#格赫娜优势
+country_event = {
+    id = Eden_pact.102
+    title = Eden_pact.102.t
+    desc = Eden_pact.102.d
+    timeout_days = 3
+    is_triggered_only = yes
+    #picture = 
+    option = {
+		name = Eden_pact.102.a
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    option = {
+		name = Eden_pact.102.b
+        trigger = {
+            original_tag = GEH
+        }
+        mark_focus_tree_layout_dirty = yes
+    }
+}
+#平局
+country_event = {
+    id = Eden_pact.103
+    title = Eden_pact.103.t
+    desc = Eden_pact.103.d
+    timeout_days = 3
+    is_triggered_only = yes
+    #picture = 
+    option = {
+		name = Eden_pact.103.a
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    option = {
+		name = Eden_pact.103.b
+        trigger = {
+            original_tag = GEH
+        }
+    }
 }
