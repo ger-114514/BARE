@@ -1,0 +1,19 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_CEN_focus_tree_background"
+		size= { x=1920 y=1080 }
+		textureFile = "gfx//interface//focus_tree_background//GFX_CEN_focus_tree_background.dds"
+		size= { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_TRI_focus_tree_background"
+		size= { x=1920 y=1080 }
+		textureFile = "gfx//interface//focus_tree_background//GFX_TRI_focus_tree_background.dds"
+		size= { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

@@ -421,13 +421,13 @@ random_intelligence_agency_upgrades = {
 			}
 			upgrade_intelligence_agency = upgrade_army_department
 		}
-		1 = {
-			modifier = {
-				has_done_agency_upgrade = upgrade_naval_department
-				factor = 0
-			}
-			upgrade_intelligence_agency = upgrade_naval_department
-		}
+#		1 = {
+#			modifier = {
+#				has_done_agency_upgrade = upgrade_naval_department
+#				factor = 0
+#			}
+#			upgrade_intelligence_agency = upgrade_naval_department
+#		}
 		1 = {
 			modifier = {
 				has_done_agency_upgrade = upgrade_airforce_department

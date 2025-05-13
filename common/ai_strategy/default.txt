@@ -132,21 +132,21 @@ default_surplus_management = {
 
 	ai_strategy = {
 		type = equipment_production_surplus_management
-		id = artillery_equipment
+		id = ifv_artillery_equipment
 		value = 5
 	}
 
 	ai_strategy = {  # Potentially move into a "specialization" strategy
 		type = equipment_production_surplus_management
-		id = anti_air_equipment
+		id = infanty_anti_air_equipment
 		value = 3
 	}
 
-	ai_strategy = {  # Potentially move into a "specialization" strategy
-		type = equipment_production_surplus_management
-		id = anti_tank_equipment
-		value = 2
-	}
+#	ai_strategy = {  # Potentially move into a "specialization" strategy
+#		type = equipment_production_surplus_management
+#		id = anti_tank_equipment
+#		value = 2
+#	}
 
 }
 
@@ -184,13 +184,13 @@ bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = medium_uav
+		id = medium_uav_airframe
 		value = 5
 	}
 
 	ai_strategy = {
 		type = unit_ratio
-		id = medium_uav
+		id = medium_uav_airframe
 		value = 5
 	}
 
@@ -208,13 +208,13 @@ bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = heavy_uav
+		id = heavy_uav_airframe
 		value = 1
 	}
 
 	ai_strategy = {
 		type = unit_ratio
-		id = heavy_uav
+		id = heavy_uav_airframe
 		value = 1
 	}
 }

@@ -5,7 +5,7 @@ country_event = { #逐渐强烈的杂音
     id = TRI_coup.1
     title = TRI_coup.1.t
     desc = TRI_coup.1.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_3
 
 	is_triggered_only = yes
 
@@ -23,7 +23,7 @@ country_event = { #冲击
     id = TRI_coup.2
     title = TRI_coup.2.t
     desc = TRI_coup.2.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_4
 
 	is_triggered_only = yes
 
@@ -45,7 +45,7 @@ country_event = { #独行，以及反叛
     id = TRI_coup.3
     title = TRI_coup.3.t
     desc = TRI_coup.3.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_4
 
 	is_triggered_only = yes
 
@@ -63,7 +63,7 @@ country_event = { #行动时刻
     id = ARI_coup.1
     title = ARI_coup.1.t
     desc = ARI_coup.1.desc
-    #picture =
+    picture = GFX_TRI_event_10
 
     is_triggered_only = yes
     option = {
@@ -75,7 +75,7 @@ country_event = { #激战
     id = TRI_coup.4
     title = TRI_coup.4.t
     desc = TRI_coup.4.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_11
 
 	is_triggered_only = yes
 
@@ -106,7 +106,7 @@ country_event = { #猫和老鼠
     id = ARI_coup.2
     title = ARI_coup.2.t
     desc = ARI_coup.2.desc
-    #picture =
+    picture = GFX_TRI_event_10
     is_triggered_only = yes
     option = {
         name = ARI_coup.2.a
@@ -122,7 +122,7 @@ country_event = { #意外之敌
     id = ARI_coup.3
     title = ARI_coup.3.t
     desc = ARI_coup.3.desc
-    #picture =
+    picture = GFX_TRI_event_10
     immediate = {
         hidden_effect = {
         }
@@ -136,7 +136,7 @@ country_event = { #幕后的真凶（mika暴露）
     id = TRI_coup.5
     title = TRI_coup.5.t
     desc = TRI_coup.5.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_12
 
 	is_triggered_only = yes
 
@@ -158,7 +158,7 @@ country_event = { #死斗
     id = TRI_coup.6
     title = TRI_coup.6.t
     desc = TRI_coup.6.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_12
 
 	is_triggered_only = yes
 
@@ -180,7 +180,7 @@ country_event = { #死斗·其二
     id = TRI_coup.7
     title = TRI_coup.7.t
     desc = TRI_coup.7.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_12
 
 	is_triggered_only = yes
 
@@ -202,7 +202,7 @@ country_event = { #死斗·其三
     id = TRI_coup.8
     title = TRI_coup.8.t
     desc = TRI_coup.8.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_12
 
 	is_triggered_only = yes
 
@@ -219,7 +219,7 @@ country_event = { #一夕安寝
     id = TRI_coup.9
     title = TRI_coup.9.t
     desc = TRI_coup.9.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_12
 
 	is_triggered_only = yes
 
@@ -253,7 +253,7 @@ country_event = { #急转直下
     id = ARI_coup.4
     title = ARI_coup.4.t
     desc = ARI_coup.4.desc
-    #picture =
+    picture = GFX_TRI_event_10
     is_triggered_only = yes
     option = {
         name = ARI_coup.4.a
@@ -269,7 +269,7 @@ country_event = { #旅者”行动总结-部分成功
     id = ARI_coup.5
     title = ARI_coup.5.t
     desc = ARI_coup.5.desc
-    #picture =
+    picture = GFX_TRI_event_10
 
     immediate = {
         hidden_effect = {
@@ -320,7 +320,7 @@ country_event = { #十万火急
     id = TRI_coup.10
     title = TRI_coup.10.t
     desc = TRI_coup.10.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_3
 
 	is_triggered_only = yes
 
@@ -345,7 +345,7 @@ country_event = { #完美落幕
     id = TRI_coup.11
     title = TRI_coup.11.t
     desc = TRI_coup.11.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_4
 
 	is_triggered_only = yes
 
@@ -370,7 +370,7 @@ country_event = { #见机行事
     id = ARI_coup.11
     title = ARI_coup.11.t
     desc = ARI_coup.11.desc
-    #picture =
+    picture = GFX_TRI_event_13
     immediate = {
         
     }
@@ -383,7 +383,7 @@ country_event = { #动摇
     id = TRI_coup.20
     title = TRI_coup.20.t
     desc = TRI_coup.20.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -464,7 +464,7 @@ country_event = { #说者有心
     id = TRI_coup.21
     title = TRI_coup.21.t
     desc = TRI_coup.21.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -501,7 +501,7 @@ country_event = { #可疑的邀约
     id = TRI_coup.22
     title = TRI_coup.22.t
     desc = TRI_coup.22.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -525,7 +525,7 @@ country_event = { #离巢
     id = TRI_coup.23
     title = TRI_coup.23.t
     desc = TRI_coup.23.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -541,7 +541,7 @@ country_event = { #示之假寐
     id = TRI_coup.24
     title = TRI_coup.24.t
     desc = TRI_coup.24.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -561,7 +561,7 @@ country_event = { #负面事件1-“繁文苛政”
     id = TRI_coup.25
     title = TRI_coup.25.t
     desc = TRI_coup.25.desc
-    #picture =
+    picture = GFX_TRI_event_3
     trigger = {
         has_country_flag = TRI_negative_paranoia_event
         check_variable = { TRI_nagisa_paranoia_total > 40 }
@@ -583,7 +583,7 @@ country_event = { #负面事件2-身后有声
     id = TRI_coup.26
     title = TRI_coup.26.t
     desc = TRI_coup.26.desc
-    #picture =
+    picture = GFX_TRI_event_3
     trigger = {
         check_variable = { TRI_nagisa_paranoia_total > 40 }
         has_country_flag = TRI_negative_paranoia_event_1
@@ -605,7 +605,7 @@ country_event = { #负面事件3-百喙如一
     id = TRI_coup.27
     title = TRI_coup.27.t
     desc = TRI_coup.27.desc
-    #picture =
+    picture = GFX_TRI_event_3
     trigger = {
         check_variable = { TRI_nagisa_paranoia_total > 40 }
         has_country_flag = TRI_negative_paranoia_event_2
@@ -637,7 +637,7 @@ country_event = { #措以惑敌
     id = TRI_coup.28
     title = TRI_coup.28.t
     desc = TRI_coup.28.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -663,7 +663,7 @@ country_event = { #一切顺利？
     id = ARI_coup.6
     title = ARI_coup.6.t
     desc = ARI_coup.6.desc
-    #picture =
+    picture = GFX_TRI_event_10
 
     is_triggered_only = yes
     option = {
@@ -671,12 +671,22 @@ country_event = { #一切顺利？
 
     }
 }
+country_event = { #羊入虎口
+    id = ARI_coup.7
+    title = ARI_coup.7.t
+    desc = ARI_coup.7.desc
+    picture = GFX_TRI_event_10
+    is_triggered_only = yes
+    option = {
+        name = ARI_coup.7.a
+    }
+}
 
 country_event = { #空巢行动
     id = TRI_coup.29
     title = TRI_coup.29.t
     desc = TRI_coup.29.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -709,7 +719,7 @@ country_event = { #暗处涌流
     id = TRI_coup.30
     title = TRI_coup.30.t
     desc = TRI_coup.30.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -724,7 +734,7 @@ country_event = { #大师技艺
     id = TRI_coup.31
     title = TRI_coup.31.t
     desc = TRI_coup.31.desc
-    #picture =
+    picture = GFX_TRI_event_3
 
     is_triggered_only = yes
     option = {
@@ -739,7 +749,7 @@ country_event = { #解脱之途
     id = TRI_coup.32
     title = TRI_coup.32.t
     desc = TRI_coup.32.desc
-    #picture =
+    picture = GFX_TRI_event_14
 
     is_triggered_only = yes
     option = {
@@ -859,7 +869,7 @@ country_event = { #全军覆没
     id = ARI_coup.8
     title = ARI_coup.8.t
     desc = ARI_coup.8.desc
-    #picture =
+    picture = GFX_TRI_event_10
     immediate = {
         hidden_effect = {
             country_event = {
@@ -877,7 +887,7 @@ country_event = { #突出重围
     id = ARI_coup.9
     title = ARI_coup.9.t
     desc = ARI_coup.9.desc
-    #picture =
+    picture = GFX_TRI_event_10
     immediate = {
         hidden_effect = {
             country_event = {
@@ -896,7 +906,7 @@ country_event = { #“旅者”行动总结-基本失败
     id = ARI_coup.10
     title = ARI_coup.10.t
     desc = ARI_coup.10.desc
-    #picture =
+    picture = GFX_TRI_event_10
 
     immediate = {
         hidden_effect = {
@@ -959,7 +969,7 @@ country_event = { #圣三一发起了反间谍行动
     id = ARI_coup.100
     title = ARI_coup.100.t
     desc = ARI_coup.100.d
-    picture = GFX_TRI_events_pic
+    picture = GFX_TRI_event_10
 
 	is_triggered_only = yes
 

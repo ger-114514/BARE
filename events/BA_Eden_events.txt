@@ -65,18 +65,8 @@ news_event = {
                 limit = { 
                     original_tag = GEH
                 }
-				set_variable = { Eden_treaty_weights = 0 }
-				set_variable = { Eden_treaty_modifier_political_power_factor = 0.1 }
-				set_variable = { Eden_treaty_modifier_stability_factor = 0.1 }
-				set_variable = { Eden_treaty_modifier_war_support_factor = 0.1 }
-				set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
-				set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
-                activate_mission = Eden_treaty_mutual_negotiation
-                if = {
-                    limit = { has_global_flag = BA_2st_eden_pact_TRI_leader }
-                    unlock_national_focus = GEH_restart_eden_treaty_negotiation
-                    #TODO:格赫娜未能触发的惩罚
-                }
+                unlock_national_focus = GEH_restart_eden_treaty_negotiation
+                #TODO:格黑娜未能触发的惩罚
             }
         }
     }

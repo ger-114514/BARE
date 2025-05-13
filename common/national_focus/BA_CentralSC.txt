@@ -1,0 +1,15 @@
+﻿focus_tree = {
+	id = CEN_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1
+			tag = CEN
+			
+		}
+	}
+	
+	default = no
+}
