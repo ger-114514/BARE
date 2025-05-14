@@ -23,7 +23,7 @@ capture_cyphers_bribe = {
 	equipment = {
 		civilian_factories = {
 			amount = 3
-			days = 30
+			days = 15
 		}
 	}
 }
@@ -71,7 +71,7 @@ capture_cyphers_smuggle = {
 	equipment = {
 		civilian_factories = {
 			amount = 3
-			days = 30
+			days = 15
 		}
 	}
 }
@@ -89,7 +89,7 @@ capture_cyphers_reverse_engineer = {
 	equipment = {
 		civilian_factories = {
 			amount = 3
-			days = 30
+			days = 15
 		}
 	}
 }
