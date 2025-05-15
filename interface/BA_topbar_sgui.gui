@@ -1,0 +1,39 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ba_manpower_number_container"
+		position = { x=-4 y=-1 }
+		
+		iconType ={
+			name ="ba_manpower_value_bg"
+			spriteType = "GFX_ba_top_bar_generic_box_smallest"
+			position = { x = 323 y = 6 }
+			Orientation = "UPPER_LEFT"
+			#pdx_tooltip = "ba_manpower_number_tooltip"
+			#pdx_tooltip_delayed = "ba_manpower_number_desc"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ba_manpower_number_text"
+			position = { x= 352 y = 9 }
+			font = "hoi_18mbs"
+			#text = "[?manpower_k]K"
+			format = right
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+			pdx_tooltip = "ba_manpower_number_tooltip"
+			pdx_tooltip_delayed = "ba_manpower_number_desc"
+		}
+
+		iconType = {
+			name = "ba_manpower_number_icon"
+			position = { x= 321 y = 3 }
+			spriteType = "GFX_manpower_icon"
+			pdx_tooltip = "BARE_Combat_Readiness_Tooltip_desc"
+			#pdx_tooltip_delayed = "BARE_Combat_Readiness_Tooltip_desc"
+			alwaystransparent = yes
+		}
+	}
+}
