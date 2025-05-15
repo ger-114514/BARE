@@ -21,4 +21,10 @@ scripted_gui = {
 		window_name = "BARE_Combat_Readiness_State"
 		parent_window_name = state_info_window
 	}
+
+	ba_manpower_number_container_gui = {
+        window_name = "ba_manpower_number_container"
+    	context_type = player_context
+    	parent_window_token = top_bar
+    }
 }	
