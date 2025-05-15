@@ -7,8 +7,7 @@ scripted_gui = {
 
 		triggers = {
 			combat_readiness_block_visible = {
-				always = no
-				# has_idea = BARE_Combat_Readiness_Mid_Idea
+				has_idea = BARE_Combat_Readiness_Mid_Idea
 			}
 		}
 
