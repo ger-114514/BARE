@@ -3,19 +3,9 @@ bookmarks = {
 		name = "GATHERING_STORM_NAME"
 		desc = "GATHERING_STORM_DESC"
 		date = 2019.1.1.12
-		picture = "GFX_select_date_1936"
+		picture = "GFX_BA_select_date_1936"
 		default_country = "MIL"
 		default = yes
-		"SRT"={
-			history = ""
-			ideology = no_ideology
-			ideas = {
-
-			}
-			focuses = {
-				
-			}
-		}
 		
 		"GEH"={
 			history = ""
@@ -27,18 +17,7 @@ bookmarks = {
 				
 			}
 		}
-		
-		"ABY"={
-			history = ""
-			ideology = no_ideology
-			ideas = {
 
-			}
-			focuses = {
-				
-			}
-		}
-		
 		"TRI"={
 			history = "TRI_GATHERING_STORM_DESC"
 			ideology = no_ideology
@@ -51,53 +30,9 @@ bookmarks = {
 				TRI_Bill_of_regaining_trust
 			}
 		}
-		
-		"SHA"={
-			history = ""
-			ideology = no_ideology
-			ideas = {
-
-			}
-			focuses = {
-				
-			}
-		}
-		
-		"HYA"={
-			history = ""
-			ideology = no_ideology
-			ideas = {
-
-			}
-			focuses = {
-				
-			}
-		}
-		
-		"MIL"={
-			history = ""
-			ideology = no_ideology
-			ideas = {
-
-			}
-			focuses = {
-				
-			}
-		}
-		
-		"RWT"={
-			history = ""
-			ideology = no_ideology
-			ideas = {
-
-			}
-			focuses = {
-				
-			}
-		}
 
 		ARI = {
-			minor = yes
+			#minor = yes
 			history = "ARI_GATHERING_STORM_DESC"
 			ideology = no_ideology
 			ideas = {
@@ -111,6 +46,72 @@ bookmarks = {
 				ARI_prepare_operation_eden
 			}
 		}
+
+		#"SRT"={
+		#	history = ""
+		#	ideology = no_ideology
+		#	ideas = {
+        #
+		#	}
+		#	focuses = {
+		#		
+		#	}
+		#}
+		
+		#"ABY"={
+		#	history = ""
+		#	ideology = no_ideology
+		#	ideas = {
+        #
+		#	}
+		#	focuses = {
+		#		
+		#	}
+		#}
+		
+		#"SHA"={
+		#	history = ""
+		#	ideology = no_ideology
+		#	ideas = {
+        #
+		#	}
+		#	focuses = {
+		#		
+		#	}
+		#}
+		
+		#"HYA"={
+		#	history = ""
+		#	ideology = no_ideology
+		#	ideas = {
+        #
+		#	}
+		#	focuses = {
+		#		
+		#	}
+		#}
+		
+		#"MIL"={
+		#	history = ""
+		#	ideology = no_ideology
+		#	ideas = {
+        #
+		#	}
+		#	focuses = {
+		#		
+		#	}
+		#}
+		
+		#"RWT"={
+		#	history = ""
+		#	ideology = no_ideology
+		#	ideas = {
+        #
+		#	}
+		#	focuses = {
+		#		
+		#	}
+		#}
 
 		CEN = {
 			minor = yes
