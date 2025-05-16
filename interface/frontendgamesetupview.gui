@@ -126,39 +126,41 @@ guiTypes = {
 	### country entry
 	containerWindowType = {
 		name = "country_entry"
+		position = { x = 397 y = 197 }
 
 		buttonType = {
 			name = "country_leader"
 			quadTextureSprite ="GFX_leader_unknown"
-			position = { x = 17 y = 22 }
-			scale=0.75
+			position = { x = 10 y = 5 }
+			scale = 0.4
 			clicksound = click_checkbox
 		}
-
+	
 		iconType = {
 			name = "country_flag"
 			quadTextureSprite ="GFX_shield_medium"
-			position = { x = 34 y = 188 }
+			position = { x = 75 y = 60 }
+			scale = 0.4
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
-		}
-
+		}	
+		
 		buttonType = {
-			name = "country"
-			quadTextureSprite = "GFX_country_selection_entry"
-			position = { x=0 y =0 }
+			name = "country"	
+			quadTextureSprite = "GFX_BA_country_selection_entry"
+			position = { x = 0 y = 0 }
 			clicksound = click_checkbox
-		}
+		}		
 
 		instantTextBoxType = {
 			name = "country_name"
-			position = { x = 8 y = 247 }
+			position = { x = 20 y = 83 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 131
 			maxHeight = 20
-			fixedsize = yes
-			format = center
+			fixedsize = yes	
+			format = center		
 			Orientation = "UPPER_LEFT"
 		}
 	}
@@ -166,7 +168,7 @@ guiTypes = {
 	### country entry
 	containerWindowType = {
 		name = "country_entry_medium"
-
+        position = { x = 5 y = 13 }
 
 		iconType = {
 			name = "country_flag"
@@ -608,7 +610,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 435 y = 12 }
+			position = { x = 442 y = 12 }
 			textureFile = ""
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
@@ -622,6 +624,91 @@ guiTypes = {
 			name = "single_player_country_bg"
 			quadTextureSprite ="GFX_country_selection_bg"
 		}
+
+		###背景###
+		containerWindowType = {
+			name = "intro_TRI"
+			position = { x = 510 y = 50}
+			size = { width = 175  height = 300 }
+
+			iconType = {
+				name = "intro_background_TRI"
+				quadTextureSprite = "GFX_TRI_intro"
+				position = { x = 2  y = 2 }
+				#alwaystransparent = yes
+			}
+			
+		}
+
+		containerWindowType = {
+			name = TRI_highlight_paths
+			position = { x = 525 y = 50}
+
+			iconType = {
+				name = "TRI_eden_treaty_path"
+				quadTextureSprite = "GFX_TRI_eden_treaty_path"
+				position = { x = 0  y = 15 }
+				pdx_tooltip = TRI_eden_treaty_path_tt
+				#alwaystransparent = yes
+			}
+		
+		}
+
+		containerWindowType = {
+			name = "intro_GEH"
+			position = { x = 247 y = 50}
+			size = { width = 175  height = 300 }
+			
+
+			iconType = {
+				name = "intro_background_GEH"
+				quadTextureSprite = "GFX_GEH_intro"
+				position = { x = 2  y = 2 }
+			}
+		}
+
+		containerWindowType = {
+			name = GEH_highlight_paths
+			position = { x = 262 y = 50}
+
+			iconType = {
+				name = "GFX_GEH_eden_treaty_path"
+				quadTextureSprite = "GFX_GEH_eden_treaty_path"
+				position = { x = 0  y = 15 }
+				pdx_tooltip = "GEH_eden_treaty_path_tt"
+				#alwaystransparent = yes
+			}
+		
+		}
+
+		containerWindowType = {
+			name = "intro_ARI"
+			position = { x = 773 y = 50}
+			size = { width = 175  height = 300 }
+			
+
+			iconType = {
+				name = "intro_background_ARI"
+				quadTextureSprite = "GFX_ARI_intro"
+				position = { x = 2  y = 2 }
+			}
+		}
+
+		containerWindowType = {
+			name = ARI_highlight_paths
+			position = { x = 788 y = 50}
+
+			iconType = {
+				name = "GFX_ARI_revenge_path"
+				quadTextureSprite = "GFX_ARI_revenge_path"
+				position = { x = 0  y = 15 }
+				pdx_tooltip = "ARI_revenge_path_tt"
+				#alwaystransparent = yes
+			}
+		
+		}
+
+		#####
 
 		ButtonType = {
 			name = "back_button"
@@ -647,6 +734,8 @@ guiTypes = {
 			shortcut = "RETURN"
 		}
 
+		##这个东西决定了国家之间的间隔！！
+		##除非重大调整勿动！！
 		containerWindowType = {
 			name ="countries"
 			position = { x = 15 y = 45 }
@@ -654,9 +743,9 @@ guiTypes = {
 
 			gridboxType = {
 				name ="countries_grid"
-				position = { x = 0 y = 0 }
+				position = { x = -150 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 150 height = 0 }
+				slotsize = { width = 264 height = 0 }
 				add_horizontal = yes
 				max_slots_vertical = 1
 				format = "UPPER_LEFT"
@@ -845,7 +934,7 @@ guiTypes = {
 
 			iconType ={
 				name ="pol_faction_icon"
-				spriteType = "GFX_pol_factions_strip"
+				spriteType = "GFX_no_ideology_strip"
 				position = { x= 0 y = 0 }
 				frame = 1
 			}

@@ -294,7 +294,8 @@ units = {
 	}
 	division= {	 #一个师
 		name = "万魔殿守备部队第二大队“郁金香”"
-		location = 
+		##简单修复位置##
+		location = 8385
 		division_template = "万魔殿守备部队" #这个师用的编制的名字
 		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1
