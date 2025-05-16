@@ -154,6 +154,93 @@ Eden_treaty_get_winner = {
 		}
 	}
 }
+Cathedral_war_ARI_cathedral_fall = {
+	dismantle_faction = yes
+	delete_units = {
+		division_template = "圣徒会的投影"
+		disband = no
+	}
+	if = {
+		limit = { 
+			SCH = {
+				is_in_faction = no
+			}
+		}
+		TRI = {
+			create_faction = TRI_AND_GEH_FACTION_NAME
+			add_to_faction = GEH
+		}
+	}
+	news_event = Eden_pact.1002
+}
+Cathedral_war_ARI_defeated = {
+	set_global_flag = Arius_defeated
+	white_peace = {
+		tag = GEH
+		tooltip = WAR_GST_JS_LOC
+	}
+	white_peace = {
+		tag = TRI
+		tooltip = WAR_GST_JS_LOC
+	}
+	if = {
+		limit = { 
+			TRI = {
+				has_war_with = GEH
+			}
+		}
+		TRI = {
+			white_peace = {
+				tag = GEH
+				tooltip = WAR_GST_JS_LOC
+			}
+		}
+	}
+	140 = {
+		transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+	}
+
+	529 = {
+		transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+	}
+
+	###移出所有因古圣堂之战而出现的动态修正并自动营救所有学生###
+		for_each_scope_loop = {
+			array = global.GST_JS_ZBH
+			remove_dynamic_modifier = {
+				modifier = TRI_ARI_GEH_JingPiLiJie
+			}
+			remove_dynamic_modifier = {
+				modifier = TRI_BeiAliWuSiTuXi
+			}
+		}
+		for_each_loop = {
+			array = global.ARI_ShouHaiZheMingDan_SAN
+			value = v
+			var:v = {
+				clr_character_flag = ARI_BeiBangJia
+			}
+		}
+		for_each_loop = {
+			array = global.ARI_ShouHaiZheMingDan_ER
+			value = v
+			var:v = {
+				clr_character_flag = ARI_BeiBangJia
+			}
+		}
+	###结束###
+	load_focus_tree = ARI_NULL
+	country_lock_all_division_template = yes
+	add_ideas = {
+		ARI_JSL
+	}
+	TRI = {
+		country_event = LS_GST.51
+	}
+	GEH = {
+		country_event = LS_GST.52
+	}
+}
 Eden_treaty_formally_signed = {
 	custom_effect_tooltip = Eden_treaty_has_been_signed
 	set_global_flag = Eden_treaty_has_been_signed

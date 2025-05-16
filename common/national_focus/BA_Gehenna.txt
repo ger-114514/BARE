@@ -583,9 +583,11 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
         select_effect = {
             hidden_effect = {
-                news_event = {
-                    id = Eden_pact.1003
-                    days = 24
+                ARI = {
+                    country_event = {
+                        id = Eden_pact.200
+                        days = 20
+                    }
                 }
             }
         }
@@ -625,15 +627,26 @@ focus_tree = {
             set_country_flag = GEH_fire_was_rising_compeleted
             mark_focus_tree_layout_dirty = yes
 
-            
-            #移除之前会谈筹备的所有精神
-            remove_ideas = GEH_ideas_prepare_for_conference_1
-            remove_ideas = GEH_ideas_prepare_for_conference_2
-            remove_ideas = GEH_ideas_prepare_for_conference_3
-            remove_ideas = GEH_ideas_conference_support_1
-            remove_ideas = GEH_ideas_conference_support_2
-            remove_ideas = GEH_ideas_conference_support_3
-            remove_ideas = GEH_ideas_conference_support_4
+            if = {
+                limit = { has_global_flag = ARI_ZhunBeiDu_1_JieDuanBiaoZhi }
+                add_war_support = 0.05 #战争支持度修正
+				add_stability = -0.05 #稳定度修正
+            }
+            else_if = {
+                limit = { has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi }
+                promote_character = {
+					character = GEH_ako
+					ideology = no_ideology_type
+				}
+            }
+            else = {
+				promote_character = {
+					character = GEH_JingJiZhuangTaiWeiYuanHui
+					ideology = no_ideology_type
+				}
+				add_stability = -0.3
+                add_ideas = GEH_army_in_chaos
+            }
 
             #使用			
             #visible = {
@@ -642,55 +655,28 @@ focus_tree = {
             #来达成“移除内阁”的效果
 
             ###TODO：根据不同突袭度上不同debuff,给效果，还有flag（现在都还没做）
-            add_ideas = GEH_army_in_chaos
             hidden_effect = {
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_army_attack_factor
-                    value = -0.5
-                }
-
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_army_defence_factor
-                    value = -0.5
-                }
-
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_army_org_regain
-                    value = -0.3
-                }
-
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_army_speed_factor
-                    value = -0.2
-                }
-
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_supply_consumption_factor
-                    value = 0.2
-                }
-
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_out_of_supply_factor
-                    value = 0.2
-                }
-
-                set_variable = {
-                    var = GEH_a_unpredictable_attack_land_reinforce_rate
-                    value = -0.02
-                }
-
-                set_variable = {
-                    var =  GEH_a_unpredictable_attack_breakthrough_factor
-                    value = -0.3
-                }            
+                #移除之前会谈筹备的所有精神
+                remove_ideas = GEH_ideas_prepare_for_conference_1
+                remove_ideas = GEH_ideas_prepare_for_conference_2
+                remove_ideas = GEH_ideas_prepare_for_conference_3
+                remove_ideas = GEH_ideas_conference_support_1
+                remove_ideas = GEH_ideas_conference_support_2
+                remove_ideas = GEH_ideas_conference_support_3
+                remove_ideas = GEH_ideas_conference_support_4
+                set_variable = { GEH_a_unpredictable_attack_army_attack_factor = -0.5 }
+                set_variable = { GEH_a_unpredictable_attack_army_defence_factor = -0.5 }
+                set_variable = { GEH_a_unpredictable_attack_army_org_regain = -0.3 }
+                set_variable = { GEH_a_unpredictable_attack_army_speed_factor = -0.2 }
+                set_variable = { GEH_a_unpredictable_attack_supply_consumption_factor = 0.2 }
+                set_variable = { GEH_a_unpredictable_attack_out_of_supply_factor = 0.2 }
+                set_variable = { GEH_a_unpredictable_attack_land_reinforce_rate = -0.02 }
+                set_variable = { GEH_a_unpredictable_attack_breakthrough_factor = -0.3 }            
                 add_dynamic_modifier = {
-                modifier = GEH_a_unpredictable_attack
+                    modifier = GEH_a_unpredictable_attack
                 }
             }
             custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_tt
-
-
-            
         }
 	}
 

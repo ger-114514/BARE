@@ -754,6 +754,26 @@ focus_tree = {
 					count = 3
 				}
 			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = Eden_treaty_has_been_signed }
+					OR = {
+						TRI = {
+							OR = {
+								has_capitulated = yes
+								exists = no
+							}
+						}
+						GEH = {
+							OR = {
+								has_capitulated = yes
+								exists = no
+							}
+						}
+					}
+				}
+				complete_national_focus = ARI_the_final_step
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -784,10 +804,10 @@ focus_tree = {
 			##两大学校任意一个投降
 			OR = {
 				TRI = {
-					surrender_progress > 0.99
+					has_capitulated = yes
 				}
 				GEH = {
-					surrender_progress > 0.99
+					has_capitulated = yes
 				}
 			}
 		}
@@ -806,7 +826,7 @@ focus_tree = {
 			#移除民族精神“阿里乌斯武装学生部队”【完成】
 			#移除民族精神“阿里乌斯特战部队”【完成】
 			#移除民族精神“阿里乌斯对外情报和行动处”【完成】
-			#移除所有渗透度带来的buff
+			#移除所有渗透度带来的buff【完成】
 			#获得36个10连神秘步兵【完成】
 			#5个1芭芭拉连【完成】
 			#每控制一个省份，
@@ -814,23 +834,17 @@ focus_tree = {
 			#现在需要彻底击败阿里乌斯才能结束古圣堂之战
 			#完成4阶段突破时游戏进入结局
 			hidden_effect = {
-				#	country_event = {
-				#		id = ARI_beatrice.100
-				#		days = 2
-				#	}
-				#	country_event = {
-				#		id = ARI_beatrice.101
-				#		days = 3
-				#	}
-				#	country_event = {
-				#		id = ARI_beatrice.102
-				#		days = 5
-				#	}
-				remove_ideas = {
-					ARI_Gematria_member
-					ARI_armed_students_modifier
-					ARI_special_force
-					ARI_Intelligence_department
+				country_event = {
+					id = ARI_beatrice.100
+					days = 2
+				}
+				country_event = {
+					id = ARI_beatrice.101
+					days = 3
+				}
+				country_event = {
+					id = ARI_beatrice.102
+					days = 5
 				}
 				division_template = {
 					name = "阿里乌斯神秘步兵大队"
@@ -872,7 +886,7 @@ focus_tree = {
 							y = 0
 						}
 						infantry_sp = {
-							x = 1
+							x = 2
 							y = 1
 						}
 					}
@@ -895,6 +909,7 @@ focus_tree = {
 						count = 5
 					}
 				}
+				activate_mission = GST_ZZ_ARI_ZHYB_TS_JDRW
 			}
 		}
 		ai_will_do = {
@@ -916,12 +931,7 @@ focus_tree = {
 			add_war_support = 0.05
 			#custom_effect_tooltip = ARI_new_guide_tt
 			set_country_flag = ARI_foreign_operations_available
-			set_variable = {
-				ARI_materials = 0
-			}
-			set_variable = {
-				ARI_materials_monthly_modifier = 0
-			}
+			set_variable = { ARI_materials = 0 }
 			unlock_decision_tooltip = ARI_outside_recon
 			add_dynamic_modifier = {
 				modifier = ARI_Intelligence_department
@@ -1096,15 +1106,8 @@ focus_tree = {
 			unlock_decision_tooltip = ARI_black_market_support_in
 			unlock_decision_tooltip = ARI_black_market_support_out
 			custom_effect_tooltip = ARI_operation_dark_zone_tt
-			add_to_variable = {
-				ARI_Intelligence_department_industrial_factory_donations = 1
-			}
-			add_to_variable = {
-				ARI_Intelligence_department_ARI_materials_monthly_modifier = 20
-			}
-			add_to_variable = {
-				ARI_materials_monthly_modifier = 20
-			}
+			add_to_variable = { ARI_Intelligence_department_industrial_factory_donations = 1 }
+			add_to_variable = { ARI_Intelligence_department_ARI_materials_monthly_modifier = 20 }
 			hidden_effect = {
 				country_event = {
 					id = ARI_beatrice_diplomacy.2
@@ -2082,6 +2085,9 @@ focus_tree = {
 		id = ARI_time_for_final_action
 		icon = GFX_focus_ARI_time_for_final_action
 		relative_position_id = ARI_prepare_operation_eden
+		allow_branch = {
+			has_global_flag = WOR_ancient_cathedral_has_been_attacked
+		}
 		available = {
 			always = no			#自动跳过
 		}
@@ -4366,4 +4372,11 @@ focus_tree = {
 			}
 		}
 	}
+}
+focus_tree = {
+	id = ARI_NULL
+	country = {
+		factor = 0
+	}
+	default = no
 }

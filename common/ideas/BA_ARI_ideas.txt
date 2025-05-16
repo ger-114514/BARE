@@ -9,7 +9,7 @@ ideas = {
 				army_org_factor = -0.5
 				stability_weekly = -1
 				war_support_factor = -1
-				custom_modifier_tooltip = JSL_NOT_ARMY
+				custom_modifier_tooltip = all_units_locked
 			}
 		}
 
@@ -59,12 +59,6 @@ ideas = {
 				tag = TRI
 				attack_bonus_against = 0.05
 			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 10 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 10 }
-			}
 		}
 		ARI_intelligence_in_TRI_2 = {
 			modifier = {
@@ -75,12 +69,6 @@ ideas = {
 			targeted_modifier = {
 				tag = TRI
 				attack_bonus_against = 0.1
-			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 20 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 20 }
 			}
 		}
 		ARI_intelligence_in_TRI_3 = {
@@ -93,12 +81,6 @@ ideas = {
 				tag = TRI
 				attack_bonus_against = 0.15
 			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 35 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 35 }
-			}
 		}
 		ARI_intelligence_in_TRI_4 = {
 			modifier = {
@@ -109,12 +91,6 @@ ideas = {
 			targeted_modifier = {
 				tag = TRI
 				attack_bonus_against = 0.2
-			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 50 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 50 }
 			}
 		}
 		ARI_experience_in_Trinity_modifier = {
@@ -140,12 +116,6 @@ ideas = {
 				tag = GEH
 				attack_bonus_against = 0.05
 			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 10 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 10 }
-			}
 		}
 		ARI_intelligence_in_GEH_2 = {
 			modifier = {
@@ -156,12 +126,6 @@ ideas = {
 			targeted_modifier = {
 				tag = GEH
 				attack_bonus_against = 0.1
-			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 20 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 20 }
 			}
 		}
 		ARI_intelligence_in_GEH_3 = {
@@ -174,12 +138,6 @@ ideas = {
 				tag = GEH
 				attack_bonus_against = 0.15
 			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 35 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 35 }
-			}
 		}
 		ARI_intelligence_in_GEH_4 = {
 			modifier = {
@@ -190,12 +148,6 @@ ideas = {
 			targeted_modifier = {
 				tag = GEH
 				attack_bonus_against = 0.2
-			}
-			on_add = {
-				add_to_variable = { ARI_materials_monthly_modifier = 50 }
-			}
-			on_remove = {
-				subtract_from_variable = { ARI_materials_monthly_modifier = 50 }
 			}
 		}
 		#黑市佣兵团

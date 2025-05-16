@@ -1,7 +1,20 @@
 TRI_BeiAliWuSiTuXi = { #被阿里乌斯突袭
 	icon = "GFX_idea_unknown"
 	enable = { always = yes }
-
+	remove_trigger = {
+		529 = {
+			all_neighbor_state = {
+				OR = {
+					NOT = {
+						has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+					}
+					state = 140
+				}
+				
+			}
+		}
+		has_global_flag = Cathedral_war_backwater
+	}
 	army_attack_factor = -0.9 #-90%陆军进攻
 
 }
@@ -9,6 +22,18 @@ TRI_BeiAliWuSiTuXi = { #被阿里乌斯突袭
 TRI_ARI_GEH_JingPiLiJie = { #精疲力竭
 	icon = "GFX_idea_unknown"
 	enable = { always = yes	}
+	remove_trigger = {
+		controller = {
+			if = {
+				limit = { original_tag = ARI }
+				has_war = no
+			}
+			else = {
+				has_war_with = ARI
+			}
+		}
+	}
+	
 	army_attack_factor = -0.9 #-90%陆军进攻
 	army_speed_factor = -0.9 #-90%陆军速度
 	air_cas_present_factor = -0.9 #-90%对地支援

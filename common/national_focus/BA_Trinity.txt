@@ -1859,15 +1859,17 @@ focus_tree = {
 			x = 0
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
-			allow_branch = {
-				has_global_flag = Eden_treaty_negotiation_TRI_win
-			}
+			# allow_branch = {
+			# 	has_global_flag = Eden_treaty_negotiation_TRI_win
+			# }
 			select_effect = {
 				country_event = TRI_events.26
 				hidden_effect = {
-					news_event = {
-						id = Eden_pact.1003
-						days = 24
+					ARI = {
+						country_event = {
+							id = Eden_pact.200
+							days = 20
+						}
 					}
 				}
 			}
@@ -1900,14 +1902,28 @@ focus_tree = {
 				clr_country_flag = TRI_unity_unchangeable
 				set_temp_variable = { TRI_unity_change = -30 }
 				TRI_change_unity = yes
+
 				country_event = TRI_events.27
 				hidden_effect = {
-					remove_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
-					add_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
+					###修正eden_treaty_step_4_modifier(濒临破碎的伊甸条约)效果变化
+						remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
+						remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
+						remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
+						set_variable = { eden_broken_weekly_stability = -0.25 } #稳定度修正
+						set_variable = { eden_broken_factory_output = -0.1 } #工厂产出修正
+						set_variable = { eden_broken_advisor_cost = 1 } #顾问花费修正
+						set_variable = { eden_broken_army_chief_cost = 1 } #陆军总司令花费修正
+						set_variable = { eden_broken_air_chief_cost = 1 } #空军总司令花费修正
+						set_variable = { eden_broken_economy_cost = 1 } #经济法案花费修正
+						set_variable = { eden_broken_trade_laws_cost = 1 } #贸易法案花费修正
+						set_variable = { eden_broken_mobilization_laws_cost = 1 } #军事动员法案修正
+						add_dynamic_modifier = { modifier = eden_treaty_step_4_modifier } #濒临破碎的伊甸条约
+					###结束###
 				}
-				#古圣堂突袭筹备中，阿里乌斯取得了最大成功-()
+
+				#古圣堂突袭筹备中，阿里乌斯取得了最大成功
 				if = {
-					limit = { has_country_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi }
+					limit = { has_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi }
 					set_variable = { TRI_devastated_by_arius_stability_weekly = -0.25 }
 					set_variable = { TRI_devastated_by_arius_political_power_gain = -0.5 }
 					set_variable = { TRI_devastated_by_arius_industrial_capacity_factory = -0.1 }
@@ -1916,57 +1932,30 @@ focus_tree = {
 					set_variable = { TRI_devastated_by_arius_army_attack_factor = -0.15 }
 					set_variable = { TRI_devastated_by_arius_army_defence_factor = -0.15 }
 					set_variable = { TRI_devastated_by_arius_disabled_ideas = 1 }
-
-					remove_dynamic_modifier = {
-						modifier = eden_treaty_step_2_modifier
-					}
-					remove_dynamic_modifier = {
-						modifier = eden_treaty_step_0_modifier
-					}
-					remove_dynamic_modifier = {
-						modifier = eden_treaty_step_1_modifier
-					}
-					###修正eden_treaty_step_4_modifier(濒临破碎的伊甸条约)效果变化
-					set_variable = {#稳定度修正
-						var = eden_broken_weekly_stability
-						value = -0.25
-					}
-					set_variable = {#工厂产出修正
-						var = eden_broken_factory_output
-						value = -0.1
-					}
-					set_variable = {#顾问花费修正
-						var = eden_broken_advisor_cost
-						value = 1
-					}
-					set_variable = {#陆军总司令花费修正
-						var = eden_broken_army_chief_cost
-						value = 1
-					}
-					set_variable = {#空军总司令花费修正
-						var = eden_broken_air_chief_cost
-						value = 1
-					}
-					set_variable = {#经济法案花费修正
-						var = eden_broken_economy_cost
-						value = 1
-					}
-					set_variable = {#贸易法案花费修正
-						var = eden_broken_trade_laws_cost
-						value = 1
-					}
-					set_variable = {#军事动员法案修正
-						var = eden_broken_mobilization_laws_cost
-						value = 1
-					}
-					###结束###
-					add_dynamic_modifier = {
-						modifier = eden_treaty_step_4_modifier #濒临破碎的伊甸条约
-					}
 					add_dynamic_modifier = {
 						modifier = TRI_devastated_by_arius #毁灭性打击
 					}
+
+					declare_war_on = { #向指定国家宣战
+						target = GEH #被宣战国家TAG
+						type = topple_government #战争目标类型 - 颠覆政权
+					}
+					#暂时移除领袖桐藤渚的所有效果
+					#在渚的头像上打上MISSING的红色标记
+					#同时将效果替换成“失踪的领袖”
+					#效果：（无法切换政治顾问、军事顾问和任何法案）
+					promote_character = TRI_missing_nagisa
+					add_stability = -0.3
 				}
+				else_if = {
+					limit = { has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi }
+					declare_war_on = { #向指定国家宣战
+						target = GEH #被宣战国家TAG
+						type = topple_government #战争目标类型 - 颠覆政权
+					}
+					promote_character = TRI_missing_nagisa
+				}
+
 				#补国策本地化效果
 				custom_effect_tooltip = eden_step_3_to_4_desc
 				
@@ -1987,7 +1976,8 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
-				#TODO:激活地区决议，用以寻找失踪的核心成员并解锁该地区的“消除未经计划的攻势”
+				#激活地区决议，用以寻找失踪的核心成员并解锁该地区的“消除未经计划的攻势”
+				unlock_decision_tooltip = GST_TRI_advance_exploration
 			}
 		}
 		focus = { #唤醒职责
@@ -2008,10 +1998,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
-				#TODO:通过添加新的决议组，消耗各种不同的点数来消除【毁灭性打击】中政治debuff
+				#通过添加新的决议组，消耗各种不同的点数来消除【毁灭性打击】中政治debuff
 				if = {
 					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
-					
+					TRI_unity_increase_10 = yes
+					unlock_decision_tooltip = GST_TRI_relax_students
+					unlock_decision_tooltip = GST_TRI_emergent_production
 				}
 				else = {
 					custom_effect_tooltip = TRI_not_church_attacked_worst
@@ -2028,7 +2020,12 @@ focus_tree = {
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
-				#TODO:可以在已经探索过的地区使用进一步的地区决议，用以消除该地区的“未经计划的攻势”
+				#可以在已经探索过的地区使用进一步的地区决议，用以消除该地区的“未经计划的攻势”
+				custom_effect_tooltip = TRI_draw_a_blueprint_tt
+				effect_tooltip = {
+					army_experience = 10
+				}
+
 			}
 		}
 		focus = { #紧急救援
@@ -2043,6 +2040,21 @@ focus_tree = {
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
 				#TODO:必须先对所有地区执行【探索地区决议】才可以激活，营救原剧情中对应的学生，使其在30天后可以再次被任命为将领或者顾问并消除【毁灭性打击】中军事debuff
+				custom_effect_tooltip = TRI_emergency_rescue_tt
+				effect_tooltip = {
+					set_temp_variable = { TRI_unity_change = 4 }
+					TRI_change_unity = yes
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
+					custom_effect_tooltip = TRI_emergency_rescue_tt_2
+					add_to_variable = { TRI_devastated_by_arius_stability_weekly = 0.001 }
+					add_to_variable = { TRI_devastated_by_arius_political_power_gain = 0.1 }
+					add_to_variable = { TRI_devastated_by_arius_army_org_factor = 0.1 }
+					add_to_variable = { TRI_devastated_by_arius_army_attack_factor = 0.05 }
+					add_to_variable = { TRI_devastated_by_arius_army_defence_factor = 0.05 }
+					add_ideas = GST_TRI_emergency_rescue_idea
+				}
 			}
 		}
 		focus = { #越过禁忌的边界
@@ -2175,12 +2187,125 @@ focus_tree = {
 			completion_reward = {
 				if = {
 					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
-					custom_effect_tooltip = TRI_set_up_the_flag_tt
-					add_to_variable = { TRI_devastated_by_arius_consumer_goods_factor = -0.1 }
-					add_to_variable = { TRI_devastated_by_arius_army_org_factor = 0.03 }
-					add_to_variable = { TRI_devastated_by_arius_army_attack_factor = 0.05 }
-					add_to_variable = { TRI_devastated_by_arius_army_defence_factor = 0.05 }
-
+					TRI_unity_increase_5 = yes
+					add_political_power = 100
+					if = {
+						limit = { has_completed_focus = TRI_mainstay_in_the_collapse }
+						if = {
+							limit = { has_completed_focus = TRI_mass_army }
+							if = {
+								limit = { NOT = { has_template = "社团加强卫戍连" } }
+								division_template = {
+									name = "社团加强卫戍连"
+									is_locked = yes
+									force_allow_recruiting = no
+									regiments = {
+										infantry = { x = 0 y = 0 }
+										infantry = { x = 0 y = 1 }
+										infantry = { x = 0 y = 2 }
+										infantry = { x = 0 y = 3 }
+										infantry = { x = 0 y = 4 }
+										infantry = { x = 1 y = 0 }
+										infantry = { x = 1 y = 1 }
+										fire_support_team_la = { x = 2 y = 0 }
+										fire_support_team_la = { x = 2 y = 1 }
+										fire_support_team_la = { x = 2 y = 2 }
+									}
+									support = {
+										field_hospital = { x = 0 y = 0 }
+										recon = { x = 0 y = 1 }
+									}
+								}
+							}
+							random_controlled_state = {
+								create_unit = {
+									division = "name = \"社团加强卫戍连\" division_template = \"社团加强卫戍连\" start_experience_factor = 0.6 start_equipment_factor = 0.9 start_manpower_factor = 0.9 "
+									count = 3
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+						else = {
+							if = {
+								limit = { NOT = { has_template = "社团卫戍连" } }
+								division_template = {
+									name = "社团卫戍连"
+									is_locked = yes
+									force_allow_recruiting = no
+									regiments = {
+										infantry = { x = 0 y = 0 }
+										infantry = { x = 0 y = 1 }
+										infantry = { x = 0 y = 2 }
+										infantry = { x = 0 y = 3 }
+										infantry = { x = 0 y = 4 }
+										fire_support_team_la = { x = 1 y = 0 }
+									}
+									support = {
+										field_hospital = { x = 0 y = 0 }
+									}
+								}
+							}
+							random_controlled_state = {
+								create_unit = {
+									division = "name = \"社团卫戍连\" division_template = \"社团卫戍连\" start_experience_factor = 0.4 start_equipment_factor = 0.9 start_manpower_factor = 0.9 "
+									count = 3
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+					}
+					else = {
+						if = {
+							limit = { NOT = { has_template = "茶会护校军" } }
+							division_template = {
+								name = "茶会护校军"
+								is_locked = yes
+								force_allow_recruiting = no
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 0 y = 3 }
+									infantry = { x = 0 y = 4 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+									fire_support_team_la = { x = 2 y = 0 }
+									fire_support_team_la = { x = 2 y = 1 }
+									fire_support_team_la = { x = 2 y = 2 }
+									fire_support_team_la = { x = 2 y = 3 }
+									medium_sp_artillery_brigade = { x = 3 y = 0 }
+								}
+								support = {
+									logistics_company = { x = 0 y = 0 }
+									recon = { x = 0 y = 1 }
+								}
+							}
+						}
+						if = {
+							limit = { has_completed_focus = TRI_elite_army }
+							random_controlled_state = {
+								create_unit = {
+									division = "name = \"茶会护校军\" division_template = \"茶会护校军\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1 "
+									count = 2
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+						else = {
+							random_controlled_state = {
+								create_unit = {
+									division = "name = \"茶会护校军\" division_template = \"茶会护校军\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1 "
+									count = 1
+									owner = ROOT
+									allow_spawning_on_enemy_provs = no
+								}
+							}
+						}
+					}
 				}
 				else = {
 					custom_effect_tooltip = TRI_not_church_attacked_worst
@@ -2208,9 +2333,28 @@ focus_tree = {
 			completion_reward = {
 				if = {
 					limit = { has_dynamic_modifier = { modifier = TRI_devastated_by_arius } }
-					remove_dynamic_modifier = {
-						modifier = TRI_devastated_by_arius
+					TRI_unity_increase_5 = yes
+
+					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+					set_temp_variable = { loyalty_change = 0.06 }
+					TRI_parliament_loyalty_change_parliament = yes
+					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+					set_temp_variable = { loyalty_change = 0.1 }
+					TRI_parliament_loyalty_change_parliament = yes
+
+					add_doctrine_cost_reduction = {
+						category = land_doctrine
+						cost_reduction = 0.5
+						uses = 2
 					}
+
+					custom_effect_tooltip = TRI_temporary_comission_of_command_tt
+					add_to_variable = { TRI_devastated_by_arius_stability_weekly = 0.005 }
+					add_to_variable = { TRI_devastated_by_arius_political_power_gain = 0.1 }
+					add_to_variable = { TRI_devastated_by_arius_industrial_capacity_factory = 0.05 }
+					add_to_variable = { TRI_devastated_by_arius_consumer_goods_factor = 0.05 }
+					add_to_variable = { TRI_devastated_by_arius_army_attack_factor = 0.05 }
+					add_to_variable = { TRI_devastated_by_arius_army_defence_factor = 0.05 }
 				}
 				else = {
 					custom_effect_tooltip = TRI_not_church_attacked_worst
@@ -2268,7 +2412,7 @@ focus_tree = {
 				add_to_variable = { cf_land_reinforce_rate = 0.04 }
 				add_to_variable = { cf_minimum_training_level = -0.5 }
 				add_to_variable = { cf_experience_gain_army_factor = 0.3 }
-				add_to_variable = { cf_weekly_manpower = 100 }
+				add_to_variable = { cf_weekly_manpower = 700 }
 				clear_variable = cf_training_time_factor
 				add_dynamic_modifier = { modifier = TRI_chaotic_frontline_2 }
 			}			
@@ -2356,8 +2500,17 @@ focus_tree = {
 						}
 					}
 				}
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_hanako_name
+					JOB = political_advisor
+				}
 				set_country_flag = TRI_koharu_advisor_available
 				#获得任务：最后的阻碍：消灭阿里乌斯。当阿里乌斯被消灭后,30天,将会触发一个奖励事件(使得桐藤渚的特质得到提升。)
+				hidden_effect = {
+					TRI_BOP_calculate_house_seats = yes
+					TRI_init_senate_house = yes
+				}
 			}			
 		}
 		focus = { #光耀之途

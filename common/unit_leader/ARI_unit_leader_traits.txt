@@ -32,4 +32,15 @@ leader_traits = {
 			experience_gain_factor = 0.1
 		}
     }
+    ARI_attacked_by_bomb = { #被炸弹袭击
+		type = land
+		trait_type = status_trait
+		new_commander_weight = {
+			base = 0
+		}
+		modifier = {
+			skill_bonus_factor = -0.5
+			cannot_use_abilities = 1
+		}
+    }
 }

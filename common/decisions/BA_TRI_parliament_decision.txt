@@ -854,7 +854,7 @@ TRI_hanako_decisions = {
 				has_country_flag = TRI_clarify_rumors
 			}
 			activation = {
-				has_country_flag = TRI_revolting_justice
+				always = no
 			}
 			days_mission_timeout = 14
 			timeout_effect = {
@@ -873,7 +873,7 @@ TRI_hanako_decisions = {
 					}
 					damage_building = {
 						type = industrial_complex
-						damage = 0
+						damage = 0.2
 					}
 				}
 				random_controlled_state = {

@@ -56,7 +56,7 @@ on_actions = {
 				set_variable = { ARI_tax_farming_resources_hic = resource_produced@resources_hic }
 				multiply_variable = { ARI_tax_farming_resources_hic = 0.4 }
 			}
-			set_temp_variable = { material_change = ARI_materials_monthly_modifier }
+			set_temp_variable = { material_change = modifier@ARI_materials_monthly_modifier }
 			ARI_change_materials = yes
 
 			#物资结算

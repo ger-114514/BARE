@@ -138,7 +138,10 @@ news_event = {
 	major = yes
 	is_triggered_only = yes
     immediate = {
-        
+        if = {
+            limit = { original_tag = TRI }
+            Eden_treaty_formally_signed = yes
+        }
     }
 
     option = {
@@ -147,7 +150,6 @@ news_event = {
             original_tag = TRI
         }
         hidden_effect = {
-            country_event = { id = TRI_events.27 days = 1 }
             if = {
                 limit = { is_ai = no }
                 #BAR_LX_Super_Event_effect_7 = yes
@@ -173,81 +175,6 @@ news_event = {
 			base = 100
 		}
     }
-}
-
-
-
-news_event = {
-    id = Eden_pact.1003
-    title = Eden_pact.1003.t
-    desc = {
-        text = Eden_pact.1003.d.a
-        trigger = {
-            original_tag = TRI
-        }
-    }
-    desc = {
-        text = Eden_pact.1003.d.b
-    }
-    picture = GFX_news_event_eden_pact_attack
-	major = yes
-	is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
-            set_global_flag = WOR_ancient_cathedral_has_been_attacked
-            #给格黑娜、圣三一刷新一下国策
-            if = {
-                limit = { original_tag = GEH }
-                mark_focus_tree_layout_dirty = yes
-            }
-            else_if = {
-                limit = { original_tag = TRI }
-                #切换议会焦点为：《伊甸条约》的威胁
-                TRI_set_focus_Eden_threat = yes
-                complete_national_focus = TRI_unexpected_accident
-            }
-            else_if = {
-                limit = { original_tag = ARI }
-                set_country_flag = ARI_lock_foreign_operation
-                set_country_flag = ARI_revenge_progress_locked
-            }
-        }
-    }
-    option = {
-		name = Eden_pact.1003.a
-        trigger = {
-            original_tag = TRI
-        }
-        hidden_effect = {
-            country_event = { id = TRI_events.27 days = 1 }
-            if = {
-                limit = { is_ai = no }
-                BARE_SuperEvent_2_effect_6 = yes
-            }
-        }
-		ai_chance = {
-			base = 100
-		}
-    }
-    option = {
-		name = Eden_pact.1003.a
-        trigger = {
-            NOT = {
-                original_tag = TRI
-            }
-        }
-        hidden_effect = {
-            if = {
-                limit = { is_ai = no }
-                BARE_SuperEvent_2_effect_6 = yes
-            }
-        }
-		ai_chance = {
-			base = 100
-		}
-    }
-
 }
 
 news_event = {
@@ -406,4 +333,502 @@ country_event = {
             original_tag = GEH
         }
     }
+}
+
+#阿里乌斯事件-发射
+country_event = {
+    id = Eden_pact.200
+    title = Eden_pact.200.t
+    desc = Eden_pact.200.d
+    is_triggered_only = yes
+    timeout_days = 2
+    #picture = 
+    option = {
+		name = Eden_pact.200.a
+        set_country_flag = ARI_lock_foreign_operation
+        set_country_flag = ARI_revenge_progress_locked
+		hidden_effect = {
+			launch_nuke = {
+				province = 5612
+			}
+			launch_nuke = {
+				province = 7663
+			}
+            if = {
+			    limit = { check_variable = { ARI_ZhunBeiDu < 46 } }
+			    set_global_flag = ARI_ZhunBeiDu_1_JieDuanBiaoZhi
+                news_event = {
+                    id = Eden_pact.2001
+                    hours = 12
+                }
+			}
+            else_if = {
+			    limit = { check_variable = { ARI_ZhunBeiDu < 91 } }
+			    set_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi
+                news_event = {
+                    id = Eden_pact.2002
+                    hours = 12
+                }
+			}
+            else = {
+			    set_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi
+                news_event = {
+                    id = Eden_pact.2003
+                    hours = 12
+                }
+			}
+            
+		}
+    }
+}
+#古圣堂遇袭-低准备度
+news_event = {
+    id = Eden_pact.2001
+    title = {
+        text = Eden_pact.2001.t.ARI
+        trigger = {
+            original_tag = ARI
+        }
+    }
+    title = Eden_pact.2001.t.general
+    
+    desc = {
+        text = Eden_pact.2001.d.TRI
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    desc = {
+        text = Eden_pact.2001.d.GEH
+        trigger = {
+            original_tag = GEH
+        }
+    }
+    desc = {
+        text = Eden_pact.2001.d.ARI
+        trigger = {
+            original_tag = ARI
+        }
+    }
+    desc = Eden_pact.2001.d.general
+    picture = GFX_news_event_eden_pact_attack
+	major = yes
+	is_triggered_only = yes
+    timeout_days = 2
+
+    immediate = {
+        hidden_effect = {
+            set_global_flag = WOR_ancient_cathedral_has_been_attacked
+            #给格黑娜、圣三一刷新一下国策
+            if = {
+                limit = { original_tag = GEH }
+                mark_focus_tree_layout_dirty = yes
+                complete_national_focus = GEH_fire_was_rising
+            }
+            else_if = {
+                limit = { original_tag = TRI }
+            }
+            else_if = {
+                limit = { original_tag = ARI }
+                country_event = {
+                    id = LS_GST.3
+                    days = 3
+                }
+                if = {
+                    limit = { has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi }
+                    for_each_loop = {
+                        array = global.ARI_ShouHaiZheMingDan_ER
+                        value = v
+                        var:v = {
+                            set_character_flag = ARI_BeiBangJia
+                        }
+                    }
+                }
+                else_if = {
+                    limit = { has_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi }
+                    for_each_loop = {
+                        array = global.ARI_ShouHaiZheMingDan_SAN
+                        value = v
+                        var:v = {
+                            set_character_flag = ARI_BeiBangJia
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+		name = Eden_pact.2001.a
+        trigger = {
+            original_tag = TRI
+        }
+        hidden_effect = {
+            goto_province = 5612
+            #切换议会焦点为：《伊甸条约》的威胁
+            TRI_set_focus_Eden_threat = yes
+            unlock_national_focus = TRI_Congress_for_ending_all_conflict
+            complete_national_focus = TRI_unexpected_accident
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2001.b
+        trigger = {
+            original_tag = GEH
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2001.c
+        trigger = {
+            original_tag = ARI
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2001.d
+        trigger = {
+            NOT = {
+                original_tag = TRI
+                original_tag = GEH
+                original_tag = ARI
+            }
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+#古圣堂遇袭-中准备度
+news_event = {
+    id = Eden_pact.2002
+    title = {
+        text = Eden_pact.2001.t.ARI
+        trigger = {
+            original_tag = ARI
+        }
+    }
+    title = Eden_pact.2001.t.general
+    desc = {
+        text = Eden_pact.2002.d.TRI
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    desc = {
+        text = Eden_pact.2002.d.GEH
+        trigger = {
+            original_tag = GEH
+        }
+    }
+    desc = {
+        text = Eden_pact.2002.d.ARI
+        trigger = {
+            original_tag = ARI
+        }
+    }
+    desc = Eden_pact.2002.d.general
+    picture = GFX_news_event_eden_pact_attack
+	major = yes
+	is_triggered_only = yes
+    timeout_days = 2
+
+    immediate = {
+        hidden_effect = {
+            set_global_flag = WOR_ancient_cathedral_has_been_attacked
+            #给格黑娜、圣三一刷新一下国策
+            if = {
+                limit = { original_tag = GEH }
+                mark_focus_tree_layout_dirty = yes
+                complete_national_focus = GEH_fire_was_rising
+            }
+            else_if = {
+                limit = { original_tag = TRI }
+            }
+            else_if = {
+                limit = { original_tag = ARI }
+                country_event = {
+                    id = LS_GST.3
+                    days = 3
+                }
+                if = {
+                    limit = { has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi }
+                    for_each_loop = {
+                        array = global.ARI_ShouHaiZheMingDan_ER
+                        value = v
+                        var:v = {
+                            set_character_flag = ARI_BeiBangJia
+                        }
+                    }
+                }
+                else_if = {
+                    limit = { has_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi }
+                    for_each_loop = {
+                        array = global.ARI_ShouHaiZheMingDan_SAN
+                        value = v
+                        var:v = {
+                            set_character_flag = ARI_BeiBangJia
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+		name = Eden_pact.2002.a
+        trigger = {
+            original_tag = TRI
+        }
+        hidden_effect = {
+            goto_province = 5612
+            #切换议会焦点为：《伊甸条约》的威胁
+            TRI_set_focus_Eden_threat = yes
+            unlock_national_focus = TRI_Congress_for_ending_all_conflict
+            complete_national_focus = TRI_unexpected_accident
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2002.b
+        trigger = {
+            original_tag = GEH
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2002.c
+        trigger = {
+            original_tag = ARI
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2002.d
+        trigger = {
+            NOT = {
+                original_tag = TRI
+                original_tag = GEH
+                original_tag = ARI
+            }
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
+}
+#古圣堂遇袭-高准备度
+news_event = {
+    id = Eden_pact.2003
+    title = {
+        text = Eden_pact.2001.t.ARI
+        trigger = {
+            original_tag = ARI
+        }
+    }
+    title = Eden_pact.2001.t.general
+    desc = {
+        text = Eden_pact.2003.d.TRI
+        trigger = {
+            original_tag = TRI
+        }
+    }
+    desc = {
+        text = Eden_pact.2003.d.GEH
+        trigger = {
+            original_tag = GEH
+        }
+    }
+    desc = {
+        text = Eden_pact.2003.d.ARI
+        trigger = {
+            original_tag = ARI
+        }
+    }
+    desc = Eden_pact.2003.d.general
+    picture = GFX_news_event_eden_pact_attack
+	major = yes
+	is_triggered_only = yes
+    timeout_days = 2
+
+    immediate = {
+        hidden_effect = {
+            set_global_flag = WOR_ancient_cathedral_has_been_attacked
+            #给格黑娜、圣三一刷新一下国策
+            if = {
+                limit = { original_tag = GEH }
+                mark_focus_tree_layout_dirty = yes
+                complete_national_focus = GEH_fire_was_rising
+            }
+            else_if = {
+                limit = { original_tag = TRI }
+            }
+            else_if = {
+                limit = { original_tag = ARI }
+                country_event = {
+                    id = LS_GST.3
+                    days = 3
+                }
+                if = {
+                    limit = { has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi }
+                    for_each_loop = {
+                        array = global.ARI_ShouHaiZheMingDan_ER
+                        value = v
+                        var:v = {
+                            set_character_flag = ARI_BeiBangJia
+                        }
+                    }
+                }
+                else_if = {
+                    limit = { has_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi }
+                    for_each_loop = {
+                        array = global.ARI_ShouHaiZheMingDan_SAN
+                        value = v
+                        var:v = {
+                            set_character_flag = ARI_BeiBangJia
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+		name = Eden_pact.2003.a
+        trigger = {
+            original_tag = TRI
+        }
+        hidden_effect = {
+            goto_province = 5612
+            #切换议会焦点为：《伊甸条约》的威胁
+            TRI_set_focus_Eden_threat = yes
+            unlock_national_focus = TRI_Congress_for_ending_all_conflict
+            complete_national_focus = TRI_unexpected_accident
+            country_event = { id = TRI_events.27 days = 1 }
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2003.b
+        trigger = {
+            original_tag = GEH
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2003.c
+        trigger = {
+            original_tag = ARI
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.2003.d
+        trigger = {
+            NOT = {
+                original_tag = TRI
+                original_tag = GEH
+                original_tag = ARI
+            }
+        }
+        hidden_effect = {
+            goto_province = 5612
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_7 = yes
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+
 }
