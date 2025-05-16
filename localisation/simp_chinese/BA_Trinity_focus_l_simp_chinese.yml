@@ -142,11 +142,14 @@
  TRI_advance_exploration: "先遣勘探"
  TRI_advance_exploration_desc: "先遣勘探 描述"
  TRI_awareness_of_responsibility: "唤醒职责"
- TRI_awareness_of_responsibility_desc: "唤醒职责 描述
+ TRI_awareness_of_responsibility_desc: "唤醒职责 描述"
  TRI_draw_a_blueprint: "绘制蓝图"
- TRI_draw_a_blueprint_desc: "绘制蓝图 描述
+ TRI_draw_a_blueprint_desc: "绘制蓝图 描述"
+ TRI_draw_a_blueprint_tt: "可以消除执行过§Y$TRI_advance_exploration$§!的圣三一地区的§Y$TRI_ARI_GEH_JingPiLiJie$§!修正\n执行§Y$TRI_advance_exploration$§!完成后额外获得：\n"
  TRI_emergency_rescue: "紧急救援"
- TRI_emergency_rescue_desc: "紧急救援 描述
+ TRI_emergency_rescue_desc: "紧急救援 描述"
+ TRI_emergency_rescue_tt: "在所有圣三一地区执行§Y$TRI_advance_exploration$§!后可以营救被困学生\n执行§Y$TRI_advance_exploration$§!完成后额外获得：\n"
+ TRI_emergency_rescue_tt_2: "§Y$TRI_devastated_by_arius$§!追加效果：\n $MODIFIER_STABILITY_WEEKLY$：§G+0.1%§!\n $MODIFIER_POLITICAL_POWER_GAIN$：§G+0.1§!\n $MODIFIER_ARMY_ORG_FACTOR$：§G+10.0%§!\n $MODIFIERS_ARMY_ATTACK_FACTOR$：§G+5.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$：§G+5.0%§!"
  TRI_across_the_border: "越过禁忌的边界"
  TRI_across_the_border_desc: "对于修女会而言，粗暴的介入世俗向来被嗤之以鼻。而值此多事之秋，为了能尽快控制局势，我们必须利用好一切可以利用的力量——哪怕踏过那条红线。"
  TRI_sisterhood_engage_in_politic: "§1修女会§!参与圣三一政治"
@@ -158,9 +161,9 @@
  TRI_torchbearer_in_the_storm_tt: "§Y$TRI_chaotic_frontline$§!追加效果：\n $MODIFIER_BREAKTHROUGH$：§G+5.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$：§G+10.0%§!\n $MODIFIER_TRAINING_TIME_FACTOR$：§G-10.0%§!\n $MODIFIER_XP_GAIN_ARMY_FACTOR$：§G+10.0%§!\n解锁地区互动决议§Y集结护校军§!，允许在§Y茶话会§!主导的地区：\n"
  TRI_set_up_the_flag: "重树旗帜"
  TRI_set_up_the_flag_desc: "重树旗帜 描述"
- TRI_set_up_the_flag_tt: "§Y$TRI_devastated_by_arius$§!追加效果：\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-10.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$：§G+3.0%§!\n $MODIFIERS_ARMY_ATTACK_FACTOR$：§G+5.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$：§G+10.0%§!"
  TRI_temporary_comission_of_command: "临时指战委员会"
- TRI_temporary_comission_of_command_desc: "临时指战委员会 描述
+ TRI_temporary_comission_of_command_desc: "临时指战委员会 描述"
+ TRI_temporary_comission_of_command_tt: "§Y$TRI_devastated_by_arius$§!追加效果：\n $MODIFIER_STABILITY_WEEKLY$：§G+0.5%§!\n $MODIFIER_POLITICAL_POWER_GAIN$：§G+0.1§!\n $MODIFIER_CONSUMER_GOODS_FACTOR$：§Y+5.0%§!\n $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：§G+5.0%§!\n $MODIFIERS_ARMY_ATTACK_FACTOR$：§G+5.0%§!\n $MODIFIERS_ARMY_DEFENCE_FACTOR$：§G+5.0%§!"
  TRI_Bill_of_emergent_motion: "“紧急事态动议”法案"
  TRI_Bill_of_emergent_motion_desc: "随着高层领袖的失踪，圣三一院内的不稳定群体开始借势发难。无论他们最终可以纠集多少党羽，我们也必须做好一切准备。"
  TRI_reinforce_the_frontline: "重铸前线"

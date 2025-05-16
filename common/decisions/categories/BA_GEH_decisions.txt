@@ -91,33 +91,29 @@ GST_LS_XC_DEBUFF_category = {
 
 	visible_when_empty = yes
 	visible = {
-		AND = {
-			any_of_scopes = {
-				array = controlled_states
-				tooltip = ANY_STATES_HAS_DEBUFF_JingPiLiJie
-				has_dynamic_modifier = {
-					modifier = TRI_ARI_GEH_JingPiLiJie
-				}
+		any_of_scopes = {
+			array = global.GST_JS_ZBH
+			has_dynamic_modifier = {
+				modifier = TRI_ARI_GEH_JingPiLiJie
 			}
 		}
 	}
 	priority = 114515
 }
 
-#古圣堂之战临时触发营救学生类别 - fgvfgfs
-GST_LS_HelpStu_category = {
-	icon = generic_research
-	visible_when_empty = yes
-	visible = {
-		AND = {
-			OR = {
-				original_tag = TRI
-				original_tag = GEH
-			}
-			any_character = {
-				has_character_flag = ARI_BeiBangJia
-			}
-		}
-	}
-	priority = 114513
-}
+# #古圣堂之战临时触发营救学生类别 - fgvfgfs
+# GST_LS_HelpStu_category = {
+# 	icon = generic_research
+# 	visible = {
+# 		AND = {
+# 			OR = {
+# 				original_tag = TRI
+# 				original_tag = GEH
+# 			}
+# 			any_character = {
+# 				has_character_flag = ARI_BeiBangJia
+# 			}
+# 		}
+# 	}
+# 	priority = 114513
+# }

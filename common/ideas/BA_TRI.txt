@@ -247,6 +247,43 @@ ideas = {
                 }
             }
         }
+        GST_TRI_relax_students = {
+            picture = unknown
+            modifier = {
+                stability_weekly = -0.001
+                political_power_gain = -0.1
+            }
+        }
+        GST_TRI_emergency_rescue_idea = {
+            picture = unknown
+            modifier = {
+                stability_weekly = -0.001
+                political_power_gain = -0.1
+                army_org_factor = -0.1
+                army_attack_factor = -0.05
+				army_defence_factor = -0.05
+                custom_modifier_tooltip = GST_TRI_emergency_rescue_idea_tt
+            }
+            cancel = {
+                all_of_scopes = {
+                    array = global.GST_JS_ZBH
+                    if = {
+                        limit = {
+                            is_owned_by = TRI
+                        }
+                        has_state_flag = TRI_advance_exploration
+                        NOT = {
+                            has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+                        }
+                    }
+                }
+                all_character = {
+                    NOT = {
+                        has_character_flag = ARI_BeiBangJia
+                    }
+                }
+            }
+        }
         ###2025.2.20 乃爱###
         #重整旗鼓
         TRI_bouncing_back_idea = {
@@ -310,11 +347,18 @@ ideas = {
                 defense_bonus_against = 0.15
             }
             cancel = {
-                #TODO:阿里乌斯被消灭
+                #阿里乌斯被消灭
                 has_global_flag = Arius_defeated
+                TRI_nagisa = {
+                    is_country_leader = yes
+                }
+                
             }
             on_remove = {
-                news_event = Eden_pact.1002
+                country_event = {
+                    id = TRI_events.60
+                    days = 30
+                }
             }
         }
         TRI_prepare_for_war = {

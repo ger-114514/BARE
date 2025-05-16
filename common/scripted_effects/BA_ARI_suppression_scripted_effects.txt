@@ -269,7 +269,7 @@ ARI_change_materials = {
 }
 ARI_change_materials_monthly_modifier = {
 	custom_effect_tooltip = ARI_change_materials_monthly_modifier_tt
-	add_to_variable = { ARI_materials_monthly_modifier = material_monthly_modifier_change }
+	add_to_variable = { ARI_nihilism_ARI_materials_monthly_modifier = material_monthly_modifier_change }
 }
 ARI_change_intelligence_in_TRI = {
 	custom_effect_tooltip = {

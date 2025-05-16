@@ -66,6 +66,15 @@ leader_traits = {
         political_advisor_cost_factor = -0.25
         army_chief_cost_factor = -0.25
     }
+    TRI_nagisa_Mild_leader_alt_2 = {
+        random = no
+        
+        stability_factor = 0.15
+        political_power_factor = 0.40
+        political_advisor_cost_factor = -0.25
+        army_chief_cost_factor = -0.25
+        TRI_unity_weekly_modifier = 0.5
+    }
 
     ###领袖特质###
 ###圣三一###

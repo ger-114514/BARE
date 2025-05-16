@@ -15,8 +15,8 @@ on_actions = {
 			add_to_array = { global.GST_JS_ZBH = 129 }
 			add_to_array = { global.GST_JS_ZBH = 128 }
 			add_to_array = { global.GST_JS_ZBH = 127 }
-			add_to_array = { global.GST_JS_ZBH = 371 }
-			add_to_array = { global.GST_JS_ZBH = 369 }
+			add_to_array = { global.GST_JS_ZBH = 348 }
+			add_to_array = { global.GST_JS_ZBH = 135 }
 			add_to_array = { global.GST_JS_ZBH = 141 }
 			add_to_array = { global.GST_JS_ZBH = 650 }
 			add_to_array = { global.GST_JS_ZBH = 386 }
@@ -49,14 +49,6 @@ on_actions = {
 					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS }
 				}
-				GEH_makoto = {
-					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
-					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS }
-				}
-				GEH_iroha = {
-					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
-					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS }
-				}
 				GEH_hina = {
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS }
 				}
@@ -72,27 +64,37 @@ on_actions = {
 			}
 
 			TRI = {
-				TRI_nagisa = {
-					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
-					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-				}
-				TRI_missing_nagisa = {
-					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
-				}
-				TRI_tsurugi  ={
+				# TRI_nagisa = {
+				# 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+				# 	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+				# }
+				TRI_tsurugi  = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_hasumi = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
-
 				TRI_ichika = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_mashiro = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
-				TRI_hasumi = {
+
+				TRI_sakurako = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+				}
+				TRI_hinata = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
+				}
+				TRI_mari = {
+				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 			}
@@ -122,6 +124,32 @@ on_actions = {
 					become_exiled_in = {
 						target = GEH
 						legitimacy = 100
+					}
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			for_each_scope_loop = {
+				array = global.GST_JS_ZBH
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+						has_state_flag = CW_fully_control_check
+					}
+					if = {
+						limit = {
+							NOT = {
+								is_fully_controlled_by = TRI
+								is_fully_controlled_by = GEH
+								is_fully_controlled_by = ARI
+							}
+						}
+						modify_state_flag = {
+							flag = CW_fully_control_check
+							days = 90
+						}
 					}
 				}
 			}

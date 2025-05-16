@@ -490,7 +490,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				factor = 0.3
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -531,7 +531,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				add = 60
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -574,7 +574,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				factor = 0.3
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -615,7 +615,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				add = 60
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -658,7 +658,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				factor = 0.3
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -699,7 +699,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				add = 60
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -742,7 +742,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				factor = 0.3
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -783,7 +783,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				add = 60
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -826,7 +826,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				factor = 0.3
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -867,7 +867,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				add = 60
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -910,7 +910,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				factor = 0.3
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -951,7 +951,7 @@ ARI_trade_with_Gematria_decisions = { #数秘术交易决议组
 			modifier = {
 				add = 60
 				check_variable = {
-					ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
+					modifier@ARI_materials_monthly_modifier < BARE_ARI_Resource_Cost_all
 				}
 			}
 			modifier = {
@@ -1255,7 +1255,7 @@ ARI_foreign_operations_decisions = {
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { ARI_materials_monthly_modifier < 300 }
+				check_variable = { modifier@ARI_materials_monthly_modifier < 300 }
 			}
 			modifier = {
 				factor = 0.5

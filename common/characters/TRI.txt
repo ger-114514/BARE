@@ -1007,6 +1007,11 @@ characters={
 				factor = 1.000
 			}
 		}
+		country_leader = {
+			ideology = no_ideology_type
+			expire = "9999.1.1.1"
+			id = -1
+		}
 
         field_marshal = {
 			traits = { trait_cautious infantry_officer }

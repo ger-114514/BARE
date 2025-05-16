@@ -475,11 +475,6 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
-    immediate = {
-        hidden_effect = {
-            goto_province = 5612
-        }
-    }
 
     option = {
 		name = TRI_events.27.a
@@ -507,32 +502,6 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
-    immediate = {
-        hidden_effect = {
-            #暂时移除领袖桐藤渚的所有效果
-            #在渚的头像上打上MISSING的红色标记
-            #同时将效果替换成“失踪的领袖”
-            #效果：（无法切换政治顾问、军事顾问和任何法案）
-            if = { #fgvfgfs 动的
-                limit = { 
-				    ARI = {
-				    	check_variable = {
-				    		var = ARI_ZhunBeiDu #准备度
-				    		value = 91
-				    		compare = greater_than_or_equals #大于等于
-				    	}
-                    }
-			    }
-                promote_character = {
-                    character = TRI_hanako
-                    ideology = no_ideology_type
-                }
-            }
-            else = {
-                promote_character = TRI_missing_nagisa
-            }
-        }
-    }
     option = {
 		name = TRI_events.28.a
         hidden_effect = {
@@ -1183,6 +1152,25 @@ country_event = {
     }
 }
 
+#消灭阿里乌斯奖励事件TODO:文本
+country_event = {
+    id = TRI_events.60
+    title = TRI_events.60.t
+    desc = TRI_events.60.d
+    picture = GFX_TRI_event_3
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_events.60.a
+        swap_ruler_traits = {
+            remove = TRI_nagisa_Mild_leader_alt
+            add = TRI_nagisa_Mild_leader_alt_2
+        }
+    }
+}
 #善意的假面
 country_event = {
     id = TRI_events.43

@@ -281,6 +281,7 @@ country_event = {
     id = ARI_beatrice.100
     title = ARI_beatrice.100.t
     desc = ARI_beatrice.100.desc
+    timeout_days = 2
     #picture =
 
     is_triggered_only = yes
@@ -297,14 +298,17 @@ country_event = {
     id = ARI_beatrice.101
     title = ARI_beatrice.101.t
     desc = ARI_beatrice.101.desc
+    timeout_days = 2
     #picture =
 
     is_triggered_only = yes
     option = {
         name = ARI_beatrice.101.a
-        remove_ideas = ARI_armed_students_modifier
-        remove_ideas = ARI_special_force
-        remove_ideas = ARI_Intelligence_department
+        remove_ideas = {
+            ARI_armed_students_modifier
+            ARI_special_force
+            ARI_Intelligence_department
+        }
     }
 }
 
@@ -320,6 +324,18 @@ country_event = {
         name = ARI_beatrice.102.a
 
         hidden_effect = {
+            remove_ideas = {
+                ARI_intelligence_in_TRI_0
+                ARI_intelligence_in_TRI_1
+                ARI_intelligence_in_TRI_2
+                ARI_intelligence_in_TRI_3
+                ARI_intelligence_in_TRI_4
+                ARI_intelligence_in_GEH_0
+                ARI_intelligence_in_GEH_1
+                ARI_intelligence_in_GEH_2
+                ARI_intelligence_in_GEH_3
+                ARI_intelligence_in_GEH_4
+            }
             every_country = {
                 limit = {
                     AND = {
