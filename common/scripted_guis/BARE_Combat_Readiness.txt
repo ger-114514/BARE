@@ -1,25 +1,28 @@
 
 scripted_gui = {
-	BARE_Combat_Readiness_SG = {
-		context_type = player_context
-		window_name = "BARE_Combat_Readiness"
-		parent_window_name = topbar
-
-		triggers = {
-			combat_readiness_block_visible = {
-				always = no
-				# has_idea = BARE_Combat_Readiness_Mid_Idea
-			}
-		}
-
-	
-
-
-
-	}
 	BARE_Combat_Readiness_SG_State = {
 		context_type = selected_state_context
 		window_name = "BARE_Combat_Readiness_State"
 		parent_window_name = state_info_window
+	}
+
+	ba_manpower_number_container_gui = {
+        window_name = "ba_manpower_number_container"
+    	context_type = player_context
+    	parent_window_token = top_bar
+    }
+
+	BARE_Combat_Readiness_SG = {
+		context_type = player_context
+		window_name = "BARE_Combat_Readiness"
+		parent_window_token = top_bar
+
+		triggers = {
+			combat_readiness_block_visible = {
+				has_idea = BARE_Combat_Readiness_Mid_Idea
+			}
+		}
+
+
 	}
 }	

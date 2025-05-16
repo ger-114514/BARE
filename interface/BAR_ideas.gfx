@@ -6,10 +6,205 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ABY/hoshino.dds"
 	}
 	
-	### ARI
+	### ARI_advisor
 	spriteType = {
 		name = "GFX_idea_advisor_ARI_atsuko"
 		texturefile = "gfx/interface/ideas/ARI/atsuko.dds"
+	}
+
+	## ARI_dynamic
+	SpriteType = {
+		name = "GFX_idea_ARI_armed_students_modifier"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_armed_students_modifier.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_broken_provisioning_system"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_broken_provisioning_system.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_catastrophic_traveller_operation"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_catastrophic_traveller_operation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_flame_of_revenge"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_flame_of_revenge.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_forbidden_weapons"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_forbidden_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_Gematria_member"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_Gematria_member.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_Intelligence_department"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_Intelligence_department.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_low_control_rank_state"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_low_control_rank_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_power_chaser"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_power_chaser.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_special_force"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_special_force.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_tax_farming"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_tax_farming.dds"
+	}
+	## ARI_ideas
+	SpriteType = {
+		name = "GFX_idea_ARI_air_force_0"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_air_force_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_air_force_1"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_air_force_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_assault_rifle_idea"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_assault_rifle_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_a_lesson_from_traveller_operation"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_a_lesson_from_traveller_operation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_control_rank_1"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_control_rank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_control_rank_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_control_rank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_control_rank_3"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_control_rank_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_eden_action_chaos"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_eden_action_chaos.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_eden_action_chaos_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_eden_action_chaos_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_eden_mystery_infantry_debuff_1"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_eden_mystery_infantry_debuff_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_eden_mystery_infantry_debuff_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_eden_mystery_infantry_debuff_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_eden_mystery_infantry_debuff_3"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_eden_mystery_infantry_debuff_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_eden_mystery_infantry_debuff_4"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_eden_mystery_infantry_debuff_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_history_education"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_history_education.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_improving_reward_and_punishment"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_improving_reward_and_punishment.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_GEH_0"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_GEH_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_GEH_1"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_GEH_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_GEH_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_GEH_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_GEH_3"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_GEH_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_GEH_4"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_GEH_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_TRI_0"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_TRI_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_TRI_1"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_TRI_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_TRI_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_TRI_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_TRI_3"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_TRI_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_intelligence_in_TRI_4"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_intelligence_in_TRI_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_JSL"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_JSL.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_light_support_equipment_idea"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_light_support_equipment_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_mercenaries_in_black_market"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_mercenaries_in_black_market.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_merkava_main_battle_tank"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_merkava_main_battle_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_merkava_main_battle_tank_1"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_merkava_main_battle_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_merkava_main_battle_tank_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_merkava_main_battle_tank_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_mystery_reseacher"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_mystery_reseacher.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_mystery_reseacher_2"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_mystery_reseacher_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_nihilism"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_nihilism.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_Pleasant_cooperation"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_Pleasant_cooperation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_revanchism_education"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_revanchism_education.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARI_unclear_target"
+		texturefile = "gfx/interface/ideas/ARI/idea_ARI_unclear_target.dds"
 	}
 	
 	### GEH

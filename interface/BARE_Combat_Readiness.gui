@@ -12,6 +12,7 @@ guiTypes = {
 			position = { x = 0 y = 5 }
 			Orientation = "UPPER_LEFT"
 			pdx_tooltip = BARE_Combat_Readiness_Tooltip
+			pdx_tooltip_delayed = BARE_Combat_Readiness_desc_Tooltip
 		}
 
 
