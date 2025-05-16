@@ -1,5 +1,4 @@
 
-
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 21
 NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 30
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 3
