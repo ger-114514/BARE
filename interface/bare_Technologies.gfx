@@ -59,4 +59,26 @@ spriteTypes = {
 		name = "GFX_infantry_weapons_T5_medium"
 		texturefile = "gfx/interface/technologies/先进步兵装备.dds"
 	}
+
+	##
+	SpriteType = {
+		name = "GFX_troop_training_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T5.dds"
+	}
 }
