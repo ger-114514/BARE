@@ -1,0 +1,30 @@
+##注意了！分为标题、描述、评价3个主干！
+##独特结算需要如示例进行独特定义
+##不可以动最下方的DEFAULT文本，这是必须有的默认文本。
+
+##天王星作战：电力系统
+defined_text = {
+	name = Uranus_state_status
+	text = {
+		trigger = {
+			is_controlled_by = CEN
+		}
+		localization_key = Uranus_state_status_control_by_us
+	}
+
+	text = {
+		trigger = {
+			any_country = {
+                NOT = {
+					tag = CEN
+				}
+                is_ally_with = CEN
+			}
+		}
+		localization_key = Uranus_state_status_control_by_ally
+	}
+	
+	text = {
+	    localization_key = Uranus_state_status_control_by_enemy
+	}
+}

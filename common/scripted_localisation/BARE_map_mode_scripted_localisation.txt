@@ -1,0 +1,86 @@
+##注意了！分为标题、描述、评价3个主干！
+##独特结算需要如示例进行独特定义
+##不可以动最下方的DEFAULT文本，这是必须有的默认文本。
+
+##描述
+defined_text = {
+	name = BARE_COUNTRY_LEVEL_MAP_TOOLTIP
+	text = {
+		trigger = {
+			controller = {
+				has_idea = BARE_Global_College_Autonomous_Region
+			}
+		}
+		localization_key = MAPMODE_is_BARE_Global_College_Autonomous_Region
+	}
+
+	text = {
+		trigger = {
+			controller = {
+				has_idea = BARE_Global_Trusteeship_Area
+			}
+		}
+		localization_key = MAPMODE_is_BARE_Global_Trusteeship_Area
+	}
+	
+	text = {
+		trigger = {
+			controller = {
+				has_idea = BARE_Global_Extrajudicial_Trusteeship_Area
+			}
+		}
+		localization_key = MAPMODE_is_BARE_Global_Extrajudicial_Trusteeship_Area
+	}
+
+	text = {
+		trigger = {
+			controller = {
+				has_idea = BARE_Global_Unacknowledged_College_Autonomous_Region
+			}
+		}
+		localization_key = MAPMODE_is_BARE_Global_Unacknowledged_College_Autonomous_Region
+	}
+
+	text = {
+		trigger = {
+			controller = {
+				has_idea = BARE_Global_Suburban
+			}
+		}
+		localization_key = MAPMODE_is_BARE_Global_Suburban
+	}
+
+	text = {
+		trigger = {
+			controller = {
+				has_idea = BARE_Global_Blockade_Zone
+			}
+		}
+		localization_key = MAPMODE_is_BARE_Global_Blockade_Zone
+	}
+
+	text = {
+	    localization_key = MAPMODE_is_default
+	}
+}
+
+defined_text = {
+	name = BARE_COUNTRY_LEVEL_MAP_GET_OVERLORD_TOOLTIP
+	text = {
+		trigger = {
+			controller = {
+				is_subject = yes
+			}
+		}
+		localization_key = MAPMODE_Get_State_Owner_OverLord_subject
+	}
+
+	text = {
+		trigger = {
+			controller = {
+				is_subject = no
+			}
+		}
+		localization_key = MAPMODE_Get_State_Owner_OverLord_independence
+	}
+}
