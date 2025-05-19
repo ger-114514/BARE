@@ -60,6 +60,64 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/先进步兵装备.dds"
 	}
 
+	##作训服
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T5.dds"
+	}
+
+	##携行具
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T5.dds"
+	}
+
+	##步兵甲
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T5.dds"
+	}
+
 	##步兵训练
 	SpriteType = {
 		name = "GFX_troop_training_T1_medium"
