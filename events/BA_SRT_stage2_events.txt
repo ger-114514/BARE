@@ -1,4 +1,7 @@
 add_namespace = SRT_stagetwo
+add_namespace = SRT_aoba
+add_namespace = SRT_shiratori
+add_namespace = SRT_business
 
 country_event = {
     id = SRT_stagetwo.1
@@ -472,6 +475,107 @@ country_event = {
 		name = SRT_stagetwo.24.a
 		
  
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+####################SRT地区决议事件####################
+country_event = {
+    id = SRT_aoba.1
+    title = SRT_aoba.1.t
+    desc = SRT_aoba.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_aoba.1.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_aoba.2
+    title = SRT_aoba.2.t
+    desc = SRT_aoba.2.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_aoba.2.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_aoba.3
+    title = SRT_aoba.3.t
+    desc = SRT_aoba.3.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_aoba.3.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+######################
+country_event = {
+    id = SRT_shiratori.1
+    title = SRT_shiratori.1.t
+    desc = SRT_shiratori.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_shiratori.1.a
+		 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+######################
+country_event = {
+    id = SRT_business.1
+    title = SRT_business.1.t
+    desc = SRT_business.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_business.1.a
+		 
 		hidden_effect = {
 
 		}
