@@ -4,7 +4,18 @@ SRT_debug_decisions = {
 			is_debug = yes
 		}
 		complete_effect = {
-			
+			VAL = {
+				annex_country = { 
+					target = SRT 
+					transfer_troops = yes 
+				}
+			}
+			SRT = {
+				transfer_state = 1
+				add_state_core = 1
+				set_cosmetic_tag = SRT_RAB_no_ideology_DEF
+				promote_character = SRT_miyako
+			}
 			if = {
 				limit = {
 					NOT = { has_focus_tree = SRT_Rabiit_team1 }
