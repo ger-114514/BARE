@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ CEN_Operation_Uranus_categories: "行动：天王星"
+ CEN_Operation_Uranus_categories_desc: "七神凛代理与不知火花耶防卫室长已下达命令：执行天王星作战。\n\n想定作战计划如下：为了防止破坏，联邦学生会武装力量必须在控制所有关键设施后再恢复相关管线的运转。\n\n在作战结束时，我们必须控制下述所有的电力、水利、燃气枢纽：\n\n\n§R目标：电力枢纽§!\n\n[78.Uranus_state_status]\n[79.Uranus_state_status]\n[494.Uranus_state_status]\n[71.Uranus_state_status]\n[70.Uranus_state_status]\n[69.Uranus_state_status]\n[67.Uranus_state_status]\n[68.Uranus_state_status]\n[64.Uranus_state_status]\n[65.Uranus_state_status]\n[66.Uranus_state_status]\n[647.Uranus_state_status]\n[495.Uranus_state_status]\n\n\n§R目标：水利枢纽§!\n\n[59.Uranus_state_status]\n[60.Uranus_state_status]\n[57.Uranus_state_status]\n[58.Uranus_state_status]\n[491.Uranus_state_status]\n[52.Uranus_state_status]\n[49.Uranus_state_status]\n[47.Uranus_state_status]\n[45.Uranus_state_status]\n[511.Uranus_state_status]\n[3.Uranus_state_status]\n[4.Uranus_state_status]\n[5.Uranus_state_status]\n\n\n§R目标：燃气枢纽§!\n\n[1.Uranus_state_status]\n[24.Uranus_state_status]\n[22.Uranus_state_status]\n[23.Uranus_state_status]\n[546.Uranus_state_status]\n[26.Uranus_state_status]\n[25.Uranus_state_status]\n\n"
+
+ Uranus_Test_open_gui: "界面测试"
+
+ Uranus_state_status_control_by_us: "    --§Y[THIS.GetName]§!:    §G在我方控制下§!"
+ Uranus_state_status_control_by_ally: "    --§Y[THIS.GetName]§!:    §C在盟友控制下§!"
+ Uranus_state_status_control_by_enemy: "    --§Y[THIS.GetName]§!:    §R在敌人控制下§!"
