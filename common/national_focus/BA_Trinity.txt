@@ -850,7 +850,7 @@ focus_tree = {
 			}
 			focus = { #接任补习部指导
 				id = TRI_guide_of_hoshubu
-				#icon = 
+				icon = GFX_goal_TRI_guide_of_hoshubu
 				relative_position_id = TRI_calling_for_Schale
 				prerequisite = { focus = TRI_calling_for_Schale }
 				
@@ -874,7 +874,7 @@ focus_tree = {
 			}
 			focus = { #培悯授爱
 				id = TRI_love_for_students
-				#icon = 
+				icon = GFX_goal_TRI_love_for_students
 				relative_position_id = TRI_guide_of_hoshubu
 				prerequisite = { focus = TRI_guide_of_hoshubu }
 				
@@ -1000,7 +1000,7 @@ focus_tree = {
 			}
 			focus = { #少女们的故事
 				id = TRI_the_story_of_girls
-				#icon = 
+				icon = GFX_goal_TRI_the_story_of_girls
 				relative_position_id = TRI_examination_for_training_club
 				prerequisite = { focus = TRI_examination_for_training_club }
 				
@@ -1082,7 +1082,7 @@ focus_tree = {
 			}
 			focus = { #密谋，挫败阴谋
 				id = TRI_conspiracy_against_conspiracy
-				##icon = GFX_goal_unknown
+				icon = GFX_goal_TRI_conspiracy_against_conspiracy
 				relative_position_id = TRI_Unintentional_windfall
 				prerequisite = { focus = TRI_Unintentional_windfall }
 				cancelable = no	
