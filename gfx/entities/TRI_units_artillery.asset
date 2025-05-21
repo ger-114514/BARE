@@ -1,6 +1,6 @@
 ### TRI
 entity = {
-	name = "TRI_Siracusa_artillery_entity"
+	name = "TRI_artillery_entity"
 	pdxmesh = "frame_artillery_mesh"
 	
 	default_state = "idle"
@@ -17,5 +17,5 @@ entity = {
 	scale = 1
 	
 	attach = { name = artillery			artillery = "artillery_gun_entity" }
-	attach = { name = infantry			infantry = "TRI_Siracusa_infantry_entity" }
+	attach = { name = infantry			infantry = "TRI_infantry_entity" }
 }

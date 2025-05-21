@@ -369,4 +369,78 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/support/heavy_fire_support_equipment_2.dds"
 	}
 
+	###支援设备
+	##装备图标
+    SpriteType = {
+		name = "GFX_support_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support/support_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_engineer_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support/support_engineer_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_logistics_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support/support_logistics_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_security_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support/support_security_equipment_1.dds"
+	}
+	
+	##科技图标
+    SpriteType = {
+		name = "GFX_support_equipment_T1_medium"
+		texturefile = "gfx/interface/technologies/support/support_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_engineer_T3_medium"
+		texturefile = "gfx/interface/technologies/support/support_engineer_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_logistics_T3_medium"
+		texturefile = "gfx/interface/technologies/support/support_logistics_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_security_T3_medium"
+		texturefile = "gfx/interface/technologies/support/support_security_equipment_1.dds"
+	}
+
+	##
+	SpriteType = {
+		name = "GFX_support_engineer_T2_medium"
+		texturefile = "gfx/interface/technologies/support/support_engineer_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_logistics_T2_medium"
+		texturefile = "gfx/interface/technologies/support/support_logistics_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_security_T2_medium"
+		texturefile = "gfx/interface/technologies/support/support_security_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_engineer_T4_medium"
+		texturefile = "gfx/interface/technologies/support/support_engineer_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_logistics_T4_medium"
+		texturefile = "gfx/interface/technologies/support/support_logistics_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_security_T4_medium"
+		texturefile = "gfx/interface/technologies/support/support_security_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_engineer_T5_medium"
+		texturefile = "gfx/interface/technologies/support/support_engineer_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_logistics_T5_medium"
+		texturefile = "gfx/interface/technologies/support/support_logistics_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_security_T5_medium"
+		texturefile = "gfx/interface/technologies/support/support_security_T5.dds"
+	}
 }
