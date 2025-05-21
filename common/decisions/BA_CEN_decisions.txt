@@ -1,0 +1,11 @@
+CEN_Operation_Uranus_categories = {
+	Uranus_Test_open_gui = {
+		visible = {
+			always = yes
+			tag = CEN
+		}
+		complete_effect = {
+			#set_country_flag = BA_show_welcome_splash
+		}
+	}
+} 

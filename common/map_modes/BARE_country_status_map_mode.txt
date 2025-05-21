@@ -1,0 +1,89 @@
+scripted_map_modes = {
+    BARE_COUNTRY_LEVEL_MAP = {
+        top = {
+            type = none
+        }
+        bottom = {
+            type = country
+			color = {
+                set_temp_variable = { alpha = 1 }
+                if = {
+                    limit = {
+						FROM = {
+						has_idea = BARE_Global_College_Autonomous_Region
+						}
+					}
+                    set_temp_variable = { red = 0.0 }
+		         	set_temp_variable = { blue = 1.0 }
+        			set_temp_variable = { green = 0.0 }
+				}
+
+                else_if = {
+                    limit = {
+						FROM = {
+						has_idea = BARE_Global_Trusteeship_Area
+						}
+					}
+                    set_temp_variable = { red = 0 }
+		         	set_temp_variable = { blue = 0.0 }
+        			set_temp_variable = { green = 0.501 }
+				}
+
+				else_if = {
+                    limit = {
+						FROM = {
+						has_idea = BARE_Global_Extrajudicial_Trusteeship_Area
+						}
+					}
+                    set_temp_variable = { red = 0.956 }
+		         	set_temp_variable = { blue = 0.376 }
+        			set_temp_variable = { green = 0.643 }
+				}
+
+				else_if = {
+                    limit = {
+						FROM = {
+						has_idea = BARE_Global_Unacknowledged_College_Autonomous_Region
+						}
+					}
+                    set_temp_variable = { red = 0.501 }
+		         	set_temp_variable = { blue = 0.501 }
+        			set_temp_variable = { green = 0.0 }
+				}
+
+				else_if = {
+                    limit = {
+						FROM = {
+						has_idea = BARE_Global_Suburban
+						}
+					}
+                    set_temp_variable = { red = 1.0 }
+		         	set_temp_variable = { blue = 1.0 }
+        			set_temp_variable = { green = 1.0 }
+				}
+
+				else_if = {
+                    limit = {
+						FROM = {
+						has_idea = BARE_Global_Blockade_Zone
+						}
+					}
+                    set_temp_variable = { red = 0.501 }
+		         	set_temp_variable = { blue = 0.0 }
+        			set_temp_variable = { green = 0.0 }
+				}
+
+				else = {
+					set_temp_variable = { red = 0.0 }
+		         	set_temp_variable = { blue = 0.0 }
+        			set_temp_variable = { green = 0.0 }
+				}
+            }
+        }
+        far_text = country
+		near_text = state
+        update_daily = YES
+    }
+}
+
+#
