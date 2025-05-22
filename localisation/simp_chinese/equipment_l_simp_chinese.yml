@@ -127,9 +127,18 @@ fire_support_team_su_sa:"火力支援小队（神秘）"
 
 
 infantry_anti_air_equipment: "单兵防空武器"
+infantry_anti_air_equipment_desc: ""
 infantry_anti_air_equipment_1: "单兵防空武器 MK1"
 infantry_anti_air_equipment_2: "单兵防空武器 MK2"
 infantry_anti_air_equipment_3: "单兵防空武器 MK3"
+air_defense_weapons_T21:"激光近炸引信"
+air_defense_weapons_T21_desc:"普通的无线电近炸引信尽管效果不错，但因为天空没这么“干净”，因此经常会因为奇怪的原因自爆，新式的激光近炸引信能够确保导弹能在该炸的时候炸，该不炸的时候不炸。"
+air_defense_weapons_T22:"反对抗措施"
+air_defense_weapons_T22_desc: "虽然在试验场中，无人机会乖乖的被导弹抓住然后用自己的机身去拦截导弹的战斗部，但在实战中，无人机也有自己的防御手段，例如热诱弹或者太阳。因此，我们需要让导弹的导引头更聪明，能认得出来哪些才是真正的目标。"
+air_defense_weapons_T41:"复合导引头"
+air_defense_weapons_T41_desc:"现代无人机为了避免被导弹捕食，因此进化出了一大堆方式来干扰导弹的锁定，而导弹则必须有更多的方式来知道敌人和自己在哪，通过往导引头加入图像识别或者雷达等奇怪的方式，导弹可以有效对抗这些干扰措施"
+air_defense_weapons_T42:"增程火箭发动机"
+air_defense_weapons_T42_desc: "为了保证学生扛的动武器，导弹的火箭发动机的体积被极限压缩，进而影响了导弹的射程。我们没办法违反物理定律或是让学生全部变成体育生，但我们可以改进发动机的设计和燃料，从而提升导弹射程。"
 
 
 #临时装备
