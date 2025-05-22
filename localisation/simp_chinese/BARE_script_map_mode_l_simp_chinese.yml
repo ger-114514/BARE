@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ ###自治区类型地图
+ ###FROM IS STATE!!!
+ MAPMODE_BARE_COUNTRY_LEVEL_MAP_NAME: "自治区类型地图"
+ MAPMODE_BARE_COUNTRY_LEVEL_MAP: "§Y自治区类型地图§!"
+ MAPMODE_BARE_COUNTRY_LEVEL_MAP_DESCRIPTION: "显示省份控制者的类型。用于快速制定区域争夺策略。"
+ BARE_COUNTRY_LEVEL_MAP_tooltip: "[FROM.BARE_COUNTRY_LEVEL_MAP_GET_OVERLORD_TOOLTIP]"
+ BARE_COUNTRY_LEVEL_MAP_tooltip_delayed: "区域类型：§Y[FROM.BARE_COUNTRY_LEVEL_MAP_TOOLTIP]§!"
+
+ MAPMODE_is_BARE_Global_College_Autonomous_Region: "学园自治区"
+ MAPMODE_is_BARE_Global_Trusteeship_Area: "托管地区"
+ MAPMODE_is_BARE_Global_Extrajudicial_Trusteeship_Area: "法外托管地区"
+ MAPMODE_is_BARE_Global_Unacknowledged_College_Autonomous_Region: "不被承认的学园自治区"
+ MAPMODE_is_BARE_Global_Suburban: "郊区"
+ MAPMODE_is_BARE_Global_Blockade_Zone: "封锁地区"
+ MAPMODE_is_default: "未知"
+
+ MAPMODE_Get_State_Owner_OverLord_subject: "§Y[THIS.Owner.Overlord.GetName]§!管理的区域"
+ MAPMODE_Get_State_Owner_OverLord_independence: "§Y[THIS.Owner.GetName]§!直辖的区域"
