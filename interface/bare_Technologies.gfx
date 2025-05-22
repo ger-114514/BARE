@@ -108,6 +108,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/infantry/special_infantry_equipment_4.dds"
 	}
 
+	##骑兵
+	SpriteType = {
+		name = "GFX_bare_cavalry_tech_medium"
+		texturefile = "gfx/interface/technologies/infantry/bare_cavalry_tech.dds"
+	}
+
 	##作训服
 	SpriteType = {
 		name = "GFX_infantry_weapons_upgrade_uniform_T1_medium"

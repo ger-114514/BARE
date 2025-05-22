@@ -49,6 +49,10 @@ fire_support: "火力支援"
 
 
 #科技
+bare_cavalry_tech: "马术社团"
+bare_cavalry_tech_desc: "马术社，即以交流骑术为中心的社团。随着科技的进步，骑马这种交通方式早已被取代，但由于其承载的历史，以及复杂的马匹培育与人员训练程序，参与马术活动依然被视为贵族的地位象征。目前，仅有最大的几个学园依然保有正常活动的马术社团。"
+bare_this_is_just_joke_tt: "§Y别指望啦！桐藤家的马比你手里的炮弹还贵！§!"
+
 infantry_weapons_T1: "次等步兵装备"
 infantry_weapons_T1_desc: "“垃圾是放错地方的资源”，这句话对于那些装备来说再合适不过了，这些装备包括了流水线生产的次品，因为各种原因而在学生不断转手的二手产品，在工程课程中手工做出来的试制品。尽管它们还是能完成它们的任务-把高速运动的铜块，钢块或铅块射到任何地方，但它们什么时候卡壳，炸膛，把子弹打到十万八千里，全看它们的心情。然而，它们极其低廉的价格确保了基沃托斯的持枪率永远比上街裸奔的几率更高。"
 infantry_weapons_T2: "标准步兵装备"
@@ -74,6 +78,7 @@ infantry_weapons_upgrade_suppressive_weapon_T4_desc: "作为真正意义上的�
 
 infantry_weapons_upgrade_suppressive_weapon_T5: "高精度榴弹发射器"
 infantry_weapons_upgrade_suppressive_weapon_T5_desc: "装备了在高速榴弹与弹道计算机的现代化榴弹投射装置，能够在千米级的远距离上轻松击溃整组敌人的冲锋。部分班组亦被配发了特殊的破甲弹头，用来攻击装甲目标。\n装备这些武器对于军工生产组织是一项系统性考验，目前只有那些预算充沛的精锐之师才有机会优先体验到它。"
+
 infantry_weapons_upgrade_uniform_T1: "批发制服"
 infantry_weapons_upgrade_uniform_T1_desc: "由学园后勤部或是集体组织的财务部批量采购的服装，虽然往自己的衣服上面加各种花里胡哨的装饰乃是大部分学生的常态，但是至少统一化的设计能够作为一种符号用于展示穿着者的所属身份。"
 
