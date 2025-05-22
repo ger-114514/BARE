@@ -7,6 +7,9 @@ state={
 	history = {
 		owner = GEH
 		add_core_of=GEH
+		buildings = {
+			infrastructure = 4
+		}
     }
 	manpower=36500
 	state_category = wasteland
