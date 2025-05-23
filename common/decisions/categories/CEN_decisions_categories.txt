@@ -1,0 +1,19 @@
+#偏执度
+CEN_Operation_Uranus_categories = {
+
+	priority = 1001
+
+	icon = generic
+
+	#scripted_gui = TRI_paranoia_system_ui
+
+	allowed = {
+		original_tag = CEN
+	}
+
+	visible = {
+		#is_debug = yes
+	}
+
+	visible_when_empty = yes
+}

@@ -51,7 +51,7 @@ characters = {
 				factor = 1
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {brilliant_strategist infantry_officer urban_assault_specialist logistics_wizard
 			}
 			skill = 4
@@ -165,8 +165,466 @@ characters = {
 			logistics_skill = 2
 		}
 	}
+	ARI_igarashi_ai = {# 五十岚-爱 劳动部长
+		name = ARI_igarashi_ai_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_igarashi_ai_pa
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				labor_minister
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ARI_ogawa_itsumi = {# 小川-逸美 情报协调者
+		name = ARI_ogawa_itsumi_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_ogawa_itsumi_pa
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				intelligence_coordinator
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	# 江口-恋 力图拯救
+	ARI_eguchi_ren = {
+		name = ARI_eguchi_ren_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ARI_eguchi_ren_pa
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				saviour_spirit
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	# 广濑-瑞希 陆军演习
+	ARI_hirose_mizuki = {
+		name = ARI_hirose_mizuki_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ARI_hirose_mizuki_ac
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				army_exercises_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	# 细川-百合子 陆军组织
+	ARI_hosokawa_yuriko = {
+		name = ARI_hosokawa_yuriko_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ARI_hosokawa_yuriko_ac
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				army_organizer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
 
+	# 藤原-麻美 空军引领人
+	ARI_fujiwara_mami = {
+		name = ARI_fujiwara_mami_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ARI_fujiwara_mami_ac
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				air_force_pioneer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
 
+	# 五十铃-树理 制空大师
+	ARI_isuzu_juri = {
+		name = ARI_isuzu_juri_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = ARI_isuzu_juri_ac
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				air_superiority_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 樱井-诗音 步兵理论家
+	ARI_sakurai_shion = {
+		name = ARI_sakurai_shion_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ARI_sakurai_shion_th
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				infantry_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 三木-樱 空军理论家
+	ARI_miki_sakura = {
+		name = ARI_miki_sakura_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ARI_miki_sakura_th
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 江口-月见 陆军重组
+	ARI_eguchi_tsukimi = {
+		name = ARI_eguchi_tsukimi_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ARI_eguchi_tsukimi_hc
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				army_regrouping_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 松下-久留米 后勤专家
+	ARI_matsushita_kurume = {
+		name = ARI_matsushita_kurume_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ARI_matsushita_kurume_hc
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				logistics_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 今井-明日香 步兵部队
+	ARI_imai_asuka = {
+		name = ARI_imai_asuka_name
+		portraits = {
+			civilian = {
+				#large = GFX_Portrait_ari_1
+				#small = GFX_Portrait_ari_1
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ARI_imai_asuka_hc
+			allowed = {
+				original_tag = ARI
+			}
+			available = {
+				original_tag = ARI
+			}
+			traits = {
+				infantry_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	
 	#代号01
 	ARI_code_01 = {
 		name = ARI_code_01_name
@@ -198,5 +656,4 @@ characters = {
 			cost = 100
 		}
 	}
-
 }

@@ -2,7 +2,7 @@ state={
 	id=528
 	name="STATE_528"
 	provinces={
-		612 1660 5403 5460 5548 6648 7726 7968 8193 10851 10965 
+		2246 2586 612 1660 5403 5460 5548 6648 7726 7968 8193 10851 10965 
 	}
 	history = {
 		buildings = {
@@ -11,6 +11,7 @@ state={
 		owner = A45
 		add_core_of=A45
 		victory_points = {7726 5}
+		victory_points = {2586 5}
 		victory_points = {5548 5}
     }
 	manpower=24600

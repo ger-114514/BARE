@@ -59,4 +59,151 @@ spriteTypes = {
 		name = "GFX_infantry_weapons_T5_medium"
 		texturefile = "gfx/interface/technologies/先进步兵装备.dds"
 	}
+
+	##作训服
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_uniform_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_uniform_T5.dds"
+	}
+
+	##携行具
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_carrying_gear_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_carrying_gear_T5.dds"
+	}
+
+	##步兵甲
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_armor_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_armor_T5.dds"
+	}
+
+	##步兵训练
+	SpriteType = {
+		name = "GFX_troop_training_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_troop_training_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/troop_training_T5.dds"
+	}
+    
+	##步兵通讯
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_communication_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_communication_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_communication_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_communication_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_communication_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_communication_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_communication_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_communication_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_communication_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_communication_T5.dds"
+	}
+
+	##步兵支援武器
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_suppressive_weapon_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_suppressive_weapon_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_suppressive_weapon_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_suppressive_weapon_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_suppressive_weapon_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_suppressive_weapon_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_suppressive_weapon_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_suppressive_weapon_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_suppressive_weapon_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_suppressive_weapon_T5.dds"
+	}
+
+	##瞄具
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_sighting_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_sighting_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_sighting_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_sighting_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_sighting_T3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_sighting_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_sighting_T4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_sighting_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_weapons_upgrade_sighting_T5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_upgrade_sighting_T5.dds"
+	}
+
 }

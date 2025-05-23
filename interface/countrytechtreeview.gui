@@ -3513,7 +3513,7 @@ guiTypes = {
 			iconType = {
 				name = "picture"
 				position = { x=1 y=2 }
-				spriteType = "GFX_subtech_art"
+				spriteType = "GFX_subtech_aa"
 				alwaystransparent = yes
 			}
 		}
@@ -3532,7 +3532,7 @@ guiTypes = {
 			iconType = {
 				name = "picture"
 				position = { x=1 y=2 }
-				spriteType = "GFX_subtech_aa"
+				spriteType = "GFX_subtech_art"
 				alwaystransparent = yes
 			}
 		}

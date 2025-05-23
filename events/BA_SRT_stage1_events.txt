@@ -1,4 +1,5 @@
 add_namespace = SRT_stageone
+add_namespace = SRT_stagetraining
 
 country_event = {
     id = SRT_stageone.1
@@ -8,6 +9,7 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
+
     option = {
 		name = SRT_stageone.1.a
 		
@@ -290,6 +292,167 @@ country_event = {
 	fire_only_once = yes
     option = {
 		name = SRT_stageone.15.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+####################SRT决议事件####################
+country_event = {
+    id = SRT_stagetraining.1
+    title = SRT_stagetraining.1.t
+    desc = SRT_stagetraining.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.1.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.2
+    title = SRT_stagetraining.2.t
+    desc = SRT_stagetraining.2.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.1.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.3
+    title = SRT_stagetraining.3.t
+    desc = SRT_stagetraining.3.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.3.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.4
+    title = SRT_stagetraining.4.t
+    desc = SRT_stagetraining.4.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.1.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.5
+    title = SRT_stagetraining.5.t
+    desc = SRT_stagetraining.5.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.5.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.6
+    title = SRT_stagetraining.6.t
+    desc = SRT_stagetraining.6.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.6.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.7
+    title = SRT_stagetraining.7.t
+    desc = SRT_stagetraining.7.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.7.a
+		
+ 
+		hidden_effect = {
+
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+country_event = {
+    id = SRT_stagetraining.8
+    title = SRT_stagetraining.8.t
+    desc = SRT_stagetraining.8.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+    option = {
+		name = SRT_stagetraining.8.a
 		
  
 		hidden_effect = {
