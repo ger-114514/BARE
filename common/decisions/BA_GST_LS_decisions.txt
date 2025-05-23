@@ -135,23 +135,27 @@ GST_LS_ZZ_category = {
 		icon = generic_research
 		priority = 10
 		activation = {
-			AND = {
-				NOT = {
-					ARI = {
-						has_completed_focus = ARI_the_final_step #没有完成 最后一步 国策
-					}
-				}
-				NOT = {
-					original_tag = ARI
-				}
-				OR = {
-					has_war_with = GEH
-					has_war_with = TRI
-				}
-			}
+			# AND = {
+			# 	NOT = {
+			# 		ARI = {
+			# 			has_completed_focus = ARI_the_final_step #没有完成 最后一步 国策
+			# 		}
+			# 	}
+			# 	NOT = {
+			# 		original_tag = ARI
+			# 	}
+			# 	OR = {
+			# 		has_war_with = GEH
+			# 		has_war_with = TRI
+			# 	}
+			# }
+			always = no
 		}
 		available = {
 			OR = {
+				ARI = {
+					has_completed_focus = ARI_the_final_step #完成 最后一步 国策
+				}
 				NOT = {
 					OR = {
 						has_war_with = GEH #不与歌赫娜处于战争
@@ -188,10 +192,11 @@ GST_LS_ZZ_category = {
 			}
 		}
 		cancel_effect = {
-			ARI = {
-				dismantle_faction = yes
-			}
-			TRI = {
+			if = {
+				limit = { original_tag = TRI }
+				ARI = {
+					dismantle_faction = yes
+				}
 				white_peace = {
 					tag = GEH
 					message = pec_bec
@@ -209,26 +214,22 @@ GST_LS_ZZ_category = {
 		days_mission_timeout = 35
 
 		timeout_effect = {
-			ARI = {
-				dismantle_faction = yes
-			}
-			TRI = { #检测是否与歌赫娜处于战争状态
-				if = {
-					limit = { 
-						has_war_with = GEH
-					}
-					white_peace = {
-						tag = GEH
-						message = pec_bec
-					}
+			if = {
+				limit = { original_tag = TRI }
+				ARI = {
+					dismantle_faction = yes
 				}
-				create_faction = FAN_ARI_ZHENXIAN #反阿里乌斯统一阵线
+				white_peace = {
+					tag = GEH
+					message = pec_bec
+				}
+				create_faction = FAN_ARI_ZHENXIAN
 				add_to_faction = GEH
 				if = {
 					limit = { 
 						has_global_flag = JiWoTuoSiFangWeiLianMeng_CunZai
 					}
-					set_faction_name = FAN_ARI_ZHENXIAN_GAI #伊甸条约组织
+					set_faction_name = FAN_ARI_ZHENXIAN_GAI
 				}
 			}
 		}

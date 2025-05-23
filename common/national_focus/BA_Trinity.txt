@@ -440,7 +440,7 @@ focus_tree = {
 					add_ideas = TRI_prepare_for_meeting
 					hidden_effect = {
 						set_global_flag = BA_2st_eden_pact_TRI_leader
-						news_event = Eden_pact.1001
+                		Eden_treaty_start = yes
 					}
 				}
 				ai_will_do = {
@@ -1160,6 +1160,7 @@ focus_tree = {
 				prerequisite = { focus = TRI_silence }
 				allow_branch = {
 					has_completed_focus = TRI_silence
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				available = {
 					custom_override_tooltip = {
@@ -1186,6 +1187,7 @@ focus_tree = {
 				prerequisite = { focus = TRI_unexpected_one }
 				allow_branch = {
 					has_completed_focus = TRI_unexpected_one
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				available = {
 					custom_override_tooltip = {
@@ -1212,6 +1214,7 @@ focus_tree = {
 				prerequisite = { focus = TRI_daring_plan_meticulous_action }
 				allow_branch = {
 					has_completed_focus = TRI_daring_plan_meticulous_action
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				available = {
 					custom_override_tooltip = {
@@ -1248,6 +1251,7 @@ focus_tree = {
 						has_completed_focus = TRI_lure_the_enemy
 						has_completed_focus = TRI_conspiracy_against_conspiracy
 					}
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				
 				available = {
@@ -1300,6 +1304,7 @@ focus_tree = {
 				allow_branch = {
 					has_completed_focus = TRI_desperate_fight
 					has_country_flag = TRI_investigation_normal_ending
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				cost = 1
 				x = 0
@@ -1331,6 +1336,7 @@ focus_tree = {
 				allow_branch = {
 					has_completed_focus = TRI_desperate_fight
 					has_country_flag = TRI_investigation_perfect_ending
+					check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_signing_Eden }
 				}
 				cost = 5
 				x = 0
@@ -1826,6 +1832,11 @@ focus_tree = {
 				TRI_submit_the_bill = yes
 				effect_tooltip = {
 					country_event = TRI_events.52
+					custom_effect_tooltip = {
+						localization_key = advisor_available_tt
+						CHAR = TRI_mine_name
+						JOB = political_advisor
+					}
 				}
 			}			
 		}
@@ -1859,9 +1870,9 @@ focus_tree = {
 			x = 0
 			y = 1
 			search_filters = { FOCUS_FILTER_POLITICAL }
-			# allow_branch = {
-			# 	has_global_flag = Eden_treaty_negotiation_TRI_win
-			# }
+			allow_branch = {
+				has_global_flag = Eden_treaty_negotiation_TRI_win
+			}
 			select_effect = {
 				country_event = TRI_events.26
 				hidden_effect = {

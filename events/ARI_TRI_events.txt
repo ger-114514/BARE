@@ -830,6 +830,7 @@ country_event = { #最终时刻·其二
     option = {
         name = TRI_coup.37.a
         hidden_effect = {
+            mark_focus_tree_layout_dirty = yes
             add_to_array = { TRI_hoshubu_focus_line = token:TRI_moon_fall_sun_rise }
             activate_shine_on_focus = TRI_moon_fall_sun_rise
             country_event = {

@@ -29,7 +29,9 @@ TRI_ARI_GEH_JingPiLiJie = { #精疲力竭
 				has_war = no
 			}
 			else = {
-				has_war_with = ARI
+				NOT = {
+					has_war_with = ARI
+				}
 			}
 		}
 	}

@@ -39,10 +39,7 @@ focus_tree = {
         y = 0
         search_filters = { FOCUS_FILTER_POLITICAL }
         available = {
-            custom_override_tooltip = {
-                tooltip = BA_1st_eden_pact_begin_tt
-                has_global_flag = BA_1st_eden_pact_begin
-            }
+            has_global_flag = BA_1st_eden_pact_begin
         }
 
         completion_reward = {
@@ -367,7 +364,7 @@ focus_tree = {
             #触发事件“圣三一与格黑娜宣布第二次《伊甸条约》会谈筹备开始”
             hidden_effect = {
                 set_global_flag = BA_2st_eden_pact_GEH_leader
-                news_event = Eden_pact.1001
+                Eden_treaty_start = yes
             }
             add_ideas = GEH_ideas_prepare_for_conference_1
             add_ideas = GEH_ideas_conference_support_1
