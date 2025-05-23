@@ -671,17 +671,6 @@ country_event = { #一切顺利？
 
     }
 }
-country_event = { #羊入虎口
-    id = ARI_coup.7
-    title = ARI_coup.7.t
-    desc = ARI_coup.7.desc
-    picture = GFX_TRI_event_10
-    is_triggered_only = yes
-    option = {
-        name = ARI_coup.7.a
-    }
-}
-
 country_event = { #空巢行动
     id = TRI_coup.29
     title = TRI_coup.29.t
@@ -709,12 +698,13 @@ country_event = { #羊入虎口
     id = ARI_coup.7
     title = ARI_coup.7.t
     desc = ARI_coup.7.desc
-    #picture =
+    picture = GFX_TRI_event_10
     is_triggered_only = yes
     option = {
         name = ARI_coup.7.a
     }
 }
+
 country_event = { #暗处涌流
     id = TRI_coup.30
     title = TRI_coup.30.t

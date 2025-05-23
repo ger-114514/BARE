@@ -1,0 +1,34 @@
+Great_Game_can_be_overlord = {
+    OR = {
+        Great_Game_can_be_college_overlord = yes
+        Great_Game_can_be_ceaser_overlord = yes
+    }
+}
+Great_Game_can_be_college_overlord = {
+    OR = {
+        has_idea = BARE_Global_College_Autonomous_Region
+        original_tag = ABY
+    }
+    NOT = {
+        original_tag = WLH
+        original_tag = SCH
+        original_tag = KRO
+        original_tag = HIL
+        original_tag = CAE
+    }
+}
+Great_Game_can_be_ceaser_overlord = {
+    OR = {
+        original_tag = CAE
+        original_tag = CAO
+        original_tag = CAP
+        original_tag = CAB
+        original_tag = CAH
+    }
+}
+Great_Game_can_be_trusteeship_area = {
+    OR = {
+        has_idea = BARE_Global_Trusteeship_Area
+        has_idea = BARE_Global_Suburban
+    }
+}

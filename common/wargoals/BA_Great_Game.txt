@@ -1,0 +1,24 @@
+wargoal_types = {
+
+	take_trusteeship = {
+		war_name = TAKE_TRUSTEESHIP_NAME
+		allowed = {
+			always = no
+		}
+
+		available = {
+
+		}
+
+		take_states = {
+
+		}
+
+
+		expire = -1
+
+		threat = 0
+	}
+
+
+}

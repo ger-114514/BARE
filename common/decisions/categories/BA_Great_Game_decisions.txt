@@ -1,0 +1,17 @@
+#学园战术演习
+BA_Great_Game_decisions = {
+	icon = generic_research
+
+	allowed = {
+		OR = {
+			Great_Game_can_be_college_overlord = yes
+			Great_Game_can_be_ceaser_overlord = yes
+		}
+		
+	}
+	visible = {
+		
+	}
+	visible_when_empty = yes
+	priority = 3000
+}

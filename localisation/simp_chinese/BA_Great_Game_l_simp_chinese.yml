@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+ autonomy_bare_trusteeship_area: "托管地区"
+ autonomy_bare_trusteeship_area_1: "初步整合地区"
+ autonomy_bare_trusteeship_area_2: "高度整合地区"
+ autonomy_Ceaser_sub_branch: "凯撒分部"
+ autonomy_Ceaser_trusteeship_area: "凯撒托管地区"
+
+ BA_Great_Game_decisions: "学园战术演习"
+ BA_Great_Game_decisions_desc: "在学生会长失踪后，联邦学生会为了面对陡增的行政压力，不得不将许多原先有联邦学生会控制的地区的行政和治安管理的业务下发给学园自治区，当地的营收和安保部门将会作为回报给予控制学园。\n\n不过，这份权利并不是白送的，学园需要在战术演习中证明自己比原来的主人更适合控制当地。"
+ college_lauch_invade: "夺取§Y[FROM.GetName]§!托管权"
+ college_exercise_ongoing: "对§Y[?Great_Game_invade_target.GetName]§!的战术演习进行中"
+ Great_Game_invade_succeeded_tt: "从§Y[?Great_Game_invade_target.OVERLORD.GetName]§!手中获取对§Y[?Great_Game_invade_target.GetName]§!的托管权"
+ Great_Game_invade_failed_tt: "未能获取对§Y[?Great_Game_invade_target.GetName]§!的托管权"
+ Great_Game_defend_succeeded_tt: "保住对§Y[?Great_Game_defend_target.GetName]§!的托管权"
+ Great_Game_defend_failed_tt: "被§Y[?Great_Game_invader.OVERLORD.GetName]§!夺走§Y[?Great_Game_defend_target.GetName]§!的托管权"
+ take_trusteeship_desc: "夺取托管地区"
+ TAKE_TRUSTEESHIP_NAME: "$FIRST$学园战术演习"

@@ -1,23 +1,25 @@
 on_actions = {
-	on_puppet = {
+	on_capitulation_immediate = {
 		effect = {
-			ROOT = {
-				every_controlled_state = {
-					ROOT = {
-						give_resource_rights = {
-							receiver = overlord
-							state = PREV
+			if = {
+				limit = {
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								if = {
+									limit = {
+										has_war_with = FROM
+										is_major = yes
+									}
+									has_capitulated = yes
+								}
+							}
 						}
 					}
 				}
-			}
-		}
-	}
-	on_subject_free = {
-		effect = {
-			ROOT = {
-				every_controlled_state = {
-					ROOT = { remove_resource_rights = PREV }
+				FROM = {
+					white_peace = ROOT
 				}
 			}
 		}

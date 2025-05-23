@@ -27,7 +27,7 @@
 VAL_Inf_01 = {
 	name = "瓦尔基里快速反应中队"
 
-	for_counVALes = { VAL }
+	for_countries = { VAL }
 
 	can_use = { always = yes }
 
@@ -51,7 +51,7 @@ VAL_Inf_01 = {
 VAL_Inf_02 = {
 	name = "瓦尔基里镇爆大队"
 
-	for_counVALes = { VAL }
+	for_countries = { VAL }
 
 	can_use = { always = yes }
 
@@ -74,7 +74,7 @@ VAL_Inf_02 = {
 VAL_Inf_03 = {
 	name = "警备局快反中队"
 
-	for_counVALes = { VAL }
+	for_countries = { VAL }
 
 	can_use = { always = yes }
 
@@ -97,7 +97,7 @@ VAL_Inf_03 = {
 VAL_Infm_01 = {
 	name = "瓦尔基里巡逻队"
 
-	for_counVALes = { VAL }
+	for_countries = { VAL }
 
 	can_use = { always = yes }
 
@@ -122,7 +122,7 @@ VAL_Infm_01 = {
 VAL_Infs_01 = {
 	name = "瓦尔基里特警队"
 
-	for_counVALes = { VAL }
+	for_countries = { VAL }
 
 	can_use = { always = yes }
 
