@@ -15,6 +15,21 @@ characters = {
 		}
 	}
 
+	ARI_YTY_WHBD = { #无政府状态 
+		name = ARI_NO_GOV_MODE_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ARI_YTY_WHBD
+				small = GFX_portrait_ARI_YTY_WHBD_small
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+
 
 	ARI_beatrice = {
 		name = ARI_beatrice_name
