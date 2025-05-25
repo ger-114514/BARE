@@ -125,6 +125,67 @@ on_actions = {
 					}
 				}
 			}
+			else_if = {
+				limit = { 
+					original_tag = ARI
+					ARI = {
+						ARI_NO_GOV_MODE = {
+							is_country_leader = yes
+						}
+					}
+				}
+				ARI = {
+					puppet = {
+						target = TRI
+						end_wars = yes
+						end_civil_wars = yes
+					}
+					add_dynamic_modifier = {
+						modifier = ARI_NOGOVMODE
+					}
+					country_lock_all_division_template = yes
+					530 = {
+						create_unit = {
+							division = "name = \"伊甸条约组织维和部队\" division_template = \"伊甸条约组织维和部队\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							count = 8
+							allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
+							divisional_commander_xp = 1000 #为战地指挥官分配经验
+						}
+					}
+					remove_ideas = {
+						millaws_beatrice_order
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_armed_students_modifier
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_tax_farming
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_nihilism
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_special_force
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_broken_provisioning_system
+					}
+					remove_dynamic_modifier = {
+						modifier = ARI_forbidden_weapons
+					}
+					country_event = {
+						id = ARI_ZJ.9
+						days = 1
+					}
+				}
+				TRI = {
+					country_event = {
+						id = TRI_ZJ.3
+						days = 1
+					}
+				}
+			}
 		}
 	}
 }
