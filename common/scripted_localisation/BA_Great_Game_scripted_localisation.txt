@@ -1,0 +1,65 @@
+BA_get_Great_Game_faction = {
+	name = BA_get_Great_Game_faction
+	text = {
+		trigger = { 
+			has_country_flag = involved_in_Great_Game_as_attacker
+		}
+		localization_key = BA_Great_Game_faction_attack
+	}
+	text = {
+		trigger = { 
+			has_country_flag = involved_in_Great_Game_as_defender
+		}
+		localization_key = BA_Great_Game_faction_defend
+	}
+}
+BA_get_Great_Game_consecutive_wins = {
+	name = BA_get_Great_Game_consecutive_wins
+	text = {
+		trigger = { 
+			has_variable = Great_Game_consecutive_defeats
+		}
+		localization_key = Great_Game_consecutive_defeats
+	}
+	text = {
+		localization_key = Great_Game_consecutive_wins
+	}
+}
+BA_get_Great_Game_list_container = {
+	name = BA_get_Great_Game_list_container
+	text = {
+		trigger = { 
+			check_variable = {
+				v = 0
+			}
+		}
+		localization_key = empty
+	}
+	text = {
+		localization_key = Great_Game_list_item
+	}
+}
+BA_get_Great_Game_record_container = {
+	name = BA_get_Great_Game_record_container
+	text = {
+		trigger = { 
+			check_variable = { v = 1 }
+		}
+		localization_key = empty
+	}
+	text = {
+		localization_key = Great_Game_record_list_item
+	}
+}
+BA_get_Great_Game_record_faction = {
+	name = BA_get_Great_Game_record_faction
+	text = {
+		trigger = { 
+			check_variable = { Great_Game_record_faction^i = 1 }
+		}
+		localization_key = "Great_Game_faction_attacker"
+	}
+	text = {
+		localization_key = "Great_Game_faction_defender"
+	}
+}

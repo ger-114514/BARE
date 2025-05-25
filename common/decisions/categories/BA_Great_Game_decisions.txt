@@ -5,13 +5,21 @@ BA_Great_Game_decisions = {
 	allowed = {
 		OR = {
 			Great_Game_can_be_college_overlord = yes
+			Great_Game_can_be_CEN_overlord = yes
 			Great_Game_can_be_ceaser_overlord = yes
 		}
 		
 	}
 	visible = {
-		
+		has_global_flag = BA_Great_Game_available
 	}
 	visible_when_empty = yes
+	priority = 3000
+}
+BA_Great_Game_decisions_debug = {
+	icon = generic_research
+	visible = {
+		is_debug = yes
+	}
 	priority = 3000
 }

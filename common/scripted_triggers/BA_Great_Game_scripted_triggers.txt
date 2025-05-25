@@ -1,15 +1,21 @@
 Great_Game_can_be_overlord = {
     OR = {
         Great_Game_can_be_college_overlord = yes
+        Great_Game_can_be_CEN_overlord = yes
         Great_Game_can_be_ceaser_overlord = yes
     }
 }
 Great_Game_can_be_college_overlord = {
-    OR = {
-        has_idea = BARE_Global_College_Autonomous_Region
-        original_tag = ABY
+    has_idea = BARE_Global_College_Autonomous_Region
+    if = {
+        limit = { original_tag = ABY }
+        #TODO:长期无法参加
+        always = no
     }
     NOT = {
+        original_tag = CEN
+        original_tag = VAL
+        original_tag = SRT
         original_tag = WLH
         original_tag = SCH
         original_tag = KRO
@@ -17,14 +23,19 @@ Great_Game_can_be_college_overlord = {
         original_tag = CAE
     }
 }
-Great_Game_can_be_ceaser_overlord = {
+Great_Game_can_be_CEN_overlord = {
     OR = {
-        original_tag = CAE
-        original_tag = CAO
-        original_tag = CAP
-        original_tag = CAB
-        original_tag = CAH
+        original_tag = CEN
+        original_tag = VAL
+        original_tag = SRT
     }
+    if = {
+        limit = { original_tag = SRT }
+        #TODO:未脱队
+    }
+}
+Great_Game_can_be_ceaser_overlord = {
+    original_tag = CAE
 }
 Great_Game_can_be_trusteeship_area = {
     OR = {
@@ -32,3 +43,14 @@ Great_Game_can_be_trusteeship_area = {
         has_idea = BARE_Global_Suburban
     }
 }
+Great_Game_is_involved = {
+    custom_override_tooltip = {
+        tooltip = Great_Game_is_involved_tt
+        OR = {
+            has_country_flag = involved_in_Great_Game_as_attacker
+            has_country_flag = involved_in_Great_Game_as_defender
+        }
+    }
+    
+}
+

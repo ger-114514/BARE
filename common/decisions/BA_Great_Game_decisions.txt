@@ -1,260 +1,483 @@
-# BA_Great_Game_decisions = {
-# 	college_lauch_invade = {
-# 		visible = {
-# 			NOT = {
-# 				has_country_flag = involved_in_Great_Game
-# 			}
-# 			Great_Game_can_be_college_overlord = yes
-# 		}
-# 		target_trigger = {
-# 			FROM = {
-# 				NOT = {
-# 					is_subject_of = ROOT
-# 				}
-# 				any_neighbor_country = {
-# 					OR = {
-# 						original_tag = ROOT
-# 						AND = {
-# 							is_subject_of = ROOT
-# 							has_autonomy_state = autonomy_bare_trusteeship_area_2
-# 						}
-# 					}
-# 				}
-# 				OVERLORD = {
-# 					NOT = {
-# 						has_country_flag = involved_in_Great_Game
-# 					}
-# 				}
-# 				Great_Game_can_be_trusteeship_area = yes
-# 			}
-# 		}
-# 		days_remove = 3
-# 		complete_effect = {
-# 			set_variable = { Great_Game_invade_target = FROM }
-# 			FROM.OVERLORD = {
-# 				set_country_flag = involved_in_Great_Game
-# 				set_variable = { Great_Game_invader = ROOT }
-# 				set_variable = { Great_Game_defend_target = FROM }
-# 			}
-# 			set_country_flag = involved_in_Great_Game
-# 		}
-# 		remove_effect = {
-# 			hidden_effect = {
-# 				declare_war_on = {
-# 					target = FROM
-# 					type = take_trusteeship
-# 				}
-# 				# FROM.OVERLORD = {
-# 				# 	for_each_scope_loop = {
-# 				# 		array = Great_Game_defence_allies
-# 				# 		add_to_war = {
-# 				# 			targeted_alliance = PREV
-# 				# 			enemy = ROOT
-# 				# 		}
-# 				# 		set_variable = { Great_Game_invader = ROOT }
-# 				# 		set_variable = { Great_Game_defend_target = FROM }
-# 				# 		activate_mission = college_exercise_ongoing_defender_ally
-# 				# 	}
-# 				# 	activate_mission = college_exercise_ongoing_defender
-# 				# }
-# 				# for_each_scope_loop = {
-# 				# 	array = Great_Game_attack_allies
-# 				# 	add_to_war = {
-# 				# 		targeted_alliance = ROOT
-# 				# 		enemy = FROM.OVERLORD
-# 				# 	}
-# 				# 	set_variable = { Great_Game_invader = ROOT }
-# 				# 	set_variable = { Great_Game_invade_target = FROM }
-# 				# 	activate_mission = college_exercise_ongoing_attacker_ally
-# 				# }
-# 				activate_targeted_decision = {
-# 					target = FROM
-# 					decision = college_exercise_ongoing_attacker
-# 				}
-# 				# activate_mission = college_exercise_ongoing_attacker
-# 			}
-# 		}
-# 	}
-# 	Great_Game_ask_for_support = {
-# 		visible = {
-# 			has_war = no
-# 			Great_Game_can_be_overlord = yes
-# 			has_country_flag = involved_in_Great_Game
-# 		}
-# 		target_trigger = {
-# 			FROM = {
-# 				NOT = {
-# 					original_tag = OVERLORD
-# 					original_tag = var:Great_Game_invader
-# 				}
-# 				any_neighbor_country = {
-# 					OR = {
-# 						original_tag = ROOT
-# 						AND = {
-# 							is_subject_of = ROOT
-# 							has_autonomy_state = autonomy_bare_trusteeship_area_2
-# 						}
-# 					}
-# 				}
-# 				Great_Game_can_be_overlord = yes
-# 			}
-# 		}
-# 		available = {
-# 			set_temp_variable = { max_power_score = var:Great_Game_invader:Great_Game_power_score }
-# 			multiply_temp_variable = { max_power_score = 1.2 }
+BA_Great_Game_decisions = {
+	Great_Game_college_lauch_invade = {
+		visible = {
+			has_war = no
+			Great_Game_is_involved = no
+			Great_Game_can_be_college_overlord = yes
+			NOT = { has_country_flag = Great_Game_invade_cd }
+		}
+		available = {
+			FROM.OVERLORD = {
+				has_war = no
+				Great_Game_is_involved = no
+			}
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_subject_of = ROOT
+				}
+				any_neighbor_country = {
+					OR = {
+						original_tag = ROOT
+						AND = {
+							is_subject_of = ROOT
+							has_autonomy_state = autonomy_bare_trusteeship_area_2
+						}
+					}
+				}
+				Great_Game_can_be_trusteeship_area = yes
+			}
+		}
+		cancel_if_not_visible = no
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { Great_Game_invader = ROOT }
+				set_variable = { Great_Game_enemy = FROM.OVERLORD }
+				set_variable = { Great_Game_invade_target = FROM }
+				set_variable = { Great_Game_invade_target_overlord = FROM.OVERLORD }
+				set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+				set_country_flag = involved_in_Great_Game_as_attacker
+				set_country_flag = involved_in_Great_Game_as_ally_leader
+				FROM.OVERLORD = {
+					set_variable = { Great_Game_invader = ROOT }
+					set_variable = { Great_Game_enemy = ROOT }
+					set_variable = { Great_Game_invade_target = FROM }
+					set_variable = { Great_Game_invade_target_overlord = THIS }
+					set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+					set_country_flag = involved_in_Great_Game_as_defender
+					set_country_flag = involved_in_Great_Game_as_ally_leader
+					activate_targeted_decision = {
+						target = ROOT
+						decision = Great_Game_defender_timer
+					}
+					if = {
+						limit = {
+							Great_Game_can_be_CEN_overlord = yes
+						}
+						for_each_loop = {
+							array = historical_friend
+							value = ally
+							if = {
+								limit = {
+									var:ally = {
+										has_war = no
+										Great_Game_is_involved = no
+										Great_Game_can_be_CEN_overlord = yes
+									}
+								}
+								set_temp_variable = { leader = THIS }
+								set_temp_variable = { enemy = ROOT }
+								Great_Game_invite_to_ally = yes
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = Great_Game_start_invasion_tt
+				ATTACKER = "[?ROOT.GetNameWithFlag]"
+				DEFENDER = "[?FROM.OVERLORD.GetNameWithFlag]"
+				GOAL = "[?FROM.GetNameWithFlag]"
+			}
+			Great_Game_start_invasion = yes
+		}
+	}
+	Great_Game_CEN_college_lauch_invade = {
+		visible = {
+			has_war = no
+			Great_Game_is_involved = no
+			Great_Game_can_be_CEN_overlord = yes
+			NOT = { has_country_flag = Great_Game_invade_cd }
+		}
+		available = {
+			FROM.OVERLORD = {
+				has_war = no
+				Great_Game_is_involved = no
+			}
+		}
+		target_trigger = {
+			FROM = {
+				Great_Game_can_be_CEN_overlord = no
+				NOT = {
+					is_subject_of = ROOT
+				}
+				any_neighbor_country = {
+					OR = {
+						original_tag = ROOT
+						AND = {
+							is_subject_of = CEN
+							has_autonomy_state = autonomy_CEN_trusteeship_area
+						}
+					}
+				}
+				Great_Game_can_be_trusteeship_area = yes
+			}
+		}
+		cancel_if_not_visible = no
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { Great_Game_invader = ROOT }
+				set_variable = { Great_Game_invade_target = FROM }
+				set_variable = { Great_Game_invade_target_overlord = FROM.OVERLORD }
+				set_variable = { Great_Game_enemy = FROM.OVERLORD }
+				set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+				set_country_flag = involved_in_Great_Game_as_attacker
+				set_country_flag = involved_in_Great_Game_as_ally_leader
+				for_each_loop = {
+					array = historical_friend
+					value = ally
+					if = {
+						limit = {
+							var:ally = {
+								has_war = no
+								Great_Game_is_involved = no
+								Great_Game_can_be_CEN_overlord = yes
+							}
+						}
+						set_temp_variable = { leader = THIS }
+						set_temp_variable = { enemy = FROM.OVERLORD }
+						Great_Game_invite_to_ally = yes
+					}
+				}
+				FROM.OVERLORD = {
+					set_variable = { Great_Game_invader = ROOT }
+					set_variable = { Great_Game_enemy = ROOT }
+					set_variable = { Great_Game_invade_target = FROM }
+					set_variable = { Great_Game_invade_target_overlord = THIS }
+					set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+					set_country_flag = involved_in_Great_Game_as_defender
+					set_country_flag = involved_in_Great_Game_as_ally_leader
+					activate_targeted_decision = {
+						target = ROOT
+						decision = Great_Game_defender_timer
+					}
+				}
+			}
+			
+		}
+		remove_effect = {
+			Great_Game_start_invasion = yes
+		}
+	}
+	Great_Game_ceaser_lauch_invade = {
+		visible = {
+			has_war = no
+			Great_Game_is_involved = no
+			Great_Game_can_be_ceaser_overlord = yes
+			NOT = { has_country_flag = Great_Game_invade_cd }
+		}
+		available = {
+			FROM.OVERLORD = {
+				has_war = no
+				Great_Game_is_involved = no
+			}
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_subject_of = ROOT
+				}
+				any_neighbor_country = {
+					OR = {
+						original_tag = ROOT
+						AND = {
+							is_subject_of = ROOT
+							has_autonomy_state = autonomy_bare_trusteeship_area_2
+						}
+					}
+				}
+				Great_Game_can_be_trusteeship_area = yes
+			}
+		}
+		cancel_if_not_visible = no
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { Great_Game_invader = ROOT }
+				set_variable = { Great_Game_enemy = FROM.OVERLORD }
+				set_variable = { Great_Game_invade_target = FROM }
+				set_variable = { Great_Game_invade_target_overlord = FROM.OVERLORD }
+				set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+				set_country_flag = involved_in_Great_Game_as_attacker
+				set_country_flag = involved_in_Great_Game_as_ally_leader
+				FROM.OVERLORD = {
+					set_variable = { Great_Game_invader = ROOT }
+					set_variable = { Great_Game_enemy = ROOT }
+					set_variable = { Great_Game_invade_target = FROM }
+					set_variable = { Great_Game_invade_target_overlord = THIS }
+					set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+					set_country_flag = involved_in_Great_Game_as_defender
+					set_country_flag = involved_in_Great_Game_as_ally_leader
+					activate_targeted_decision = {
+						target = ROOT
+						decision = Great_Game_defender_timer
+					}
+					if = {
+						limit = {
+							Great_Game_can_be_CEN_overlord = yes
+						}
+						for_each_loop = {
+							array = historical_friend
+							value = ally
+							if = {
+								limit = {
+									var:ally = {
+										has_war = no
+										Great_Game_is_involved = no
+										Great_Game_can_be_CEN_overlord = yes
+									}
+								}
+								set_temp_variable = { leader = THIS }
+								set_temp_variable = { enemy = ROOT }
+								Great_Game_invite_to_ally = yes
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		remove_effect = {
+			Great_Game_start_invasion = yes
+		}
+	}
+	Great_Game_defender_timer = {
+		target_trigger = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 30
+		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = Great_Game_start_invasion_tt
+				ATTACKER = "[?FROM.GetNameWithFlag]"
+				DEFENDER = "[?ROOT.GetNameWithFlag]"
+				GOAL = "[?Great_Game_invade_target.GetNameWithFlag]"
+			}
+		}
+	}
+	Great_Game_ask_for_support = {
+		target_trigger = {
+			FROM = {
+				Great_Game_can_be_overlord = yes
+				Great_Game_is_involved = no
+				has_war = no
+			}
+		}
+		target_root_trigger = {
+			
+		}
+		visible = {
+			has_country_flag = involved_in_Great_Game_as_ally_leader
+			Great_Game_is_involved = yes
+		}
 
-# 		}
-# 	}
-# 	college_exercise_ongoing_attacker = {
-# 		activation = {
-# 			always = no
-# 		}
-# 		is_good = no
-# 		days_mission_timeout = 120
-# 		target_trigger = {
-# 			always = no
-# 		}
-# 		available = {
-# 			var:Great_Game_invade_target = {
-# 				OR = {
-# 					OVERLORD = {
-# 						surrender_progress > 0.3
-# 					}
-# 					AND = {
-# 						has_capitulated = yes
-# 						days_since_capitulated > 29
-# 					}
-# 				}
-# 			}
-# 		}
-# 		complete_effect = {
-# 			Great_Game_invade_succeeded = yes
-# 		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = Great_Game_ask_for_support_trigger_tt
+				check_variable = { Great_Game_power_score_faction < var:Great_Game_enemy:Great_Game_power_score_faction }
 
-# 		remove_effect = {
-# 			if = { #攻方胜利
-# 				limit = {
-# 					var:Great_Game_invade_target ={ has_capitulated = yes }
-# 				}
-# 				Great_Game_invade_succeeded = yes
-# 			}
-# 			else = { #守方胜利
-# 				Great_Game_invade_failed = yes
-# 			}
-# 		}
-# 		cancel_trigger = {
-# 			surrender_progress > 0.3
-# 		}
-# 		cancel_effect = {
-# 			Great_Game_invade_failed = yes
-# 		}
-# 	}
-# 	college_exercise_ongoing_attacker_ally = {
-# 		activation = {
-# 			always = no
-# 		}
-# 		is_good = no
-# 		days_mission_timeout = 120
-		
-# 		available = {
-# 			surrender_progress > 0.3
-# 		}
-# 		complete_effect = {
-# 			var:Great_Game_invader = {
-# 				remove_from_array = {
-# 					array = Great_Game_attack_allies
-# 					value = ROOT
-# 				}
-# 			}
-# 			var:Great_Game_invade_target = {
-# 				OVERLORD = {
-# 					white_peace = ROOT
-# 				}
-# 			}
-# 			clr_country_flag = involved_in_Great_Game
-# 			clear_variable = Great_Game_invader
-# 			clear_variable = Great_Game_invade_target
-# 		}
-# 		cancel_trigger = {
-# 			NOT = {
-# 				has_war_with = var:Great_Game_invade_target
-# 			}
-# 		}
-# 	}
-# 	college_exercise_ongoing_defender = {
-# 		activation = {
-# 			always = no
-# 		}
-# 		is_good = no
-# 		days_mission_timeout = 120
-		
-# 		available = {
-# 			var:Great_Game_invader = {
-# 				surrender_progress > 0.3
-# 			}
-# 		}
-# 		complete_effect = {
-# 			custom_effect_tooltip = Great_Game_defend_succeeded_tt
-# 		}
+				set_temp_variable = { max_power_score = var:Great_Game_enemy:Great_Game_power_score_faction }
+				multiply_temp_variable = { max_power_score = 1.2 }
+				set_temp_variable = { expected_power_score = Great_Game_power_score_faction }
+				add_to_temp_variable = { expected_power_score = FROM.Great_Game_power_score }
+				check_variable = { expected_power_score < max_power_score }
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { leader = ROOT }
+				set_temp_variable = { ally = FROM }
+				set_temp_variable = { enemy = var:Great_Game_enemy }
+				Great_Game_invite_to_ally = yes
+			}
+			
+		}
+	}
+	college_exercise_ongoing_attacker = {
+		target_trigger = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 120
+		available = {
+			var:Great_Game_invade_target = {
+				OR = {
+					OVERLORD = {
+						surrender_progress > 0.3
+					}
+					AND = {
+						has_capitulated = yes
+						days_since_capitulated > 1
+					}
+				}
+			}
+		}
+		complete_effect = {
+			Great_Game_invade_succeeded = yes
+			remove_mission = college_exercise_ongoing_attacker
+		}
 
-# 		remove_effect = {
-# 			if = { #攻方胜利
-# 				limit = {
-# 					var:Great_Game_defend_target = { has_capitulated = yes }
-# 				}
-# 				custom_effect_tooltip = Great_Game_defend_failed_tt
-# 			}
-# 			else = { #守方胜利
-# 				custom_effect_tooltip = Great_Game_defend_succeeded_tt
-# 			}
-# 		}
-# 		cancel_trigger = {
-# 			surrender_progress > 0.3
-# 		}
-# 		cancel_effect = {
-# 			custom_effect_tooltip = Great_Game_defend_failed_tt
-# 		}
-# 	}
-# 	college_exercise_ongoing_defender_ally = {
-# 		activation = {
-# 			always = no
-# 		}
-# 		target_trigger = {
-# 			FROM = {
-# 				original_tag = var:Great_Game_invader
-# 			}
-# 		}
-# 		is_good = no
-# 		days_mission_timeout = 120
+		remove_effect = {
+			if = { #攻方胜利
+				limit = {
+					var:Great_Game_invade_target = { has_capitulated = yes }
+				}
+				Great_Game_invade_succeeded = yes
+			}
+			else = { #守方胜利
+				Great_Game_invade_failed = yes
+			}
+			remove_mission = college_exercise_ongoing_attacker
+		}
+		cancel_trigger = {
+			surrender_progress > 0.3
+		}
+		cancel_effect = {
+			Great_Game_invade_failed = yes
+		}
+	}
+	college_exercise_ongoing_defender = {
+		target_trigger = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 120
 		
-# 		available = {
-# 			surrender_progress > 0.3
-# 		}
-# 		complete_effect = {
-# 			white_peace = var:Great_Game_invader
-# 			hidden_effect = {
-# 				var:Great_Game_defend_target = {
-# 					OVERLORD = {
-# 						remove_from_array = {
-# 							array = Great_Game_attack_allies
-# 							value = ROOT
-# 						}
-# 					}
-# 				}
-# 				clr_country_flag = involved_in_Great_Game
-# 				clear_variable = Great_Game_invader
-# 				clear_variable = Great_Game_defend_target
-# 			}
-# 		}
-# 		cancel_trigger = {
-# 			NOT = {
-# 				has_war_with = var:Great_Game_invade_target
-# 			}
-# 		}
-# 		cancel_effect = {
-# 			clr_country_flag = involved_in_Great_Game
-# 			clear_variable = Great_Game_invader
-# 			clear_variable = Great_Game_defend_target
-# 		}
-# 	}
-# }
+		available = {
+			FROM = {
+				surrender_progress > 0.3
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = Great_Game_defend_succeeded_tt
+		}
+
+		remove_effect = {
+			if = { #攻方胜利
+				limit = {
+					var:Great_Game_invade_target = { has_capitulated = yes }
+				}
+				custom_effect_tooltip = Great_Game_defend_failed_tt
+			}
+			else = { #守方胜利
+				custom_effect_tooltip = Great_Game_defend_succeeded_tt
+			}
+		}
+		cancel_trigger = {
+			surrender_progress > 0.3
+		}
+		cancel_effect = {
+			custom_effect_tooltip = Great_Game_defend_failed_tt
+		}
+	}
+	college_exercise_ongoing_ally = {
+		target_trigger = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 120
+		
+		available = {
+			surrender_progress > 0.3
+		}
+		complete_effect = {
+			white_peace = FROM
+			clr_country_flag = involved_in_Great_Game_as_attacker
+			clr_country_flag = involved_in_Great_Game_as_defender
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+		}
+		cancel_trigger = {
+			NOT = {
+				has_war_with = FROM
+			}
+		}
+	}
+	Great_Game_invade_cd = {
+		activation = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 180
+		
+		available = {
+			always = no
+		}
+		remove_effect = {
+			clr_country_flag = Great_Game_invade_cd
+		}
+	}
+}
+BA_Great_Game_decisions_debug = {
+	lauch_event = {
+		complete_effect = {
+			remove_from_array = {
+				array = global.Great_Game_overlords_chart
+				value = SRT
+			}
+		}
+	}
+	record_1 = {
+		complete_effect = {
+			set_variable = { Great_Game_record_target^Great_Game_record_count = GEH }
+			set_variable = { Great_Game_record_enemy^Great_Game_record_count = MIL }
+			set_variable = { Great_Game_record_result^Great_Game_record_count = 1 }
+			set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
+			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+			Great_Game_add_record = yes
+		}
+	}
+	record_2 = {
+		complete_effect = {
+			set_variable = { Great_Game_record_target^Great_Game_record_count = GEH }
+			set_variable = { Great_Game_record_enemy^Great_Game_record_count = MIL }
+			set_variable = { Great_Game_record_result^Great_Game_record_count = 1 }
+			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+			Great_Game_add_record = yes
+		}
+	}
+	record_3 = {
+		complete_effect = {
+			set_variable = { Great_Game_record_target^Great_Game_record_count = VAL }
+			set_variable = { Great_Game_record_enemy^Great_Game_record_count = CEN }
+			set_variable = { Great_Game_record_result^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
+			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+			Great_Game_add_record = yes
+		}
+	}
+	record_4 = {
+		complete_effect = {
+			set_variable = { Great_Game_record_target^Great_Game_record_count = SRT }
+			set_variable = { Great_Game_record_enemy^Great_Game_record_count = CEN }
+			set_variable = { Great_Game_record_result^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+			Great_Game_add_record = yes
+		}
+	}
+}

@@ -1,4 +1,23 @@
 on_actions = {
+	on_startup = {
+		effect = {
+			CEN = {
+				news_event = {
+					id = Great_Game.1000
+					days = 1
+					#months = 18
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { has_global_flag = BA_Great_Game_available }
+				Great_Game_generate_global_chart = yes
+			}
+		}
+	}	
 	on_capitulation_immediate = {
 		effect = {
 			if = {

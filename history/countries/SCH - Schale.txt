@@ -190,41 +190,39 @@ SHA = {
 }
 for_each_scope_loop = {
 	array = global.BA_main_college_region
-	for_each_loop = {
-		array = BA_trusteeship_areas
-		value = v
-		set_autonomy = {
-			target = v
-			autonomy_state = autonomy_bare_trusteeship_area
+	add_to_array = { global.BA_college_and_trusteeship_region = THIS }
+	add_to_array = { global.Great_Game_overlords = THIS }
+	if = {
+		limit = { original_tag = CEN }
+		for_each_loop = {
+			array = BA_trusteeship_areas
+			value = v
+			set_autonomy = {
+				target = v
+				autonomy_state = autonomy_CEN_trusteeship_area
+			}
+			var:v = {
+				add_ideas = trusteeship_of_CEN_SRT_yes
+			}
+			add_to_array = { global.BA_college_and_trusteeship_region = var:v }
 		}
 	}
-	Great_Game_calculate_power_score = yes
+	else = {
+		for_each_loop = {
+			array = BA_trusteeship_areas
+			value = v
+			set_autonomy = {
+				target = v
+				autonomy_state = autonomy_bare_trusteeship_area
+			}
+			add_to_array = { global.BA_college_and_trusteeship_region = var:v }
+		}
+	}
+	
 }
-add_to_array = { global.BA_college_and_trusteeship_region = GEH }
-add_to_array = { global.BA_college_and_trusteeship_region = ABY }
-add_to_array = { global.BA_college_and_trusteeship_region = VAL }
-add_to_array = { global.BA_college_and_trusteeship_region = ODY }
-add_to_array = { global.BA_college_and_trusteeship_region = KRO }
-add_to_array = { global.BA_college_and_trusteeship_region = SHA }
-add_to_array = { global.BA_college_and_trusteeship_region = TRI }
-add_to_array = { global.BA_college_and_trusteeship_region = HYA }
-add_to_array = { global.BA_college_and_trusteeship_region = MIL }
-add_to_array = { global.BA_college_and_trusteeship_region = RWT }
-add_to_array = { global.BA_college_and_trusteeship_region = SRT }
-add_to_array = { global.BA_college_and_trusteeship_region = CEN }
-add_to_array = { global.BA_college_and_trusteeship_region = SCH }
-add_to_array = { global.BA_college_and_trusteeship_region = WLH }
-add_to_array = { global.BA_college_and_trusteeship_region = HIL }
-add_to_array = { global.BA_college_and_trusteeship_region = AUR }
-add_to_array = { global.BA_college_and_trusteeship_region = A04 }
-add_to_array = { global.BA_college_and_trusteeship_region = A36 }
-add_to_array = { global.BA_college_and_trusteeship_region = A37 }
-add_to_array = { global.BA_college_and_trusteeship_region = A38 }
-add_to_array = { global.BA_college_and_trusteeship_region = A39 }
-add_to_array = { global.BA_college_and_trusteeship_region = A40 }
-add_to_array = { global.BA_college_and_trusteeship_region = A41 }
-add_to_array = { global.BA_college_and_trusteeship_region = A42 }
-add_to_array = { global.BA_college_and_trusteeship_region = A43 }
+add_to_array = { global.Great_Game_overlords = VAL }
+add_to_array = { global.Great_Game_overlords = SRT }
+add_to_array = { global.Great_Game_overlords = CAE }
 for_each_scope_loop = {
 	array = global.BA_college_and_trusteeship_region
 	#学园地区互给军通

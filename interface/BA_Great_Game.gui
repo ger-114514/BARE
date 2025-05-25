@@ -1,0 +1,304 @@
+guiTypes = {
+	containerWindowType = {
+		name = "Great_Game_enter"
+		position = { x = -430 y = 4 }
+		size = { width = 40 height = 30 }
+		orientation = UPPER_RIGHT
+
+		background = {
+			name = "Great_Game_enter_bg"
+			spriteType ="GFX_mini_tooltip"
+		}
+		buttonType = {
+			name = "Great_Game_enter_button"
+			spriteType ="Great_Game_enter_button"
+			position = { x = 4 y = 3 }
+			pdx_tooltip = "Great_Game_enter_button_tt"
+		}
+	}
+	containerWindowType = {
+		name = "Great_Game_gui_window"
+		size = { width = 1033 height = 521 }
+		position = { x = 400 y = -600 }
+		show_position = { x = 400 y = 200 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 500
+		moveable = yes
+
+		background = {
+			name = "Great_Game_chart_bg"
+			spriteType ="Great_Game_chart_bg"
+		}
+		buttonType = {
+			name = "close_button"
+			position = { x = 10 y = 15 }
+			spriteType = "BA_exit_button_1"
+			shortcut = "ESCAPE"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_title"
+			position = { x = 70 y = 4 }
+			format = left
+			font = "LXGW_975_24b"
+			text = "Great_Game_title"
+		}
+		containerWindowType = {
+			name = "Great_Game_global_chart"
+			position = { x = 405 y = 76 }
+			size = { width = 570 height = 394 }
+			clipping = yes
+			margin = {
+				top = 40 bottom = 12
+			}
+			verticalScrollbar = "BA_welcome_ipad_scroll_RIGHT"
+			smooth_scrolling = yes
+			background = {
+				name = "Great_Game_list_bg"
+				spriteType ="Great_Game_list_bg"
+			}
+			gridBoxType = {
+				name = "Great_Game_global_list"
+				position = { x = 150 y = 0 }
+				slotsize = { width = 270 height = 116 }
+				add_horizontal = yes
+				max_slots_horizontal = 2
+			}
+		}
+		iconType = {
+			name = "Great_Game_player_flag"
+			position = { x = 98 y = 161 }
+			spriteType = "GFX_shield_medium"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_player_name"
+			position = { x = 191 y = 161 }
+			format = left
+			font = "LXGW_975_24b"
+			text = "[ROOT.GetName]"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_player_leader"
+			position = { x = 191 y = 193 }
+			format = left
+			font = "FZLanTYJW_M_18"
+			text = "[ROOT.GetLeader]"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_chart_refresh_auto"
+			position = { x = 590 y = 89 }
+			format = left
+			maxWidth = 300
+			font = "LXGW_975_18b"
+			text = "Great_Game_chart_refresh_auto"
+		}
+		buttonType = {
+			name = "Great_Game_chart_refresh_active"
+			position = { x = 828 y = 82 }
+			spriteType = "BA_silver_button_1"
+			buttonText = "Great_Game_chart_refresh_active"
+			buttonFont = "LXGW_975_18b" 
+		}
+
+		iconType = {
+			name = "Great_Game_player_rank_icon"
+			position = { x = 125 y = 253 }
+			quadTextureSprite = "Great_Game_rank_icon"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_player_rank"
+			position = { x = 180 y = 258 }
+			format = left
+			font = "LXGW_975_24b"
+			text = "Great_Game_rank"
+		}
+		iconType = {
+			name = "Great_Game_detail"
+			position = { x = 311 y = 257 }
+			spriteType = "BA_detail_icon_1"
+			pdx_tooltip = "Great_Game_detail"
+			pdx_tooltip_delayed = "Great_Game_detail_delayed"
+		}
+		buttonType = {
+			name = "Great_Game_exercise_record"
+			position = { x = 220 y = 318 }
+			spriteType = "BA_blue_button_1"
+			buttonText = "Great_Game_exercise_record"
+			buttonFont = "LXGW_975_24b"
+		}
+
+		instantTextBoxType = {
+			name = "Great_Game_player_power_score"
+			position = { x = 118 y = 323 }
+			format = left
+			font = "LXGW_975_18b"
+			text = "Great_Game_power_score"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_player_consecutive_wins"
+			position = { x = 118 y = 350 }
+			format = left
+			font = "LXGW_975_18b"
+			text = "[BA_get_Great_Game_consecutive_wins]"
+		}
+	}
+
+	containerWindowType = {
+		name = "Great_Game_list_item"
+		iconType = {
+			name = "Great_Game_list_item_bg"
+			spriteType ="Great_Game_list_item_bg"
+		}
+		iconType = {
+			name = "Great_Game_list_flag"
+			position = { x = 29 y = 19 }
+			spriteType = "GFX_shield_medium"
+		}
+		iconType = {
+			name = "Great_Game_list_rank_icon"
+			position = { x = 88 y = 50 }
+			quadTextureSprite = "Great_Game_rank_icon_small"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_list_rank"
+			position = { x = 133 y = 14 }
+			format = left
+			font = "LXGW_975_24b"
+			text = "Great_Game_rank"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_list_name"
+			position = { x = 133 y = 50 }
+			maxWidth = 112
+			format = left
+			font = "LXGW_975_20b"
+			text = "country_name_black"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_list_power_score"
+			position = { x = 25 y = 86 }
+			maxWidth = 90
+			format = left
+			font = "LXGW_975_18b"
+			text = "Great_Game_power_score"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_player_consecutive_wins"
+			position = { x = 165 y = 86 }
+			maxWidth = 90
+			format = right
+			font = "LXGW_975_18b"
+			text = "[BA_get_Great_Game_consecutive_wins]"
+		}
+	}
+	containerWindowType = {
+		name = "empty"
+	}
+	containerWindowType = {
+		name = "Great_Game_record_window"
+		show_position = { x = 500 y = 200 }
+		show_animation_type = linear
+		moveable = yes
+		iconType = {
+			name = "Great_Game_record_bg"
+			spriteType ="Great_Game_record_bg"
+		}
+		buttonType = {
+			name = "close_button"
+			position = { x = 650 y = 123 }
+			spriteType = "BA_exit_button_2"
+			shortcut = "ESCAPE"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_record_title"
+			position = { x = 305 y = 125 }
+			orientation = CENTER_UP
+			format = center
+			font = "LXGW_975_24b"
+			text = "Great_Game_record_title"
+		}
+		containerWindowType = {
+			name = "Great_Game_record_list"
+			position = { x = 130 y = 166 }
+			size = { width = 560 height = 250 }
+			clipping = yes
+			margin = {
+				top = 3 bottom = 3 right = 5
+			}
+			verticalScrollbar = "BA_welcome_ipad_scroll_RIGHT"
+			smooth_scrolling = yes
+			background = {
+				name = "Great_Game_record_list_bg"
+				spriteType ="GFX_generic_bg_grey"
+			}
+			gridBoxType = {
+				name = "Great_Game_record_list"
+				position = { x = 280 y = 0 }
+				slotsize = { width = 550 height = 105 }
+				add_horizontal = no
+			}
+		}
+	}
+	containerWindowType = {
+		name = "Great_Game_record_list_item"
+		iconType = {
+			name = "Great_Game_record_list_item_bg"
+			spriteType ="Great_Game_record_list_item_bg"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_record_enemy_name"
+			position = { x = 342 y = 17 }
+			format = left
+			font = "LXGW_975_20b"
+			text = "Great_Game_record_enemy_name"
+		}
+		iconType = {
+			name = "Great_Game_record_enemy_flag"
+			position = { x = 252 y = 20 }
+			spriteType = "GFX_shield_medium"
+			pdx_tooltip = "Great_Game_record_enemy_tt"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_record_target_name"
+			position = { x = 398 y = 60 }
+			format = left
+			font = "LXGW_975_18b"
+			text = "Great_Game_record_target_name"
+		}
+		iconType = {
+			name = "Great_Game_record_target_flag"
+			position = { x = 347 y = 58 }
+			spriteType = "GFX_flag_small2"
+			pdx_tooltip = "Great_Game_record_target_tt"
+		}
+		iconType = {
+			name = "Great_Game_record_result_icon"
+			position = { x = 24 y = 15 }
+			quadTextureSprite = "Great_Game_result"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_record_date"
+			position = { x = -30 y = 63 }
+			format = center
+			font = "LXGW_975_16b"
+			text = "Great_Game_record_date"
+		}
+		iconType = {
+			name = "Great_Game_record_faction_icon"
+			position = { x = 120 y = 21 }
+			quadTextureSprite = "Great_Game_faction"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_record_faction_text"
+			position = { x = 185 y = 35 }
+			maxWidth = 50
+			format = left
+			font = "LXGW_975_24b"
+			text = "[BA_get_Great_Game_record_faction]"
+		}
+	}
+}

@@ -342,31 +342,13 @@ game_weight_can_add_communist = {
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	FROM = {
-		all_enemy_country = {
-			NOT = {
-				has_war_with_wargoal_against = {
-					target = FROM
-					type = take_trusteeship
-				}
-			}
-		}
-	}
-	NOT = {
-		has_decision = college_exercise_ongoing
+		#演习
+		Great_Game_is_involved = no
 	}
 }
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
-	all_enemy_country = {
-		NOT = {
-			has_war_with_wargoal_against = {
-				target = ROOT
-				type = take_trusteeship
-			}
-		}
-	}
-	NOT = {
-		has_decision = college_exercise_ongoing
-	}
+	#演习
+	Great_Game_is_involved = no
 }
 DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = {
 	custom_override_tooltip = {

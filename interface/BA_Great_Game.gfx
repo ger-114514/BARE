@@ -1,0 +1,46 @@
+spriteTypes = {
+	SpriteType = {
+		name = "Great_Game_enter_button"
+		texturefile = "gfx/interface/Great_Game/Great_Game_enter_button.dds"			
+	}
+	SpriteType = {
+		name = "Great_Game_chart_bg"
+		texturefile = "gfx/interface/Great_Game/Great_Game_chart_bg.dds"			
+	}
+	SpriteType = {
+		name = "Great_Game_rank_icon"
+		texturefile = "gfx/interface/Great_Game/Great_Game_rank_icon.dds"
+		noOfFrames = 4
+	}
+	SpriteType = {
+		name = "Great_Game_rank_icon_small"
+		texturefile = "gfx/interface/Great_Game/Great_Game_rank_icon_small.dds"
+		noOfFrames = 4
+	}
+	SpriteType = {
+		name = "Great_Game_list_bg"
+		texturefile = "gfx/interface/Great_Game/Great_Game_list_bg.dds"			
+	}
+	SpriteType = {
+		name = "Great_Game_list_item_bg"
+		texturefile = "gfx/interface/Great_Game/Great_Game_list_item_bg.dds"			
+	}
+	SpriteType = {
+		name = "Great_Game_record_bg"
+		texturefile = "gfx/interface/Great_Game/Great_Game_record_bg.dds"			
+	}
+	SpriteType = {
+		name = "Great_Game_record_list_item_bg"
+		texturefile = "gfx/interface/Great_Game/Great_Game_record_list_item_bg.dds"			
+	}
+	SpriteType = {
+		name = "Great_Game_result"
+		texturefile = "gfx/interface/Great_Game/Great_Game_result.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "Great_Game_faction"
+		texturefile = "gfx/interface/Great_Game/Great_Game_faction.dds"
+		noOfFrames = 2
+	}
+}

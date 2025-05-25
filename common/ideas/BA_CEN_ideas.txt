@@ -1,5 +1,65 @@
 ideas = {
 	country = {
+		trusteeship_of_CEN_SRT_yes = { #联邦学生会托管地区
+			picture = unkown
+			targeted_modifier = {
+				tag = VAL
+				mic_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = SRT
+				mic_to_target_factor = 0.2
+			}
+			cancel = {
+				OR = {
+					NOT = { is_puppet_of = CEN }
+					SRT = {
+						#TODO:SRT脱队
+						always = no
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						is_puppet_of = CEN
+						SRT = {
+							#TODO:SRT脱队
+							always = no
+						}
+					}
+					add_ideas = trusteeship_of_CEN_SRT_no
+				}
+			}
+		}
+		trusteeship_of_CEN_SRT_no = { #联邦学生会托管地区-SRT脱队
+			picture = unkown
+			targeted_modifier = {
+				tag = VAL
+				mic_to_target_factor = 0.7
+			}
+			cancel = {
+				OR = {
+					NOT = { is_puppet_of = CEN }
+					SRT = {
+						#TODO:SRT未脱队
+						always = no
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						is_puppet_of = CEN
+						SRT = {
+							#TODO:SRT未脱队
+							always = no
+						}
+					}
+					add_ideas = trusteeship_of_CEN_SRT_yes
+				}
+			}
+		}
 		CEN_LianBangXueShengHuiQuanWei_SuoShengWuJi = { #联邦学生会的权威——所剩无几
 			picture = unkown
 
