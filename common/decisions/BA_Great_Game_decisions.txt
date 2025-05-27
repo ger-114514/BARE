@@ -1,4 +1,112 @@
 BA_Great_Game_decisions = {
+	Great_Game_convert_into_civilian_factories = {
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 199 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 199 }
+		}
+		custom_cost_text = Great_Game_coins_200
+		days_remove = 180
+		modifier = {
+			industrial_factory_donations = 1
+		}
+		complete_effect = {
+			set_temp_variable = { coins = 200 }
+			Great_Game_cost_coins = yes
+		}
+	}
+	Great_Game_convert_into_military_factories = {
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 199 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 199 }
+		}
+		custom_cost_text = Great_Game_coins_200
+		days_remove = 180
+		modifier = {
+			military_factory_donations = 1
+		}
+		complete_effect = {
+			set_temp_variable = { coins = 200 }
+			Great_Game_cost_coins = yes
+		}
+	}
+	Great_Game_convert_into_factory_capacity = {
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 199 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 199 }
+		}
+		custom_cost_text = Great_Game_coins_200
+		days_remove = 180
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+		complete_effect = {
+			set_temp_variable = { coins = 200 }
+			Great_Game_cost_coins = yes
+		}
+	}
+	Great_Game_convert_into_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 199 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 199 }
+		}
+		custom_cost_text = Great_Game_coins_200
+		days_re_enable = 90
+		complete_effect = {
+			set_temp_variable = { coins = 200 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 250
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = medium_tank_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis
+						amount = 12
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_fighting_drone
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = small_uav_airframe
+						amount = 12
+					}
+				}
+			}
+		}
+	}
 	Great_Game_college_lauch_invade = {
 		visible = {
 			has_war = no
@@ -275,9 +383,6 @@ BA_Great_Game_decisions = {
 				has_war = no
 			}
 		}
-		target_root_trigger = {
-			
-		}
 		visible = {
 			has_country_flag = involved_in_Great_Game_as_ally_leader
 			Great_Game_is_involved = yes
@@ -294,15 +399,17 @@ BA_Great_Game_decisions = {
 				add_to_temp_variable = { expected_power_score = FROM.Great_Game_power_score }
 				check_variable = { expected_power_score < max_power_score }
 			}
+			FROM = {
+				Great_Game_can_be_overlord = yes
+				Great_Game_is_involved = no
+				has_war = no
+			}
 		}
 		complete_effect = {
-			hidden_effect = {
-				set_temp_variable = { leader = ROOT }
-				set_temp_variable = { ally = FROM }
-				set_temp_variable = { enemy = var:Great_Game_enemy }
-				Great_Game_invite_to_ally = yes
-			}
-			
+			set_temp_variable = { leader = ROOT }
+			set_temp_variable = { ally = FROM }
+			set_temp_variable = { enemy = var:Great_Game_enemy }
+			Great_Game_invite_to_ally = yes
 		}
 	}
 	college_exercise_ongoing_attacker = {
@@ -310,7 +417,7 @@ BA_Great_Game_decisions = {
 			always = no
 		}
 		activation = {
-			always = no
+			has_war_with = FROM
 		}
 		is_good = no
 		days_mission_timeout = 120
@@ -356,7 +463,7 @@ BA_Great_Game_decisions = {
 			always = no
 		}
 		activation = {
-			always = no
+			has_war_with = FROM
 		}
 		is_good = no
 		days_mission_timeout = 120
@@ -376,9 +483,15 @@ BA_Great_Game_decisions = {
 					var:Great_Game_invade_target = { has_capitulated = yes }
 				}
 				custom_effect_tooltip = Great_Game_defend_failed_tt
+				effect_tooltip = {
+					Great_Game_get_coins = yes
+				}
 			}
 			else = { #守方胜利
 				custom_effect_tooltip = Great_Game_defend_succeeded_tt
+				effect_tooltip = {
+					Great_Game_get_coins = yes
+				}
 			}
 		}
 		cancel_trigger = {
@@ -386,6 +499,9 @@ BA_Great_Game_decisions = {
 		}
 		cancel_effect = {
 			custom_effect_tooltip = Great_Game_defend_failed_tt
+			effect_tooltip = {
+				Great_Game_get_coins = yes
+			}
 		}
 	}
 	college_exercise_ongoing_ally = {
@@ -393,7 +509,7 @@ BA_Great_Game_decisions = {
 			always = no
 		}
 		activation = {
-			always = no
+			has_war_with = FROM
 		}
 		is_good = no
 		days_mission_timeout = 120
@@ -402,6 +518,7 @@ BA_Great_Game_decisions = {
 			surrender_progress > 0.3
 		}
 		complete_effect = {
+			Great_Game_get_coins = yes
 			white_peace = FROM
 			clr_country_flag = involved_in_Great_Game_as_attacker
 			clr_country_flag = involved_in_Great_Game_as_defender

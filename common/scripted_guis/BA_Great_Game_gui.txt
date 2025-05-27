@@ -10,6 +10,14 @@ scripted_gui = {
 				Great_Game_can_be_overlord = yes
 			}
 		}
+		triggers = {
+			BA_common_notice_visible = {
+				NOT = {
+					has_country_flag = Great_Game_enter_notice
+				}
+                is_ai = no
+			}
+		}
 		effects = {
 			Great_Game_enter_button_click = {
 				if = {
@@ -21,6 +29,20 @@ scripted_gui = {
 				else = {
 					set_country_flag = BA_Great_Game_gui_window_visible
 				}
+			}
+			BA_common_notice_click = {
+				set_country_flag = Great_Game_enter_notice
+			}
+		}
+	}
+	Great_Game_coin = {
+		context_type = player_context
+		window_name = "Great_Game_coin"
+		parent_window_token = top_bar
+		visible = {
+			has_global_flag = BA_Great_Game_available
+			ROOT = {
+				Great_Game_can_be_overlord = yes
 			}
 		}
 	}

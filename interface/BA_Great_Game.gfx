@@ -1,5 +1,10 @@
 spriteTypes = {
 	SpriteType = {
+		name = "Great_Game_coin"
+		texturefile = "gfx/interface/Great_Game/Great_Game_coin.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
 		name = "Great_Game_enter_button"
 		texturefile = "gfx/interface/Great_Game/Great_Game_enter_button.dds"			
 	}

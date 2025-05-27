@@ -1,9 +1,10 @@
 guiTypes = {
 	containerWindowType = {
 		name = "Great_Game_enter"
-		position = { x = -430 y = 4 }
-		size = { width = 40 height = 30 }
+		position = { x = -455 y = 32 }
+		size = { width = 60 height = 60 }
 		orientation = UPPER_RIGHT
+		clipping = no
 
 		background = {
 			name = "Great_Game_enter_bg"
@@ -12,8 +13,41 @@ guiTypes = {
 		buttonType = {
 			name = "Great_Game_enter_button"
 			spriteType ="Great_Game_enter_button"
-			position = { x = 4 y = 3 }
+			position = { x = 0 y = 6 }
 			pdx_tooltip = "Great_Game_enter_button_tt"
+		}
+		buttonType = {
+			name = "BA_common_notice"
+			position = { x = -75 y = 6 }
+			spriteType = "BA_common_notice"
+			pdx_tooltip = "BA_common_notice_tt"
+		}
+	}
+	containerWindowType = {
+		name = "Great_Game_coin"
+		position = { x = -460 y = 4 }
+		size = { width = 75 height = 30 }
+		orientation = UPPER_RIGHT
+
+		background = {
+			name = "Great_Game_coin_bg"
+			spriteType ="GFX_mini_tooltip"
+		}
+		iconType = {
+			name = "Great_Game_coin"
+			position = { x = 5 y = 6 }
+			spriteType = "Great_Game_coin"
+			pdx_tooltip = "Great_Game_coin_tt"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_coin_num"
+			position = { x = 23 y = 5 }
+			maxWidth = 40
+			format = left
+			font = "hoi_18mbs"
+			text = "Great_Game_coin_num"
+			pdx_tooltip = "Great_Game_coin_tt"
+			pdx_tooltip_delayed = "Great_Game_coin_tt_delayed"
 		}
 	}
 	containerWindowType = {

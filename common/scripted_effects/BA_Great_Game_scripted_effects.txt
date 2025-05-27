@@ -177,9 +177,8 @@ Great_Game_start_invasion = {
 }
 Great_Game_invade_succeeded = {
 	custom_effect_tooltip = Great_Game_invade_succeeded_tt
+	Great_Game_get_coins = yes
 	hidden_effect = {
-		#白和
-		white_peace = FROM
 		#增加连胜
 		add_to_variable = { Great_Game_consecutive_wins = 1 }
 		clear_variable = Great_Game_consecutive_defeats
@@ -191,6 +190,7 @@ Great_Game_invade_succeeded = {
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
 		FROM = {
+			Great_Game_get_coins = yes
 			#增加连败
 			add_to_variable = { Great_Game_consecutive_defeats = 1 }
 			clear_variable = Great_Game_consecutive_wins
@@ -207,6 +207,7 @@ Great_Game_invade_succeeded = {
 			}
 			for_each_scope_loop = {
 				array = Great_Game_temp_allies
+				Great_Game_get_coins = yes
 				clr_country_flag = involved_in_Great_Game_as_defender
 				clear_variable = Great_Game_invader
 				clear_variable = Great_Game_invade_target
@@ -222,12 +223,15 @@ Great_Game_invade_succeeded = {
 		}
 		for_each_scope_loop = {
 			array = Great_Game_temp_allies
+			Great_Game_get_coins = yes
 			clr_country_flag = involved_in_Great_Game_as_attacker
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
 		}
+		#白和
+		white_peace = FROM
 		#夺取托管地区
 		add_to_array = { BA_trusteeship_areas = var:Great_Game_invade_target }
 		if = {
@@ -284,13 +288,13 @@ Great_Game_invade_succeeded = {
 }
 Great_Game_invade_failed = {
 	custom_effect_tooltip = Great_Game_invade_failed_tt
+	Great_Game_get_coins = yes
 	hidden_effect = {
-		white_peace = FROM
 		FROM = {
 			#增加连胜
 			add_to_variable = { Great_Game_consecutive_wins = 1 }
 			clear_variable = Great_Game_consecutive_defeats
-			
+			Great_Game_get_coins = yes
 			#记录
 			set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
 			set_variable = { Great_Game_record_enemy^Great_Game_record_count = ROOT }
@@ -300,6 +304,7 @@ Great_Game_invade_failed = {
 			Great_Game_add_record = yes
 			for_each_scope_loop = {
 				array = Great_Game_temp_allies
+				Great_Game_get_coins = yes
 				clr_country_flag = involved_in_Great_Game_as_defender
 				clear_variable = Great_Game_invader
 				clear_variable = Great_Game_invade_target
@@ -325,12 +330,14 @@ Great_Game_invade_failed = {
 		Great_Game_add_record = yes
 		for_each_scope_loop = {
 			array = Great_Game_temp_allies
+			Great_Game_get_coins = yes
 			clr_country_flag = involved_in_Great_Game_as_attacker
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
 		}
+		white_peace = FROM
 		clr_country_flag = involved_in_Great_Game_as_attacker
 		clear_variable = Great_Game_invader
 		clear_variable = Great_Game_invade_target
@@ -347,4 +354,38 @@ Great_Game_add_record = {
 	add_to_array = { Great_Game_record_result = 1 }
 	add_to_array = { Great_Game_record_faction = 1 }
 	add_to_array = { Great_Game_record_date = 1 }
+}
+Great_Game_get_coins = {
+	for_each_scope_loop = {
+		array = enemies
+		if = {
+			limit = { Great_Game_is_involved = yes }
+			add_to_temp_variable = { total_casualties_k = casualties_k }
+		}
+	}
+	multiply_temp_variable = { total_casualties_k = 20 }
+	set_temp_variable = { coins = total_casualties_k }
+	add_to_temp_variable = { coins = Great_Game_get_coins_from_combat }
+	clear_variable = Great_Game_get_coins_from_combat
+	if = {
+		limit = { has_country_flag = involved_in_Great_Game_as_ally_leader }
+		divide_temp_variable = { total_casualties_k = 2 }
+	}
+	round_temp_variable = coins
+	custom_effect_tooltip = Great_Game_get_coins_tt
+	add_to_variable = { Great_Game_coins = coins }
+	clamp_variable = {
+		var = Great_Game_coins
+		min = 0
+		max = 9999
+	}
+}
+Great_Game_cost_coins = {
+	custom_effect_tooltip = Great_Game_cost_coins_tt
+	subtract_from_variable = { Great_Game_coins = coins }
+	clamp_variable = {
+		var = Great_Game_coins
+		min = 0
+		max = 9999
+	}
 }

@@ -17,7 +17,53 @@ on_actions = {
 				Great_Game_generate_global_chart = yes
 			}
 		}
-	}	
+	}
+	on_monthly_SCH = {
+		effect = {
+			for_each_scope_loop = {
+				array = global.BA_college_and_trusteeship_region
+				#学园地区互给军通
+				for_each_scope_loop = {
+					array = global.BA_college_and_trusteeship_region
+					if = {
+						limit = {
+							NOT = {
+								gives_military_access_to = PREV
+								original_tag = PREV
+								is_ally_with = PREV
+								has_war_with = PREV
+							}
+						}
+						diplomatic_relation = {
+							country = PREV
+							relation = offer_military_access
+							active = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	on_army_leader_won_combat = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { Great_Game_is_involved = yes }
+					add_to_variable = { Great_Game_get_coins_from_combat = 6 }
+				}
+			}
+		}
+	}
+	on_army_leader_lost_combat = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { Great_Game_is_involved = yes }
+					add_to_variable = { Great_Game_get_coins_from_combat = 2 }
+				}
+			}
+		}
+	}
 	on_capitulation_immediate = {
 		effect = {
 			if = {

@@ -220,6 +220,12 @@ for_each_scope_loop = {
 	}
 	
 }
+add_to_array = { global.BA_college_and_trusteeship_region = VAL }
+add_to_array = { global.BA_college_and_trusteeship_region = SRT }
+add_to_array = { global.BA_college_and_trusteeship_region = KRO }
+add_to_array = { global.BA_college_and_trusteeship_region = SCH }
+add_to_array = { global.BA_main_college_region = VAL }
+add_to_array = { global.BA_main_college_region = SRT }
 add_to_array = { global.Great_Game_overlords = VAL }
 add_to_array = { global.Great_Game_overlords = SRT }
 add_to_array = { global.Great_Game_overlords = CAE }
