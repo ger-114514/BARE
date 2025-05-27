@@ -32,7 +32,7 @@ characters = {
 		# 		factor = 1
 		# 	}
 		# }
-		corps_commander = {
+		field_marshal = {
 			traits = {infantry_officer media_personality politically_connected media_personality harsh_leader
 			}
 			skill = 3
@@ -67,7 +67,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {harsh_leader infantry_officer
 			}
 			skill = 2
@@ -101,7 +101,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {skilled_staffer
 			}
 			skill = 2
@@ -135,7 +135,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer winter_expert
 			}
 			skill = 1
@@ -169,7 +169,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {winter_expert bearer_of_artillery
 			}
 			skill = 1
@@ -203,7 +203,7 @@ characters = {
 				factor = 1
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {infantry_officer winter_expert logistics_wizard thorough_planner brilliant_strategist
 			}
 			skill = 1
@@ -237,7 +237,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {winter_expert media_personality
 			}
 			skill = 1
@@ -271,7 +271,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {bearer_of_artillery winter_expert
 			}
 			skill = 1

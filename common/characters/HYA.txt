@@ -24,7 +24,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {organizer infantry_officer
 			}
 			skill = 2
@@ -59,7 +59,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {trait_engineer infantry_officer
 			}
 			skill = 1
@@ -94,7 +94,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer skilled_staffer
 			}
 			skill = 2
@@ -145,7 +145,7 @@ characters = {
 				factor = 1
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {logistics_wizard infantry_officer
 			}
 			skill = 3
@@ -179,7 +179,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {bearer_of_artillery 
 			}
 			skill = 1
@@ -213,7 +213,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {bearer_of_artillery
 			}
 			skill = 1
@@ -265,7 +265,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer ambusher
 			}
 			skill = 2
@@ -299,7 +299,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {organizer career_officer
 			}
 			skill = 2
@@ -333,7 +333,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {brilliant_strategist 
 			}
 			skill = 1
@@ -368,7 +368,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {guerilla_fighter adaptable
 			}
 			skill = 2
@@ -403,7 +403,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer
 			}
 			skill = 1
@@ -421,7 +421,7 @@ characters = {
 				small = GFX_portrait_HYA_tsukuyo_small
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer ambusher
 			}
 			skill = 1
@@ -439,7 +439,7 @@ characters = {
 				small = GFX_portrait_HYA_umika_small
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer
 			}
 			skill = 1
@@ -474,7 +474,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer
 			}
 			skill = 1
@@ -508,7 +508,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer
 			}
 			skill = 2
@@ -544,7 +544,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {adaptable infantry_officer trickster guerilla_fighter
 			}
 			skill = 3

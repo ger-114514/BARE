@@ -14,7 +14,7 @@ characters = {
 			id = -1
 		}
 
-        corps_commander= {
+        field_marshal= {
 			traits = {infantry_officer harsh_leader
 			}
 			skill = 3
@@ -37,7 +37,7 @@ characters = {
 			}	
 		}
 
-        field_marshal = {
+        corps_commander = {
 			traits = {
 			}
 			skill = 2
@@ -60,7 +60,7 @@ characters = {
 			}	
 		}
 
-        field_marshal = {
+        corps_commander = {
 			traits = {
 			}
 			skill = 2
