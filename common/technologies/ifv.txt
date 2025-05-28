@@ -1573,6 +1573,7 @@ technologies = {
 	}
 	####民用直升机
 	Civilian_helicopter_T1 = {
+		show_equipment_icon = yes
 		enable_equipments = {
 			helicopter_equipment_1
 			attack_helicopter_equipment_1
