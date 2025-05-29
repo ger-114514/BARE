@@ -2068,7 +2068,7 @@ focus_tree = {
 
         available = {
             has_army_experience > 150
-            surrender_progress > 0.1
+            has_war_with_major = yes
         }
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_Black_Ball_Express
