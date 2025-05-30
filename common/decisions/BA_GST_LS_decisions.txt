@@ -158,11 +158,11 @@ GST_LS_ZZ_category = {
 				}
 				NOT = {
 					OR = {
-						has_war_with = GEH #不与歌赫娜处于战争
+						has_war_with = GEH #不与格黑娜处于战争
 						has_war_with = TRI #不与圣三一处于战争
 					}
 				}
-				OR = { #圣三一或歌赫娜投降倾向高于35%
+				OR = { #圣三一或格黑娜投降倾向高于35%
 					GEH = {
 						surrender_progress > 0.35
 					}
@@ -177,7 +177,7 @@ GST_LS_ZZ_category = {
 			OR = {
 				NOT = {
 					OR = {
-						has_war_with = GEH #不与歌赫娜处于战争
+						has_war_with = GEH #不与格黑娜处于战争
 						has_war_with = TRI #不与圣三一处于战争
 					}
 				}
@@ -235,7 +235,7 @@ GST_LS_ZZ_category = {
 		}
 	}
 
-	# GST_ZZ_XCJC_TRI_AND_GEH = {#古圣堂之战 - 圣三一 歌赫娜
+	# GST_ZZ_XCJC_TRI_AND_GEH = {#古圣堂之战 - 圣三一 格黑娜
 	# 	icon = generic_research
 	# 	priority = 36
 	# 	activation = {
@@ -506,7 +506,7 @@ GST_LS_ZZ_category = {
 	# 			add_to_faction = CAE #凯撒总部
 	# 			add_to_faction = MIL #千禧年
 	# 			add_to_faction = SHA #山海经
-	# 			add_to_faction = GEH #歌赫娜
+	# 			add_to_faction = GEH #格黑娜
 	# 			add_to_faction = ABY #阿拜多斯
 	# 			add_to_faction = RWT #赤冬
 	# 			add_to_faction = HYA #百鬼夜行
@@ -529,7 +529,7 @@ GST_LS_ZZ_category = {
 	# 					has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
 	# 				}
 	# 			}
-	# 			GEH = {#那么歌赫娜和茶会的领袖都切换为老师
+	# 			GEH = {#那么格黑娜和茶会的领袖都切换为老师
 	# 				SCH_sensei = {
 	# 					set_nationality = GEH
 	# 				}
@@ -548,7 +548,7 @@ GST_LS_ZZ_category = {
 	# 					has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
 	# 				}
 	# 			}
-	# 			GEH = {#歌赫娜切换领袖为日奈
+	# 			GEH = {#格黑娜切换领袖为日奈
 	# 				GEH_hina = {
 	# 					clr_character_flag = ARI_BeiBangJia
 	# 				}
@@ -894,7 +894,7 @@ GST_LS_ZZ_category = {
 		cancel_trigger = {
 			OR = {
 				NOT = {
-					has_war_with = GEH #不与歌赫娜处于战争
+					has_war_with = GEH #不与格黑娜处于战争
 					has_war_with = TRI #不与圣三一处于战争
 				}
 				has_capitulated = yes
@@ -935,7 +935,7 @@ GST_LS_ZZ_category = {
 		cancel_trigger = {
 			OR = {
 				NOT = {
-					has_war_with = GEH #不与歌赫娜处于战争
+					has_war_with = GEH #不与格黑娜处于战争
 					has_war_with = TRI #不与圣三一处于战争
 				}
 				has_capitulated = yes
