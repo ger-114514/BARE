@@ -1,0 +1,18 @@
+state={
+	id=689
+	name="STATE_689"
+	provinces={
+		1617 2934 3378 4646 4853 5366 6342 7493 8845 11827 11833 11854 11858 11912 11916 
+	}
+	history = {
+		buildings = {
+			infrastructure = 2
+		}
+		owner = TRI
+		add_core_of=TRI
+    }
+	manpower=400
+		state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,19 @@
+state={
+	id=666
+	name="STATE_666"
+	provinces={
+		4028 4302 7357 7773 8211 8544 10650 10661 
+	}
+	history={
+		buildings = {
+			infrastructure = 4
+		}
+		owner = GEH
+		add_core_of=GEH
+
+	}
+	manpower=400
+		state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

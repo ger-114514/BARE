@@ -52,7 +52,7 @@ characters = {
 			}
 		}
 
-        corps_commanders = {
+        field_marshal = {
 			traits = {offensive_doctrine  trickster
 			}
 			skill = 3
@@ -91,7 +91,7 @@ characters = {
 			}
 		}
 
-        field_marshal = {
+        corps_commander = {
 			traits = {infantry_officer harsh_leader 
 			}
 			skill = 2
@@ -130,7 +130,7 @@ characters = {
 			}
 		}
 
-        field_marshal = {
+        corps_commander = {
 			traits = {infantry_officer camouflage_expert
 			}
 			skill = 2
@@ -169,7 +169,7 @@ characters = {
 			}
 		}
 
-        field_marshal = {
+        corps_commander = {
 			traits = {bearer_of_artillery trait_engineer
 			}
 			skill = 2
