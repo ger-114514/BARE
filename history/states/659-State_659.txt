@@ -1,0 +1,19 @@
+state={
+	id=659
+	name="STATE_659"
+	provinces={
+		1109 2028 3629 7824 
+	}
+	history={
+		buildings = {
+			infrastructure = 4
+		}
+		owner = A47
+		add_core_of=A47
+
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
