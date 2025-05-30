@@ -108,7 +108,7 @@ eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
 
 eden_treaty_step_4_modifier = { #【濒临破灭的《伊甸条约》】
 
-	icon = "GFX_idea_unknown"
+	icon = "GFX_idea_eden_treaty_step_4_modifier"
 	enable = { always = yes }
 
 	#政治方面

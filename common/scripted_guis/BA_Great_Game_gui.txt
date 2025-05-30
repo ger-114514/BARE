@@ -125,4 +125,38 @@ scripted_gui = {
 			}
 		}
 	}
+	Great_Game_decision_gui = {
+		context_type = decision_category
+		window_name = "Great_Game_decision_gui"
+		dynamic_lists = {
+			Great_Game_decision_gui_window = {
+				array = Great_Game_decision_window
+				entry_container = "[BA_get_Great_Game_decision_gui]"
+			}
+			Great_Game_decision_gui_attacker_allies = {
+				array = var:Great_Game_invader:Great_Game_temp_allies
+				change_scope = yes
+				entry_container = "Great_Game_decision_gui_window_allies_flag"
+			}
+			Great_Game_decision_gui_defender_allies = {
+				array = var:Great_Game_invade_target_overlord:Great_Game_temp_allies
+				change_scope = yes
+				entry_container = "Great_Game_decision_gui_window_allies_flag"
+			}
+		}
+		properties = {
+			flag_attacker = {
+				image = "[?Great_Game_invader.GetFlag]"
+			}
+			flag_defender = {
+				image = "[?Great_Game_invade_target_overlord.GetFlag]"
+			}
+			flag_target = {
+				image = "[?Great_Game_invade_target.GetFlag]"
+			}
+			allies_flag = {
+				image = "[THIS.GetFlag]"
+			}
+		}
+	}
 }

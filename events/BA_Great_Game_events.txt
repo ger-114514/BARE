@@ -22,6 +22,7 @@ news_event = {
           resize_array = { Great_Game_record_result = 1 }
           resize_array = { Great_Game_record_faction = 1 }
           resize_array = { Great_Game_record_date = 1 }
+          add_to_array = { Great_Game_decision_window = 1 }
         }
 				Great_Game_generate_global_chart = yes
 			}

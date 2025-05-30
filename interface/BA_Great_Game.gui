@@ -187,7 +187,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "Great_Game_list_flag"
-			position = { x = 29 y = 19 }
+			position = { x = 29 y = 18 }
 			spriteType = "GFX_shield_medium"
 		}
 		iconType = {
@@ -335,4 +335,156 @@ guiTypes = {
 			text = "[BA_get_Great_Game_record_faction]"
 		}
 	}
+
+	containerWindowType = {
+		name = "Great_Game_decision_gui"
+		size = { width = 480 height = 300 }
+		position = { x = 5 y = 0 }
+
+		background = {
+			name = "Great_Game_decision_gui_bg"
+			spriteType ="GFX_generic_bg_white_1"
+		}
+		gridBoxType = {
+			name = "Great_Game_decision_gui_window"
+			position = { x = 0 y = 0 }
+			add_horizontal = yes
+		}
+	}
+	containerWindowType = {
+		name = "Great_Game_decision_gui_window_involved"
+		position = { x = 0 y = 50 }
+		instantTextBoxType = {
+			name = "Great_Game_involved_text"
+			position = { x = 0 y = -20 }
+			maxWidth = 480
+			format = center
+			font = "LXGW_975_24b"
+			text = "Great_Game_involved_text"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_decision_gui_attacker"
+			position = { x = 50 y = 0 }
+			maxWidth = 82
+			format = center
+			font = "LXGW_975_20b"
+			text = "Great_Game_decision_gui_attacker"
+		}
+		iconType = {
+			name = "flag_frame_attacker"
+			position = { x = 37 y = 20 }
+			spriteType = "BA_flag_frame_large"
+		}
+		iconType = {
+			name = "flag_attacker"
+			position = { x = 50 y = 31 }
+			spriteType = "GFX_shield_medium"
+			pdx_tooltip = "Great_Game_decision_gui_attacker_name"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_decision_gui_attacker_score"
+			position = { x = 145 y = 45 }
+			maxWidth = 90
+			maxHeight = 30
+			format = left
+			font = "LXGW_975_18b"
+			text = "Great_Game_decision_gui_attacker_score"
+			pdx_tooltip = "Great_Game_power_score_faction_tt"
+		}
+		gridBoxType = {
+			name = "Great_Game_decision_gui_attacker_allies"
+			position = { x = 54 y = 95 }
+			slotsize = { width = 60 height = 40 }
+			add_horizontal = yes
+			max_slots_horizontal = 2
+		}
+		instantTextBoxType = {
+			name = "Great_Game_decision_gui_defender"
+			position = { x = 348 y = 0 }
+			maxWidth = 82
+			format = center
+			font = "LXGW_975_20b"
+			text = "Great_Game_decision_gui_defender"
+		}
+		iconType = {
+			name = "flag_frame_defender"
+			position = { x = 335 y = 20 }
+			spriteType = "BA_flag_frame_large"
+		}
+		iconType = {
+			name = "flag_defender"
+			position = { x = 348 y = 31 }
+			spriteType = "GFX_shield_medium"
+			pdx_tooltip = "Great_Game_decision_gui_defender_name"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_decision_gui_defender_score"
+			position = { x = 245 y = 45 }
+			maxWidth = 90
+			maxHeight = 30
+			format = right
+			font = "LXGW_975_18b"
+			text = "Great_Game_decision_gui_defender_score"
+			pdx_tooltip = "Great_Game_power_score_faction_tt"
+		}
+		gridBoxType = {
+			name = "Great_Game_decision_gui_defender_allies"
+			position = { x = 352 y = 95 }
+			slotsize = { width = 60 height = 40 }
+			add_horizontal = yes
+			max_slots_horizontal = 2
+		}
+		instantTextBoxType = {
+			name = "Great_Game_decision_gui_target"
+			position = { x = 224 y = 15 }
+			maxWidth = 41
+			format = center
+			font = "LXGW_975_16b"
+			text = "Great_Game_decision_gui_target"
+		}
+		iconType = {
+			name = "flag_frame_target"
+			position = { x = 210 y = 28 }
+			spriteType = "BA_flag_frame_medium"
+		}
+		iconType = {
+			name = "flag_target"
+			position = { x = 224 y = 38 }
+			spriteType = "GFX_flag_small2"
+			pdx_tooltip = "Great_Game_decision_gui_target_name"
+		}
+	}
+	containerWindowType = {
+		name = "Great_Game_decision_gui_window_allies_flag"
+		position = { x = 0 y = 0 }
+		iconType = {
+			name = "allies_flag_frame"
+			position = { x = 0 y = 0 }
+			spriteType = "BA_flag_frame_medium"
+		}
+		iconType = {
+			name = "allies_flag"
+			position = { x = 14 y = 10 }
+			spriteType = "GFX_flag_small2"
+			pdx_tooltip = "country_name_black"
+		}
+	}
+	containerWindowType = {
+		name = "Great_Game_decision_gui_window_peace"
+		position = { x = 0 y = 60 }
+		iconType = {
+			name = "Great_Game_peace"
+			position = { x = 190 y = 20 }
+			spriteType = "Great_Game_peace"
+		}
+		instantTextBoxType = {
+			name = "Great_Game_peace_text"
+			position = { x = 0 y = 140 }
+			maxWidth = 480
+			format = center
+			font = "LXGW_975_24b"
+			text = "Great_Game_peace_text"
+		}
+	}
+
 }

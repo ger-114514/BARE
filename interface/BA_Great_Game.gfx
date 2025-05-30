@@ -48,4 +48,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/Great_Game/Great_Game_faction.dds"
 		noOfFrames = 2
 	}
+
+	SpriteType = {
+		name = "Great_Game_peace"
+		texturefile = "gfx/interface/Great_Game/Great_Game_peace.dds"
+	}
 }

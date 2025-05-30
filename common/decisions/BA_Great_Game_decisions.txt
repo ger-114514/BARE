@@ -548,6 +548,28 @@ BA_Great_Game_decisions = {
 		}
 	}
 }
+BA_integrate_trusteeship_decisions = {
+	BA_integrate_trusteeship = {
+		target_trigger = {
+			has_subject = FROM
+			FROM = {
+				OR = {
+					has_autonomy_state = autonomy_bare_trusteeship_area
+					has_autonomy_state = autonomy_bare_trusteeship_area_1
+				}
+			}
+		}
+		cost = 100
+		days_re_enable = 120
+		complete_effect = {
+			FROM = {
+				add_autonomy_score = {
+					value = -50
+				}
+			}
+		}
+	}
+}
 BA_Great_Game_decisions_debug = {
 	lauch_event = {
 		complete_effect = {

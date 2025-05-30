@@ -6,36 +6,45 @@ Great_Game_can_be_overlord = {
     }
 }
 Great_Game_can_be_college_overlord = {
-    has_idea = BARE_Global_College_Autonomous_Region
-    if = {
-        limit = { original_tag = ABY }
-        #TODO:长期无法参加
-        always = no
-    }
-    NOT = {
-        original_tag = CEN
-        original_tag = VAL
-        original_tag = SRT
-        original_tag = WLH
-        original_tag = SCH
-        original_tag = KRO
-        original_tag = HIL
-        original_tag = CAE
+    custom_override_tooltip = {
+        tooltip = Great_Game_can_be_college_overlord_tt
+        has_idea = BARE_Global_College_Autonomous_Region
+        if = {
+            limit = { original_tag = ABY }
+            #TODO:长期无法参加
+            always = no
+        }
+        NOT = {
+            original_tag = CEN
+            original_tag = VAL
+            original_tag = SRT
+            original_tag = WLH
+            original_tag = SCH
+            original_tag = KRO
+            original_tag = HIL
+            original_tag = CAE
+        }
     }
 }
 Great_Game_can_be_CEN_overlord = {
-    OR = {
-        original_tag = CEN
-        original_tag = VAL
-        original_tag = SRT
-    }
-    if = {
-        limit = { original_tag = SRT }
-        #TODO:未脱队
+    custom_override_tooltip = {
+        tooltip = Great_Game_can_be_CEN_overlord_tt
+        OR = {
+            original_tag = CEN
+            original_tag = VAL
+            original_tag = SRT
+        }
+        if = {
+            limit = { original_tag = SRT }
+            #TODO:未脱队
+        }
     }
 }
 Great_Game_can_be_ceaser_overlord = {
-    original_tag = CAE
+    custom_override_tooltip = {
+        tooltip = Great_Game_can_be_ceaser_overlord_tt
+        original_tag = CAE
+    }
 }
 Great_Game_can_be_trusteeship_area = {
     OR = {

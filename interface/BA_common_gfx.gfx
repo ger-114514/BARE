@@ -1,4 +1,12 @@
 spriteTypes = {
+	SpriteType = {
+		name = "BA_flag_frame_large"
+		texturefile = "gfx/interface/BA_flag_frame_large.dds"			
+	}
+	SpriteType = {
+		name = "BA_flag_frame_medium"
+		texturefile = "gfx/interface/BA_flag_frame_medium.dds"			
+	}
 	frameAnimatedSpriteType = {
 		name = "BA_common_notice"
 		texturefile = "gfx/interface/BA_common_notice.dds"
@@ -31,9 +39,17 @@ spriteTypes = {
 	}
 	corneredTileSpriteType = {
 		name = "GFX_generic_bg_grey"
-		size= { x = 100 y = 100 }
+		size= { x = 10 y = 10 }
 		textureFile = "gfx/interface/tiles/GFX_generic_bg_grey.dds"
 		borderSize = { x = 1 y = 1 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_generic_bg_white_1"
+		size = { x = 10 y = 10 }
+		borderSize = { x = 50 y = 50 }
+		textureFile = "gfx/interface/tiles/GFX_generic_bg_white_1.dds"
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}

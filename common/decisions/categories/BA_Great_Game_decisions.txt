@@ -14,6 +14,24 @@ BA_Great_Game_decisions = {
 		has_global_flag = BA_Great_Game_available
 	}
 	visible_when_empty = yes
+	scripted_gui = Great_Game_decision_gui
+	priority = 3000
+}
+#托管地整合
+BA_integrate_trusteeship_decisions = {
+	icon = generic_research
+
+	allowed = {
+		any_subject_country = {
+			OR = {
+				has_autonomy_state = autonomy_bare_trusteeship_area
+				has_autonomy_state = autonomy_bare_trusteeship_area_1
+			}
+		}
+	}
+	visible = {
+		has_global_flag = BA_Great_Game_available
+	}
 	priority = 3000
 }
 BA_Great_Game_decisions_debug = {

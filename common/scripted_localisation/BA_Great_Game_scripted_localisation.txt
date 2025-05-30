@@ -63,3 +63,15 @@ BA_get_Great_Game_record_faction = {
 		localization_key = "Great_Game_faction_defender"
 	}
 }
+BA_get_Great_Game_decision_gui = {
+	name = BA_get_Great_Game_decision_gui
+	text = {
+		trigger = { 
+			Great_Game_is_involved = yes
+		}
+		localization_key = Great_Game_decision_gui_window_involved
+	}
+	text = {
+		localization_key = Great_Game_decision_gui_window_peace
+	}
+}
