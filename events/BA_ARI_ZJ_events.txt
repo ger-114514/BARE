@@ -1,0 +1,252 @@
+add_namespace = LS_GST_ZJ
+
+country_event = {
+	id = ARI_ZJ.1
+	title = ARI_ZJ.1.t
+	desc = ARI_ZJ.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.1.a
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.2
+					days = 71
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.2
+	title = ARI_ZJ.2.t
+	desc = ARI_ZJ.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.2.a
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.3
+					days = 21
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.3
+	title = ARI_ZJ.3.t
+	desc = ARI_ZJ.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.3.a
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.4
+					days = 21
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.4
+	title = ARI_ZJ.4.t
+	desc = ARI_ZJ.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.4.a
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.5
+					days = 21
+				}
+			}
+		}
+	}
+
+	immediate = {
+		remove_dynamic_modifier = { #阿里乌斯包税制
+			modifier = ARI_tax_farming
+		}
+		remove_dynamic_modifier = { #阿里乌斯武装学生部队
+			modifier = ARI_armed_students_modifier
+		}
+		remove_dynamic_modifier = { #阿里乌斯特战部队
+			modifier = ARI_special_force
+		}
+		remove_dynamic_modifier = { #阿里乌斯对外情报和行动组
+			modifier = ARI_Intelligence_department
+		}
+		remove_dynamic_modifier = { #复仇之焰
+			modifier = ARI_flame_of_revenge
+		}
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = TRI_ZJ.1
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = TRI_ZJ.1
+	title = TRI_ZJ.1.t
+	desc = TRI_ZJ.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_ZJ.1.a
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.5
+	title = ARI_ZJ.5.t
+	desc = ARI_ZJ.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.5.a
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.6
+					days = 4
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.6
+	title = ARI_ZJ.6.t
+	desc = ARI_ZJ.6.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.6.a
+	}
+	immediate = {
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.7
+					days = 3
+				}
+			}
+			TRI = {
+				country_event = {
+					id = TRI_ZJ.2
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = TRI_ZJ.2
+	title = TRI_ZJ.2.t
+	desc = TRI_ZJ.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_ZJ.2.a
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					TRI = {
+						has_war_with = ARI
+					}
+				}
+			}
+			TRI = {
+				create_wargoal = {
+					type = XiaoMieWeiXie
+					target = ARI
+				}
+			}
+		}
+		set_global_flag = ARIUS_IN_DISABLED
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.7
+	title = ARI_ZJ.7.t
+	desc = ARI_ZJ.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.7.a
+	}
+	immediate = {
+		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.8
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.8
+	title = ARI_ZJ.8.t
+	desc = ARI_ZJ.8.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.8.a
+	}
+
+	immediate = {
+		hidden_effect = {
+			ARI_NO_GOV_MODE = {
+				promote_character = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = TRI_ZJ.3
+	title = TRI_ZJ.3.t
+	desc = TRI_ZJ.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_ZJ.3.a
+	}
+}
+
+country_event = {
+	id = ARI_ZJ.9
+	title = ARI_ZJ.9.t
+	desc = ARI_ZJ.9.d
+	is_triggered_only = yes
+
+	option = {
+		name = ARI_ZJ.9.a
+	}
+}

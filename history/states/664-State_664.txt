@@ -1,0 +1,20 @@
+state={
+	id=664
+	name="STATE_664"
+	provinces={
+		1132 1509 2700 3742 8920 10722 10826 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+
+		owner = A06
+		add_core_of=A06
+		add_core_of=GEH
+    }
+	manpower=400
+		state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

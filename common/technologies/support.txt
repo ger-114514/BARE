@@ -3,10 +3,12 @@ technologies = {
 	#火力支援装备
 	#T1和升级
 	fire_support_weapons_T1 = {
+		show_equipment_icon = yes
 		enable_equipments = {
+			light_fire_support_equipment_0 
 			heavy_fire_support_equipment_0
-			light_fire_support_equipment_0
-			special_fire_support_equipment_0
+			##已被移动至神秘支援科技树
+			#special_fire_support_equipment_0
 		}
 		research_cost = 1.5
 		folder = {

@@ -1,0 +1,19 @@
+state={
+	id=672
+	name="STATE_672"
+	provinces={
+		651 2110 2132 3137 9218 10809 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = A11
+		add_core_of=A11
+		add_core_of=GEH
+    }
+	manpower=400
+		state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

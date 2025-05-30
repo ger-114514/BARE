@@ -818,6 +818,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = ARI_this_is_final_war_tt
+			set_global_flag = ARIUS_IN_DISABLED #地下墓穴解禁
 			#TODO:触发事件“举世皆敌”
 			#大概就是数秘术知道夫人要干什么了，把她踢出了数秘术【完成】
 			#同时部分知道会发生什么的学生也选择逃跑【完成】

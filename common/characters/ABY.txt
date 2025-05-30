@@ -51,7 +51,7 @@ characters={
 			}
 		}
 
-		corps_commander = {
+		field_marshal = {
 			traits = {brilliant_strategist infantry_officer organizer aggressive_assaulter desert_fox trait_reckless
 			}
 			skill = 3
@@ -107,7 +107,7 @@ characters={
 			}
 		}
 
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trickster desert_fox expert_improviser
 			}
 			skill = 2
@@ -170,7 +170,7 @@ characters={
 			}
 		}
 
-		field_marshal = {
+		corps_commander = {
 			traits = {trait_cautious organizer desert_fox
 			}
 			skill = 2
@@ -224,7 +224,7 @@ characters={
 			}
 		}
 
-		field_marshal = {
+		corps_commander = {
 			traits = {desert_fox media_personality bearer_of_artillery
 			}
 			skill = 2
@@ -280,7 +280,7 @@ characters={
 			}
         }
 
-        field_marshal = {
+        corps_commander = {
 			traits = {desert_fox infantry_officer
 			}
 			skill = 1
@@ -371,7 +371,7 @@ characters={
 			}
         }
 
-        field_marshal = {
+        corps_commander = {
 			traits = {brilliant_strategist guerilla_fighter adaptable scavenger infantry_officer
 			}
 			skill = 4

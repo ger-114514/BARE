@@ -1,0 +1,19 @@
+state={
+	id=674
+	name="STATE_674"
+	provinces={
+		498 1628 7679 8384 11090 
+	}
+	history = {
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A43
+		add_core_of=A43
+		victory_points = {8069 25}
+    }
+	manpower=400
+		state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

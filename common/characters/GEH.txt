@@ -64,7 +64,7 @@ characters = {
 				factor = 1
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {expert_delegator politically_connected media_personality harsh_leader
 			}
 			visible = {
@@ -152,7 +152,7 @@ characters = {
 				factor = 1
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {organizer skilled_staffer}
 			visible = {
 				OR = {
@@ -210,7 +210,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {harsh_leader infantry_officer trickster
 			}
 			visible = {
@@ -270,7 +270,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {career_officer trait_cautious organizer}
 			visible = {
 				OR = {
@@ -337,7 +337,7 @@ characters = {
 				factor = 1
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {old_guard inflexible_strategist media_personality thorough_planner}
 			visible = {
 				OR = {
@@ -426,7 +426,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {armor_officer war_hero harsh_leader
 			}
 			visible = {
@@ -465,7 +465,7 @@ characters = {
 			expire = "9999.1.1.1"
 			id = -1
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {media_personality armor_officer
 			}
 			visible = {
@@ -496,7 +496,7 @@ characters = {
 				small = GFX_portrait_GEH_satsuki_small
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {bearer_of_artillery 
 			}
 			visible = {
@@ -544,7 +544,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trait_reckless infantry_officer
 			}
 			skill = 2
@@ -579,7 +579,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer commando
 			}
 			skill = 2
@@ -614,7 +614,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer skilled_staffer urban_assault_specialist
 			}
 			skill = 1
@@ -648,7 +648,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {trait_reckless trait_engineer
 			}
 			skill = 1
@@ -682,7 +682,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {logistics_wizard urban_assault_specialist adaptable
 			}
 			skill = 1
@@ -716,7 +716,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer
 			}
 			skill = 1
@@ -750,7 +750,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trickster brilliant_strategist
 			}
 			skill = 2
@@ -784,7 +784,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer camouflage_expert
 			}
 			skill = 1
@@ -818,7 +818,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trait_mountaineer
 			}
 			skill = 1
@@ -852,7 +852,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer harsh_leader
 			}
 			skill = 1
@@ -887,7 +887,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {combined_arms_expert war_hero urban_assault_specialist 
 			}
 			skill = 2
@@ -921,7 +921,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trait_engineer fortress_buster
 			}
 			skill = 1
@@ -955,7 +955,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trait_engineer fortress_buster brilliant_strategist
 			}
 			skill = 2
@@ -973,7 +973,7 @@ characters = {
 				small = GFX_portrait_GEH_erika_small
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer trait_cautious
 			}
 			skill = 1
@@ -1007,7 +1007,7 @@ characters = {
 				factor = 1
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {infantry_officer 
 			}
 			skill = 1
