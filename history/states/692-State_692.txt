@@ -1,0 +1,18 @@
+state={
+	id=692
+	name="STATE_692"
+	provinces={
+		242 387 1147 1531 2860 6207 7565 11777 11788 11793 
+	}
+	history = {
+		buildings = {
+			infrastructure = 2
+		}
+		owner = TRI
+		add_core_of=TRI
+    }
+	manpower=400
+		state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
