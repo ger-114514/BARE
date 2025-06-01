@@ -4311,8 +4311,6 @@ focus_tree = {
 		relative_position_id = ARI_bomber
 		prerequisite = {
 			focus = ARI_bomber
-		}
-		prerequisite = {
 			focus = ARI_fighter
 		}
 		cost = 3

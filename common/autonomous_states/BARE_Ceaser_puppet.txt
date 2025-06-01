@@ -1,0 +1,102 @@
+autonomy_state = {
+	id = autonomy_Ceaser_sub_branch
+	
+	is_puppet = no
+	
+	min_freedom_level = 0.5
+	
+	manpower_influence = 0.1
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		
+		can_not_declare_war = no
+		can_decline_call_to_war = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 4
+		cic_to_overlord_factor = 0.2
+		mic_to_overlord_factor = 0.2
+		autonomy_gain = -1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0
+	}
+
+
+	allowed = {
+		OVERLORD = {
+			original_tag = CAE
+		}
+	}
+
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}
+autonomy_state = {
+	id = autonomy_Ceaser_trusteeship_area
+	
+	is_puppet = yes
+	
+	use_overlord_color = yes
+	
+	min_freedom_level = 0.4
+	
+	manpower_influence = 0.9
+	
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+		
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+	
+	modifier = {
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 4
+		cic_to_overlord_factor = 0.5
+		mic_to_overlord_factor = 0.5
+		autonomy_gain = -1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0
+	}
+
+
+	allowed = {
+		OVERLORD = {
+			Great_Game_can_be_ceaser_overlord = yes
+		}
+	}
+
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

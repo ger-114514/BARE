@@ -1762,11 +1762,11 @@ spriteTypes = {
 
 
 	SpriteType = {
-		name = "GFX_ARI_special_battle_brigad_shine"
-		texturefile = "gfx/interface/goals/Arius/focus_ARI_special_battle_brigad.dds"
+		name = "GFX_ARI_special_battle_brigade_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_special_battle_brigade.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_special_battle_brigad.dds"
+			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_special_battle_brigade.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1779,7 +1779,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_special_battle_brigad.dds"
+			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_special_battle_brigade.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1859,11 +1859,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_ARI_reward_the_capabley_shine"
-		texturefile = "gfx/interface/goals/Arius/focus_ARI_reward_the_capabley.dds"
+		name = "GFX_ARI_reward_the_capable_shine"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_reward_the_capable.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_reward_the_capabley.dds"
+			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_reward_the_capable.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1876,7 +1876,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_reward_the_capabley.dds"
+			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_reward_the_capable.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2388,10 +2388,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_ARI_operation_dark_zone_shine"
-		texturefile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zonee.dds"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zone.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zonee.dds"
+			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zone.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2404,7 +2404,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zonee.dds"
+			animationmaskfile = "gfx/interface/goals/Arius/focus_ARI_operation_dark_zone.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

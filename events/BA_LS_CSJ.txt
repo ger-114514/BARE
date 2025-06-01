@@ -258,12 +258,14 @@ country_event = { #初次袭击简报
 				days = 14
 			}
 			GEH = {
+				activate_mission = GST_ZZ
 				country_event = {
 					id = LS_GST.8
 					days = 14
 				}
 			}
 			TRI = {
+				activate_mission = GST_ZZ
 				country_event = {
 					id = LS_GST.8
 					days = 14
@@ -426,18 +428,15 @@ country_event = { #僵局
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = { original_tag = ARI }
-				set_global_flag = Cathedral_war_backwater
-				for_each_scope_loop = {
-					array = global.GST_JS_ZBH #为每个州执行效果
-					add_dynamic_modifier = {
-						modifier = TRI_ARI_GEH_JingPiLiJie
-					}
-					set_state_flag = {
-						flag = CW_fully_control_check
-						days = 90
-					}
+			set_global_flag = Cathedral_war_backwater
+			for_each_scope_loop = {
+				array = global.GST_JS_ZBH #为每个州执行效果
+				add_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+				}
+				set_state_flag = {
+					flag = CW_fully_control_check
+					days = 90
 				}
 			}
 		}

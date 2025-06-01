@@ -1,3 +1,44 @@
+Eden_treaty_start = {
+	news_event = Eden_pact.1001
+	hidden_effect = {
+		set_variable = { global.Eden_treaty_progress = 0 }
+		set_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+		set_global_flag = BA_2st_eden_pact_begin
+		set_global_flag = Eden_treaty_negotiation_ongoing
+		TRI = {
+			set_variable = { Eden_treaty_weights = 0 }
+			set_variable = { Eden_treaty_modifier_political_power_factor = 0.1 }
+			set_variable = { Eden_treaty_modifier_stability_factor = 0.1 }
+			set_variable = { Eden_treaty_modifier_war_support_factor = 0.1 }
+			set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
+			set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
+			activate_mission = Eden_treaty_mutual_negotiation
+			if = {
+				limit = { has_global_flag = BA_2st_eden_pact_GEH_leader }
+				unlock_national_focus = TRI_choosing_pact_place
+				add_stability = -0.1
+				set_temp_variable = { loyalty_change = -0.05 }
+				TRI_parliament_all_loyalty_change = yes
+				TRI_unity_decrease_5 = yes
+			}
+		}
+		GEH = {
+			set_variable = { Eden_treaty_weights = 0 }
+			set_variable = { Eden_treaty_modifier_political_power_factor = 0.1 }
+			set_variable = { Eden_treaty_modifier_stability_factor = 0.1 }
+			set_variable = { Eden_treaty_modifier_war_support_factor = 0.1 }
+			set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
+			set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
+			activate_mission = Eden_treaty_mutual_negotiation
+			if = {
+				limit = { has_global_flag = BA_2st_eden_pact_TRI_leader }
+				unlock_national_focus = GEH_restart_eden_treaty_negotiation
+				#TODO:格黑娜未能触发的惩罚
+			}
+		}
+	}
+	
+}
 Eden_treaty_change_progress = { #改变筹备度
 	custom_effect_tooltip = Eden_treaty_change_progress_tt
 	add_to_variable = { global.Eden_treaty_progress = progress_change }
@@ -171,7 +212,7 @@ Cathedral_war_ARI_cathedral_fall = {
 			add_to_faction = GEH
 		}
 	}
-	news_event = Eden_pact.1002
+	Eden_treaty_formally_signed = yes
 }
 Cathedral_war_ARI_defeated = {
 	set_global_flag = Arius_defeated

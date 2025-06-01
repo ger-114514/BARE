@@ -320,9 +320,13 @@ Eden_treaty_negotiation_decisions = {
 		}
 		days_remove = -1
 		cancel_trigger = {
-			NOT = {
-				has_country_flag = Eden_GEH_call_for_solidarity
+			OR = {
+				NOT = {
+					has_country_flag = Eden_GEH_call_for_solidarity
+				}
+				has_global_flag = Eden_treaty_negotiation_completed
 			}
+			
 		}
 		modifier = {
 			political_power_cost = 0.5
@@ -1267,6 +1271,9 @@ Eden_treaty_negotiation_decisions = {
 		days_re_enable = 60
 		modifier = {
 			consumer_goods_factor = -0.3
+		}
+		cancel_trigger = {
+			has_global_flag = Eden_treaty_negotiation_completed
 		}
 		complete_effect = {
 			set_temp_variable = { weights_change = -10 }

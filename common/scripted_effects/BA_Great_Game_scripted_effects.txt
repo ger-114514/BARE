@@ -1,0 +1,391 @@
+Great_Game_calculate_power_score = {
+	hidden_effect = {
+		set_variable = { Great_Game_power_score_from_army = deployed_army_manpower_k }
+		set_variable = { Great_Game_power_score_from_air = deployed_airforce_manpower_k }
+		every_subject_country = {
+			add_to_variable = { PREV.Great_Game_power_score_from_army = deployed_army_manpower_k }
+			add_to_variable = { PREV.Great_Game_power_score_from_air = deployed_airforce_manpower_k }
+		}
+		multiply_variable = { Great_Game_power_score_from_army = 3 }
+		multiply_variable = { Great_Game_power_score_from_air = 2 }
+		set_variable = { Great_Game_power_score_from_factories = num_of_military_factories }
+		multiply_variable = { Great_Game_power_score_from_factories = 2 }
+		add_to_variable = { Great_Game_power_score_from_factories = num_of_civilian_factories }
+		set_variable = { Great_Game_power_score_from_technologies = num_researched_technologies }
+		multiply_variable = { num_researched_technologies = 2 }
+		#连胜/连败的修正
+		if = {
+			limit = { check_variable = { Great_Game_consecutive_wins > 0 } }
+			set_variable = { Great_Game_power_score_factor = Great_Game_consecutive_wins }
+			multiply_variable = { Great_Game_power_score_factor = 0.05 }
+			clamp_variable = {
+				var = Great_Game_power_score_factor
+				max = 0.5
+			}
+		}
+		else = {
+			set_variable = { Great_Game_power_score_factor = Great_Game_consecutive_defeats }
+			multiply_variable = { Great_Game_power_score_factor = -0.05 }
+			clamp_variable = {
+				var = Great_Game_power_score_factor
+				min = -0.5
+			}
+		}
+		add_to_variable = { Great_Game_power_score_factor = 1 }
+
+		set_variable = { Great_Game_power_score = Great_Game_power_score_from_army }
+		add_to_variable = { Great_Game_power_score = Great_Game_power_score_from_air }
+		add_to_variable = { Great_Game_power_score = Great_Game_power_score_from_factories }
+		add_to_variable = { Great_Game_power_score = Great_Game_power_score_from_technologies }
+		multiply_variable = { Great_Game_power_score = Great_Game_power_score_factor }
+	}
+}
+Great_Game_generate_global_chart = {
+	hidden_effect = {
+		for_each_scope_loop = {
+			array = global.Great_Game_overlords
+			Great_Game_calculate_power_score = yes
+			add_to_temp_array = { global.Great_Game_overlords_temp = THIS }
+			add_to_temp_array = { global.Great_Game_overlords_score_temp = Great_Game_power_score }
+			if = {
+				limit = { has_country_flag = involved_in_Great_Game_as_ally_leader }
+				set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
+				for_each_loop = {
+					array = Great_Game_temp_allies
+					value = v
+					add_to_variable = {
+						Great_Game_power_score_faction = var:v:Great_Game_power_score
+					}
+				}
+			}
+		}
+		#产生排行榜
+		clear_array = global.Great_Game_overlords_chart
+		for_each_loop = {
+			array = global.Great_Game_overlords
+			find_highest_in_array = {
+				array = global.Great_Game_overlords_score_temp
+				index = i
+			}
+			add_to_array = { global.Great_Game_overlords_chart = global.Great_Game_overlords_temp^i }
+			remove_from_temp_array = {
+				array = global.Great_Game_overlords_temp
+				index = i
+			}
+			remove_from_temp_array = {
+				array = global.Great_Game_overlords_score_temp
+				index = i
+			}
+		}
+		set_temp_variable = { rank = 1 }
+		for_each_scope_loop = {
+			array = global.Great_Game_overlords_chart
+			set_variable = { Great_Game_rank = rank }
+			if = {
+				limit = { check_variable = { rank = 1 } }
+				set_variable = { Great_Game_rank_icon_frame = 1 }
+			}
+			else_if = {
+				limit = { check_variable = { rank < 4 } }
+				set_variable = { Great_Game_rank_icon_frame = 2 }
+			}
+			else_if = {
+				limit = { check_variable = { rank < 7 } }
+				set_variable = { Great_Game_rank_icon_frame = 3 }
+			}
+			else = {
+				set_variable = { Great_Game_rank_icon_frame = 4 }
+			}
+			add_to_temp_variable = { rank = 1 }
+		}
+		#防bug用的
+		add_to_array = { global.Great_Game_overlords_chart = 0 }
+		add_to_array = { global.Great_Game_overlords_chart = 0 }
+	}
+}
+Great_Game_invite_to_ally = {
+	custom_effect_tooltip = {
+		localization_key = Great_Game_join_ally_tt
+		ALLY = "[?ally.GetNameWithFlag]"
+		LEADER = "[?leader.GetNameWithFlag]"
+		ENEMY = "[?enemy.GetNameWithFlag]"
+	}
+	var:leader = {
+		add_to_array = { Great_Game_temp_allies = var:ally }
+		add_to_variable = { Great_Game_power_score_faction = var:ally:Great_Game_power_score }
+	}
+	var:ally = {
+		if = {
+			limit = {
+				var:leader = { has_country_flag = involved_in_Great_Game_as_attacker }
+			}
+			set_country_flag = involved_in_Great_Game_as_attacker
+		}
+		else = {
+			set_country_flag = involved_in_Great_Game_as_defender
+		}
+		set_variable = { Great_Game_invader = var:leader:Great_Game_invader }
+		set_variable = { Great_Game_invade_target = var:leader:Great_Game_invade_target }
+		set_variable = { Great_Game_invade_target_overlord = var:leader:Great_Game_invade_target_overlord }
+		set_variable = { Great_Game_enemy = var:leader:Great_Game_enemy }
+		set_variable = { Great_Game_ally_leader = var:leader }
+	}
+}
+Great_Game_start_invasion = {
+	hidden_effect = {
+		#攻方
+		declare_war_on = {
+			target = FROM
+			type = take_trusteeship
+		}
+		activate_targeted_decision = {
+			target = FROM.OVERLORD
+			decision = college_exercise_ongoing_attacker
+		}
+		#攻方盟友
+		for_each_scope_loop = {
+			array = Great_Game_temp_allies
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = FROM.OVERLORD
+			}
+			activate_targeted_decision = {
+				target = FROM.OVERLORD
+				decision = college_exercise_ongoing_ally
+			}
+		}
+		FROM.OVERLORD = {
+			#守方
+			activate_targeted_decision = {
+				target = ROOT
+				decision = college_exercise_ongoing_defender
+			}
+			#守方盟友
+			for_each_scope_loop = {
+				array = Great_Game_temp_allies
+				add_to_war = {
+					targeted_alliance = PREV
+					enemy = ROOT
+				}
+				activate_targeted_decision = {
+					target = ROOT
+					decision = college_exercise_ongoing_ally
+				}
+			}
+		}
+	}
+}
+Great_Game_invade_succeeded = {
+	custom_effect_tooltip = Great_Game_invade_succeeded_tt
+	Great_Game_get_coins = yes
+	hidden_effect = {
+		#增加连胜
+		add_to_variable = { Great_Game_consecutive_wins = 1 }
+		clear_variable = Great_Game_consecutive_defeats
+		#记录
+		set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
+		set_variable = { Great_Game_record_enemy^Great_Game_record_count = FROM }
+		set_variable = { Great_Game_record_result^Great_Game_record_count = 1 }
+		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
+		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+		Great_Game_add_record = yes
+		FROM = {
+			Great_Game_get_coins = yes
+			#增加连败
+			add_to_variable = { Great_Game_consecutive_defeats = 1 }
+			clear_variable = Great_Game_consecutive_wins
+			#记录
+			set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
+			set_variable = { Great_Game_record_enemy^Great_Game_record_count = ROOT }
+			set_variable = { Great_Game_record_result^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+			Great_Game_add_record = yes
+			remove_from_array = {
+				array = BA_trusteeship_areas
+				value = var:Great_Game_invade_target
+			}
+			for_each_scope_loop = {
+				array = Great_Game_temp_allies
+				Great_Game_get_coins = yes
+				clr_country_flag = involved_in_Great_Game_as_defender
+				clear_variable = Great_Game_invader
+				clear_variable = Great_Game_invade_target
+				clear_variable = Great_Game_invade_target_overlord
+				clear_variable = Great_Game_enemy
+			}
+			clear_array = Great_Game_temp_allies
+			clr_country_flag = involved_in_Great_Game_as_defender
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+		}
+		for_each_scope_loop = {
+			array = Great_Game_temp_allies
+			Great_Game_get_coins = yes
+			clr_country_flag = involved_in_Great_Game_as_attacker
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+		}
+		#白和
+		white_peace = FROM
+		#夺取托管地区
+		add_to_array = { BA_trusteeship_areas = var:Great_Game_invade_target }
+		if = {
+			limit = { Great_Game_can_be_CEN_overlord = yes }
+			CEN = {
+				set_autonomy = {
+					target = var:Great_Game_invade_target
+					autonomy_state = autonomy_CEN_trusteeship_area
+				}
+			}
+			var:Great_Game_invade_target = {
+				if = {
+					limit = {
+						SRT = {
+							#TODO:SRT脱队
+							always = no
+						}
+					}
+					add_ideas = trusteeship_of_CEN_SRT_no
+				}
+				else = {
+					add_ideas = trusteeship_of_CEN_SRT_yes
+				}
+			}
+		}
+		else_if = {
+			limit = { Great_Game_can_be_ceaser_overlord = yes }
+			CAE = {
+				set_autonomy = {
+					target = var:Great_Game_invade_target
+					autonomy_state = autonomy_Ceaser_trusteeship_area
+				}
+			}
+			var:Great_Game_invade_target = {
+				add_ideas = trusteeship_of_CAE
+			}
+		}
+		else = {
+			set_autonomy = {
+				target = var:Great_Game_invade_target
+				autonomy_state = autonomy_bare_trusteeship_area
+			}
+		}
+		clr_country_flag = involved_in_Great_Game_as_attacker
+		clear_variable = Great_Game_invader
+		clear_variable = Great_Game_invade_target
+		clear_variable = Great_Game_invade_target_overlord
+		clear_variable = Great_Game_enemy
+		set_country_flag = Great_Game_invade_cd
+		activate_mission = Great_Game_invade_cd
+
+		Great_Game_generate_global_chart = yes
+	}
+}
+Great_Game_invade_failed = {
+	custom_effect_tooltip = Great_Game_invade_failed_tt
+	Great_Game_get_coins = yes
+	hidden_effect = {
+		FROM = {
+			#增加连胜
+			add_to_variable = { Great_Game_consecutive_wins = 1 }
+			clear_variable = Great_Game_consecutive_defeats
+			Great_Game_get_coins = yes
+			#记录
+			set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
+			set_variable = { Great_Game_record_enemy^Great_Game_record_count = ROOT }
+			set_variable = { Great_Game_record_result^Great_Game_record_count = 1 }
+			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
+			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+			Great_Game_add_record = yes
+			for_each_scope_loop = {
+				array = Great_Game_temp_allies
+				Great_Game_get_coins = yes
+				clr_country_flag = involved_in_Great_Game_as_defender
+				clear_variable = Great_Game_invader
+				clear_variable = Great_Game_invade_target
+				clear_variable = Great_Game_invade_target_overlord
+				clear_variable = Great_Game_enemy
+			}
+			clear_array = Great_Game_temp_allies
+			clr_country_flag = involved_in_Great_Game_as_defender
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+		}
+		#增加连败
+		add_to_variable = { Great_Game_consecutive_defeats = 1 }
+		clear_variable = Great_Game_consecutive_wins
+		#记录
+		set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
+		set_variable = { Great_Game_record_enemy^Great_Game_record_count = FROM }
+		set_variable = { Great_Game_record_result^Great_Game_record_count = 2 }
+		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
+		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
+		Great_Game_add_record = yes
+		for_each_scope_loop = {
+			array = Great_Game_temp_allies
+			Great_Game_get_coins = yes
+			clr_country_flag = involved_in_Great_Game_as_attacker
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+		}
+		white_peace = FROM
+		clr_country_flag = involved_in_Great_Game_as_attacker
+		clear_variable = Great_Game_invader
+		clear_variable = Great_Game_invade_target
+		clear_variable = Great_Game_invade_target_overlord
+		clear_variable = Great_Game_enemy
+		
+		Great_Game_generate_global_chart = yes
+	}
+}
+Great_Game_add_record = {
+	add_to_variable = { Great_Game_record_count = 1 }
+	add_to_array = { Great_Game_record_target = 1 }
+	add_to_array = { Great_Game_record_enemy = 1 }
+	add_to_array = { Great_Game_record_result = 1 }
+	add_to_array = { Great_Game_record_faction = 1 }
+	add_to_array = { Great_Game_record_date = 1 }
+}
+Great_Game_get_coins = {
+	for_each_scope_loop = {
+		array = enemies
+		if = {
+			limit = { Great_Game_is_involved = yes }
+			add_to_temp_variable = { total_casualties_k = casualties_k }
+		}
+	}
+	multiply_temp_variable = { total_casualties_k = 20 }
+	set_temp_variable = { coins = total_casualties_k }
+	add_to_temp_variable = { coins = Great_Game_get_coins_from_combat }
+	clear_variable = Great_Game_get_coins_from_combat
+	if = {
+		limit = { has_country_flag = involved_in_Great_Game_as_ally_leader }
+		divide_temp_variable = { total_casualties_k = 2 }
+	}
+	round_temp_variable = coins
+	custom_effect_tooltip = Great_Game_get_coins_tt
+	add_to_variable = { Great_Game_coins = coins }
+	clamp_variable = {
+		var = Great_Game_coins
+		min = 0
+		max = 9999
+	}
+}
+Great_Game_cost_coins = {
+	custom_effect_tooltip = Great_Game_cost_coins_tt
+	subtract_from_variable = { Great_Game_coins = coins }
+	clamp_variable = {
+		var = Great_Game_coins
+		min = 0
+		max = 9999
+	}
+}

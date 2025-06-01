@@ -1,0 +1,56 @@
+spriteTypes = {
+	SpriteType = {
+		name = "BA_flag_frame_large"
+		texturefile = "gfx/interface/BA_flag_frame_large.dds"			
+	}
+	SpriteType = {
+		name = "BA_flag_frame_medium"
+		texturefile = "gfx/interface/BA_flag_frame_medium.dds"			
+	}
+	frameAnimatedSpriteType = {
+		name = "BA_common_notice"
+		texturefile = "gfx/interface/BA_common_notice.dds"
+		noOfFrames = 2
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	SpriteType = {
+		name = "BA_exit_button_1"
+		texturefile = "gfx/interface/BA_exit_button_1.dds"			
+	}
+	SpriteType = {
+		name = "BA_exit_button_2"
+		texturefile = "gfx/interface/BA_exit_button_2.dds"			
+	}
+	SpriteType = {
+		name = "BA_silver_button_1"
+		texturefile = "gfx/interface/BA_silver_button_1.dds"			
+	}
+	SpriteType = {
+		name = "BA_blue_button_1"
+		texturefile = "gfx/interface/BA_blue_button_1.dds"			
+	}
+	SpriteType = {
+		name = "BA_detail_icon_1"
+		texturefile = "gfx/interface/BA_detail_icon_1.dds"			
+	}
+	corneredTileSpriteType = {
+		name = "GFX_generic_bg_grey"
+		size= { x = 10 y = 10 }
+		textureFile = "gfx/interface/tiles/GFX_generic_bg_grey.dds"
+		borderSize = { x = 1 y = 1 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_generic_bg_white_1"
+		size = { x = 10 y = 10 }
+		borderSize = { x = 50 y = 50 }
+		textureFile = "gfx/interface/tiles/GFX_generic_bg_white_1.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

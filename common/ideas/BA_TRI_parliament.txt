@@ -500,6 +500,7 @@ ideas = {
 				if = {
 					limit = { check_variable = { TRI_bill_come_into_effect = 1 } }
 					country_event = TRI_events.52
+					set_country_flag = TRI_mine_available
 				}
 			}
 		}

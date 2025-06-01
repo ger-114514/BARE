@@ -46,7 +46,7 @@ spriteTypes = {
     progressbartype = {
 		name = "TRI_regions_justice_pie"
         textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_justice_pie.dds"
-        textureFile2 = "gfx/interface/Trinity/regions/gfx/interface/Trinity/regions/120_120_empty_bg.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/120_120_empty_bg.dds"
 		size = { x = 120 y = 120 }
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes
@@ -54,7 +54,7 @@ spriteTypes = {
     progressbartype = {
 		name = "TRI_regions_sisterhood_pie"
         textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_sisterhood_pie.dds"
-        textureFile2 = "gfx/interface/Trinity/regions/gfx/interface/Trinity/regions/120_120_empty_bg.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/120_120_empty_bg.dds"
 		size = { x = 120 y = 120 }
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes
@@ -62,7 +62,7 @@ spriteTypes = {
     progressbartype = {
 		name = "TRI_regions_knights_pie"
         textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_knights_pie.dds"
-        textureFile2 = "gfx/interface/Trinity/regions/gfx/interface/Trinity/regions/120_120_empty_bg.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/120_120_empty_bg.dds"
 		size = { x = 120 y = 120 }
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes

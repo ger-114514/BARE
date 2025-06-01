@@ -114,9 +114,25 @@ set_popularities = {
 }
 
 
+set_autonomy = {
+	target = CAP
+	autonomy_state = autonomy_Ceaser_sub_branch
+}
+set_autonomy = {
+	target = CAH
+	autonomy_state = autonomy_Ceaser_sub_branch
+}
+set_autonomy = {
+	target = CAO
+	autonomy_state = autonomy_Ceaser_sub_branch
+}
+set_autonomy = {
+	target = CAB
+	autonomy_state = autonomy_Ceaser_sub_branch
+}
+
 create_faction = cae_faction
 add_to_faction = CAP
 add_to_faction = CAH
 add_to_faction = CAO
 add_to_faction = CAB
-

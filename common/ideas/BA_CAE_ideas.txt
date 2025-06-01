@@ -1,5 +1,31 @@
 ideas = {
 	country = {
+		trusteeship_of_CAE = { #凯撒公司托管地区
+			picture = unkown
+			targeted_modifier = {
+				tag = CAB
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAH
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAO
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAP
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+			cancel = {
+				NOT = { is_puppet_of = CAE }
+			}
+		}
 		CAE_LiWeiTan = { #利维坦
 			picture = unkown
 

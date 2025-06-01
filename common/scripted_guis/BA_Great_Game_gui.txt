@@ -1,0 +1,162 @@
+scripted_gui = {
+	#战术演习
+	Great_Game_enter = {
+		context_type = player_context
+		window_name = "Great_Game_enter"
+		parent_window_token = top_bar
+		visible = {
+			has_global_flag = BA_Great_Game_available
+			ROOT = {
+				Great_Game_can_be_overlord = yes
+			}
+		}
+		triggers = {
+			BA_common_notice_visible = {
+				NOT = {
+					has_country_flag = Great_Game_enter_notice
+				}
+                is_ai = no
+			}
+		}
+		effects = {
+			Great_Game_enter_button_click = {
+				if = {
+					limit = {
+						has_country_flag = BA_Great_Game_gui_window_visible
+					}
+					clr_country_flag = BA_Great_Game_gui_window_visible
+				}
+				else = {
+					set_country_flag = BA_Great_Game_gui_window_visible
+				}
+			}
+			BA_common_notice_click = {
+				set_country_flag = Great_Game_enter_notice
+			}
+		}
+	}
+	Great_Game_coin = {
+		context_type = player_context
+		window_name = "Great_Game_coin"
+		parent_window_token = top_bar
+		visible = {
+			has_global_flag = BA_Great_Game_available
+			ROOT = {
+				Great_Game_can_be_overlord = yes
+			}
+		}
+	}
+	Great_Game_gui_window = {
+		context_type = player_context
+		window_name = "Great_Game_gui_window"
+		visible = {
+			has_country_flag = BA_Great_Game_gui_window_visible
+		}
+		triggers = {
+			Great_Game_exercise_record_click_enabled = {
+				check_variable = { Great_Game_record_count > 0 }
+			}
+		}
+		effects = {
+			close_button_click = {
+				clr_country_flag = BA_Great_Game_gui_window_visible
+			}
+			Great_Game_chart_refresh_active_click = {
+				Great_Game_generate_global_chart = yes
+			}
+			Great_Game_exercise_record_click = {
+				set_country_flag = BA_Great_Game_record_window_visible
+			}
+		}
+		dynamic_lists = {
+			Great_Game_global_list = {
+				array = global.Great_Game_overlords_chart
+				value = v
+				change_scope = yes
+				entry_container = [BA_get_Great_Game_list_container]
+			}
+		}
+		properties = {
+			Great_Game_player_flag = {
+				image = "[ROOT.GetFlag]"
+			}
+			Great_Game_player_rank_icon = {
+				frame = var:Great_Game_rank_icon_frame
+			}
+			Great_Game_list_flag = {
+				image = "[THIS.GetFlag]"
+			}
+			Great_Game_list_rank_icon = {
+				frame = var:THIS.Great_Game_rank_icon_frame
+			}
+		}
+	}
+	Great_Game_record_window = {
+		context_type = player_context
+		window_name = "Great_Game_record_window"
+		visible = {
+			has_country_flag = BA_Great_Game_record_window_visible
+		}
+		effects = {
+			close_button_click = {
+				clr_country_flag = BA_Great_Game_record_window_visible
+			}
+		}
+		dynamic_lists = {
+			Great_Game_record_list = {
+				array = Great_Game_record_target
+				value = v
+				index = i
+				entry_container = "[BA_get_Great_Game_record_container]"
+			}
+		}
+		properties = {
+			Great_Game_record_enemy_flag = {
+				image = "[?Great_Game_record_enemy^i.GetFlag]"
+			}
+			Great_Game_record_target_flag = {
+				image = "[?Great_Game_record_target^i.GetFlag]"
+			}
+			Great_Game_record_result_icon = {
+				frame = var:Great_Game_record_result^i
+			}
+			Great_Game_record_faction_icon = {
+				frame = var:Great_Game_record_faction^i
+			}
+		}
+	}
+	Great_Game_decision_gui = {
+		context_type = decision_category
+		window_name = "Great_Game_decision_gui"
+		dynamic_lists = {
+			Great_Game_decision_gui_window = {
+				array = Great_Game_decision_window
+				entry_container = "[BA_get_Great_Game_decision_gui]"
+			}
+			Great_Game_decision_gui_attacker_allies = {
+				array = var:Great_Game_invader:Great_Game_temp_allies
+				change_scope = yes
+				entry_container = "Great_Game_decision_gui_window_allies_flag"
+			}
+			Great_Game_decision_gui_defender_allies = {
+				array = var:Great_Game_invade_target_overlord:Great_Game_temp_allies
+				change_scope = yes
+				entry_container = "Great_Game_decision_gui_window_allies_flag"
+			}
+		}
+		properties = {
+			flag_attacker = {
+				image = "[?Great_Game_invader.GetFlag]"
+			}
+			flag_defender = {
+				image = "[?Great_Game_invade_target_overlord.GetFlag]"
+			}
+			flag_target = {
+				image = "[?Great_Game_invade_target.GetFlag]"
+			}
+			allies_flag = {
+				image = "[THIS.GetFlag]"
+			}
+		}
+	}
+}

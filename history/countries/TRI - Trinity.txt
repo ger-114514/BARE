@@ -524,7 +524,7 @@ set_variable = { tim_mil_to_civ_cost = 0 }
 set_variable = { tim_production_lack = 0 }
 
 #【圣三一军备】民族精神变量
-set_variable = { TRI_trinity_military_land_doctrine_cost_factor = 0.5 }
+set_variable = { TRI_trinity_military_land_doctrine_cost_factor = 0.1 }
 set_variable = { TRI_trinity_military_army_org_factor = -0.1 }
 set_variable = { TRI_trinity_military_industrial_capacity_factory = -0.1 }
 add_dynamic_modifier = { modifier = TRI_trinity_military }

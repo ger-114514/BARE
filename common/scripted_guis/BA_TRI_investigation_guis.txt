@@ -9,6 +9,14 @@ scripted_gui = {
             has_country_flag = TRI_investigate_available #在开启补课部调查的时候才可用
             is_ai = no
         }
+		triggers = {
+			BA_common_notice_visible = {
+				NOT = {
+					has_country_flag = TRI_investigation_notice
+				}
+                is_ai = no
+			}
+		}
         effects = {
             TRI_investigation_open_button_click = {
                 if = {
@@ -19,6 +27,9 @@ scripted_gui = {
                     set_country_flag = TRI_investigate_open
                 }
             }
+			BA_common_notice_click = {
+				set_country_flag = TRI_investigation_notice
+			}
         }
     }
 
