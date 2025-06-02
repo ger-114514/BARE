@@ -1,0 +1,18 @@
+state={
+	id=711
+	name="STATE_711"
+	provinces={
+		2178 2368 5737 7017 7359 7479 11840 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A38
+		add_core_of=A38
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

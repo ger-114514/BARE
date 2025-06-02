@@ -1,0 +1,18 @@
+state={
+	id=710
+	name="STATE_710"
+	provinces={
+		99 1278 1425 3630 4666 6066 6972 9248 12011 12040 12050 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A38
+		add_core_of=A38
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

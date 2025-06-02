@@ -10,14 +10,13 @@ state={
 		owner = A04
 		add_core_of=A04
 		add_core_of=TRI
-        victory_points = {3383 5}
 	}
 
 	provinces={
-		38 485 2835 3383 3511 3625 3822 4475 5849 7343 7524 8339 8396 8923 9146 11644 11669 11846 
+		38 485 2835 3625 5849 8339 8396 9146 11644 11669 11846
 	}
 	manpower=16320
-	state_category = wasteland
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

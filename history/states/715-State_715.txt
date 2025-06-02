@@ -1,0 +1,19 @@
+state={
+	id=715
+	name="STATE_715"
+	provinces={
+		1592 2460 2512 2746 3159 3177 4326 5257 5448 5456 6401 9553 10636 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = GEH
+		add_core_of=GEH
+		victory_points = {9553 5}
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

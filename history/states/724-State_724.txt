@@ -1,0 +1,19 @@
+state={
+	id=724
+	name="STATE_724"
+	provinces={
+		449 1729 4279 6181 6695 11583 11602 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner=A37
+		add_core_of=A37
+		victory_points = {1729 15}
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
