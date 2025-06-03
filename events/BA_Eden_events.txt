@@ -58,10 +58,6 @@ news_event = {
         trigger = {
             original_tag = GEH
         }
-        if = {
-            limit = { is_ai = no }
-            BARE_SuperEvent_2_effect_2 = yes
-        }
 
 		ai_chance = {
 			base = 100
@@ -112,7 +108,11 @@ news_event = {
         hidden_effect = {
             if = {
                 limit = { is_ai = no }
-                #BAR_LX_Super_Event_effect_7 = yes
+                BARE_SuperEvent_2_effect_2 = yes
+            }
+            country_event = {
+                id = LS_GST.51
+                days = 40
             }
         }
 		ai_chance = {
@@ -122,12 +122,34 @@ news_event = {
     option = {
 		name = Eden_pact.1002.b
         trigger = {
-            NOT = { original_tag = TRI }
+            original_tag = GEH
         }
         hidden_effect = {
             if = {
                 limit = { is_ai = no }
-                #BAR_LX_Super_Event_effect_7 = yes
+                BARE_SuperEvent_2_effect_2 = yes
+            }
+            country_event = {
+                id = LS_GST.52
+                days = 40
+            }
+        }
+		ai_chance = {
+			base = 100
+		}
+    }
+    option = {
+		name = Eden_pact.1002.c
+        trigger = {
+            NOT = {
+                original_tag = TRI
+                original_tag = GEH
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = { is_ai = no }
+                BARE_SuperEvent_2_effect_2 = yes
             }
         }
         

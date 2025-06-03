@@ -192,7 +192,6 @@ ARITRI_coup_effect_lock = {
 #政变事件
 ARITRI_coup_effect = {
 	set_global_flag = ARITRI_Coup_is_Happened #政变已发生
-	BARE_SuperEvent_2_effect_6 = yes
 
 	if = {#阿里乌斯触发（标准剧情）
 		limit = {

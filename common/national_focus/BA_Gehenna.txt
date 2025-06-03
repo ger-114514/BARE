@@ -351,13 +351,16 @@ focus_tree = {
                 id = GEH_bp_between_chaos_and_order
                 value < -0.6
             }
+            NOT = {
+                custom_trigger_tooltip = {
+                    has_global_flag = BA_2st_eden_pact_begin
+                    tooltip = GEH_trinity_has_won_dip_race
+                }
+            }
         }
 
         bypass = {
-            custom_trigger_tooltip = {
-                has_global_flag = BA_2st_eden_pact_begin
-                tooltip = GEH_trinity_has_won_dip_race
-            }
+            
         }
 
         completion_reward = {

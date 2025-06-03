@@ -434,14 +434,10 @@ focus_tree = {
 					}
 					add_political_power = 100
 					add_stability = 0.05
-					country_event = TRI_events.13
+					country_event = TRI_events.50
 					#桐藤渚偏执度-10%
 					TRI_paranoia_decrease_10 = yes
 					add_ideas = TRI_prepare_for_meeting
-					hidden_effect = {
-						set_global_flag = BA_2st_eden_pact_TRI_leader
-                		Eden_treaty_start = yes
-					}
 				}
 				ai_will_do = {
 					factor = 20
@@ -619,6 +615,7 @@ focus_tree = {
 					add_to_array = { TRI_hoshubu_focus_line = token:TRI_buy_time }
 					activate_shine_on_focus = TRI_investigation_in_care
 					set_variable = { TRI_auto_focus_days = 35 }
+					set_variable = { TRI_auto_focus_originator = token:TRI_intelligence_bureau }
 					hidden_effect = {
 						country_event = {
 							id = TRI_autofocus.1
@@ -639,7 +636,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -668,7 +665,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -692,7 +689,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -716,7 +713,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -740,7 +737,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -767,7 +764,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -794,7 +791,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -822,7 +819,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -858,7 +855,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -882,7 +879,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -907,7 +904,7 @@ focus_tree = {
 					custom_override_tooltip = {
 						tooltip = {
 							localization_key = autonomous_focus_trigger_tt
-							ORIGINATOR = TRI_hoshubu
+							ORIGINATOR = TRI_intelligence_bureau
 						}
 						always = no
 					}
@@ -960,7 +957,8 @@ focus_tree = {
 							add_to_array = { TRI_hoshubu_focus_line = token:TRI_sweet_dream_in_one_night }
 						}
 						ARITRI_coup_effect_lock = yes
-						set_variable = { TRI_auto_focus_days = 7 }	
+						set_variable = { TRI_auto_focus_days = 7 }
+						set_variable = { TRI_auto_focus_originator = token:TRI_hoshubu }
 					}
 				}
 			}
@@ -1344,19 +1342,6 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					TRI_unity_increase_5 = yes
-					#桐藤渚添加特质【温和的统领】(雇佣政治顾问和军事顾问的花费-25%)
-					TRI_nagisa = {
-						swap_country_leader_traits = {
-							remove = TRI_nagisa_Mild_leader
-							add = TRI_nagisa_Mild_leader_alt
-						}
-					}
-					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
-					set_temp_variable = { loyalty_change = 0.06 }
-					TRI_parliament_loyalty_change_parliament = yes
-					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
-					set_temp_variable = { loyalty_change = 0.04 }
-					TRI_parliament_loyalty_change_parliament = yes
 					country_event = TRI_coup.38
 				}
 			}
@@ -2539,7 +2524,6 @@ focus_tree = {
 				remove_dynamic_modifier = { modifier = TRI_chaotic_frontline_2 }
 				add_ideas = TRI_friendship_glory_future
 				add_ideas = TRI_victory_trust_unity
-				#TRI_set_focus_successful_Eden = yes
 			}
 		}
 		focus = { #阿里乌斯之殇
