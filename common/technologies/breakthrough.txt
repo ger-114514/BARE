@@ -11,7 +11,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T2_infantry_weapon = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 0 y = 4 }
@@ -21,7 +21,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_infantry_weapon = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 0 y = 8 }
@@ -31,7 +31,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_infantry_weapon = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 0 y = 12 }
@@ -41,7 +41,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_infantry_weapon = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 0 y = 16 }
@@ -61,7 +61,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T2_mobile_vehicle = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 3 y = 4 }
@@ -71,7 +71,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_mobile_vehicle = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 3 y = 8 }
@@ -81,7 +81,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_mobile_vehicle = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 3 y = 12 }
@@ -91,7 +91,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_mobile_vehicle = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 3 y = 16 }
@@ -111,7 +111,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T2_assult_vehicle = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 6 y = 4 }
@@ -121,7 +121,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_assult_vehicle = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 6 y = 8 }
@@ -131,7 +131,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_assult_vehicle = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 6 y = 12 }
@@ -141,7 +141,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_assult_vehicle = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 6 y = 16 }
@@ -161,7 +161,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T2_drone = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 9 y = 4 }
@@ -171,7 +171,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_drone = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 9 y = 8 }
@@ -181,7 +181,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_drone = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 9 y = 12 }
@@ -191,7 +191,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_drone = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 9 y = 16 }
@@ -211,7 +211,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T2_production = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 12 y = 4 }
@@ -221,7 +221,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_production = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 12 y = 8 }
@@ -231,7 +231,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_production = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 12 y = 12 }
@@ -241,7 +241,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_production = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 12 y = 16 }
@@ -262,7 +262,7 @@ technologies = {
 	}
 
     T2_electronic = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 15 y = 4 }
@@ -272,7 +272,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_electronic = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 15 y = 8 }
@@ -282,7 +282,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_electronic = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 15 y = 12 }
@@ -292,7 +292,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_electronic = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 15 y = 16 }
@@ -312,7 +312,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T2_opaz = {
-		research_cost = 2
+		research_cost = 3
 		folder = {
 			name = breakthrough_folder
 			position = { x = 18 y = 4 }
@@ -322,7 +322,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T3_opaz = {
-		research_cost = 2
+		research_cost = 4
 		folder = {
 			name = breakthrough_folder
 			position = { x = 18 y = 8 }
@@ -332,7 +332,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T4_opaz = {
-		research_cost = 2
+		research_cost = 6
 		folder = {
 			name = breakthrough_folder
 			position = { x = 18 y = 12 }
@@ -342,7 +342,7 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
     T5_opaz = {
-		research_cost = 2
+		research_cost = 8
 		folder = {
 			name = breakthrough_folder
 			position = { x = 18 y = 16 }

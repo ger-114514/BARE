@@ -2,7 +2,7 @@ state={
 	id=486
 	name="STATE_486"
 	provinces={
-		224 271 698 1359 1822 2841 3310 3664 3765 4913 6192 6294 6699 7002 7593 7768 8251 8272 8656 9550 12260 12263 12265 12268 12271 12274 12275 
+		271 1359 2841 3765 6192 7002 9550 12274 12275 
 	}
 	history={
 		buildings = {
@@ -10,6 +10,7 @@ state={
 			industrial_complex = 1
 		}
 		owner=A36
+		add_core_of=A36
 		victory_points = {271 10}
 		victory_points = {6699 1}
 	}

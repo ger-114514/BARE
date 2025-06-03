@@ -2,13 +2,14 @@ state={
 	id=489
 	name="STATE_489"
 	provinces={
-		588 880 1362 1867 2476 3505 3731 4055 5232 6015 7691 7777 8351 12041 12079 12089 
+		1362 2476 3731 4055 5232 7691 12041 12079 
 	}
 	history={
 		buildings = {
 			infrastructure = 3
 		}
 		owner=A36
+		add_core_of=A36
 		victory_points = {12079 15}
 	}
 	manpower=12620

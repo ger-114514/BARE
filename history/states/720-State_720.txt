@@ -1,0 +1,19 @@
+state={
+	id=720
+	name="STATE_720"
+	provinces={
+		792 935 1795 2582 5284 7568 10531 10538 10541 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = GEH
+		add_core_of=GEH
+		victory_points = {792 1}
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
