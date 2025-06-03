@@ -95,7 +95,7 @@ sp_ba_T3_air_project = {
         }
     }
     breakthrough_cost = {
-        specialization_air = 2
+        specialization_air = 1
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -168,7 +168,7 @@ sp_ba_T4_air_project = {
         }
     }
     breakthrough_cost = {
-        specialization_air = 3
+        specialization_air = 2
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -240,7 +240,7 @@ sp_ba_T5_air_project = {
         }
     }
     breakthrough_cost = {
-        specialization_air = 4
+        specialization_air = 3
     }
     narrative = {
         name = "my_project_name_loc_key"

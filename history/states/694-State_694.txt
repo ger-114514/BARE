@@ -1,0 +1,20 @@
+state={
+	id=694
+	name="STATE_694"
+	provinces={
+		840 3147 3580 5415 12028 12045 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A04
+		add_core_of=A04
+		add_core_of=TRI
+	    victory_points = {840 5}
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

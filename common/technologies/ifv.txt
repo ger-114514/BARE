@@ -919,129 +919,129 @@ technologies = {
 			factor = 1
 		}
 	}
-	###欧帕兹武备强化2
-	IFV_Opaz_defense_Enhancement_T2 = {
-		research_cost = 1.5
-		folder = {
-			name = ifv_folder
-			position = {
-				x = 8
-				y = 4
-			}
-		}
+	# ###欧帕兹武备强化2
+	# IFV_Opaz_defense_Enhancement_T2 = {
+	# 	research_cost = 1.5
+	# 	folder = {
+	# 		name = ifv_folder
+	# 		position = {
+	# 			x = 8
+	# 			y = 4
+	# 		}
+	# 	}
 
-		on_research_complete = {
-			custom_effect_tooltip = IFV_defense_optimization_upgrade1_tt
-		}
+	# 	on_research_complete = {
+	# 		custom_effect_tooltip = IFV_defense_optimization_upgrade1_tt
+	# 	}
 
-		path = {
-			leads_to_tech = IFV_Opaz_defense_Enhancement_T3
-		}
-		dependencies = {
-			T2_mobile_vehicle = 1
-			T2_opaz = 1
-		}
-		categories = {
-			motorized
-			apc
-			ifv
-			mech_upgrade
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	IFV_Opaz_defense_Enhancement_T3 = {
-		research_cost = 1.5
-		folder = {
-			name = ifv_folder
-			position = {
-				x = 8
-				y = 9
-			}
-		}
+	# 	path = {
+	# 		leads_to_tech = IFV_Opaz_defense_Enhancement_T3
+	# 	}
+	# 	dependencies = {
+	# 		T2_mobile_vehicle = 1
+	# 		T2_opaz = 1
+	# 	}
+	# 	categories = {
+	# 		motorized
+	# 		apc
+	# 		ifv
+	# 		mech_upgrade
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# }
+	# IFV_Opaz_defense_Enhancement_T3 = {
+	# 	research_cost = 1.5
+	# 	folder = {
+	# 		name = ifv_folder
+	# 		position = {
+	# 			x = 8
+	# 			y = 9
+	# 		}
+	# 	}
 
-		on_research_complete = {
-			custom_effect_tooltip = IFV_defense_optimization_upgrade2_tt
-		}
-
-
-		path = {
-			leads_to_tech = IFV_Opaz_defense_Enhancement_T4
-		}
-		dependencies = {
-			T3_mobile_vehicle = 1
-			T3_opaz = 1
-		}
-		categories = {
-			motorized
-			apc
-			ifv
-			mech_upgrade
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	IFV_Opaz_defense_Enhancement_T4 = {
-		research_cost = 1.5
-		folder = {
-			name = ifv_folder
-			position = {
-				x = 8
-				y = 14
-			}
-		}
-		path = {
-			leads_to_tech = IFV_Opaz_defense_Enhancement_T5
-		}
-		dependencies = {
-			T4_mobile_vehicle = 1
-			T4_opaz = 1
-		}
-
-		on_research_complete = {
-			custom_effect_tooltip = IFV_defense_optimization_upgrade3_tt
-		}
-
-		categories = {
-			motorized
-			apc
-			ifv
-			mech_upgrade
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	IFV_Opaz_defense_Enhancement_T5 = {
-		research_cost = 1.5
-		folder = {
-			name = ifv_folder
-			position = {
-				x = 8
-				y = 19
-			}
-		}
+	# 	on_research_complete = {
+	# 		custom_effect_tooltip = IFV_defense_optimization_upgrade2_tt
+	# 	}
 
 
-		on_research_complete = {
-			custom_effect_tooltip = IFV_defense_optimization_upgrade4_tt
-		}
-		dependencies = {
-			T5_mobile_vehicle = 1
-			T5_opaz = 1
-		}
-		categories = {
-			motorized
-			apc
-			ifv
-			mech_upgrade
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	# 	path = {
+	# 		leads_to_tech = IFV_Opaz_defense_Enhancement_T4
+	# 	}
+	# 	dependencies = {
+	# 		T3_mobile_vehicle = 1
+	# 		T3_opaz = 1
+	# 	}
+	# 	categories = {
+	# 		motorized
+	# 		apc
+	# 		ifv
+	# 		mech_upgrade
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# }
+	# IFV_Opaz_defense_Enhancement_T4 = {
+	# 	research_cost = 1.5
+	# 	folder = {
+	# 		name = ifv_folder
+	# 		position = {
+	# 			x = 8
+	# 			y = 14
+	# 		}
+	# 	}
+	# 	path = {
+	# 		leads_to_tech = IFV_Opaz_defense_Enhancement_T5
+	# 	}
+	# 	dependencies = {
+	# 		T4_mobile_vehicle = 1
+	# 		T4_opaz = 1
+	# 	}
+
+	# 	on_research_complete = {
+	# 		custom_effect_tooltip = IFV_defense_optimization_upgrade3_tt
+	# 	}
+
+	# 	categories = {
+	# 		motorized
+	# 		apc
+	# 		ifv
+	# 		mech_upgrade
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# }
+	# IFV_Opaz_defense_Enhancement_T5 = {
+	# 	research_cost = 1.5
+	# 	folder = {
+	# 		name = ifv_folder
+	# 		position = {
+	# 			x = 8
+	# 			y = 19
+	# 		}
+	# 	}
+
+
+	# 	on_research_complete = {
+	# 		custom_effect_tooltip = IFV_defense_optimization_upgrade4_tt
+	# 	}
+	# 	dependencies = {
+	# 		T5_mobile_vehicle = 1
+	# 		T5_opaz = 1
+	# 	}
+	# 	categories = {
+	# 		motorized
+	# 		apc
+	# 		ifv
+	# 		mech_upgrade
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# }
 	###步战车防御优化
 	IFV_defense_optimization_T2 = {
 		research_cost = 1.5
@@ -1573,6 +1573,7 @@ technologies = {
 	}
 	####民用直升机
 	Civilian_helicopter_T1 = {
+		show_equipment_icon = yes
 		enable_equipments = {
 			helicopter_equipment_1
 			attack_helicopter_equipment_1

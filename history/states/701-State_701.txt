@@ -1,0 +1,19 @@
+state={
+	id=701
+	name="STATE_701"
+	provinces={
+		907 3030 4122 5121 7820 11962 11972 
+	}
+	history = {
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A05
+		add_core_of=A05
+		add_core_of=TRI
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

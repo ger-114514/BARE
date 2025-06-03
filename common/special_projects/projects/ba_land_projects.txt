@@ -110,7 +110,7 @@ sp_ba_T3_land_project = {
         }
     }
     breakthrough_cost = {
-        specialization_land = 2
+        specialization_land = 1
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -190,7 +190,7 @@ sp_ba_T4_land_project = {
         }
     }
     breakthrough_cost = {
-        specialization_land = 3
+        specialization_land = 2
     }
     narrative = {
         name = "my_project_name_loc_key"
@@ -271,7 +271,7 @@ sp_ba_T5_land_project = {
         }
     }
     breakthrough_cost = {
-        specialization_land = 4
+        specialization_land = 3
     }
     narrative = {
         name = "my_project_name_loc_key"

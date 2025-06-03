@@ -2,13 +2,14 @@ state={
 	id=488
 	name="STATE_488"
 	provinces={
-		367 570 1521 3700 4797 4821 5009 6531 7024 7361 7995 12165 12200 12205 12223 12228 
+		3700 4821 6531 7024 7361 12165 12200 12223
 	}
 	history={
 		buildings = {
 			infrastructure = 3
 		}
 		owner=A36
+		add_core_of=A36
 		victory_points = {6531 5}
 		victory_points = {12165 5}
 	}

@@ -2,7 +2,7 @@ state={
 	id=392
 	name="STATE_392"
 	provinces={
-		265 566 616 663 983 1645 2006 2167 2859 2976 4317 4876 4912 5129 5246 5984 6139 7205 7289 7636 7760 8570 9441 10659 10682 10685 10728 10732 
+		2167 2976 4876 4912 5129 6139 7636 10685
 	}
 	history = {
 		buildings = {
@@ -10,7 +10,6 @@ state={
 		}
 		owner = GEH
 		add_core_of=GEH
-		victory_points = {7205 5}
     }
 	manpower=45870
 	state_category = rural

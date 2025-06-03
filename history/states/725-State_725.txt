@@ -1,0 +1,18 @@
+state={
+	id=725
+	name="STATE_725"
+	provinces={
+		350 1172 1324 2675 4129 5310 7147 12030 
+	}
+	history={
+		buildings = {
+			infrastructure = 4
+		}
+		owner=A37
+		add_core_of=A37
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
