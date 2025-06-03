@@ -377,17 +377,33 @@ spriteTypes = {
 
 	###支援设备
 	##装备图标
+	SpriteType = {
+		name = "GFX_support_equipment_medium"
+		texturefile = "gfx/interface/technologies/support/support_equipment_1.dds"
+	}
     SpriteType = {
 		name = "GFX_support_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/support/support_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_engineer_equipment_medium"
+		texturefile = "gfx/interface/technologies/support/support_engineer_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_support_engineer_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/support/support_engineer_equipment_1.dds"
 	}
 	SpriteType = {
+		name = "GFX_support_logistics_equipment_medium"
+		texturefile = "gfx/interface/technologies/support/support_logistics_equipment_1.dds"
+	}
+	SpriteType = {
 		name = "GFX_support_logistics_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/support/support_logistics_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_support_security_equipment_medium"
+		texturefile = "gfx/interface/technologies/support/support_security_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_support_security_equipment_1_medium"
@@ -448,5 +464,601 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_support_security_T5_medium"
 		texturefile = "gfx/interface/technologies/support/support_security_T5.dds"
+	}
+    
+	##神秘支援
+	SpriteType = {
+		name = "GFX_special_fire_support_equipment_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T1_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T3_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T5_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T21_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_weapons_T21.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T22_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_weapons_T22.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T41_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_weapons_T41.dds"
+	}
+	SpriteType = {
+		name = "GFX_special_fire_support_weapons_T42_medium"
+		texturefile = "gfx/interface/technologies/support/special_fire_support_weapons_T42.dds"
+	}
+
+	##防空支援
+	SpriteType = {
+		name = "GFX_infantry_anti_air_equipment_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_anti_air_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_infantry_anti_air_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T1_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T3_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T5_medium"
+		texturefile = "gfx/interface/technologies/support/infantry_anti_air_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T21_medium"
+		texturefile = "gfx/interface/technologies/support/air_defense_weapons_T21.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T22_medium"
+		texturefile = "gfx/interface/technologies/support/air_defense_weapons_T22.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T41_medium"
+		texturefile = "gfx/interface/technologies/support/air_defense_weapons_T41.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_defense_weapons_T42_medium"
+		texturefile = "gfx/interface/technologies/support/air_defense_weapons_T42.dds"
+	}
+
+	###########################################
+	######## Infantry Fighting Vehicle ########
+	###########################################
+
+	###Generic###
+	###TRUCK###
+	SpriteType = {
+		name = "GFX_motorized_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/motorized_equipment_1.dds"
+	}
+    SpriteType = {
+		name = "GFX_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/motorized_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilian_car_equipment_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/motorized_equipment_1.dds"
+	}
+
+    ###APC###
+	##Default
+	SpriteType = {
+		name = "GFX_apc_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_equipment_4.dds"
+	}
+
+	##APC AA Variation
+	SpriteType = {
+		name = "GFX_apc_aa_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_aa_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_aa_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_aa_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_aa_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AA_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AA_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AA_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AA_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_aa_equipment_4.dds"
+	}
+
+	##APC AT Variation
+	SpriteType = {
+		name = "GFX_apc_at_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_at_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_at_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_at_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_at_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AT_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AT_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AT_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_AT_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_at_equipment_4.dds"
+	}
+
+	##APC ART Variation
+	SpriteType = {
+		name = "GFX_apc_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_artillery_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_apc_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_ART_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_ART_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_ART_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Armored_Vehicles_ART_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/apc_artillery_equipment_4.dds"
+	}
+
+	###IFV Default###
+	SpriteType = {
+		name = "GFX_ifv_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_equipment_4.dds"
+	}
+
+	##IFV AA Variation
+	SpriteType = {
+		name = "GFX_ifv_aa_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_aa_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_1.dds"
+	}
+    SpriteType = {
+		name = "GFX_ifv_aa_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_aa_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_aa_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AA_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AA_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AA_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AA_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_aa_equipment_4.dds"
+	}
+
+    ##IFV AT Variation
+	SpriteType = {
+		name = "GFX_ifv_at_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_at_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_at_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_at_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_at_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AT_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AT_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AT_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_AT_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_at_equipment_4.dds"
+	}
+
+	##IFV ART Variation
+	SpriteType = {
+		name = "GFX_ifv_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_artillery_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_artillery_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_artillery_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ifv_artillery_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_ART_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_ART_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_ART_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Infantry_fighting_vehicle_ART_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/ifv_artillery_equipment_4.dds"
+	}
+    
+	###Helicopter##
+	SpriteType = {
+		name = "GFX_helicopter_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_helicopter_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_helicopter_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Civilian_helicopter_T1_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_General_helicopter_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_General_helicopter_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_General_helicopter_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/helicopter_equipment_4.dds"
+	}
+
+	##upgrades
+	SpriteType = {
+		name = "GFX_IFV_Weapon_Optimization_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Weapon_Optimization_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Weapon_Optimization_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Weapon_Optimization_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Weapon_Optimization_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Weapon_Optimization_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Weapon_Optimization_T5_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Weapon_Optimization_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Opaz_Enhancement_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Opaz_Enhancement_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Opaz_Enhancement_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Opaz_Enhancement_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Opaz_Enhancement_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Opaz_Enhancement_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_Opaz_Enhancement_T5_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_Opaz_Enhancement_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_engine_optimization_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_engine_optimization_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_engine_optimization_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_engine_optimization_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_engine_optimization_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_engine_optimization_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_engine_optimization_T5_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_engine_optimization_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_defense_optimization_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_defense_optimization_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_defense_optimization_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_defense_optimization_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_defense_optimization_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_defense_optimization_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_IFV_defense_optimization_T5_medium"
+		texturefile = "gfx/interface/technologies/ifv/IFV_defense_optimization_T5.dds"
+	}
+
+	###AttackHelicopter##
+	SpriteType = {
+		name = "GFX_attack_helicopter_equipment_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_helicopter_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_helicopter_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_attack_helicopter_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_helicopter_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_helicopter_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/attack_helicopter_equipment_4.dds"
+	}
+
+	##Helicopter upgrades##
+	SpriteType = {
+		name = "GFX_Helicopter_engine_optimization_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/Helicopter_engine_optimization_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Helicopter_engine_optimization_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/Helicopter_engine_optimization_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Helicopter_engine_optimization_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/Helicopter_engine_optimization_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_helicopter_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/Opaz_helicopter_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_helicopter_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/Opaz_helicopter_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_helicopter_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/Opaz_helicopter_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Helicopter_Optimization_T2_medium"
+		texturefile = "gfx/interface/technologies/ifv/Helicopter_Optimization_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Helicopter_Optimization_T3_medium"
+		texturefile = "gfx/interface/technologies/ifv/Helicopter_Optimization_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Helicopter_Optimization_T4_medium"
+		texturefile = "gfx/interface/technologies/ifv/Helicopter_Optimization_T4.dds"
 	}
 }
