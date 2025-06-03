@@ -43,7 +43,7 @@ equipments = { #apc 临时装备
 		#Space taken in convoy
 		lend_lease_cost = 5
 
-		build_cost_ic = 5
+		build_cost_ic = 50
 		resources = {
 			resources_cm = 2
 			resources_pm = 1
@@ -84,7 +84,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 16
 
-		build_cost_ic = 5.8
+		build_cost_ic = 58
 		resources = {
 			resources_cm = 2
 			resources_pm = 1
@@ -114,7 +114,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 16
 
-		build_cost_ic = 6.6
+		build_cost_ic = 66
 		resources = {
 			resources_cm = 3
 			resources_pm = 1
@@ -145,7 +145,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 20
 
-		build_cost_ic = 7.4
+		build_cost_ic = 74
 		resources = {
 			resources_cm = 4
 			resources_pm = 1
@@ -200,7 +200,7 @@ equipments = { #apc 临时装备
 		#Space taken in convoy
 		lend_lease_cost = 5
 
-		build_cost_ic = 5.8
+		build_cost_ic = 58
 		resources = {
 			resources_cm = 2
 			resources_pm = 2
@@ -240,7 +240,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 5
 
-		build_cost_ic = 6.2
+		build_cost_ic = 62
 		resources = {
 			resources_cm = 2
 			resources_pm = 2
@@ -271,7 +271,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 6
 	
-		build_cost_ic = 6.6
+		build_cost_ic = 66
 		resources = {
 			resources_cm = 2
 			resources_pm = 2
@@ -300,7 +300,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 7
 
-		build_cost_ic = 7
+		build_cost_ic = 70
 		resources = {
 			resources_cm = 3
 			resources_pm = 2
@@ -353,7 +353,7 @@ equipments = { #apc 临时装备
 		#Space taken in convoy
 		lend_lease_cost = 5
 
-		build_cost_ic = 6
+		build_cost_ic = 60
 		resources = {
 			resources_cm = 2
 			resources_pm = 2
@@ -394,7 +394,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 60
 
-		build_cost_ic = 6.5
+		build_cost_ic = 65
 		resources = {
 			resources_cm = 2
 			resources_pm = 2
@@ -425,7 +425,7 @@ equipments = { #apc 临时装备
 		#Offensive Abilities
 		ap_attack = 70
 	
-		build_cost_ic = 7
+		build_cost_ic = 70
 		resources = {
 			resources_cm = 2
 			resources_pm = 2
@@ -456,7 +456,7 @@ equipments = { #apc 临时装备
 		ap_attack = 80
 	
 
-		build_cost_ic = 7.5
+		build_cost_ic = 75
 		resources = {
 			resources_cm = 3
 			resources_pm = 2
@@ -509,7 +509,7 @@ equipments = { #apc 临时装备
 		#Space taken in convoy
 		lend_lease_cost = 5
 
-		build_cost_ic = 6
+		build_cost_ic = 60
 		resources = {
 			resources_cm = 2
 			resources_pm = 1
@@ -549,7 +549,7 @@ equipments = { #apc 临时装备
 		hard_attack = 0.1
 		air_attack = 19.5
 
-		build_cost_ic = 6.5
+		build_cost_ic = 65
 		resources = {
 			resources_cm = 2
 			resources_pm = 1
@@ -579,7 +579,7 @@ equipments = { #apc 临时装备
 		hard_attack = 0.1
 		air_attack = 24
 	
-		build_cost_ic = 7
+		build_cost_ic = 70
 		resources = {
 			resources_cm = 2
 			resources_pm = 1
@@ -609,7 +609,7 @@ equipments = { #apc 临时装备
 		air_attack = 28.5
 	
 
-		build_cost_ic = 7.5
+		build_cost_ic = 75
 		resources = {
 			resources_cm = 3
 			resources_pm = 2

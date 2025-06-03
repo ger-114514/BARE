@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
 #兵种
 infantry: "常备步兵班"
-infantry: "由经过战斗训练，合理组织起来的基沃托斯居民组成的战斗小组，涵盖了负责整肃风纪的学生，佣兵，或是在道上混的多的混混，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，她们能够适应各种情况，但用装甲和火力支援配合她们可以让她们发挥更加高效。"
+infantry_desc: "由经过战斗训练，合理组织起来的基沃托斯居民组成的战斗小组，涵盖了负责整肃风纪的学生，佣兵，或是在道上混的多的混混，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，她们能够适应各种情况，但用装甲和火力支援配合她们可以让她们发挥更加高效。"
 infantry_militia: "动员步兵班"
 infantry_militia_desc: "包含紧急动员的学生，居民，或是那些缺乏战斗经验的混混，相对于常备步兵，她们更加容易集结，但最好不要指望她们的战斗力。"
 infantry_heavy: "重甲步兵班"
@@ -670,3 +670,20 @@ bm_small_artillery_2:"改进机载榴弹炮"
 bm_small_artillery_2_desc:"修改发射方式后的小型榴弹炮，射速得到了提升，并且使用全新弹种，使得炮击威力也得到提升"
 bm_small_artillery_3:"先进机载榴弹炮"
 bm_small_artillery_3_desc:"将小型加农炮接入数字化打击网络后大大降低了测算诸元、装填炮弹、调整角度等环节的操作耗时，让这一装备在战场上的威力得到了进一步提升"
+
+
+group_TuBuBuBing_title:0 "徒步步兵部队"
+group_JiDong_BuBing_title:0 "机动步兵部队"
+group_TuBuPaoBing_title:0 "徒步支援部队"
+group_JiDong_PaoBing_title:0 "机动支援部队"
+group_ZhuangJia_title:0 "装甲部队"
+group_ZhuangJia_ZhiYuan_title:0 "装甲支援部队"
+group_JiJia_title:0 "机甲部队"
+group_JiJia_ZhiYuan_title:0 "机甲支援部队"
+group_KongZhong_ZhiYuan_title:0 "空中支援部队"
+
+
+ modifier_army_sub_unit_category_special_infantry_attack_factor: "神秘步兵进攻修正"
+ modifier_army_sub_unit_category_special_infantry_defence_factor: "神秘步兵防御修正"
+ modifier_army_sub_unit_category_special_infantry_speed_factor: "神秘步兵速度修正"
+ modifier_army_sub_unit_category_special_infantry_max_org_factor: "神秘步兵组织度修正"
