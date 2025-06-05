@@ -1061,4 +1061,125 @@ spriteTypes = {
 		name = "GFX_Helicopter_Optimization_T4_medium"
 		texturefile = "gfx/interface/technologies/ifv/Helicopter_Optimization_T4.dds"
 	}
+
+	####################################
+	###### ARMOR EQUIPMENT FLODER ######
+	####################################
+
+	##轻坦主体##
+	SpriteType = {
+		name = "GFX_light_tank_equipment_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_light_tank_MK1_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_MK2_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_MK3_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_tank_MK4_medium"
+		texturefile = "gfx/interface/technologies/armor/light_tank_equipment_4.dds"
+	}
+
+	##中坦主体##
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_medium_tank_MK1_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_MK2_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_MK3_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_tank_MK4_medium"
+		texturefile = "gfx/interface/technologies/armor/medium_tank_equipment_4.dds"
+	}
+
+	##重坦主体
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_tank_MK1_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_MK2_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_MK3_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_tank_MK4_medium"
+		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_4.dds"
+	}
 }

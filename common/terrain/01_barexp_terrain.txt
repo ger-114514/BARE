@@ -1,0 +1,39 @@
+
+##################################################################
+### Terrain Categories
+###
+###
+
+categories =  {
+	##都会
+	megacity = {
+		color = { 69 69 69 }
+		movement_cost = 1.5
+		ai_terrain_importance_factor = 5.0
+		combat_width = 144
+		combat_support_width = 48
+		match_value = 4
+		sound_type = plains
+
+		units = {
+			attack = -0.4
+			#movement = -0.2
+		}
+
+		enemy_army_bonus_air_superiority_factor = -0.8
+				
+		supply_flow_penalty_factor = -0.5
+	}
+}
+	
+
+
+##################################################################
+### Graphical terrain
+###		type	=	refers to the terrain defined above, "terrain category"'s 
+### 	color 	= 	index in bitmap color table (see terrain.bmp)
+###
+
+terrain = {
+	megacity = { type = metropolis color = { 23 } texture = 10 spawn_city = yes } 
+}

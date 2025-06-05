@@ -3609,14 +3609,9 @@ guiTypes = {
 		}
 	}
 
-
-
-
-	
-
 	containerWindowType = {
 		name = "techtree_armour_folder_item"
-		position = { x=-56 y=-7 }
+		position = { x=-55 y=0 }
 		size = { width = 183 height = 84 }
 		clipping = no
 
@@ -3633,15 +3628,14 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = 3 y = -3 }
+			position = { x = 6 y = -1 }
 			textureFile = ""
 			font = "hoi_20bs"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
-			maxWidth = 160
+			maxWidth = 156
 			maxHeight = 20
 			fixedsize = yes
 			format = left
@@ -3668,26 +3662,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "sub_technology_slot_0"
-			position = { x=151 y=1 }
-			size = { width = 35 height = 26 }
-			clipping = no
-
-			background = {
-				name = "Background"
-				spriteType ="GFX_subtechnology_unavailable_item_bg"
-			}
-
-			iconType = {
-				name = "picture"
-				position = { x=1 y=2 }
-				spriteType = "GFX_subtech_art"
-				alwaystransparent = yes
-			}
-		}
-
-		containerWindowType = {
-			name = "sub_technology_slot_1"
-			position = { x=151 y=28 }
+			position = { x=181 y=1 }
 			size = { width = 35 height = 26 }
 			clipping = no
 
@@ -3705,8 +3680,27 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "sub_technology_slot_1"
+			position = { x=181 y=28 }
+			size = { width = 35 height = 26 }
+			clipping = no
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_subtechnology_unavailable_item_bg"
+			}
+
+			iconType = {
+				name = "picture"
+				position = { x=1 y=2 }
+				spriteType = "GFX_subtech_art"
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
 			name = "sub_technology_slot_2"
-			position = { x=151 y=56 }
+			position = { x=181 y=56 }
 			size = { width = 35 height = 26 }
 			clipping = no
 
@@ -3728,12 +3722,7 @@ guiTypes = {
 			position = { x=5 y=55 }
 			spriteType = "GFX_design_team_icon"
 		}
-	}
-
-
-
-
-	
+	}	
 
 	containerWindowType = {
 		name = "techtree_air_techs_folder_small_item"
