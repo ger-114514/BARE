@@ -1182,4 +1182,13 @@ spriteTypes = {
 		name = "GFX_heavy_tank_MK4_medium"
 		texturefile = "gfx/interface/technologies/armor/heavy_tank_equipment_4.dds"
 	}
+
+	####################################
+	####### COMBAT DRONS FLODER ########
+	####################################
+
+	SpriteType = {
+		name = "GFX_light_fighting_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+	}
 }

@@ -1,0 +1,85 @@
+guitypes = {
+	containerwindowtype = {
+		name = "BAREXP_state_lore_button"
+		orientation = LOWER_RIGHT
+		position = { x = 20 y = -80 }
+		buttontype = {
+			name = "state_button"
+			spritetype = "GFX_SL_state_book_button"
+			position = { x = 9 y = 13 }
+			pdx_tooltip = SL_open_button_tt
+			pdx_tooltip_anchor = { x = 70 y = -27 }
+		}
+		iconType = {
+			name = "gui_alert"
+			spriteType = "GFX_SL_state_book_alert"
+			position = { x= 55 y= 10 }
+		}
+	}
+	containerwindowtype = {
+		name = "BAREXP_state_lore"
+		position = { x = 0 y = 0 }
+		size = { width = 418 height = 504 }
+		orientation = center
+		origo = center
+		moveable = yes
+		fade_time = 300
+		fade_type = linear
+		clipping = no
+		show_sound = "open_sub_window"
+		background = {
+			name = "bg"
+			quadtexturesprite = "GFX_tiled_bg"
+		}
+		icontype = {
+			name = "state_lore_logo"
+			position = { x = -25 y = -65 }
+			spritetype = "GFX_SL_state_lore_logo"
+		}
+		icontype = {
+			name = "state_lore_image"
+			position = { x = 14 y = 15 }
+			spritetype = "GFX_state_lore_img_1"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 21 y = 120 }
+			text = "[Statelore_Get_Name]"
+			font = "hoi_36header"
+			maxwidth = 370
+			maxheight = 36
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "description"
+			position = { x = 21 y = 160 }
+			text = "[Statelore_Get_Desc]"
+			font = "hoi_18mbs"
+			maxwidth = 380
+			maxheight = 375
+			format = left
+			scrollbarType = standardtext_slider
+		}
+		buttontype = {
+			name = "close_btn"
+			position = { x = -35 y = -28 }
+			spritetype = "GFX_closebutton"
+			orientation = UPPER_RIGHT
+			clicksound = "click_close"
+			shortcut = "ESCAPE"
+		}
+	}
+	containerwindowtype = {
+		name = "BAREXP_state_lore_mapicons"
+		position = { x = 34 y = -25 }
+		size = { width = 85 height = 85 }
+		buttonType = {
+			name = "state_lore_mapicon"
+			spritetype = "GFX_SL_mapicon_button"
+			pdx_tooltip = SL_state_lore_mapicon_tt
+			oversound = "ui_menu_over"
+		}
+	}
+}
