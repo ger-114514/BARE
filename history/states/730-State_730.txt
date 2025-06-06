@@ -1,0 +1,19 @@
+state={
+	id=730
+	name="STATE_730"
+	provinces={
+		2371 2401 5710 5735 12198 12210 12226 12227 
+	}
+	history = {
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A03
+		add_core_of=A03
+		add_core_of=MIL
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

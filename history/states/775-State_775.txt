@@ -1,0 +1,19 @@
+state={
+	id=775
+	name="STATE_775"
+	provinces={
+		412 755 2135 2620 6402 8614 10793 10812 10865 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = CAB
+		add_core_of=CAB
+		add_core_of = ABY
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,18 @@
+state={
+	id=753
+	name="STATE_753"
+	provinces={
+		980 1285 1299 5163 9305 11153 11251 
+	}
+	history = {
+		buildings = {
+			infrastructure = 5
+		}
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

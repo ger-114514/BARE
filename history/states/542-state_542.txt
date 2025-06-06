@@ -2,7 +2,7 @@ state={
 	id=542
 	name="STATE_542"
 	provinces={
-		724 1322 2297 2447 3077 3314 3638 4826 7282 7314 7888 9075 10255 10286 10319 10330 10388 
+		724 3077 4826 7282 7888 9075 10255
 	}
 	history={
 		buildings = {
@@ -11,7 +11,6 @@ state={
 		owner = A31
 		add_core_of=A31
 		add_core_of=RWT
-		victory_points = {10286 5}
 	}
 	manpower=20000
 	state_category = rural

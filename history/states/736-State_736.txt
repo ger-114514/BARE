@@ -1,0 +1,18 @@
+state={
+	id=736
+	name="STATE_736"
+	provinces={
+		2775 5477 6892 6915 8045 8446 11849 11947 11948 11950 11954 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

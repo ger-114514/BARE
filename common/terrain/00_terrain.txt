@@ -204,7 +204,7 @@ categories =  {
 ###
 
 terrain = {
-	terrain_0					= { type = plains			color = { 	0	 } texture = 12 }
+	terrain_0					= { type = plains			color = { 	0	 } texture = 1 }
 	terrain_1					= { type = forest			color = { 	1	 } texture = 4 } 
 	desert_mountain				= { type = hills			color = { 	2	 } texture = 3 }
 	desert						= { type = desert			color = { 	3	 } texture = 9 }

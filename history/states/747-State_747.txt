@@ -1,0 +1,19 @@
+state={
+	id=747
+	name="STATE_747"
+	provinces={
+		898 1364 2247 5234 5506 7518 7622 8388 8394 8990 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = A17
+		add_core_of=A17
+		add_core_of=SHA
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

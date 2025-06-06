@@ -1,0 +1,19 @@
+state={
+	id=754
+	name="STATE_754"
+	provinces={
+		42 2225 3941 5564 5837 10628 10752 10784 
+	}
+	history = {
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A16
+		add_core_of=A16
+		add_core_of=HYA
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

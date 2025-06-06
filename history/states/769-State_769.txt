@@ -1,0 +1,19 @@
+state={
+	id=769
+	name="STATE_769"
+	provinces={
+		1962 4600 4805 4937 7785 10673  
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = CAP
+		add_core_of=CAP
+		add_core_of = ABY
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
