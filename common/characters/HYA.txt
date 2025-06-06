@@ -13,9 +13,6 @@ characters = {
 			allowed = {
 				original_tag = HYA
 			}
-			available = {
-				original_tag = HYA
-			}
 			traits = {
 				girl_like_wind
 			}
@@ -43,12 +40,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = HYA_renge_ac
+			slot = high_command
+			idea_token = HYA_renge_hc
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -78,12 +72,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = HYA_kikyo_ac
+			slot = high_command
+			idea_token = HYA_kikyo_hc
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -118,11 +109,8 @@ characters = {
 			allowed = {
 				original_tag = HYA
 			}
-			available = {
-				original_tag = HYA
-			}
 			traits = {
-				obscure_prophet
+				leader_hyakaryuran
 			}
 			cost = 100
 			ai_will_do = {
@@ -133,9 +121,6 @@ characters = {
 			slot = political_advisor
 			idea_token = HYA_nagusa_pa
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -169,9 +154,6 @@ characters = {
 			allowed = {
 				original_tag = HYA
 			}
-			available = {
-				original_tag = HYA
-			}
 			traits = {
 				cute_fujuo
 			}
@@ -201,9 +183,6 @@ characters = {
 			slot = political_advisor
 			idea_token = HYA_kaho_pa
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -249,12 +228,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = HYA_tsubaki_ac
+			slot = political_advisor
+			idea_token = HYA_tsubaki_pa
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -289,9 +265,6 @@ characters = {
 			allowed = {
 				original_tag = HYA
 			}
-			available = {
-				original_tag = HYA
-			}
 			traits = {
 				bride_in_learning
 			}
@@ -323,9 +296,6 @@ characters = {
 			allowed = {
 				original_tag = HYA
 			}
-			available = {
-				original_tag = HYA
-			}
 			traits = {
 				practicing_girl
 			}
@@ -352,12 +322,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = HYA_izuna_ac
+			slot = high_command
+			idea_token = HYA_izuna_hc
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -387,12 +354,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = HYA_michiru_ac
+			slot = high_command
+			idea_token = HYA_michiru_hc
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -458,12 +422,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
+			slot = high_command
 			idea_token = HYA_pina_ac
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -496,9 +457,6 @@ characters = {
 			slot = political_advisor
 			idea_token = HYA_shizuko_pa
 			allowed = {
-				original_tag = HYA
-			}
-			available = {
 				original_tag = HYA
 			}
 			traits = {
@@ -534,7 +492,8 @@ characters = {
 				original_tag = HYA
 			}
 			available = {
-				original_tag = HYA
+				#TODO:解锁 若藻
+				always = no
 			}
 			traits = {
 				fox_of_disaster

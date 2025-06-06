@@ -263,6 +263,7 @@ leader_traits = {
     screaming_death = {
         random = no
 
+        experience_gain_army = 0.5
         war_support_factor = 0.1
         army_infantry_attack_factor = 0.1
     }
@@ -279,6 +280,7 @@ leader_traits = {
     serious_vice_chairman = {
         random = no
 
+        experience_gain_army = 0.3
         stability_factor = -0.05
         max_planning_factor = -0.1
         land_reinforce_rate = 0.02
@@ -366,6 +368,7 @@ leader_traits = {
     gentle_war_leader = {
         random = no
 
+        experience_gain_army = 0.3
         army_attack_factor = -0.2
         army_defence_factor = 0.2
         army_org_factor = 0.2
@@ -1218,7 +1221,7 @@ leader_traits = {
     fitness_instructor = {
         random = no
 
-        max_training = -0.2
+        max_training = 0.2
 
     }
 

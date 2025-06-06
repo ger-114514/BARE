@@ -602,26 +602,29 @@ focus_tree = {
 					#桐藤渚获得特质描述
 					custom_effect_tooltip = focus_select_effect_tt
 					effect_tooltip = { BA_TRI_initialize_paranoia_system = yes }
-					#初始化自动国策线
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_in_care }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_calling_for_Schale }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_azusa }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_koharu }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_hanako }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_hifumi }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_establish_hoshubu }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_love_for_students }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_examination_for_training_club }
-					add_to_array = { TRI_hoshubu_focus_line = token:TRI_buy_time }
-					activate_shine_on_focus = TRI_investigation_in_care
-					set_variable = { TRI_auto_focus_days = 35 }
-					set_variable = { TRI_auto_focus_originator = token:TRI_intelligence_bureau }
 					hidden_effect = {
-						country_event = {
-							id = TRI_autofocus.1
-							days = 35
+						#初始化自动国策线
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_in_care }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_calling_for_Schale }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_azusa }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_koharu }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_hanako }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_focus_hifumi }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_establish_hoshubu }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_love_for_students }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_examination_for_training_club }
+						add_to_array = { TRI_hoshubu_focus_line = token:TRI_buy_time }
+						activate_shine_on_focus = TRI_investigation_in_care
+						set_variable = { TRI_auto_focus_days = 35 }
+						set_variable = { TRI_auto_focus_originator = token:TRI_intelligence_bureau }
+						hidden_effect = {
+							country_event = {
+								id = TRI_autofocus.1
+								days = 35
+							}
 						}
 					}
+					
 				}
 				ai_will_do = {
 					factor = 3
@@ -1062,8 +1065,8 @@ focus_tree = {
 						character = TRI_azusa
 						activate = no
 						advisor = { 
-							slot = army_chief
-							idea_token = TRI_azusa_ac
+							slot = high_command
+							idea_token = TRI_azusa_hc
 							traits = {
 								slience_guerrilla_warfare_master
 							}
@@ -3110,7 +3113,7 @@ focus_tree = {
 						character = TRI_commission_of_air_ground
 						activate = no
 						advisor = { 
-							slot = army_chief
+							slot = air_chief
 							idea_token = TRI_commission_of_air_ground_ac
 							traits = {
 								army_commando_3

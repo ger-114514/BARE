@@ -40,9 +40,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				budget_controller
 			}
@@ -78,9 +75,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				secretary_of_seminar
 			}
@@ -116,9 +110,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				bunny_girl_on_argo
 			}
@@ -154,9 +145,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				sound_of_truth
 			}
@@ -182,9 +170,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				colorful_spray
 			}
@@ -220,9 +205,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				energy_drink_love
 			}
@@ -258,9 +240,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				ears_in_dark
 			}
@@ -296,9 +275,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				genius_hacker
 			}
@@ -334,9 +310,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				so_hot_body
 			}
@@ -372,9 +345,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				yuzu_queen
 			}
@@ -409,9 +379,6 @@ characters = {###千禧年MIL 开始###
 			slot = army_chief
 			idea_token = MIL_alice_ac
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			}
 			traits = {
@@ -488,9 +455,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				game_developer_midori
 			}
@@ -521,12 +485,9 @@ characters = {###千禧年MIL 开始###
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = MIL_hibiki_ac
+			slot = high_command
+			idea_token = MIL_hibiki_hc
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			}
 			traits = {
@@ -560,12 +521,9 @@ characters = {###千禧年MIL 开始###
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = MIL_utaha_ac
+			slot = political_advisor
+			idea_token = MIL_utaha_pa
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			}
 			traits = {
@@ -599,8 +557,8 @@ characters = {###千禧年MIL 开始###
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = MIL_kotori_ac
+			slot = high_command
+			idea_token = MIL_kotori_hc
 			allowed = {
 				original_tag = MIL
 			}
@@ -677,14 +635,11 @@ characters = {###千禧年MIL 开始###
 		}
 
 		advisor = {
-			slot = political_advisor
-			idea_token = MIL_karin_pa
+			slot = high_command
+			idea_token = MIL_karin_hc
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			} 
 			traits = {
 				far_range_sniper
 			}
@@ -715,8 +670,8 @@ characters = {###千禧年MIL 开始###
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = MIL_akane_ac
+			slot = high_command
+			idea_token = MIL_akane_hc
 			allowed = {
 				original_tag = MIL
 			}
@@ -754,8 +709,8 @@ characters = {###千禧年MIL 开始###
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = MIL_asuna_ac
+			slot = high_command
+			idea_token = MIL_asuna_hc
 			allowed = {
 				original_tag = MIL
 			}
@@ -832,8 +787,8 @@ characters = {###千禧年MIL 开始###
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = MIL_sumire_ac
+			slot = high_command
+			idea_token = MIL_sumire_hc
 			allowed = {
 				original_tag = MIL
 			}

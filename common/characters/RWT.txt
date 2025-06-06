@@ -56,9 +56,6 @@ characters = {
 			allowed = {
 				original_tag = RWT
 			}
-			available = {
-				original_tag = RWT
-			}
 			traits = {
 				red_warrior_leader
 			}
@@ -91,9 +88,6 @@ characters = {
 			allowed = {
 				original_tag = RWT
 			}
-			available = {
-				original_tag = RWT
-			}
 			traits = {
 				chief_secretary
 			}
@@ -120,12 +114,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = RWT_nadoka_pa
+			slot = high_command
+			idea_token = RWT_nadoka_hc
 			allowed = {
-				original_tag = RWT
-			}
-			available = {
 				original_tag = RWT
 			}
 			traits = {
@@ -154,12 +145,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = RWT_shigure_pa
+			slot = high_command
+			idea_token = RWT_shigure_hc
 			allowed = {
-				original_tag = RWT
-			}
-			available = {
 				original_tag = RWT
 			}
 			traits = {
@@ -193,9 +181,6 @@ characters = {
 			allowed = {
 				original_tag = RWT
 			}
-			available = {
-				original_tag = RWT
-			}
 			traits = {
 				leader_of_labour_frontier
 			}
@@ -225,9 +210,6 @@ characters = {
 			slot = political_advisor
 			idea_token = RWT_meru_pa
 			allowed = {
-				original_tag = RWT
-			}
-			available = {
 				original_tag = RWT
 			}
 			traits = {
@@ -261,9 +243,6 @@ characters = {
 			allowed = {
 				original_tag = RWT
 			}
-			available = {
-				original_tag = RWT
-			}
 			traits = {
 				comic_lover
 			}
@@ -295,9 +274,6 @@ characters = {
 			allowed = {
 				original_tag = RWT
 			}
-			available = {
-				original_tag = RWT
-			}
 			traits = {
 				great_writer
 			}
@@ -319,9 +295,6 @@ characters = {
 			slot = political_advisor
 			idea_token = RWT_yakumo_pa
 			allowed = {
-				original_tag = RWT
-			}
-			available = {
 				original_tag = RWT
 			}
 			traits = {

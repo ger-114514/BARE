@@ -160,11 +160,21 @@ characters={
 				set_temp_variable = { association = token:TRI_parliament_association_0 }
 				set_temp_variable = { loyalty_change = 0.2 }
 				TRI_parliament_loyalty_change = yes
+				add_unit_bonus = {
+					infantry = {
+						ap_attack = 5
+					}
+				}
 			}
 			on_remove = {
 				set_temp_variable = { association = token:TRI_parliament_association_0 }
 				set_temp_variable = { loyalty_change = -0.2 }
 				TRI_parliament_loyalty_change = yes
+				add_unit_bonus = {
+					infantry = {
+						ap_attack = -5
+					}
+				}
 			}
 			ai_will_do = {
 				factor = 1.000
@@ -293,6 +303,12 @@ characters={
 				factor = 1.000
 			}
         }
+        scientist = {
+            traits = {  }
+            skills = {
+                specialization_ba_tech = 4
+            }
+        }
         corps_commander = {
 			traits = {}
 			visible = {
@@ -319,7 +335,7 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
+			slot = high_command
 			idea_token = TRI_suzumi_ac
 			allowed = {
 				original_tag = TRI
@@ -421,8 +437,8 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_reisa_ac
+			slot = political_advisor
+			idea_token = TRI_reisa_pa
 			allowed = {
 				original_tag = TRI
 			}
@@ -522,8 +538,8 @@ characters={
 		}
 
         # advisor = {
-		# 	slot = army_chief
-		# 	idea_token = TRI_azusa_ac
+		# 	slot = high_command
+		# 	idea_token = TRI_azusa_pc
 		# 	allowed = {
 		# 		original_tag = TRI
 		# 	}
@@ -1048,8 +1064,8 @@ characters={
 
         advisor = {
 			
-			slot = army_chief
-			idea_token = TRI_mashiro_ac
+			slot = high_command
+			idea_token = TRI_mashiro_hc
 			allowed = {
 				original_tag = TRI
 			}
@@ -1128,8 +1144,8 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_ichika_ac
+			slot = high_command
+			idea_token = TRI_ichika_hc
 			allowed = {
 				original_tag = TRI
 			}
@@ -1209,8 +1225,8 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_natsu_ac
+			slot = political_advisor
+			idea_token = TRI_natsu_pa
 			allowed = {
 				original_tag = TRI
 			}
@@ -1442,8 +1458,8 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_hinata_ac
+			slot = high_command
+			idea_token = TRI_hinata_hc
 			allowed = {
 				original_tag = TRI
 			}
@@ -1682,12 +1698,6 @@ characters={
             army = {
 			    large=GFX_portrait_TRI_ui
 			    small=GFX_portrait_TRI_ui_small
-            }
-        }
-        scientist = {
-            traits = {  }
-            skills = {
-                specialization_ba_tech = 4
             }
         }
     }
