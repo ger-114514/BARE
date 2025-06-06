@@ -1186,9 +1186,117 @@ spriteTypes = {
 	####################################
 	####### COMBAT DRONS FLODER ########
 	####################################
+	SpriteType = {
+		name = "GFX_small_uav_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK2.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK3.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK4.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_light_fighting_drone_medium"
 		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_fighting_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK2.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_fighting_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK3.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_fighting_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_medium_uav_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_fighting_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_fighting_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_fighting_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_fighting_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_uav_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_fighting_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_fighting_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_fighting_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_fighting_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_4.dds"
 	}
 }
