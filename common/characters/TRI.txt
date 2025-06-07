@@ -37,13 +37,18 @@ characters={
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = 0.2 }
 				TRI_parliament_loyalty_change = yes
-				set_country_flag = TRI_seia_prophecy
+				ROOT = {
+					set_country_flag = TRI_seia_prophecy
+				}
+				
 			}
 			on_remove = {
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = -0.2 }
 				TRI_parliament_loyalty_change = yes
-				clr_country_flag = TRI_seia_prophecy
+				ROOT = {
+					clr_country_flag = TRI_seia_prophecy
+				}
 			}
 			cost = 50
 			ai_will_do = {
@@ -134,10 +139,14 @@ characters={
 				art_of_artillery
 			}
 			on_add = {
-				add_ideas = art_of_artillery
+				ROOT = {
+					add_ideas = art_of_artillery
+				}
 			}
 			on_remove = {
-				remove_ideas = art_of_artillery
+				ROOT = {
+					remove_ideas = art_of_artillery
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -278,18 +287,22 @@ characters={
 				leviathan_hunter
 			}
 			on_add = {
-				add_unit_bonus = {
-					category_all_infantry = {
-						hard_attack = 1
-						soft_attack = -0.25
+				ROOT = {
+					add_unit_bonus = {
+						category_all_infantry = {
+							hard_attack = 1
+							soft_attack = -0.25
+						}
 					}
 				}
 			}
 			on_remove = {
-				add_unit_bonus = {
-					category_all_infantry = {
-						hard_attack = -1
-						soft_attack = 0.25
+				ROOT = {
+					add_unit_bonus = {
+						category_all_infantry = {
+							hard_attack = -1
+							soft_attack = 0.25
+						}
 					}
 				}
 			}
@@ -1494,10 +1507,14 @@ characters={
 				natsu_art_of_war
 			}
 			on_add = {
-				add_ideas = natsu_art_of_war
+				ROOT = {
+					add_ideas = natsu_art_of_war
+				}
 			}
 			on_remove = {
-				remove_ideas = natsu_art_of_war
+				ROOT = {
+					remove_ideas = natsu_art_of_war
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -1908,28 +1925,32 @@ characters={
 				student_of_kakugo
 			}
 			on_add = {
-				add_ideas = student_of_kakugo
-				add_unit_bonus = {
-					category_special_infantry = {
-						soft_attack = 0.1
-						hard_attack = 0.1
-					}
-					category_special_artillery = {
-						soft_attack = 0.1
-						hard_attack = 0.1
+				ROOT = {
+					add_ideas = student_of_kakugo
+					add_unit_bonus = {
+						category_special_infantry = {
+							soft_attack = 0.1
+							hard_attack = 0.1
+						}
+						category_special_artillery = {
+							soft_attack = 0.1
+							hard_attack = 0.1
+						}
 					}
 				}
 			}
 			on_remove = {
-				remove_ideas = student_of_kakugo
-				add_unit_bonus = {
-					category_special_infantry = {
-						soft_attack = -0.1
-						hard_attack = -0.1
-					}
-					category_special_artillery = {
-						soft_attack = -0.1
-						hard_attack = -0.1
+				ROOT = {
+					remove_ideas = student_of_kakugo
+					add_unit_bonus = {
+						category_special_infantry = {
+							soft_attack = -0.1
+							hard_attack = -0.1
+						}
+						category_special_artillery = {
+							soft_attack = -0.1
+							hard_attack = -0.1
+						}
 					}
 				}
 			}
