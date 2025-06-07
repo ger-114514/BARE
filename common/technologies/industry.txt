@@ -56,7 +56,7 @@ technologies = {
 	Construction_center_T1 = {#日结工基地
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 5 }
+			position = { x = 0 y = 4 }
 		}
 		research_cost = 1.5
 		production_speed_buildings_factor = 0.05
@@ -80,7 +80,7 @@ technologies = {
 	Construction_center_T2 = {#劳务服务中心
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 7 }
+			position = { x = 0 y = 6 }
 		}
 		research_cost = 1.5
 		conversion_cost_civ_to_mil_factor = -0.1
@@ -106,7 +106,7 @@ technologies = {
 	Construction_center_T3 = {#职业培训所
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 9 }
+			position = { x = 0 y = 8 }
 		}
 		research_cost = 1.5
 		research_speed_factor = 0.025
@@ -130,7 +130,7 @@ technologies = {
 	Industrial_construction_T3 = {#混凝土浇筑施工
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 5 }
+			position = { x = 3 y = 4 }
 		}
 		research_cost = 1.5
 		production_speed_buildings_factor = 0.15
@@ -152,7 +152,7 @@ technologies = {
 	Industrial_construction_T4 = {#复合材料建筑
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 7 }
+			position = { x = 3 y = 6 }
 		}
 		research_cost = 1.5
 		production_speed_buildings_factor = 0.15
@@ -175,7 +175,7 @@ technologies = {
 	Industrial_construction_T5 = {#新式建筑学
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 9 }
+			position = { x = 3 y = 8 }
 		}
 		research_cost = 1.5
 		dependencies = {
@@ -225,7 +225,7 @@ technologies = {
 	Decentralized_industrial_T2 = {#产业链配套物流设备
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 5 }
+			position = { x = 6 y = 4 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -249,7 +249,7 @@ technologies = {
 	Decentralized_industrial_T3 = {#产业潜力发掘
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 7 }
+			position = { x = 6 y = 6 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -273,7 +273,7 @@ technologies = {
 	Decentralized_industrial_T4 = {#企业协同发展
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 9 }
+			position = { x = 6 y = 8 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -321,7 +321,7 @@ technologies = {
 	Centralized_industrial_T2 = {#大型工业园区建设
 		folder = {
 			name = industry_folder
-			position = { x = 9 y = 5 }
+			position = { x = 9 y = 4 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -342,7 +342,7 @@ technologies = {
 	Centralized_industrial_T3 = {#上下游企业进驻
 		folder = {
 			name = industry_folder
-			position = { x = 9 y = 7 }
+			position = { x = 9 y = 6 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -363,7 +363,7 @@ technologies = {
 	Centralized_industrial_T4 = {#集中设备创新
 		folder = {
 			name = industry_folder
-			position = { x = 9 y = 9 }
+			position = { x = 9 y = 8 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -405,7 +405,7 @@ technologies = {
 	Heavy_industry_T2 = {#重型机床
 		folder = {
 			name = industry_folder
-			position = { x = 12 y = 5 }
+			position = { x = 12 y = 4 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -434,7 +434,7 @@ technologies = {
 	Heavy_industry_T3 = {#一体化生产车间
 		folder = {
 			name = industry_folder
-			position = { x = 12 y = 7 }
+			position = { x = 12 y = 6 }
 		}
 		categories = {
 			industry
@@ -462,7 +462,7 @@ technologies = {
 	Heavy_industry_T4 = {#超大型复合车间
 		folder = {
 			name = industry_folder
-			position = { x = 12 y = 9 }
+			position = { x = 12 y = 8 }
 		}
 
 		categories = {
@@ -540,7 +540,7 @@ technologies = {
 	Infrastructure_construction_T3 = {#标准化道路整修
 		folder = {
 			name = industry_folder
-			position = { x = 15 y = 5 }
+			position = { x = 15 y = 4 }
 		}
 		dependencies = {
 			T3_production = 1
@@ -563,7 +563,7 @@ technologies = {
 	Infrastructure_construction_T4 = {#改进住宅建设
 		folder = {
 			name = industry_folder
-			position = { x = 15 y = 7 }
+			position = { x = 15 y = 6 }
 		}
 		dependencies = {
 			T4_production = 1
@@ -585,7 +585,7 @@ technologies = {
 	Infrastructure_construction_T5 = {#先进城区规划
 		folder = {
 			name = industry_folder
-			position = { x = 15 y = 9 }
+			position = { x = 15 y = 8 }
 		}
 		dependencies = {
 			T5_production = 1
@@ -604,17 +604,17 @@ technologies = {
 		ai_will_do = { factor = 1 }
 	}
 	Train_T1 = {#重型交通工具
-		folder = {
-			name = industry_folder
-			position = { x = 18 y = 0 }
+	    folder = {
+	    	name = industry_folder
+	    	position = { x = 18 y = 0 }
+	    }   
+	    enable_equipments = {
+			train_equipment_1
 		}
+		
 		dependencies = {
 			T1_production = 1
 		}
-		enable_equipments = {
-			train_equipment_1
-		}
-		force_use_small_tech_layout = yes
 		research_cost = 1.5
 		path = { leads_to_tech = Train_T2 }
 		ai_will_do = { factor = 1 }
@@ -624,23 +624,20 @@ technologies = {
 		}	
 	}
 	Train_T2 = {#武装运输载具
-		folder = {
-			name = industry_folder
-			position = { x = 18 y = 2 }
-		}
+	    folder = {
+		    name = industry_folder
+		    position = { x = 18 y = 2 }
+	    }
+     	enable_equipments = {
+		    train_equipment_2
+	    }
 		dependencies = {
 			T2_production = 1
 		}
-		
-		enable_equipments = {
-			train_equipment_2
-		}
-
 		categories = {
 			industry
 		}	
 
-		force_use_small_tech_layout = yes
 		research_cost = 1.5
 		path = { leads_to_tech = Train_T3 }
 		ai_will_do = { factor = 1 }
@@ -648,21 +645,18 @@ technologies = {
 	Train_T3 = {#量产化运输载具
 		folder = {
 			name = industry_folder
-			position = { x = 18 y = 5 }
+			position = { x = 18 y = 4 }
+		}
+		enable_equipments = {
+			train_equipment_3
 		}
 		dependencies = {
 			T3_production = 1
 		}
-		
-		enable_equipments = {
-			train_equipment_3
-		}
-
 		categories = {
 			industry
 		}	
 
-		force_use_small_tech_layout = yes
 		research_cost = 1.5
 		ai_will_do = { factor = 1 }
 	}
