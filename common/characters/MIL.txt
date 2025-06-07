@@ -165,8 +165,8 @@ characters = {###千禧年MIL 开始###
 		}
 
 		advisor = {
-			slot = political_advisor
-			idea_token = MIL_maki_pa
+			slot = high_command
+			idea_token = MIL_maki_hc
 			allowed = {
 				original_tag = MIL
 			}
@@ -305,8 +305,8 @@ characters = {###千禧年MIL 开始###
 		}
 
 		advisor = {
-			slot = political_advisor
-			idea_token = MIL_eimi_pa
+			slot = high_command
+			idea_token = MIL_eimi_hc
 			allowed = {
 				original_tag = MIL
 			}
@@ -340,8 +340,8 @@ characters = {###千禧年MIL 开始###
 		}
 
 		advisor = {
-			slot = political_advisor
-			idea_token = MIL_yuzu_pa
+			slot = high_command
+			idea_token = MIL_yuzu_hc
 			allowed = {
 				original_tag = MIL
 			}
@@ -415,9 +415,6 @@ characters = {###千禧年MIL 开始###
 			slot = political_advisor
 			idea_token = MIL_momoi_pa
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			} 
 			traits = {
@@ -562,9 +559,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			}
 			traits = {
 				equipment_testing_engineer
 			}
@@ -599,9 +593,6 @@ characters = {###千禧年MIL 开始###
 			slot = army_chief
 			idea_token = MIL_neru_ac
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			}
 			traits = {
@@ -675,9 +666,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			}
 			traits = {
 				caring_maid
 			}
@@ -712,9 +700,6 @@ characters = {###千禧年MIL 开始###
 			slot = high_command
 			idea_token = MIL_asuna_hc
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			}
 			traits = {
@@ -753,9 +738,6 @@ characters = {###千禧年MIL 开始###
 			allowed = {
 				original_tag = MIL
 			}
-			available = {
-				original_tag = MIL
-			}
 			traits = {
 				secret_weapon_of_cc
 			}
@@ -790,9 +772,6 @@ characters = {###千禧年MIL 开始###
 			slot = high_command
 			idea_token = MIL_sumire_hc
 			allowed = {
-				original_tag = MIL
-			}
-			available = {
 				original_tag = MIL
 			}
 			traits = {
