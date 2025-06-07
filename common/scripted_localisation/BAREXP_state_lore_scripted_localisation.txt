@@ -1,0 +1,99 @@
+# 1) TITLE
+# 2) DESCRIPTION
+# 3）MISC
+
+################
+### 1) TITLE ###
+################
+
+defined_text = {
+	name = Statelore_Get_Name
+	text = {
+		localization_key = "state_lore_name.[?selected_lore]"
+	}
+}
+
+######################
+### 2) DESCRIPTION ###
+######################
+defined_text = {
+	name = Statelore_Get_Desc
+	text = {
+		localization_key = state_lore_desc.[?selected_lore]
+	}
+}
+
+###############
+### 3) MISC ###
+###############
+
+##显示地块拥有者（废弃）##
+#defined_text = {
+	#name = GetNationality
+	#text = {
+		#localization_key = "var_nationality.[?nationality]"
+	#}
+#}
+
+##用作日后有省份名称变化时使用##
+defined_text = {
+	name = GetSLName
+	text = {
+		localization_key = "[THIS.GetName]"
+	}
+}
+
+###用作日后有介绍的变化时使用
+###未实装
+defined_text = {
+	name = Statelore_Get_STATE118_desc
+	text = {
+		trigger = {
+			118 = {
+				is_owned_by = ARI
+			}
+		}
+		localization_key = state_lore_desc.118_ARI
+	}
+	text = {
+		localization_key = state_lore_desc.118_TRI
+	}
+}
+
+##普通图像##
+defined_text = {
+	name = Statelore_Get_Image
+	text = {
+		localization_key = "GFX_state_lore_img_[?selected_lore]"
+	}
+}
+
+## 冬季图像 ##
+##暂不考虑相关内容##
+#defined_text = {
+	#name = Statelore_Get_winter
+	#text = {
+		#trigger = {
+			##鸡窝不存在北半球南半球##
+			#if = {
+				#limit = {
+					#var:selected_lore_state = {
+						#has_state_flag = SL_has_northern_winter
+					#}
+				#}
+				# 1st December until 1st March the next year.
+				#OR = {
+					#AND = {
+						#date > 2019.12.1
+						#date < 2019.3.1
+					#}
+				#}
+			#}
+			#else = { always = no }
+		#}
+		#localization_key = "GFX_state_lore_winter_img_[?selected_lore]"
+	#}
+	#text = {
+		#localization_key = "GFX_state_lore_img_[?selected_lore]"
+	#}
+#}

@@ -931,7 +931,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =0  y = 24 }
+			position = { x =0  y = 12 }
 		}
 
 		
@@ -1009,7 +1009,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =3  y = 24 }
+			position = { x =3  y = 12 }
 		}
 
 		sub_technologies = {
@@ -1090,7 +1090,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =6  y = 24 }
+			position = { x =6  y = 12 }
 		}
 
 		sub_technologies = {
@@ -1171,7 +1171,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =9  y = 24 }
+			position = { x =9  y = 12 }
 		}
 
 
@@ -1252,7 +1252,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =0  y = 28 }
+			position = { x =0  y = 16 }
 		}
 
 		sub_technologies = {
@@ -1330,7 +1330,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =3  y = 28 }
+			position = { x =3  y = 16 }
 		}
 
 		sub_technologies = {
@@ -1409,7 +1409,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =6  y = 28 }
+			position = { x =6  y = 16 }
 		}
 
 		sub_technologies = {
@@ -1485,7 +1485,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =9  y = 28 }
+			position = { x =9  y = 16 }
 		}
 
 		sub_technologies = {
@@ -1560,7 +1560,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =0  y = 32 }
+			position = { x =0  y = 20 }
 		}
 
 		
@@ -1640,7 +1640,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =3  y = 32 }
+			position = { x =3  y = 20 }
 		}
 
 		sub_technologies = {
@@ -1717,7 +1717,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =6  y = 32 }
+			position = { x =6  y = 20 }
 		}
 
 		sub_technologies = {
@@ -1789,7 +1789,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x =9  y = 32 }
+			position = { x =9  y = 20 }
 		}
 
 		sub_technologies = {
@@ -1860,7 +1860,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 12 y = -1 }
+			position = { x = 25 y = -1 }
 		}
 		
 		category_assist_vehicles = {
@@ -1906,13 +1906,15 @@ technologies = {
 			T2_assult_vehicle  = 1
 		}
 
+		show_effect_as_desc = yes
+
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_attack_upgrade2 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 12 y = 3 }
+			position = { x = 25 y = 3 }
 		}
 		category_assist_vehicles = {
 			soft_attack = 0.03
@@ -1953,13 +1955,15 @@ technologies = {
 		dependencies = {
 			T3_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_attack_upgrade3 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 12 y = 7 }
+			position = { x = 25 y = 7 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip = assault_vehicle_attack_upgrade3_tt
@@ -2001,13 +2005,15 @@ technologies = {
 		dependencies = {
 			T4_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_attack_upgrade4 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 12 y = 11 }
+			position = { x = 25 y = 11 }
 		}
 		category_assist_vehicles = {
 			soft_attack = 0.03
@@ -2044,13 +2050,15 @@ technologies = {
 		dependencies = {
 			T5_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
     assault_vehicle_defence_upgrade1 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 16 y = -1 }
+			position = { x = 29 y = -1 }
 		}
 		category_assist_vehicles = {
 			breakthrough = 0.03
@@ -2094,13 +2102,15 @@ technologies = {
 		dependencies = {
 			T2_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_defence_upgrade2 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 16 y = 3 }
+			position = { x = 29 y = 3 }
 		}
 		category_assist_vehicles = {
 			breakthrough = 0.03
@@ -2137,13 +2147,15 @@ technologies = {
 		dependencies = {
 			T3_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_defence_upgrade3 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 16 y = 7 }
+			position = { x = 29 y = 7 }
 		}
 		category_assist_vehicles = {
 			breakthrough = 0.03
@@ -2181,13 +2193,15 @@ technologies = {
 		dependencies = {
 			T4_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_defence_upgrade4 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 16 y = 11 }
+			position = { x = 29 y = 11 }
 		}
 		category_assist_vehicles = {
 			breakthrough = 0.03
@@ -2224,13 +2238,15 @@ technologies = {
 		dependencies = {
 			T5_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
     assault_vehicle_engine_upgrade1 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 20 y = -1  }
+			position = { x = 33 y = -1  }
 		}
 		category_assist_vehicles = {
 			maximum_speed = 0.02
@@ -2261,13 +2277,15 @@ technologies = {
 		dependencies = {
 			T2_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_engine_upgrade2 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 20 y = 3 }
+			position = { x = 33 y = 3 }
 		}
 		category_assist_vehicles = {
 			maximum_speed = 0.02
@@ -2297,13 +2315,15 @@ technologies = {
 		dependencies = {
 			T3_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_engine_upgrade3 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 20 y = 7 }
+			position = { x = 33 y = 7 }
 		}
 		category_assist_vehicles = {
 			maximum_speed = 0.02
@@ -2334,13 +2354,15 @@ technologies = {
 		dependencies = {
 			T4_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_engine_upgrade4 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 20 y = 11 }
+			position = { x = 33 y = 11 }
 		}
 		category_assist_vehicles = {
 			maximum_speed = 0.02
@@ -2369,13 +2391,15 @@ technologies = {
 		dependencies = {
 			T5_assult_vehicle  = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_opaz_weapon_upgrade1 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 1 }
+			position = { x = 27 y = 1 }
 		}
 		
 		on_research_complete = {
@@ -2394,6 +2418,8 @@ technologies = {
 			T2_assult_vehicle  = 1
 			T2_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 
 	}
@@ -2401,7 +2427,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 5 }
+			position = { x = 27 y = 5 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip =assault_vehicle_opaz_weapon_upgrade2_tt
@@ -2419,13 +2445,15 @@ technologies = {
 			T3_assult_vehicle  = 1
 			T3_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_opaz_weapon_upgrade3 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 9 }
+			position = { x = 27 y = 9 }
 		}
 
 		on_research_complete = {
@@ -2443,13 +2471,15 @@ technologies = {
 			T4_assult_vehicle  = 1
 			T4_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_opaz_weapon_upgrade4 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 14 y = 13 }
+			position = { x = 27 y = 13 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip =assault_vehicle_opaz_weapon_upgrade4_tt
@@ -2466,6 +2496,8 @@ technologies = {
 			T5_assult_vehicle  = 1
 			T5_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 
@@ -2475,7 +2507,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 18 y = 1 }
+			position = { x = 31 y = 1 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip =assault_vehicle_opaz_defence_upgrade1_tt
@@ -2493,6 +2525,8 @@ technologies = {
 			T2_assult_vehicle  = 1
 			T2_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_opaz_defence_upgrade2 = {
@@ -2500,7 +2534,7 @@ technologies = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 18 y = 5 }
+			position = { x = 31 y = 5 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip =assault_vehicle_opaz_defence_upgrade2_tt
@@ -2518,13 +2552,15 @@ technologies = {
 			T3_assult_vehicle  = 1
 			T3_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_opaz_defence_upgrade3 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 18 y = 9 }
+			position = { x = 31 y = 9 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip =assault_vehicle_opaz_defence_upgrade3_tt
@@ -2542,13 +2578,15 @@ technologies = {
 			T4_assult_vehicle  = 1
 			T4_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 	assault_vehicle_opaz_defence_upgrade4 = {
 		research_cost = 1.5
 		folder = {
 			name = armour_folder
-			position = { x = 18 y = 13 }
+			position = { x = 31 y = 13 }
 		}
 		on_research_complete = {
 			custom_effect_tooltip =assault_vehicle_opaz_defence_upgrade4_tt
@@ -2564,6 +2602,8 @@ technologies = {
 			T5_assult_vehicle  = 1
 			T5_opaz = 1
 		}
+
+		show_effect_as_desc = yes
 		ai_will_do = { factor = 1 }
 	}
 }

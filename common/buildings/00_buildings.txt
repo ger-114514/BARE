@@ -72,7 +72,7 @@ buildings = {
 		base_cost = 28800
 		military_production = 1
 		disabled_in_dmz = yes
-		icon_frame = 2
+		icon_frame = 28
 		value = 8
 		infrastructure_construction_effect = yes
 		local_resources_resources_hic = 4
@@ -297,7 +297,7 @@ buildings = {
 
 	metal_processing_plant = { #金属加工厂
 		base_cost = 10800
-		icon_frame = 10
+		icon_frame = 30
 		value = 5
 		infrastructure_construction_effect = yes
 		local_resources_resources_cm = 25
@@ -314,7 +314,7 @@ buildings = {
 
 	rare_metal_processing_plant = { #稀有金属加工厂
 		base_cost = 10800
-		icon_frame = 10
+		icon_frame = 31
 		value = 5
 		infrastructure_construction_effect = yes
 		local_resources_resources_rm = 10
@@ -331,7 +331,7 @@ buildings = {
 	
 	electronic_component_factory = { #电子加工厂
 		base_cost = 14500
-		icon_frame = 10
+		icon_frame = 32
 		value = 5
 		infrastructure_construction_effect = yes
 		local_resources_resources_ec = 15
@@ -347,7 +347,7 @@ buildings = {
 	opatz_synthesis_center = { #欧帕兹合成中心
 		base_cost = 20000
 		value = 5
-		icon_frame = 10
+		icon_frame = 33
 		infrastructure_construction_effect = yes
 		local_resources_resources_mm = 4
 		refinery = yes
@@ -363,7 +363,7 @@ buildings = {
 	resource_distribution_center = { #资源集散中心
 		base_cost = 7200
 		per_level_extra_cost = 960
-		icon_frame = 1
+		icon_frame = 29
 		value = 5
 		infrastructure_construction_effect = yes
 		
@@ -382,7 +382,7 @@ buildings = {
 	construction_center = { #建筑中心
 		base_cost = 15200
 		per_level_extra_cost = 1560
-		icon_frame = 1
+		icon_frame = 34
 		value = 5
 
 
@@ -406,7 +406,7 @@ buildings = {
 
 	thermal_power_station = {
 		base_cost = 10800
-		icon_frame = 1
+		icon_frame = 35
 		value = 5
 		infrastructure_construction_effect = yes
 		local_resources_resources_cm = 0 
@@ -434,7 +434,7 @@ buildings = {
 
 	biological_power_station = {
 		base_cost = 21600
-		icon_frame = 1
+		icon_frame = 36
 		value = 5
 		infrastructure_construction_effect = yes
 		local_resources_resources_cm = 0 
@@ -457,7 +457,7 @@ buildings = {
 
 	opaz_power_station = {
 		base_cost = 12800
-		icon_frame = 1
+		icon_frame = 37
 		value = 5
 		infrastructure_construction_effect = yes
 		local_resources_resources_cm = 0 

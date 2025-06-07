@@ -1,0 +1,44 @@
+spritetypes = {
+	spritetype = {
+		name = "GFX_SL_state_book_button"
+		texturefile = "gfx/interface/state_lore/state_book_button.dds"
+	}
+	spritetype = {
+		name = "GFX_SL_mapicon_button"
+		texturefile = "gfx/interface/state_lore/sl_mapicon_button.dds"
+	}
+	spritetype = {
+		name = "GFX_SL_state_book_alert"
+		texturefile = "gfx/interface/state_lore/state_book_alert.dds"
+	}
+	spritetype = {
+		name = "GFX_SL_state_lore_logo"
+		texturefile = "gfx/interface/state_lore/state_lore_logo.dds"
+	}
+	
+	### IMAGES GO HERE ###
+	# I highly recommend for y'all to put in winter images when convenient, i.e. when a good winter image is available. If none are available, you don't have to do stuff like whiten the image to do winter images.
+
+	# And, of course, when the climate of the nation is subtropic.
+
+	spritetype = {
+		name = "GFX_state_lore_img_1"
+		texturefile = "gfx/interface/state_lore/images/state_lore_img_1.dds"
+	}
+	spritetype = {
+		name = "GFX_state_lore_img_2"
+		texturefile = "gfx/interface/state_lore/images/state_lore_img_2.dds"
+	}
+	spritetype = {
+		name = "GFX_state_lore_img_3"
+		texturefile = "gfx/interface/state_lore/images/state_lore_img_3.dds"
+	}
+	spritetype = {
+		name = "GFX_state_lore_img_4"
+		texturefile = "gfx/interface/state_lore/images/state_lore_img_4.dds"
+	}
+	spritetype = {
+		name = "GFX_state_lore_img_5"
+		texturefile = "gfx/interface/state_lore/images/state_lore_img_5.dds"
+	}
+}

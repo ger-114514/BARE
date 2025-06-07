@@ -781,7 +781,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tech_Update"
-					position = { x = 1320 y = 20 }
+					position = { x = 2225 y = 20 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "突击载具升级"
@@ -794,7 +794,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tech_bm"
-					position = { x = 2190 y = 20 }
+					position = { x = 1355 y = 20 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "战斗机甲"
@@ -1150,7 +1150,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANKT3"
-					position = { x = 60 y = 520 }
+					position = { x = 60 y = 450 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T3技术"
@@ -1161,7 +1161,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANK_IV"
-					position = { x = 60 y = 660 }
+					position = { x = 60 y = 590 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T4技术"
@@ -1172,7 +1172,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANK_V"
-					position = { x = 60 y = 800 }
+					position = { x = 60 y = 730 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T5技术"
@@ -3579,7 +3579,7 @@ guiTypes = {
 
 		iconType = {
 			name = "Icon"
-			position = { x=3 y=3 }
+			position = { x=4 y=3 }
 			spriteType = "GFX_technology_medium"
 			alwaystransparent = yes
 		}
@@ -3817,7 +3817,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "sub_technology_slot_0"
-			position = { x=142 y=5 }
+			position = { x=181 y=1 }
 			size = { width = 35 height = 26 }
 			clipping = no
 
@@ -3828,8 +3828,8 @@ guiTypes = {
 
 			iconType = {
 				name = "picture"
-				position = { x=6 y=2 }
-				spriteType = "GFX_airwing_carrier_icon"
+				position = { x=3 y=2 }
+				spriteType = "GFX_subtech_art"
 				alwaystransparent = yes
 			}
 		}
@@ -3842,23 +3842,23 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "techtree_industry_folder_item"
-		position = { x=0 y=5 }
-		size = { width = 204 height = 72 }
+		name = "techtree_industry_folder_small_item"
+		position = { x=0 y=0 }
+		size = { width = 72 height = 72 }
 		clipping = no
 
 		background = {
-			name = "Background"
+			name = "bg"
 			quadTextureSprite ="GFX_technology_unavailable_item_bg"
 		}
 
 		iconType = {
 			name = "Icon"
-			position = { x=34 y=35 }
+			position = { x=4 y=3 }
 			spriteType = "GFX_technology_medium"
-			centerposition = yes
 			alwaystransparent = yes
 		}
+
 		iconType = {
 			name = "bonus_icon"
 			position = { x=-1 y=-22 }
@@ -3867,7 +3867,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bonus"
-			position = { x = -1 y = -22 }
+			position = { x = -1 y = -21 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 4 y = 4}
@@ -3883,6 +3883,65 @@ guiTypes = {
 			spriteType = "GFX_design_team_icon"
 		}
 	}
+
+	containerWindowType = {
+		name = "techtree_industry_folder_item"
+		position = { x=-56 y=-7 }
+		size = { width = 183 height = 84 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=91 y=50 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+
+
+		instantTextBoxType = {
+			name = "Name"
+			position = { x = 6 y = -1 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "Happy-Go-Lucky-Tank"
+			maxWidth = 156
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "bonus_icon"
+			position = { x=111 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 111 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=5 y=55 }
+			spriteType = "GFX_design_team_icon"
+		}
+	}
+	
 	containerWindowType = {
 		name = "techtree_electronics_folder_item"
 		position = { x=0 y=5 }
@@ -4400,7 +4459,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_xor_item"
-		position = { x=5 y=5 }
+		position = { x=-25 y=5 }
 		size = { width=60 height= 60 }
 
 		iconType = {
