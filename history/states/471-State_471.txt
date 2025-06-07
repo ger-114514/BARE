@@ -2,7 +2,7 @@ state={
 	id=471
 	name="STATE_471"
 	provinces={
-		1827 2266 2371 2401 2479 3333 3855 5710 5735 6140 7134 7576 7748 8530 8564 8766 12198 12210 12216 12226 12227 3064
+		3064 6140 7134 7748 8564 8766 12216
 	}
 	history = {
 		buildings = {
@@ -13,7 +13,6 @@ state={
 		add_core_of=A03
 		add_core_of=MIL
 		victory_points = {3064 5}
-		victory_points = {8530 1}
     }
 	manpower=5700
 	state_category = rural

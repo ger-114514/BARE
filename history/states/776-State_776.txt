@@ -1,0 +1,19 @@
+state={
+	id=776
+	name="STATE_776"
+	provinces={
+		2599 2996 3600 4558 4726 5568 8117 10860 10888 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = CAB
+		add_core_of=CAB
+		add_core_of = ABY
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

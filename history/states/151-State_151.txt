@@ -2,24 +2,22 @@ state={
 	id=151
 	name="STATE_151"
 	resources={
-		resources_rm = 20
-		resources_ec = 40
+		resources_ec = 10
 	}
 	provinces={
 		1536 2551 2639 3099 3886 4014 6935 7406 7500 11044 11101 
 	}
 	history = {
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 4
-			arms_factory = 3
+			infrastructure = 3
+			industrial_complex = 1
 		}
-		owner = WLH
-		add_core_of=WLH
-		victory_points = {1536 20}
+		owner = A42
+		add_core_of=A42
+		victory_points = {1536 10}
     }
-	manpower=353000
-	state_category = metropolis
+	manpower=152400
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
