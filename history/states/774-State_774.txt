@@ -1,0 +1,19 @@
+state={
+	id=774
+	name="STATE_774"
+	provinces={
+		974 2761 3105 8109 10806 10947 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = CAP
+		add_core_of=CAP
+		add_core_of = ABY
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

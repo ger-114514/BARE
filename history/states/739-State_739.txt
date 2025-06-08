@@ -1,0 +1,18 @@
+state={
+	id=739
+	name="STATE_739"
+	provinces={
+		207 639 1230 6438 7411 7997 9554 11813 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,21 @@
+state={
+	id=773
+	name="STATE_773"
+	provinces={
+		1322 2297 2447 3314 3638 7314 10286 10319 10330 10388 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = A31
+		add_core_of=A31
+		add_core_of=RWT
+		victory_points = {10286 5}
+	}
+	manpower=400
+	state_category = rural
+
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

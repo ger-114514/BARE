@@ -1,0 +1,19 @@
+state={
+	id=748
+	name="STATE_748"
+	provinces={
+		2605 3569 5033 6333 6898 8644 11152 11195 
+	}
+	history = {
+		buildings = {
+			infrastructure = 4
+		}
+		owner = A17
+		add_core_of=A17
+		add_core_of=SHA
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,21 @@
+state={
+	id=731
+	name="STATE_731"
+	provinces={
+		1827 2266 2479 3333 3855 7576 8530 
+	}
+	history = {
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+		}
+		owner = A03
+		add_core_of=A03
+		add_core_of=MIL
+		victory_points = {8530 1}
+    }
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -228,11 +228,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -269,12 +269,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-				name = "line01"	
-				position = { x=102 y=44 }				
-				spriteType ="GFX_unit_details_line_topleft"
-				orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 
 			instantTextboxType = {
 				name = "label"
@@ -320,12 +320,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-				name = "line01"	
-				position = { x=102 y=44 }				
-				spriteType ="GFX_unit_details_line_topleft"
-				orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 
 			instantTextboxType = {
 				name = "label"
@@ -380,11 +380,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -430,11 +430,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -480,11 +480,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -523,12 +523,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-				name = "line01"	
-				position = { x=102 y=44 }				
-				spriteType ="GFX_unit_details_line_topleft"
-				orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 
 			instantTextboxType = {
 				name = "label"
@@ -583,11 +583,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -634,11 +634,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -684,11 +684,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -734,11 +734,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -785,11 +785,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -835,11 +835,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -885,11 +885,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -935,11 +935,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -979,12 +979,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-				name = "line01"	
-				position = { x=102 y=44 }				
-				spriteType ="GFX_unit_details_line_topleft"
-				orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 
 			instantTextboxType = {
 				name = "label"
@@ -1039,11 +1039,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1090,11 +1090,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1140,11 +1140,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1190,11 +1190,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1241,11 +1241,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1291,11 +1291,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1334,18 +1334,18 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "label"
-				position = { x =  -95 y = 36 }
+				position = { x =  -118 y = 36 }
 				font = "hoi_18mbs"
 				maxWidth = 160
 				maxHeight = 20
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1391,11 +1391,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1433,12 +1433,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-				name = "line01"	
-				position = { x=102 y=44 }				
-				spriteType ="GFX_unit_details_line_topleft"
-				orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 
 			instantTextboxType = {
 				name = "label"
@@ -1493,11 +1493,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1543,11 +1543,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1593,11 +1593,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1643,11 +1643,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1699,12 +1699,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-			name = "line01"	
-			position = { x=102 y=44 }				
-			spriteType ="GFX_unit_details_line_topleft"
-			orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 
 			instantTextboxType = {
 				name = "label"
@@ -1759,11 +1759,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1809,11 +1809,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=102 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomleft"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=102 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomleft"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1859,11 +1859,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1909,11 +1909,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -1959,11 +1959,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2009,11 +2009,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2059,11 +2059,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2109,11 +2109,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2159,11 +2159,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2209,11 +2209,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line03"	
-				position = { x=-107 y=44 }					
-				spriteType ="GFX_unit_details_line_topright"
-			}
+			# iconType = {
+			# 	name = "line03"	
+			# 	position = { x=-107 y=44 }					
+			# 	spriteType ="GFX_unit_details_line_topright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2259,11 +2259,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line04"	
-				position = { x=-112 y=34 }					
-				spriteType ="GFX_unit_details_line_bottomright"
-			}
+			# iconType = {
+			# 	name = "line04"	
+			# 	position = { x=-112 y=34 }					
+			# 	spriteType ="GFX_unit_details_line_bottomright"
+			# }
 			
 			buttonType = {
 				name = "decrease_level"
@@ -2316,12 +2316,12 @@ guiTypes = {
 				spriteType ="GFX_variant_entry_bg"
 			}
 			
-			iconType = {
-				name = "line01"	
-				position = { x=102 y=44 }				
-				spriteType ="GFX_unit_navy_details_line_topleft"
-				orientation = "UPPER_LEFT"
-			}	
+			# iconType = {
+			# 	name = "line01"	
+			# 	position = { x=102 y=44 }				
+			# 	spriteType ="GFX_unit_navy_details_line_topleft"
+			# 	orientation = "UPPER_LEFT"
+			# }	
 		
 			
 			instantTextboxType = {
@@ -2377,11 +2377,11 @@ guiTypes = {
 				format = centre
 			}
 			
-			iconType = {
-				name = "line02"	
-				position = { x=-83 y=43 }					
-				spriteType ="GFX_unit_navy_details_line_topright"
-			}	
+			# iconType = {
+			# 	name = "line02"	
+			# 	position = { x=-83 y=43 }					
+			# 	spriteType ="GFX_unit_navy_details_line_topright"
+			# }	
 			
 			buttonType = {
 				name = "decrease_level"

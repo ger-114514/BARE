@@ -204,7 +204,7 @@ categories =  {
 ###
 
 terrain = {
-	terrain_0					= { type = plains			color = { 	0	 } texture = 12 }
+	terrain_0					= { type = plains			color = { 	0	 } texture = 1 }
 	terrain_1					= { type = forest			color = { 	1	 } texture = 4 } 
 	desert_mountain				= { type = hills			color = { 	2	 } texture = 3 }
 	desert						= { type = desert			color = { 	3	 } texture = 9 }
@@ -220,7 +220,7 @@ terrain = {
 	desert						= { type = mountain			color = { 	11	 } texture = 11 }
 	desert						= { type = desert			color = { 	12	 } texture = 8 }
 		
-	forest_13					= { type = urban			color = { 	13	 } texture = 10 spawn_city = yes }
+	forest_13					= { type = urban			color = { 	13	 } texture = 10 } #spawn_city = yes
 	forest_14					= { type = lakes			color = { 	14	 } texture = 255 }
 	ocean_15					= { type = ocean			color = { 	15	 } texture = 9 } 
 		

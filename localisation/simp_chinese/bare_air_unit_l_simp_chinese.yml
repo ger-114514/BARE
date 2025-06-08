@@ -11,14 +11,14 @@ air_ship_air_forte_airframe:"空中堡垒"
 air_ship_air_forte_airframe_1:"标准型空中堡垒"
 air_ship_air_forte_airframe_2:"改进型空中堡垒"
 
- #现实的无人机或者末代螺旋桨战斗机
+ #单发战斗机
 
-small_uav_airframe:"小型无人战斗机"
-small_uav_airframe_desc:"本质上是类似于会飞的防空导弹发射器，这些无人机只搭载了少量空空导弹，单门机炮和发射它们所需的最基本航电系统，其速度和机动性也毫无优势，但胜在十分便宜，可以以数量取胜。"
-small_uav_equipment_1:"标准型小型无人战斗机"
-small_uav_equipment_2:"改进型小型无人战斗机"
-small_uav_equipment_3:"高级型小型无人战斗机"
-small_uav_equipment_4:"先进型小型无人战斗机"
+small_uav_airframe:"小型无人作战平台"
+small_uav_airframe_desc:"使用单发引擎的作战平台，通常负责要地防空或截击任务。尽管挂载与航程有限，但在作战范围内，能表现出优异的战术性能。"
+small_uav_equipment_1:"无人作战平台S-I"
+small_uav_equipment_2:"无人作战平台S-II"
+small_uav_equipment_3:"无人作战平台S-III"
+small_uav_equipment_4:"无人作战平台S-IV"
 
 small_uav_cas_airframe:"小型无人攻击机"
 small_uav_cas_airframe_desc:"只搭载了少量炸弹，对地导弹和机枪，有有限的对地攻击能力，缺乏防御能力和反制措施，但胜在数量够多。能以量变引起质变。"
@@ -34,14 +34,14 @@ small_uav_recon_equipment_2:"改进型无人侦察机"
 small_uav_recon_equipment_3:"查打一体无人机"
 small_uav_recon_equipment_4:"先进型查打一体无人机"
 
-#亚音速战斗机和攻击机，允许初代超音速（刚刚破音速的那种）
+#双发战斗机
 
-medium_uav_airframe:"中型无人战斗机"
-medium_uav_airframe_desc:"亚音速无人战斗机，相对于小型无人机方面由于载荷的进步，其武备，航电系统和机动性都得到了跨越性的提升，当然成本也是。"
-medium_uav_equipment_1:"标准型中型无人战斗机"
-medium_uav_equipment_2:"改进型中型无人战斗机"
-medium_uav_equipment_3:"高级型中型无人战斗机"
-medium_uav_equipment_4:"先进型中型无人战斗机"
+medium_uav_airframe:"中型无人作战平台"
+medium_uav_airframe_desc:"拥有双发引擎的作战单元，在天空中拥有相当可靠的航程与无可争议的对空挂载数量。同时，强大的引擎与坚固的机身也赋予其优秀的空战性能，是天空中不可替代的主力。"
+medium_uav_equipment_1:"无人作战平台M-I"
+medium_uav_equipment_2:"无人作战平台M-II"
+medium_uav_equipment_3:"无人作战平台M-III"
+medium_uav_equipment_4:"无人作战平台M-IV"
 
 medium_uav_cas_airframe:"中型无人攻击机"
 medium_uav_cas_airframe_desc:"无人攻击机，由于体型的上升，能够搭载更多，更大的武器，能对坚固的建筑进行攻击，同时改进的防护和反制措施能确保你花大价钱买的无人机不会太容易就变成烟花。"
@@ -50,13 +50,14 @@ medium_uav_cas_equipment_2:"改进型中型无人攻击机"
 medium_uav_cas_equipment_3:"高级型中型无人攻击机"
 medium_uav_cas_equipment_4:"先进型中型无人攻击机"
 
-#超音速战斗机 （2，3，4代，5代机禁止）
-heavy_uav_airframe:"无人空优战斗机"
+#洲际作战航空器
+
+heavy_uav_airframe:"重型无人作战平台"
 heavy_uav_airframe_desc:"基沃托斯空中力量的象征，先进的航电系统，大航程和远程空空导弹确保了它在天空的统治地位，同时也能进行一定程度的对地攻击，代价由于价格问题，就是即使是大学园也没办法拥有很多架飞机。"
-heavy_uav_equipment_1:"标准型无人空优战斗机"
-heavy_uav_equipment_2:"改进型无人空优战斗机"
-heavy_uav_equipment_3:"高级型无人空优战斗机"
-heavy_uav_equipment_4:"先进型无人空优战斗机"
+heavy_uav_equipment_1:"无人作战平台H-I"
+heavy_uav_equipment_2:"无人作战平台H-II"
+heavy_uav_equipment_3:"无人作战平台H-III"
+heavy_uav_equipment_4:"无人作战平台H-IV"
 
 heavy_uav_cas_airframe:"无人多用途战斗机"
 heavy_uav_cas_airframe_desc:"你能搞到的最好的炸药投射器，它拥有的对地挂载能轻易炸平一个街区，并在敌方的防空力量眼皮子地下逃之夭夭，同时也能进行一定程度的对空作战能力。就是要考虑账单问题。"
@@ -70,8 +71,10 @@ transport_plane_equipment:"无人运输机"
 transport_plane_equipment_desc:"学园利用天空的最佳方式，通过这些运输机机队，它们能确保你的快递第二天能到你家门口。"
 transport_plane_equipment_1:"标准型无人运输机"
 transport_plane_equipment_2:"改进型无人运输机"
-transport_plane_equipment_3:"标准型无人炮艇机"
-transport_plane_equipment_4:"改进型无人炮艇机"
+transport_plane_equipment_3:"标准型无人空中炮艇"
+transport_plane_equipment_3_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
+transport_plane_equipment_4:"改进型无人空中炮艇"
+transport_plane_equipment_4_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
 
 helicopter_airframe:"通用直升机"
 helicopter_airframe_1:"标准型通用直升机"

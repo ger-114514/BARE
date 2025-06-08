@@ -2,22 +2,25 @@ state={
 	id=87
 	name="STATE_87"
 	resources={
-		resources_ec = 10
+		resources_rm = 20
+		resources_ec = 40
 	}
 	provinces={
 		434 1401 3754 4133 5898 6001 6240 11262 11291 11300 11322 
 	}
+	
 	history = {
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 3
 		}
-		owner = A41
-		add_core_of=A41
-		victory_points = {11300 15}
+		owner = WLH
+		add_core_of=WLH
+		victory_points = {11300 20}
     }
-	manpower=152400
-	state_category = large_town
+	manpower=353000
+	state_category = metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

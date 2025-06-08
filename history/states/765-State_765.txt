@@ -1,0 +1,19 @@
+state={
+	id=765
+	name="STATE_765"
+	provinces={
+		3244 6758 7539 7579 9555 10209 10248 
+	}
+	history={
+		buildings = {
+			infrastructure = 4
+		}
+		owner = A34
+		add_core_of=A34
+		add_core_of=RWT
+	}
+	manpower=400
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
