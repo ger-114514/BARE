@@ -102,6 +102,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_techtree_support_tab"
+		textureFile = "gfx//interface//techtree//techtree_support_tab.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_ifv_folder_tab"
+		textureFile = "gfx//interface//techtree//ifv_folder_tab.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
 		name = "GFX_techtree_tank_tab"
 		textureFile = "gfx//interface//techtree//techtree_tank_tab.dds"
 		noOfFrames = 2		
@@ -187,6 +199,24 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_industry_folder_tab"
 		textureFile = "gfx//interface//techtree//techtree_industry_tab.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_industry_resource_folder_tab"
+		textureFile = "gfx//interface//techtree//industry_resource_folder_tab.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_bd_folder_tab"
+		textureFile = "gfx//interface//techtree//bd_folder_tab.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_breakthrough_folder_tab"
+		textureFile = "gfx//interface//techtree//breakthrough_folder_tab.dds"
 		noOfFrames = 2		
 	}
 

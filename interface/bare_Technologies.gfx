@@ -1649,6 +1649,110 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/industry/industrial_complex_T5.dds"
 	}
 	SpriteType = {
+		name = "GFX_Metal_Refining_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Metal_Refining_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Metal_Refining_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Metal_Refining_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_kerosene_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/kerosene_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_kerosene_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/kerosene_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_kerosene_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/kerosene_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Synthetic_rubber_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Synthetic_rubber_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Synthetic_rubber_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Synthetic_rubber_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Synthetic_rubber_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Synthetic_rubber_T3.dds"
+	}
+	SpriteType = {
 		name = "GFX_Power_Development_T1_medium"
 		texturefile = "gfx/interface/technologies/industry/Power_Development_T1.dds"
 	}
@@ -1705,6 +1809,86 @@ spriteTypes = {
 	####### Electronicss FLODER ########
 	####################################
 
+	SpriteType = {
+		name = "GFX_Personal_Computer_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T5.dds"
+	}
     SpriteType = {
 		name = "GFX_Communication_Network_T1_medium"
 		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T1.dds"

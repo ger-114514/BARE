@@ -2644,14 +2644,14 @@ guiTypes = {
 			buttonType = {
 				name = "support_folder_tab"
 				position = { x = 185 y = 0 }
-				quadTextureSprite = "GFX_armour_folder_tab"
+				quadTextureSprite = "GFX_techtree_support_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
 			}
 			buttonType = {
 				name = "ifv_folder_tab"
 				position = { x = 270 y = 0 }
-				quadTextureSprite = "GFX_armour_folder_tab"
+				quadTextureSprite = "GFX_ifv_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
 			}
@@ -2670,39 +2670,39 @@ guiTypes = {
 				clicksound = ui_research_tab_armor
 			}
 			buttonType = {
-				name = "industry_folder_tab"
+				name = "electronics_folder_tab"
 				position = { x = 525 y = 0 }
-				quadTextureSprite = "GFX_industry_folder_tab"
+				quadTextureSprite = "GFX_techtree_engineering_tab"
 				frame = 1
-				clicksound = ui_research_tab_industry
+				clicksound = ui_research_tab_engineering
 			}
 			buttonType = {
-				name = "industry_resource_folder_tab"
+				name = "industry_folder_tab"
 				position = { x = 610 y = 0 }
 				quadTextureSprite = "GFX_industry_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_industry
 			}
 			buttonType = {
-				name = "electronics_folder_tab"
+				name = "industry_resource_folder_tab"
 				position = { x = 695 y = 0 }
-				quadTextureSprite = "GFX_techtree_engineering_tab"
+				quadTextureSprite = "GFX_industry_resource_folder_tab"
 				frame = 1
-				clicksound = ui_research_tab_engineering
+				clicksound = ui_research_tab_industry
 			}
 			#BD#
 			buttonType = {
 				name = "bd_folder_tab"
 				position = { x = 780 y = 0 }
-				quadTextureSprite = "GFX_industry_folder_tab"
+				quadTextureSprite = "GFX_bd_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_engineering
 			}
 			##突破
 			buttonType = {
 				name = "breakthrough_folder_tab"
-				position = { x = 875 y = 0 }
-				quadTextureSprite = "GFX_infantry_folder_tab"
+				position = { x = 865 y = 0 }
+				quadTextureSprite = "GFX_breakthrough_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_industry
 			}
