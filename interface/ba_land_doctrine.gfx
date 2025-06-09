@@ -305,6 +305,12 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_tank_21_medium"
+		texturefile = "gfx/interface/technologies/peoples_army.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
 		name = "GFX_infantry_25_medium"
 		texturefile = "gfx/interface/technologies/guerilla_warfare.dds"
 		alwaystransparent = yes
