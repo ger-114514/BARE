@@ -43,9 +43,6 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				original_tag = SHA
-			}
 			traits = {
 				guard_of_kisaki
 			}
@@ -83,9 +80,6 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				original_tag = SHA
-			} 
 			traits = {
 				first_kitchen_helper
 			}
@@ -121,9 +115,6 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				original_tag = SHA
-			} 
 			traits = {
 				magic_cook
 			}
@@ -159,9 +150,6 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				original_tag = SHA
-			} 
 			traits = {
 				caretaker_of_plum_blossom_garden
 			}
@@ -214,9 +202,6 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				original_tag = SHA
-			} 
 			traits = {
 				little_lady
 			}
@@ -247,12 +232,9 @@ characters = {
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = SHA_saya_ac
+			slot = high_command
+			idea_token = SHA_saya_hc
 			allowed = {
-				original_tag = SHA
-			}
-			available = {
 				original_tag = SHA
 			}
 			traits = {
@@ -270,9 +252,6 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				original_tag = SHA
-			} 
 			traits = {
 				great_alchemy_master
 			}
@@ -305,6 +284,10 @@ characters = {
 
         field_marshal = {
 			traits = {infantry_officer organizer
+			}
+			visible = {
+				#TODO:解锁 海
+				always = no
 			}
 			skill = 3
 			attack_skill = 4

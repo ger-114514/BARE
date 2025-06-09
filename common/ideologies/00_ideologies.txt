@@ -19,7 +19,9 @@ ideologies = {
 		}
 
 		modifiers = {
-			
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 20.0
+			airforce_intel_to_others = 20.0
 		}
 		faction_modifiers = {
 		}

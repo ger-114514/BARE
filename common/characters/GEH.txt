@@ -96,8 +96,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_ako_ac
+			slot = high_command
+			idea_token = GEH_ako_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -182,8 +182,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_iori_ac
+			slot = high_command
+			idea_token = GEH_iori_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -241,8 +241,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_chinatsu_ac
+			slot = high_command
+			idea_token = GEH_chinatsu_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -368,8 +368,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_iroha_ac
+			slot = high_command
+			idea_token = GEH_iroha_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -528,8 +528,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_aru_ac
+			slot = high_command
+			idea_token = GEH_aru_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -563,8 +563,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_mutsuki_ac
+			slot = high_command
+			idea_token = GEH_mutsuki_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -589,7 +589,7 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	GEH_kayoko = {#鬼形佳代子 - 便利屋(非法组织)
+	GEH_kayoko = {#鬼方佳代子 - 便利屋(非法组织)
 		name = GEH_kayoko_name
 		portraits = {
 			civilian = {
@@ -598,8 +598,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_kayoko_ac
+			slot = high_command
+			idea_token = GEH_kayoko_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -633,12 +633,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = GEH_haruka_pa
+			slot = high_command
+			idea_token = GEH_haruka_hc
 			allowed = {
-				original_tag = GEH
-			}
-			available = {
 				original_tag = GEH
 			}
 			traits = {
@@ -667,8 +664,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = GEH_fuuka_pa
+			slot = high_command
+			idea_token = GEH_fuuka_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -701,8 +698,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = GEH_juri_pa
+			slot = high_command
+			idea_token = GEH_juri_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -769,8 +766,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = GEH_izumi_pa
+			slot = high_command
+			idea_token = GEH_izumi_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -803,8 +800,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = GEH_junko_pa
+			slot = high_command
+			idea_token = GEH_junko_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -871,8 +868,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = GEH_sena_ac
+			slot = high_command
+			idea_token = GEH_sena_hc
 			allowed = {
 				original_tag = GEH
 			}
@@ -909,9 +906,6 @@ characters = {
 			slot = political_advisor
 			idea_token = GEH_megu_pa
 			allowed = {
-				original_tag = GEH
-			}
-			available = {
 				original_tag = GEH
 			}
 			traits = {

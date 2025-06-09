@@ -275,12 +275,7 @@ Cathedral_war_ARI_defeated = {
 	add_ideas = {
 		ARI_JSL
 	}
-	TRI = {
-		country_event = LS_GST.51
-	}
-	GEH = {
-		country_event = LS_GST.52
-	}
+	news_event = Eden_pact.1002
 }
 Eden_treaty_formally_signed = {
 	custom_effect_tooltip = Eden_treaty_has_been_signed

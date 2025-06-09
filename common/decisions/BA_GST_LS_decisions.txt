@@ -977,7 +977,7 @@ GST_LS_ZZ_category = {
 			Cathedral_war_ARI_defeated = yes
 		}
 	}
-	GST_ZZ_ARI_ZHYB_TS_JDRW = {#阿里乌斯-完成最后一步国策-每月阶段进度增加任务
+	GST_ZZ_ARI_ZHYB_TS_JDRW = { #阿里乌斯-完成最后一步国策-每月阶段进度增加任务
 		icon = generic_research
 		priority = 36
 		activation = {
@@ -1249,7 +1249,19 @@ GST_LS_XC_DEBUFF_category = {
 			FROM = {
 				remove_dynamic_modifier = {
 					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = ARI
 				}
+				hidden_effect = {
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+						scope = TRI
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+						scope = GEH
+					}
+				}
+				
 			}
 		}
 	}
