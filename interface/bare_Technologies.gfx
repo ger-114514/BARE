@@ -1623,4 +1623,107 @@ spriteTypes = {
 		name = "GFX_Infrastructure_construction_T5_medium"
 		texturefile = "gfx/interface/technologies/industry/Infrastructure_construction_T5.dds"
 	}
+
+	##########################################
+	####### Industry Resources FLODER ########
+	##########################################
+
+	SpriteType = {
+		name = "GFX_industrial_complex_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/industrial_complex_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_industrial_complex_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/industrial_complex_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_industrial_complex_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/industrial_complex_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_industrial_complex_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/industrial_complex_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_industrial_complex_T5_medium"
+		texturefile = "gfx/interface/technologies/industry/industrial_complex_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Power_Development_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Power_Development_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Power_Development_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Power_Development_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Power_Development_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Power_Development_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Power_Development_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Power_Development_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Power_Development_T5_medium"
+		texturefile = "gfx/interface/technologies/industry/Power_Development_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Ecological_power_generation_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Ecological_power_generation_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Ecological_power_generation_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Ecological_power_generation_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Ecological_power_generation_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Ecological_power_generation_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Ecological_power_generation_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Ecological_power_generation_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_Power_Generation_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_Power_Generation_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_Power_Generation_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_Power_Generation_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_Power_Generation_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_Power_Generation_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_Power_Generation_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_Power_Generation_T4.dds"
+	}
+
+	####################################
+	####### Electronicss FLODER ########
+	####################################
+
+    SpriteType = {
+		name = "GFX_Communication_Network_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communication_Network_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communication_Network_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communication_Network_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communication_Network_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T5.dds"
+	}
+
 }

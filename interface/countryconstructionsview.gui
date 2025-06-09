@@ -545,7 +545,7 @@ guiTypes = {
 		buttonType = {
 			name = "start_construction_button"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_bare_buildings_strip"
+			spriteType = "GFX_buildings_strip"
 			clicksound = click_default
 		}
 
