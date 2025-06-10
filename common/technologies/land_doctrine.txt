@@ -164,6 +164,9 @@ technologies = {
 				air_attack = 0.10
 			}
 		}
+		category_mech_aa = {
+			air_attack = 0.1
+		}
 		enable_tactic = tactic_artillery_13
 		doctrine = yes
 		research_cost = 4.5
@@ -1724,6 +1727,9 @@ technologies = {
 		category_tank_destroyers = {
 			hard_attack = 0.1
 		}
+		category_mech_at = {
+			hard_attack = 0.1
+		}
 		supply_consumption_factor = -0.10
 		land_night_attack = 0.25
 		enable_tactic = tactic_robot_23
@@ -2801,6 +2807,7 @@ technologies = {
 			max_organisation = 5
 		}
 		org_loss_when_moving = -0.2
+		enable_tactic = tactic_Gehenna
 		folder = {
 			name = land_doctrine_folder
 			position = {
@@ -2862,6 +2869,7 @@ technologies = {
 		category_support_battalions = {
 			soft_attack = 0.2
 		}
+		enable_tactic = tactic_Trinity
 		ai_will_do = {
 			factor = 30
 		}
@@ -3295,6 +3303,7 @@ technologies = {
 			defense = -0.3
 			hard_attack = 0.3
 		}
+		enable_tactic = tactic_Arius
 		ai_will_do = {
 			factor = 30
 		}

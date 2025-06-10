@@ -172,6 +172,7 @@ tactic_artillery_32 = {
 		factor = 4
 	}
 	
+	display_phase = close_combat
 	picture = attack
 	phase = tactical_withdrawal
 	attacker = -0.1
@@ -313,7 +314,7 @@ tactic_infantry_22 = {
 	}
 	
 	picture = cc_storm
-
+    display_phase = close_combat
 	attacker = 0.3
 	defender = -0.2
 }
@@ -365,7 +366,7 @@ tactic_infantry_32 = {
 	}
 	
 	picture = cc_withdraw
-
+    display_phase = close_combat
 	attacker = 0.2
 	defender = -0.4
 }
@@ -663,6 +664,7 @@ tactic_robot_11 = {
 	picture = cc_local_strong_point
     countered_by = tactic_infantry_22
 	countered_by = tactic_robot_32
+	display_phase = close_combat
 	attacker = -0.15
 	defender = 0.05
 }
@@ -733,9 +735,9 @@ tactic_robot_21 = {
 			hardness > 80
 		}
 	}
-	
+	display_phase = close_combat
 	picture = tw_defend
-	attacker = 1
+	attacker = -0.5
 	defender = 1
 }
 
@@ -837,6 +839,7 @@ tactic_robot_32 = {
 	}
 	
 	picture = tw_chase
+	display_phase = close_combat
 	attacker_movement_speed = 0.2
 	attacker = 0.3
 	defender = -0.2
@@ -861,4 +864,81 @@ tactic_robot_33 = {
 	picture = shock
 	attacker = 0.3
 	defender = -0.3
+}
+
+tactic_Gehenna = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 4
+	}
+	
+	picture = breakthrough
+	combat_width = 0.25	
+	attacker_movement_speed = 0.5
+	attacker = 0.3
+	defender = -0.1
+}
+
+tactic_Trinity = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness < 0.5
+		OR = {
+		    phase = no
+			phase = street_fighting
+		}
+		skill > 2
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 4
+	}
+
+	display_phase = street_fighting
+	picture = tactic_sf_barrage
+	attacker = 0.3
+}
+
+tactic_Arius = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness < 0.3
+		phase = no
+		OR = {
+			skill > 2
+			skill_advantage > 1
+		}
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 4
+	}
+	
+	picture = cc_storm
+	phase = close_combat
+	combat_width = 0.5
+	attacker_movement_speed = 0.2	
+	attacker = 0.25
+	defender = 0.1
 }

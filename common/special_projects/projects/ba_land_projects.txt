@@ -31,10 +31,10 @@ sp_ba_T2_land_project = {
     breakthrough_cost = {
         specialization_land = 1
     }
-    narrative = {
-        name = "my_project_name_loc_key"
-        desc = "my_project_desc_loc_key"
-    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.short
@@ -112,10 +112,10 @@ sp_ba_T3_land_project = {
     breakthrough_cost = {
         specialization_land = 1
     }
-    narrative = {
-        name = "my_project_name_loc_key"
-        desc = "my_project_desc_loc_key"
-    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
     icon = GFX_sp_land_military_engineering_vehicles
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
@@ -192,10 +192,10 @@ sp_ba_T4_land_project = {
     breakthrough_cost = {
         specialization_land = 2
     }
-    narrative = {
-        name = "my_project_name_loc_key"
-        desc = "my_project_desc_loc_key"
-    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
     icon = GFX_sp_land_land_cruiser
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.long
@@ -273,10 +273,10 @@ sp_ba_T5_land_project = {
     breakthrough_cost = {
         specialization_land = 3
     }
-    narrative = {
-        name = "my_project_name_loc_key"
-        desc = "my_project_desc_loc_key"
-    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
     icon = GFX_sp_land_self_propelled_super_heavy_howitzer
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.very_long
