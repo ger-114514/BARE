@@ -1,0 +1,42 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+##注意了，这不是路线选择，而是剧本选择器，决定了游戏刚开局的局势
+##TODO：图标修改
+story_settings_ALF = {
+	name = "BARE_RULE_story_settings_ALF"
+	group = "BARE_RULE_GROUP_STORY_SETTINGS_GROUP"
+	icon = "GFX_wargoals"
+	default = {
+		name = "BARE_RULE_story_settings_ALF_DEFAULT"
+		text = "BARE_RULE_story_settings_ALF_DEFAULT_TEXT"
+		desc = "BARE_RULE_story_settings_ALF_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BARE_RULE_story_settings_ALF_SELECTED"
+		text = "BARE_RULE_story_settings_ALF_SELECTED_TEXT"
+		desc = "BARE_RULE_story_settings_ALF_SELECTED_DESC"
+		allow_achievements = yes
+	}
+}

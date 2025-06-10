@@ -1,0 +1,33 @@
+Hipper_test_decisions_categories = {
+
+	priority = 1001
+
+	icon = generic
+
+	allowed = {
+		is_debug = yes
+	}
+
+	visible = {
+		is_debug = yes
+	}
+
+	visible_when_empty = yes
+}
+
+CEN_Operation_Uranus_categories = {
+    priority = 1001
+
+	icon = generic
+
+	allowed = {
+		is_debug = yes
+		tag = CEN
+	}
+
+	visible = {
+		is_debug = yes
+	}
+
+	visible_when_empty = yes
+}

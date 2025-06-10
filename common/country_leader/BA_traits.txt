@@ -18,6 +18,14 @@ leader_traits = {
 #        command_cap = @tier1 #军事顾问的指挥点数花费
 #    }
 
+    ##Easter Egg
+    TRI_nagisa_a_cool_victory = {
+        random = no
+        defensive_war_stability_factor = 0.05
+        offensive_war_stability_factor = 0.05
+        custom_modifier_tooltip = TRI_nagisa_a_cool_victory_tt
+    }
+
 
     #追根溯源
     TRI_nagisa_Find_the_root = {
@@ -374,6 +382,12 @@ leader_traits = {
 
     
 ###格黑娜###
+    ##彩单##
+    GEH_makoto_a_cool_victory = {
+        random = no
+        max_command_power = 10
+        custom_modifier_tooltip = GEH_makoto_a_cool_victory_tt
+    }
     #风纪委员长
     leader_of_fukiinkai_cl = {
         random = no
@@ -1480,5 +1494,4 @@ leader_traits = {
         army_infantry_attack_factor = 0.15
         army_infantry_defence_factor = 0.2
     }
-
 }

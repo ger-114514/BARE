@@ -1,6 +1,28 @@
-spriteTypes = { #角色小肖像sprite
+spriteTypes = { 
     spriteType = {
         name = GFX_TRI_Nagisa_small
         texturefile = "gfx/leaders/TRI/nagisa.dds"
+    }
+
+    spriteType = {
+        name = GFX_BARE_Portrait_TRI_nagisa_cool
+        texturefile = "gfx/leaders/TRI/BARE_Portrait_TRI_nagisa_cool.dds"
+    }
+
+    ##GEH
+    spriteType = {
+        name = GFX_BARE_Portrait_GEH_makoto_cool
+        texturefile = "gfx/leaders/GEH/BARE_Portrait_GEH_makoto_cool.dds"
+    }
+
+    ##ALF##
+    spriteType = {
+        name = GFX_BARE_Portrait_ALF_the_leader_mask
+        texturefile = "gfx/leaders/ALF/BARE_Portrait_ALF_the_leader_mask.dds"
+    }
+
+    spriteType = {
+        name = GFX_BARE_Portrait_ALF_the_leader_no_mask
+        texturefile = "gfx/leaders/ALF/BARE_Portrait_ALF_the_leader_no_mask.dds"
     }
 }
