@@ -433,6 +433,15 @@ country_event = { #僵局
 				array = global.GST_JS_ZBH #为每个州执行效果
 				add_dynamic_modifier = {
 					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = ARI
+				}
+				add_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = TRI
+				}
+				add_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = GEH
 				}
 				set_state_flag = {
 					flag = CW_fully_control_check

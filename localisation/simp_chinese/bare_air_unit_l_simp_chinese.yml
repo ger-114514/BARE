@@ -13,19 +13,30 @@ air_ship_air_forte_airframe_2:"改进型空中堡垒"
 
  #单发战斗机
 
-small_uav_airframe:"小型无人作战平台"
-small_uav_airframe_desc:"使用单发引擎的作战平台，通常负责要地防空或截击任务。尽管挂载与航程有限，但在作战范围内，能表现出优异的战术性能。"
-small_uav_equipment_1:"无人作战平台S-I"
-small_uav_equipment_2:"无人作战平台S-II"
-small_uav_equipment_3:"无人作战平台S-III"
-small_uav_equipment_4:"无人作战平台S-IV"
+small_uav_airframe:"轻型无人战斗机"
+small_uav_airframe_desc:"由老式战斗机，教练机等机型改装而来，既可以无人驾驶，也保留了学生可轻易操作的驾驶设备，虽然速度最快也就能勉强超音速，武备和航程也很有限，但胜在廉价且高机动，是许多学生感受天空的最佳选择。"
+small_uav_equipment_1:"标准型轻型无人战斗机"
+small_uav_equipment_2:"改进型轻型无人战斗机"
+small_uav_equipment_3:"高级型轻型无人战斗机"
+small_uav_equipment_4:"先进型轻型无人战斗机"
 
-small_uav_cas_airframe:"小型无人攻击机"
-small_uav_cas_airframe_desc:"只搭载了少量炸弹，对地导弹和机枪，有有限的对地攻击能力，缺乏防御能力和反制措施，但胜在数量够多。能以量变引起质变。"
-small_uav_cas_equipment_1:"标准型小型无人攻击机"
-small_uav_cas_equipment_2:"改进型小型无人攻击机"
-small_uav_cas_equipment_3:"高级型小型无人攻击机"
-small_uav_cas_equipment_4:"先进型小型无人攻击机"
+TRI_small_uav_equipment_1:"“吸血鬼”FB.5 轻型无人战斗机"
+TRI_small_uav_equipment_2:"“毒液”FB.6 轻型无人战斗机"
+TRI_small_uav_equipment_3:"“猎人”F.6 轻型无人战斗机"
+TRI_small_uav_equipment_4:"“鹞”FA.2 轻型无人战斗机"
+
+small_uav_cas_airframe:"轻型无人攻击机"
+small_uav_cas_airframe_desc:"只搭载了少量炸弹，对地导弹和机炮的无人机，有有限的对地攻击能力，缺乏防御能力和反制措施，但胜在数量够多。能以量变引起质变。"
+small_uav_cas_equipment_1:"标准型轻型无人攻击机"
+small_uav_cas_equipment_2:"改进型轻型无人攻击机"
+small_uav_cas_equipment_3:"高级型轻型无人攻击机"
+small_uav_cas_equipment_4:"先进型轻型无人攻击机"
+
+
+TRI_small_uav_cas_equipment_1:"“攻击霸主”MK88 轻型无人攻击机"
+TRI_small_uav_cas_equipment_2:"“流星” F.8 轻型无人攻击机"
+TRI_small_uav_cas_equipment_3:"F84F 轻型无人攻击机"
+TRI_small_uav_cas_equipment_4:"“阿尔法喷气” 轻型无人攻击机"
 
 small_uav_recon_airframe:"无人侦察机"
 small_uav_recon_airframe_desc:"用于进行空中侦察的无人机，搭载了光电设备，部分型号拥有对地武器，可以进行一定程度的对地打击"
@@ -34,14 +45,26 @@ small_uav_recon_equipment_2:"改进型无人侦察机"
 small_uav_recon_equipment_3:"查打一体无人机"
 small_uav_recon_equipment_4:"先进型查打一体无人机"
 
+TRI_small_uav_recon_equipment_1:"“赫尔墨斯” 900 无人侦察机"
+TRI_small_uav_recon_equipment_2:"RQ-4“全球鹰” 无人侦察机"
+TRI_small_uav_recon_equipment_3:"MQ-9“死神” 查打一体无人机"
+TRI_small_uav_recon_equipment_4:"“AAROK” 查打一体无人机"
+
+
+
 #双发战斗机
 
-medium_uav_airframe:"中型无人作战平台"
-medium_uav_airframe_desc:"拥有双发引擎的作战单元，在天空中拥有相当可靠的航程与无可争议的对空挂载数量。同时，强大的引擎与坚固的机身也赋予其优秀的空战性能，是天空中不可替代的主力。"
-medium_uav_equipment_1:"无人作战平台M-I"
-medium_uav_equipment_2:"无人作战平台M-II"
-medium_uav_equipment_3:"无人作战平台M-III"
-medium_uav_equipment_4:"无人作战平台M-IV"
+medium_uav_airframe:"中型无人战斗机"
+medium_uav_airframe_desc:"对于那些想要挑战天空，有点闲钱，但不多的学生来说，中型无人机是很好的选择，更大的体型允许更大的发动机，更大的油箱和更多的武备，带来了飞行性能的和战斗力的巨大跨越，同时也有了搭载先进航电系统的余裕，虽然成本也水涨船高，但总体而言，它能干好大部分的事情，但不能指望干的优秀。"
+TRI_medium_uav_equipment_1:"“闪电”F.6 中型无人战斗机"
+TRI_medium_uav_equipment_2:"“幻影” III 中型无人战斗机"
+TRI_medium_uav_equipment_3:"“幻影” 2000C 中型无人战斗机"
+TRI_medium_uav_equipment_4:"JAS-39E 中型无人战斗机"
+
+medium_uav_equipment_1:"标准型中型无人战斗机"
+medium_uav_equipment_2:"改进型中型无人战斗机"
+medium_uav_equipment_3:"高级型中型无人战斗机"
+medium_uav_equipment_4:"先进型中型无人战斗机"
 
 medium_uav_cas_airframe:"中型无人攻击机"
 medium_uav_cas_airframe_desc:"无人攻击机，由于体型的上升，能够搭载更多，更大的武器，能对坚固的建筑进行攻击，同时改进的防护和反制措施能确保你花大价钱买的无人机不会太容易就变成烟花。"
@@ -50,21 +73,33 @@ medium_uav_cas_equipment_2:"改进型中型无人攻击机"
 medium_uav_cas_equipment_3:"高级型中型无人攻击机"
 medium_uav_cas_equipment_4:"先进型中型无人攻击机"
 
+
+TRI_medium_uav_cas_equipment_1:"“超级军旗” GR1A 中型无人攻击机"
+TRI_medium_uav_cas_equipment_2:"“美洲虎” GR1A 中型无人攻击机"
+TRI_medium_uav_cas_equipment_3:"“幻影”F1CT 中型无人攻击机"
+TRI_medium_uav_cas_equipment_4:"“幻影”2000D-RMV 中型无人攻击机"
+
 #洲际作战航空器
 
-heavy_uav_airframe:"重型无人作战平台"
-heavy_uav_airframe_desc:"基沃托斯空中力量的象征，先进的航电系统，大航程和远程空空导弹确保了它在天空的统治地位，同时也能进行一定程度的对地攻击，代价由于价格问题，就是即使是大学园也没办法拥有很多架飞机。"
-heavy_uav_equipment_1:"无人作战平台H-I"
-heavy_uav_equipment_2:"无人作战平台H-II"
-heavy_uav_equipment_3:"无人作战平台H-III"
-heavy_uav_equipment_4:"无人作战平台H-IV"
+heavy_uav_airframe:"重型无人战斗机"
+heavy_uav_airframe_desc:"基沃托斯空中力量的象征，先进的航电系统，大航程和远程空空导弹确保了它在天空的统治地位，同时也能进行一定程度的对地攻击，代价是由于价格问题，就是即使是大学园也没办法拥有很多架飞机。"
+heavy_uav_equipment_1:"标准型重型无人战斗机"
+heavy_uav_equipment_2:"改进型重型无人战斗机"
+heavy_uav_equipment_3:"高级型重型无人战斗机"
+heavy_uav_equipment_4:"先进型重型无人战斗机"
+
+
+TRI_heavy_uav_equipment_1:"“鬼怪”FGR-2 重型无人战斗机"
+TRI_heavy_uav_equipment_2:"“狂风”F.3 重型无人战斗机"
+TRI_heavy_uav_equipment_3:"“幻影” 4000 重型无人战斗机"
+TRI_heavy_uav_equipment_4:"“台风”FGR.4 重型无人战斗机"
 
 heavy_uav_cas_airframe:"无人多用途战斗机"
 heavy_uav_cas_airframe_desc:"你能搞到的最好的炸药投射器，它拥有的对地挂载能轻易炸平一个街区，并在敌方的防空力量眼皮子地下逃之夭夭，同时也能进行一定程度的对空作战能力。就是要考虑账单问题。"
-heavy_uav_cas_equipment_1:"标准型无人多用途战斗机"
-heavy_uav_cas_equipment_2:"改进型无人多用途战斗机"
-heavy_uav_cas_equipment_3:"高级型无人多用途战斗机"
-heavy_uav_cas_equipment_4:"先进型无人多用途战斗机"
+heavy_uav_cas_equipment_1:"“幻影”5F 无人多用途战斗机"
+heavy_uav_cas_equipment_2:"F111F 无人多用途战斗机"
+heavy_uav_cas_equipment_3:"“狂风” GR.4 无人多用途战斗机"
+heavy_uav_cas_equipment_4:"“阵风” F3 无人多用途战斗机"
 
 
 transport_plane_equipment:"无人运输机"
@@ -75,6 +110,15 @@ transport_plane_equipment_3:"标准型无人空中炮艇"
 transport_plane_equipment_3_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
 transport_plane_equipment_4:"改进型无人空中炮艇"
 transport_plane_equipment_4_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
+
+
+TRI_transport_plane_equipment_1:"C130J 无人运输机"
+TRI_transport_plane_equipment_2:"A400M 无人运输机"
+TRI_transport_plane_equipment_3:"AC130J 无人空中炮艇"
+TRI_transport_plane_equipment_3_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
+TRI_transport_plane_equipment_4:"A400G 无人空中炮艇"
+TRI_transport_plane_equipment_4_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
+
 
 helicopter_airframe:"通用直升机"
 helicopter_airframe_1:"标准型通用直升机"

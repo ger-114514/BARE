@@ -17,12 +17,9 @@ characters={
 		}
 
 		advisor = {
-			slot = army_chief
-			idea_token = ABY_hoshino_ac
+			slot = high_command
+			idea_token = ABY_hoshino_hc
 			allowed = {
-				original_tag = ABY
-			}
-			available = {
 				original_tag = ABY
 			}
 			traits = {
@@ -35,14 +32,11 @@ characters={
 		}
 
 		advisor = {
-			slot = political_advisor
-			idea_token = ABY_hoshino_pa
+			slot = army_chief
+			idea_token = ABY_hoshino_ac
 			allowed = {
 				original_tag = ABY
 			}
-			available = {
-				original_tag = ABY
-			} 
 			traits = {
 				eye_of_horus
 			}
@@ -73,12 +67,9 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = ABY_shiroko_ac
+			slot = high_command
+			idea_token = ABY_shiroko_hc
 			allowed = {
-				original_tag = ABY
-			}
-			available = {
 				original_tag = ABY
 			}
 			traits = {
@@ -136,12 +127,9 @@ characters={
 		}
 
 		advisor = {
-			slot = army_chief
-			idea_token = ABY_ayane_ac
+			slot = high_command
+			idea_token = ABY_ayane_hc
 			allowed = {
-				original_tag = ABY
-			}
-			available = {
 				original_tag = ABY
 			}
 			traits = {
@@ -190,12 +178,9 @@ characters={
 			}	
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = ABY_nonomi_ac
+			slot = high_command
+			idea_token = ABY_nonomi_hc
 			allowed = {
-				original_tag = ABY
-			}
-			available = {
 				original_tag = ABY
 			}
 			traits = {
@@ -246,12 +231,9 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = ABY_serika_ac
+			slot = high_command
+			idea_token = ABY_serika_hc
 			allowed = {
-				original_tag = ABY
-			}
-			available = {
 				original_tag = ABY
 			}
 			traits = {
@@ -269,9 +251,6 @@ characters={
 			allowed = {
 				original_tag = ABY
 			}
-			available = {
-				original_tag = ABY
-			} 
 			traits = {
 				working_princess
 			}
@@ -308,7 +287,8 @@ characters={
 				always = no
 			}
 			available = {
-				original_tag = ABY
+				#TODO:解锁 梦
+				always = no
 			} 
 			traits = {
 				old_days_shadow
@@ -343,7 +323,8 @@ characters={
 				original_tag = ABY
 			}
 			available = {
-				original_tag = ABY
+				#TODO:解锁 白子恐怖
+				always = no
 			}
 			traits = {
 				army_chief_precursor_of_color

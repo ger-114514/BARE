@@ -86,8 +86,9 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "BA_common_notice"
-			position = { x = -170 y = -550 }
+			position = { x = -70 y = 30 }
 			spriteType = "BA_common_notice"
+			pdx_tooltip = "BA_common_notice_tt"
 		}
 	}
 	containerWindowType = {

@@ -464,5 +464,21 @@ ideas = {
                 }
             }
         }
+        student_of_kakugo = {
+            research_bonus = {
+                mystical = 0.1
+            }
+        }
+        art_of_artillery = {
+            research_bonus = {
+                fire_support = 0.1
+            }
+        }
+        natsu_art_of_war = {
+            research_bonus = {
+                infantry_weapons = 0.1
+                electronics = 0.15
+            }
+        }
     }
 } 

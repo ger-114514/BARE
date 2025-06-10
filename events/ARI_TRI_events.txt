@@ -314,6 +314,9 @@ country_event = { #旅者”行动总结-部分成功
                 modifier = ARI_lesson_traveller_operation
             }
         }
+        hidden_effect = {
+	        BARE_SuperEvent_2_effect_6 = yes
+        }
     }
 }
 country_event = { #十万火急
@@ -951,6 +954,9 @@ country_event = { #“旅者”行动总结-基本失败
             add_dynamic_modifier = {
                 modifier = ARI_catastrophic_traveller_operation
             }
+        }
+        hidden_effect = {
+	        BARE_SuperEvent_2_effect_6 = yes
         }
     }
 }

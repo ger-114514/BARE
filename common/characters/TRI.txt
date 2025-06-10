@@ -21,6 +21,12 @@ characters={
 					tooltip = TRI_seia_available_tt
 					has_country_flag = TRI_seia_available
 				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
 			}
 			traits = {
 				obscure_prophet
@@ -31,13 +37,44 @@ characters={
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = 0.2 }
 				TRI_parliament_loyalty_change = yes
-				set_country_flag = TRI_seia_prophecy
+				ROOT = {
+					set_country_flag = TRI_seia_prophecy
+				}
+				
 			}
 			on_remove = {
 				set_temp_variable = { association = token:TRI_parliament_association_1 }
 				set_temp_variable = { loyalty_change = -0.2 }
 				TRI_parliament_loyalty_change = yes
-				clr_country_flag = TRI_seia_prophecy
+				ROOT = {
+					clr_country_flag = TRI_seia_prophecy
+				}
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+		advisor = {
+			slot = army_chief
+			idea_token = TRI_seia_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = TRI_seia_available_tt
+					has_country_flag = TRI_seia_available
+				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+			}
+			traits = {
+				deja_vu
 			}
 			ai_will_do = {
 				factor = 1.000
@@ -72,6 +109,50 @@ characters={
 			id = -1
 		}
 
+		advisor = {
+			slot = army_chief
+			idea_token = TRI_nagisa_ac
+			allowed = {
+				original_tag = TRI
+			}
+			
+			available = {
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+				
+			}
+			traits = {
+				art_of_artillery
+			}
+			on_add = {
+				ROOT = {
+					add_ideas = art_of_artillery
+				}
+			}
+			on_remove = {
+				ROOT = {
+					remove_ideas = art_of_artillery
+				}
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
         field_marshal = {
 			traits = { bearer_of_artillery brilliant_strategist }
 			visible = {
@@ -131,12 +212,9 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
-				}
-				hidden_trigger = {
-					NOT = { has_country_flag = TRI_mika_arrested }
 				}
 			}
 			visible = {
@@ -150,6 +228,9 @@ characters={
 					NOT = {
 						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
 					}
+				}
+				hidden_trigger = {
+					NOT = { has_country_flag = TRI_mika_arrested }
 				}
 			}
 			traits = {
@@ -166,6 +247,66 @@ characters={
 				set_temp_variable = { loyalty_change = -0.2 }
 				TRI_parliament_loyalty_change = yes
 			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+		advisor = {
+			slot = army_chief
+			idea_token = TRI_mika_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+			}
+			visible = {
+				OR = {
+					NOT = {
+						OR = {
+							has_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+							has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+						}
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+				hidden_trigger = {
+					NOT = { has_country_flag = TRI_mika_arrested }
+				}
+			}
+			traits = {
+				leviathan_hunter
+			}
+			on_add = {
+				ROOT = {
+					add_unit_bonus = {
+						category_all_infantry = {
+							hard_attack = 1
+							soft_attack = -0.25
+						}
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_unit_bonus = {
+						category_all_infantry = {
+							hard_attack = -1
+							soft_attack = 0.25
+						}
+					}
+				}
+			}
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -216,8 +357,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -270,8 +411,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -292,6 +433,12 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+        }
+        scientist = {
+            traits = {  }
+            skills = {
+                specialization_ba_tech = 4
+            }
         }
         corps_commander = {
 			traits = {}
@@ -319,7 +466,7 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
+			slot = high_command
 			idea_token = TRI_suzumi_ac
 			allowed = {
 				original_tag = TRI
@@ -327,8 +474,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -346,7 +493,7 @@ characters={
 			traits = {
 				slience_protector_of_trinity
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -361,8 +508,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -421,16 +568,16 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_reisa_ac
+			slot = political_advisor
+			idea_token = TRI_reisa_pa
 			allowed = {
 				original_tag = TRI
 			}
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -448,7 +595,7 @@ characters={
 			traits = {
 				energetic_baka
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -522,8 +669,8 @@ characters={
 		}
 
         # advisor = {
-		# 	slot = army_chief
-		# 	idea_token = TRI_azusa_ac
+		# 	slot = high_command
+		# 	idea_token = TRI_azusa_pc
 		# 	allowed = {
 		# 		original_tag = TRI
 		# 	}
@@ -533,7 +680,7 @@ characters={
 		# 	traits = {
 		# 		slience_guerrilla_warfare_master
 		# 	}
-		# 	cost = 100
+		# 	cost = 150
 		# 	ai_will_do = {
 		# 		factor = 1.000
 		# 	}
@@ -612,8 +759,8 @@ characters={
 				}
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -685,8 +832,8 @@ characters={
 				}
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -752,8 +899,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -817,8 +964,8 @@ characters={
 				}
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -867,24 +1014,17 @@ characters={
 		}
 		
         advisor = {
-			slot = army_chief
-			idea_token = TRI_tsurugi_ac
+			slot = high_command
+			idea_token = TRI_tsurugi_hc
 			allowed = {
 				original_tag = TRI
 			}
 			
 			available = {
 				custom_override_tooltip = {
-					tooltip = {
-						localization_key = has_completed_focus_tt
-						FOCUS = TRI_cooperation_with_justice_club
-					}
-					has_country_flag = TRI_cooperation_with_justice_club
-				}
-				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -913,7 +1053,61 @@ characters={
 			traits = {
 				screaming_death
 			}
-			cost = 100
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_tsurugi_ac
+			allowed = {
+				original_tag = TRI
+			}
+			
+			available = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = has_completed_focus_tt
+						FOCUS = TRI_cooperation_with_justice_club
+					}
+					has_country_flag = TRI_cooperation_with_justice_club
+				}
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_tsurugi = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+				NOT = {
+					has_completed_focus = TRI_teaparty_leading
+				}
+			}
+			traits = {
+				calm_leader
+			}
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -958,8 +1152,8 @@ characters={
 
         advisor = {
 			
-			slot = army_chief
-			idea_token = TRI_hasumi_ac
+			slot = high_command
+			idea_token = TRI_hasumi_hc
 			allowed = {
 				original_tag = TRI
 			}
@@ -973,8 +1167,8 @@ characters={
 				}
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1002,7 +1196,7 @@ characters={
 			traits = {
 				serious_vice_chairman
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1048,16 +1242,16 @@ characters={
 
         advisor = {
 			
-			slot = army_chief
-			idea_token = TRI_mashiro_ac
+			slot = high_command
+			idea_token = TRI_mashiro_hc
 			allowed = {
 				original_tag = TRI
 			}
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1085,7 +1279,7 @@ characters={
 			traits = {
 				long_range_justice_supporter
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1128,16 +1322,16 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_ichika_ac
+			slot = high_command
+			idea_token = TRI_ichika_hc
 			allowed = {
 				original_tag = TRI
 			}
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1165,7 +1359,50 @@ characters={
 			traits = {
 				restraint_arbiter
 			}
-			cost = 100
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+        advisor = {
+			slot = theorist
+			idea_token = TRI_ichika_th
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_ichika = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			visible = {
+				OR = {
+					NOT = {
+						has_global_flag = ARI_ZhunBeiDu_San_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+					}
+					NOT = {
+						has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					}
+				}
+			}
+			traits = {
+				director_of_training
+			}
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1199,7 +1436,7 @@ characters={
 
 	}
 
-    TRI_natsu ={ 
+    TRI_natsu ={ #夏
 		name=TRI_natsu_name 
 		portraits={
 			civilian={
@@ -1209,16 +1446,16 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_natsu_ac
+			slot = political_advisor
+			idea_token = TRI_natsu_pa
 			allowed = {
 				original_tag = TRI
 			}
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1236,7 +1473,50 @@ characters={
 			traits = {
 				thinker_of_romantic
 			}
-			cost = 100
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+        advisor = {
+			slot = theorist
+			idea_token = TRI_natsu_th
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_natsu = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				natsu_art_of_war
+			}
+			on_add = {
+				ROOT = {
+					add_ideas = natsu_art_of_war
+				}
+			}
+			on_remove = {
+				ROOT = {
+					remove_ideas = natsu_art_of_war
+				}
+			}
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1276,8 +1556,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1334,8 +1614,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1392,8 +1672,8 @@ characters={
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1442,8 +1722,8 @@ characters={
 		}
 
         advisor = {
-			slot = army_chief
-			idea_token = TRI_hinata_ac
+			slot = high_command
+			idea_token = TRI_hinata_hc
 			allowed = {
 				original_tag = TRI
 			}
@@ -1451,8 +1731,8 @@ characters={
 				has_country_flag = TRI_sisterhood_engage_in_politic
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1470,7 +1750,7 @@ characters={
 			traits = {
 				timid_haracles
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1518,8 +1798,8 @@ characters={
 				}
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1571,7 +1851,7 @@ characters={
 
 	}
 
-    TRI_sakurako ={ 
+    TRI_sakurako ={ #樱子
 		name=TRI_sakurako_name 
 		portraits={
 			civilian={
@@ -1590,8 +1870,8 @@ characters={
 				has_country_flag = TRI_sisterhood_engage_in_politic
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				if = {
@@ -1609,12 +1889,76 @@ characters={
 			traits = {
 				gentle_war_leader
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 
+        advisor = {
+			slot = high_command
+			idea_token = TRI_sakurako_hc
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				has_country_flag = TRI_sisterhood_engage_in_politic
+				custom_override_tooltip = {
+					tooltip = TRI_goverment_is_normal
+					TRI_missing_nagisa = {
+						is_country_leader = no
+					}
+				}
+				if = {
+					limit = { has_country_flag = TRI_paranoia_system_active }
+					custom_override_tooltip = {
+						tooltip = TRI_character_is_free
+						TRI_sakurako = {
+							NOT = {
+								has_character_flag = TRI_character_arrested
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				student_of_kakugo
+			}
+			on_add = {
+				ROOT = {
+					add_ideas = student_of_kakugo
+					add_unit_bonus = {
+						category_special_infantry = {
+							soft_attack = 0.1
+							hard_attack = 0.1
+						}
+						category_special_artillery = {
+							soft_attack = 0.1
+							hard_attack = 0.1
+						}
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					remove_ideas = student_of_kakugo
+					add_unit_bonus = {
+						category_special_infantry = {
+							soft_attack = -0.1
+							hard_attack = -0.1
+						}
+						category_special_artillery = {
+							soft_attack = -0.1
+							hard_attack = -0.1
+						}
+					}
+				}
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_sakurako_pa
@@ -1625,8 +1969,8 @@ characters={
 				has_country_flag = TRI_sisterhood_engage_in_politic
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
-					NOT = {
-						has_country_flag = TRI_goverment_damaged
+					TRI_missing_nagisa = {
+						is_country_leader = no
 					}
 				}
 				TRI_sakurako = {
@@ -1682,12 +2026,6 @@ characters={
             army = {
 			    large=GFX_portrait_TRI_ui
 			    small=GFX_portrait_TRI_ui_small
-            }
-        }
-        scientist = {
-            traits = {  }
-            skills = {
-                specialization_ba_tech = 4
             }
         }
     }

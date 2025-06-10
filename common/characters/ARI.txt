@@ -73,9 +73,6 @@ characters = {
 			allowed = {
 				original_tag = ARI
 			}
-			available = {
-				original_tag = ARI
-			}
 			traits = {
 				princess_of_arius
 			}
@@ -102,12 +99,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
-			idea_token = ARI_saori_ac
+			slot = high_command
+			idea_token = ARI_saori_hc
 			allowed = {
-				original_tag = ARI
-			}
-			available = {
 				original_tag = ARI
 			}
 			traits = {
@@ -137,12 +131,9 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
+			slot = high_command
 			idea_token = ARI_misaki_ac
 			allowed = {
-				original_tag = ARI
-			}
-			available = {
 				original_tag = ARI
 			}
 			traits = {
@@ -175,9 +166,6 @@ characters = {
 			slot = political_advisor
 			idea_token = ARI_hiyuri_pa
 			allowed = {
-				original_tag = ARI
-			}
-			available = {
 				original_tag = ARI
 			}
 			traits = {
@@ -287,9 +275,6 @@ characters = {
 			allowed = {
 				original_tag = ARI
 			}
-			available = {
-				original_tag = ARI
-			}
 			traits = {
 				saviour_spirit
 			}
@@ -322,9 +307,6 @@ characters = {
 			slot = army_chief
 			idea_token = ARI_hirose_mizuki_ac
 			allowed = {
-				original_tag = ARI
-			}
-			available = {
 				original_tag = ARI
 			}
 			traits = {
@@ -360,9 +342,6 @@ characters = {
 			slot = army_chief
 			idea_token = ARI_hosokawa_yuriko_ac
 			allowed = {
-				original_tag = ARI
-			}
-			available = {
 				original_tag = ARI
 			}
 			traits = {

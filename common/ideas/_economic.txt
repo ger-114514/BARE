@@ -247,7 +247,10 @@ ideas = {
 			}
 
 			allowed_to_remove = {
-				NOT = { original_tag = ARI } #阿里乌斯不可切换
+				NOT = {
+					original_tag = ARI #阿里乌斯
+					has_idea = BARE_Global_Blockade_Zone #封锁地区
+				}
 			}
 
 			ai_will_do = {
@@ -302,7 +305,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
+   				factor = 0.5
    			}
 		}
 
@@ -327,7 +330,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
+   				factor = 0.5
    			}
 		}
 
@@ -352,7 +355,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
+   				factor = 0.5
    			}
 		}
 

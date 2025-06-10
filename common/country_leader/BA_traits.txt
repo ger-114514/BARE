@@ -56,6 +56,30 @@ leader_traits = {
         custom_modifier_tooltip = BA_TRI_nagisa_paranoid_paranoia_modifier_increase_effect_tt
     }
 
+    ###领袖特质###
+###圣三一###
+
+    #难解的预言家
+    obscure_prophet = {
+        random = no
+
+        #菲利乌斯派支持度+20%
+        #随机给予预言
+        custom_modifier_tooltip = obscure_prophet_tt
+        stability_factor = 0.1
+        war_support_factor = -0.1
+        political_power_gain = 0.25
+        research_speed_factor = 0.1
+    }
+    #既视感
+    deja_vu = {
+        random = no
+        
+        experience_gain_army = 0.5
+        breakthrough_factor = 0.1
+        planning_speed = 0.25
+        max_planning_factor = 0.05
+    }
     #温和的领袖
     TRI_nagisa_Mild_leader = {
         random = no
@@ -84,28 +108,14 @@ leader_traits = {
         TRI_unity_weekly_modifier = 0.5
     }
 
-    ###领袖特质###
-###圣三一###
-
-    #难解的预言家
-    obscure_prophet = {
+    #炮火艺术
+    art_of_artillery = {
         random = no
 
-        #菲利乌斯派支持度+20%
-        #随机给予预言
-        custom_modifier_tooltip = obscure_prophet_tt
-        stability_factor = 0.1
-        war_support_factor = -0.1
-        political_power_gain = 0.25
-        research_speed_factor = 0.1
-    }
-
-    #温和的领袖
-    mild_leader = {
-        random = no
-        stability_factor = 0.15
-        war_support_factor = -0.10
-        political_power_factor = 0.40
+        experience_gain_army = 0.5
+        custom_modifier_tooltip = art_of_artillery_tt
+        army_artillery_attack_factor = 0.2
+        army_artillery_defence_factor = 0.15
     }
 
     #失踪的领袖
@@ -124,12 +134,14 @@ leader_traits = {
         army_infantry_defence_factor = 0.1
     }
 
-    #帕特尔派战争领袖
-    TRI_partal_war_training = {
+    #利维坦猎人
+    leviathan_hunter = {
         random = no
 
-        training_time_factor = -0.2
         experience_gain_army = 0.5
+        custom_modifier_tooltip = leviathan_hunter_tt
+        army_infantry_attack_factor = 0.2
+        army_infantry_defence_factor = 0.15
     }
     
     #图书馆的管家
@@ -190,6 +202,7 @@ leader_traits = {
 
         out_of_supply_factor = -0.15
         army_org_regain = 0.2
+        special_forces_attack_factor = 0.1
     }
 
     #绯言慎行的智者
@@ -275,13 +288,17 @@ leader_traits = {
         army_infantry_attack_factor = 0.1
     }
 
-    #激进的进攻者
-    TRI_extreme_attacker = {
+    #抚静的领战者
+    calm_leader = {
         random = no
 
-        army_attack_factor = 0.2
         experience_gain_army = 0.5
+        stability_factor = 0.1
+        max_planning_factor = 0.2
+        army_attack_factor = 0.15
+        org_loss_at_low_org_factor = -0.15
     }
+
 
     #肃颜的副会长
     serious_vice_chairman = {
@@ -309,6 +326,15 @@ leader_traits = {
         planning_speed = 0.1
     }
 
+    #训导主任
+    director_of_training = {
+        random = no
+        
+        land_doctrine_cost_factor = -0.25
+        training_time_factor = -0.1
+        army_org_factor = 0.15
+    }
+
     #"浪漫"的思索者
     thinker_of_romantic = {
         random = no
@@ -316,7 +342,13 @@ leader_traits = {
         stability_factor = -0.05
         consumer_goods_factor = -0.05
     }
+    #战争艺术
+    natsu_art_of_war = {
+        random = no
 
+        land_doctrine_cost_factor = -0.1
+        custom_modifier_tooltip = natsu_art_of_war_tt
+    }
     #薄荷冰淇淋
     mint_icecream = {
         random = no
@@ -374,9 +406,17 @@ leader_traits = {
     gentle_war_leader = {
         random = no
 
+        experience_gain_army = 0.5
         army_attack_factor = -0.2
         army_defence_factor = 0.2
         army_org_factor = 0.2
+    }
+
+    #觉悟之人
+    student_of_kakugo = {
+        random = no
+
+        custom_modifier_tooltip = student_of_kakugo_tt
     }
 
 
@@ -412,8 +452,6 @@ leader_traits = {
 
         army_org_factor = 0.1
         supply_consumption_factor = -0.1
-
-        experience_gain_army = 0.3
     }
 
     #委员长的左手
@@ -1232,7 +1270,7 @@ leader_traits = {
     fitness_instructor = {
         random = no
 
-        max_training = -0.2
+        max_training = 0.2
 
     }
 
@@ -1439,14 +1477,14 @@ leader_traits = {
     #陆军演习
     army_exercises_expert = {
         random = no
-        experience_gain_army = 0.3
+        experience_gain_army = 0.5
         training_time_factor = -0.2
     }
     
     #陆军组织
     army_organizer = {
         random = no
-        experience_gain_army = 0.3
+        experience_gain_army = 0.5
         army_org_factor = 0.2
         experience_loss_factor = 0.2
     }
@@ -1493,5 +1531,24 @@ leader_traits = {
         random = no
         army_infantry_attack_factor = 0.15
         army_infantry_defence_factor = 0.2
+    }
+#企业特质
+    industrial_concern = {
+        random = no
+        ai_will_do = {
+            base = 1
+        }
+    }
+    electronics_concern = {
+        random = no
+        ai_will_do = {
+            base = 1
+        }
+    }
+    railway_company = {
+        random = no
+        ai_will_do = {
+            base = 1
+        }
     }
 }
