@@ -680,6 +680,12 @@ technologies = {
 		path = {
 			leads_to_tech = infantry_weapons_upgrade_suppressive_weapon_T2
 		}
+
+		category_all_infantry = {
+			breakthrough = 0.03
+			defense = 0.06
+		}
+		
 		dependencies = {
 			T1_infantry_weapon = 1
 		}
