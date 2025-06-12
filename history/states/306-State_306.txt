@@ -8,14 +8,19 @@ state={
 		resources_rm = 20
 	}
 	history = {
+		owner = GEH
+		add_core_of=GEH
+		victory_points = {10596 15}
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 2
 			anti_air_building = 3
 			heavy_arms_factory = 4
+			10596 = {
+				batech_facility = 1
+			}
 		}
-		owner = GEH
-		add_core_of=GEH
+
     }
 	manpower=747900
 	state_category = megalopolis

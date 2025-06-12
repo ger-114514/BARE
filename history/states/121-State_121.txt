@@ -5,15 +5,19 @@ state={
 		1774 
 	}
 	history = {
+		owner = TRI
+		add_core_of=TRI
+		victory_points = {1774 10}
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 2
 			arms_factory = 2
 			anti_air_building = 3
+			1774 = {
+				land_facility = 1
+			}
 		}
-		owner = TRI
-		add_core_of=TRI
-		victory_points = {1774 10}
+
     }
 	manpower=112500
 	state_category = large_city

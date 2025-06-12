@@ -9,15 +9,19 @@ state={
 		resources_mm = 8
 	}
 	history={
+		owner = ARI
+		add_core_of=ARI
+		victory_points = {3983 25}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
 			anti_air_building = 3
             metal_processing_plant = 2
+			3983 = {
+				batech_facility = 1
+			}
 		}
-		owner = ARI
-		add_core_of=ARI
-		victory_points = {3983 25}
+
 	}
 	manpower=135000
 	state_category = city
