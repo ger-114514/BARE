@@ -51,6 +51,11 @@ technologies = {
 			name = breakthrough_folder
 			position = { x = 0 y = 12 }
 		}
+
+		allow = {
+			always = no
+		}
+		
 		path = { leads_to_tech = T5_infantry_weapon }
 		categories = { infantry_weapons }
 		ai_will_do = { factor = 1 }

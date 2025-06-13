@@ -903,7 +903,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tech_RANK_I"
-					position = { x = 30 y = 360 }
+					position = { x = 30 y = 220 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T1技术"
@@ -914,7 +914,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANKT2"
-					position = { x = 30 y = 500 }
+					position = { x = 30 y = 360 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T2技术"
@@ -925,7 +925,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANKT3"
-					position = { x = 30 y = 780 }
+					position = { x = 30 y = 640 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T3技术"
@@ -936,7 +936,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANK_IV"
-					position = { x = 30 y = 1060 }
+					position = { x = 30 y = 920 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T4技术"
@@ -947,7 +947,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "tech_RANK_V"
-					position = { x = 30 y = 1340 }
+					position = { x = 30 y = 1200 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "T5技术"
@@ -1026,7 +1026,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tech_drone_attack"
-					position = { x = 1310 y = 140 }
+					position = { x = 1320 y = 270 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "无人机武备"
@@ -1039,7 +1039,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tech_drone_defense"
-					position = { x = 1530 y = 140 }
+					position = { x = 1530 y = 270 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "无人机防御"
@@ -1052,7 +1052,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tech_drone_engine"
-					position = { x = 1740 y = 140 }
+					position = { x = 1740 y = 270 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "无人机机动 "
@@ -1066,32 +1066,32 @@ guiTypes = {
 			}
 			gridboxtype = {
 				name = "recon_drone_tree"
-				position = { x = 300 y = 200 }
+				position = { x = 300 y = 60 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 
 			gridboxtype = {
 				name = "transport_drone_tree"
-				position = { x = 300 y = 200 }
+				position = { x = 300 y = 60 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "drone_engine_upgrade1_tree"
-				position = { x = 300 y = 200 }
+				position = { x = 300 y = 60 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "drone_attack_upgrade1_tree"
-				position = { x = 300 y = 200 }
+				position = { x = 300 y = 60 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "drone_defence_upgrade1_tree"
-				position = { x = 300 y = 200 }
+				position = { x = 300 y = 60 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
@@ -2301,7 +2301,7 @@ guiTypes = {
 					position = { x = 50 y =125 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
-					text = "步兵武器"
+					text = "步兵班组"
 					maxWidth = 200
 					maxHeight = 32
 					format = center
@@ -2363,7 +2363,7 @@ guiTypes = {
 					position = { x = 50 y =1185 }
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
-					text = "电子学"
+					text = "信息化"
 					maxWidth = 200
 					maxHeight = 32
 					format = center
@@ -2644,14 +2644,14 @@ guiTypes = {
 			buttonType = {
 				name = "support_folder_tab"
 				position = { x = 185 y = 0 }
-				quadTextureSprite = "GFX_armour_folder_tab"
+				quadTextureSprite = "GFX_techtree_support_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
 			}
 			buttonType = {
 				name = "ifv_folder_tab"
 				position = { x = 270 y = 0 }
-				quadTextureSprite = "GFX_armour_folder_tab"
+				quadTextureSprite = "GFX_ifv_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_armor
 			}
@@ -2670,39 +2670,39 @@ guiTypes = {
 				clicksound = ui_research_tab_armor
 			}
 			buttonType = {
-				name = "industry_folder_tab"
+				name = "electronics_folder_tab"
 				position = { x = 525 y = 0 }
-				quadTextureSprite = "GFX_industry_folder_tab"
+				quadTextureSprite = "GFX_techtree_engineering_tab"
 				frame = 1
-				clicksound = ui_research_tab_industry
+				clicksound = ui_research_tab_engineering
 			}
 			buttonType = {
-				name = "industry_resource_folder_tab"
+				name = "industry_folder_tab"
 				position = { x = 610 y = 0 }
 				quadTextureSprite = "GFX_industry_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_industry
 			}
 			buttonType = {
-				name = "electronics_folder_tab"
+				name = "industry_resource_folder_tab"
 				position = { x = 695 y = 0 }
-				quadTextureSprite = "GFX_techtree_engineering_tab"
+				quadTextureSprite = "GFX_industry_resource_folder_tab"
 				frame = 1
-				clicksound = ui_research_tab_engineering
+				clicksound = ui_research_tab_industry
 			}
 			#BD#
 			buttonType = {
 				name = "bd_folder_tab"
 				position = { x = 780 y = 0 }
-				quadTextureSprite = "GFX_industry_folder_tab"
+				quadTextureSprite = "GFX_bd_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_engineering
 			}
 			##突破
 			buttonType = {
 				name = "breakthrough_folder_tab"
-				position = { x = 875 y = 0 }
-				quadTextureSprite = "GFX_infantry_folder_tab"
+				position = { x = 865 y = 0 }
+				quadTextureSprite = "GFX_breakthrough_folder_tab"
 				frame = 1
 				clicksound = ui_research_tab_industry
 			}
@@ -4182,7 +4182,7 @@ guiTypes = {
 
 		iconType = {
 			name = "Icon"
-			position = { x=3 y=3 }
+			position = { x=5 y=5 }
 			spriteType = "GFX_technology_medium"
 			alwaystransparent = yes
 		}
@@ -4223,7 +4223,7 @@ guiTypes = {
 
 		iconType = {
 			name = "Icon"
-			position = { x=3 y=3 }
+			position = { x=4 y=3 }
 			spriteType = "GFX_technology_medium"
 			alwaystransparent = yes
 		}

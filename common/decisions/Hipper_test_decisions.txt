@@ -1,0 +1,62 @@
+Hipper_test_decisions_categories = {
+	Change_portrait_for_cool_nagisa = {
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			TRI = {
+			    has_country_leader = {
+					character = TRI_nagisa
+					ruling_only = yes
+				}
+			}
+		}
+		complete_effect = {
+			set_portraits = {
+				character = TRI_nagisa
+				civilian = { large ="GFX_BARE_Portrait_TRI_nagisa_cool" }
+			}
+			add_trait = {
+				character = TRI_nagisa
+				ideology = no_ideology_type
+				trait = TRI_nagisa_a_cool_victory
+		    } 
+		}
+	}
+
+	Change_portrait_for_cool_makoto = {
+		visible = {
+			original_tag = GEH
+		}
+		available = {
+			GEH = {
+			    has_country_leader = {
+					character = GEH_makoto
+					ruling_only = yes
+				}
+			}
+		}
+		complete_effect = {
+			set_portraits = {
+				character = GEH_makoto
+				civilian = { large ="GFX_BARE_Portrait_GEH_makoto_cool" }
+			}
+			add_trait = {
+				character = GEH_makoto
+				ideology = no_ideology_type
+				trait = GEH_makoto_a_cool_victory
+		    } 
+		}
+	}
+} 
+
+CEN_Operation_Uranus_categories = {
+    Uranus_Test_open_gui = {
+	    visible = {
+		    original_tag = CEN
+	    }
+	    complete_effect = {
+		   
+	    }
+    }
+}

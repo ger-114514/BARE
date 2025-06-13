@@ -1381,43 +1381,123 @@ spriteTypes = {
 	####################################
 	####### COMBAT DRONS FLODER ########
 	####################################
+
+	##recon
+	SpriteType = {
+		name = "GFX_small_uav_recon_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_recon_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_recon_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_recon_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_recon_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_recon_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_recon_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_recon_fighting_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_recon_fighting_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_recon_equipment_4.dds"
+	}
+
+	##small
 	SpriteType = {
 		name = "GFX_small_uav_equipment_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_small_uav_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_small_uav_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK2.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_2.dds"
 	}
 	SpriteType = {
 		name = "GFX_small_uav_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK3.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_3.dds"
 	}
 	SpriteType = {
 		name = "GFX_small_uav_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK4.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_4.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_light_fighting_drone_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_light_fighting_drone_MK2_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK2.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_2.dds"
 	}
 	SpriteType = {
 		name = "GFX_light_fighting_drone_MK3_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK3.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_3.dds"
 	}
 	SpriteType = {
 		name = "GFX_light_fighting_drone_MK4_medium"
-		texturefile = "gfx/interface/technologies/drones/light_fighting_drone_MK4.dds"
+		texturefile = "gfx/interface/technologies/drones/small_uav_equipment_4.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_small_uav_cas_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_cas_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_cas_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_cas_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_small_uav_cas_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_light_attack_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_attack_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_attack_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_attack_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/small_uav_cas_equipment_4.dds"
+	}
+
+	##medium
 
 	SpriteType = {
 		name = "GFX_medium_uav_equipment_medium"
@@ -1441,6 +1521,27 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_medium_uav_cas_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_cas_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_cas_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_cas_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_medium_uav_cas_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_4.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_fighting_drone_medium"
 		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_1.dds"
 	}
@@ -1457,6 +1558,62 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/drones/medium_uav_equipment_4.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_attack_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_attack_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/medium_uav_cas_equipment_4.dds"
+	}
+
+	##transport
+	SpriteType = {
+		name = "GFX_transport_plane_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_transport_plane_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_transport_plane_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_transport_plane_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_transport_plane_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_transport_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_transport_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_gunship_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_gunship_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/transport_plane_equipment_4.dds"
+	}
+
+	##heavy
 	SpriteType = {
 		name = "GFX_heavy_uav_equipment_medium"
 		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_1.dds"
@@ -1477,7 +1634,26 @@ spriteTypes = {
 		name = "GFX_heavy_uav_equipment_4_medium"
 		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_4.dds"
 	}
-
+	SpriteType = {
+		name = "GFX_heavy_uav_cas_equipment_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_cas_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_cas_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_cas_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_uav_cas_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_4.dds"
+	}
 	SpriteType = {
 		name = "GFX_heavy_fighting_drone_medium"
 		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_1.dds"
@@ -1494,7 +1670,70 @@ spriteTypes = {
 		name = "GFX_heavy_fighting_drone_MK4_medium"
 		texturefile = "gfx/interface/technologies/drones/heavy_uav_equipment_4.dds"
 	}
-
+	SpriteType = {
+		name = "GFX_heavy_attack_drone_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_attack_drone_MK2_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_attack_drone_MK3_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_attack_drone_MK4_medium"
+		texturefile = "gfx/interface/technologies/drones/heavy_uav_cas_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_attack_upgrade1_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_attack_upgrade1.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_attack_upgrade2_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_attack_upgrade2.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_attack_upgrade3_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_attack_upgrade3.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_attack_upgrade4_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_attack_upgrade4.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_defence_upgrade1_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_defence_upgrade1.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_defence_upgrade2_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_defence_upgrade2.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_defence_upgrade3_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_defence_upgrade3.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_defence_upgrade4_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_defence_upgrade4.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_engine_upgrade1_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_engine_upgrade1.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_engine_upgrade2_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_engine_upgrade2.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_engine_upgrade3_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_engine_upgrade3.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone_engine_upgrade4_medium"
+		texturefile = "gfx/interface/technologies/drones/drone_engine_upgrade4.dds"
+	}
 	################################
 	####### Industry FLODER ########
 	################################
@@ -1649,6 +1888,110 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/industry/industrial_complex_T5.dds"
 	}
 	SpriteType = {
+		name = "GFX_Metal_Refining_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Metal_Refining_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Metal_Refining_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Metal_Refining_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Metal_Refining_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Electronic_technology_upgrade_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Electronic_technology_upgrade_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Rare_metal_smelting_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Rare_metal_smelting_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Opaz_smelting_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Opaz_smelting_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Oil_Processing_T4_medium"
+		texturefile = "gfx/interface/technologies/industry/Oil_Processing_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_kerosene_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/kerosene_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_kerosene_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/kerosene_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_kerosene_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/kerosene_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Synthetic_rubber_T1_medium"
+		texturefile = "gfx/interface/technologies/industry/Synthetic_rubber_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Synthetic_rubber_T2_medium"
+		texturefile = "gfx/interface/technologies/industry/Synthetic_rubber_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Synthetic_rubber_T3_medium"
+		texturefile = "gfx/interface/technologies/industry/Synthetic_rubber_T3.dds"
+	}
+	SpriteType = {
 		name = "GFX_Power_Development_T1_medium"
 		texturefile = "gfx/interface/technologies/industry/Power_Development_T1.dds"
 	}
@@ -1705,6 +2048,86 @@ spriteTypes = {
 	####### Electronicss FLODER ########
 	####################################
 
+	SpriteType = {
+		name = "GFX_Personal_Computer_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Personal_Computer_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Personal_Computer_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Digital_control_system_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Digital_control_system_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Industrial_Robots_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Industrial_Robots_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T1_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T2_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T3_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T4_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_Communications_radar_T5_medium"
+		texturefile = "gfx/interface/technologies/electronics/Communications_radar_T5.dds"
+	}
     SpriteType = {
 		name = "GFX_Communication_Network_T1_medium"
 		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T1.dds"
@@ -1726,4 +2149,235 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/electronics/Communication_Network_T5.dds"
 	}
 
+	#################################
+	###### BREAKTHROUGH FLODER ######
+	#################################
+	SpriteType = {
+		name = "GFX_T1_infantry_weapon_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_infantry_weapon.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_infantry_weapon_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_infantry_weapon.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_infantry_weapon_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_infantry_weapon.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_infantry_weapon_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_infantry_weapon.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_infantry_weapon_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_infantry_weapon.dds"
+	}
+	SpriteType = {
+		name = "GFX_T1_mobile_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_mobile_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_mobile_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_mobile_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_mobile_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_mobile_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_mobile_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_mobile_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_mobile_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_mobile_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T1_assult_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_assult_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_assult_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_assult_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_assult_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_assult_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_assult_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_assult_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_assult_vehicle_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_assult_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_T1_drone_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_drone_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_drone_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_drone_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_drone_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_T1_production_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_production_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_production_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_production_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_production_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_T1_electronic_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_electronic.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_electronic_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_electronic.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_electronic_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_electronic.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_electronic_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_electronic.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_electronic_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_electronic.dds"
+	}
+	SpriteType = {
+		name = "GFX_T1_opaz_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T1_opaz.dds"
+	}
+	SpriteType = {
+		name = "GFX_T2_opaz_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T2_opaz.dds"
+	}
+	SpriteType = {
+		name = "GFX_T3_opaz_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T3_opaz.dds"
+	}
+	SpriteType = {
+		name = "GFX_T4_opaz_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T4_opaz.dds"
+	}
+	SpriteType = {
+		name = "GFX_T5_opaz_medium"
+		texturefile = "gfx/interface/technologies/breakthrough/T5_opaz.dds"
+	}
+
+	############################
+	###### BD TECH FLODER ######
+	############################
+	SpriteType = {
+		name = "GFX_bd_level_T1_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_level_T1.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_level_T2_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_level_T2.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_level_T3_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_level_T3.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_level_T4_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_level_T4.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_level_T5_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_level_T5.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_language_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_language.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_sports_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_sports.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_art_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_art.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_physics_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_physics.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_chemistry_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_chemistry.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_ideology_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_ideology.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_music_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_music.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_politics_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_politics.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_history_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_history.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_homemaking_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_homemaking.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_biology_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_biology.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_computer_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_computer.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_law_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_law.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_management_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_management.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_math_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_math.dds"
+	}
+	SpriteType = {
+		name = "GFX_bd_medical_medium"
+		texturefile = "gfx/interface/technologies/bd_tech/bd_medical.dds"
+	}
 }
