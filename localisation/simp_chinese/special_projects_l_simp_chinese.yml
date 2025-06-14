@@ -74,7 +74,7 @@
  PROGRAM_ITEM_CHANGE_SCIENTIST_BUTTON: "§Y点击§!按钮，在§Y[State.GetName]§!的§Y[Building.GetName]§!中用另一位§Y科学家§!替换§Y[Character.GetName]§!。"
  PROGRAM_ITEM_UNASSIGN_SCIENTIST_BUTTON: "§R点击§!按钮，将§Y[Character.GetName]§!从§Y[State.GetName]§!的§Y[Building.GetName]§!中移除。"
  PROGRAM_VIEW_TITLE: "[State.GetName]的[Building.GetName]"
- PROGRAM_VIEW_SELECT_PROJECT: "§G选择§!开始哪个项目"
+ PROGRAM_VIEW_SELECT_PROJECT: "项目"
  PROGRAM_VIEW_RESEARCH_TIME: "大概时间：$DAYS|0$天"
  PROGRAM_VIEW_REQUIRE_SCIENTIST: "§R需要一位§!§Y科学家§!§R才能启动§!"
  PROGRAM_VIEW_ACTIVE_RESEARCH: "$PHASE$阶段距离完成预计剩余：$DAYS|Y$天"

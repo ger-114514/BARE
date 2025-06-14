@@ -31,7 +31,7 @@ sp_ba_T2_air_project = {
     #}
     icon = GFX_sp_air_bouncing_bomb
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.short
+    prototype_time = sp_time.prototype.medium
 
     resource_cost = {
         resources = {
@@ -103,7 +103,7 @@ sp_ba_T3_air_project = {
     #}
     icon = GFX_sp_nuclear_radar
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.long
 
     resource_cost = {
         resources = {
