@@ -1,0 +1,12 @@
+##################
+#Animations Sound Effect
+#################
+category = {
+ name = "BARE_Animations"
+	soundeffects = {
+		helicopter_idle_sound_effect
+		helicopter_move_sound_effect
+		helicopter_attack_sound_effect
+		helicopter_idle_short_sound_effect
+    }
+}

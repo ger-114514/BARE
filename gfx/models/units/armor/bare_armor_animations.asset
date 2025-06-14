@@ -1,0 +1,63 @@
+#####
+## TRI TANKS
+#####
+
+animation = {
+    name = "TRI_light_armor_1_idle_animation"
+    file = "TRI/Comet/TRI_light_armor_1_idle.anim"
+}
+
+animation = {
+    name = "TRI_light_armor_1_moving_animation"
+    file = "TRI/Comet/TRI_light_armor_1_moving.anim"
+}
+
+animation = {
+    name = "TRI_light_armor_1_attack_animation"
+    file = "TRI/Comet/TRI_light_armor_1_attack.anim"
+}
+
+animation = {
+    name = "TRI_light_armor_3_idle_animation"
+    file = "TRI/Centurion/TRI_light_armor_3_idle.anim"
+}
+
+animation = {
+    name = "TRI_light_armor_3_moving_animation"
+    file = "TRI/Centurion/TRI_light_armor_3_moving.anim"
+}
+
+animation = {
+    name = "TRI_light_armor_3_attack_animation"
+    file = "TRI/Centurion/TRI_light_armor_3_attack.anim"
+}
+
+animation = {
+    name = "TRI_medium_armor_0_idle_animation"
+    file = "TRI/Cromwell/TRI_medium_armor_0_idle.anim"
+}
+
+animation = {
+    name = "TRI_medium_armor_0_moving_animation"
+    file = "TRI/Cromwell/TRI_medium_armor_0_moving.anim"
+}
+
+animation = {
+    name = "TRI_medium_armor_0_attack_animation"
+    file = "TRI/Cromwell/TRI_medium_armor_0_attack.anim"
+}
+
+animation = {
+    name = "TRI_heavy_armor_2_idle_animation"
+    file = "TRI/Black_Prince/TRI_heavy_armor_2_idle.anim"
+}
+
+animation = {
+    name = "TRI_heavy_armor_2_moving_animation"
+    file = "TRI/Black_Prince/TRI_heavy_armor_2_moving.anim"
+}
+
+animation = {
+    name = "TRI_heavy_armor_2_attack_animation"
+    file = "TRI/Black_Prince/TRI_heavy_armor_2_attack.anim"
+}

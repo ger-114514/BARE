@@ -1,0 +1,28 @@
+##################
+#Animations Sound Effect
+##################
+sound = {
+	name = "helicopter_attack_01"
+	file = "animations/helicopter_attack.wav"
+	always_load = no
+}
+
+sound = {
+	name = "helicopter_idle_01"
+	file = "animations/helicopter_idle.wav"
+	always_load = no
+}
+
+sound = {
+	name = "helicopter_idle_short"
+	file = "animations/helicopter_idle_short.wav"
+	always_load = no
+}
+
+sound = {
+	name = "helicopter_move"
+	file = "animations/helicopter_move.wav"
+	always_load = no
+}
+
+#
