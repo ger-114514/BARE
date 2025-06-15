@@ -3621,6 +3621,7 @@ focus_tree = {
 				add_to_variable = { tim_line_change_efficiency = 0.3 }
 				add_tech_bonus = {
 					name = TRI_gorgeous
+					category = industry
 					ahead_reduction = 1
 					uses = 1
 				}
