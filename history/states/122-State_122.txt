@@ -5,13 +5,13 @@ state={
 		11744 
 	}
 	history = {
+		owner = TRI
+		add_core_of=TRI
+		victory_points = {11744 10}
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 2
 		}
-		owner = TRI
-		add_core_of=TRI
-		victory_points = {11744 10}
     }
 	manpower=110000
 	state_category = city

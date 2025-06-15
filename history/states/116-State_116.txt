@@ -8,16 +8,19 @@ state={
 		resources_mm = 6
 	}
 	history = {
+		owner = TRI
+		add_core_of=TRI
+		victory_points = {11532 15}
+		victory_points = {7639 1}
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 2
 			arms_factory = 1
 			anti_air_building = 2
+			5890 = {
+				land_facility = 1
+			}
 		}
-		owner = TRI
-		add_core_of=TRI
-		victory_points = {11532 15}
-		victory_points = {7639 1}
     }
 	manpower=356700
 	state_category = metropolis
