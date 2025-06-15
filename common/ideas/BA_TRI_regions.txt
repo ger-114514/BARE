@@ -15,8 +15,8 @@ ideas = {
 				add_to_array = { TRI_center_campus_region = 114 }
 				add_to_array = { TRI_center_campus_region = 115 }
 				add_to_array = { TRI_center_campus_region = 112 }
-				add_to_array = { TRI_center_campus_region = 122 }
 				add_to_array = { TRI_center_campus_region = 368 }
+				add_to_array = { TRI_center_campus_region = 691 }
 				add_to_array = { TRI_region_present_state = 118 }
 				118 = { set_state_flag = region_present }
 				set_variable = { state_num@TRI_center_campus_region = 6 }
@@ -39,9 +39,10 @@ ideas = {
 				set_variable = { knights@TRI_northern_campus_region = 20 }
 				add_to_array = { TRI_northern_campus_region = 116 }
 				add_to_array = { TRI_northern_campus_region = 367 }
+				add_to_array = { TRI_northern_campus_region = 693 }
 				add_to_array = { TRI_region_present_state = 116 }
 				116 = { set_state_flag = region_present }
-				set_variable = { state_num@TRI_northern_campus_region = 2 }
+				set_variable = { state_num@TRI_northern_campus_region = 3 }
 				for_each_scope_loop = {
 					array = TRI_northern_campus_region
 					set_variable = { state_region = token:TRI_northern_campus_region }
@@ -63,9 +64,10 @@ ideas = {
 				add_to_array = { TRI_eastern_campus_region = 124 }
 				add_to_array = { TRI_eastern_campus_region = 125 }
 				add_to_array = { TRI_eastern_campus_region = 366 }
+				add_to_array = { TRI_eastern_campus_region = 687 }
 				add_to_array = { TRI_region_present_state = 124 }
 				124 = { set_state_flag = region_present }
-				set_variable = { state_num@TRI_eastern_campus_region = 4 }
+				set_variable = { state_num@TRI_eastern_campus_region = 5 }
 				for_each_scope_loop = {
 					array = TRI_eastern_campus_region
 					set_variable = { state_region = token:TRI_eastern_campus_region }
@@ -84,11 +86,16 @@ ideas = {
 				set_variable = { sisterhood@TRI_southern_campus_region = 15 }
 				set_variable = { knights@TRI_southern_campus_region = 15 }
 				add_to_array = { TRI_southern_campus_region = 113 }
+				add_to_array = { TRI_southern_campus_region = 122 }
 				add_to_array = { TRI_southern_campus_region = 123 }
 				add_to_array = { TRI_southern_campus_region = 365 }
+				add_to_array = { TRI_southern_campus_region = 688 }
+				add_to_array = { TRI_southern_campus_region = 689 }
+				add_to_array = { TRI_southern_campus_region = 690 }
+				add_to_array = { TRI_southern_campus_region = 692 }
 				add_to_array = { TRI_region_present_state = 113 }
 				113 = { set_state_flag = region_present }
-				set_variable = { state_num@TRI_southern_campus_region = 3 }
+				set_variable = { state_num@TRI_southern_campus_region = 8 }
 				for_each_scope_loop = {
 					array = TRI_southern_campus_region
 					set_variable = { state_region = token:TRI_southern_campus_region }

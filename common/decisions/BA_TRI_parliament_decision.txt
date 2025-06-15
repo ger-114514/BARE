@@ -279,22 +279,17 @@ TRI_parliament_decisions_categories = {
 		}
 		days_re_enable = 180
 		complete_effect = {
+			custom_effect_tooltip = TRI_BOP_ensure_propaganda_tt
 			for_each_loop = {
 				array = TRI_non_against_association
 				value = v
 				if = {
 					limit = { check_variable = { resistance@var:v > 0.4 } }
-					set_temp_variable = { radicalism_change = 0.4 }
-					subtract_from_variable = { radicalism_change = resistance@var:v }
-					clamp_temp_variable = {
-						var = radicalism_change
-						min = -0.05
-						max = 0
-					}
+					set_temp_variable = { radicalism_change = -0.05 }
 					TRI_parliament_radicalism_change = yes
 				}
 			}
-			country_event = TRI_BOP_decision.3
+			country_event = TRI_BOP_decision.10
 		}
 		ai_will_do = {
 			base = 1
@@ -324,7 +319,8 @@ TRI_parliament_decisions_categories = {
 		}
 		days_re_enable = 180
 		complete_effect = {
-			country_event = TRI_BOP_decision.4
+			custom_effect_tooltip = TRI_BOP_resource_distribution_tt
+			country_event = TRI_BOP_decision.20
 		}
 		ai_will_do = {
 			base = 1
@@ -354,14 +350,8 @@ TRI_parliament_decisions_categories = {
 		}
 		days_re_enable = 40
 		complete_effect = {
-			set_variable_to_random = {
-				var = i
-				min = 0
-				max = 6
-				integer = yes
-			}
-			set_variable = { appease_association_target = TRI_parliament_association^i }
-			country_event = TRI_BOP_decision.5
+			custom_effect_tooltip = TRI_BOP_appease_association_tt
+			country_event = TRI_BOP_decision.30
 		}
 		ai_will_do = {
 			base = 1
