@@ -188,12 +188,14 @@ objectTypes = {
 	##TRI Planes
 	####################
 
+	####APACHE
 	pdxmesh = {
 		name = "TRI_AH64_APACHE_mesh"
 		file = "gfx/models/units/planes/AH64_APACHE/AH64_APACHE.mesh"
 		animation = { id = "idle"			type = "AH64_APACHE_idle_animation" }
 	}
 
+	####MQ9
 	pdxmesh = {
 		name = "TRI_MQ_9_REAPER_mesh"
 		file = "gfx/models/units/planes/MQ_9_Reaper/MQ_9_REAPER.mesh"
@@ -201,5 +203,16 @@ objectTypes = {
 		animation = { id = "idle" type = "MQ_9_Reaper_idle_animation" }
 		##TODO:We can repair this!
 		#animation = { id = "aileron_roll" type = "aileron_roll_animation" }
+	}
+
+	######
+    #AC-130U
+    ######
+	pdxmesh = {
+		name = "TRI_AC_130U_mesh"
+		file = "gfx/models/units/planes/AC_130_U/AC_130U.mesh"
+
+		animation = { id = "idle" type = "AC_130U_idle_animation" }
+		animation = { id = "casbombing" type = "AC_130U_bombing_animation" }
 	}
 }

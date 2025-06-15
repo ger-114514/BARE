@@ -11,3 +11,13 @@ animation = {
     name = "MQ_9_Reaper_idle_animation"
     file = "MQ_9_Reaper/MQ_9_Reaper_idle.anim"
 }
+
+animation = {
+    name = "AC_130U_idle_animation"
+    file = "AC_130_U/AC_130_U_idle.anim"
+}
+
+animation = {
+    name = "AC_130U_bombing_animation"
+    file = "AC_130_U/AC_130_U_attack.anim"
+}

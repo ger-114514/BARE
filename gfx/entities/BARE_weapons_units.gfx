@@ -4,4 +4,22 @@ objectTypes = {
 		name = "generic_as_44_weapon_mesh"
 		file = "gfx/models/units/weapons/AS_44/AS_44_late.mesh"
 	}
+
+	###SCAR_L##
+	pdxmesh = {
+		name = "generic_scar_l_weapon_mesh"
+		file = "gfx/models/units/weapons/SCAR_L/SCAR_L.mesh"
+	}
+
+	###SCAR_h_NORMAL##
+	pdxmesh = {
+		name = "generic_SCAR_H_standard_weapon_mesh"
+		file = "gfx/models/units/weapons/SCAR_H/SCAR_H_standard.mesh"
+	}
+
+	###SCAR_H_forest##
+	pdxmesh = {
+		name = "generic_SCAR_H_forest_weapon_mesh"
+		file = "gfx/models/units/weapons/SCAR_H/SCAR_H_forest.mesh"
+	}
 }

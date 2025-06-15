@@ -24,24 +24,24 @@
 
 
 
-SOV_GMC_01 =  {#唯一标识符
-	name = "Guards Mechanized"
+#SOV_GMC_01 =  {#唯一标识符
+	#name = "Guards Mechanized"
 
-	for_countries = { SOV } #哪个国家能用
+	#for_countries = { SOV } #哪个国家能用
 
-	can_use = { always = yes } #什么时候能用
+	#can_use = { always = yes } #什么时候能用
 
-	division_types = { "mechanized" "motorized" } #使用这个命名表的兵种，自动分配用，见上面的兵种
+	#division_types = { "mechanized" "motorized" } #使用这个命名表的兵种，自动分配用，见上面的兵种
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { SOV_INF_01 }
 
-	fallback_name = "%dya Gvds. Mekhanizirovanaya Korpus" #通用名字 %d为第几个
+	#fallback_name = "%dya Gvds. Mekhanizirovanaya Korpus" #通用名字 %d为第几个
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.
-	ordered = { #独特命名表
+	#ordered = { #独特命名表
 
-	}
+	#}
 	
-}
+#}
