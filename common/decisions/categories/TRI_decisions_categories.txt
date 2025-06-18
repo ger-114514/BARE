@@ -34,6 +34,9 @@ TRI_hanako_decisions = {
 	}
 	visible = {
 		has_country_flag = TRI_hanako_decisions
+		TRI_hanako = {
+			is_country_leader = yes
+		}
 	}
 }
 #特殊调查

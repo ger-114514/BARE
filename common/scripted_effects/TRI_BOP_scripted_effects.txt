@@ -164,7 +164,7 @@ TRI_BOP_calculate_senate_house_seats = {
 		}
 		TRI_BOP_change_moderate_association = {
 			custom_effect_tooltip = {
-				localization_key = TRI_BOP_seat_change_tt
+				localization_key = TRI_BOP_policy_change_tt
 				TARGET = "[?association.GetTokenLocalizedKey]"
 				TO = BOP_moderate
 			}
@@ -175,7 +175,7 @@ TRI_BOP_calculate_senate_house_seats = {
 	##指定议院
 		TRI_BOP_change_hardliner_parliament = {
 			custom_effect_tooltip = {
-				localization_key = TRI_BOP_seat_change_tt
+				localization_key = TRI_BOP_policy_change_tt
 				TARGET = "[?target_parliament.GetTokenLocalizedKey]"
 				TO = BOP_hardliner
 			}
@@ -195,7 +195,7 @@ TRI_BOP_calculate_senate_house_seats = {
 		}
 		TRI_BOP_change_moderate_parliament = {
 			custom_effect_tooltip = {
-				localization_key = TRI_BOP_seat_change_tt
+				localization_key = TRI_BOP_policy_change_tt
 				TARGET = "[?target_parliament.GetTokenLocalizedKey]"
 				TO = BOP_moderate
 			}
