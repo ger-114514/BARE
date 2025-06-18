@@ -160,6 +160,16 @@ objectTypes = {
 	    animation = { id = "attack"			type = "TRI_medium_armor_0_attack_animation" }
     }
 
+	# Challenger 2
+	pdxmesh = {
+	    name = "TRI_challenger_2_mesh"
+	    file = "gfx/models/units/armor/TRI/Challenger_2/challenger_2.mesh"
+	
+	    animation = { id = "idle"			type = "challenger_2_idle_animation" }
+	    animation = { id = "move"			type = "challenger_2_moving_animation" }
+	    animation = { id = "attack"			type = "challenger_2_attack_animation" }
+    }
+
 	##########################
     # TRI Heavy Armor
     ##########################

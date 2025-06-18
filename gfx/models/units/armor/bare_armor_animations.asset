@@ -2,6 +2,7 @@
 ## TRI TANKS
 #####
 
+##############
 animation = {
     name = "TRI_light_armor_1_idle_animation"
     file = "TRI/Comet/TRI_light_armor_1_idle.anim"
@@ -60,4 +61,19 @@ animation = {
 animation = {
     name = "TRI_heavy_armor_2_attack_animation"
     file = "TRI/Black_Prince/TRI_heavy_armor_2_attack.anim"
+}
+
+############
+# Challenger 2
+animation = {
+    name = "challenger_2_attack_animation"
+    file = "TRI/Challenger_2/challenger_2_attack.anim"
+}
+animation = {
+    name = "challenger_2_idle_animation"
+    file = "TRI/Challenger_2/challenger_2_idle.anim"
+}
+animation = {
+    name = "challenger_2_moving_animation"
+    file = "TRI/Challenger_2/challenger_2_moving.anim"
 }
