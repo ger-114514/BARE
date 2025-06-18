@@ -366,8 +366,8 @@ guiTypes = {
 				clipping = no
 
 				iconType = {
-					name ="armortech_bg"
-					spriteType = "GFX_armortech_bg"
+					name ="artillery_techtree_bg"
+					spriteType = "GFX_artillery_techtree_bg"
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
@@ -533,8 +533,8 @@ guiTypes = {
 				clipping = no
 
 				iconType = {
-					name ="armortech_bg"
-					spriteType = "GFX_armortech_bg"
+					name ="ifv_techtree_bg"
+					spriteType = "GFX_ifv_techtree_bg"
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
@@ -895,7 +895,7 @@ guiTypes = {
 				}
 
 				iconType = {
-					name ="artillery_techtree_bg"
+					name ="air_techtree_bg"
 					spriteType = "GFX_air_techtree_bg"
 					position = { x=0 y=0 }
 					alwaystransparent = yes
@@ -1249,12 +1249,6 @@ guiTypes = {
 					position = { x=0 y=0 }
 				}
 
-				iconType = {
-					name ="wonderweapons_bg"
-					spriteType = "GFX_wonderweapons_bg"
-					position = { x=810 y=0 }
-					alwaystransparent = yes
-				}
 
 				instantTextBoxType = {
 					name = "tech_RANK_I"
@@ -1418,535 +1412,535 @@ guiTypes = {
 			}
 		}
 
-		containerWindowType = {
-			name = "school_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# containerWindowType = {
+		# 	name = "school_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
 
-				instantTextBoxType = {
-					name = "base_tech"
-					position = { x = 865 y = 0 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "学园基础技术"
-					maxWidth = 170
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_GEH"
-					position = { x = 200 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "GEH"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_TRI"
-					position = { x = 340 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "TRI"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_MIL"
-					position = { x = 480 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "MIL"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_ABY"
-					position = { x = 615 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "ABY"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_ARI"
-					position = { x = 755 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "ARI"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_VAL"
-					position = { x = 1035 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "VAL"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_SRT"
-					position = { x = 1175 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "SRT"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_SHA"
-					position = { x = 1310 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "SHA"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_HYA"
-					position = { x = 1455 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "HYA"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "base_tech_RED"
-					position = { x = 1590 y = 100 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "RED"
-					maxWidth = 110
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech"
+		# 			position = { x = 865 y = 0 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "学园基础技术"
+		# 			maxWidth = 170
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_GEH"
+		# 			position = { x = 200 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "GEH"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_TRI"
+		# 			position = { x = 340 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "TRI"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_MIL"
+		# 			position = { x = 480 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "MIL"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_ABY"
+		# 			position = { x = 615 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "ABY"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_ARI"
+		# 			position = { x = 755 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "ARI"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_VAL"
+		# 			position = { x = 1035 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "VAL"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_SRT"
+		# 			position = { x = 1175 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "SRT"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_SHA"
+		# 			position = { x = 1310 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "SHA"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_HYA"
+		# 			position = { x = 1455 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "HYA"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "base_tech_RED"
+		# 			position = { x = 1590 y = 100 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "RED"
+		# 			maxWidth = 110
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
 
-				instantTextBoxType = {
-					name = "tech_RANK_I"
-					position = { x = 205 y = 340 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "T1技术"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANKT2"
-					position = { x = 345 y = 340 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "T2技术"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANKT3"
-					position = { x = 485 y = 340 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "T3技术"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANK_IV"
-					position = { x = 625 y = 340 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "T4技术"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANK_V"
-					position = { x = 765 y = 340 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "T5技术"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANK_base"
-					position = { x = 100 y = 417 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "理论"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANK_CIV"
-					position = { x = 100 y = 557 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "民用"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANK_MIL"
-					position = { x = 100 y = 697 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "军用"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "tech_RANK_MYS"
-					position = { x = 100 y = 837 }
-					font = "hoi_36header"
-					borderSize = { x = 0 y = 0}
-					text = "神秘"
-					maxWidth = 100
-					maxHeight = 32
-					format = center
-					Orientation = "UPPER_LEFT"
-				}
-			}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_I"
+		# 			position = { x = 205 y = 340 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "T1技术"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANKT2"
+		# 			position = { x = 345 y = 340 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "T2技术"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANKT3"
+		# 			position = { x = 485 y = 340 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "T3技术"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_IV"
+		# 			position = { x = 625 y = 340 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "T4技术"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_V"
+		# 			position = { x = 765 y = 340 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "T5技术"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_base"
+		# 			position = { x = 100 y = 417 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "理论"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_CIV"
+		# 			position = { x = 100 y = 557 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "民用"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_MIL"
+		# 			position = { x = 100 y = 697 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "军用"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 		instantTextBoxType = {
+		# 			name = "tech_RANK_MYS"
+		# 			position = { x = 100 y = 837 }
+		# 			font = "hoi_36header"
+		# 			borderSize = { x = 0 y = 0}
+		# 			text = "神秘"
+		# 			maxWidth = 100
+		# 			maxHeight = 32
+		# 			format = center
+		# 			Orientation = "UPPER_LEFT"
+		# 		}
+		# 	}
 
-			gridboxtype = {
-				name = "kivotos_base_tech_token_tree"
-				position = { x = 950 y = 140 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "tech_rank_I_token_tree"
-				position = { x = 213 y = 400 }
-				slotsize = { width = 70 height = 70 }
-				format = "UPPER_LEFT"
-			}
-			gridboxtype = {
-				name = "tech_CIV_rank_I_token_tree"
-				position = { x = 213 y = 540 }
-				slotsize = { width = 70 height = 70 }
-				format = "UPPER_LEFT"
-			}
-			gridboxtype = {
-				name = "tech_MIL_rank_I_token_tree"
-				position = { x = 213 y = 680 }
-				slotsize = { width = 70 height = 70 }
-				format = "UPPER_LEFT"
-			}
-			gridboxtype = {
-				name = "tech_MYS_rank_I_token_tree"
-				position = { x = 213 y = 820 }
-				slotsize = { width = 70 height = 70 }
-				format = "UPPER_LEFT"
-			}
+		# 	gridboxtype = {
+		# 		name = "kivotos_base_tech_token_tree"
+		# 		position = { x = 950 y = 140 }
+		# 		slotsize = { width = 70 height = 70 }
+		# 		format = "UP"
+		# 	}
+		# 	gridboxtype = {
+		# 		name = "tech_rank_I_token_tree"
+		# 		position = { x = 213 y = 400 }
+		# 		slotsize = { width = 70 height = 70 }
+		# 		format = "UPPER_LEFT"
+		# 	}
+		# 	gridboxtype = {
+		# 		name = "tech_CIV_rank_I_token_tree"
+		# 		position = { x = 213 y = 540 }
+		# 		slotsize = { width = 70 height = 70 }
+		# 		format = "UPPER_LEFT"
+		# 	}
+		# 	gridboxtype = {
+		# 		name = "tech_MIL_rank_I_token_tree"
+		# 		position = { x = 213 y = 680 }
+		# 		slotsize = { width = 70 height = 70 }
+		# 		format = "UPPER_LEFT"
+		# 	}
+		# 	gridboxtype = {
+		# 		name = "tech_MYS_rank_I_token_tree"
+		# 		position = { x = 213 y = 820 }
+		# 		slotsize = { width = 70 height = 70 }
+		# 		format = "UPPER_LEFT"
+		# 	}
 
-		}
-		containerWindowType = {
-			name = "mil_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# }
+		# containerWindowType = {
+		# 	name = "mil_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "tri_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "tri_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "geh_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "geh_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "aby_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "aby_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "ari_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "ari_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "srt_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "srt_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "sha_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "sha_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {	
-			name = "hya_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {	
+		# 	name = "hya_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "red_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "red_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
-		containerWindowType = {
-			name = "val_special_folder"
-			position = { x=85 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
-			scroll_wheel_factor = 40
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
+		# containerWindowType = {
+		# 	name = "val_special_folder"
+		# 	position = { x=85 y=47 }
+		# 	size = { width = 100%% height = 100%% }
+		# 	margin = { top = 13 left = 13 bottom = 24 right = 25}
+		# 	drag_scroll = { left middle }
+		# 	verticalScrollbar = "right_vertical_slider"
+		# 	horizontalScrollbar = "bottom_horizontal_slider"
+		# 	scroll_wheel_factor = 40
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
-			}
+		# 	background = {
+		# 		name = "Background"
+		# 		quadTextureSprite ="GFX_tiled_window_2b_border"
+		# 	}
 
-			containerWindowType = {
-				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
-				size = {
-					width = 1400 height = 1275
-					min = { width = 100%% height = 100%% }
-				}
-				clipping = no
-			}
-		}
+		# 	containerWindowType = {
+		# 		name = "techtree_stripes"
+		# 		position = { x= 0 y= 0 }
+		# 		size = {
+		# 			width = 1400 height = 1275
+		# 			min = { width = 100%% height = 100%% }
+		# 		}
+		# 		clipping = no
+		# 	}
+		# }
 
 		###BD工业###
 		containerWindowType = {
@@ -1973,8 +1967,8 @@ guiTypes = {
 				}
 
 				iconType = {
-					name ="artillery_techtree_bg"
-					spriteType = "GFX_air_techtree_bg"
+					name ="bd_techtree_bg"
+					spriteType = "GFX_bd_techtree_bg"
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
@@ -2232,8 +2226,8 @@ guiTypes = {
 				}
 
 				iconType = {
-					name ="artillery_techtree_bg"
-					spriteType = "GFX_air_techtree_bg"
+					name ="breakthrough_techtree_bg"
+					spriteType = "GFX_breakthrough_techtree_bg"
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
@@ -2449,8 +2443,8 @@ guiTypes = {
 				}
 
 				iconType = {
-					name ="artillery_techtree_bg"
-					spriteType = "GFX_air_techtree_bg"
+					name ="industry_resource_techtree_bg"
+					spriteType = "GFX_industry_resource_techtree_bg"
 					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
@@ -2707,84 +2701,84 @@ guiTypes = {
 				clicksound = ui_research_tab_industry
 			}
 			
-			####
-			buttonType = {
-				name = "school_special_folder_tab"
-				position = { x = 1 y = 10 }
-				quadTextureSprite = "GFX_OTHER_SP_folder_icon"
-				frame = 1
-				clicksound = ui_research_tab_support
-			}
-			buttonType = {
-				name = "mil_special_folder_tab"
-				position = { x = 1 y = 80 }
-				frame = 1
-				quadTextureSprite = "GFX_MIL_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "tri_special_folder_tab"
-				position = { x = 1 y = 150 }
-				frame = 1
-				quadTextureSprite = "GFX_TRI_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "geh_special_folder_tab"
-				position = { x = 1 y = 220 }
-				frame = 1
-				quadTextureSprite = "GFX_GEH_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "aby_special_folder_tab"
-				position = { x = 1 y = 290 }
-				frame = 1
-				quadTextureSprite = "GFX_ABY_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "ari_special_folder_tab"
-				position = { x = 1 y = 360 }
-				frame = 1
-				quadTextureSprite = "GFX_ARI_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "hya_special_folder_tab"
-				position = { x = 1 y = 430 }
-				frame = 1
-				quadTextureSprite = "GFX_HYA_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "sha_special_folder_tab"
-				position = { x = 1 y = 500 }
-				frame = 1
-				quadTextureSprite = "GFX_SHA_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "srt_special_folder_tab"
-				position = { x = 1 y = 570 }
-				frame = 1
-				quadTextureSprite = "GFX_SRT_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "red_special_folder_tab"
-				position = { x = 1 y = 640 }
-				frame = 1
-				quadTextureSprite = "GFX_RED_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
-			buttonType = {
-				name = "val_special_folder_tab"
-				position = { x = 1 y = 710 }
-				frame = 1
-				quadTextureSprite = "GFX_VAL_SP_folder_icon"
-				clicksound = ui_research_tab_infantry
-			}
+			# ####
+			# buttonType = {
+			# 	name = "school_special_folder_tab"
+			# 	position = { x = 1 y = 10 }
+			# 	quadTextureSprite = "GFX_OTHER_SP_folder_icon"
+			# 	frame = 1
+			# 	clicksound = ui_research_tab_support
+			# }
+			# buttonType = {
+			# 	name = "mil_special_folder_tab"
+			# 	position = { x = 1 y = 80 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_MIL_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "tri_special_folder_tab"
+			# 	position = { x = 1 y = 150 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_TRI_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "geh_special_folder_tab"
+			# 	position = { x = 1 y = 220 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_GEH_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "aby_special_folder_tab"
+			# 	position = { x = 1 y = 290 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_ABY_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "ari_special_folder_tab"
+			# 	position = { x = 1 y = 360 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_ARI_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "hya_special_folder_tab"
+			# 	position = { x = 1 y = 430 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_HYA_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "sha_special_folder_tab"
+			# 	position = { x = 1 y = 500 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_SHA_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "srt_special_folder_tab"
+			# 	position = { x = 1 y = 570 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_SRT_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "red_special_folder_tab"
+			# 	position = { x = 1 y = 640 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_RED_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
+			# buttonType = {
+			# 	name = "val_special_folder_tab"
+			# 	position = { x = 1 y = 710 }
+			# 	frame = 1
+			# 	quadTextureSprite = "GFX_VAL_SP_folder_icon"
+			# 	clicksound = ui_research_tab_infantry
+			# }
 		}
 
 		buttonType = {
@@ -3985,122 +3979,122 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType = {
-		name = "techtree_school_special_folder_item"
-		position = { x=-56 y=-7 }
-		size = { width = 183 height = 84 }
-		clipping = no
+	# containerWindowType = {
+	# 	name = "techtree_school_special_folder_item"
+	# 	position = { x=-56 y=-7 }
+	# 	size = { width = 183 height = 84 }
+	# 	clipping = no
 
-		background = {
-			name = "Background"
-			quadTextureSprite ="GFX_technology_unavailable_item_bg"
-		}
+	# 	background = {
+	# 		name = "Background"
+	# 		quadTextureSprite ="GFX_technology_unavailable_item_bg"
+	# 	}
 
-		iconType = {
-			name = "Icon"
-			position = { x=90 y=50 }
-			spriteType = "GFX_technology_medium"
-			centerposition = yes
-			alwaystransparent = yes
-		}
+	# 	iconType = {
+	# 		name = "Icon"
+	# 		position = { x=90 y=50 }
+	# 		spriteType = "GFX_technology_medium"
+	# 		centerposition = yes
+	# 		alwaystransparent = yes
+	# 	}
 
-		instantTextBoxType = {
-			name = "Name"
-			position = { x = 3 y = -3 }
-			textureFile = ""
-			font = "hoi_20bs"
-			borderSize = {x = 4 y = 4}
-			text = "Happy-Go-Lucky-Tank"
-			maxWidth = 166
-			maxHeight = 20
-			fixedsize = yes
-			format = left
-		}
-		iconType = {
-			name = "bonus_icon"
-			position = { x=111 y=-22 }
-			spriteType = "GFX_tech_bonus"
-		}
+	# 	instantTextBoxType = {
+	# 		name = "Name"
+	# 		position = { x = 3 y = -3 }
+	# 		textureFile = ""
+	# 		font = "hoi_20bs"
+	# 		borderSize = {x = 4 y = 4}
+	# 		text = "Happy-Go-Lucky-Tank"
+	# 		maxWidth = 166
+	# 		maxHeight = 20
+	# 		fixedsize = yes
+	# 		format = left
+	# 	}
+	# 	iconType = {
+	# 		name = "bonus_icon"
+	# 		position = { x=111 y=-22 }
+	# 		spriteType = "GFX_tech_bonus"
+	# 	}
 
-		instantTextBoxType = {
-			name = "bonus"
-			position = { x = 111 y = -21 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 4 y = 4}
-			text = "lol boat"
-			maxWidth = 80
-			maxHeight = 20
-			format = center
-		}
+	# 	instantTextBoxType = {
+	# 		name = "bonus"
+	# 		position = { x = 111 y = -21 }
+	# 		textureFile = ""
+	# 		font = "hoi_16mbs"
+	# 		borderSize = {x = 4 y = 4}
+	# 		text = "lol boat"
+	# 		maxWidth = 80
+	# 		maxHeight = 20
+	# 		format = center
+	# 	}
 
-		containerWindowType = {
-			name = "sub_technology_slot_0"
-			position = { x=141 y=1 }
-			size = { width = 35 height = 26 }
-			clipping = no
+	# 	containerWindowType = {
+	# 		name = "sub_technology_slot_0"
+	# 		position = { x=141 y=1 }
+	# 		size = { width = 35 height = 26 }
+	# 		clipping = no
 
-			background = {
-				name = "Background"
-				spriteType ="GFX_subtechnology_unavailable_item_bg"
-			}
+	# 		background = {
+	# 			name = "Background"
+	# 			spriteType ="GFX_subtechnology_unavailable_item_bg"
+	# 		}
 
-			iconType = {
-				name = "picture"
-				position = { x=2 y=2 }
-				spriteType = "GFX_subtech_rocket"
-				alwaystransparent = yes
-			}
-		}
+	# 		iconType = {
+	# 			name = "picture"
+	# 			position = { x=2 y=2 }
+	# 			spriteType = "GFX_subtech_rocket"
+	# 			alwaystransparent = yes
+	# 		}
+	# 	}
 
-		iconType = {
-			name = "can_assign_design_team_icon"
-			position = { x=5 y=55 }
-			spriteType = "GFX_design_team_icon"
-		}
-	}
-	containerWindowType = {
-		name = "techtree_school_special_folder_small_item"
-		position = { x=0 y=0 }
-		size = { width = 72 height = 72 }
-		clipping = no
+	# 	iconType = {
+	# 		name = "can_assign_design_team_icon"
+	# 		position = { x=5 y=55 }
+	# 		spriteType = "GFX_design_team_icon"
+	# 	}
+	# }
+	# containerWindowType = {
+	# 	name = "techtree_school_special_folder_small_item"
+	# 	position = { x=0 y=0 }
+	# 	size = { width = 72 height = 72 }
+	# 	clipping = no
 
-		background = {
-			name = "bg"
-			quadTextureSprite ="GFX_technology_unavailable_item_bg"
-		}
+	# 	background = {
+	# 		name = "bg"
+	# 		quadTextureSprite ="GFX_technology_unavailable_item_bg"
+	# 	}
 
-		iconType = {
-			name = "Icon"
-			position = { x=3 y=3 }
-			spriteType = "GFX_technology_medium"
-			alwaystransparent = yes
-		}
+	# 	iconType = {
+	# 		name = "Icon"
+	# 		position = { x=3 y=3 }
+	# 		spriteType = "GFX_technology_medium"
+	# 		alwaystransparent = yes
+	# 	}
 
-		iconType = {
-			name = "bonus_icon"
-			position = { x=-1 y=-22 }
-			spriteType = "GFX_tech_bonus"
-		}
+	# 	iconType = {
+	# 		name = "bonus_icon"
+	# 		position = { x=-1 y=-22 }
+	# 		spriteType = "GFX_tech_bonus"
+	# 	}
 
-		instantTextBoxType = {
-			name = "bonus"
-			position = { x = -1 y = -22 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 4 y = 4}
-			text = "lol boat"
-			maxWidth = 80
-			maxHeight = 20
-			format = center
-		}
+	# 	instantTextBoxType = {
+	# 		name = "bonus"
+	# 		position = { x = -1 y = -22 }
+	# 		textureFile = ""
+	# 		font = "hoi_16mbs"
+	# 		borderSize = {x = 4 y = 4}
+	# 		text = "lol boat"
+	# 		maxWidth = 80
+	# 		maxHeight = 20
+	# 		format = center
+	# 	}
 
-		iconType = {
-			name = "can_assign_design_team_icon"
-			position = { x=0 y=42 }
-			spriteType = "GFX_design_team_icon"
-		}
-	}
+	# 	iconType = {
+	# 		name = "can_assign_design_team_icon"
+	# 		position = { x=0 y=42 }
+	# 		spriteType = "GFX_design_team_icon"
+	# 	}
+	# }
 
 	#BD#
 	containerWindowType = {

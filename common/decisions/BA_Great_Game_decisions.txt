@@ -193,6 +193,18 @@ BA_Great_Game_decisions = {
 				GOAL = "[?FROM.GetNameWithFlag]"
 			}
 			Great_Game_start_invasion = yes
+			FROM = {
+				every_neighbor_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_autonomy_state = autonomy_bare_trusteeship_area_2
+					}
+					add_to_war = {
+						targeted_alliance = ROOT
+						enemy = FROM.OVERLORD
+					}
+				}
+			}
 		}
 	}
 	Great_Game_CEN_college_lauch_invade = {
@@ -270,7 +282,25 @@ BA_Great_Game_decisions = {
 			
 		}
 		remove_effect = {
+			custom_effect_tooltip = {
+				localization_key = Great_Game_start_invasion_tt
+				ATTACKER = "[?ROOT.GetNameWithFlag]"
+				DEFENDER = "[?FROM.OVERLORD.GetNameWithFlag]"
+				GOAL = "[?FROM.GetNameWithFlag]"
+			}
 			Great_Game_start_invasion = yes
+			FROM = {
+				every_neighbor_country = {
+					limit = {
+						is_subject_of = CEN
+						has_autonomy_state = autonomy_CEN_trusteeship_area
+					}
+					add_to_war = {
+						targeted_alliance = ROOT
+						enemy = FROM.OVERLORD
+					}
+				}
+			}
 		}
 	}
 	Great_Game_ceaser_lauch_invade = {
@@ -295,8 +325,11 @@ BA_Great_Game_decisions = {
 					OR = {
 						original_tag = ROOT
 						AND = {
-							is_subject_of = ROOT
-							has_autonomy_state = autonomy_bare_trusteeship_area_2
+							is_subject_of = CAE
+							OR = {
+								has_autonomy_state = autonomy_Ceaser_sub_branch
+								has_autonomy_state = autonomy_Ceaser_trusteeship_area
+							}
 						}
 					}
 				}
@@ -353,6 +386,21 @@ BA_Great_Game_decisions = {
 		}
 		remove_effect = {
 			Great_Game_start_invasion = yes
+			FROM = {
+				every_neighbor_country = {
+					limit = {
+						is_subject_of = CAE
+						OR = {
+							has_autonomy_state = autonomy_Ceaser_sub_branch
+							has_autonomy_state = autonomy_Ceaser_trusteeship_area
+						}
+					}
+					add_to_war = {
+						targeted_alliance = ROOT
+						enemy = FROM.OVERLORD
+					}
+				}
+			}
 		}
 	}
 	Great_Game_defender_timer = {

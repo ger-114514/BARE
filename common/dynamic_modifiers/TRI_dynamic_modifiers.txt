@@ -29,7 +29,7 @@
 #伊甸条约
 eden_treaty_step_0_modifier = { #【争辩无休的《伊甸条约》方针】
 	
-	icon = "GFX_idea_unknown"
+	icon = "GFX_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -48,7 +48,7 @@ eden_treaty_step_0_modifier = { #【争辩无休的《伊甸条约》方针】
 
 eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
 	
-	icon = "GFX_idea_unknown"
+	icon = "GFX_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -68,7 +68,7 @@ eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
 
 eden_treaty_step_2_modifier = { #【方略周详的《伊甸条约》方针】
 	
-	icon = "GFX_idea_unknown"
+	icon = "GFX_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -88,7 +88,7 @@ eden_treaty_step_2_modifier = { #【方略周详的《伊甸条约》方针】
 
 eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
 	
-	icon = "GFX_idea_unknown"
+	icon = "GFX_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -108,7 +108,7 @@ eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
 
 eden_treaty_step_4_modifier = { #【濒临破灭的《伊甸条约》】
 
-	icon = "GFX_idea_eden_treaty_step_4_modifier"
+	icon = "GFX_eden_treaty_step_bad_modifier"
 	enable = { always = yes }
 
 	#政治方面
@@ -128,7 +128,7 @@ eden_treaty_step_4_modifier = { #【濒临破灭的《伊甸条约》】
 
 eden_treaty_step_5_modifier = { #【逐渐稳定的《伊甸条约》】
 
-	icon = "GFX_idea_unknown"
+	icon = "GFX_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 
 	#政治方面
@@ -150,6 +150,8 @@ eden_treaty_step_5_modifier = { #【逐渐稳定的《伊甸条约》】
 	#科技方面
 	research_speed_factor = eden_broken_research_speed
 }
+
+#混乱的前线
 TRI_devastated_by_arius = {
 	icon = "GFX_idea_unknown"
 	stability_weekly = TRI_devastated_by_arius_stability_weekly
@@ -197,7 +199,7 @@ TRI_chaotic_frontline_2 = {
 
 #圣三一情报局
 TRI_special_services_investigations = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_TRI_special_services_investigations"
 	enable = { always = yes }
 
 	#间谍槽位
@@ -213,7 +215,7 @@ TRI_special_services_investigations = {
 #不谐之音
 TRI_dissonance_modifier = {
 
-	icon = "GFX_idea_unknown"
+	icon = "GFX_TRI_dissonance_modifier"
 	enable = { always = yes }
 
 	#政治方面
@@ -232,7 +234,7 @@ TRI_dissonance_modifier = {
 #物资调配
 material_allocation_modifier = {
 	
-	icon = "GFX_idea_unknown"
+	icon = "GFX_material_allocation_modifier"
 	enable = { always = yes }
 
 	stability_factor = ma_stability
@@ -246,7 +248,7 @@ material_allocation_modifier = {
 trinity_industry_modifier = {
 	
 	#icon = "GFX_idea_unknown"
-	icon = GFX_idea_SOV_third_five_year_plan_military
+	icon = "GFX_trinity_industry_modifier"
 	enable = { always = yes }
 
 	#建造速度
@@ -271,7 +273,7 @@ trinity_industry_modifier = {
 trinity_industry_modifier_alt = {#添加装备增益后的动态民族精神
 	
 	#icon = "GFX_idea_unknown"
-	icon = GFX_idea_SOV_third_five_year_plan_military
+	icon = "GFX_trinity_industry_modifier"
 	enable = { always = yes }
 	
 	custom_modifier_tooltip = TRI_carryon_package_equipment_modifier
@@ -347,7 +349,7 @@ TRI_state_more_material = {
 }
 #圣三一军备
 TRI_trinity_military = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_TRI_trinity_military"
 	mobilization_speed = TRI_trinity_military_mobilization_speed
 	consumer_goods_factor = TRI_trinity_military_consumer_goods_factor
 	combat_readiness_factor = TRI_trinity_military_combat_readiness_factor
@@ -371,7 +373,7 @@ TRI_trinity_military = {
 }
 #受到动摇的信任
 TRI_shaked_nagisa_belief_1 = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_TRI_shaked_nagisa_belief_1"
 	stability_weekly = TRI_shaked_nagisa_belief_stability_weekly
 	political_advisor_cost_factor = TRI_shaked_nagisa_belief_political_advisor_cost_factor
 	political_power_cost = TRI_shaked_nagisa_belief_political_power_cost
@@ -383,7 +385,7 @@ TRI_shaked_nagisa_belief_1 = {
 }
 #守任堪信
 TRI_shaked_nagisa_belief_2 = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_TRI_shaked_nagisa_belief_2"
 	stability_weekly = TRI_shaked_nagisa_belief_stability_weekly
 	political_advisor_cost_factor = TRI_shaked_nagisa_belief_political_advisor_cost_factor
 	political_power_cost = TRI_shaked_nagisa_belief_political_power_cost
