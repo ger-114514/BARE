@@ -250,6 +250,146 @@ spriteTypes = {
 		name = "GFX_idea_eden_treaty_step_4_modifier"
 		texturefile = "gfx/interface/ideas/TRI/idea_eden_treaty_step_4_modifier.dds"
 	}
+
+	#6.18新增
+	#以战止戈
+	#为会谈做出的整备
+
+	#不谐之音被订正？
+	SpriteType = {
+		name = "GFX_TRI_dissonance_modifier_alt"
+		texturefile = "gfx/interface/ideas/TRI/TRI_dissonance_modifier_alt.dds"
+	}
+
+	#铸剑为犁
+	#夏莱的老师
+
+	#筹备会谈
+	SpriteType = {
+		name = "GFX_TRI_prepare_for_meeting"
+		texturefile = "gfx/interface/ideas/TRI/TRI_prepare_for_meeting.dds"
+	}
+
+	#茶话会直属炮兵
+	#圣三一航空训练计划
+	#圣三一空地一体化系统
+	#专业化无人机生产集团
+	#圣三一火炮
+	#先进性装甲
+	#紧急救援
+	#向上议院妥协中
+	#向下议院妥协中
+	#正在铺展的“影子”计划
+	#扫除威胁！
+	#维持军备
+	#重视稳定
+	#友谊，光荣与未来！
+	#胜利，信任与团结！
+
+	#进行中的行政重整
+	SpriteType = {
+		name = "GFX_TRI_reforming_administration_system"
+		texturefile = "gfx/interface/ideas/TRI/TRI_reforming_administration_system.dds"
+	}
+
+	#################
+	#####动态修正#####
+	#################
+
+	#伊甸条约阶段0 1 2 3 5图标
+	SpriteType = {
+		name = "GFX_eden_treaty_step_normal_modifier"
+		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
+	}
+
+	#伊甸条约阶段4图标
+	SpriteType = {
+		name = "GFX_eden_treaty_step_bad_modifier"
+		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_bad_modifier.dds"
+	}
+
+	#毁灭性打击
+	#混乱的前线
+	#携手并肩的前线
+
+	#圣三一情报局
+	SpriteType = {
+		name = "GFX_TRI_special_services_investigations"
+		texturefile = "gfx/interface/ideas/TRI/TRI_special_services_investigations.dds"
+	}
+
+	#不谐之音
+	SpriteType = {
+		name = "GFX_TRI_dissonance_modifier"
+		texturefile = "gfx/interface/ideas/TRI/TRI_dissonance_modifier.dds"
+	}
+
+	#物资调配
+	SpriteType = {
+		name = "GFX_material_allocation_modifier"
+		texturefile = "gfx/interface/ideas/TRI/material_allocation_modifier.dds"
+	}
+
+	#圣三一工业
+	SpriteType = {
+		name = "GFX_trinity_industry_modifier"
+		texturefile = "gfx/interface/ideas/TRI/trinity_industry_modifier.dds"
+	}
+
+	#团结度修正
+	#焦点修正
+	#地区稳定度
+	#TRI_rebuilding_subsidy_modifier
+	#物资减少
+	#额外物资调配
+
+	#圣三一军备
+	SpriteType = {
+		name = "GFX_TRI_trinity_military"
+		texturefile = "gfx/interface/ideas/TRI/TRI_trinity_military.dds"
+	}
+
+	
+	#受到动摇的信任
+	SpriteType = {
+		name = "GFX_TRI_shaked_nagisa_belief_1"
+		texturefile = "gfx/interface/ideas/TRI/TRI_shaked_nagisa_belief_1.dds"
+	}
+
+	#守任堪信
+	SpriteType = {
+		name = "GFX_TRI_shaked_nagisa_belief_2"
+		texturefile = "gfx/interface/ideas/TRI/TRI_shaked_nagisa_belief_2.dds"
+	}
+
+	
+	#################
+	######渚大林######
+	#################
+	#受到严格审查的陆军
+	SpriteType = {
+		name = "GFX_TRI_inspected_army"
+		texturefile = "gfx/interface/ideas/TRI/TRI_inspected_army.dds"
+	}
+
+	#减少军事演习
+	SpriteType = {
+		name = "GFX_TRI_training_activities_curtailed"
+		texturefile = "gfx/interface/ideas/TRI/TRI_training_activities_curtailed.dds"
+	}
+
+	#受到严格审查的空军
+	SpriteType = {
+		name = "GFX_TRI_inspected_airforce"
+		texturefile = "gfx/interface/ideas/TRI/TRI_inspected_airforce.dds"
+	}
+
+	#暂停的地面训练
+	SpriteType = {
+		name = "GFX_TRI_ground_based_training"
+		texturefile = "gfx/interface/ideas/TRI/TRI_ground_based_training.dds"
+	}
+
 	
 	### VAL
 	spriteType = {

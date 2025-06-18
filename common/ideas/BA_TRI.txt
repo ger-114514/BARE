@@ -1,6 +1,7 @@
 ideas = {
     country = {
     
+        #以战止戈
         TRI_authorize_eagle = {
             name = authorize_eagle_modifier
             picture = unknown
@@ -30,9 +31,10 @@ ideas = {
             }
         }
 
+        #不谐之音被订正？
         TRI_dissonance_modifier_alt = {
             name = TRI_dissonance_modifier_alt
-            picture = unknown
+            picture = "GFX_TRI_dissonance_modifier_alt"
 
             allowed = {
                 original_tag = TRI
@@ -43,6 +45,7 @@ ideas = {
             }
         }
 
+        #铸剑为犁
         TRI_authorize_dove = {
             name = authorize_dove_modifier
             picture = unknown
@@ -56,6 +59,7 @@ ideas = {
             }
         }
 
+        #夏莱的老师
         TRI_SCH_teacher_modifier = {
             name = TRI_SCH_teacher_modifier
             picture = unknown
@@ -73,7 +77,7 @@ ideas = {
         }
         #筹备会谈
         TRI_prepare_for_meeting = {
-            picture = unknown
+            picture = "GFX_TRI_prepare_for_meeting"
             modifier = {
                 stability_factor = 0.05
                 political_power_cost = 0.2
@@ -81,7 +85,7 @@ ideas = {
             }
         }
         TRI_prepare_for_meeting_2 = {
-            picture = unknown
+            picture = "GFX_TRI_prepare_for_meeting"
             modifier = {
                 consumer_goods_factor = 0.15
                 production_speed_buildings_factor = 0.1
@@ -93,7 +97,7 @@ ideas = {
             }
         }
         TRI_prepare_for_meeting_3 = {
-            picture = unknown
+            picture = "GFX_TRI_prepare_for_meeting"
             modifier = {
                 consumer_goods_factor = 0.1
                 production_speed_buildings_factor = 0.1
@@ -105,7 +109,7 @@ ideas = {
             }
         }
         TRI_prepare_for_meeting_4 = {
-            picture = unknown
+            picture = "GFX_TRI_prepare_for_meeting"
             modifier = {
                 consumer_goods_factor = 0.1
                 production_speed_buildings_factor = 0.1
@@ -115,6 +119,7 @@ ideas = {
                 Eden_treaty_progress_modifier = 4
             }
         }
+
         #茶话会直属炮兵
         TRI_tea_party_artillery_1 = {
             picture = unknown
@@ -254,6 +259,8 @@ ideas = {
                 political_power_gain = -0.1
             }
         }
+
+        #紧急救援
         GST_TRI_emergency_rescue_idea = {
             picture = unknown
             modifier = {
@@ -285,7 +292,7 @@ ideas = {
             }
         }
         ###2025.2.20 乃爱###
-        #重整旗鼓
+        #向上议院妥协中
         TRI_bouncing_back_idea = {
             modifier = {
                 political_advisor_cost_factor = 0.5
@@ -303,7 +310,7 @@ ideas = {
                 }
             }
         }
-        #物尽其用
+        #向下议院妥协中
         TRI_making_the_best_use_idea = {
             modifier = {
                 stability_weekly = -0.003
@@ -322,7 +329,7 @@ ideas = {
                 }
             }
         }
-        #“影子”计划
+        #正在铺展的“影子”计划
         TRI_shadow_scheme_in_progress = {
             modifier = {
                 production_speed_buildings_factor = -0.05
@@ -361,6 +368,8 @@ ideas = {
                 }
             }
         }
+
+        #维持军备
         TRI_prepare_for_war = {
             name = TRI_prepare_for_war
             picture = unknown
@@ -374,6 +383,7 @@ ideas = {
             }
         }
 
+        #重视稳定
         TRI_focus_on_stability = {
             name = TRI_focus_on_stability
             picture = unknown
