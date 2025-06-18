@@ -1,0 +1,14 @@
+#####
+## Buildings
+#####
+
+##PAC_3
+animation = {
+    name = "PAC_3_AA_Building_idle_animation"
+    file = "PAC_3_AA_Building/PAC_3_AA_Building_idle.anim"
+}
+
+animation = {
+    name = "PAC_3_AA_Building_attack_animation"
+    file = "PAC_3_AA_Building/PAC_3_AA_Building_attack.anim"
+}

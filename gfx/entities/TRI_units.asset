@@ -526,9 +526,47 @@ entity = {
 	###########
     # Air Assualt Unit
     ###########
+
+	######
+	#Airborne!
+	######
+	
+	###Vehicles
+
+	#mi8
+	entity = {
+		name = "TRI_MI_8_AB_entity"
+		pdxmesh = "TRI_MI_8_AB_mesh"
+		
+		state = { name = "idle"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 
+	        event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
+	    }
+		state = { name = "retreat"			animation = "idle" 	 		animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { trigger_once = yes sound = { soundeffect = "helicopter_move_sound_effect" } }
+		}
+		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "training"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 
+	        event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
+	    }
+		state = { name = "move"			animation = "idle" 			animation_blend_time = 0.3 animation_speed = 1.0
+		    event = { trigger_once = yes sound = { soundeffect = "helicopter_move_sound_effect" } }
+		}
+		state = { name = "support_attack"	animation = "idle" 	animation_blend_time = 0.3 animation_speed = 1.0 
+		    event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
+		}
+		state = { name = "attack"			animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+		    event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
+		}
+		state = { name = "defend"			animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+		    event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
+		}
+		scale = 0.4
+	}
+
+	###no longer use
 	entity = {
 		name = "TRI_AH64_APACHE_vehicle_entity"
-		pdxmesh = "TRI_AH64_APACHE_mesh"
+		pdxmesh = "TRI_AH64_APACHE_AB_Var_mesh"
 		
 		state = { name = "idle"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 
 	        event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
@@ -541,24 +579,28 @@ entity = {
 		state = { name = "move"			animation = "idle" 			animation_blend_time = 0.3 animation_speed = 1.0
 		    event = { trigger_once = yes sound = { soundeffect = "helicopter_move_sound_effect" } }
 		}
-		state = { name = "support_attack"	animation = "idle" 	animation_blend_time = 0.3 animation_speed = 1.0 
-			event = { time = 0 node="gun" particle = "mechanized_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = "helicopter_attack_sound_effect" }} 
-			event = { time = 0.2 node="rocket1" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
-			event = { time = 0.4 node="rocket2" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+		state = { name = "support_attack"	animation = "ab_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 2 node="gun1" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { time = 4 node="rocket1" particle = "light_tank_attack_barrel_particle"  keep_particle = yes} 
+			event = { time = 4 node="rocket2" particle = "light_tank_attack_barrel_particle"  keep_particle = yes} 
+		    #event = { time = 10 sound = { soundeffect = "helicopter_attack_sound_effect" } } ##太吵了！！
 		}
-		state = { name = "attack"			animation = "idle" animation_blend_time = 0.0 
-			event = { time = 0 node="gun" particle = "mechanized_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = "helicopter_attack_sound_effect" }} 
-			event = { time = 0.2 node="rocket1" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
-			event = { time = 0.4 node="rocket2" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+		state = { name = "attack"			animation = "ab_attack" animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 2 node="gun1" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { time = 4 node="rocket1" particle = "light_tank_attack_barrel_particle"  keep_particle = yes} 
+			event = { time = 4 node="rocket2" particle = "light_tank_attack_barrel_particle"  keep_particle = yes} 
+			#event = { time = 10 sound = { soundeffect = "helicopter_attack_sound_effect" } }
 		}
-		state = { name = "defend"			animation = "idle" animation_blend_time = 0.0 
-			event = { time = 0 node="gun" particle = "mechanized_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = "helicopter_attack_sound_effect" }} 
-			event = { time = 0.2 node="rocket1" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
-			event = { time = 0.4 node="rocket2" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+		state = { name = "defend"			animation = "ab_attack" animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 2 node="gun1" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { time = 4 node="rocket1" particle = "light_tank_attack_barrel_particle"  keep_particle = yes} 
+			event = { time = 4 node="rocket2" particle = "light_tank_attack_barrel_particle"  keep_particle = yes} 
+			#event = { time = 10 sound = { soundeffect = "helicopter_attack_sound_effect" } }
 		}
 		scale = 0.4
 	}
 
+	##Airborne Solider Models
 	entity = {
 		name = "TRI_chopper_infantry_smg_entity"
 		pdxmesh = "TRI_infantry_smg_mesh"	
@@ -596,7 +638,7 @@ entity = {
 		attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 		attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 		
-		scale = 0.8			
+		scale = 0.6		
 	}
 
 	entity = {
@@ -636,7 +678,7 @@ entity = {
 		attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 		attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 		
-		scale = 0.8			
+		scale = 0.6			
 	}
 
 	entity = {
@@ -676,11 +718,12 @@ entity = {
 		attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 		attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 		
-		scale = 0.8			
+		scale = 0.6			
 	}
 
+	### AB Units
 	entity = {
-		name = "TRI_air_attack_infantry_entity"
+		name = "TRI_airborne_infantry_entity"
 		pdxmesh = "motorized_frame_mesh"
 		
 		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -693,44 +736,63 @@ entity = {
 		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
 		scale = 1.0
 		
-		attach = { 	name = "vehicle"			vehicle = "TRI_AH64_APACHE_vehicle_entity" }
+		attach = { 	name = "vehicle"			vehicle = "TRI_MI_8_AB_entity" }
 		attach = { 	name = "infantry"			infantry = "TRI_chopper_infantry_smg_entity" }
 	}
 
 	entity = {
-		name = "TRI_air_attack_infantry_2_entity"
-		pdxmesh = "motorized_frame_mesh"
+		name = "TRI_airborne_infantry_2_entity"
+		clone = "TRI_airborne_infantry_entity"
 		
-		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "support_attack"	animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		scale = 1.0
-		
-		attach = { 	name = "vehicle"			vehicle = "TRI_AH64_APACHE_vehicle_entity" }
+		attach = { 	name = "vehicle"			vehicle = "TRI_MI_8_AB_entity" }
 		attach = { 	name = "infantry"			infantry = "TRI_chopper_infantry_mg_entity" }
 	}
 
 	entity = {
-		name = "TRI_air_attack_infantry_3_entity"
-		pdxmesh = "motorized_frame_mesh"
+		name = "TRI_airborne_infantry_3_entity"
+		clone = "TRI_airborne_infantry_entity"
 		
-		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "support_attack"	animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		scale = 1.0
-		
-		attach = { 	name = "vehicle"			vehicle = "TRI_AH64_APACHE_vehicle_entity" }
+		attach = { 	name = "vehicle"			vehicle = "TRI_MI_8_AB_entity" }
 		attach = { 	name = "infantry"			infantry = "TRI_chopper_infantry_ar_entity" }
+	}
+
+
+	######
+	#Air Attack!
+	######
+
+	###APACHE
+	entity = {
+		name = "TRI_air_attack_battalion_entity"	
+		pdxmesh = "TRI_AH64_APACHE_mesh"
+
+		state = { name = "idle"				animation = "veh_idle" 				animation_blend_time = 0.3 animation_speed = 1.0 
+	        event = { trigger_once = yes sound = { soundeffect = "helicopter_idle_sound_effect" } }
+	    }
+		state = { name = "retreat"			animation = "veh_moving" 	 		animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { trigger_once = yes sound = { soundeffect = "helicopter_move_sound_effect" } }
+		}
+		state = { name = "death"			animation = "veh_moving" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "training"				animation = "veh_moving" 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"			animation = "veh_moving" 			animation_blend_time = 0.3 animation_speed = 1.0
+		    event = { trigger_once = yes sound = { soundeffect = "helicopter_move_sound_effect" } }
+		}
+		state = { name = "support_attack"	animation = "veh_moving" 	animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 0 node="gun1" particle = "mechanized_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = "helicopter_attack_sound_effect" }} 
+			event = { time = 0.2 node="rocket1" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+			event = { time = 0.4 node="rocket2" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+		}
+		state = { name = "attack"			animation = "veh_moving" animation_blend_time = 0.0 
+			event = { time = 0 node="gun1" particle = "mechanized_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = "helicopter_attack_sound_effect" }} 
+			event = { time = 0.2 node="rocket1" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+			event = { time = 0.4 node="rocket2" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+		}
+		state = { name = "defend"			animation = "veh_moving" animation_blend_time = 0.0 
+			event = { time = 0 node="gun1" particle = "mechanized_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = "helicopter_attack_sound_effect" }} 
+			event = { time = 0.2 node="rocket1" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+			event = { time = 0.4 node="rocket2" particle = "plane_mg_muzzle_particle"  keep_particle = yes } 
+		}
+		scale = 0.3
 	}
 
 ###########

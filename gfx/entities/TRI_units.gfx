@@ -192,7 +192,22 @@ objectTypes = {
 	pdxmesh = {
 		name = "TRI_AH64_APACHE_mesh"
 		file = "gfx/models/units/planes/AH64_APACHE/AH64_APACHE.mesh"
-		animation = { id = "idle"			type = "AH64_APACHE_idle_animation" }
+		animation = { id = "veh_idle"			type = "AH64_APACHE_veh_idle_animation" }
+		animation = { id = "veh_moving"			type = "AH64_APACHE_veh_moving_animation" }
+	}
+
+	pdxmesh = {
+		name = "TRI_AH64_APACHE_AB_Var_mesh"
+		file = "gfx/models/units/planes/AH64_APACHE/AH64_APACHE_AB_Var.mesh"
+		animation = { id = "idle"			type = "AH64_APACHE_ab_idle_animation" }
+		animation = { id = "ab_attack"			type = "AH64_APACHE_ab_attacking_animation" }
+	}
+
+	###MI8
+	pdxmesh = {
+		name = "TRI_MI_8_AB_mesh"
+		file = "gfx/models/units/planes/generic/mi8/mi_8_ab.mesh"
+		animation = { id = "idle"			type = "MI_8_ab_idle_animation" }
 	}
 
 	####MQ9

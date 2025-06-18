@@ -89,7 +89,9 @@ autonomous_occupation = {
 	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
 
 	visible = {
-		has_government = democratic #? on design
+		always = no
+		#has_government = democratic #? on design
+		##已经没这东西了
 	}
 
 	state_modifier = {

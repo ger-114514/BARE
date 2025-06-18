@@ -2,9 +2,31 @@
 ## TRI TANKS
 #####
 
+##APACHE
 animation = {
-    name = "AH64_APACHE_idle_animation"
-    file = "AH64_APACHE/AH64_APACHE_idle.anim"
+    name = "AH64_APACHE_ab_idle_animation"
+    file = "AH64_APACHE/AH64_APACHE_ab_idle.anim"
+}
+
+animation = {
+    name = "AH64_APACHE_ab_attacking_animation"
+    file = "AH64_APACHE/AH64_APACHE_ab_attacking.anim"
+}
+
+animation = {
+    name = "AH64_APACHE_veh_idle_animation"
+    file = "AH64_APACHE/AH64_APACHE_veh_idle.anim"
+}
+
+animation = {
+    name = "AH64_APACHE_veh_moving_animation"
+    file = "AH64_APACHE/AH64_APACHE_veh_moving.anim"
+}
+
+##MI8
+animation = {
+    name = "MI_8_ab_idle_animation"
+    file = "generic/mi8/mi_8_ab_idle.anim"
 }
 
 animation = {
