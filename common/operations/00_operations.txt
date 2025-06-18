@@ -39,7 +39,6 @@
  	risk_chance = 0.1
  	experience = 2
  	cost_multiplier = 0  
- 	cost_multiplier = 0  
 
  	outcome_execute = {  
  		ROOT = {
@@ -1205,12 +1204,12 @@
  		targets = { FROM }
  	}
  	allowed = {
- 		NOT = {
- 			has_game_rule = {
- 				rule = allow_coups
- 				option = BLOCKED
- 			}
- 		}
+ 		#NOT = {
+ 			#has_game_rule = {
+ 				#rule = allow_coups
+ 				#option = BLOCKED
+ 			#}
+ 		#}
  	}
 
  	available = {

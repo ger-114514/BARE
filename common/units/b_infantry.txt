@@ -211,7 +211,7 @@ sub_units = {
 
 	infantry_sf = { #!特战步兵
 		abbreviation = "INFSF"
-		sprite = infantry
+		sprite = infantry_sf
 		map_icon_category = infantry
 		
 		priority = 600

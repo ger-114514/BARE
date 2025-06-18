@@ -1,40 +1,40 @@
-division_template = { #部队编制部分
-	name = "研讨会安保部"	 #编制名，直接填名字	
+#division_template = { #部队编制部分
+	#name = "研讨会安保部"	 #编制名，直接填名字	
 
 	# division_names_group = GER_Arm_01 #这个是编制所属的命名组（暂时注释了）
 
 
-	regiments = { #战斗营
+	#regiments = { #战斗营
 
 		
 
-		infantry = { x = 0 y = 0 } #格式为”兵种的key = {兵种对应的XY坐标轴，从开始到4}“
-		infantry = { x = 0 y = 1 } #infantry 步兵 #infantry_heavy 重装步兵
-		infantry = { x = 0 y = 2 } #infantry_sp 神秘步兵 #infantry_sf 特战步兵
-		infantry = { x = 0 y = 3 } #infantry_am 自动机 #infantry_militia 动员步兵
-		infantry = { x = 1 y = 0 } #fire_support_team_la 火炮 fire_support_team_ha AT
-		infantry = { x = 1 y = 1 } #fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
-		infantry = { x = 1 y = 2 } #ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
-		infantry = { x = 1 y = 3 } #ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
-		infantry = { x = 2 y = 0 } #apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
-		infantry = { x = 2 y = 1 } #apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
-		infantry = { x = 2 y = 2 } #light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
-		infantry = { x = 2 y = 3 } #light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
-		infantry = { x = 3 y = 0 } #medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
-		infantry = { x = 3 y = 1 } #medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
-		infantry = { x = 3 y = 2 } #heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
-		infantry = { x = 3 y = 3 } #heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
-		infantry = { x = 4 y = 0 } #light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
-		infantry = { x = 4 y = 1 } #light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
-		infantry = { x = 4 y = 2 } #medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
-		infantry = { x = 4 y = 3 } #medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
+		#infantry = { x = 0 y = 0 } #格式为”兵种的key = {兵种对应的XY坐标轴，从开始到4}“
+		#infantry = { x = 0 y = 1 } #infantry 步兵 #infantry_heavy 重装步兵
+		#infantry = { x = 0 y = 2 } #infantry_sp 神秘步兵 #infantry_sf 特战步兵
+		#infantry = { x = 0 y = 3 } #infantry_am 自动机 #infantry_militia 动员步兵
+		#infantry = { x = 1 y = 0 } #fire_support_team_la 火炮 fire_support_team_ha AT
+		#infantry = { x = 1 y = 1 } #fire_support_team_sp 神秘火炮 fire_support_team_aa 防空
+		#infantry = { x = 1 y = 2 } #ifv_unit 机械化步兵 #ifv_artillery_unit 步战车炮兵
+		#infantry = { x = 1 y = 3 } #ifv_at_unit 步战车反坦 #ifv_aa_unit 步战车AA
+		#infantry = { x = 2 y = 0 } #apc_unit摩托化步兵 #apc_artillery_unit轮战炮兵
+		#infantry = { x = 2 y = 1 } #apc_at_unit 轮战反坦 #apc_aa_unit 步轮战AA
+		#infantry = { x = 2 y = 2 } #light_armor 轻坦 #light_sp_artillery_brigade 轻坦火炮
+		#infantry = { x = 2 y = 3 } #light_tank_destroyer_brigade 轻坦AT #light_sp_anti_air_brigade 轻坦AA
+		#infantry = { x = 3 y = 0 } #medium_armor 中坦 #medium_sp_artillery_brigade 中坦火炮
+		#infantry = { x = 3 y = 1 } #medium_tank_destroyer_brigade 中坦AT #medium_sp_anti_air_brigade 中坦AA
+		#infantry = { x = 3 y = 2 } #heavy_armor 重坦 #heavy_sp_artillery_brigade 重坦火炮
+		#infantry = { x = 3 y = 3 } #heavy_tank_destroyer_brigade 重坦AT #heavy_sp_anti_air_brigade 重坦AA
+		#infantry = { x = 4 y = 0 } #light_bm_unit 轻型机甲 #light_bm_sp_artillery_unit 轻型火炮机甲
+		#infantry = { x = 4 y = 1 } #light_bm_tank_destroyer_unit 轻型AT机甲 #light_bm_sp_anti_air_unit轻型AA机甲
+		#infantry = { x = 4 y = 2 } #medium_bm_unit 中型机甲 #medium_bm_sp_artillery_unit 中型火炮机甲
+		#infantry = { x = 4 y = 3 } #medium_bm_tank_destroyer_unit 中型AT机甲 #medium_bm_sp_anti_air_unit中型AA机甲
 									#heavy_bm_unit 重型机甲 #heavy_bm_sp_artillery_unit 重型火炮机甲
 									#heavy_bm_tank_destroyer_unit 重型AT机甲 #heavy_bm_sp_anti_air_unit 重型AA机甲
 									#air_assest_unit 空中突击营 #air_attack_unit 武装直升机营
-	}
+	#}
 
 	
-	support = { #支援连 #格式为”兵种的key = {兵种对应的XY坐标轴，x固定为0，从开始到4}“
+	#support = { #支援连 #格式为”兵种的key = {兵种对应的XY坐标轴，x固定为0，从开始到4}“
 		#fire_support_team_su_la 火炮支援连
 		#fire_support_team_su_ha 反坦克炮支援连
 		#fire_support_team_su_sa 神秘火炮支援连
@@ -51,16 +51,16 @@ division_template = { #部队编制部分
 		#military_police 宪兵
 		#signal_company通讯
 		#field_hospital医院
-		recon = {x=0 y=0}
+		#recon = {x=0 y=0}
 
 
-	}
+	#}
 
 	
-}
+#}
 
-units = { #单位部分
-	division= {	 #一个师
+#units = { #单位部分
+	#division= {	 #一个师
 		# division_name = {
 		# 	is_name_ordered = yes #是否按编制的名字序号来
 		# 	name_order = 2 #排第几位
@@ -77,51 +77,51 @@ units = { #单位部分
 		#}
 
 
-		location = 2158 # Melbourne #这个师所在的省份
-		division_template = "研讨会安保部" #这个师用的编制的名字
-		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
-		start_equipment_factor = 1 #初始装备 0-1
-		start_manpower_factor = 1 #初始人力 0-1
+		#location = 2158 # Melbourne #这个师所在的省份
+		#division_template = "研讨会安保部" #这个师用的编制的名字
+		#start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		#start_equipment_factor = 1 #初始装备 0-1
+		#start_manpower_factor = 1 #初始人力 0-1
 
 		# force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } } #如果要强制使用某件装备，按这个来写写法，否则默认解锁的最新型
-	}
-	division= {	
-		location = 2158 # Melbourne
-		division_template = "研讨会安保部"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
+	#}
+	#division= {	
+		#location = 2158 # Melbourne
+		#division_template = "研讨会安保部"
+		#start_experience_factor = 0.2
+		#start_equipment_factor = 1
 
-	}
-	division= {	
-		location = 2158 # Melbourne
-		division_template = "研讨会安保部"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
+	#}
+	#division= {	
+		#location = 2158 # Melbourne
+		#division_template = "研讨会安保部"
+		#start_experience_factor = 0.2
+		#start_equipment_factor = 1
 
-	}
+	#}
 
 	
-}
+#}
 
-air_wings = {  #初始空军中队
-	471 = { #空军中队所在省份
-		small_uav_recon_equipment_1 = {  #装备种类
-			amount = 100 #装备数量
-			owner = "MIL" #所属国
-		}
-	}
-}
+#air_wings = {  #初始空军中队
+	#471 = { #空军中队所在省份
+		#small_uav_recon_equipment_1 = {  #装备种类
+			#amount = 100 #装备数量
+			#owner = "MIL" #所属国
+		#}
+	#}
+#}
 
 
-instant_effect = {#初始生产线
-	add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_1 #装备类型
-			creator = "GER"  #所属国家
-		}
-		requested_factories = 4 #多少个产
-		progress = 0.15 #生产进度
-		efficiency = 100 #效率
+#instant_effect = {#初始生产线
+	#add_equipment_production = {
+		#equipment = {
+			#type = fighter_equipment_1 #装备类型
+			#creator = "GER"  #所属国家
+		#}
+		#requested_factories = 4 #多少个产
+		#progress = 0.15 #生产进度
+		#efficiency = 100 #效率
 		# industrial_manufacturer = mio:GER_messerschmitt_organization #使用什么mio
-	}
-}
+	#}
+#}

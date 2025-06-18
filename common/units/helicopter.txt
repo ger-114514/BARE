@@ -1,12 +1,12 @@
 sub_units = {
 	air_assest_unit = { #!空中突击营
 		abbreviation = "baasu"
-		sprite = infantry
+		sprite = airborne_infantry
 		map_icon_category = infantry
 		
 		priority = 600
 		ai_priority = 200
-		active = yes
+		active = no
 
 		type = {
 			infantry
@@ -80,12 +80,12 @@ sub_units = {
 
 	air_attack_unit = { #!武装直升机营
 		abbreviation = "baasu"
-		sprite = air_attack_infantry
+		sprite = air_attack_battalion
 		map_icon_category = infantry
 		
 		priority = 600
 		ai_priority = 200
-		active = yes
+		active = no
 
 		type = {
 			infantry

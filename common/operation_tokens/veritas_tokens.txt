@@ -6,8 +6,11 @@ token_niyaniya = {
 
 	intel_source = army
 	intel_gain = 25
-	intel_source = civilian
-	intel_gain = 25
+
+	###一个代码块内只能生效一个效果亲爱的
+	##暂时先注释掉###
+	#intel_source = civilian
+	#intel_gain = 25
 }
 
 token_hide = {

@@ -1578,6 +1578,11 @@ technologies = {
 			helicopter_equipment_1
 			attack_helicopter_equipment_1
 		}
+
+		enable_subunits = {
+			air_assest_unit 
+			air_attack_unit
+		}
 		research_cost = 1.5
 		folder = {
 			name = ifv_folder
