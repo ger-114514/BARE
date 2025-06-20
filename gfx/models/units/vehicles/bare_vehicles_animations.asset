@@ -1,0 +1,15 @@
+#####
+## Motor and Mech
+#####
+
+##stryker_unarmed
+##############
+animation = {
+    name = "stryker_unarmed_idle_animation"
+    file = "stryker_unarmed/stryker_unarmed_idle.anim"
+}
+
+animation = {
+    name = "stryker_unarmed_moving_animation"
+    file = "stryker_unarmed/stryker_unarmed_moving.anim"
+}

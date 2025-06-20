@@ -1,7 +1,7 @@
 sub_units = { #
 	ifv_unit = { #!步兵战车(机械化步兵)
 		abbreviation = "ifv"
-		sprite = motorized
+		sprite = mechanized
 		map_icon_category = infantry
 
 		priority = 599
@@ -71,7 +71,7 @@ sub_units = { #
 
 	ifv_artillery_unit = { #!步兵火炮战车(机械化炮兵)
 		abbreviation = "MRT"
-		sprite = artillery
+		sprite = mechanized
 		map_icon_category = infantry
 		priority = 1198
 		ai_priority = 100
@@ -143,7 +143,7 @@ sub_units = { #
 
 	ifv_at_unit = { #!步兵反坦克战车
 		abbreviation = "MAT"
-		sprite = anti_tank
+		sprite = mechanized
 		map_icon_category = infantry
 		priority = 1197
 		ai_priority = 100
@@ -217,7 +217,7 @@ sub_units = { #
 
 	ifv_aa_unit = { #!步兵防空战车
 		abbreviation = "MAA"
-		sprite = infantry
+		sprite = mechanized
 		map_icon_category = infantry
 		priority = 301
 		ai_priority = 10
