@@ -110,6 +110,17 @@ objectTypes = {
 		animation = { id = "bicycle_retreat_2"	type = "infantry_bicycle_retreat_2_animation" }
 	}
 
+	###	TRI Vehicles ###
+	pdxmesh = {
+		name = "TRI_stryker_unarmed_mesh"
+		file = "gfx/models/units/vehicles/stryker_unarmed/stryker_unarmed.mesh"
+
+		animation = { id = "attack"			type = "stryker_unarmed_idle_animation" }
+		animation = { id = "idle"			type = "stryker_unarmed_idle_animation" }
+		animation = { id = "move"			type = "stryker_unarmed_moving_animation" }
+		scale = 0.5
+	}
+
 	##########################
     # TRI Light Armor
     ##########################

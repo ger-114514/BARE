@@ -78,7 +78,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 
 	apc_artillery_unit = { #!轮式火炮战车
 		abbreviation = "MRT"
-		sprite = artillery
+		sprite = motorized
 		map_icon_category = infantry
 		priority = 1198
 		ai_priority = 100
@@ -150,7 +150,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 
 	apc_at_unit = { #!轮式反坦克战车
 		abbreviation = "MAT"
-		sprite = anti_tank
+		sprite = motorized
 		map_icon_category = infantry
 		priority = 1197
 		ai_priority = 100
@@ -224,7 +224,7 @@ sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG##更
 
 	apc_aa_unit = { #!轮式防空战车
 		abbreviation = "MAA"
-		sprite = infantry
+		sprite = motorized
 		map_icon_category = infantry
 		priority = 301
 		ai_priority = 10
