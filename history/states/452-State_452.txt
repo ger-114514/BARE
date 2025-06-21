@@ -8,6 +8,10 @@ state={
 		88 610 662 685 1223 2531 3364 4117 4910 6497 6941 7403 7468 8233 9103 9477 11138 11189 11216 11238 11270 
 	}
 	history = {
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
 		owner = A24
 		add_core_of=A24
 		add_core_of=ABY

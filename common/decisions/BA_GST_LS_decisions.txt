@@ -1005,7 +1005,7 @@ GST_LS_ZZ_category = {
 			activate_mission = GST_ZZ_ARI_ZHYB_TS_JDRW
 		}
 		cancel_effect = {
-			has_global_flag = Eden_treaty_has_been_signed
+			set_global_flag = Eden_treaty_has_been_signed
 		}
 	}
 	GST_YJ = {

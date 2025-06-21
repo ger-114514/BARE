@@ -36,20 +36,7 @@ equipments = {
 			resources_cm = 1
 		}
 	}
-	# cheap trains
-	train_equipment_3 = {
-		year = 2019
-
-		archetype = train_equipment
-		parent = train_equipment_2
-		priority = 20
-
-		build_cost_ic = 50
-		resources = {
-			resources_cm = 1
-		}
-	}
-	# armored trains
+		# armored trains
 	train_equipment_2 = {
 		year = 2019
 
@@ -61,6 +48,19 @@ equipments = {
 		air_attack = 18
 
 		build_cost_ic = 105
+		resources = {
+			resources_cm = 1
+		}
+	}
+	# cheap trains
+	train_equipment_3 = {
+		year = 2019
+
+		archetype = train_equipment
+		parent = train_equipment_2
+		priority = 20
+
+		build_cost_ic = 50
 		resources = {
 			resources_cm = 1
 		}
