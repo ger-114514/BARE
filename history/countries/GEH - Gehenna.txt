@@ -1,6 +1,6 @@
 capital = 305
 oob = "GEH_2019"
-
+set_air_oob = "GEH_2019_air_legacy"
 set_stability = 0.50
 set_war_support = 0.50
 set_research_slots = 3
@@ -69,8 +69,9 @@ set_technology = {
 	recon_drone = 1
 	light_fighting_drone = 1
 	light_attack_drone = 1
-	#fighting_drone = 1
-	#attack_drone = 1
+	fighting_drone = 1
+	attack_drone = 1
+	transport_drone = 1
 
 	#装甲车辆（坦克）
 	light_tank_MK1 = 1

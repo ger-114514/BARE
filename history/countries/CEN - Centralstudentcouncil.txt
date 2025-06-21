@@ -1,7 +1,7 @@
 #首都编号必须是state，自动选择state内部最高胜利点的province作为首都
 capital = 329
 oob = "CEN_2019"
-
+set_air_oob = "CEN_2019_air_legacy"
 ##设置背景##
 set_variable = {
 	has_special_background = 1
@@ -69,8 +69,9 @@ set_technology = {
 	recon_drone = 1
 	light_fighting_drone = 1
 	light_attack_drone = 1
-	#fighting_drone = 1
-	#attack_drone = 1
+	fighting_drone = 1
+	attack_drone = 1
+	transport_drone = 1
 
 	#装甲车辆（坦克）
 	light_tank_MK1 = 1

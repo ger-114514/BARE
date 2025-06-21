@@ -1,7 +1,7 @@
 ﻿capital = 209
 
 oob = "CAP_2019"
-
+set_air_oob = "CAP_2019_air_legacy"
 set_research_slots = 2
 
 # Starting tech
@@ -61,6 +61,8 @@ set_technology = {
 	light_attack_drone = 1
 	fighting_drone = 1
 	attack_drone = 1
+	transport_drone = 1
+
 
 	#装甲车辆（坦克）
 	heavy_tank_MK1 = 1

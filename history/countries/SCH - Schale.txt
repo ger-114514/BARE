@@ -218,7 +218,7 @@ for_each_scope_loop = {
 			add_to_array = { global.BA_college_and_trusteeship_region = var:v }
 		}
 	}
-	
+
 }
 add_to_array = { global.BA_college_and_trusteeship_region = VAL }
 add_to_array = { global.BA_college_and_trusteeship_region = SRT }

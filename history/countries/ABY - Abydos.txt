@@ -1,6 +1,6 @@
 capital = 351
 oob = "standard_templates"
-
+set_air_oob = "ABY_2019_air_legacy"
 set_stability = 0.50
 set_war_support = 0.50
 set_research_slots = 3
@@ -55,8 +55,11 @@ set_technology = {
 
 		#无人机
 		recon_drone = 1
-		light_fighting_drone = 1
-		light_attack_drone = 1
+	        light_fighting_drone = 1
+	        light_attack_drone = 1
+	        fighting_drone = 1
+	        attack_drone = 1
+	        transport_drone = 1
 
 		#装甲车辆（坦克）
 		#medium_tank_MK1 = 1

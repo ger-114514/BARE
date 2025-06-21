@@ -1,6 +1,6 @@
 capital = 337
 oob = "MIL_2020"
-
+set_air_oob = "MIL_2019_air_legacy"
 set_stability = 0.50
 set_war_support = 0.50
 set_research_slots = 3
@@ -77,8 +77,10 @@ set_technology = {
 	transport_drone = 1
 	light_fighting_drone = 1
 	light_fighting_drone_MK2 = 1
+        light_fighting_drone_MK3 = 1
 	light_attack_drone = 1
 	light_attack_drone_MK2 = 1
+        light_attack_drone_MK3 = 1
 	fighting_drone = 1
 	attack_drone = 1
 	fighting_drone_MK2 = 1
