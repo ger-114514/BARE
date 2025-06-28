@@ -11,7 +11,8 @@ technologies = {
 			}
 		}
 		category_army = {
-			attack = 0.02
+			soft_attack  = 0.02
+			hard_attack  = 0.02
 		}
 	}
 

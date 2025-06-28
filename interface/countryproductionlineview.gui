@@ -217,19 +217,21 @@ guiTypes = {
 						spritetype = "GFX_prod_add_button_bg"
 					}
 
-					buttontype = {
-						name = "resources_hic_icon"
-						position = { x=-100 y=2 }
-						spritetype = "GFX_resources_strip"
-						frame = 2
-					}
-					
 					icontype = {
 						name = "resources_hic_icon_icon"
 						position = { x=135 y=75 }
 						spritetype = "GFX_resources_strip"
-						frame = 2
+						frame = 7
 					}
+
+					
+					buttontype = {
+						name = "resources_hic_icon"
+						position = { x=135 y=72 }
+						spritetype = "GFX_resources_strip"
+						frame = 7
+					}
+					
 	
 					instanttextboxtype = {
 						name = "resources_hic_value"

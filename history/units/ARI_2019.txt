@@ -127,17 +127,6 @@ division_template = {
 }
 
 division_template = {
-	name = "伊甸条约组织维和部队" #阿里乌斯终局事件用 - fgvfgfs
-	regiments = { 
-		infantry = { x = 0 y = 0 } #普通步兵
-		infantry = { x = 0 y = 1 } #普通步兵
-		infantry = { x = 0 y = 2 } #普通步兵
-		infantry = { x = 0 y = 3 } #普通步兵
-	}
-	is_locked = yes
-}
-
-division_template = {
 	name = "阿里乌斯突袭特战部队" #古圣堂之战事件刷兵用 - fgvfgfs
 	regiments = { 
 		infantry_sf = { x = 0 y = 0 } #特战步兵

@@ -6,11 +6,13 @@ state={
 	}
 	resources = {
 		resources_fe = 3
+               
 	}
 	history = {
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+			air_base = 4
 		}
 		owner = GEH
 		add_core_of=GEH
