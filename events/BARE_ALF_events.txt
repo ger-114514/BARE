@@ -1,6 +1,28 @@
 add_namespace = ALF
 
 country_event = {
+	id = ALF.99
+	#picture = GFX_common_event_gui_test
+	title = ALF.99.t
+	desc = ALF.99.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.99.a
+		custom_effect_tooltip = ALF_arrives_in_slience_tt
+		hidden_effect = {
+			199 = { transfer_state_to = ALF }
+			ALF = {
+				load_oob = ALF_oob_2019
+			}
+			ALF = {
+			   change_tag_from = A47
+			}
+		}
+	}
+}
+
+country_event = {
 	id = ALF.1
 	#picture = GFX_common_event_gui_test
 	title = ALF.1.t
