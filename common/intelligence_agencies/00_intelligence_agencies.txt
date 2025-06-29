@@ -1,0 +1,190 @@
+# List of names and logos for intelligence agencies
+# available trigger will determine if the logo is in the list of available logos or not
+# names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
+
+intelligence_agency = {
+
+	picture = GFX_bare_intelligence_agency_logo_tri
+	names = { "茶会情报部" }
+	
+	default = { tag = TRI }
+	available = { original_tag = TRI }
+}
+
+intelligence_agency = {
+
+	picture = GFX_bare_intelligence_agency_logo_geh
+	names = { "格黑娜情报部" }
+	
+	default = { tag = GEH }
+	available = { original_tag = GEH}
+}
+
+intelligence_agency = {
+
+	picture = GFX_bare_intelligence_agency_logo_mil
+	names = { "C&C 信息归纳分部" }
+	
+	default = { tag = MIL }
+	available = { original_tag = MIL }
+}
+
+intelligence_agency = {
+
+	picture = GFX_bare_intelligence_agency_logo_val
+	names = { "瓦尔基里公安局刑侦组" }
+	
+	default = { tag = VAL }
+	available = { original_tag = VAL }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_srt
+	names = { "SRT 特殊情报支持分队" }
+	
+	default = { 
+		tag = SRT
+	}
+	available = { 
+		original_tag = SRT
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_cen
+	names = { "联邦防卫部情报分部" }
+	
+	default = { 
+		tag = CEN
+	}
+	available = { 
+		original_tag = CEN
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_ari
+	names = { "阿里乌斯对外情报行动部" }
+	
+	default = { 
+		tag = ARI
+	}
+	available = { 
+		original_tag = ARI
+	}
+}
+
+# intelligence_agency = {
+	
+# 	picture = GFX_bare_intelligence_agency_logo_alr
+# 	names = { "阿里乌斯对外交流部" }
+	
+# 	default = { tag = ALR}
+# 	available = { original_tag = ALR }
+# }
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_aby
+	names = { "阿拜多斯自警团预警分队" }
+	
+	default = { tag = ABY }
+	available = { original_tag = ABY }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_hva
+	names = { "鬼庭组" }
+	
+	default = { tag = HVA }
+	available = { original_tag = HVA }
+}
+
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_sha
+	names = { "玄龙卫" }
+	
+	default = { tag = SHA }
+	available = { original_tag = SHA }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_rwt
+	names = { "学生内务委员会" }
+	
+	default = { tag = RWT }
+	available = { original_tag = RWT }
+}
+
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_cae
+	names = { "凯撒情报及反情报部" }
+	
+	default = { 
+		or = {
+			tag = CAE
+			tag = CAP
+			tag = CAH
+			tag = CAO
+			tag = CAB
+		} 
+	}
+	available = { 
+		or = {
+			original_tag = CAE 
+			original_tag = CAP 
+			original_tag = CAH 
+			original_tag = CAO 
+			original_tag = CAB 
+		}
+		
+	}
+}
+
+
+
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_generic_1
+	names = { "无形之手" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_generic_2
+	names = { "求索网络" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_generic_3
+	names = { "四五一情报局" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_bare_intelligence_agency_logo_generic_4
+	names = { "软呢帽情报局" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
