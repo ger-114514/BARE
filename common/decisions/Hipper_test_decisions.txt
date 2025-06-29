@@ -48,6 +48,115 @@ Hipper_test_decisions_categories = {
 		    } 
 		}
 	}
+
+	####发射超事件的测试器####
+	Fire_super_event_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_fire_super_event = yes
+		}
+	}
+
+	Fire_super_type1_event1_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_1_effect_1 = yes
+		}
+	}
+
+	Fire_super_type2_event1_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_1 = yes
+		}
+	}
+
+	Fire_super_type2_event2_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_2 = yes
+		}
+	}
+
+	Fire_super_type2_event3_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_3 = yes
+		}
+	}
+
+	Fire_super_type2_event4_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_4 = yes
+		}
+	}
+
+	Fire_super_type2_event5_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_5 = yes
+		}
+	}
+
+	Fire_super_type2_event6_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_6 = yes
+		}
+	}
+
+	Fire_super_type2_event7_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_7 = yes
+		}
+	}
 } 
 
 CEN_Operation_Uranus_categories = {

@@ -1,0 +1,39 @@
+add_namespace = ALF
+
+country_event = {
+	id = ALF.1
+	#picture = GFX_common_event_gui_test
+	title = ALF.1.t
+	desc = ALF.1.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.1.a
+		add_political_power = 5
+		custom_effect_tooltip = rat_is_food_tt
+	}
+}
+
+country_event = {
+	id = ALF.2
+	#picture = GFX_common_event_gui_test
+	title = ALF.2.t
+	desc = ALF.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.2.a
+	}
+}
+
+country_event = {
+	id = ALF.3
+	#picture = GFX_common_event_gui_test
+	title = ALF.3.t
+	desc = ALF.3.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.3.a
+	}
+}

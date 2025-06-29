@@ -121,6 +121,16 @@ objectTypes = {
 		scale = 0.5
 	}
 
+	pdxmesh = {
+		name = "TRI_bradley_ifv_mesh"
+		file = "gfx/models/units/vehicles/bradley_ifv/bradley_ifv.mesh"
+
+		animation = { id = "attack"			type = "bradley_attacking_animation" }
+		animation = { id = "idle"			type = "bradley_idle_animation" }
+		animation = { id = "move"			type = "bradley_moving_animation" }
+		#scale = 0.5
+	}
+
 	##########################
     # TRI Light Armor
     ##########################
