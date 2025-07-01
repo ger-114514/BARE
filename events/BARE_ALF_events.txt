@@ -6,7 +6,7 @@ country_event = {
 	title = ALF.99.t
 	desc = ALF.99.desc
 	is_triggered_only = yes
-
+	
 	option = {
 		name = ALF.99.a
 		custom_effect_tooltip = ALF_arrives_in_slience_tt
@@ -18,7 +18,9 @@ country_event = {
 			ALF = {
 			   change_tag_from = A47
 			}
+			goto_state = 199
 		}
+		ALF_play_scoped_main_theme = yes
 	}
 }
 
@@ -57,5 +59,80 @@ country_event = {
 
 	option = {
 		name = ALF.3.a
+	}
+}
+
+country_event = {
+	id = ALF.4
+	#picture = GFX_common_event_gui_test
+	title = ALF.4.t
+	desc = ALF.4.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.4.a
+	}
+}
+
+country_event = {
+	id = ALF.5
+	#picture = GFX_common_event_gui_test
+	title = ALF.5.t
+	desc = ALF.5.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.5.a
+	}
+
+	option = {
+		name = ALF.5.b
+	}
+}
+
+country_event = {
+	id = ALF.6
+	#picture = GFX_common_event_gui_test
+	title = ALF.6.t
+	desc = ALF.6.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.6.a
+		#custom_effect_tooltip = ALF_accept_without_price_tt
+	}
+
+	option = {
+		name = ALF.6.b
+		#custom_effect_tooltip = ALF_accept_but_price_tt
+	}
+}
+
+country_event = {
+	id = ALF.7
+	#picture = GFX_common_event_gui_test
+	title = ALF.7.t
+	desc = ALF.7.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.7.a
+		hidden_effect = {
+			load_oob = "ALF_oob_commandos"
+		}
+	}
+
+	option = {
+		name = ALF.7.b
+		hidden_effect = {
+			load_oob = "ALF_oob_commandos"
+		}
+	}
+
+	option = {
+		name = ALF.7.c
+		hidden_effect = {
+			load_oob = "ALF_oob_commandos"
+		}
 	}
 }

@@ -25,4 +25,114 @@ spriteTypes = {
         name = GFX_BARE_Portrait_ALF_the_leader_no_mask
         texturefile = "gfx/leaders/ALF/BARE_Portrait_ALF_the_leader_no_mask.dds"
     }
+
+    ########################
+    ##ALF LEBERATION FRONT##
+	########################
+    
+	##PORTRAIT
+    spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Washino_Yuei
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Washino_Yuei.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Yoshizawa_Yayoi
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Yoshizawa_Yayoi.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Saegusa_Yuwa
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Saegusa_Yuwa.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Shibasaki_Ichika
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Shibasaki_Ichika.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Maeoka_Yoshimi
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Maeoka_Yoshimi.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Shigeki_Niki
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Shigeki_Niki.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Henmi_Ayu
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Henmi_Ayu.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Morishita_Kaho
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Morishita_Kaho.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Norimatsu_Miru
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Norimatsu_Miru.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Toueshi_Dzuru
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Toueshi_Dzuru.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Kabahara_Miyoko
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Kabahara_Miyoko.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Nadao_Terumi
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Nadao_Terumi.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Kometani_Touna
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Kometani_Touna.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Araki_Mika
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Araki_Mika.dds"
+	}
+
+	##RANDOM
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Generic_land_1
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Generic_land_1.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Generic_land_2
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Generic_land_2.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Generic_land_3
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Generic_land_3.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Generic_land_4
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Generic_land_4.dds"
+	}
+
+	spriteType = {
+		name = GFX_BAREXP_Portrait_ALF_Generic_land_5
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Generic_land_5.dds"
+	}
+
+    ########################
+    ##FSC Free Sky Company ##
+	########################
+    spriteType = {
+		name = GFX_BARE_Portrait_FSC_Sorami_Nagitsuba
+		texturefile = "gfx/leaders/FSC/BARE_Portrait_FSC_Sorami_Nagitsuba.dds"
+	}
+
 }
