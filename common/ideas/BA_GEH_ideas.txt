@@ -1076,6 +1076,71 @@ ideas = {
         }
 
 
+                GEH_dualHeaded_balance_hina_2 = {
+            name = GEH_dualHeaded_balance_hina_2
+            picture = unknown
 
+            modifier = {
+                political_power_factor = -0.1
+                stability_weekly= -0.001
+                GEH_dualHeaded_Hina_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_hina_1 = {
+            name = GEH_dualHeaded_balance_hina_1
+            picture = unknown
+
+            modifier = {
+                political_power_factor = -0.05
+                GEH_dualHeaded_Hina_factor = 0.025
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_normal = {
+            name = GEH_dualHeaded_balance_normal
+            picture = unknown
+
+            modifier = {
+                stability_weekly = 0.001
+                industrial_capacity_factory = 0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_makoto_1 = {
+            name = GEH_dualHeaded_balance_makoto_1
+            picture = unknown
+
+            modifier = {
+                political_power_factor = 0.1
+                GEH_dualHeaded_Makoto_factor = 0.025
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_makoto_2 = {
+            name = GEH_dualHeaded_balance_makoto_2
+            picture = unknown
+
+            modifier = {
+                political_power_factor = 0.15
+                stability_weekly = -0.001
+                GEH_dualHeaded_Makoto_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+
+    }
+
+    hidden_ideas = {
     }
 }

@@ -389,6 +389,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
 	}
 
+		#伊甸条约阶段0 1 2 3 5图标
+	SpriteType = {
+		name = "GFX_idea_eden_treaty_step_normal_modifier"
+		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
+	}
+
+
 	#伊甸条约阶段4图标
 	SpriteType = {
 		name = "GFX_eden_treaty_step_bad_modifier"

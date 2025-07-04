@@ -117,3 +117,18 @@ GST_LS_XC_DEBUFF_category = {
 # 	}
 # 	priority = 114513
 # }
+
+
+GEH_dualHeaded = {
+
+	icon = generic_research
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = GEH
+	}
+	scripted_gui = BARE_GEH_DualHeaded_SG
+	priority = 114
+}
+

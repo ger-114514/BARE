@@ -1,4 +1,14 @@
 on_actions = {
+	on_startup = {
+		effect = {
+			GEH = {
+				set_variable = {
+					GEH_dualHeaded_Influence_Factor = 0.45
+				}
+				GEH_dualHeaded_Influence_Factor_Change = yes
+			}
+		}
+	}
 	on_monthly_GEH = {
 		effect = {
 			if = {
@@ -30,6 +40,15 @@ on_actions = {
 				set_variable = { GEH_production_efficiency_production_speed_buildings_factor = 0.5 }
 				set_variable = { GEH_production_efficiency_industrial_capacity_factory = 0.15 }
 			}
+		}
+	}
+
+	on_weekly_GEH = {
+		effect = {
+		}
+	}
+	on_daily_GEH = {
+		effect = {
 		}
 	}
 

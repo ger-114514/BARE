@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+ GEH_dualHeaded:0"双头政治"
+ GEH_dualHeaded_desc:0"空崎日奈——羽沼真琴\n      [?zhanbi_two|%]:[?GEH_dualHeaded_Influence_Factor|%]\n            [?hina_yingxiang]——[?makoto_yingxiang]"
+ GEH_dualHeaded_balance_hina_2:0"政治力量占比-日奈优势"
+ GEH_dualHeaded_balance_hina_1:0"政治力量占比-日奈微弱优势"
+ GEH_dualHeaded_balance_normal:0"政治力量占比-平衡"
+ GEH_dualHeaded_balance_makoto_1:0"政治力量占比-真琴微弱优势"
+ GEH_dualHeaded_balance_makoto_2:0"政治力量占比-真琴优势"
+
+
+GEH_dualHeaded_Hina_factor: "风纪委员会影响力"
+GEH_dualHeaded_Makoto_factor: "万魔殿影响力"
+
+
+BARE_GEH_dualHeaded_influence_hina_Text: "[?GEH_dualHeaded_Influence_Factor_Hina_Text|%]"
+BARE_GEH_dualHeaded_influence_makoto_Text: "[?GEH_dualHeaded_Influence_Factor_Makoto_Text|%]"
+BARE_GEH_dualHeaded_influence_Text: "§i当前，双方影响力不分伯仲§!"

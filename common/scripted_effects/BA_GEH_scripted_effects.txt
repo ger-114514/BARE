@@ -21,3 +21,114 @@ GEH_degrade_debuff_of_troop = {
 		}
 	}
 }
+
+
+GEH_dualHeaded_Influence_Factor_Change = {
+	clamp_variable = {
+		var = GEH_dualHeaded_Influence_Factor
+		min = 0
+		max = 1
+	}
+
+	set_variable = {
+		GEH_dualHeaded_Influence_Factor_Hina_Text = GEH_dualHeaded_Influence_Factor
+	}
+	set_variable = {
+		GEH_dualHeaded_Influence_Factor_Makoto_Text = 1
+	}
+	subtract_from_variable = {
+		GEH_dualHeaded_Influence_Factor_Makoto_Text = GEH_dualHeaded_Influence_Factor
+	}
+	set_variable = {
+		GEH_dualHeaded_Influence_Factor_FRAME = GEH_dualHeaded_Influence_Factor
+	}
+	multiply_variable = {
+		GEH_dualHeaded_Influence_Factor_FRAME = 1000
+	}
+	
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.2
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		add_ideas = GEH_dualHeaded_balance_hina_2
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.2
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.4
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_hina_1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.4
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.6
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_normal
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.6
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.8
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_makoto_1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.8
+				compare = greater_than_or_equals
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_makoto_2
+	}
+}
