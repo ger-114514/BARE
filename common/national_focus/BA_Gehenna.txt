@@ -12,12 +12,16 @@ focus_tree = {
     focus = {
         id = GEH_The_First_Eden_Treaty
         icon = GFX_goal_GEH_building_problems
+
+        cancelable = no
        
-        cost = 5
+        cost = 10
         x = 40
         y = 0
         search_filters = { FOCUS_FILTER_ECO }
-        completion_reward = {}
+        completion_reward = {
+            add_political_power = 50
+        }
 
     }
 #政治线
@@ -33,7 +37,11 @@ focus_tree = {
         relative_position_id = GEH_The_First_Eden_Treaty
 
         prerequisite = {  focus = GEH_The_First_Eden_Treaty }
-        completion_reward = {}
+        completion_reward = {
+            add_stability = 0.06
+            country_event =  GEH_events.9
+            custom_effect_tooltip = GEH_Looking_back_inside_tooltip
+        }
     }
 
     #平稳前行
@@ -49,7 +57,17 @@ focus_tree = {
         prerequisite = {  focus = GEH_Looking_back_inside }
         mutually_exclusive = { focus = GEH_Wehrmacht_First }
         mutually_exclusive = { focus = GEH_Discipline_Committee }
-        completion_reward = {}
+        completion_reward = {
+            add_political_power = 75
+
+
+            swap_ideas = {
+                remove_idea = GEH_severe_inside_contradiction
+                add_idea = GEH_mild_inside_contradiction
+            }
+            unlock_decision_category_tooltip = GEH_dualHeaded
+            custom_effect_tooltip = GEH_Steady_progress_tootip
+        }
     }
 
     #风纪委员会的展望
@@ -62,11 +80,15 @@ focus_tree = {
         y = 2
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_The_First_Eden_Treaty
+        
 
         prerequisite = { focus = GEH_Looking_back_inside }
         mutually_exclusive = { focus = GEH_Steady_progress }
         mutually_exclusive = { focus = GEH_Wehrmacht_First }
-        completion_reward = {}
+        completion_reward = {
+            add_stability = 0.06
+            custom_effect_tooltip = GEH_Discipline_Committee_tooltip
+        }
     }
     
     #万魔殿的传统
@@ -82,8 +104,11 @@ focus_tree = {
 
         prerequisite = { focus = GEH_Looking_back_inside }
         mutually_exclusive = { focus = GEH_Steady_progress }
-         mutually_exclusive = { focus = GEH_Discipline_Committee }
-         completion_reward = {}
+        mutually_exclusive = { focus = GEH_Discipline_Committee }
+        completion_reward = {
+           add_war_support = 0.05
+           custom_effect_tooltip = GEH_Wehrmacht_First_tooltip
+        }
     }
 
 
@@ -97,14 +122,10 @@ focus_tree = {
         x = 0
         y = 1
         prerequisite = {  focus = GEH_Steady_progress }
-        mutually_exclusive = { focus = GEH_add_for_hina }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            swap_ideas = {
-                remove_idea = GEH_severe_inside_contradiction
-                add_idea = GEH_mild_inside_contradiction
-            }
+            
         }
         ai_will_do = {
             factor = 3
@@ -127,12 +148,39 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            add_power_balance_value = {
-				id = GEH_bp_between_chaos_and_order
-				value = 0.1
-			}
-            add_stability = -0.1
-            add_war_support = 0.15
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.05
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
+
+
+            if = {
+                limit = {
+                    has_power_balance = {
+                        id = GEH_bp_between_chaos_and_order_balance_new
+                    }
+                }
+                add_power_balance_value = {
+                    id = GEH_bp_between_chaos_and_order_balance_new
+                    value = 0.1
+                }
+            }else = {
+                add_power_balance_value = {
+                    id = GEH_bp_between_chaos_and_order
+                    value = 0.1
+                }
+            }
+
+           
+            add_stability = 0.05
+            add_political_power = 25
             unlock_decision_tooltip = GEH_bop_use_money_for_production
             unlock_decision_tooltip = GEH_bop_recruit_temperatory
         }
@@ -154,12 +202,24 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.06
+                }
+                subtract_from_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Left_Tooltip
+
+            add_stability = 0.06
+           
             add_power_balance_value = {
 				id = GEH_bp_between_chaos_and_order
 				value = -0.1
 			}
-            add_stability = 0.15
-            add_war_support = -0.1
             unlock_decision_tooltip = GEH_bop_use_money_for_investment
             unlock_decision_tooltip = GEH_bop_ensure_stability
         }
@@ -184,7 +244,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            add_political_power = 100
+            add_political_power = 200
             unlock_decision_tooltip = GEH_bop_great_feast
             unlock_decision_tooltip = GEH_bop_mediate_conflicts
         }
@@ -220,6 +280,46 @@ focus_tree = {
 
             add_dynamic_modifier = {
                 modifier = GEH_gehenna_daily_life
+            }
+            
+          
+
+            # if = {
+            #     limit = {
+            #         power_balance_value = {
+            #             id = GEH_bp_between_chaos_and_order
+            #             value > 0
+            #         }
+            #     }
+
+            #     set_temp_variable = {
+            #         power_balance_value_change_temp = power_balance_value
+            #     }
+            # }else = {
+            #     set_temp_variable = {
+            #         power_balance_value_change_temp = 0
+            #     }
+            #     subtract_from_temp_variable = {
+            #         power_balance_value_change_temp = power_balance_value
+            #     }
+            # }
+
+            # meta_effect = {
+            #     value = "[?power_balance_value_change_temp]"
+            #     text = {
+            #         set_power_balance = {
+            #             id = GEH_bp_between_chaos_and_order_balance_new
+            #             left_side = GEH_bp_order
+            #             right_side = GEH_bp_chaos
+            #             set_value = [value]
+            #         }
+            #     }
+            # }
+            set_power_balance = {
+                id = GEH_bp_between_chaos_and_order
+                left_side = GEH_bp_order_balance_new
+                right_side = GEH_bp_chaos_balance_new          
+
             }
         }
         ai_will_do = {
@@ -3022,6 +3122,10 @@ focus_tree = {
     focus = {
         id = GEH_Ministry_of_Foreign_Affairs_of_Gehenna
         icon = GFX_goal_GEH_building_problems
+
+        allow_branch = {
+            always = no
+        }
        
         cost = 5
         x = 68
@@ -3080,6 +3184,11 @@ focus_tree = {
         relative_position_id = GEH_Ministry_of_Foreign_Affairs_of_Gehenna
         x = 2
         y = 0
+
+        allow_branch = {
+            always = no
+        }
+
         search_filters = { FOCUS_FILTER_ECO }
         completion_reward = {}
      
@@ -3129,6 +3238,10 @@ focus_tree = {
     focus = {
         id = GEH_sports_meet_coming
         icon = GFX_goal_GEH_building_problems
+
+        allow_branch = {
+            always = no
+        }
        
         cost = 5
         x = 72

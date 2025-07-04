@@ -127,6 +127,7 @@ GEH_dualHeaded = {
 
 	visible = {
 		original_tag = GEH
+		has_completed_focus = GEH_Steady_progress
 	}
 	scripted_gui = BARE_GEH_DualHeaded_SG
 	priority = 114

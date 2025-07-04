@@ -1,12 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			GEH = {
-				set_variable = {
-					GEH_dualHeaded_Influence_Factor = 0.45
-				}
-				GEH_dualHeaded_Influence_Factor_Change = yes
-			}
 		}
 	}
 	on_monthly_GEH = {
@@ -45,6 +39,13 @@ on_actions = {
 
 	on_weekly_GEH = {
 		effect = {
+			add_to_variable = {
+				GEH_dualHeaded_Influence_Factor = modifier@GEH_dualHeaded_Makoto_Weekly_factor
+			}
+			subtract_from_variable = {
+				GEH_dualHeaded_Influence_Factor = modifier@GEH_dualHeaded_Hina_Weekly_factor
+			}
+			GEH_dualHeaded_Influence_Factor_Change = yes
 		}
 	}
 	on_daily_GEH = {

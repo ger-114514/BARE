@@ -119,6 +119,7 @@ set_technology = {
 add_ideas = {
 	BARE_Combat_Readiness_Start_Idea #计算开局人力用
 	GEH_factory_management_in_chaos #混乱的工厂
+	GEH_severe_inside_contradiction
 	BARE_Global_College_Autonomous_Region
 }
 
@@ -196,3 +197,13 @@ GEH_iori = {
 GEH_chinatsu = {
 	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN = THIS}
 }
+
+
+set_power_balance = {
+	id = GEH_bp_between_chaos_and_order
+	left_side = GEH_bp_order
+	right_side = GEH_bp_chaos
+	set_value = 0
+}
+
+

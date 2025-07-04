@@ -8,10 +8,21 @@
  GEH_dualHeaded_balance_makoto_2:0"政治力量占比-真琴优势"
 
 
-GEH_dualHeaded_Hina_factor: "风纪委员会影响力"
-GEH_dualHeaded_Makoto_factor: "万魔殿影响力"
+GEH_dualHeaded_Hina_Weekly_factor: "每周风纪委员会影响力变化："
+GEH_dualHeaded_Makoto_Weekly_factor: "每周万魔殿影响力变化："
 
 
 BARE_GEH_dualHeaded_influence_hina_Text: "[?GEH_dualHeaded_Influence_Factor_Hina_Text|%]"
 BARE_GEH_dualHeaded_influence_makoto_Text: "[?GEH_dualHeaded_Influence_Factor_Makoto_Text|%]"
 BARE_GEH_dualHeaded_influence_Text: "§i当前，双方影响力不分伯仲§!"
+
+
+
+
+GEH_Looking_back_inside_tooltip: "我们将决定接下来的路线，以决定学园的未来，然而，我们无法知道未来会发生什么。"
+GEH_Discipline_Committee_tooltip: "我们将全力支持日奈和她率领的风纪委员会，并致力于让风纪委员会占据格黑娜学园的主导地位，然而，真琴和她领导的万魔殿不会坐视不理，并且，承担更多的责任势必会对日奈带来更多的压力。\n开发中。敬请期待。"
+
+GEH_Wehrmacht_First_tooltip: "我们将全力支持真琴和她率领的万魔殿，并致力于让万魔殿占据格黑娜学园的主导地位，虽然万魔殿可以掌控更多的资源，但真琴至少现在并不是英明的领导人，而且亚子等风纪委员会的成员也会采取行动。\n开发中。敬请期待。"
+GEH_Steady_progress_tootip: "我们将尝试维持风纪委员会和万魔殿之间的平衡，这显然没办法彻底解决她们之间的矛盾，但这样做可以让我们同时调用双方的资源，也能让我们维持格黑娜本来的样子。"
+GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip:"双头政治平衡条将向真琴方向偏移[?BARE_duelHead_Chance_temp|%]"
+GEH_dualHeaded_Influence_Factor_Change_Text_Left_Tooltip:"双头政治平衡条将向日奈方向偏移[?BARE_duelHead_Chance_temp|%]"
