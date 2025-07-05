@@ -1,0 +1,38 @@
+scripted_gui = {
+    GEH_societies_dec_window = {
+        context_type = decision_category
+        window_name = "GEH_societies_dec_gui"
+        properties = {
+            GEH_discipline_committee_ability_progress = {
+                frame = GEH_discipline_committee_ability
+            }
+            GEH_discipline_committee_repression_progress = {
+                frame = GEH_discipline_committee_repression
+            }
+            GEH_hot_spring_activity_progress = {
+                frame = GEH_hot_spring_activity
+            }
+            GEH_hot_spring_destructive_progress = {
+                frame = GEH_hot_spring_destructive
+            }
+            GEH_food_service_activity_progress = {
+                frame = GEH_food_service_activity
+            }
+            GEH_food_service_efficiency_progress = {
+                frame = GEH_food_service_efficiency
+            }
+            GEH_gourmet_research_activity_progress = {
+                frame = GEH_gourmet_research_activity
+            }
+            GEH_gourmet_research_destructive_progress = {
+                frame = GEH_gourmet_research_destructive
+            }
+            GEH_comb68_activity_progress = {
+                frame = GEH_comb68_activity
+            }
+            GEH_com68_destructive_progress = {
+                frame = GEH_com68_destructive
+            }
+        }
+    }
+}

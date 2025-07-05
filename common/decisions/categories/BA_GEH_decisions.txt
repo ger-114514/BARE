@@ -133,3 +133,16 @@ GEH_dualHeaded = {
 	priority = 114
 }
 
+GEH_societies_dec_category = {
+	visible_when_empty = yes
+    scripted_gui = GEH_societies_dec_window
+	allowed = {
+		original_tag = GEH
+	}
+	visible = {
+		always = yes
+	}
+	priority = 1100
+}
+
+

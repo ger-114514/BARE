@@ -1,0 +1,20 @@
+leader_traits = {
+
+	GEH_fished = { #摸鱼
+		type = land
+		trait_type = status_trait
+		new_commander_weight = {
+			base = 0
+		}
+		modifier = {
+			army_attack_factor = -0.5
+			custom_modifier_tooltip = GEH_fished_tooltip
+		}
+		on_remove = {
+			add_attack_skill = 1
+			add_defense_skill = 1
+			add_planning_skill = 1
+			add_logistics_skill = 1
+		}
+    }
+}

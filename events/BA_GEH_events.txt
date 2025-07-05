@@ -8,12 +8,24 @@ country_event = {
     desc = GEH_events.1.d
     picture = GFX_GEH_events_pic
 
-	is_triggered_only = yes
+	# is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEH
+		has_completed_focus = GEH_Strengthening_reputation
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
 
     option = {
 		name = GEH_events.1.a
         country_event = {
             id = GEH_events.2
+			hours = 8
+			random_hours = 16
         }
 		ai_chance = {
 			factor = 100
@@ -24,6 +36,8 @@ country_event = {
 		name = GEH_events.1.b
         country_event = {
             id = GEH_events.6
+			hours = 8
+			random_hours = 16
         }
 		ai_chance = {
 			factor = 300
@@ -45,6 +59,8 @@ country_event = {
 		name = GEH_events.2.a
         country_event = {
             id = GEH_events.3
+			hours = 8
+			random_hours = 16
         }
 		ai_chance = {
 			factor = 100
@@ -78,6 +94,8 @@ country_event = {
 		name = GEH_events.3.a
         country_event = {
             id = GEH_events.4
+			hours = 8
+			random_hours = 16
         }
 		ai_chance = {
 			factor = 100
@@ -101,8 +119,16 @@ country_event = {
 			id = GEH_bp_between_chaos_and_order
 			value = 0.1
 		}
+		305 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+
 		custom_effect_tooltip = GEH_gehenna_daily_life_change_tt_1
-		#TODO：万魔殿地区基础设施收到1.00伤害
+
+
 		hidden_effect = {
 			add_to_variable = {
 				var = GEH_gehenna_daily_life_army_org_factor_factor
@@ -137,6 +163,47 @@ country_event = {
     option = {
 		name = GEH_events.6.a
 		#TODO：伊吕波获得“摸鱼”特质持续90d，效果：陆军组织度-50%，陆军进攻-50%，结束后伊吕波所有属性+1
+
+		GEH_iroha = {
+			add_timed_unit_leader_trait = {
+				trait = GEH_fished
+				days = 90
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+
+#伊吕波的抉择
+country_event = {
+    id = GEH_events.5
+    title = GEH_events.5.t
+    desc = GEH_events.5.d
+    picture = GFX_GEH_events_pic
+
+	# is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GEH
+		has_completed_focus = GEH_Strengthening_reputation
+	}
+
+	mean_time_to_happen = {
+		days = 6
+	}
+
+    option = {
+		name = GEH_events.5.a
+        country_event = {
+            id = GEH_events.7
+			hours = 8
+			random_hours = 16
+        }
 		ai_chance = {
 			factor = 100
 		}

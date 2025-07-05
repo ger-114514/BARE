@@ -340,7 +340,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            custom_effect_tooltip = GEH_Strengthening_reputation_Tooltip
         }
         ai_will_do = {
             factor = 3
@@ -359,7 +359,40 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.05
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
+            add_war_support = 0.05
+            add_to_variable = {
+                GEH_hot_spring_activity = 5
+            }
+            add_to_variable = {
+                GEH_hot_spring_destructive = -5
+            }
+
+            add_to_variable = {
+                GEH_gourmet_research_activity = 5
+            }
+            add_to_variable = {
+                GEH_gourmet_research_destructive = -5
+            }
+
+            add_to_variable = {
+                GEH_food_service_efficiency = 5
+            }
+
+            add_to_variable = {
+                GEH_discipline_committee_ability = -3
+            }
+            custom_effect_tooltip = GEH_Chaotic_freedom_tooltip
         }
         ai_will_do = {
             factor = 3
@@ -377,6 +410,43 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
+            add_political_power = -25
+            add_stability = -0.05
+            add_war_support = 0.1
+
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.05
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
+
+             add_to_variable = {
+                GEH_hot_spring_activity = 10
+            }
+            add_to_variable = {
+                GEH_hot_spring_destructive = -10
+            }
+
+            add_to_variable = {
+                GEH_gourmet_research_activity = 10
+            }
+            add_to_variable = {
+                GEH_gourmet_research_destructive = -10
+            }
+
+            add_to_variable = {
+                GEH_food_service_efficiency = 10
+            }
+
+            add_to_variable = {
+                GEH_discipline_committee_ability = 5
+            }
+            custom_effect_tooltip = GEH_Securing_power_tooltip
             
         }
         
@@ -393,7 +463,21 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            add_stability = 0.05
+            add_political_power = 50
+
+
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.07
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
         }
         ai_will_do = {
             factor = 3
@@ -411,7 +495,55 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+
+            add_political_power = 50
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.1
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_Glorious_Defender_tooltip
+
+           hidden_effect = {
+                division_template = {
+                    name = "万魔殿近卫连"
+                    regiments = {
+                        ifv_unit = { x = 0 y = 0 }
+                        ifv_unit = { x = 0 y = 1 }
+                        ifv_unit = { x = 0 y = 2 }
+                        ifv_unit = { x = 1 y = 0 }
+                        ifv_unit = { x = 1 y = 1 }
+                        ifv_unit = { x = 1 y = 2 }
+                        ifv_unit = { x = 2 y = 0 }
+                        ifv_unit = { x = 2 y = 1 }
+                        ifv_unit = { x = 2 y = 2 }
+                        ifv_artillery_unit = { x = 3 y = 0 }
+                        ifv_artillery_unit = { x = 3 y = 1 }
+                        ifv_artillery_unit = { x = 3 y = 2 }
+                        heavy_armor = { x = 4 y = 0}
+                        heavy_armor = { x = 4 y = 1}
+                        
+                    }
+                    support = {
+                        engineer = {x = 0  y = 0}
+                        ifv_recon = {x = 0  y = 1}
+                    }
+                }
+                capital_scope = {
+                    create_unit = {
+                        division = "name = \"万魔殿近卫连\" division_template = \"万魔殿近卫连\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1 "
+                        count = 2
+                        owner = ROOT
+                        allow_spawning_on_enemy_provs = no
+                    }
+                }
+           }
+
         }
         ai_will_do = {
             factor = 3
@@ -431,7 +563,8 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            army_experience = 66
+            air_experience = 66
         }
         ai_will_do = {
             factor = 3
@@ -449,7 +582,17 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.07
+                }
+                subtract_from_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Left_Tooltip
+            add_stability = 0.12
         }
         ai_will_do = {
             factor = 3
@@ -467,7 +610,15 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            add_power_balance_value = {
+                id = GEH_bp_between_chaos_and_order
+                value = -0.06
+            }
+
+            add_timed_idea = {
+                idea = GEH_Clear_obligations_Idea
+                days = 365
+            }
         }
         ai_will_do = {
             factor = 3
