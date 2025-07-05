@@ -6,26 +6,14 @@ country_event = {
     id = GEH_events.1
     title = GEH_events.1.t
     desc = GEH_events.1.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
-	# is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		original_tag = GEH
-		has_completed_focus = GEH_Strengthening_reputation
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
+	is_triggered_only = yes
 
     option = {
 		name = GEH_events.1.a
         country_event = {
             id = GEH_events.2
-			hours = 8
-			random_hours = 16
         }
 		ai_chance = {
 			factor = 100
@@ -36,8 +24,6 @@ country_event = {
 		name = GEH_events.1.b
         country_event = {
             id = GEH_events.6
-			hours = 8
-			random_hours = 16
         }
 		ai_chance = {
 			factor = 300
@@ -51,7 +37,7 @@ country_event = {
     id = GEH_events.2
     title = GEH_events.2.t
     desc = GEH_events.2.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
@@ -59,8 +45,6 @@ country_event = {
 		name = GEH_events.2.a
         country_event = {
             id = GEH_events.3
-			hours = 8
-			random_hours = 16
         }
 		ai_chance = {
 			factor = 100
@@ -86,7 +70,7 @@ country_event = {
     id = GEH_events.3
     title = GEH_events.3.t
     desc = GEH_events.3.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
@@ -94,8 +78,6 @@ country_event = {
 		name = GEH_events.3.a
         country_event = {
             id = GEH_events.4
-			hours = 8
-			random_hours = 16
         }
 		ai_chance = {
 			factor = 100
@@ -109,7 +91,7 @@ country_event = {
     id = GEH_events.4
     title = GEH_events.4.t
     desc = GEH_events.4.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_daily_news_event_2
 
 	is_triggered_only = yes
 
@@ -119,16 +101,8 @@ country_event = {
 			id = GEH_bp_between_chaos_and_order
 			value = 0.1
 		}
-		305 = {
-			damage_building = {
-				type = infrastructure
-				damage = 1
-			}
-		}
-
 		custom_effect_tooltip = GEH_gehenna_daily_life_change_tt_1
-
-
+		#TODO：万魔殿地区基础设施收到1.00伤害
 		hidden_effect = {
 			add_to_variable = {
 				var = GEH_gehenna_daily_life_army_org_factor_factor
@@ -156,54 +130,13 @@ country_event = {
     id = GEH_events.6
     title = GEH_events.6.t
     desc = GEH_events.6.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
     option = {
 		name = GEH_events.6.a
 		#TODO：伊吕波获得“摸鱼”特质持续90d，效果：陆军组织度-50%，陆军进攻-50%，结束后伊吕波所有属性+1
-
-		GEH_iroha = {
-			add_timed_unit_leader_trait = {
-				trait = GEH_fished
-				days = 90
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-    }
-}
-
-
-
-#伊吕波的抉择
-country_event = {
-    id = GEH_events.5
-    title = GEH_events.5.t
-    desc = GEH_events.5.d
-    picture = GFX_GEH_events_pic
-
-	# is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		original_tag = GEH
-		has_completed_focus = GEH_Strengthening_reputation
-	}
-
-	mean_time_to_happen = {
-		days = 6
-	}
-
-    option = {
-		name = GEH_events.5.a
-        country_event = {
-            id = GEH_events.7
-			hours = 8
-			random_hours = 16
-        }
 		ai_chance = {
 			factor = 100
 		}
@@ -216,7 +149,7 @@ country_event = {
     id = GEH_events.7
     title = GEH_events.7.t
     desc = GEH_events.7.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_daily_news_event_2
 
 	is_triggered_only = yes
 
@@ -261,7 +194,7 @@ country_event = {
     id = GEH_events.8
     title = GEH_events.8.t
     desc = GEH_events.8.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_daily_news_event_2
 
 	is_triggered_only = yes
 
@@ -286,32 +219,13 @@ country_event = {
 }
 
 
-
-#激烈的内部斗争
-country_event = {
-    id = GEH_events.9
-    title = GEH_events.9.t
-    desc = GEH_events.9.d
-    picture = GFX_GEH_events_pic
-
-	is_triggered_only = yes
-
-    option = {
-		name = GEH_events.9.a
-
-		ai_chance = {
-			factor = 100
-		}
-    }
-}
-
 ###外交
 #格黑娜提出外交声援
 country_event = {
     id = GEH_dip_events.1
     title = GEH_dip_events.1.t
     desc = GEH_dip_events.1.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -348,7 +262,7 @@ country_event = {
     id = GEH_dip_events.2
     title = GEH_dip_events.2.t
     desc = GEH_dip_events.2.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -367,7 +281,7 @@ country_event = {
     id = GEH_dip_events.3
     title = GEH_dip_events.3.t
     desc = GEH_dip_events.3.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -386,7 +300,7 @@ country_event = {
     id = GEH_dip_events.10
     title = GEH_dip_events.10.t
     desc = GEH_dip_events.10.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -400,7 +314,6 @@ country_event = {
 		}
     }
 }
-
 
 
 #第二次《伊甸条约》会谈
