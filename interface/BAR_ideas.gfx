@@ -525,5 +525,11 @@ spriteTypes = {
 		name = "GFX_idea_BARE_Global_College_Autonomous_Region"
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_College_Autonomous_Region.dds"
 	}
-	
+
+	###MIO###
+	#哦天哪这东西注册在ideas里吗
+	spriteType = {
+		name = "GFX_MIO_Gehenna_Volcano_support_equipment_organization_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/Gehenna_Volcano_support_equipment_organization_icon.dds"
+	}
 }

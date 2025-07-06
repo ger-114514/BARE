@@ -1,0 +1,610 @@
+##     ##    ###    ######## ######## ########  #### ######## ##       
+###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       
+#### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##       
+## ### ## ##     ##    ##    ######   ########   ##  ######   ##       
+##     ## #########    ##    ##       ##   ##    ##  ##       ##       
+##     ## ##     ##    ##    ##       ##    ##   ##  ##       ##       
+##     ## ##     ##    ##    ######## ##     ## #### ######## ######## 
+###########################
+######## Artillery ########
+###########################
+Gehenna_Volcano_support_equipment_organization = {
+	icon = GFX_MIO_Gehenna_Volcano_support_equipment_organization_icon
+	allowed = {
+		tag = GEH
+	}
+	equipment_type = {
+		support
+		artillery
+		anti_tank
+		anti_air
+	}
+	##影响所有支援栏##
+	research_categories = {
+		support_all
+	}
+
+	ai_will_do  = {
+		factor = 1
+	}
+	on_design_team_assigned_to_tech = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_country_flag = GVS_MIO_HAS_BEEN_INTRODUCED
+					}
+				}
+			}
+			FROM = {
+				custom_effect_tooltip = first_time_assign_intro_effect_tt
+				country_event = {
+					id = MIO_Intro.1
+				}
+				set_country_flag = GVS_MIO_HAS_BEEN_INTRODUCED
+			}
+		}
+	}
+	on_industrial_manufacturer_assigned = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_country_flag = GVS_MIO_HAS_BEEN_INTRODUCED
+					}
+				}
+			}
+			FROM = {
+				custom_effect_tooltip = first_time_assign_intro_effect_tt
+				country_event = {
+					id = MIO_Intro.1
+				}
+				set_country_flag = GVS_MIO_HAS_BEEN_INTRODUCED
+			}
+		}
+	}
+	tree_header_text = {
+		text = mio_header_GVS_shell_design
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_GVS_armament_design
+		x = 6
+	}
+	tree_header_text = {
+		text = mio_header_GVS_special_project
+		x = 9
+	}
+	initial_trait = {
+		name = GVS_initial_trait_manufacturer
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+	}
+	trait = {
+		token = GVS_Refinery_trait
+		name = GVS_Refinery_trait		# optional
+		icon = GFX_generic_mio_trait_icon_resources
+		position = {
+			x = 0
+			y = 0
+		}		
+		production_bonus = {
+			production_resource_need_factor = -0.2
+		}
+	}
+	trait = {
+		token = GVS_Tungsten_core_AP_trait
+		name = GVS_Tungsten_core_AP_trait
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Refinery_trait
+		parent = {
+			traits = {
+				GVS_Refinery_trait
+			}
+			num_parents_needed = 1
+		}
+		limit_to_equipment_type = {
+			heavy_fire_support_equipment
+		}		# optional
+		equipment_bonus = {
+			hard_attack = 0.05
+		}
+	}
+	trait = {
+		token = GVS_APCR_trait
+		name = GVS_APCR_trait
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Tungsten_core_AP_trait
+		parent = {
+			traits = {
+				GVS_Tungsten_core_AP_trait
+			}
+			num_parents_needed = 1
+		}
+		limit_to_equipment_type = {
+			heavy_fire_support_equipment
+		}		# optional
+		equipment_bonus = {
+			ap_attack = 0.05
+		}
+	}
+	trait = {
+		token = GVS_High_energy_Explosives_trait
+		name = GVS_High_energy_Explosives_trait
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+		position = {
+			x = 2
+			y = 0
+		}
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+		}		# optional
+		equipment_bonus = {
+			soft_attack = 0.03
+		}		# optional
+	}
+	trait = {
+		token = GVS_Blasting_Rope_trait
+		name = GVS_Blasting_Rope_trait
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_High_energy_Explosives_trait
+		parent = {
+			traits = {
+				GVS_High_energy_Explosives_trait
+			}
+			num_parents_needed = 1
+		}
+		on_complete = {
+			FROM = {
+				set_technology = {
+					GVS_Blasting_Rope_tech = 1
+					pop_up = no
+				}
+				custom_effect_tooltip = GVS_Blasting_Rope_tech_tt
+			}
+		}
+
+		limit_to_equipment_type = {
+			support_engineer_equipment
+		}
+		
+		equipment_bonus = {
+			build_cost_ic = 0.03
+		}
+	}
+	trait = {
+		token = GVS_HEAT_trait
+		name = GVS_HEAT_trait
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Blasting_Rope_trait
+		parent = {
+			traits = {
+				GVS_Blasting_Rope_trait
+			}
+			num_parents_needed = 1
+		}
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+			heavy_fire_support_equipment
+			infantry_anti_air_equipment
+		}		# optional
+		equipment_bonus = {
+			ap_attack = 0.01
+			hard_attack = 0.02
+		}
+	}
+	trait = {
+		token = GVS_Extender_ammunition_trait
+		name = GVS_Extender_ammunition_trait
+		icon = GFX_generic_mio_department_icon_artillery_line_efficiency
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = GVS_APCR_trait
+		parent = {
+			traits = {
+				GVS_APCR_trait
+				GVS_HEAT_trait
+			}
+			num_parents_needed = 2
+		}
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+		    heavy_fire_support_equipment
+		    infantry_anti_air_equipment
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.02
+			soft_attack = 0.03
+			breakthrough = 0.05
+			defense = 0.02
+		}
+	}
+	trait = {
+		token = GVS_Uranium_Engineering_trait
+		name = GVS_Uranium_Engineering_trait
+		icon = GFX_generic_mio_department_icon_anti_tank
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Extender_ammunition_trait
+		parent = {
+			traits = {
+				GVS_Extender_ammunition_trait
+			}
+			num_parents_needed = 1
+		}
+		on_complete = {
+			FROM = {
+				country_event = {
+					id = MIO_Intro.2
+				}
+			}
+		}
+		limit_to_equipment_type = {
+			heavy_fire_support_equipment
+		}
+		equipment_bonus = {
+			ap_attack = 0.5
+			hard_attack = 0.1
+		}
+	}
+	#### 主干 #####
+	trait = {
+		token = GVS_Updating_Manufacturing_equipment_trait
+		name = GVS_Updating_Manufacturing_equipment_trait
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		position = {
+			x = 4
+			y = 0
+		}
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+	trait = {
+		token = GVS_Stable_Quality_control_trait
+		name = GVS_Stable_Quality_control_trait
+		icon = GFX_generic_mio_trait_icon_reliability
+		position = {
+			x = 0
+			y = 3
+		}
+		relative_position_id = GVS_Updating_Manufacturing_equipment_trait
+		parent = {
+			traits = {
+				GVS_Updating_Manufacturing_equipment_trait
+			}
+			num_parents_needed = 1
+		}
+		limit_to_equipment_type = {
+		}		# optional
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+	trait = {
+		token = GVS_Forging_technology_Innovation_trait
+		name = GVS_Forging_technology_Innovation_trait
+		icon = GFX_generic_mio_department_icon_anti_tank_materials
+		position = {
+			x = 6
+			y = 0
+		}
+		limit_to_equipment_type = {
+		}		# optional
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+		    heavy_fire_support_equipment
+		    infantry_anti_air_equipment
+		}		# optional
+		equipment_bonus = {
+			build_cost_ic = -0.03
+			breakthrough = 0.02
+		}
+	}
+	trait = {
+		token = GVS_Durable_Barrel_trait
+		name = GVS_Durable_Barrel_trait
+		icon = GFX_generic_mio_department_icon_anti_tank_production
+		position = {
+			x = 0
+			y = 3
+		}
+		relative_position_id = GVS_Forging_technology_Innovation_trait
+		parent = {
+			traits = {
+				GVS_Forging_technology_Innovation_trait
+			}
+			num_parents_needed = 1
+		}
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+		    heavy_fire_support_equipment
+		    infantry_anti_air_equipment
+		}		# optional
+		equipment_bonus = {
+			reliability = 0.03
+			defense = 0.02
+		}
+	}
+	trait = {
+		token = GVS_Expand_Design_team_trait
+		name = GVS_Expand_Design_team_trait
+		icon = GFX_generic_mio_trait_icon_surface_detection
+		position = {
+			x = 8
+			y = 0
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_task_capacity = 1
+		}
+	}
+	trait = {
+		token = GVS_Optimize_Design_process_trait
+		name = GVS_Optimize_Design_process_trait
+		icon = GFX_generic_mio_trait_icon_unique
+		position = {
+			x = 0
+			y = 3
+		}
+		relative_position_id = GVS_Expand_Design_team_trait
+		parent = {
+			traits = {
+				GVS_Expand_Design_team_trait
+			}
+			num_parents_needed = 1
+		}
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.5
+			military_industrial_organization_industrial_manufacturer_assign_cost = -0.5
+			military_industrial_organization_task_capacity = 1
+		}
+	}
+	trait = {
+		token = GVS_Invest_Roaring_artillery_Design_bureau_trait
+		name = GVS_Invest_Roaring_artillery_Design_bureau_trait
+		icon = GFX_generic_mio_department_icon_artillery
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = GVS_Updating_Manufacturing_equipment_trait
+		parent = {
+			traits = {
+				GVS_Updating_Manufacturing_equipment_trait
+				GVS_Forging_technology_Innovation_trait
+			}
+			num_parents_needed = 2
+		}
+		mutually_exclusive = {
+			GVS_Invest_Logistics_production_department_trait
+		}
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+		    heavy_fire_support_equipment
+		    infantry_anti_air_equipment
+		}
+		production_bonus = {
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
+	trait = {
+		token = GVS_Multi_purpose_frame_trait
+		name = GVS_Multi_purpose_frame_trait
+		icon = GFX_generic_mio_department_icon_artillery_conversion
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Invest_Roaring_artillery_Design_bureau_trait
+		parent = {
+			traits = {
+				GVS_Invest_Roaring_artillery_Design_bureau_trait
+			}
+			num_parents_needed = 1
+		}
+		limit_to_equipment_type = {
+			light_fire_support_equipment
+		    heavy_fire_support_equipment
+		    infantry_anti_air_equipment
+		}
+		equipment_bonus = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			air_attack = 0.05
+			ap_attack = 0.05
+		}
+	}
+	trait = {
+		token = GVS_Invest_Logistics_production_department_trait
+		name = GVS_Invest_Logistics_production_department_trait
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		position = {
+			x = 1
+			y = 1
+		}
+		relative_position_id = GVS_Forging_technology_Innovation_trait
+		parent = {
+			traits = {
+				GVS_Forging_technology_Innovation_trait
+				GVS_Expand_Design_team_trait
+			}
+			num_parents_needed = 2
+		}
+		mutually_exclusive = {
+			GVS_Invest_Roaring_artillery_Design_bureau_trait
+		}
+		limit_to_equipment_type = {
+			support_equipment
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.02
+		}
+	}
+	trait = {
+		token = GVS_Logistical_support_tools_trait
+		name = GVS_Logistical_support_tools_trait
+		icon = GFX_generic_mio_department_icon_support_equipment
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Invest_Logistics_production_department_trait
+		parent = {
+			traits = {
+				GVS_Invest_Logistics_production_department_trait
+			}
+			num_parents_needed = 1
+		}
+		###需要通过民族精神实现
+		on_complete = {
+			FROM = {
+				set_technology = {
+					GVS_Logistical_support_tools_trait_tech = 1
+					pop_up = no
+				}
+				custom_effect_tooltip = GVS_Logistical_support_tools_trait_tech_tt
+			}
+		}
+		limit_to_equipment_type = {
+			support_equipment
+		}
+		equipment_bonus = {
+			reliability = 0.05
+			build_cost_ic = 0.03
+		}
+	}
+	trait = {
+		token = GVS_Standardized_production_trait
+		name = GVS_Standardized_production_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = GVS_Durable_Barrel_trait
+		parent = {
+			traits = {
+				GVS_Stable_Quality_control_trait
+				GVS_Durable_Barrel_trait
+				GVS_Optimize_Design_process_trait
+			}
+			num_parents_needed = 2
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_capacity_factor = 0.1
+		}
+	}
+	trait = {
+		token = GVS_Expansion_daily_necessities_trait
+		name = GVS_Expansion_daily_necessities_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+		position = {
+			x = 9
+			y = 1
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GVS_Expansion_daily_necessities_trait_trigger_tt
+				check_variable = {
+					GVS_special_traits < 1
+				}
+			}
+		}
+		on_complete = {
+			set_variable = {
+				GVS_special_traits = 1
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = -0.05
+		}
+	}
+
+	trait = {
+		token = GVS_Increase_Financing_size_trait
+		name = GVS_Increase_Financing_size_trait
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+		special_trait_background = yes
+		position = {
+			x = 9
+			y = 0
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GVS_Increase_Financing_size_trait_trigger_tt
+				check_variable = {
+					GVS_special_traits < 1
+				}
+			}
+		}
+		on_complete = {
+			set_variable = {
+				GVS_special_traits = 1
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.2
+		}
+	}
+
+	trait = {
+		token = GVS_Hot_springs_Development_fund_trait
+		name = GVS_Hot_springs_Development_fund_trait
+		icon = GFX_generic_mio_trait_icon_naval_range
+		special_trait_background = yes
+		position = {
+			x = 9
+			y = 3
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GVS_Hot_springs_Development_fund_trait_trigger_tt
+				always = yes
+			}
+		}
+		on_complete = {
+			FROM = {
+				add_breakthrough_points = {
+					specialization = specialization_land
+					value = 2
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -0.01
+		}
+	}
+}
