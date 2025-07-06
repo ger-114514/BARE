@@ -4,6 +4,9 @@ GEH_societies_dec_category = {
             add_political_power = 100
             set_country_flag = GEH_societies_start
             #风纪委执行力
+            visible = {
+                is_debug= yes
+            }
             set_variable = {
                 GEH_discipline_committee_ability = 50
             }
@@ -45,7 +48,7 @@ GEH_societies_dec_category = {
             }
             #风纪委执行法案数
             set_variable = {
-                GEH_discipline_committee_num = 20
+                GEH_discipline_committee_num = 0
             }
             #风纪委执行法案上限
             set_variable = {
@@ -72,6 +75,9 @@ GEH_societies_dec_category = {
         }
     }
     GEH_test_gourmet_research_dec = {
+        visible = {
+                is_debug= yes
+            }
         complete_effect = {
             add_political_power = 100
             #美食部活跃度
@@ -86,6 +92,9 @@ GEH_societies_dec_category = {
         }
     }
     GEH_test_hot_spring_dec = {
+        visible = {
+                is_debug= yes
+            }
         complete_effect = {
             add_political_power = 100
             #温泉部活跃度
@@ -100,6 +109,9 @@ GEH_societies_dec_category = {
         }
     }
     GEH_test_discipline_committee_dec = {
+        visible = {
+                is_debug= yes
+            }
         complete_effect = {
             add_political_power = 100
             #风纪委执行力
@@ -113,18 +125,17 @@ GEH_societies_dec_category = {
             GEH_discipline_committee_calc = yes           
         }
     }
-    GEH_educational_gangsters = {
+    #驱逐越境不良
+    GEH_discipline_committee_gangsters_eviction = {
         icon = generic_research
         cost = 50
-        days_remove = 60
+        days_remove = 90
         days_re_enable = 30
         available = { 
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
         }
-        on_map_mode = map_and_decisions_view 
-        #targets = { GEH }
         modifier = {
             stability_weekly = 0.005
         }
@@ -132,81 +143,136 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
+        }
+        timeout_effect = {
             add_to_variable = {
-                GEH_discipline_committee_ability = -5
+                GEH_discipline_committee_num = -1
             }
             add_to_variable = {
-                GEH_discipline_committee_repression = 8
+                GEH_discipline_committee_ability = 5
+            }
+            add_to_variable = {
+                GEH_discipline_committee_repression = 5
+            }
+            GEH_discipline_committee_calc = yes
+        }
+    }
+    #建立边境巡逻制度
+    GEH_discipline_committee_establish_border_patrol_system = {
+        cost = 100
+        days_remove = 100
+        fire_only_once = yes
+        available = { 
+            check_variable = {
+                GEH_discipline_committee_num < GEH_discipline_committee_max
+            }
+        }
+        modifier = {
+            war_support_weekly = 0.005
+        }
+        complete_effect = {
+            add_to_variable = {
+                GEH_discipline_committee_num = 1
+            }
+            add_to_variable = {
+                GEH_gourmet_research_activity = 5
+            }
+            add_to_variable = {
+                GEH_gourmet_research_destructive = 5
             }
         }
         timeout_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
-            add_political_power = 100
+            add_to_variable = {
+                GEH_discipline_committee_max = 1
+            }
         }
     }
-    GEH_educational_gourmet_research = {
+    #打击头盔团
+    GEH_discipline_committee_combat_helmet_regiments = {
         cost = 50
-        days_remove = 60
-        days_re_enable = 30
+        days_remove = 30
+        days_re_enable = 20
         available = { 
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
         }
-        modifier = {
-            stability_weekly = 0.005
-        }
         complete_effect = {
+            stability_factor = -0.1
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
             add_to_variable = {
-                GEH_gourmet_research_activity = -5
-            }
-            add_to_variable = {
-                GEH_gourmet_research_destructive = -8
+                GEH_gourmet_research_destructive = 5
             }
         }
         timeout_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
-            add_political_power = 100
         }
     }
-    GEH_educational_hot_spring = {
+    #头盔团劳动改造
+    GEH_discipline_committee_helmet_regiment_labor_reform = {
         cost = 50
-        days_remove = 60
-        days_re_enable = 30
+        days_remove = 100
         available = { 
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
         }
         modifier = {
-            stability_weekly = 0.005
+            production_speed_buildings_factor = 0.1
         }
         complete_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
+            stability_factor = -0.05
             add_to_variable = {
-                GEH_hot_spring_activity = -5
-            }
-            add_to_variable = {
-                GEH_hot_spring_destructive = -8
+                GEH_gourmet_research_activity = 5
             }
         }
         timeout_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
-            add_political_power = 100
+            add_to_variable = {
+                GEH_gourmet_research_destructive = 5
+            }
         }
     }
-
+    #头盔团教育改造
+    GEH_discipline_committee_helmet_regiment_teach_reform = {
+        cost = 100
+        days_remove = 100
+        available = { 
+            check_variable = {
+                GEH_discipline_committee_num < GEH_discipline_committee_max
+            }
+        }
+        modifier = {
+            research_speed_factor = 0.1
+            political_power_factor = -0.1
+        }
+        complete_effect = {
+            add_to_variable = {
+                GEH_discipline_committee_num = 1
+            }
+            war_support_factor = 0.05
+        }
+        timeout_effect = {
+            add_to_variable = {
+                GEH_discipline_committee_num = -1
+            }
+            add_to_variable = {
+                GEH_gourmet_research_activity = 5
+            }
+        }
+    }
     #温泉部一阶段破坏
     GEH_operation_hot_spring_1 = {
         icon = GFX_GEH_megumu_dec
@@ -232,7 +298,7 @@ GEH_societies_dec_category = {
             }
         }
         fire_only_once = yes
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         available = {
             OR = {
                 FROM = {
@@ -256,8 +322,13 @@ GEH_societies_dec_category = {
                 clr_state_flag = GEH_hot_spring_damage
                 damage_building = {
 					type = infrastructure
-					damage = 1
+					damage = 3
 				}
+                OWNER = {
+                    add_to_variable = { GEH_hot_spring_activity = 2 }                     
+                    add_to_variable = { GEH_hot_spring_destructive = 1 }
+                    GEH_hot_spring_calc = yes
+                }
             }
             hidden_effect = {
                 random_controlled_state = {
@@ -283,7 +354,7 @@ GEH_societies_dec_category = {
             }
         }
         fire_only_once = yes
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         available = {
             OR = {
                 FROM = {
@@ -307,8 +378,17 @@ GEH_societies_dec_category = {
                 clr_state_flag = GEH_hot_spring_damage
                 damage_building = {
 					type = infrastructure
-					damage = 1
+					damage = 4
 				}
+                damage_building = {
+                    type = arms_factory
+                    damage = 4
+                }
+                OWNER = {
+                    add_to_variable = { GEH_hot_spring_activity = 4 }                     
+                    add_to_variable = { GEH_hot_spring_destructive = 2 }
+                    GEH_hot_spring_calc = yes
+                }
             }
             hidden_effect = {
                 random_controlled_state = {
@@ -358,8 +438,21 @@ GEH_societies_dec_category = {
                 clr_state_flag = GEH_hot_spring_damage
                 damage_building = {
 					type = infrastructure
-					damage = 1
+					damage = 5
 				}
+                damage_building = {
+                    type = arms_factory
+                    damage = 5
+                }
+                damage_building = {
+                    type = heavy_arms_factory
+                    damage = 5
+                }
+                OWNER = {
+                    add_to_variable = { GEH_hot_spring_activity = 6 }                     
+                    add_to_variable = { GEH_hot_spring_destructive = 3 }
+                    GEH_hot_spring_calc = yes
+                }
             }
             hidden_effect = {
                 random_controlled_state = {
@@ -395,7 +488,7 @@ GEH_societies_dec_category = {
             }
         }
         fire_only_once = yes
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         available = {
             OR = {
                 FROM = {
@@ -421,10 +514,28 @@ GEH_societies_dec_category = {
 					type = infrastructure
 					damage = 1
 				}
+                damage_building = {
+                    type = industrial_complex
+                    damage = 1
+                }
+                OWNER = {
+                    if = {
+                        limit = { 
+                            NOT = {has_country_flag = GEH_fuuka_protected}
+                        }
+                        add_to_variable = { GEH_food_service_activity = -2 }
+                        add_to_variable = { GEH_gourmet_research_activity = 2 }                     
+                    }
+                    add_to_variable = { GEH_gourmet_research_destructive = 1 }
+                    GEH_food_service_and_gourmet_research_calc = yes
+                }
             }
-            random_controlled_state = {
-                set_state_flag = GEH_gourmet_research_damage
-            }  
+            
+            hidden_effect = {
+                random_controlled_state = {
+                    set_state_flag = GEH_gourmet_research_damage
+                } 
+            }             
         }
         days_mission_timeout = 60
         is_good = no
@@ -444,7 +555,7 @@ GEH_societies_dec_category = {
             }
         }
         fire_only_once = yes
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         available = {
             OR = {
                 FROM = {
@@ -468,8 +579,23 @@ GEH_societies_dec_category = {
                 clr_state_flag = GEH_gourmet_research_damage
                 damage_building = {
 					type = infrastructure
-					damage = 1
+					damage = 2
 				}
+                damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+                OWNER = {
+                    if = {
+                        limit = { 
+                            NOT = {has_country_flag = GEH_fuuka_protected}
+                        }
+                        add_to_variable = { GEH_food_service_activity = -4 }
+                        add_to_variable = { GEH_gourmet_research_activity = 4 }                     
+                    }
+                    add_to_variable = { GEH_gourmet_research_destructive = 2 }
+                    GEH_food_service_and_gourmet_research_calc = yes
+                }
             }
             hidden_effect = {
                 random_controlled_state = {
@@ -477,7 +603,7 @@ GEH_societies_dec_category = {
                 } 
             } 
         }
-        days_mission_timeout = 45
+        days_mission_timeout = 50
         is_good = no
     }
     #美食部三阶段破坏
@@ -495,7 +621,7 @@ GEH_societies_dec_category = {
             }
         }
         fire_only_once = yes
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         available = {
             OR = {
                 FROM = {
@@ -519,14 +645,29 @@ GEH_societies_dec_category = {
                 clr_state_flag = GEH_gourmet_research_damage
                 damage_building = {
 					type = infrastructure
-					damage = 1
+					damage = 3
 				}
+                damage_building = {
+                    type = industrial_complex
+                    damage = 3
+                }
+                OWNER = {
+                    if = {
+                        limit = { 
+                            NOT = {has_country_flag = GEH_fuuka_protected}
+                        }
+                        add_to_variable = { GEH_food_service_activity = -6 }
+                        add_to_variable = { GEH_gourmet_research_activity = 6 }                     
+                    }
+                    add_to_variable = { GEH_gourmet_research_destructive = 3 }
+                    GEH_food_service_and_gourmet_research_calc = yes
+                }
             }
             random_controlled_state = {
                 set_state_flag = GEH_gourmet_research_damage
             }  
         }
-        days_mission_timeout = 30
+        days_mission_timeout = 40
         is_good = no
     }
     #美食部四阶段破坏
@@ -544,7 +685,7 @@ GEH_societies_dec_category = {
             }
         }
         fire_only_once = yes
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         available = {
             OR = {
                 FROM = {
@@ -568,8 +709,23 @@ GEH_societies_dec_category = {
                 clr_state_flag = GEH_gourmet_research_damage
                 damage_building = {
 					type = infrastructure
-					damage = 1
+					damage = 4
 				}
+                damage_building = {
+                    type = industrial_complex
+                    damage = 4
+                }
+                OWNER = {
+                    if = {
+                        limit = { 
+                            NOT = {has_country_flag = GEH_fuuka_protected}
+                        }
+                        add_to_variable = { GEH_food_service_activity = -8 }
+                        add_to_variable = { GEH_gourmet_research_activity = 8 }                     
+                    }
+                    add_to_variable = { GEH_gourmet_research_destructive = 4 }
+                    GEH_food_service_and_gourmet_research_calc = yes
+                }
             }
             random_controlled_state = {
                 set_state_flag = GEH_gourmet_research_damage
@@ -581,35 +737,43 @@ GEH_societies_dec_category = {
     #给食部保护枫香
     GEH_fuuka_protect = {
         icon = GFX_GEH_fuuka_dec
-        cost = 50
-        days_remove = 10
+        cost = 30
+        days_remove = 60
         days_re_enable = 60
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         state_target = yes
         target_trigger = {
             FROM = {
+                OWNER = {
+                    tag = GEH
+                    check_variable = { GEH_gourmet_research_destructive > 20 }
+                }
                 state = 302
             }
         }
         complete_effect = {
             FROM = {
                 OWNER = {
-                    set_country_flag = {
-                        flag = GEH_fuuka_protected
-                        value = 1
-                        days = 60
-                    }                   
-                }
+                    set_country_flag = GEH_fuuka_protected
+                }                   
             }
         }
+        
+        remove_effect = {
+            FROM = {
+                OWNER = {
+                    clr_country_flag = GEH_fuuka_protected
+                }                   
+            }
+        }      
     }
     #风纪委1阶段伊织
     GEH_ioli_patrol = {
         icon = GFX_GEH_ioli_dec
-        cost = 50
+        cost = 30
         days_remove = 30
         days_re_enable = 30
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         state_target = yes
         available = {
             FROM = {
@@ -691,9 +855,9 @@ GEH_societies_dec_category = {
     #风纪委二阶段亚子
     GEH_ako_protect = {
         icon = GFX_GEH_ako_dec
-        cost = 50
+        cost = 30
         days_re_enable = 60
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         state_target = yes
         available = {
             FROM = {
@@ -732,9 +896,9 @@ GEH_societies_dec_category = {
     #风纪委三阶段日奈
     GEH_hina_patrol = {
         icon = GFX_GEH_hina_dec
-        cost = 150
+        cost = 100
         days_re_enable = 30
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         state_target = yes
         available = {
             FROM = {
@@ -766,7 +930,7 @@ GEH_societies_dec_category = {
                     clr_state_flag = GEH_hot_spring_damage
                     OWNER = {
                         set_country_flag = GEH_hina_apprehend_hot_spring
-                        add_to_variable = { GEH_hot_spring_activity = -10 }
+                        add_to_variable = { GEH_hot_spring_activity = -5 }
                         add_to_variable = { GEH_hot_spring_destructive = -10 } 
                         GEH_hot_spring_calc = yes
                     }
@@ -779,8 +943,8 @@ GEH_societies_dec_category = {
                 }
                 OWNER = {
                     set_country_flag = GEH_hina_apprehend_gourmet_research
-                    add_to_variable = { GEH_discipline_committee_repression = -10 }
-                    add_to_variable = { GEH_discipline_committee_repression = -10 } 
+                    add_to_variable = { GEH_gourmet_research_activity = -5 }
+                    add_to_variable = { GEH_gourmet_research_destructive = -10 } 
                     GEH_hot_spring_calc = yes
                 }
             }
@@ -825,7 +989,7 @@ GEH_societies_dec_category = {
         icon = GFX_GEH_kasumi_kuku_dec
         cost = 50
         days_re_enable = 60
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         state_target = yes
         available = {
             FROM = {
@@ -897,7 +1061,7 @@ GEH_societies_dec_category = {
         icon = GFX_GEH_haruna_kunhuo_dec
         cost = 50
         days_re_enable = 60
-        on_map_mode = map_and_decisions_view
+        on_map_mode = map_only
         state_target = yes
         available = {
             FROM = {
