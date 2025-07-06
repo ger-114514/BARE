@@ -203,16 +203,14 @@ news_event = {
     }
 
 }
-
-
-
 #结算
 country_event = {
     id = Eden_pact.100
     title = Eden_pact.100.t
     desc = Eden_pact.100.d
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
+    #picture =
 
     immediate = {
         set_global_flag = BA_2st_eden_pact_end
@@ -257,7 +255,7 @@ country_event = {
     desc = Eden_pact.101.d
     timeout_days = 3
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
     option = {
 		name = Eden_pact.101.a
         trigger = {
@@ -280,7 +278,7 @@ country_event = {
     desc = Eden_pact.102.d
     timeout_days = 3
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
     option = {
 		name = Eden_pact.102.a
         trigger = {
@@ -302,7 +300,7 @@ country_event = {
     desc = Eden_pact.103.d
     timeout_days = 3
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
     option = {
 		name = Eden_pact.103.a
         trigger = {
@@ -324,7 +322,7 @@ country_event = {
     desc = Eden_pact.200.d
     is_triggered_only = yes
     timeout_days = 2
-    #picture = 
+    picture = TRI_news_event_15
     option = {
 		name = Eden_pact.200.a
         set_country_flag = ARI_lock_foreign_operation
