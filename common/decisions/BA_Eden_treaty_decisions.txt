@@ -1303,6 +1303,33 @@ Eden_treaty_negotiation_decisions = {
 			}
 		}
 	}
+
+	
+	Eden_GEH_treaty_publicity = {
+		visible = {
+			original_tag = GEH
+			has_completed_focus = GEH_Support_allies
+
+		}
+		available = {
+			
+		}
+		days_remove = 30
+		days_re_enable = 30
+		modifier = {
+			political_power_gain = 0.5
+		}
+		cancel_trigger = {
+			has_global_flag = Eden_treaty_negotiation_completed
+		}
+		remove_effect = {
+			set_temp_variable = { progress_change = 5 }
+			Eden_treaty_change_progress = yes
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
 }
 Eden_treaty_to_be_signed_decisions = {
 	Eden_treaty_to_be_signed = {

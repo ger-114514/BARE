@@ -203,6 +203,9 @@ news_event = {
     }
 
 }
+
+
+
 #结算
 country_event = {
     id = Eden_pact.100
@@ -210,6 +213,11 @@ country_event = {
     desc = Eden_pact.100.d
     is_triggered_only = yes
     #picture = 
+
+    immediate = {
+        set_global_flag = BA_2st_eden_pact_end
+    }
+
     option = {
 		name = Eden_pact.100.a
         trigger = {

@@ -57,6 +57,10 @@ ideas = {
                 original_tag = GEH
             }
 
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
+
             modifier = {
                 political_power_cost = 0.1
                 stability_factor = -0.1
@@ -71,6 +75,10 @@ ideas = {
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
             }
 
             modifier = {
@@ -89,6 +97,10 @@ ideas = {
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
             }
 
             modifier = {
@@ -111,6 +123,10 @@ ideas = {
             allowed = {
                 original_tag = GEH
             }
+            
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
 
             modifier = {
             }
@@ -124,6 +140,10 @@ ideas = {
             allowed = {
                 original_tag = GEH
             }
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
+
 
             modifier = {
                 political_power_factor = 0.1
@@ -139,6 +159,9 @@ ideas = {
 
             allowed = {
                 original_tag = GEH
+            }
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
             }
 
             modifier = {
@@ -158,6 +181,10 @@ ideas = {
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
             }
 
             modifier = {
@@ -280,16 +307,41 @@ ideas = {
 
         #对圣三一外交支持
         GEH_dip_support_to_trinity = {
-            name = GEH_unity_gehennna
+            name = GEH_dip_support_to_trinity
             picture = unknown
 
             allowed = {
                 original_tag = GEH
             }
 
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
+
             modifier = {
                 political_power_factor = -0.2
+                Eden_treaty_weights_monthly_gain = 3
                 #每月贡献度+3
+            }
+        }
+        #圣三一 外交支持
+        TRI_gehenna_dip_support = {
+            name = TRI_gehenna_dip_support
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
+
+            modifier = {
+                stability_weekly_factor = 0.005
+                TRI_unity_weekly_modifier = 1
+                Eden_treaty_weights_monthly_gain = -2
+                #每月贡献度+-2
             }
         }
 
@@ -1139,13 +1191,28 @@ ideas = {
             }
         }
 
-        GEH_Clear_obligations_Idea = {
-            name = GEH_Clear_obligations_Idea
+        GEH_Guardian_of_Peace_Idea = {
+            name = GEH_Guardian_of_Peace_Idea
             picture = unknown
 
             modifier = {
                 industry_free_repair_factor = 0.5
                 stability_weekly_factor = 0.002
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+
+        GEH_Reaching_consensus_ideas = {
+            name = GEH_Reaching_consensus_ideas
+            picture = unknown
+
+            modifier = {
+              stability_factor = 0.05
+              industrial_capacity_factory = 0.05
+              army_core_attack_factor = 0.05
+              army_core_defence_factor = 0.05
             }
             allowed = {
                 original_tag = GEH
