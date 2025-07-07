@@ -196,6 +196,7 @@ GEH_societies_dec_category = {
         days_remove = 30
         days_re_enable = 20
         available = { 
+
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
@@ -737,7 +738,7 @@ GEH_societies_dec_category = {
     #给食部保护枫香
     GEH_fuuka_protect = {
         icon = GFX_GEH_fuuka_dec
-        cost = 30
+        cost = 20
         days_remove = 60
         days_re_enable = 60
         on_map_mode = map_only
@@ -764,6 +765,47 @@ GEH_societies_dec_category = {
                 OWNER = {
                     clr_country_flag = GEH_fuuka_protected
                 }                   
+            }
+        }      
+    }
+    #给食部成员扩招
+    GEH_food_service_enrollment = {
+        cost = 50
+        days_remove = 60
+        days_re_enable = 60
+        available = {
+            has_completed_focus = GEH_Expanded_feeding_department
+        }
+        modifier = {
+            consumer_goods_factor = -0.05
+        }
+        complete_effect = {
+
+        }        
+        remove_effect = {
+            add_to_variable = {
+                GEH_food_service_activity = 10
+            }
+        }      
+    }
+    #给食部食堂扩建
+    GEH_expansion_of_canteen = {
+        cost = 50
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            civilian_factory_use = 5
+            production_speed_buildings_factor = 0.1
+        }
+        available = {
+            has_completed_focus = GEH_Expanded_feeding_department
+        }
+        complete_effect = {
+            
+        }        
+        remove_effect = {
+            add_to_variable = {
+                GEH_food_service_activity = 30
             }
         }      
     }
@@ -905,7 +947,8 @@ GEH_societies_dec_category = {
                 OWNER = {
                     #has_country_flag = hina_relax
                     tag = GEH 
-                    check_variable = { GEH_discipline_committee_repression > 70 }
+                    has_completed_focus = GEH_Discipline_inspection_officer
+                    check_variable = { GEH_discipline_committee_repression > 50 }
                 }
             }           
         }
@@ -913,7 +956,8 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    check_variable = { GEH_discipline_committee_repression > 70 }
+                    has_completed_focus = GEH_Discipline_inspection_officer
+                    check_variable = { GEH_discipline_committee_repression > 50 }
                 }
                 OR = {
                     has_state_flag = GEH_hot_spring_damage
@@ -930,8 +974,8 @@ GEH_societies_dec_category = {
                     clr_state_flag = GEH_hot_spring_damage
                     OWNER = {
                         set_country_flag = GEH_hina_apprehend_hot_spring
-                        add_to_variable = { GEH_hot_spring_activity = -5 }
-                        add_to_variable = { GEH_hot_spring_destructive = -10 } 
+                        add_to_variable = { GEH_hot_spring_activity = -6 }
+                        add_to_variable = { GEH_hot_spring_destructive = -12 } 
                         GEH_hot_spring_calc = yes
                     }
                 }
@@ -943,9 +987,105 @@ GEH_societies_dec_category = {
                 }
                 OWNER = {
                     set_country_flag = GEH_hina_apprehend_gourmet_research
-                    add_to_variable = { GEH_gourmet_research_activity = -5 }
-                    add_to_variable = { GEH_gourmet_research_destructive = -10 } 
+                    add_to_variable = { GEH_gourmet_research_activity = -6 }
+                    add_to_variable = { GEH_gourmet_research_destructive = -12 } 
                     GEH_hot_spring_calc = yes
+                }
+            }
+        }
+    }
+    #日奈的温泉部部沟通
+    GEH_hina_talking_hot_spring = {
+        icon = GFX_GEH_ioli_dec
+        cost = 50
+        days_remove = 30
+        days_re_enable = 60
+        on_map_mode = map_only
+        state_target = yes
+        available = {
+            FROM = {
+                OWNER = {
+                    has_completed_focus = GEH_Hot_spring_development
+                }
+            }           
+        }
+        target_trigger = {
+            FROM = {
+                OWNER = {
+                    tag = GEH 
+                    check_variable = { GEH_discipline_committee_repression > 50 }
+                }
+                has_state_flag = GEH_hot_spring_damage
+            }
+        }
+        remove_effect = {
+            FROM = {
+                if = {
+                    limit = {
+                        has_state_flag = GEH_hot_spring_damage
+                    } 
+                    clr_state_flag = GEH_hot_spring_damage
+                    OWNER = {
+                        random_controlled_state = {
+                            set_state_flag = GEH_hot_spring_damage
+                        }
+                        add_to_variable = { GEH_hot_spring_activity = 2 }                     
+                        add_to_variable = { GEH_hot_spring_destructive = -6 }
+                        GEH_hot_spring_calc = yes
+                    }
+                    set_state_flag = {
+                        flag = GEH_ioli_patroling
+                        value = 1
+                        days = 5
+                    }
+                }
+            }
+        }
+    }    
+    #日奈的美食部沟通
+    GEH_hina_talking_gourmet_research = {
+        icon = GFX_GEH_ioli_dec
+        cost = 50
+        days_remove = 30
+        days_re_enable = 60
+        on_map_mode = map_only
+        state_target = yes
+        available = {
+            FROM = {
+                OWNER = {
+                    has_completed_focus = GEH_Boot_trouble
+                }
+            }           
+        }
+        target_trigger = {
+            FROM = {
+                OWNER = {
+                    tag = GEH 
+                    check_variable = { GEH_discipline_committee_repression > 50 }
+                }
+                has_state_flag = GEH_gourmet_research_damage
+            }
+        }
+        remove_effect = {
+            FROM = {
+                if = {
+                    limit = {
+                        has_state_flag = GEH_gourmet_research_damage
+                    } 
+                    clr_state_flag = GEH_gourmet_research_damage
+                    OWNER = {
+                        random_controlled_state = {
+                            set_state_flag = GEH_gourmet_research_damage
+                        }
+                        add_to_variable = { GEH_gourmet_research_activity = 2 }                     
+                        add_to_variable = { GEH_gourmet_research_destructive = -6 }
+                        GEH_hot_spring_calc = yes
+                    }
+                    set_state_flag = {
+                        flag = GEH_ioli_patroling
+                        value = 1
+                        days = 5
+                    }
                 }
             }
         }
@@ -995,6 +1135,7 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
+                    has_completed_focus = GEH_Monitoring_trouble
                     has_country_flag = GEH_hina_apprehend_hot_spring 
                 }
             }
@@ -1067,6 +1208,7 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
+                    has_completed_focus = GEH_Boot_trouble
                     has_country_flag = GEH_hina_apprehend_gourmet_research 
                 }
             }

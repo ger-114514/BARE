@@ -2197,46 +2197,12 @@ focus_tree = {
         }
     }
 
-    #追捕美食研
-    focus = {
-        id = GEH_Hunting_for_Food_Club
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x =-2
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Food_Lovers_Trouble
-
-        prerequisite = {  focus =  GEH_Food_Lovers_Trouble }
-
-        completion_reward = {
-        
-        }
-    }
-    
-    #对美食研的询问
-    focus = {
-        id = GEH_Inquiries_to_food_clubs
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 0
-        y = 2
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Hunting_for_Food_Club
-
-        prerequisite = {  focus =  GEH_Hunting_for_Food_Club }
-
-        completion_reward = {
-        
-        }
-    }
-
     #解决食物供应问题
     focus = {
         id = GEH_Solving_food_supply_problems
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 2
+        x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Food_Lovers_Trouble
@@ -2253,7 +2219,7 @@ focus_tree = {
         id = GEH_Expanded_feeding_department
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = -1
+        x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Solving_food_supply_problems
@@ -2265,29 +2231,13 @@ focus_tree = {
         }
     }
 
-    #兴建食堂
-    focus = {
-        id = GEH_Building_canteen
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 0
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id = GEH_Expanded_feeding_department
-
-        prerequisite = {  focus =  GEH_Expanded_feeding_department }
-
-        completion_reward = {
-        
-        }
-    }
 
     #优化食物供应链
     focus = {
         id = GEH_Optimizing_supply_chains
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 1
+        x = 2
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Solving_food_supply_problems
@@ -2321,13 +2271,12 @@ focus_tree = {
         id = GEH_conversation_with_Food_Research
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = -1
+        x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id = GEH_Building_canteen
+        relative_position_id = GEH_Expanded_feeding_department
 
-        prerequisite = {  focus =  GEH_Building_canteen }
-        prerequisite = {  focus =  GEH_Inquiries_to_food_clubs }
+        prerequisite = {  focus =  GEH_Expanded_feeding_department }
 
         completion_reward = {
         
@@ -2339,45 +2288,12 @@ focus_tree = {
         id = GEH_Delicious_time
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = -1
+        x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_conversation_with_Food_Research 
 
         prerequisite = { focus = GEH_conversation_with_Food_Research }
-        mutually_exclusive = { focus = GEH_Food_Review }
-        completion_reward = {
-        
-        }
-    }
-
-    #不打扰他人对美食的评鉴
-    focus = {
-        id = GEH_Food_Review
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 1
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id = GEH_conversation_with_Food_Research 
-        mutually_exclusive = { focus = GEH_Delicious_time }
-        prerequisite = { focus = GEH_conversation_with_Food_Research }
-        completion_reward = {
-        
-        }
-    }
-    
-    #不再为食堂发愁
-    focus = {
-        id = GEH_No_more_worries_about_food
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = -1
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id = GEH_Food_Review 
-
-        prerequisite = { focus = GEH_Food_Review  focus = GEH_Delicious_time }
         completion_reward = {
         
         }
@@ -2400,58 +2316,6 @@ focus_tree = {
         }
     }
     
-    #解决温泉部留下的烂摊子
-    focus = {
-        id = GEH_Solve_the_mess
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = -1
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Cute_terrorists
-
-        prerequisite = {  focus =  GEH_Cute_terrorists }
-
-        completion_reward = {
-        
-        }
-    }
-
-    #追踪温泉部
-    focus = {
-        id = GEH_Tracking_trouble
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 1
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Cute_terrorists
-
-        prerequisite = {  focus =  GEH_Cute_terrorists }
-
-        completion_reward = {
-        
-        }
-    }
-
-    #寻找温泉之旅
-    focus = {
-        id = GEH_Travel_in_search_of_hot_springs
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 0
-        y = 2
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Cute_terrorists
-
-        prerequisite = {  focus =  GEH_Tracking_trouble }
-        prerequisite = {  focus =  GEH_Solve_the_mess }
-
-        completion_reward = {
-        
-        }
-    }
-
     #引导温泉部
     focus = {
         id = GEH_Boot_trouble
@@ -2460,9 +2324,9 @@ focus_tree = {
         x = -1
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =   GEH_Travel_in_search_of_hot_springs
+        relative_position_id =   GEH_Cute_terrorists
 
-        prerequisite = {  focus =   GEH_Travel_in_search_of_hot_springs }
+        prerequisite = {  focus =   GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Monitoring_trouble }
       
         completion_reward = {
@@ -2511,9 +2375,9 @@ focus_tree = {
         x = 1
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =   GEH_Travel_in_search_of_hot_springs
+        relative_position_id =   GEH_Cute_terrorists
 
-        prerequisite = {  focus =   GEH_Travel_in_search_of_hot_springs }
+        prerequisite = {  focus =  GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Boot_trouble }
 
       
@@ -2611,29 +2475,13 @@ focus_tree = {
         
         }
     }
-    #重点专项教育课程
-    focus = {
-        id = GEH_Key_Education_Courses
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 0
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Eliminate_the_base
-
-        prerequisite = {  focus = GEH_Eliminate_the_base }
-
-        completion_reward = {
-        
-        }
-    }
 
     #驱逐外来不良
     focus = {
         id = GEH_Deportation
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = -2
+        x = -1
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Eliminate_the_base
@@ -2650,7 +2498,7 @@ focus_tree = {
         id = GEH_Discipline_inspection_officer
         icon = GFX_goal_GEH_building_problems
         cost = 10
-        x = 2
+        x = 1
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Eliminate_the_base
@@ -2662,84 +2510,6 @@ focus_tree = {
         }
     }
 
-    #追捕头盔团
-    focus = {
-        id = GEH_Chasing_criminals
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 1
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Deportation
-
-        prerequisite = {  focus = GEH_Deportation }
-        prerequisite = {  focus =  GEH_Key_Education_Courses }
-        mutually_exclusive = { focus = GEH_Conversation_with_bad }
-
-
-        completion_reward = {
-        
-        }
-    }
-
-    #与不良学生商谈
-    focus = {
-        id = GEH_Conversation_with_bad
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 3
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Deportation
-
-        prerequisite = {  focus =  GEH_Discipline_inspection_officer }
-        prerequisite = {  focus = GEH_Key_Education_Courses }
-        mutually_exclusive = { focus = GEH_Chasing_criminals }
-
-        completion_reward = {
-        
-        }
-    }
-
-    #委托便利屋68
-    focus = {
-        id = GEH_Delegation_68
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 0
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Chasing_criminals
-
-       mutually_exclusive = { focus = GEH_The_Emperor_personal_expedition }
-       prerequisite = { focus = GEH_Chasing_criminals }
-       prerequisite = { focus = Conversation_with_bad }
-
-        completion_reward = {
-        
-        }
-    }
-
-    #亲身前往
-    focus = {
-        id = GEH_The_Emperor_personal_expedition
-        icon = GFX_goal_GEH_building_problems
-        cost = 10
-        x = 0
-        y = 1
-        search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Conversation_with_bad
-
-        
-       prerequisite = { focus = GEH_Conversation_with_bad }
-       prerequisite = { focus = GEH_Chasing_criminals }
-       mutually_exclusive = { focus = GEH_Delegation_68 }
-
-        completion_reward = {
-        
-        }
-    }
-
     #乱中有序
     focus = {
         id = GEH_Order_in_Chaos
@@ -2748,11 +2518,11 @@ focus_tree = {
         x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_Delegation_68
+        relative_position_id =  GEH_Deportation
 
        mutually_exclusive = { focus = GEH_Let_a_hundred_flowers_bloom }
-      prerequisite = { focus = GEH_The_Emperor_personal_expedition }
-       prerequisite = { focus = GEH_Delegation_68 }
+       prerequisite = { focus = GEH_Deportation }
+       prerequisite = { focus = GEH_Discipline_inspection_officer }
        
 
         completion_reward = {
@@ -2768,12 +2538,10 @@ focus_tree = {
         x = 0
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_The_Emperor_personal_expedition
-
-        
-       prerequisite = { focus = GEH_The_Emperor_personal_expedition }
-       prerequisite = { focus = GEH_Delegation_68 }
-       mutually_exclusive = { focus = GEH_Order_in_Chaos }
+        relative_position_id =  GEH_Discipline_inspection_officer
+        mutually_exclusive = { focus = GEH_Order_in_Chaos }
+       prerequisite = { focus = GEH_Deportation }
+       prerequisite = { focus = GEH_Discipline_inspection_officer }
 
         completion_reward = {
         
@@ -2786,9 +2554,9 @@ focus_tree = {
         icon = GFX_goal_GEH_building_problems
         cost = 10
         x = -1
-        y = 2
+        y = 1
         search_filters = { FOCUS_FILTER_ECO }
-        relative_position_id =  GEH_The_Emperor_personal_expedition
+        relative_position_id =  GEH_Let_a_hundred_flowers_bloom
 
         
        prerequisite = { focus = GEH_Let_a_hundred_flowers_bloom focus = GEH_Order_in_Chaos}
@@ -2812,7 +2580,7 @@ focus_tree = {
 
         
        prerequisite = { focus =  GEH_Daily_life_of_the_Discipline }
-       prerequisite = { focus = GEH_No_more_worries_about_food }
+       prerequisite = { focus = GEH_Delicious_time }
         prerequisite = { focus =  GEH_Enjoy_your_time }
        
 
