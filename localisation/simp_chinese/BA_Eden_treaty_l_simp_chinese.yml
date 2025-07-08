@@ -8,6 +8,7 @@
  Eden_treaty_negotiation_completed: "条约谈判已经完成"
  Eden_treaty_progress_modifier: "每月$Eden_treaty_progress$"
  Eden_treaty_weights_gain_factor: "$Eden_treaty_weights$获取修正"
+ Eden_treaty_weights_monthly_gain: "每月$Eden_treaty_weights$"
  Eden_treaty_change_progress_tt: "提供$Eden_treaty_progress$：[?progress_change|+=0%%]"
  Eden_treaty_change_weights_tt: "$Eden_treaty_weights$：[?weights_change|Y=0]"
  Eden_treaty_has_weights_tt: "拥有的$Eden_treaty_weights$不少于$WEIGHTS|Y$"
@@ -44,6 +45,7 @@
  Eden_treaty_research_cooperation_tt: "条约谈判结束后这一加成会被移除"
  Eden_economic_cooperation: "加强经济合作"
  Eden_propagate_our_effort: "宣传我们的努力"
+ Eden_GEH_treaty_publicity: "伊甸条约对外宣传"
  Eden_treaty_no_unity_cost: "§G谈判决议不再消耗团结度§!"
  Eden_treaty_no_BOP_change: "§G谈判决议不再使权力平衡向混乱移动§!"
  Eden_earn_interest: "争取更多利益"
@@ -55,6 +57,11 @@
  Eden_treaty_to_be_signed: "行将签署的伊甸条约"
  Eden_treaty_has_been_signed: "伊甸条约完成签署"
  Eden_treaty_modifier: "完成签署的伊甸条约"
+
+ BA_2st_eden_pact_begin: "第二次伊甸条约会谈已开始"
+ WOR_ancient_cathedral_has_been_attacked: "伊甸条约签订会场遭到攻击！"
+ BA_2st_eden_pact_end:"第二次伊甸条约会谈已成功完成"
+ 
 
 #事件
  Eden_pact.1000.t: "第一次《伊甸条约》会谈"
@@ -90,7 +97,7 @@
  Eden_pact.2001.d.general: "本台记者位于格黑娜和三一的伊甸条约谈判现场的记者传来消息：在今天早晨，不明导弹袭击了会谈现场，现场一片狼藉，所幸导弹来袭之前与会人员已经得到提前预警并及时进行了疏散。目前双方已正在进行情报交换，以找出幕后凶手。受制于现场信息的缺乏，目前的人员伤亡信息尚不明确。"
  Eden_pact.2001.d: "我的天啊！"
 
- Eden_pact.2002.d.TRI: "今早，伊甸条约谈判现场遭到了导弹袭击，目前我方代表团只有几人幸存，且均身受重伤，和现场的通讯连接也断断续续。虽然救援队伍已经火速赶往现场，但包括茶会领导者渚大人在内的高层们都已经和我们失去了联系。更麻烦的是，格黑娜方已经提出了抗议—抗议我方的抹黑与挑起争端。目前格黑娜方面的部队已经在边境开始调动与与我们零星交火，而我们的边境部队也已经进入了紧急状态以防不测。"
+ Eden_pact.2002.d.TRI: "今早，伊甸条约谈判现场遭到了导弹袭击，目前我方代表团只有几人尚可行动，且均身受重伤，和现场的通讯连接也断断续续。虽然救援队伍已经火速赶往现场，但包括茶会领导者渚大人在内的高层们都已经和我们失去了联系。更麻烦的是，格黑娜方已经提出了抗议—抗议我方的抹黑与挑起争端。目前格黑娜方面的部队已经在边境开始调动与与我们零星交火，而我们的边境部队也已经进入了紧急状态以防不测。"
  Eden_pact.2002.a: "谁发出的指责？谁下令开的第一枪？"
  Eden_pact.2002.d.GEH: "今早，我们在三一的谈判团遭到了不明导弹袭击。真琴议长和日奈委员长都在本次袭击中下落不明，只有几个侥幸逃离的谈判队成员向我们传来了零散的消息。而三一则指责此袭击为我方想要撕毁伊甸条约，并对我们进行了谴责。目前圣三一在边境的部队已经开始行动，形势严峻。"
  Eden_pact.2002.b: "我们的人也失踪了，凭什么说我们干的？"

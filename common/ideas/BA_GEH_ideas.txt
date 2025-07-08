@@ -50,11 +50,15 @@ ideas = {
 
         #筹备会谈
         GEH_ideas_prepare_for_conference_1 = {
-            name = GEH_unity_gehennna
+            name = GEH_ideas_prepare_for_conference_1
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
 
             modifier = {
@@ -66,11 +70,15 @@ ideas = {
 
         #筹备和圣三一的会谈
         GEH_ideas_prepare_for_conference_2 = {
-            name = GEH_unity_gehennna
+            name = GEH_ideas_prepare_for_conference_2
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
 
             modifier = {
@@ -84,11 +92,15 @@ ideas = {
 
         #完善的筹备
         GEH_ideas_prepare_for_conference_3 = {
-            name = GEH_unity_gehennna
+            name = GEH_ideas_prepare_for_conference_3
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
 
             modifier = {
@@ -105,11 +117,15 @@ ideas = {
 
         #会谈支持度：无人在意
         GEH_ideas_conference_support_1 = {
-            name = GEH_unity_gehennna
+            name = GEH_ideas_conference_support_1 
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+            
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
 
             modifier = {
@@ -117,13 +133,17 @@ ideas = {
         }
 
         #会谈支持度：略有耳闻
-        GEH_ideas_conference_support_2 = {
-            name = GEH_unity_gehennna
+        GEH_ideas_conference_support_3 = {
+            name = GEH_ideas_conference_support_3 
             picture = unknown
 
             allowed = {
                 original_tag = GEH
             }
+               cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
+
 
             modifier = {
                 political_power_factor = 0.1
@@ -133,43 +153,69 @@ ideas = {
         }
 
         #会谈支持度：骚乱不断
-        GEH_ideas_conference_support_3 = {
-            name = GEH_unity_gehennna
+        GEH_ideas_conference_support_2 = {
+            name = GEH_ideas_conference_support_2 
             picture = unknown
 
             allowed = {
                 original_tag = GEH
             }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
 
             modifier = {
-                power_balance_weekly = -0.02
+                power_balance_weekly = 0.02
                 stability_factor = -0.1
                 war_support_factor = -0.1
                 #贡献度获取-25%
-                Eden_treaty_weights_gain_factor = -0.25
+                Eden_treaty_weights_gain_factor = 0.25
             }
         }
 
 
         #会谈支持度：稳步向前
         GEH_ideas_conference_support_4 = {
-            name = GEH_unity_gehennna
+            name = GEH_ideas_conference_support_4
             picture = unknown
 
             allowed = {
                 original_tag = GEH
             }
 
+               cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
             modifier = {
                 political_power_factor = 0.1
                 stability_factor = 0.05
                 war_support_factor = 0.05
-                power_balance_weekly = 0.005
+                power_balance_weekly = -0.005
                 #贡献度获取+50%
                 Eden_treaty_weights_gain_factor = 0.5
             }
         }
+        #万魔殿的小动作
+        GEH_ideas_pandemonium_petty_action = {
+            name =  GEH_ideas_pandemonium_petty_action
 
+            picture = unknown
+
+            modifier = {
+                political_power_factor = 1
+                GEH_dualHeaded_Makoto_Weekly_factor = 0.015
+
+            }
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
+
+        }
 
         # 变成了动态修正
         # #措手不及
@@ -280,16 +326,41 @@ ideas = {
 
         #对圣三一外交支持
         GEH_dip_support_to_trinity = {
-            name = GEH_unity_gehennna
+            name = GEH_dip_support_to_trinity
             picture = unknown
 
             allowed = {
                 original_tag = GEH
             }
 
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
+
             modifier = {
                 political_power_factor = -0.2
+                Eden_treaty_weights_monthly_gain = 3
                 #每月贡献度+3
+            }
+        }
+        #圣三一 外交支持
+        TRI_gehenna_dip_support = {
+            name = TRI_gehenna_dip_support
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            cancel = {
+                has_global_flag = WOR_ancient_cathedral_has_been_attacked
+            }
+
+            modifier = {
+                stability_weekly_factor = 0.005
+                TRI_unity_weekly_modifier = 1
+                Eden_treaty_weights_monthly_gain = -2
+                #每月贡献度+-2
             }
         }
 
@@ -1076,6 +1147,99 @@ ideas = {
         }
 
 
+        GEH_dualHeaded_balance_hina_2 = {
+            name = GEH_dualHeaded_balance_hina_2
+            picture = unknown
 
+            modifier = {
+                political_power_factor = -0.1
+                stability_weekly= -0.001
+                GEH_dualHeaded_Hina_Weekly_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_hina_1 = {
+            name = GEH_dualHeaded_balance_hina_1
+            picture = unknown
+
+            modifier = {
+                political_power_factor = -0.05
+                GEH_dualHeaded_Hina_Weekly_factor = 0.025
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_normal = {
+            name = GEH_dualHeaded_balance_normal
+            picture = unknown
+
+            modifier = {
+                stability_weekly = 0.001
+                industrial_capacity_factory = 0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_makoto_1 = {
+            name = GEH_dualHeaded_balance_makoto_1
+            picture = unknown
+
+            modifier = {
+                political_power_factor = 0.1
+                GEH_dualHeaded_Makoto_Weekly_factor = 0.025
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_dualHeaded_balance_makoto_2 = {
+            name = GEH_dualHeaded_balance_makoto_2
+            picture = unknown
+
+            modifier = {
+                political_power_factor = 0.15
+                stability_weekly = -0.001
+                GEH_dualHeaded_Makoto_Weekly_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+
+        GEH_Guardian_of_Peace_Idea = {
+            name = GEH_Guardian_of_Peace_Idea
+            picture = unknown
+
+            modifier = {
+                industry_free_repair_factor = 0.5
+                stability_weekly_factor = 0.002
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+
+        GEH_Reaching_consensus_ideas = {
+            name = GEH_Reaching_consensus_ideas
+            picture = unknown
+
+            modifier = {
+              stability_factor = 0.05
+              industrial_capacity_factory = 0.05
+              army_core_attack_factor = 0.05
+              army_core_defence_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+
+    }
+
+    hidden_ideas = {
     }
 }

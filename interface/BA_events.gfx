@@ -20,6 +20,15 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_4.dds"			
 	}		
 
+	SpriteType = {
+		name = "GFX_GEH_event_1"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_event_1.dds"			
+	}
+	SpriteType = {
+		name = "GFX_GEH_event_2"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_event_2.dds"			
+	}
+
 	#TRI & ARI 混用（ 
 	#本来就是一家嘛（
 	#对吧（
@@ -95,4 +104,50 @@ spriteTypes = {
 		name = "GFX_TRI_event_17"
 		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_17.dds"			
 	}	
+
+	###75新增
+	SpriteType = {
+		name = "GFX_TRI_event_18"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_18.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_19"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_19.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_20"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_20.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_21"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_21.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_22"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_22.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_23"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_23.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_25"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_25.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_26"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_26.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_27"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_27.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_28"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_28.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_29"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_29.dds"			
+	}
 }

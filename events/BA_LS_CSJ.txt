@@ -5,6 +5,7 @@ country_event = { #古圣堂遭受聚变打击
 	title = LS_GST.1.t
 	desc = LS_GST.1.d
 	is_triggered_only = yes
+	picture = TRI_news_event_25
 
 	timeout_days = 14
 
@@ -150,6 +151,7 @@ country_event = { #古圣堂遭受聚变打击(无核弹)
 	title = LS_GST.2.t
 	desc = LS_GST.2.d
 	is_triggered_only = yes
+	picture = TRI_news_event_25
 
 	timeout_days = 14
 
@@ -184,6 +186,8 @@ country_event = { #初次袭击简报
 	} 
 	desc = LS_GST.3.d.3
 	is_triggered_only = yes
+	picture = TRI_news_event_25
+
 	timeout_days = 2
 	immediate = {
 		hidden_effect = {
@@ -299,6 +303,7 @@ news_event = { #古圣堂之战
 	title = LG_GST.4.t
 	desc = LS_GST.4.d
 	is_triggered_only = yes
+	picture = TRI_news_event_20
 
 	option = {
 		trigger = {
@@ -329,6 +334,8 @@ country_event = { #行动报告
 	desc = LS_GST.5.d
 
 	is_triggered_only = yes
+	picture = TRI_news_event_20
+
 	timeout_days = 7
 	immediate = {
 		hidden_effect = {
@@ -353,6 +360,8 @@ country_event = { #反戈一击
 	desc = LS_GST.6.d
 
 	is_triggered_only = yes
+	picture = TRI_news_event_20
+
 	immediate = {
 		hidden_effect = {
 			country_event = {
@@ -373,6 +382,8 @@ country_event = { #关于叛徒的报告
 	title = LS_GST.7.t
 	desc = LS_GST.7.d
 	is_triggered_only = yes
+	picture = TRI_news_event_21
+
 	timeout_days = 3
 	immediate = {
 		hidden_effect = {
@@ -425,6 +436,7 @@ country_event = { #僵局
 	}
 	desc = LS_GST.8.d.b
 	is_triggered_only = yes
+	picture = TRI_news_event_21
 
 	immediate = {
 		hidden_effect = {
@@ -467,6 +479,7 @@ country_event = { #僵局
 	}
 	desc = LS_GST.9.d.b
 	is_triggered_only = yes
+	picture = TRI_news_event_21
 
 	option = {
 		name = LS_GST.9.a
@@ -514,6 +527,8 @@ news_event = { #统一战线
 	desc = LS_GST.10.d.b
 	major = yes
 	is_triggered_only = yes
+	picture = GFX_GEH_event_2
+
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -583,6 +598,7 @@ country_event = { #三一胜利事件
 	id = LS_GST.51
 	title = LS_GST.51.t
 	desc = LS_GST.51.desc
+	picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -594,6 +610,7 @@ country_event = { #格黑娜胜利事件
 	id = LS_GST.52
 	title = LS_GST.52.t
 	desc = LS_GST.52.desc
+	picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 

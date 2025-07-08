@@ -1,0 +1,64 @@
+guiTypes = {
+	containerWindowType = { #
+		name = "BARE_GEH_DualHeaded_GUI"
+		position = {x = 0 y =0}
+		size = { width = 100% height = 500 }
+
+
+		iconType = { #背景
+			name ="dualHeaded_BG"
+			spriteType = "GFX_dualHeaded_BG"
+			position = { x=0	 y=0 }
+		}
+
+
+		iconType = { #进度条
+			name ="dualHeaded_Progress"
+			spriteType = "GFX_dualHeaded_progress"
+			position = { x=78	 y=383 }
+		}
+
+
+		instantTextboxType = { #影响力
+			name = "dualHeaded_influence_hina"
+			position = { x = 76 y = 333  }
+			textureFile = ""
+			font = "LXGW_975_16"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_GEH_dualHeaded_influence_hina_Text"
+			maxWidth = 100
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = { #影响力
+			name = "dualHeaded_influence_makoto"
+			position = { x = 331 y = 333  }
+			textureFile = ""
+			font = "LXGW_975_16"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_GEH_dualHeaded_influence_makoto_Text"
+			maxWidth = 100
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = { #影响力
+			name = "dualHeaded_influence_text"
+			position = { x = 56 y = 434  }
+			textureFile = ""
+			font = "LXGW_975_20b"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_GEH_dualHeaded_influence_Text"
+			maxWidth = 400
+			maxHeight = 20
+			format = center
+			alwaystransparent = yes
+		}
+	}
+
+
+	
+}

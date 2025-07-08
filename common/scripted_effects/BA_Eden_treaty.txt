@@ -30,10 +30,31 @@ Eden_treaty_start = {
 			set_variable = { Eden_treaty_modifier_industrial_capacity_factory = 0.1 }
 			set_variable = { Eden_treaty_modifier_research_speed_factor = 0.05 }
 			activate_mission = Eden_treaty_mutual_negotiation
+
+			add_ideas =  GEH_ideas_prepare_for_conference_1
+			add_ideas = GEH_ideas_conference_support_1
+
+			mark_focus_tree_layout_dirty = yes
+
 			if = {
 				limit = { has_global_flag = BA_2st_eden_pact_TRI_leader }
 				unlock_national_focus = GEH_restart_eden_treaty_negotiation
 				#TODO:格黑娜未能触发的惩罚
+
+
+				add_stability = -0.15
+
+
+
+				add_to_variable = {
+					GEH_hot_spring_destructive = 10
+				}
+				add_to_variable = {
+					GEH_gourmet_research_destructive = 10
+				}
+				add_to_variable = {
+					GEH_com68_destructive = 10
+				}
 			}
 		}
 	}

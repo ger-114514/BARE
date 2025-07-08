@@ -6,7 +6,7 @@ country_event = {
     id = GEH_events.1
     title = GEH_events.1.t
     desc = GEH_events.1.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
@@ -37,7 +37,7 @@ country_event = {
     id = GEH_events.2
     title = GEH_events.2.t
     desc = GEH_events.2.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
@@ -70,7 +70,7 @@ country_event = {
     id = GEH_events.3
     title = GEH_events.3.t
     desc = GEH_events.3.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
@@ -91,7 +91,7 @@ country_event = {
     id = GEH_events.4
     title = GEH_events.4.t
     desc = GEH_events.4.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_daily_news_event_2
 
 	is_triggered_only = yes
 
@@ -130,7 +130,7 @@ country_event = {
     id = GEH_events.6
     title = GEH_events.6.t
     desc = GEH_events.6.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_1
 
 	is_triggered_only = yes
 
@@ -149,7 +149,7 @@ country_event = {
     id = GEH_events.7
     title = GEH_events.7.t
     desc = GEH_events.7.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_daily_news_event_2
 
 	is_triggered_only = yes
 
@@ -194,7 +194,7 @@ country_event = {
     id = GEH_events.8
     title = GEH_events.8.t
     desc = GEH_events.8.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_daily_news_event_2
 
 	is_triggered_only = yes
 
@@ -225,7 +225,7 @@ country_event = {
     id = GEH_dip_events.1
     title = GEH_dip_events.1.t
     desc = GEH_dip_events.1.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -237,7 +237,7 @@ country_event = {
 			}
 		}
 		#TODO:要把这个加了
-		#add_ideas = TRI_gehenna_dip_support
+		add_ideas = TRI_gehenna_dip_support
 		ai_chance = {
 			factor = 1000
 		}
@@ -262,7 +262,7 @@ country_event = {
     id = GEH_dip_events.2
     title = GEH_dip_events.2.t
     desc = GEH_dip_events.2.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -281,7 +281,7 @@ country_event = {
     id = GEH_dip_events.3
     title = GEH_dip_events.3.t
     desc = GEH_dip_events.3.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 
@@ -300,7 +300,7 @@ country_event = {
     id = GEH_dip_events.10
     title = GEH_dip_events.10.t
     desc = GEH_dip_events.10.d
-    picture = GFX_GEH_events_pic
+    picture = GFX_GEH_event_2
 
 	is_triggered_only = yes
 

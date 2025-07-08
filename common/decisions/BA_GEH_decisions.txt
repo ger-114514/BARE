@@ -403,3 +403,33 @@ GEH_after_eden_war_decision_category = {
 		}
 	}
 }
+
+GEH_dualHeaded = {
+	ceshi_one = {
+		cost = 10
+		complete_effect = {
+			multiply_variable = {
+				hina_yingxiang = 2
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				GEH_zhanbi = yes
+			}
+		}
+
+	}
+	ceshi_two = {
+		cost = 10
+		complete_effect = {
+			multiply_variable = {
+				makoto_yingxiang = 2
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				GEH_zhanbi = yes
+			}
+		}
+	}
+}

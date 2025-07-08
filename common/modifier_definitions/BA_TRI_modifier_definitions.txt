@@ -18,3 +18,9 @@ Eden_treaty_weights_gain_factor = {
 	value_type = percentage
 	precision = 2
 }
+
+Eden_treaty_weights_monthly_gain = {
+	color_type = good
+	value_type = number
+	precision = 0
+}

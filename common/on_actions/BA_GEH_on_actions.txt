@@ -1,4 +1,8 @@
 on_actions = {
+	on_startup = {
+		effect = {
+		}
+	}
 	on_monthly_GEH = {
 		effect = {
 			if = {
@@ -32,5 +36,57 @@ on_actions = {
 			}
 		}
 	}
+
+	on_weekly_GEH = {
+		effect = {
+			add_to_variable = {
+				GEH_dualHeaded_Influence_Factor = modifier@GEH_dualHeaded_Makoto_Weekly_factor
+			}
+			subtract_from_variable = {
+				GEH_dualHeaded_Influence_Factor = modifier@GEH_dualHeaded_Hina_Weekly_factor
+			}
+			GEH_dualHeaded_Influence_Factor_Change = yes
+
+
+
+			if = {
+				limit = {
+					has_country_flag = GEH_societies_start
+				}
+				GEH_weekly_variable_change = yes
+				GEH_discipline_committee_calc = yes
+                GEH_hot_spring_calc = yes
+                GEH_food_service_and_gourmet_research_calc = yes 
+			}
+		}
+	}
+	on_daily_GEH = {
+		effect = {
+		}
+	}
+	on_monthly = {
+		effect = {
+			TRI	= {
+				if = {
+					limit = {
+						has_global_flag = BA_2st_eden_pact_begin
+						not = {
+							has_global_flag = BA_2st_eden_pact_end
+						}
+					}
+					TRI = {
+						set_temp_variable = { weights_change = modifier@Eden_treaty_weights_monthly_gain }
+						Eden_treaty_change_weights = yes
+					}
+					GEH = {
+							set_temp_variable = { weights_change = modifier@Eden_treaty_weights_monthly_gain }
+						Eden_treaty_change_weights = yes
+					}
+				}
+			}
+		}
+	}
+
+	
 
 }

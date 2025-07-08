@@ -1,0 +1,23 @@
+scripted_gui = {
+	BARE_GEH_DualHeaded_SG = { #
+		context_type = decision_category
+		window_name = "BARE_GEH_DualHeaded_GUI"
+
+		effects = {
+			
+		}
+
+		triggers = {
+
+		}
+		properties = {
+			dualHeaded_Progress = {
+				frame = var:GEH_dualHeaded_Influence_Factor_FRAME
+			}
+		}
+			
+		
+	}	
+}
+
+

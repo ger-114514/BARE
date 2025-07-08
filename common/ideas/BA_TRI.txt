@@ -1,5 +1,28 @@
 ideas = {
     country = {
+        #文本idea  争辩无休的《伊甸条约》方针
+        TRI_eden_treaty_step_0_modifier_Text_idea = {
+            picture = eden_treaty_step_normal_modifier
+            name = eden_treaty_step_0_modifier
+
+            allowed = {
+                
+            }
+            modifier = {
+                
+            }
+        }
+        #文本idea  圣三一团结度
+
+        TRI_unity_modifier_Text_idea = {
+            name = TRI_unity_modifier
+            allowed = {
+                
+            }
+            modifier = {
+                
+            }
+        }
     
         #以战止戈
         TRI_authorize_eagle = {
