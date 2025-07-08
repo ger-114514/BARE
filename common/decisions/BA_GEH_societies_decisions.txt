@@ -756,10 +756,12 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     set_country_flag = GEH_fuuka_protected
-                }                   
+                    671 = {
+                        set_state_flag = GEH_food_service_trans
+                    } 
+                }                                  
             }
-        }
-        
+        }        
         remove_effect = {
             FROM = {
                 OWNER = {
@@ -808,6 +810,232 @@ GEH_societies_dec_category = {
                 GEH_food_service_activity = 30
             }
         }      
+    }
+#给食部食物运输
+    GEH_operation_food_service_1 = {
+        icon = GFX_GEH_fuuka_working_dec
+        allowed = { tag = GEH }
+        target_trigger = {           
+            FROM = {
+                state = 671
+                GEH = {
+                    #has_completed_focus = GEH_Optimizing_supply_chains
+                }
+                has_state_flag = GEH_food_service_trans                
+            }
+        }
+        fire_only_once = yes
+        on_map_mode = map_and_decisions_view
+        available = {
+            FROM = {
+                has_state_flag = GEH_gourmet_research_damage
+            }
+        }
+        state_target = yes
+        complete_effect = {
+            FROM = {
+                clr_state_flag = GEH_gourmet_research_damage
+                clr_state_flag = GEH_food_service_trans
+                GEH = {
+                    clr_country_flag = GEH_fuuka_protected
+                    random_controlled_state = {
+                        set_state_flag = GEH_gourmet_research_damage
+                    }
+                }
+            }
+        }
+        timeout_effect = {
+            FROM = {
+                clr_state_flag = GEH_food_service_trans
+                OWNER = {
+                    391 = {
+                       set_state_flag = GEH_food_service_trans
+                    } 
+                }
+            }
+              
+        }
+        days_mission_timeout = 10
+        is_good = yes
+    }
+    GEH_operation_food_service_2 = {
+        icon = GFX_GEH_fuuka_working_dec
+        allowed = { tag = GEH }
+        target_trigger = {           
+            FROM = {
+                state = 391
+                GEH = {
+                    #has_completed_focus = GEH_Optimizing_supply_chains
+                }
+                has_state_flag = GEH_food_service_trans                
+            }
+        }
+        fire_only_once = yes
+        on_map_mode = map_only
+        available = {
+            FROM = {
+                has_state_flag = GEH_gourmet_research_damage
+            }
+        }
+        state_target = yes
+        complete_effect = {
+            FROM = {
+                clr_state_flag = GEH_gourmet_research_damage
+                clr_state_flag = GEH_food_service_trans
+                GEH = {
+                    clr_country_flag = GEH_fuuka_protected
+                    random_controlled_state = {
+                        set_state_flag = GEH_gourmet_research_damage
+                    } 
+                }
+            }
+        }
+        timeout_effect = {
+            FROM = {
+                clr_state_flag = GEH_food_service_trans
+                OWNER = {
+                    179 = {
+                       set_state_flag = GEH_food_service_trans
+                    } 
+                }
+            }
+              
+        }
+        days_mission_timeout = 10
+        is_good = yes
+    }
+    GEH_operation_food_service_3 = {
+        icon = GFX_GEH_fuuka_working_dec
+        allowed = { tag = GEH }
+        target_trigger = {           
+            FROM = {
+                state = 179
+                GEH = {
+                    #has_completed_focus = GEH_Optimizing_supply_chains
+                }
+                has_state_flag = GEH_food_service_trans                
+            }
+        }
+        fire_only_once = yes
+        on_map_mode = map_only
+        available = {
+            FROM = {
+                has_state_flag = GEH_gourmet_research_damage
+            }
+        }
+        state_target = yes
+        complete_effect = {
+            FROM = {
+                clr_state_flag = GEH_gourmet_research_damage
+                clr_state_flag = GEH_food_service_trans
+                GEH = {
+                    clr_country_flag = GEH_fuuka_protected
+                    random_controlled_state = {
+                        set_state_flag = GEH_gourmet_research_damage
+                    }
+                }
+            }
+        }
+        timeout_effect = {
+            FROM = {
+                clr_state_flag = GEH_food_service_trans
+                OWNER = {
+                    390 = {
+                       set_state_flag = GEH_food_service_trans
+                    } 
+                }
+            }              
+        }
+        days_mission_timeout = 10
+        is_good = yes
+    }
+    GEH_operation_food_service_4 = {
+        icon = GFX_GEH_fuuka_working_dec
+        allowed = { tag = GEH }
+        target_trigger = {           
+            FROM = {
+                state = 390
+                GEH = {
+                    #has_completed_focus = GEH_Optimizing_supply_chains
+                }
+                has_state_flag = GEH_food_service_trans                
+            }
+        }
+        fire_only_once = yes
+        on_map_mode = map_only
+        available = {
+            FROM = {
+                has_state_flag = GEH_gourmet_research_damage
+            }
+        }
+        state_target = yes
+        complete_effect = {
+            FROM = {
+                clr_state_flag = GEH_gourmet_research_damage
+                clr_state_flag = GEH_food_service_trans
+                GEH = {
+                    clr_country_flag = GEH_fuuka_protected
+                    random_controlled_state = {
+                        set_state_flag = GEH_gourmet_research_damage
+                    }
+                }
+            }
+        }
+        timeout_effect = {
+            FROM = {
+                clr_state_flag = GEH_food_service_trans
+                OWNER = {
+                    178 = {
+                       set_state_flag = GEH_food_service_trans
+                    } 
+                }
+            }              
+        }
+        days_mission_timeout = 10
+        is_good = yes
+    }
+    GEH_operation_food_service_5 = {
+        icon = GFX_GEH_fuuka_working_dec
+        allowed = { tag = GEH }
+        target_trigger = {           
+            FROM = {
+                state = 178
+                GEH = {
+                    #has_completed_focus = GEH_Optimizing_supply_chains
+                }
+                has_state_flag = GEH_food_service_trans                
+            }
+        }
+        fire_only_once = yes
+        on_map_mode = map_only
+        available = {
+            FROM = {
+                has_state_flag = GEH_gourmet_research_damage
+            }
+        }
+        state_target = yes
+        complete_effect = {
+            FROM = {
+                clr_state_flag = GEH_gourmet_research_damage
+                clr_state_flag = GEH_food_service_trans
+                GEH = {
+                    clr_country_flag = GEH_fuuka_protected
+                    random_controlled_state = {
+                        set_state_flag = GEH_gourmet_research_damage
+                    }
+                }
+            }
+        }
+        timeout_effect = {
+            FROM = {
+                clr_state_flag = GEH_food_service_trans
+                GEH = {
+                    add_political_power = 100 
+                }
+            }              
+        }
+        days_mission_timeout = 10
+        is_good = yes
     }
     #风纪委1阶段伊织
     GEH_ioli_patrol = {
@@ -996,7 +1224,7 @@ GEH_societies_dec_category = {
     }
     #日奈的温泉部部沟通
     GEH_hina_talking_hot_spring = {
-        icon = GFX_GEH_ioli_dec
+        icon = GFX_GEH_hina_smile_dec
         cost = 50
         days_remove = 30
         days_re_enable = 60
@@ -1044,7 +1272,7 @@ GEH_societies_dec_category = {
     }    
     #日奈的美食部沟通
     GEH_hina_talking_gourmet_research = {
-        icon = GFX_GEH_ioli_dec
+        icon = GFX_GEH_hina_smile_dec
         cost = 50
         days_remove = 30
         days_re_enable = 60
