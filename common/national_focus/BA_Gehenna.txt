@@ -11,7 +11,7 @@ focus_tree = {
     #第一次伊甸条约会谈
     focus = {
         id = GEH_The_First_Eden_Treaty
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_The_First_Eden_Treaty
 
         cancelable = no
        
@@ -47,7 +47,7 @@ focus_tree = {
     #平稳前行
     focus = {
         id = GEH_Steady_progress
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Steady_progress
         cost = 5
         x = 0
         y = 1
@@ -73,7 +73,7 @@ focus_tree = {
     #风纪委员会的展望
     focus = {
         id = GEH_Discipline_Committee
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Discipline_Committee
         relative_position_id = GEH_Looking_back_insid
         cost = 5
         x = -2
@@ -94,7 +94,7 @@ focus_tree = {
     #万魔殿的传统
     focus = {
         id = GEH_Wehrmacht_First
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Wehrmacht_First
         relative_position_id = GEH_Looking_back_insid
         cost = 5
         x = 2
@@ -115,7 +115,7 @@ focus_tree = {
     #再起争端
     focus = {
 		id = GEH_go_smoothly_forward
-	    icon = GFX_goal_GEH_building_problems
+	    icon = GFX_goal_GEH_go_smoothly_forward
         relative_position_id = GEH_Steady_progress
         
         cost = 5
@@ -141,7 +141,7 @@ focus_tree = {
     #真琴的最高指示
     focus = {
 		id = GEH_highest_order_from_makoto
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_highest_order_from_makoto
 	    relative_position_id = GEH_go_smoothly_forward
         cost = 4
         x = -2
@@ -195,7 +195,7 @@ focus_tree = {
     #日奈委员长的决策
     focus = {
 		id = GEH_decision_from_hina
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_decision_from_hina
 	    relative_position_id = GEH_go_smoothly_forward
         cost = 4
         x = 2
@@ -237,7 +237,7 @@ focus_tree = {
     #格黒娜在行动
     focus = {
 		id = GEH_gehinna_is_on_action
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_gehinna_is_on_action
 	    relative_position_id = GEH_go_smoothly_forward
         cost = 5
         x = 0
@@ -259,7 +259,7 @@ focus_tree = {
     #重拾信任
     focus = {
 		id = GEH_find_the_trust_again
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_find_the_trust_again
 	    relative_position_id = GEH_gehinna_is_on_action
         cost = 10
         x = 0
@@ -332,7 +332,7 @@ focus_tree = {
     #巩固万魔殿声望
     focus = {
 		id = GEH_Strengthening_reputation
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Strengthening_reputation
 	    relative_position_id = GEH_highest_order_from_makoto
         cost = 4
         x = 0
@@ -352,7 +352,7 @@ focus_tree = {
     #混乱中的自由
     focus = {
 		id = GEH_Chaotic_freedom
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Chaotic_freedom
 	    relative_position_id = GEH_Strengthening_reputation
         cost = 4
         x = 0
@@ -403,7 +403,7 @@ focus_tree = {
     #确保社团权力
     focus = {
 		id = GEH_Securing_power
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Securing_power
 	    relative_position_id = GEH_Chaotic_freedom
         cost = 4
         x = 0
@@ -456,7 +456,7 @@ focus_tree = {
     #万魔殿之姿
     focus = {
 		id = GEH_Heroic_Stance
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Heroic_Stance
 	    relative_position_id = GEH_Strengthening_reputation
         cost = 4
         x = -2
@@ -488,7 +488,7 @@ focus_tree = {
     #光荣的捍卫者
     focus = {
 		id = GEH_Glorious_Defender
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Glorious_Defender
 	    relative_position_id = GEH_Heroic_Stance
         cost = 4
         x = 0
@@ -555,7 +555,7 @@ focus_tree = {
     #加强训练
     focus = {#GEH_Strengthening_reputation
 		id = GEH_Strengthening_exercises
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Strengthening_exercises
 	    relative_position_id = GEH_decision_from_hina
         cost = 4
         x = 0
@@ -575,7 +575,7 @@ focus_tree = {
     #守序与乱局
     focus = {
 		id = GEH_Order_and_Chaos
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Order_and_Chaos
 	    relative_position_id = GEH_Strengthening_exercises
         cost = 4
         x = 0
@@ -603,7 +603,7 @@ focus_tree = {
     #明确社团义务
     focus = {
 		id = GEH_Clear_obligations
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Clear_obligations
 	    relative_position_id =  GEH_Order_and_Chaos
         cost = 4
         x = 0
@@ -633,7 +633,7 @@ focus_tree = {
     #风纪委员之训
     focus = {
 		id = GEH_Discipline_Committee_Training
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Discipline_Committee_Training
 	    relative_position_id = GEH_Strengthening_exercises
         cost = 4
         x = 2
@@ -668,7 +668,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_Guardian_of_Peace
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Guardian_of_Peace
 	    relative_position_id = GEH_Discipline_Committee_Training
         cost = 4
         x = 0
@@ -694,7 +694,7 @@ focus_tree = {
     #构成共识
     focus = {
 		id = GEH_Reaching_consensus
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Reaching_consensus
         relative_position_id = GEH_Guardian_of_Peace
         cost = 4
         x = -4
@@ -716,7 +716,7 @@ focus_tree = {
     #与圣三一的洽谈
     focus = {
 		id = GEH_Negotiation_with_Trinity
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Negotiation_with_Trinity
 	    relative_position_id = GEH_Restarting_talks
         cost = 4
         x = -2
@@ -749,7 +749,7 @@ focus_tree = {
     #打击越境不良
     focus = {
 		id = GEH_Fighting_crime
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Fighting_crime
 	    relative_position_id = GEH_Suppressing_riots
         cost = 4
         x = 0
@@ -779,7 +779,7 @@ focus_tree = {
     #迫在眉睫
     focus = {
 		id = GEH_Imminent
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Imminent
 	    relative_position_id = GEH_Support_allies
         cost = 4
         x = 0
@@ -831,7 +831,7 @@ focus_tree = {
     #必要的容忍
     focus = {
 		id = GEH_Necessary_Patience
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Necessary_Patience
 	    relative_position_id = GEH_Support_allies
         cost = 4
         x = -2
@@ -846,17 +846,20 @@ focus_tree = {
         }
 
         completion_reward = {
-            
+            add_timed_idea = {
+                idea = GEH_ideas_Necessary_Patience
+                days = 120
+            }
         }
         ai_will_do = {
             factor = 3
         }
 	}
 
-    #团结的格黑娜
+    #和平将至
     focus = {
 		id = GEH_Gehenna_United
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Gehenna_United
 	    relative_position_id = GEH_Imminent
         cost = 4
         x = 0
@@ -883,7 +886,7 @@ focus_tree = {
     #重启伊甸条约会谈
     focus = {
 		id = GEH_Restarting_talks
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Restarting_talks
 	    relative_position_id = GEH_Reaching_consensus
         cost = 4
         x = 0
@@ -934,7 +937,7 @@ focus_tree = {
     #抚镇骚乱
     focus = {
 		id = GEH_Suppressing_riots
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Suppressing_riots
 	    relative_position_id =  GEH_Restarting_talks
         cost = 4
         x = 0
@@ -973,7 +976,7 @@ focus_tree = {
     #物质筹备
     focus = {
 		id = GEH_Material_preparation
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Material_preparation
 	    relative_position_id =  GEH_Internal_publicity
         cost = 4
         x = 0
@@ -1004,7 +1007,7 @@ focus_tree = {
     #对内宣传
     focus = {
 		id = GEH_Internal_publicity
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Internal_publicity
 	    relative_position_id = GEH_Restarting_talks
         cost = 4
         x = 2
@@ -1040,7 +1043,7 @@ focus_tree = {
     #声援茶会
     focus = {
 		id = GEH_Support_allies
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Support_allies
 	    relative_position_id = GEH_Negotiation_with_Trinity
         cost = 4
         x = 0
@@ -1076,7 +1079,7 @@ focus_tree = {
     #诏令各行
     focus = {
 		id = GEH_Command_lines
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Command_lines
 	    relative_position_id = GEH_Material_preparation
         cost = 4
         x = 0
@@ -1127,7 +1130,7 @@ focus_tree = {
     #隐秘的威胁
     focus = {
 		id = GEH_opportunity_treaty
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_opportunity_treaty
 	    relative_position_id = GEH_Material_preparation
         cost = 4
         x = 2
@@ -1156,7 +1159,7 @@ focus_tree = {
     #格黑娜的团结
     focus = {
 		id = GEH_United_Gehenna
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_United_Gehenna
 	    relative_position_id = GEH_Command_lines
         cost = 4
         x = 0
@@ -1184,7 +1187,7 @@ focus_tree = {
     #烽火骤起
     focus = {
 		id = GEH_War_breaks_out
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_War_breaks_out
 	    relative_position_id =  GEH_Restarting_talks
         cost = 4
         x = 0
@@ -1211,7 +1214,7 @@ focus_tree = {
     #非常措施
     focus = {
 		id = GEH_Extraordinary_measures
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Extraordinary_measures
 	    relative_position_id =  GEH_War_breaks_out
         cost = 4
         x = 0
@@ -1230,7 +1233,7 @@ focus_tree = {
    #紧急营救
     focus = {
 		id = GEH_Emergency_Rescue
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Emergency_Rescue
 	    relative_position_id = GEH_Extraordinary_measures
         cost = 4
         x = 0
@@ -1249,7 +1252,7 @@ focus_tree = {
     #结束敌对状态
     focus = {
 		id = GEH_End_hostility
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_End_hostility
 	    relative_position_id = GEH_Emergency_Rescue
         cost = 4
         x = 0
@@ -1268,7 +1271,7 @@ focus_tree = {
     #重点进攻
     focus = {
 		id = GEH_Focus_attack
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Focus_attack
 	    relative_position_id = GEH_Emergency_Rescue
         cost = 4
         x = -2
@@ -1287,7 +1290,7 @@ focus_tree = {
     #同仇敌忾
     focus = {
 		id = GEH_Common_hatred_and_common_enemy
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Common_hatred_and_common_enemy
 	    relative_position_id = GEH_End_hostility
         cost = 4
         x = 0
@@ -1308,7 +1311,7 @@ focus_tree = {
     #不遗余力
     focus = {
 		id = GEH_spare_no_effort
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_spare_no_effort
 	    relative_position_id = GEH_Common_hatred_and_common_enemy
         cost = 4
         x = 0
@@ -1328,7 +1331,7 @@ focus_tree = {
     #古圣堂之战
     focus = {
 		id = GEH_Battle_of_the_Ancient_Temple
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Battle_of_the_Ancient_Temple
 	    relative_position_id =  GEH_War_breaks_out
         cost = 4
         x = 2
@@ -1347,7 +1350,7 @@ focus_tree = {
     #收拢部队
     focus = {
 		id = GEH_Gather_the_troops
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Gather_the_troops
 	    relative_position_id =  GEH_Battle_of_the_Ancient_Temple
         cost = 4
         x = 0
@@ -1366,7 +1369,7 @@ focus_tree = {
     #共同协作
     focus = {
 		id = GEH_Collaboration
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Collaboration
 	    relative_position_id =  GEH_Gather_the_troops
         cost = 4
         x = 0
@@ -1388,7 +1391,7 @@ focus_tree = {
 
     focus = {
 		id = GEH_Military_industry_complementarity
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Military_industry_complementarity
 	    relative_position_id =  GEH_Collaboration
         cost = 4
         x = 0
@@ -1407,7 +1410,7 @@ focus_tree = {
     #格黑娜屹立于此Great Motherland
     focus = {
 		id = GEH_Great_Motherland
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Great_Motherland
 	    relative_position_id =  GEH_spare_no_effort
         cost = 4
         x = 0

@@ -1,6 +1,5 @@
 capital = 435
 oob = "standard_templates"
-set_air_oob = "A14_2019_air_legacy"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -61,11 +60,6 @@ set_technology = {
 
 	#空军（无人机）
 	recon_drone = 1
-	light_fighting_drone = 1
-	light_attack_drone = 1
-	fighting_drone = 1
-	attack_drone = 1
-	transport_drone = 1
 
 	#装甲车辆（坦克）
 	light_tank_MK1 = 1
@@ -105,3 +99,4 @@ set_popularities = {
 	no_ideology = 100
 }
 
+country_lock_all_division_template = yes

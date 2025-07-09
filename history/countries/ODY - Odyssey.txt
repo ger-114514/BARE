@@ -2,7 +2,7 @@ capital = 378
 
 #oob = "ABK_1936"
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {
@@ -109,3 +109,4 @@ set_popularities = {
 	no_ideology = 100
 }
 
+country_lock_all_division_template = yes

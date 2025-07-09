@@ -217,6 +217,37 @@ ideas = {
 
         }
 
+
+        GEH_ideas_Necessary_Patience = {
+            name =  GEH_ideas_Necessary_Patience
+
+            picture = unknown
+
+            modifier = {
+                training_time_army_factor = 0.5
+                army_org_factor = -0.2
+
+
+                political_power_factor = 0.1
+                industrial_factory_donations = 15
+                consumer_goods_factor = -0.15
+
+                GEH_dualHeaded_Makoto_Weekly_factor = 0.02
+                power_balance_weekly = 0.002
+                
+
+            }
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
+
+        }
+
         # 变成了动态修正
         # #措手不及
         # GEH_a_unpredictable_attack = {
