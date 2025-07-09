@@ -122,6 +122,12 @@ spriteTypes = {
         effectFile = "gfx/FX/buttonstate.shader"
     }
     SpriteType = {
+		    name = "GFX_GEH_hina_smile_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_hina_dec_smile.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
 		    name = "GFX_GEH_hina_dec"
 		    texturefile = "gfx/interface/GEH_societies/GEH_hina_dec.dds"
         noOfFrames = 1
@@ -190,6 +196,12 @@ spriteTypes = {
 	SpriteType = {
 		    name = "GFX_GEH_fuuka_dec"
 		    texturefile = "gfx/interface/GEH_societies/GEH_fuuka_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		name = "GFX_GEH_fuuka_working_dec"
+		texturefile = "gfx/interface/GEH_societies/GEH_fuuka_working_dec.dds"
         noOfFrames = 1
         effectFile = "gfx/FX/buttonstate.shader"
     }

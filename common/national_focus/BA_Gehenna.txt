@@ -2259,7 +2259,71 @@ focus_tree = {
         prerequisite = {  focus =  GEH_The_First_Eden_Treaty }
 
         completion_reward = {
-        
+            set_variable = {
+                GEH_discipline_committee_ability = 30
+            }
+            #风纪委镇压度
+            set_variable = {
+                GEH_discipline_committee_repression = 21
+            }
+            #温泉部活跃度
+            set_variable = {
+                GEH_hot_spring_activity = 20
+            }
+            #温泉部恶名
+            set_variable = {
+                GEH_hot_spring_destructive = 21
+            }
+            #给食部活跃度
+            set_variable = {
+                GEH_food_service_activity = 1
+            }
+            #给食部效率
+            set_variable = {
+                GEH_food_service_efficiency = 1
+            }
+            #美食部活跃度
+            set_variable = {
+                GEH_gourmet_research_activity = 20
+            }
+            #美食部恶名
+            set_variable = {
+                GEH_gourmet_research_destructive = 21
+            }
+            #便利屋68活跃度
+            set_variable = {
+                GEH_comb68_activity = 1
+            }
+            #便利屋68恶名
+            set_variable = {
+                GEH_com68_destructive = 1
+            }
+            #风纪委执行法案数
+            set_variable = {
+                GEH_discipline_committee_num = 0
+            }
+            #风纪委执行法案上限
+            set_variable = {
+                GEH_discipline_committee_max = 1
+            }
+            add_dynamic_modifier = {
+                modifier = GEH_discipline_committee_on_patrol
+            }
+            add_dynamic_modifier = {
+                modifier = GEH_hot_spring_committee
+            }
+            add_dynamic_modifier = {
+                modifier = GEH_meal_service_issues
+            }    
+            GEH_discipline_committee_calc = yes
+            GEH_hot_spring_calc = yes
+            GEH_food_service_and_gourmet_research_calc = yes    
+            random_controlled_state = {
+                set_state_flag = GEH_hot_spring_damage
+            }
+            random_controlled_state = {
+                set_state_flag = GEH_gourmet_research_damage
+            }
         }
     }
 
@@ -2538,7 +2602,7 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
 
         completion_reward = {
-       
+            
         }
     }
 
