@@ -1,0 +1,25 @@
+characters = {
+	#空見凪翼
+	FSC_Sorami_Nagitsuba = {
+		name = FSC_Sorami_Nagitsuba_name
+		portraits = {
+			civilian = {
+				large = GFX_BARE_Portrait_FSC_Sorami_Nagitsuba
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BARE_Portrait_FSC_Sorami_Nagitsuba
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			desc = FSC_Sorami_Nagitsuba_CL_desc
+			traits = {
+				
+			}
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+}
+######
