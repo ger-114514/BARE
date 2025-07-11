@@ -1193,6 +1193,136 @@ GST_LS_XC_DEBUFF_category = {
 			}
 		}
 	}
+
+
+
+	GST_GEH_advance_exploration = { #先遣勘探
+		icon = generic_research
+		priority = 11
+		state_target = yes
+		on_map_mode = map_only
+    	target_array = global.GST_JS_ZBH
+		visible = {
+			original_tag = GEH
+			has_completed_focus = GEH_Emergency_Rescue
+			FROM = {
+				is_in_array = {
+					array = global.GST_JS_ZBH
+					value = THIS
+				}
+				is_owned_by = GEH
+				NOT = {
+					has_state_flag = GEH_advance_exploration
+				}
+			}
+		}
+		available = {
+			command_power > 19.9
+			has_manpower > 299
+			has_equipment = { infantry_equipment > 299 }
+			has_equipment = { support_equipment > 499 }
+		}
+		days_remove = 7
+		complete_effect = {
+			add_command_power = -20
+			add_manpower = -300
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -300
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -500
+			}
+		}
+		remove_effect = {
+			FROM = {
+				set_state_flag = GEH_advance_exploration
+			}
+			if = {
+				limit = {
+					any_of_scopes = {
+						array = global.ARI_ShouHaiZheMingDan_ER
+						has_nationality = GEH
+						NOT = { has_character_flag = GEH_character_found }
+					}
+				}
+				hidden_effect = {
+					random_scope_in_array = {
+						array = global.ARI_ShouHaiZheMingDan_ER
+						limit = {
+							has_nationality = GEH
+							NOT = { has_character_flag = GEH_character_found }
+						}
+						set_character_flag = GEH_character_found
+						FROM = {
+							set_variable = { GST_GEH_state_character = PREV }
+						}
+					}
+				}
+				
+			}
+			army_experience = 25
+		}
+	}
+	GST_GEH_rescue_student = {
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+    	target_array = global.GST_JS_ZBH
+		target_GEHgger = {
+			FROM = {
+				has_variable = GST_GEH_state_character
+				var:GST_GEH_state_character = {
+					has_character_flag = ARI_BeiBangJia
+				}
+			}
+		}
+		visible = {
+			original_tag = GEH
+		}
+		available = {
+			all_owned_state = {
+				has_state_flag = GEH_advance_exploration
+			}
+			command_power > 19.9
+			has_manpower > 299
+			has_equipment = { infantry_equipment > 299 }
+			has_equipment = { support_equipment > 499 }
+		}
+		days_remove = 20
+		complete_effect = {
+			add_command_power = -30
+			add_manpower = -300
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -300
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -500
+			}
+		}
+		remove_effect = {
+			var:FROM.GST_GEH_state_character = {
+				custom_effect_tooltip = HELP_STU_LOC
+				hidden_effect = {
+					clr_character_flag = GEH_character_found
+					clr_character_flag = ARI_BeiBangJia
+					remove_from_array = {
+						array = global.ARI_ShouHaiZheMingDan_SAN
+						value = this
+					}
+					remove_from_array = {
+						array = global.ARI_ShouHaiZheMingDan_ER
+						value = this
+					}
+				}
+				
+			}
+		}
+	}
+
+
 	GST_XC_DM_JingPiLiJie = { #消除精疲力竭 - 拥有并控制
 		icon = generic_research
 		priority = 11

@@ -133,10 +133,7 @@ GEH_emergency_time_decision_category = {
 
 		complete_effect = {
 			add_stability = 0.1
-			add_timed_idea = {
-				idea = GEH_supress_the_choas_idea
-				days = 180
-			}
+			add_ideas = GEH_supress_the_choas_idea
 		}
 	}
 
@@ -153,10 +150,7 @@ GEH_emergency_time_decision_category = {
 
 		complete_effect = {
 			add_stability = -0.05
-			add_timed_idea = {
-				idea = GEH_control_the_transport_idea
-				days = 180
-			}
+			add_ideas = GEH_control_the_transport_idea
 		}
 	}
 
@@ -191,10 +185,7 @@ GEH_emergency_time_decision_category = {
 		complete_effect = {
 			add_stability = -0.1
 			add_war_support = -0.1
-			add_timed_idea = {
-				idea = GEH_no_step_back_idea
-				days = 180
-			}
+			add_ideas = GEH_no_step_back_idea
 		}
 	}
 

@@ -19,8 +19,8 @@ GEH_emergency_time_decision_category = {
 
 	visible = {
 		original_tag = GEH
-		has_completed_focus = GEH_extraordinary_measures
-		NOT = { has_war_with = ARI } #和阿里乌斯处于和平
+		has_completed_focus = GEH_Extraordinary_measures
+		has_war_with = ARI #和阿里乌斯处于和平
 		#和阿里乌斯的战斗结束后消失
 	}
 	priority = 1098

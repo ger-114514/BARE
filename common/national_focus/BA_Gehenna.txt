@@ -394,6 +394,13 @@ focus_tree = {
             add_to_variable = {
                 GEH_discipline_committee_ability = -3
             }
+
+
+            hidden_effect = {
+                GEH_food_service_and_gourmet_research_calc = yes
+                GEH_hot_spring_calc = yes
+                GEH_discipline_committee_calc = yes
+            }
             custom_effect_tooltip = GEH_Chaotic_freedom_tooltip
         }
         ai_will_do = {
@@ -447,6 +454,12 @@ focus_tree = {
 
             add_to_variable = {
                 GEH_discipline_committee_ability = 5
+            }
+
+            hidden_effect = {
+                GEH_food_service_and_gourmet_research_calc = yes
+                GEH_hot_spring_calc = yes
+                GEH_discipline_committee_calc = yes
             }
             custom_effect_tooltip = GEH_Securing_power_tooltip
             
@@ -820,8 +833,14 @@ focus_tree = {
                 GEH_discipline_committee_ability = 10
             }
 
-            custom_effect_tooltip = GEH_Imminent_tooltip
+            hidden_effect = {
+                GEH_food_service_and_gourmet_research_calc = yes
+                GEH_hot_spring_calc = yes
+                GEH_discipline_committee_calc = yes
+            }
 
+            custom_effect_tooltip = GEH_Imminent_tooltip
+            
         }
         ai_will_do = {
             factor = 3
@@ -858,8 +877,8 @@ focus_tree = {
 
     #和平将至
     focus = {
-		id = GEH_Gehenna_United
-        icon = GFX_goal_GEH_Gehenna_United
+		id = GEH_peace_at_hand
+        icon = GFX_goal_GEH_peace_at_hand
 	    relative_position_id = GEH_Imminent
         cost = 4
         x = 0
@@ -870,13 +889,13 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
+            # hidden_trigger = {
+            #      has_global_flag =  BA_2st_eden_pact_end
+            # }
         }
 
         completion_reward = {
-            
+            add_ideas = GEH_ideas_peace_at_hand
         }
         ai_will_do = {
             factor = 3
@@ -1121,6 +1140,13 @@ focus_tree = {
             add_to_variable = {
                 GEH_hot_spring_activity = -10
             }
+
+            hidden_effect = {
+                GEH_food_service_and_gourmet_research_calc = yes
+                GEH_hot_spring_calc = yes
+                GEH_discipline_committee_calc = yes
+            }
+
             custom_effect_tooltip = GEH_Command_lines_tooltip
         }
         ai_will_do = {
@@ -1156,10 +1182,10 @@ focus_tree = {
             factor = 3
         }
 	}
-    #格黑娜的团结
-    focus = {
-		id = GEH_United_Gehenna
-        icon = GFX_goal_GEH_United_Gehenna
+    #
+    focus = {#万魔殿引领格黑娜！
+		id = GEH_pandemonium_leader
+        icon = GFX_goal_GEH_pandemonium_leader
 	    relative_position_id = GEH_Command_lines
         cost = 4
         x = 0
@@ -1171,13 +1197,13 @@ focus_tree = {
         
 
         bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
+            # hidden_trigger = {
+            #     has_global_flag =  BA_2st_eden_pact_end
+            # }
         }
 
         completion_reward = {
-            
+            add_ideas = GEH_ideas_pandemonium_leader
         }
         ai_will_do = {
             factor = 3
@@ -1192,18 +1218,24 @@ focus_tree = {
         cost = 4
         x = 0
         y = 6
-        # prerequisite = {  focus =  GEH_Gehenna_United focus = GEH_United_Gehenna }
+        # prerequisite = {  focus =  GEH_peace_at_hand focus = GEH_United_Gehenna }
 
-        allow_branch = {
-           has_global_flag =  WOR_ancient_cathedral_has_been_attacked
+        # allow_branch = {
+        #    has_global_flag =  WOR_ancient_cathedral_has_been_attacked
+        # }
+
+        available = {
+            always = no
         }
 
-
+        bypass = {
+            has_global_flag =  WOR_ancient_cathedral_has_been_attacked
+        }
 
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            custom_effect_tooltip = GEH_War_breaks_out_tooltip
         }
         ai_will_do = {
             factor = 3
@@ -1223,7 +1255,10 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            add_ideas = GEH_emergency_methods_for_arius
+            unlock_decision_category_tooltip = GEH_emergency_time_decision_category
+
+            custom_effect_tooltip = GEH_emergency_methods_for_arius_tooltip
         }
         ai_will_do = {
             factor = 3
@@ -1242,7 +1277,8 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            unlock_decision_tooltip = GEH_save_our_vip_students
+            unlock_decision_tooltip = GST_GEH_advance_exploration
         }
         ai_will_do = {
             factor = 3
@@ -1333,14 +1369,55 @@ focus_tree = {
 		id = GEH_Battle_of_the_Ancient_Temple
         icon = GFX_goal_GEH_Battle_of_the_Ancient_Temple
 	    relative_position_id =  GEH_War_breaks_out
-        cost = 4
+        cost = 2
         x = 2
         y = 1
         prerequisite = {  focus =  GEH_War_breaks_out }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+            custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_3_1_tt
+
+            	hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.1
+                }            
+            }
         }
         ai_will_do = {
             factor = 3
@@ -1352,14 +1429,55 @@ focus_tree = {
 		id = GEH_Gather_the_troops
         icon = GFX_goal_GEH_Gather_the_troops
 	    relative_position_id =  GEH_Battle_of_the_Ancient_Temple
-        cost = 4
+        cost = 2
         x = 0
         y = 1
         prerequisite = {  focus =  GEH_Battle_of_the_Ancient_Temple }
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
-            
+             custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_3_1_tt
+
+            	hidden_effect = {
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_attack_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_defence_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_org_regain
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_army_speed_factor
+                    value = 0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_supply_consumption_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_out_of_supply_factor
+                    value = -0.1
+                }
+
+                add_to_variable = {
+                    var = GEH_a_unpredictable_attack_land_reinforce_rate
+                    value = 0.01
+                }
+                add_to_variable = {
+                    var =  GEH_a_unpredictable_attack_breakthrough_factor
+                    value = 0.1
+                }            
+            }
         }
         ai_will_do = {
             factor = 3

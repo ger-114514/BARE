@@ -246,6 +246,14 @@ GEH_food_service_and_gourmet_research_calc = {
 }
 #每周格黑那变化
 GEH_weekly_variable_change = {
+	#每周破坏度变化
+	add_to_variable = {
+		GEH_hot_spring_destructive = GEH_hot_spring_destructive_weekly
+	}
+	add_to_variable = {
+		GEH_ood_service_destructive = GEH_ood_service_destructive_weekly
+	}
+
 	add_to_variable = { GEH_food_service_activity = 1 }
 	add_to_variable = { GEH_gourmet_research_activity = 1 }
 	add_to_variable = { GEH_hot_spring_activity = 1 }
