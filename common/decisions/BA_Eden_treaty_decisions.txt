@@ -1366,3 +1366,23 @@ Eden_treaty_to_be_signed_decisions = {
 		}
 	}
 }
+
+Eden_cathedral_war = {
+	Eden_cathedral_war_goes_on = {
+		priority = 1000
+		is_good = no
+		days_mission_timeout = 30
+		available = { 
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			has_war = no
+		}
+		timeout_effect = {
+			activate_mission = Eden_cathedral_war_goes_on
+		}
+	}
+}

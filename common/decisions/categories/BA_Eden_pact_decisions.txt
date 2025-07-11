@@ -25,3 +25,19 @@ Eden_treaty_to_be_signed_decisions = {
 	}
 	priority = 2000
 }
+##古圣堂之战##
+Eden_cathedral_war = {
+	allowed = {
+		OR = {
+			original_tag = GEH
+			original_tag = TRI
+			original_tag = ARI
+		}
+	}
+	visible = {
+		has_war = yes
+		#has_global_flag = WOR_ancient_cathedral_has_been_attacked
+	}
+	visible_when_empty = yes
+	priority = 9999
+}
