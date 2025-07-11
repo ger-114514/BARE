@@ -2442,6 +2442,9 @@ focus_tree = {
             random_controlled_state = {
                 set_state_flag = GEH_gourmet_research_damage
             }
+            country_event = {
+                id = GEH_discipline_committee_events.1
+            }
         }
     }
 
@@ -2560,7 +2563,9 @@ focus_tree = {
 
         prerequisite = { focus = GEH_conversation_with_Food_Research }
         completion_reward = {
-        
+            country_event = {
+                id = GEH_gourmet_research_events.1
+            } 
         }
     }
 
@@ -2577,7 +2582,9 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
 
         completion_reward = {
-        
+            country_event = {
+                id = GEH_hot_spring_events.1
+            } 
         }
     }
     
@@ -2595,7 +2602,9 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_Monitoring_trouble }
       
         completion_reward = {
-        
+            country_event = {
+                id = GEH_hot_spring_events.3
+            } 
         }
     }
 
@@ -2647,7 +2656,9 @@ focus_tree = {
 
       
         completion_reward = {
-        
+            country_event = {
+                id = GEH_hot_spring_events.2
+            } 
         }
     }
 
@@ -2703,7 +2714,9 @@ focus_tree = {
       
       
         completion_reward = {
-        
+            country_event = {
+                id = GEH_hot_spring_events.4
+            } 
         }
     }
 
@@ -2829,7 +2842,9 @@ focus_tree = {
        
 
         completion_reward = {
-        
+            country_event = {
+                id = GEH_discipline_committee_events.1
+            }
         }
     }
 
