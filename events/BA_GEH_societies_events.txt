@@ -1,0 +1,625 @@
+add_namespace = GEH_societies_events
+add_namespace = GEH_discipline_committee_events
+add_namespace = GEH_hot_spring_events
+add_namespace = GEH_gourmet_research_events
+
+#格黑那社团现状
+country_event = {
+    id = GEH_societies_events.1
+    title = GEH_societies_events.1.t
+    desc = GEH_societies_events.1.d
+    picture = GFX_GEH_societies_events_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_events.1.a
+        add_political_power = -100
+		add_stability = 10
+		ai_chance = {
+			factor = 300
+		}
+    }
+
+	option = {
+		name = GEH_events.1.b
+        add_political_power = 200
+		add_stability = -20
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#假日时光
+country_event = {
+    id = GEH_discipline_committee_events.1
+    title = GEH_discipline_committee_events.1.t
+    desc = GEH_discipline_committee_events.1.d
+    picture = GFX_GEH_discipline_committee_events_1
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_discipline_committee_events.1.a
+        country_event = {
+            id = GEH_discipline_committee_events.2
+        }
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+	option = {
+		name = GEH_discipline_committee_events.1.b
+		country_event = {
+            id = GEH_discipline_committee_events.3
+        }
+		ai_chance = {
+			factor = 300
+		}
+    }
+
+	option = {
+		name = GEH_discipline_committee_events.1.c
+		country_event = {
+            id = GEH_discipline_committee_events.4
+        }
+		ai_chance = {
+			factor = 10
+		}
+    }
+}
+
+#沙滩排球
+country_event = {
+    id = GEH_discipline_committee_events.2
+    title = GEH_discipline_committee_events.2.t
+    desc = GEH_discipline_committee_events.2.d
+    picture = GFX_GEH_discipline_committee_events_2
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_discipline_committee_events.2.a
+        country_event = {
+            id = GEH_discipline_committee_events.6
+        }
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#可爱的委员长
+country_event = {
+    id = GEH_discipline_committee_events.3
+    title = GEH_discipline_committee_events.3.t
+    desc = GEH_discipline_committee_events.3.d
+    picture = GFX_GEH_discipline_committee_events_3
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_discipline_committee_events.3.a
+        country_event = {
+            id = GEH_discipline_committee_events.6
+        }
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#hentai！
+country_event = {
+    id = GEH_discipline_committee_events.4
+    title = GEH_discipline_committee_events.4.t
+    desc = GEH_discipline_committee_events.4.d
+    picture = GFX_GEH_discipline_committee_events_4
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_discipline_committee_events.4.a
+		add_political_power = -10
+        country_event = {
+            id = GEH_discipline_committee_events.1
+        }
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#意外总会发生
+country_event = {
+    id = GEH_discipline_committee_events.6
+    title = GEH_discipline_committee_events.6.t
+    desc = GEH_discipline_committee_events.6.d
+    picture = GFX_GEH_discipline_committee_events_6
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_discipline_committee_events.6.a
+        country_event = {
+            id = GEH_discipline_committee_events.7
+        }
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#风纪委员会的日常
+country_event = {
+    id = GEH_discipline_committee_events.7
+    title = GEH_discipline_committee_events.7.t
+    desc = GEH_discipline_committee_events.7.d
+    picture = GFX_GEH_discipline_committee_events_7
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_discipline_committee_events.7.a
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#伊织出动
+country_event = {
+    id = GEH_discipline_committee_events.8
+    title = GEH_discipline_committee_events.8.t
+    desc = GEH_discipline_committee_events.8.d
+    picture = GFX_GEH_discipline_committee_events_8
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.8.a
+		custom_effect_tooltip = GEH_discipline_committee_events_tt_1
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#亚子的支援
+country_event = {
+    id = GEH_discipline_committee_events.9
+    title = GEH_discipline_committee_events.9.t
+    desc = GEH_discipline_committee_events.9.d
+    picture = GFX_GEH_discipline_committee_events_9
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.9.a
+		custom_effect_tooltip = GEH_discipline_committee_events_tt_2
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#日奈出动美食部
+country_event = {
+    id = GEH_discipline_committee_events.10
+    title = GEH_discipline_committee_events.10.t
+    desc = GEH_discipline_committee_events.10.d
+    picture = GFX_GEH_discipline_committee_events_10
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.10.a
+		custom_effect_tooltip = GEH_discipline_committee_events_tt_3
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#日奈出动温泉部
+country_event = {
+    id = GEH_discipline_committee_events.11
+    title = GEH_discipline_committee_events.11.t
+    desc = GEH_discipline_committee_events.11.d
+    picture = GFX_GEH_discipline_committee_events_11
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.11.a
+		custom_effect_tooltip = GEH_discipline_committee_events_tt_4
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#日奈沟通美食部
+country_event = {
+    id = GEH_discipline_committee_events.12
+    title = GEH_discipline_committee_events.12.t
+    desc = GEH_discipline_committee_events.12.d
+    picture = GFX_GEH_discipline_committee_events_12
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.12.a
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#日奈沟通温泉部
+country_event = {
+    id = GEH_discipline_committee_events.13
+    title = GEH_discipline_committee_events.13.t
+    desc = GEH_discipline_committee_events.13.d
+    picture = GFX_GEH_discipline_committee_events_13
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.13.a
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#教育美食部
+country_event = {
+    id = GEH_discipline_committee_events.14
+    title = GEH_discipline_committee_events.14.t
+    desc = GEH_discipline_committee_events.14.d
+    picture = GFX_GEH_discipline_committee_events_14
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.14.a
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#教育温泉部
+country_event = {
+    id = GEH_discipline_committee_events.15
+    title = GEH_discipline_committee_events.15.t
+    desc = GEH_discipline_committee_events.15.d
+    picture = GFX_GEH_discipline_committee_events_15
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_discipline_committee_events.15.a
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+###温泉部
+#追踪温泉部
+country_event = {
+    id = GEH_hot_spring_events.1
+    title = GEH_hot_spring_events.1.t
+    desc = GEH_hot_spring_events.1.d
+    picture = GFX_GEH_hot_spring_events_1
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_hot_spring_events.1.a
+		country_event = {
+			id = GEH_hot_spring_events.2
+		}
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+	option = {
+		name = GEH_hot_spring_events.1.b
+		country_event = {
+			id = GEH_hot_spring_events.3
+		}
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#废弃度假村
+country_event = {
+    id = GEH_hot_spring_events.2
+    title = GEH_hot_spring_events.2.t
+    desc = GEH_hot_spring_events.2.d
+    picture = GFX_GEH_hot_spring_events_2
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_hot_spring_events.2.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_1
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#崭新的温泉度假村
+country_event = {
+    id = GEH_hot_spring_events.3
+    title = GEH_hot_spring_events.3.t
+    desc = GEH_hot_spring_events.3.d
+    picture = GFX_GEH_hot_spring_events_3
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_hot_spring_events.3.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_2
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#度假村的午后
+country_event = {
+    id = GEH_hot_spring_events.4
+    title = GEH_hot_spring_events.4.t
+    desc = GEH_hot_spring_events.4.d
+    picture = GFX_GEH_hot_spring_events_4
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_hot_spring_events.4.a
+        country_event = {
+			id = GEH_hot_spring_events.5
+		}
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#红冬的学生
+country_event = {
+    id = GEH_hot_spring_events.5
+    title = GEH_hot_spring_events.5.t
+    desc = GEH_hot_spring_events.5.d
+    picture = GFX_GEH_hot_spring_events_5
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_hot_spring_events.5.a
+        
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#格黑那的温泉时光
+country_event = {
+    id = GEH_hot_spring_events.6
+    title = GEH_hot_spring_events.6.t
+    desc = GEH_hot_spring_events.6.d
+    picture = GFX_GEH_hot_spring_events_6
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_dip_events.3.a
+		add_political_power = -20
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#温泉部一阶段事件
+country_event = {
+    id = GEH_hot_spring_events.7
+    title = GEH_hot_spring_events.7.t
+    desc = GEH_hot_spring_events.7.d
+    picture = GFX_GEH_hot_spring_events_7
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_hot_spring_events.7.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_3
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#温泉部二阶段事件
+country_event = {
+    id = GEH_hot_spring_events.8
+    title = GEH_hot_spring_events.8.t
+    desc = GEH_hot_spring_events.8.d
+    picture = GFX_GEH_hot_spring_events_8
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_hot_spring_events.8.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_4
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#温泉部三阶段事件
+country_event = {
+    id = GEH_hot_spring_events.9
+    title = GEH_hot_spring_events.9.t
+    desc = GEH_hot_spring_events.9.d
+    picture = GFX_GEH_hot_spring_events_9
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_hot_spring_events.9.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_5
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#美食部
+#美食研的新一天
+country_event = {
+    id = GEH_gourmet_research_events.1
+    title = GEH_gourmet_research_events.1.t
+    desc = GEH_gourmet_research_events.1.d
+    picture = GFX_GEH_gourmet_research_events_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_gourmet_research_events.1.a
+        country_event = {
+			id = GEH_gourmet_research_events.2
+		}
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#今天是——美味时光
+country_event = {
+    id = GEH_gourmet_research_events.2
+    title = GEH_gourmet_research_events.2.t
+    desc = GEH_gourmet_research_events.2.d
+    picture = GFX_GEH_gourmet_research_events_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_gourmet_research_events.2.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_1
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#泉的美食指南
+country_event = {
+    id = GEH_gourmet_research_events.3
+    title = GEH_gourmet_research_events.3.t
+    desc = GEH_gourmet_research_events.3.d
+    picture = GFX_GEH_gourmet_research_events_3
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_gourmet_research_events.3.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_2
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#纯子的美食指南
+country_event = {
+    id = GEH_gourmet_research_events.4
+    title = GEH_gourmet_research_events.4.t
+    desc = GEH_gourmet_research_events.4.d
+    picture = GFX_GEH_gourmet_research_events_4
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_gourmet_research_events.4.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_3
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#明里的美食指南
+country_event = {
+    id = GEH_gourmet_research_events.5
+    title = GEH_gourmet_research_events.5.t
+    desc = GEH_gourmet_research_events.5.d
+    picture = GFX_GEH_gourmet_research_events_5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_gourmet_research_events.5.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_4
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
+
+#晴奈的美食指南
+country_event = {
+    id = GEH_gourmet_research_events.6
+    title = GEH_gourmet_research_events.6.t
+    desc = GEH_gourmet_research_events.6.d
+    picture = GFX_GEH_gourmet_research_events_6
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		name = GEH_gourmet_research_events.6.a
+		custom_effect_tooltip = GEH_hot_spring_events_tt_5
+		ai_chance = {
+			factor = 1000
+		}
+    }
+}
