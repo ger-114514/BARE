@@ -1268,7 +1268,50 @@ ideas = {
                 original_tag = GEH
             }
         }
+        #社团线
+        #风纪委员会的日常
+        GEH_daytoday_work_of_discipline_committee = {
+            name = GEH_daytoday_work_of_discipline_committee
+            picture = unknown
 
+            modifier = {
+              army_morale_factor = 0.1
+              army_strength_factor = 0.1
+              army_org_factor = 0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        #格黑那的美食时光
+        GEH_food_time_of_gourmet_research = {
+            name = GEH_food_time_of_gourmet_research
+            picture = unknown
+
+            modifier = {
+              supply_node_range = 0.1
+              no_supply_grace = 24
+              consumer_goods_factor = -0.05
+              political_power_factor = 0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        #格黑那的温泉时光
+        GEH_hot_spring_time_of_hot_spring = {
+            name = GEH_hot_spring_time_of_hot_spring
+            picture = unknown
+
+            modifier = {
+              army_morale_factor = 0.1
+              research_speed_factor = 0.2
+              political_power_factor = -0.2
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
     }
 
     hidden_ideas = {

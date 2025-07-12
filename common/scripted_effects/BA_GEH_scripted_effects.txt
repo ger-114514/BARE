@@ -146,6 +146,25 @@ GEH_discipline_committee_calc = {
 		min = 0
 		max = 100
 	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Order_in_Chaos
+			}
+			check_variable = { GEH_discipline_committee_ability = 100 }
+		}
+		set_variable = { GEH_discipline_committee_max_political_power = 0.2 }
+	}
+	else_if = {
+        limit = {
+			GEH = {
+				has_completed_focus = GEH_Let_a_hundred_flowers_bloom
+			}
+			check_variable = { GEH_discipline_committee_ability = 100 }
+		}
+		set_variable = { GEH_discipline_committee_max_political_power = 0.1 }
+		set_variable = { GEH_discipline_committee_max_research = 0.3 }
+	}
 	set_variable = { GEH_discipline_committee_research = GEH_discipline_committee_ability }
     set_variable = { GEH_discipline_committee_stability_factor = GEH_discipline_committee_ability }
     set_variable = { GEH_discipline_committee_stability_weekly = GEH_discipline_committee_ability }
@@ -168,6 +187,7 @@ GEH_discipline_committee_calc = {
 	multiply_variable = { GEH_discipline_committee_stability_weekly_temp = 0.000002 }
 	add_to_variable = { GEH_discipline_committee_stability_factor = GEH_discipline_committee_stability_factor_temp }
 	add_to_variable = { GEH_discipline_committee_stability_weekly = GEH_discipline_committee_stability_weekly_temp }
+	add_to_variable = { GEH_discipline_committee_research = GEH_discipline_committee_max_research }
 }
 #温泉部相关计算
 GEH_hot_spring_calc = {
@@ -181,20 +201,44 @@ GEH_hot_spring_calc = {
 		min = 0
 		max = 100
 	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Hot_Spring_Village
+			}
+			check_variable = { GEH_hot_spring_activity = 100 }
+		}
+		set_variable = { GEH_hot_spring_max_local_resources = 0.1 }
+		set_variable = { GEH_hot_spring_max_production_speed_infrastructure = 0.1 }
+	}
+	else = {
+		set_variable = { GEH_hot_spring_max_local_resources = 0 }
+		set_variable = { GEH_hot_spring_max_production_speed_infrastructure = 0 }
+	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Relaxing_time
+			}
+			check_variable = { GEH_hot_spring_activity = 100 }
+		}
+		set_variable = { GEH_hot_spring_max_production_speed_buildings = 0.1 }
+	}
+	else = {
+		set_variable = { GEH_hot_spring_max_production_speed_buildings = 0 }
+	}
     set_variable = { GEH_hot_spring_production_speed_buildings = GEH_hot_spring_activity }
 	set_variable = { GEH_hot_spring_industry_repair = GEH_hot_spring_activity }
 	set_variable = { GEH_hot_spring_line_change_production = GEH_hot_spring_destructive }
 	set_variable = { GEH_hot_spring_production_factory_efficiency = GEH_hot_spring_destructive }
 	set_variable = { GEH_hot_spring_industry_repair_temp = GEH_hot_spring_destructive }
-	add_to_variable = { GEH_hot_spring_line_change_production = -100 }
-	add_to_variable = { GEH_hot_spring_production_factory_efficiency = -100 }
-	add_to_variable = { GEH_hot_spring_industry_repair_temp = -100 }
 	multiply_variable = { GEH_hot_spring_production_speed_buildings = 0.002 }
 	multiply_variable = { GEH_hot_spring_industry_repair = 0.002 }
-	multiply_variable = { GEH_hot_spring_line_change_production = 0.002 }
-	multiply_variable = { GEH_hot_spring_production_factory_efficiency = 0.002 }
-	multiply_variable = { GEH_hot_spring_industry_repair_temp = 0.005}
+	multiply_variable = { GEH_hot_spring_line_change_production = -0.002 }
+	multiply_variable = { GEH_hot_spring_production_factory_efficiency = -0.002 }
+	multiply_variable = { GEH_hot_spring_industry_repair_temp = -0.005}
 	add_to_variable = { GEH_hot_spring_industry_repair = GEH_hot_spring_industry_repair_temp }
+	add_to_variable = { GEH_hot_spring_production_speed_buildings = GEH_hot_spring_max_production_speed_buildings }
 }
 #给食部和美食研相关计算
 GEH_food_service_and_gourmet_research_calc = {
@@ -213,35 +257,53 @@ GEH_food_service_and_gourmet_research_calc = {
 		min = 0
 		max = 100
 	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Delicious_time
+			}
+			chechk_variable = {
+				GEH_gourmet_research_activity = 100
+			}
+		}
+		set_variable = { GEH_gourmet_research_max_research = 0.1 }
+		set_variable = { GEH_gourmet_research_max_consumer_goods = -0.1 }
+		set_variable = { GEH_gourmet_research_max_speed = 0.1 } 
+	}
+	else = {
+		set_variable = { GEH_gourmet_research_max_research = 0 }
+		set_variable = { GEH_gourmet_research_max_consumer_goods = 0 } 
+		set_variable = { GEH_gourmet_research_max_speed = 0 } 
+	}
 	set_variable = { GEH_food_service_supply_consumption = GEH_food_service_activity }
 	set_variable = { GEH_food_serviceno_supply_grace = GEH_food_service_activity }
 	set_variable = { GEH_food_service_supply_node_range = GEH_food_service_activity }
+	multiply_variable = { GEH_food_service_supply_node_range = 0.001 }
 	set_variable = { GEH_food_service_consumer_goods_factor = GEH_food_service_activity }
 	set_variable = { GEH_food_service_consumer_goods_factor_temp = GEH_gourmet_research_activity }
 	set_variable = { GEH_gourmet_research_production_speed_industrial = GEH_gourmet_research_activity }
 	set_variable = { GEH_gourmet_research_army_morale_factor = GEH_gourmet_research_activity }
+	multiply_variable = { GEH_gourmet_research_army_morale_factor = 0.001 }
+	set_variable = { GEH_food_service_efficiency_factor = GEH_food_service_efficiency }
+	multiply_variable = { GEH_food_service_efficiency_factor = 0.001 }
 	set_variable = { GEH_gourmet_research_production_speed_buildings = GEH_gourmet_research_destructive }
 	set_variable = { GEH_gourmet_research_army_morale_factor_temp = GEH_gourmet_research_destructive }
 	set_variable = { GEH_food_service_supply_consumption_temp = GEH_gourmet_research_destructive }
 	set_variable = { GEH_food_service_supply_node_range_temp = GEH_gourmet_research_destructive }
-	add_to_variable = { GEH_gourmet_research_production_speed_buildings = -100 }
-	add_to_variable = { GEH_gourmet_research_army_morale_factor_temp = -100 }
-	add_to_variable = { GEH_food_service_supply_consumption_temp = -100 }
-	add_to_variable = { GEH_food_service_supply_node_range_temp = -100 }
+	multiply_variable = { GEH_food_service_supply_node_range_temp = -0.001 }
     multiply_variable = { GEH_food_service_supply_consumption = -0.002 }
-	multiply_variable = { GEH_food_serviceno_supply_grace = 0.6 }
-	multiply_variable = { GEH_food_service_supply_node_range = 0.0015 }
+	multiply_variable = { GEH_food_serviceno_supply_grace = 0.6 }	
 	multiply_variable = { GEH_food_service_consumer_goods_factor = -0.001 }
 	multiply_variable = { GEH_food_service_consumer_goods_factor_temp = 0.001 }
-	multiply_variable = { GEH_gourmet_research_production_speed_industrial = 0.001 }
-	multiply_variable = { GEH_gourmet_research_army_morale_factor = 0.0015 }
-	multiply_variable = { GEH_gourmet_research_production_speed_buildings = 0.001 }
-	multiply_variable = { GEH_gourmet_research_army_morale_factor_temp = 0.0015 }
-	multiply_variable = { GEH_food_service_supply_consumption_temp = -0.0015 }
-	multiply_variable = { GEH_food_service_supply_node_range_temp = 0.001 }
+	multiply_variable = { GEH_gourmet_research_production_speed_industrial = 0.001 }	
+	multiply_variable = { GEH_gourmet_research_production_speed_buildings = -0.001 }
+	multiply_variable = { GEH_gourmet_research_army_morale_factor_temp = -0.001 }
+	multiply_variable = { GEH_food_service_supply_consumption_temp = 0.001 }
+	
 	add_to_variable = { GEH_food_service_supply_consumption = GEH_food_service_supply_consumption_temp }
 	add_to_variable = { GEH_food_service_supply_node_range = GEH_food_service_supply_node_range_temp }
 	add_to_variable = { GEH_food_service_consumer_goods_factor = GEH_food_service_consumer_goods_factor_temp }
+	add_to_variable = { GEH_food_service_consumer_goods_factor = GEH_gourmet_research_max_consumer_goods }
 	add_to_variable = { GEH_gourmet_research_army_morale_factor = GEH_gourmet_research_army_morale_factor_temp }
 }
 #每周格黑那变化

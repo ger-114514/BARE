@@ -275,10 +275,12 @@ GEH_societies_dec_category = {
         }
     }
 ##############温泉开发部#############
+
     #温泉部一阶段破坏
     GEH_operation_hot_spring_1 = {
         icon = GFX_GEH_megumu_dec
         allowed = { tag = GEH }
+        state_target = yes
         activation = {
             FROM = {
                 OWNER = {
@@ -317,8 +319,7 @@ GEH_societies_dec_category = {
                     }
                 }                     
             }                          
-        }
-        state_target = yes
+        }   
         timeout_effect = {
             FROM = {
                 clr_state_flag = GEH_hot_spring_damage
@@ -482,7 +483,7 @@ GEH_societies_dec_category = {
         days_re_enable = 60
         on_map_mode = map_only
         state_target = yes
-        target_trigger = {
+        available = {
             FROM = {
                 OWNER = {
                     tag = GEH 
@@ -492,9 +493,18 @@ GEH_societies_dec_category = {
                 has_state_flag = GEH_hot_spring_damage
             }
         }
+        target_trigger = {
+            FROM = {
+                OWNER = {
+                    tag = GEH 
+                    check_variable = { GEH_hot_spring_activity > 50 }
+                    #has_completed_focus = GEH_Hot_spring_development
+                }
+                has_state_flag = GEH_hot_spring_damage
+            }
+        }
         modifier = {
             civilian_factory_use = 3
-            consumer_goods_factor =- -0.1
         }
         complete_effect = {
             FROM = {
@@ -568,7 +578,7 @@ GEH_societies_dec_category = {
         }        
         remove_effect = {
             FROM = {
-                OWNER = {
+                GEH = {
                     add_to_variable = { GEH_hot_spring_activity = 5 }                     
                     add_to_variable = { GEH_hot_spring_destructive = -10 }
                     GEH_hot_spring_calc = yes
@@ -873,7 +883,7 @@ GEH_societies_dec_category = {
                     check_variable = { GEH_gourmet_research > 50 }
                     has_completed_focus = GEH_Delicious_time
                 }
-                has_state_flag = GEH_hot_spring_damage
+                has_state_flag = GEH_gourmet_research_damage
             }
         }
         complete_effect = {
@@ -899,7 +909,7 @@ GEH_societies_dec_category = {
                     limit = { industrial_complex > 3 }
                     OWNER = {
                         add_political_power = 100
-                        add_stability = 5
+                        add_stability = 0.05
                     }
                 }
                 else = {
@@ -1003,7 +1013,7 @@ GEH_societies_dec_category = {
             FROM = {
                 state = 671
                 GEH = {
-                    #has_completed_focus = GEH_Optimizing_supply_chains
+                    has_completed_focus = GEH_Optimizing_supply_chains
                 }
                 has_state_flag = GEH_food_service_trans                
             }
@@ -1427,7 +1437,7 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    has_completed_focus = GEH_Discipline_inspection_officer
+                    #has_completed_focus = GEH_Discipline_inspection_officer
                     check_variable = { GEH_discipline_committee_repression > 50 }
                 }
                 OR = {
