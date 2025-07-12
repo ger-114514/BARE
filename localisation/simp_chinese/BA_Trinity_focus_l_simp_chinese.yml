@@ -205,6 +205,7 @@
  TRI_teaparty_leading_tt: "§Y茶话会§!在§Y所有地区§!的影响力§Y+5§!\n§Y$TRI_trinity_military$§!追加效果：\n $MODIFIER_ARMY_ORG_REGAIN$：§R-5.0%§!\n $MODIFIER_ARMY_ORG_FACTOR$：§G+5.0%§!\n $combat_readiness_recovery_percentage$：§G+10.00%§!"
  TRI_standing_guard: "常备之盾"
  TRI_standing_guard_desc: "茶话会直属炮兵部队是茶话会最声名远扬且历史悠久的部队。可自从大公会议之后，我们逐渐收缩了这些部队的规模。她们的炮击猛烈而准确，如果想要应对当下风雨飘摇的局势，我们应当重视起她们来：付出任何可能的代价，并努力使之恢复到最佳的状态——时刻预备的进攻就是最好的常备之盾。"
+ TRI_standing_guard_tt_2: "§Y$TRI_trinity_military$§!追加效果：\n $free_cost_combat_readiness_percentage$：§G+5.0%§!\n $MODIFIER_TRAINING_TIME_FACTOR$：§Y-10.00%§!"
  TRI_standing_guard_tt: "通过完成§Y茶话会直属炮兵部队建设§!决议，我们可以逐步获得最高加成：\n"
  TRI_mass_army: "全面准备"
  TRI_mass_army_desc: "通过努力，我们已经同普通社团之间建立了紧密的联系。这不但有利于同学之间的茶会开展得轻松愉快，更打通了各个环节，极大地便利了茶话会在基层环节的工作开展。"
@@ -278,6 +279,6 @@
 #国策奖励科技加速卡
  TRI_carryon_package_facilitation_tech_bonus_name: "便携式随身武器包"
 #国策追加效果描述
- TRI_sufficient_sweets_supply_ns_tt: "§Y$material_allocation_modifier$§!追加效果：\n每日政治点数获取：§G+0.25§!\n稳定度：§G+2.5%§!\n生活消费品系数：§Y+5.0%§!\n经济法案花费：§Y-20.0%§!\n\n"
+ TRI_sufficient_sweets_supply_ns_tt: "§Y$material_allocation_modifier$§!追加效果：\n每日政治点数获取：§G+0.25§!\n稳定度：§G+2.5%§!\n生活消费品系数：§Y+5.0%§!\n经济法案花费：§Y-20.0%§!\n$TRI_unity_weekly_modifier$：§G+0.5§!\n\n"
  TRI_amazing_ns_tt_default: "§Y$trinity_industry_modifier$§!追加效果：\n§Y民用工厂§!建造速度：§R-5.0%§!\n§Y军用工厂§!建造速度：§G+10.0%§!\n生产效率上限：§G+15.0%§!\n生产效率增长：§R-5.0%§!\n\n"
  TRI_amazing_ns_tt_alt: "§Y$trinity_industry_modifier$§!追加效果：\n建造速度：§G+5.0%§!\n生产效率增长：§G+10.0%§!\n生产效率保持：§G+30.0%§!\n\n"
