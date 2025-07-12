@@ -1,0 +1,381 @@
+characters = {
+	ALF_The_Leader = {
+		name = ALF_The_Leader_name
+		portraits = {
+			civilian = {
+				large = GFX_BARE_Portrait_ALF_the_leader_mask
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_Portrait_ari_1
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			desc = ALF_The_Leader_desc
+			traits = {
+				#flower_in_wars
+			}
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+
+	##桥野悦依
+	ALF_Washino_Yuei = {
+		name = ALF_Washino_Yuei_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Washino_Yuei
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Washino_Yuei
+			}
+		}
+		field_marshal = {
+			visible = {
+				##
+			}
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			
+		}
+	}
+
+	##吉泽弥生
+	ALF_Yoshizawa_Yayoi = {
+		name = ALF_Yoshizawa_Yayoi_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Yoshizawa_Yayoi
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Yoshizawa_Yayoi
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##三枝悠波
+	ALF_Saegusa_Yuwa = {
+		name = ALF_Saegusa_Yuwa_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Saegusa_Yuwa
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Saegusa_Yuwa
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##柴崎一花
+	ALF_Shibasaki_Ichika = {
+		name = ALF_Shibasaki_Ichika_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Shibasaki_Ichika
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Shibasaki_Ichika
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##前冈好美
+	ALF_Maeoka_Yoshimi = {
+		name = ALF_Maeoka_Yoshimi_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Maeoka_Yoshimi
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Maeoka_Yoshimi
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##茂木重树
+	ALF_Shigeki_Niki = {
+		name = ALF_Shigeki_Niki_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Shigeki_Niki
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Shigeki_Niki
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##边美安柚
+	ALF_Henmi_Ayu = {
+		name = ALF_Henmi_Ayu_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Henmi_Ayu
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Henmi_Ayu
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##森下佳穗
+	ALF_Morishita_Kaho = {
+		name = ALF_Morishita_Kaho_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Morishita_Kaho
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Morishita_Kaho
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##乘松未留
+	ALF_Norimatsu_Miru = {
+		name = ALF_Norimatsu_Miru_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Norimatsu_Miru
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Norimatsu_Miru
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##东江静
+	ALF_Toueshi_Dzuru = {
+		name = ALF_Toueshi_Dzuru_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Toueshi_Dzuru
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Toueshi_Dzuru
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##蒲原美代子
+	ALF_Kabahara_Miyoko = {
+		name = ALF_Kabahara_Miyoko_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Kabahara_Miyoko
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Kabahara_Miyoko
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##滩尾辉美
+	ALF_Nadao_Terumi = {
+		name = ALF_Nadao_Terumi_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Nadao_Terumi
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Nadao_Terumi
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##小谷图奈
+	ALF_Kometani_Touna = {
+		name = ALF_Kometani_Touna_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Kometani_Touna
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Kometani_Touna
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	##新木美夏
+	ALF_Araki_Mika = {
+		name = ALF_Araki_Mika_name
+		portraits = {
+			civilian = {
+				large = GFX_BAREXP_Portrait_ALF_Araki_Mika
+				#small = GFX_portrait_ARI_atsuko_small
+			}
+			army = {
+				large = GFX_BAREXP_Portrait_ALF_Araki_Mika
+			}
+		}
+		corps_commander = {
+		    visible = {
+			##
+			}
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+#"橋野 結瑛(はしの ゆえい)、吉澤 弥生(よしざわ やよい)、三枝 優葉(さえぐさ ゆうは)、柴崎 初彩(しばざき いちか)、前岡 好未(まえおか よしみ)、茂木 二輝(しげき にき)
+#邊見 安柚(へんみ あゆ)、森下 歌保(もりした かほ)、乘松 未留(のりまつ みる)、戶上 秋弦(とうえ しづる)
+#Hashino Yui Akira ( Wa Shi No Yue I ) , Yoshizawa Yayoi ( Yoshizawa Yayoi ) , Saegusa Yū Ha ( Sae Gusa Yū Wa ) , Shibasaki Hatsu Aya ( Shi Ba Zaki Ichi Ka ) , Mae Oka Kō Mi ( Ma e O ka Yoshimi ) , Motegi Ni Teru ( Shigeki Ni Ki ) 
+# Henmi Yasu Yuzu ( Hen Mi Ayu ) , Morishita Uta Ho ( Mori Shita Ka ho ) , Norimatsu Mi Tome ( Nori Matsu Miru ) , hù Jō Aki Gen ( To Ue Shi Dzuru )
+#蒲原 美代子(かばはら みよこ)、灘尾 旭茉(なだお てるみ)、米谷 冬那(こめたに とうな)、吳山 稀恵(くれやま きえ)、新木 美夏(あらき みか)
+#Kanbara Miyoko ( Ka Ba Hara Miyoko ) , Nadao Asahi mò ( Na Da O Teru Mi ) , Kome Tani Fuyu Na ( Kome Ta Ni To U na ) , wú shān Mare Megumi ( Kure Ya ma Kie ) , Shin Ki Minatsu ( Araki Mika )
+##不要动最后的空行！！！！##

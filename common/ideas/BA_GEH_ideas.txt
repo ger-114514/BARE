@@ -48,6 +48,48 @@ ideas = {
             }
         }
 
+        GEH_ideas_peace_at_hand = {
+            name =  GEH_ideas_peace_at_hand
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+               political_power_factor = 0.05
+               stability_factor = 0.05
+               army_org_factor = 0.05
+               army_morale_factor = 0.05
+
+               GEH_societies_food_service_destructive_weekly = -0.25
+               GEH_societies_hot_spring_destructive_weekly = -0.25
+            }
+        }
+
+
+
+        GEH_ideas_pandemonium_leader = {
+            name =  GEH_ideas_pandemonium_leader
+            picture = unknown
+
+            allowed = {
+                original_tag = GEH
+            }
+
+            modifier = {
+                
+                industrial_capacity_factory = 0.1
+                stability_factor = 0.05
+                war_support_factor = 0.05 
+                political_power_factor = 0.05
+
+
+               GEH_societies_food_service_destructive_weekly = 0.25
+               GEH_societies_hot_spring_destructive_weekly = 0.25
+            }
+        }
+
         #筹备会谈
         GEH_ideas_prepare_for_conference_1 = {
             name = GEH_ideas_prepare_for_conference_1
@@ -397,11 +439,17 @@ ideas = {
 
         #非常措施
         GEH_emergency_methods_for_arius = {
-            name = GEH_unity_gehennna
+            name = GEH_emergency_methods_for_arius
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
             }
 
             modifier = {
@@ -413,11 +461,17 @@ ideas = {
 
         #铁腕镇压
         GEH_supress_the_choas_idea = {
-            name = GEH_unity_gehennna
+            name =  GEH_supress_the_choas_idea
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
             }
 
             modifier = {
@@ -428,11 +482,18 @@ ideas = {
 
         #管制交通
         GEH_control_the_transport_idea = {
-            name = GEH_unity_gehennna
+            name = GEH_control_the_transport_idea
             picture = unknown
 
             allowed = {
                 original_tag = GEH
+            }
+
+
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
             }
 
             modifier = {
@@ -449,6 +510,13 @@ ideas = {
 
             allowed = {
                 original_tag = GEH
+            }
+
+
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
             }
 
             modifier = {

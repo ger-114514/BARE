@@ -1,0 +1,12 @@
+ideas = {
+	hidden_ideas = {
+		GVS_Expansion_daily_necessities_Production_Idea = {
+            allowed = {
+                always = no
+            }
+			modifier = {
+                consumer_goods_factor = -0.05
+            }
+		}
+	}
+}
