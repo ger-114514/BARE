@@ -242,6 +242,7 @@ material_allocation_modifier = {
 	production_speed_buildings_factor = ma_building_speed
 	political_power_gain = ma_daily_power_gain
 	economy_cost_factor = ma_economy_cost
+	TRI_unity_weekly_modifier = ma_TRI_unity_weekly_modifier
 }
 
 #圣三一工业
@@ -353,6 +354,7 @@ TRI_trinity_military = {
 	mobilization_speed = TRI_trinity_military_mobilization_speed
 	consumer_goods_factor = TRI_trinity_military_consumer_goods_factor
 	combat_readiness_factor = TRI_trinity_military_combat_readiness_factor
+	free_cost_combat_readiness_percentage = TRI_trinity_military_free_cost_combat_readiness_percentage
 	combat_readiness_recovery_percentage = TRI_trinity_military_combat_readiness_recovery_percentage
 	can_use_combat_readiness_percentage = TRI_trinity_military_can_use_combat_readiness_percentage
 	land_doctrine_cost_factor = TRI_trinity_military_land_doctrine_cost_factor

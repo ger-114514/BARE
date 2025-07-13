@@ -6,11 +6,11 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_center_campus_region }
 				set_variable = { region_x@TRI_center_campus_region = 6 }
 				set_variable = { region_y@TRI_center_campus_region = 367 }
-				set_variable = { region_stability@TRI_center_campus_region = 1 }
+				set_variable = { region_stability@TRI_center_campus_region = 0.95 }
 				set_variable = { tea_party@TRI_center_campus_region = 200 }
-				set_variable = { justice@TRI_center_campus_region = 30 }
-				set_variable = { sisterhood@TRI_center_campus_region = 30 }
-				set_variable = { knights@TRI_center_campus_region = 30 }
+				set_variable = { justice@TRI_center_campus_region = 40 }
+				set_variable = { sisterhood@TRI_center_campus_region = 40 }
+				set_variable = { knights@TRI_center_campus_region = 40 }
 				add_to_array = { TRI_center_campus_region = 118 }
 				add_to_array = { TRI_center_campus_region = 114 }
 				add_to_array = { TRI_center_campus_region = 115 }
@@ -32,8 +32,8 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_northern_campus_region }
 				set_variable = { region_x@TRI_northern_campus_region = 84 }
 				set_variable = { region_y@TRI_northern_campus_region = 278 }
-				set_variable = { region_stability@TRI_northern_campus_region = 1 }
-				set_variable = { tea_party@TRI_northern_campus_region = 100 }
+				set_variable = { region_stability@TRI_northern_campus_region = 0.95 }
+				set_variable = { tea_party@TRI_northern_campus_region = 80 }
 				set_variable = { justice@TRI_northern_campus_region = 20 }
 				set_variable = { sisterhood@TRI_northern_campus_region = 60 }
 				set_variable = { knights@TRI_northern_campus_region = 20 }
@@ -55,7 +55,7 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_eastern_campus_region }
 				set_variable = { region_x@TRI_eastern_campus_region = 243 }
 				set_variable = { region_y@TRI_eastern_campus_region = 289 }
-				set_variable = { region_stability@TRI_eastern_campus_region = 1 }
+				set_variable = { region_stability@TRI_eastern_campus_region = 0.95 }
 				set_variable = { tea_party@TRI_eastern_campus_region = 120 }
 				set_variable = { justice@TRI_eastern_campus_region = 45 }
 				set_variable = { sisterhood@TRI_eastern_campus_region = 15 }
@@ -80,7 +80,7 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_southern_campus_region }
 				set_variable = { region_x@TRI_southern_campus_region = 84 }
 				set_variable = { region_y@TRI_southern_campus_region = 508 }
-				set_variable = { region_stability@TRI_southern_campus_region = 1 }
+				set_variable = { region_stability@TRI_southern_campus_region = 0.95 }
 				set_variable = { tea_party@TRI_southern_campus_region = 100 }
 				set_variable = { justice@TRI_southern_campus_region = 15 }
 				set_variable = { sisterhood@TRI_southern_campus_region = 15 }
@@ -108,7 +108,7 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_industrial_park_region }
 				set_variable = { region_x@TRI_industrial_park_region = 215 }
 				set_variable = { region_y@TRI_industrial_park_region = 89 }
-				set_variable = { region_stability@TRI_industrial_park_region = 0.95 }
+				set_variable = { region_stability@TRI_industrial_park_region = 0.9 }
 				set_variable = { tea_party@TRI_industrial_park_region = 30 }
 				set_variable = { justice@TRI_industrial_park_region = 15 }
 				set_variable = { sisterhood@TRI_industrial_park_region = 15 }
@@ -132,7 +132,7 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_living_area_region }
 				set_variable = { region_x@TRI_living_area_region = 156 }
 				set_variable = { region_y@TRI_living_area_region = 192 }
-				set_variable = { region_stability@TRI_living_area_region = 0.95 }
+				set_variable = { region_stability@TRI_living_area_region = 0.9 }
 				set_variable = { tea_party@TRI_living_area_region = 30 }
 				set_variable = { justice@TRI_living_area_region = 15 }
 				set_variable = { sisterhood@TRI_living_area_region = 15 }
@@ -154,7 +154,7 @@ ideas = {
 				add_to_array = { TRI_regions = token:TRI_business_district_region }
 				set_variable = { region_x@TRI_business_district_region = 321 }
 				set_variable = { region_y@TRI_business_district_region = 77 }
-				set_variable = { region_stability@TRI_business_district_region = 0.95 }
+				set_variable = { region_stability@TRI_business_district_region = 0.9 }
 				set_variable = { tea_party@TRI_business_district_region = 30 }
 				set_variable = { justice@TRI_business_district_region = 15 }
 				set_variable = { sisterhood@TRI_business_district_region = 15 }
