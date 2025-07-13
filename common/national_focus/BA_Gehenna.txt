@@ -1550,7 +1550,7 @@ focus_tree = {
     #强化执法力量
     focus = {
         id = GEH_Strengthening_law_enforcement
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Strengthening_law_enforcement
         prerequisite = {  focus = GEH_The_First_Eden_Treaty }
         relative_position_id = GEH_The_First_Eden_Treaty
         cost = 5
@@ -1568,7 +1568,7 @@ focus_tree = {
    #军事思想
     focus = {
         id = GEH_Military_Thought
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Military_Thought
         cost = 5
         x = 0
         y = 2
@@ -1596,7 +1596,7 @@ focus_tree = {
     #速度至上
     focus = {
         id = GEH_Speed_is_everything
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Speed_is_everything
         cost = 5
         x = 0
         y = 1
@@ -1622,7 +1622,7 @@ focus_tree = {
     #灵活多变
     focus = {
         id = GEH_Flexible
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Flexible
         cost = 5
         x = 0
         y = 1
@@ -1641,7 +1641,7 @@ focus_tree = {
     #黑球快递
     focus = {
         id = GEH_Black_Ball_Express
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Black_Ball_Express
         cost = 10
         x = 0
         y = 1
@@ -1656,7 +1656,7 @@ focus_tree = {
     #突破矛头
     focus = {
         id = GEH_Breakthrough
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Breakthrough
         cost = 5
         x = -2
         y = 1
@@ -1692,7 +1692,7 @@ focus_tree = {
     #攻坚克难
     focus = { 
         id = GEH_Overcoming_difficulties
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Overcoming_difficulties
         cost = 5
         x = 0
         y = 1
@@ -1716,7 +1716,7 @@ focus_tree = {
     #战斗工兵
     focus = { 
         id = GEH_Combat_Engineer
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Combat_Engineer
         cost = 10
         x = 0
         y = 1
@@ -1741,7 +1741,7 @@ focus_tree = {
     #以人为本
     focus = { #待定，启用陆军内阁
         id = GEH_People_oriented
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_ GEH_People_oriented
         cost = 5
         x = 2
         y = 1
@@ -1763,7 +1763,7 @@ focus_tree = {
     #巍峨如山
     focus = {
         id = GEH_Towering_mountain
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Towering_mountain
         cost = 5
         x = 0
         y = 1
@@ -1786,7 +1786,7 @@ focus_tree = {
     #伪装大师
     focus = {
         id = GEH_Master_Disguise
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Master_Disguise
         cost = 10
         x = 0
         y = 1
@@ -1802,7 +1802,7 @@ focus_tree = {
     #百战之师
     focus = {
         id = GEH_Hundred_Battles
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Hundred_Battles
         cost = 10
         x = 0
         y = 1
@@ -1850,7 +1850,7 @@ focus_tree = {
     #边境防御
     focus = {
         id = GEH_Border_defense
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Border_defense
         cost = 5
         x = -4
         y = 2
@@ -1918,7 +1918,7 @@ focus_tree = {
     #培训医疗常识
     focus = {
         id = GEH_Training_in_medical_knowledge
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Training_in_medical_knowledge
         cost = 5
         x = 0
         y = 1
@@ -1934,7 +1934,7 @@ focus_tree = {
     #游击英雄
     focus = {
         id = GEH_Guerrilla_Hero
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Guerrilla_Hero
         cost = 5
         x = 0
         y = 1
@@ -1951,7 +1951,7 @@ focus_tree = {
     #无名之火
     focus = {
         id = GEH_The_Fire_Rises
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_The_Fire_Rises
         cost = 5
         x = 0
         y = 1
@@ -1968,7 +1968,7 @@ focus_tree = {
     #征服天空
     focus = {
         id = GEH_Conquer_the_sky
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Conquer_the_sky
         cost = 5
         x = 4
         y = 2
@@ -1990,7 +1990,7 @@ focus_tree = {
     #实验性技术
     focus = {
         id = GEH_Experimental_Technology
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Experimental_Technology
         cost = 10
         x = 0
         y = 1
@@ -2011,7 +2011,7 @@ focus_tree = {
     #加强训练
     focus = {
         id = GEH_Strengthen_training
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Strengthen_training
         cost = 10
         x = 0
         y = 1
@@ -2033,7 +2033,7 @@ focus_tree = {
     #轮换制度
     focus = {
         id = GEH_Rotation_System
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Rotation_System
         cost = 5
         x = 0
         y = 1
@@ -2054,7 +2054,7 @@ focus_tree = {
     #整合军备建设社团
     focus = {
         id = GEH_Integration_Armaments
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Integration_Armaments
         cost = 10
         x = 10
         y = 2
@@ -2073,7 +2073,7 @@ focus_tree = {
     #多用途对空武器
     focus = {
         id = GEH_Multi_purpose_anti_aircraft_weapons
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Multi_purpose_anti_aircraft_weapons
         cost = 10
         x = 0
         y = 1
@@ -2093,7 +2093,7 @@ focus_tree = {
     #实验性防空导弹
     focus = {
         id = GEH_Experimental_anti_aircraft_missile
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Experimental_anti_aircraft_missile
         cost = 10
         x = 0
         y = 1
@@ -2112,7 +2112,7 @@ focus_tree = {
     #成熟设计
     focus = {
         id = GEH_Mature_design
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Mature_design
         cost = 10
         x = 0
         y = 1
@@ -2133,7 +2133,7 @@ focus_tree = {
     #普及下挂榴弹
     focus = {
         id = GEH_Under_hook_grenade
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Under_hook_grenade
         cost = 10
         x = -2
         y = 1
@@ -2149,7 +2149,7 @@ focus_tree = {
     #批量化白光瞄具
     focus = {
         id = GEH_Mass_production_laser_sight
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Mass_production_laser_sight
         cost = 10
         x = 0
         y = 1
@@ -2169,7 +2169,7 @@ focus_tree = {
     #实验性夜视仪
     focus = {
         id = GEH_Experimental_night_vision_goggles
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Experimental_night_vision_goggles
         cost = 10
         x = 0
         y = 1
@@ -2188,7 +2188,7 @@ focus_tree = {
     #迫击炮规格一体化
     focus = {
         id = GEH_Gun_Specifications
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Gun_Specifications
         cost = 10
         x = -4
         y = 1
@@ -2204,7 +2204,7 @@ focus_tree = {
     #反坦克武器小型化
     focus = {
         id = GEH_Lightweight_anti_tank_weapons
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Lightweight_anti_tank_weapons
         cost = 10
         x = 0
         y = 1
@@ -2224,7 +2224,7 @@ focus_tree = {
     #战时简化
     focus = {
         id = GEH_Wartime_simplification
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Wartime_simplification
         cost = 10
         x = 0
         y = 1
@@ -2243,7 +2243,7 @@ focus_tree = {
     #与万魔殿装甲团接洽
     focus = {
         id = GEH_Organize_Negotiation
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Organize_Negotiation
         cost = 10
         x = 2
         y = 1
@@ -2262,7 +2262,7 @@ focus_tree = {
  
     focus = {
         id = GEH_Using_Feedback
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Using_Feedback
         cost = 10
         x = 0
         y = 1
@@ -2281,7 +2281,7 @@ focus_tree = {
     #动员坦克
     focus = {
         id = GEH_Mobilizing_tanks
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Mobilizing_tanks
         cost = 10
         x = 0
         y = 1
@@ -2300,7 +2300,7 @@ focus_tree = {
     #规范运输行业
     focus = {
         id = GEH_Transportation_Industry
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Transportation_Industry
         cost = 10
         x = 4
         y = 1
@@ -2319,7 +2319,7 @@ focus_tree = {
     
     focus = {
         id = GEH_Increase_investment
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Increase_investment
         cost = 10
         x = 0
         y = 1
@@ -2347,7 +2347,7 @@ focus_tree = {
 
     focus = {
         id = GEH_Simplify_production
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Simplify_production
         cost = 10
         x = 0
         y = 1
@@ -2367,7 +2367,7 @@ focus_tree = {
    #处理混乱的社团
     focus = {
         id = GEH_Dealing_with_chaos
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Dealing_with_chaos
         cost = 10
         x = -15
         y = 1
@@ -2442,16 +2442,13 @@ focus_tree = {
             random_controlled_state = {
                 set_state_flag = GEH_gourmet_research_damage
             }
-            country_event = {
-                id = GEH_discipline_committee_events.1
-            }
         }
     }
 
     #美食爱好者的麻烦
     focus = {
         id = GEH_Food_Lovers_Trouble
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Food_Lovers_Trouble
         cost = 10
         x = 0
         y = 1
@@ -2468,7 +2465,7 @@ focus_tree = {
     #解决食物供应问题
     focus = {
         id = GEH_Solving_food_supply_problems
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Solving_food_supply_problems
         cost = 10
         x = 0
         y = 1
@@ -2485,7 +2482,7 @@ focus_tree = {
     #扩展给食部
     focus = {
         id = GEH_Expanded_feeding_department
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Expanded_feeding_department
         cost = 10
         x = 0
         y = 1
@@ -2503,7 +2500,7 @@ focus_tree = {
     #优化食物供应链
     focus = {
         id = GEH_Optimizing_supply_chains
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Optimizing_supply_chains
         cost = 10
         x = 2
         y = 1
@@ -2520,7 +2517,7 @@ focus_tree = {
     #武装给食部食品运输队
     focus = {
         id = GEH_Armed_transport_team
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Armed_transport_team
         cost = 10
         x = 0
         y = 1
@@ -2537,7 +2534,7 @@ focus_tree = {
     #与美食研的交谈
     focus = {
         id = GEH_conversation_with_Food_Research
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_conversation_with_Food_Research
         cost = 10
         x = 0
         y = 1
@@ -2554,7 +2551,7 @@ focus_tree = {
     #今天是，美味时光
     focus = {
         id = GEH_Delicious_time
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Delicious_time
         cost = 10
         x = 0
         y = 1
@@ -2563,16 +2560,14 @@ focus_tree = {
 
         prerequisite = { focus = GEH_conversation_with_Food_Research }
         completion_reward = {
-            country_event = {
-                id = GEH_gourmet_research_events.1
-            } 
+        
         }
     }
 
     #"恐怖分子"们
     focus = {
         id = GEH_Cute_terrorists
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Cute_terrorists
         cost = 10
         x = 6
         y = 1
@@ -2582,16 +2577,14 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
 
         completion_reward = {
-            country_event = {
-                id = GEH_hot_spring_events.1
-            } 
+        
         }
     }
     
     #引导温泉部
     focus = {
         id = GEH_Boot_trouble
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Boot_trouble
         cost = 10
         x = -1
         y = 1
@@ -2602,16 +2595,14 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_Monitoring_trouble }
       
         completion_reward = {
-            country_event = {
-                id = GEH_hot_spring_events.3
-            } 
+        
         }
     }
 
     #温泉开发
     focus = {
         id = GEH_Hot_spring_development
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Hot_spring_development
         cost = 10
         x = 0
         y = 1
@@ -2627,7 +2618,7 @@ focus_tree = {
     #这里是，格黑娜温泉乡
     focus = {
         id = GEH_Hot_Spring_Village
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Hot_Spring_Village
         cost = 10
         x = 0
         y = 1
@@ -2644,7 +2635,7 @@ focus_tree = {
     #监管温泉部
     focus = {
         id = GEH_Monitoring_trouble
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Monitoring_trouble
         cost = 10
         x = 1
         y = 1
@@ -2656,16 +2647,14 @@ focus_tree = {
 
       
         completion_reward = {
-            country_event = {
-                id = GEH_hot_spring_events.2
-            } 
+        
         }
     }
 
     #温泉体验
     focus = {
         id = GEH_Hot_Spring_Experience
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Hot_Spring_Experience
         cost = 10
         x = 0
         y = 1
@@ -2683,7 +2672,7 @@ focus_tree = {
     #温泉部的惬意时光
     focus = {
         id = GEH_Relaxing_time
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Relaxing_time
         cost = 10
         x = 0
         y = 1
@@ -2701,7 +2690,7 @@ focus_tree = {
     #享受温泉时光
     focus = {
         id = GEH_Enjoy_your_time
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Enjoy_your_time
         cost = 10
         x = -1
         y = 1
@@ -2714,16 +2703,14 @@ focus_tree = {
       
       
         completion_reward = {
-            country_event = {
-                id = GEH_hot_spring_events.4
-            } 
+        
         }
     }
 
     #处理不良学生
     focus = {
         id = GEH_Dealing_with_bad_students
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Dealing_with_bad_students
         cost = 10
         x = -6
         y = 1
@@ -2740,7 +2727,7 @@ focus_tree = {
     #拔除据点
     focus = {
         id = GEH_Eliminate_the_base
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Eliminate_the_base
         cost = 10
         x = 0
         y = 1
@@ -2757,7 +2744,7 @@ focus_tree = {
     #驱逐外来不良
     focus = {
         id = GEH_Deportation
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Deportation
         cost = 10
         x = -1
         y = 1
@@ -2774,7 +2761,7 @@ focus_tree = {
     #风纪委员会巡查
     focus = {
         id = GEH_Discipline_inspection_officer
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Discipline_inspection_officer
         cost = 10
         x = 1
         y = 1
@@ -2791,7 +2778,7 @@ focus_tree = {
     #乱中有序
     focus = {
         id = GEH_Order_in_Chaos
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Order_in_Chaos
         cost = 10
         x = 0
         y = 1
@@ -2811,7 +2798,7 @@ focus_tree = {
     #百花齐放
     focus = {
         id = GEH_Let_a_hundred_flowers_bloom
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Let_a_hundred_flowers_bloom
         cost = 10
         x = 0
         y = 1
@@ -2829,7 +2816,7 @@ focus_tree = {
     #风纪委员会的日常
     focus = {
         id = GEH_Daily_life_of_the_Discipline
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Daily_life_of_the_Discipline
         cost = 10
         x = -1
         y = 1
@@ -2842,16 +2829,14 @@ focus_tree = {
        
 
         completion_reward = {
-            country_event = {
-                id = GEH_discipline_committee_events.1
-            }
+        
         }
     }
 
     #致缤纷的明天
     focus = {
         id = GEH_To_a_better_tomorrow
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_To_a_better_tomorrow
         cost = 10
         x = 6
         y = 1
@@ -3499,7 +3484,7 @@ focus_tree = {
     #格黑娜临时对外关系部
     focus = {
         id = GEH_Ministry_of_Foreign_Affairs_of_Gehenna
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Ministry_of_Foreign_Affairs_of_Gehenna
 
         allow_branch = {
             always = no
@@ -3515,7 +3500,7 @@ focus_tree = {
     #购买千年技术
     focus = {
         id = GEH_Buy_American_Technology
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Buy_American_Technology
         relative_position_id = GEH_Ministry_of_Foreign_Affairs_of_Gehenna
         cost = 5
         x = 0
@@ -3530,7 +3515,7 @@ focus_tree = {
     #路权问题
     focus = {
         id = GEH_Right_of_way_issues
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Right_of_way_issues
         relative_position_id = GEH_Buy_American_Technology
         cost = 5
         x = 0
@@ -3544,7 +3529,7 @@ focus_tree = {
     #沙漠中的投资
     focus = {
         id = GEH_Desert_Investment
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Desert_Investment
         relative_position_id = GEH_Right_of_way_issues
         cost = 5
         x = 0
@@ -3558,7 +3543,7 @@ focus_tree = {
     #大人？
     focus = {
         id = GEH_Adult
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Adult
         relative_position_id = GEH_Ministry_of_Foreign_Affairs_of_Gehenna
         x = 2
         y = 0
@@ -3576,7 +3561,7 @@ focus_tree = {
     #争取夏莱帮助
     focus = {
         id = GEH_Seek_help_from_Xialai
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Seek_help_from_Xialai
         relative_position_id = GEH_Adult
         cost = 5
         x = 0
@@ -3591,7 +3576,7 @@ focus_tree = {
     #建设指导
     focus = {
         id = GEH_Construction_guidance
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Construction_guidance
         relative_position_id = GEH_Seek_help_from_Xialai
         x = 0
         y = 1
@@ -3603,7 +3588,7 @@ focus_tree = {
     #放宽人员交流
     focus = {
         id = GEH_Relaxation_communication
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Relaxation_communication
         relative_position_id = GEH_Construction_guidance
         x = 0
         y = 1
@@ -3615,7 +3600,7 @@ focus_tree = {
     #大运动会要来了
     focus = {
         id = GEH_sports_meet_coming
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_sports_meet_coming
 
         allow_branch = {
             always = no
@@ -3632,7 +3617,7 @@ focus_tree = {
     #抽调精英
     focus = {
         id = GEH_Recruiting_elites
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Recruiting_elites
        
         cost = 5
        relative_position_id = GEH_sports_meet_coming
@@ -3646,7 +3631,7 @@ focus_tree = {
     #加强纪律
     focus = {
         id = GEH_Strengthening_discipline
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Strengthening_discipline
        
         cost = 5
        relative_position_id = GEH_Recruiting_elites
@@ -3660,7 +3645,7 @@ focus_tree = {
     #增派医疗团体
     focus = {
         id = GEH_Increase_medical_team
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_Increase_medical_team
        
         cost = 5
        relative_position_id = GEH_sports_meet_coming
@@ -3674,7 +3659,7 @@ focus_tree = {
     #加强学院维稳
     focus = {
         id = GEH_deploy_hina
-        icon = GFX_goal_GEH_building_problems
+        icon = GFX_goal_GEH_deploy_hina
        
         cost = 5
        relative_position_id = GEH_Increase_medical_team
