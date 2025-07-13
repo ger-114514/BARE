@@ -2,55 +2,56 @@ add_namespace = Great_Game
 #启用战术演习
 news_event = {
 	id = Great_Game.1000
-    title = Great_Game.1000.t
-    desc = Great_Game.1000.d
-    #picture = GFX_TRI_events_pic
+	title = Great_Game.1000.t
+	desc = Great_Game.1000.d
+	#picture = GFX_TRI_events_pic
 	major = yes
 	is_triggered_only = yes
 	trigger = {
-        Great_Game_can_be_overlord = yes
-    }
-    immediate = {
-        hidden_effect = {
-            set_global_flag = BA_Great_Game_available
+		Great_Game_can_be_overlord = yes
+	}
+	immediate = {
+		hidden_effect = {
+			set_global_flag = BA_Great_Game_available
 			if = {
 				limit = { original_tag = CEN }
-        for_each_scope_loop = {
-          array = global.Great_Game_overlords
-          resize_array = { Great_Game_record_target = 1 }
-          resize_array = { Great_Game_record_enemy = 1 }
-          resize_array = { Great_Game_record_result = 1 }
-          resize_array = { Great_Game_record_faction = 1 }
-          resize_array = { Great_Game_record_date = 1 }
-          add_to_array = { Great_Game_decision_window = 1 }
-        }
+				for_each_scope_loop = {
+					array = global.Great_Game_overlords
+					resize_array = { Great_Game_record_target = 1 }
+					resize_array = { Great_Game_record_enemy = 1 }
+					resize_array = { Great_Game_record_result = 1 }
+					resize_array = { Great_Game_record_faction = 1 }
+					resize_array = { Great_Game_record_date = 1 }
+					add_to_array = { Great_Game_decision_window = 1 }
+					add_to_array = { this.topbar_array = token:BARE_great_game_coin }	
+				}
 				Great_Game_generate_global_chart = yes
 			}
-        }
-        
-    }
-    option = {
+		}
+
+	}
+	option = {
 		name = Great_Game.1000.a
-        custom_effect_tooltip = event_immediately_happened_tt
-        unlock_decision_category_tooltip = BA_Great_Game_decisions
+		custom_effect_tooltip = event_immediately_happened_tt
+		unlock_decision_category_tooltip = BA_Great_Game_decisions
 		ai_chance = {
 			base = 100
 		}
-    }
+	}
 
 }
 country_event = {
-    id = Great_Game.1
-    title = Great_Game.1.t
-    desc = Great_Game.1.d
-    timeout_days = 3
-    is_triggered_only = yes
-    #picture = 
-    option = {
+	id = Great_Game.1
+	title = Great_Game.1.t
+	desc = Great_Game.1.d
+	timeout_days = 3
+	is_triggered_only = yes
+	#picture =
+	option = {
 		name = Great_Game.1.a
-        
-    }
-    option = {
+
+	}
+	option = {
 		name = Great_Game.1.b
-    }
+	}
 }

@@ -2527,7 +2527,9 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Optimizing_supply_chains }
 
         completion_reward = {
-        
+            add_dynamic_modifier = {
+                modifier = GEH_armed_food_convoys
+            }
         }
     }
 
@@ -2560,7 +2562,10 @@ focus_tree = {
 
         prerequisite = { focus = GEH_conversation_with_Food_Research }
         completion_reward = {
-        
+            country_event = {
+                id = GEH_gourmet_research_events.1
+            } 
+            add_ideas = GEH_food_time_of_gourmet_research
         }
     }
 
@@ -2703,7 +2708,10 @@ focus_tree = {
       
       
         completion_reward = {
-        
+            country_event = {
+                id = GEH_hot_spring_events.4
+            } 
+            add_ideas = GEH_hot_spring_time_of_hot_spring
         }
     }
 
@@ -2829,7 +2837,10 @@ focus_tree = {
        
 
         completion_reward = {
-        
+            country_event = {
+                id = GEH_discipline_committee_events.1
+            }
+            add_ideas = GEH_daytoday_work_of_discipline_committee
         }
     }
 

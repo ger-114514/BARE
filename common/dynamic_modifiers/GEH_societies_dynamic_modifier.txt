@@ -8,6 +8,7 @@ GEH_discipline_committee_on_patrol = {
     army_org_factor = GEH_discipline_committee_army_org_factor
     production_factory_max_efficiency_factor = GEH_discipline_committee_production_factory_max
     production_factory_start_efficiency_factor = GEH_discipline_committee_production_factory_start
+    political_power_factor = GEH_discipline_committee_max_political_power
 }
 #温泉开发部
 GEH_hot_spring_committee = {
@@ -17,6 +18,8 @@ GEH_hot_spring_committee = {
     industry_repair_factor = GEH_hot_spring_industry_repair
     line_change_production_efficiency_factor = GEH_hot_spring_line_change_production
     production_factory_efficiency_gain_factor = GEH_hot_spring_production_factory_efficiency
+    local_resources_factor = GEH_hot_spring_max_local_resources
+    production_speed_infrastructure_factor = GEH_hot_spring_max_production_speed_infrastructure
 }
 #供餐问题
 GEH_meal_service_issues = {
@@ -29,4 +32,14 @@ GEH_meal_service_issues = {
     production_speed_industrial_complex_factor = GEH_gourmet_research_production_speed_industrial
     production_speed_buildings_factor = GEH_gourmet_research_production_speed_buildings
     army_morale_factor = GEH_gourmet_research_army_morale_factor
+    research_speed_factor = GEH_gourmet_research_max_research
+    army_speed_factor = GEH_gourmet_research_max_speed
+}
+#格黑那武装食品运输队
+GEH_armed_food_convoys = {
+    icon = "GFX_idea_unknown"
+
+    mechanized_attack_factor = GEH_food_service_efficiency_factor
+    army_org_factor = GEH_food_service_efficiency_factor
+    max_planning = GEH_food_service_efficiency_factor
 }
