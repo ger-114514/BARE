@@ -1,0 +1,32 @@
+ideas = {
+	hidden_ideas = {
+		#必要数据 以下不动
+		BARE_dynamic_topbar_container_button = {}#空 加号图标
+
+
+
+		##############
+		#通用
+		BARE_top_common_categories = {}#常用参数
+		BARE_stability_factor = {}#稳定度修正
+		BARE_stability_weekly = {}#每周稳定度增长
+		BARE_defensive_war_stability_factor = {}#战争防御对稳定度修正
+		BARE_war_support_factor = {}#战争支持度修正
+		BARE_war_support_weekly = {}#每周战争支持度增长
+		BARE_casualties = {}#伤亡
+		BARE_warscore = {}#战争分数
+		BARE_surrender_limit = {}#投降界限
+		BARE_surrender_progress = {}#投降进度
+		BARE_consumer_goods = {}#生活消费品
+		BARE_min_consumer_goods = {}#最低生活消费品
+
+		BARE_number_of_nuclear_bombs = {}#核弹数量
+
+		BARE_great_game_coin = {}#战术演习
+
+
+		#圣三一
+		TRI_dynamic_topbar_category = {}#分类使用
+		TRI_kirifuji_nagisa_paranoia_level = {}#桐藤渚偏执度
+    }
+}

@@ -4,6 +4,7 @@ BA_TRI_initialize_paranoia_system = {
 	add_country_leader_trait = TRI_nagisa_Find_the_root
 	hidden_effect = {
 		set_country_flag = TRI_paranoia_system_active
+		add_to_array = { Root.topbar_array = token:TRI_kirifuji_nagisa_paranoia_level }	
 		#桐藤渚政治偏执度设计
 		set_variable = { TRI_nagisa_paranoia_total = 50 } #偏执度总计，上限为100，用于计算数值范围触发事件
 		set_variable = { TRI_nagisa_paranoia_rank = 2 }
@@ -325,6 +326,7 @@ BA_TRI_remove_paranoia_system = {
 	hidden_effect = {
 		if = {
 			limit = { has_country_flag = TRI_paranoia_system_active }
+			remove_from_array = { Root.topbar_array = token:TRI_kirifuji_nagisa_paranoia_level } 
 			clear_array = TRI_paranoia_association
 			clr_country_flag = TRI_paranoia_system_active
 			clear_variable = TRI_paranoia_change
