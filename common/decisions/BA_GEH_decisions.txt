@@ -194,38 +194,34 @@ GEH_emergency_time_decision_category = {
 	GEH_save_our_vip_students = {
 		visible = {
 			has_completed_focus = GEH_save_important_student
-			NOT = {
-				check_variable = { 
-					var = GEH_save_students_count
-					value = 3
-					compare = greater_than_or_equals
-				}
+			has_dynamic_modifier = {
+				modifier = GEH_a_unpredictable_attack
 			}
 		}
 		available = {
 			has_equipment = { infantry_equipment > 499 }
 			has_equipment = { support_equipment > 99 }
 			command_power > 24
-			NOT = {
-				check_variable = { 
-					var = GEH_save_students_count
-					value = 3
-					compare = greater_than_or_equals
-				}
-			}
+			# NOT = {
+			# 	check_variable = { 
+			# 		var = GEH_save_students_count
+			# 		value = 3
+			# 		compare = greater_than_or_equals
+			# 	}
+			# }
 		}
 		cost = 15
 
 		days_remove = 30
 
 		complete_effect = {
-			custom_effect_tooltip = GEH_3_times_get_back_characters
-			hidden_effect = {
-				add_to_variable = {
-					var = GEH_save_students_count
-					value = 1
-				}
-			}
+			# custom_effect_tooltip = GEH_3_times_get_back_characters
+			# hidden_effect = {
+			# 	add_to_variable = {
+			# 		var = GEH_save_students_count
+			# 		value = 1
+			# 	}
+			# }
 		}
 
 		remove_effect = {
@@ -239,59 +235,36 @@ GEH_emergency_time_decision_category = {
 				amount = -100
 			}
 
-			custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_3_1_tt
 
 			if = {
 				limit = {
-					check_variable = { 
-						var = GEH_save_students_count
-						value = 3
-						compare = greater_than_or_equals
+					check_variable = {
+						GEH_a_unpredictable_attack_army_org_factor = -0.1
 					}
 				}
-
-				clr_country_flag = GEH_has_fall_in_chaos_in_arius_attack
+				remove_dynamic_modifier = {
+					modifier = GEH_a_unpredictable_attack
+				}
+			}else = {
+				custom_effect_tooltip = GEH_add_GEH_a_unpredictable_attack_ideas_changed_3_1_tt
 			}
+
+			
+
 
 			hidden_effect = {
                 add_to_variable = {
-                    var = GEH_a_unpredictable_attack_army_attack_factor
-                    value = 0.1
-                }
-
-                add_to_variable = {
-                    var = GEH_a_unpredictable_attack_army_defence_factor
-                    value = 0.1
-                }
-
-                add_to_variable = {
-                    var = GEH_a_unpredictable_attack_army_org_regain
-                    value = 0.1
-                }
-
-                add_to_variable = {
-                    var = GEH_a_unpredictable_attack_army_speed_factor
-                    value = 0.1
-                }
-
-                add_to_variable = {
-                    var = GEH_a_unpredictable_attack_supply_consumption_factor
-                    value = -0.1
-                }
-
-                add_to_variable = {
-                    var = GEH_a_unpredictable_attack_out_of_supply_factor
-                    value = -0.1
-                }
-
-                add_to_variable = {
-                    var = GEH_a_unpredictable_attack_land_reinforce_rate
-                    value = 0.01
+                    GEH_a_unpredictable_attack_army_org_factor = 0.1
                 }
                 add_to_variable = {
-                    var =  GEH_a_unpredictable_attack_breakthrough_factor
-                    value = 0.1
-                }            
+                    GEH_a_unpredictable_attack_army_morale_factor = 0.1
+                }
+                add_to_variable = {
+                    GEH_a_unpredictable_attack_army_defence_factor = 0.1
+                }
+                add_to_variable = {
+                    GEH_a_unpredictable_land_reinforce_rate = 0.02
+                }      
             }
 		}
 	}

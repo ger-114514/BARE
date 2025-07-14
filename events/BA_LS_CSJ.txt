@@ -1,6 +1,6 @@
 add_namespace = LS_GST
 
-country_event = { #古圣堂遭受聚变打击
+country_event = { #古圣堂遭受聚变打击 #去兰州买烧饼：废弃事件？
 	id = LS_GST.1
 	title = LS_GST.1.t
 	desc = LS_GST.1.d
@@ -14,118 +14,7 @@ country_event = { #古圣堂遭受聚变打击
 		ai_chance = {
 			base = 114
 		}
-		#TRI_unity 圣三一团结度
-		if = {
-			limit = {
-				ARI = {
-					check_variable = {
-						var = ARI_ZhunBeiDu #准备度
-						value = 46
-						compare = less_than_or_equals #小于等于
-					}
-				}
-			}
-			GEH = {
-				add_war_support = 0.05 #战争支持度修正
-				add_stability = -0.05 #稳定度修正
-				add_dynamic_modifier = {
-					modifier = GEH_a_unpredictable_attack #措手不及
-				}
-			}
-		}
-		else_if = {
-			limit = { 
-				ARI = {
-					check_variable = {
-						var = ARI_ZhunBeiDu #准备度
-						value = 46
-						compare = greater_than_or_equals #大于等于
-					}
-					check_variable = {
-						var = ARI_ZhunBeiDu #准备度
-						value = 91
-						compare = less_than_or_equals #小于等于
-					}
-				}
-			}
-			for_each_loop = {
-				array = global.ARI_ShouHaiZheMingDan_ER
-				value = v
-				var:v = {
-					set_character_flag = ARI_BeiBangJia
-				}
-			}
-			set_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
-			TRI = {
-				declare_war_on = { #向指定国家宣战
-					target = GEH #被宣战国家TAG
-					type = topple_government #战争目标类型 - 颠覆政权
-				}
-				complete_national_focus = TRI_unexpected_accident 
-				load_focus_tree = { #加载国策树
-					tree = TRI_focus_stage_2
-					keep_completed = yes #保持已完成的共享国策
-					copy_completed_from = root #从当前国家复制国策完成状态
-				}
-			}
-
-			GEH = {
-				promote_character = {
-					character = GEH_ako
-					ideology = no_ideology_type
-				}
-				add_dynamic_modifier = {
-					modifier = GEH_a_unpredictable_attack #措手不及
-				}
-			}
-		}
-		else_if = {
-			limit = { 
-				ARI = {
-					check_variable = {
-						var = ARI_ZhunBeiDu #准备度
-						value = 91
-						compare = greater_than_or_equals #大于等于
-					}
-				}
-			}
-			set_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
-			for_each_loop = {
-				array = global.ARI_ShouHaiZheMingDan_SAN
-				value = v
-				var:v = {
-					set_character_flag = ARI_BeiBangJia
-				}
-				log = "asdfasfaf"
-			}
-			
-			TRI = {
-				declare_war_on = { #向指定国家宣战
-					target = GEH #被宣战国家TAG
-					type = topple_government #战争目标类型 - 颠覆政权
-				}
-				complete_national_focus = TRI_unexpected_accident #完成国策 - 烽烟骤起
-				load_focus_tree = { #加载国策树
-					tree = TRI_focus_stage_2
-					keep_completed = yes #保持已完成的共享国策
-					copy_completed_from = root #从当前国家复制国策完成状态
-				}
-				promote_character = TRI_hanako
-			}
-			GEH = {
-				add_ideas = {
-					GEH_army_in_chaos
-				}
-				add_dynamic_modifier = {
-					modifier = GEH_a_unpredictable_attack
-				}
-				promote_character = {
-					character = GEH_JingJiZhuangTaiWeiYuanHui
-					ideology = no_ideology_type
-				}
-			}
-		}
-
+	
 		ARI = {
 			country_event = {
 				id = LS_GST.3
@@ -142,7 +31,135 @@ country_event = { #古圣堂遭受聚变打击
 			launch_nuke = {
 				province = 7663
 			}
+
+
+
+				#TRI_unity 圣三一团结度
+			if = {
+				limit = {
+					ARI = {
+						check_variable = {
+							var = ARI_ZhunBeiDu #准备度
+							value = 46
+							compare = less_than_or_equals #小于等于
+						}
+					}
+				}
+				GEH = {
+					add_war_support = 0.05 #战争支持度修正
+					add_stability = -0.05 #稳定度修正
+
+
+					
+
+
+
+					add_dynamic_modifier = {
+						modifier = GEH_a_unpredictable_attack #措手不及
+					}
+
+
+
+
+
+					
+				}
+			}
+			else_if = {
+				limit = { 
+					ARI = {
+						check_variable = {
+							var = ARI_ZhunBeiDu #准备度
+							value = 46
+							compare = greater_than_or_equals #大于等于
+						}
+						check_variable = {
+							var = ARI_ZhunBeiDu #准备度
+							value = 91
+							compare = less_than_or_equals #小于等于
+						}
+					}
+				}
+				for_each_loop = {
+					array = global.ARI_ShouHaiZheMingDan_ER
+					value = v
+					var:v = {
+						set_character_flag = ARI_BeiBangJia
+					}
+				}
+				set_global_flag = ARI_ZhunBeiDu_Er_JieDuanBiaoZhi #阿里乌斯准备度二阶段标志
+				TRI = {
+					declare_war_on = { #向指定国家宣战
+						target = GEH #被宣战国家TAG
+						type = topple_government #战争目标类型 - 颠覆政权
+					}
+					complete_national_focus = TRI_unexpected_accident 
+					load_focus_tree = { #加载国策树
+						tree = TRI_focus_stage_2
+						keep_completed = yes #保持已完成的共享国策
+						copy_completed_from = root #从当前国家复制国策完成状态
+					}
+				}
+
+				GEH = {
+					promote_character = {
+						character = GEH_ako
+						ideology = no_ideology_type
+					}
+					add_dynamic_modifier = {
+						modifier = GEH_a_unpredictable_attack #措手不及
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					ARI = {
+						check_variable = {
+							var = ARI_ZhunBeiDu #准备度
+							value = 91
+							compare = greater_than_or_equals #大于等于
+						}
+					}
+				}
+				set_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi #阿里乌斯准备度三阶段标志
+				for_each_loop = {
+					array = global.ARI_ShouHaiZheMingDan_SAN
+					value = v
+					var:v = {
+						set_character_flag = ARI_BeiBangJia
+					}
+				}
+				
+				TRI = {
+					declare_war_on = { #向指定国家宣战
+						target = GEH #被宣战国家TAG
+						type = topple_government #战争目标类型 - 颠覆政权
+					}
+					complete_national_focus = TRI_unexpected_accident #完成国策 - 烽烟骤起
+					load_focus_tree = { #加载国策树
+						tree = TRI_focus_stage_2
+						keep_completed = yes #保持已完成的共享国策
+						copy_completed_from = root #从当前国家复制国策完成状态
+					}
+					promote_character = TRI_hanako
+				}
+				GEH = {
+					add_ideas = {
+						GEH_army_in_chaos
+					}
+					add_dynamic_modifier = {
+						modifier = GEH_a_unpredictable_attack
+					}
+					promote_character = {
+						character = GEH_JingJiZhuangTaiWeiYuanHui
+						ideology = no_ideology_type
+					}
+				}
+			}
+
+			
 		}
+		
 	}
 }
 

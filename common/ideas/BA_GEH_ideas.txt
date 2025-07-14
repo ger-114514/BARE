@@ -322,10 +322,15 @@ ideas = {
                 original_tag = GEH
             }
 
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
+            }
+
             modifier = {
-                army_org_regain = -0.3
-                army_org_factor = -0.3
-                land_reinforce_rate = -0.03
+                army_attack_factor = -0.3
+                armor_value = -0.6
             }
         }
 
@@ -337,10 +342,15 @@ ideas = {
                 original_tag = GEH
             }
 
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
+            }
+
             modifier = {
-                army_org_regain = -0.2
-                army_org_factor = -0.2
-                land_reinforce_rate = -0.02
+                army_attack_factor = -0.2
+                armor_value = -0.4
             }
         }
 
@@ -352,10 +362,15 @@ ideas = {
                 original_tag = GEH
             }
 
+            cancel = {
+                not = {
+                    has_war_with = ARI
+                }
+            }
+
             modifier = {
-                army_org_regain = -0.1
-                army_org_factor = -0.1
-                land_reinforce_rate = -0.01
+                 army_attack_factor = -0.1
+                armor_value = -0.2
             }
         }
 
