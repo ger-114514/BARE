@@ -132,9 +132,13 @@ GEH_societies_dec_category = {
         days_remove = 90
         days_re_enable = 30
         available = { 
+            has_completed_focus = GEH_Dealing_with_bad_students
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
+        }
+        ai_will_do = {
+            factor = 200
         }
         modifier = {
             stability_weekly = 0.005
@@ -163,6 +167,7 @@ GEH_societies_dec_category = {
         days_remove = 100
         fire_only_once = yes
         available = { 
+            has_completed_focus = GEH_Dealing_with_bad_students
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
@@ -170,16 +175,20 @@ GEH_societies_dec_category = {
         modifier = {
             war_support_weekly = 0.005
         }
+        ai_will_do = {
+            factor = 201
+        }
         complete_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
             add_to_variable = {
-                GEH_gourmet_research_activity = 5
+                GEH_discipline_committee_ability = 5
             }
             add_to_variable = {
-                GEH_gourmet_research_destructive = 5
+                GEH_discipline_committee_repression = 5
             }
+            GEH_discipline_committee_calc = yes
         }
         timeout_effect = {
             add_to_variable = {
@@ -196,10 +205,13 @@ GEH_societies_dec_category = {
         days_remove = 30
         days_re_enable = 20
         available = { 
-
+            has_completed_focus = GEH_Deportation
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
+        }
+        ai_will_do = {
+            factor = 202
         }
         complete_effect = {
             stability_factor = -0.1
@@ -207,8 +219,9 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_num = 1
             }
             add_to_variable = {
-                GEH_gourmet_research_destructive = 5
+                GEH_discipline_committee_repression = 5
             }
+            GEH_discipline_committee_calc = yes
         }
         timeout_effect = {
             add_to_variable = {
@@ -221,6 +234,7 @@ GEH_societies_dec_category = {
         cost = 50
         days_remove = 100
         available = { 
+            has_completed_focus = GEH_Deportation
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
@@ -234,16 +248,18 @@ GEH_societies_dec_category = {
             }
             stability_factor = -0.05
             add_to_variable = {
-                GEH_gourmet_research_activity = 5
+                GEH_discipline_committee_ability = 5
             }
+            GEH_discipline_committee_calc = yes
         }
         timeout_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
             add_to_variable = {
-                GEH_gourmet_research_destructive = 5
+                GEH_discipline_committee_repression = 5
             }
+            GEH_discipline_committee_calc = yes
         }
     }
     #头盔团教育改造
@@ -251,6 +267,7 @@ GEH_societies_dec_category = {
         cost = 100
         days_remove = 100
         available = { 
+            has_completed_focus = GEH_Deportation
             check_variable = {
                 GEH_discipline_committee_num < GEH_discipline_committee_max
             }
@@ -258,6 +275,9 @@ GEH_societies_dec_category = {
         modifier = {
             research_speed_factor = 0.1
             political_power_factor = -0.1
+        }
+        ai_will_do = {
+            factor = 203
         }
         complete_effect = {
             add_to_variable = {
@@ -270,8 +290,9 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_num = -1
             }
             add_to_variable = {
-                GEH_gourmet_research_activity = 5
+                GEH_discipline_committee_ability = 5
             }
+            GEH_discipline_committee_calc = yes
         }
     }
 ##############温泉开发部#############
@@ -575,6 +596,9 @@ GEH_societies_dec_category = {
                 }
                 state = 385
             }
+        }
+        ai_will_do = {
+            factor = 204
         }        
         remove_effect = {
             FROM = {
@@ -975,6 +999,9 @@ GEH_societies_dec_category = {
         modifier = {
             consumer_goods_factor = -0.05
         }
+        ai_will_do = {
+            factor = 205
+        }
         complete_effect = {
 
         }        
@@ -995,6 +1022,9 @@ GEH_societies_dec_category = {
         }
         available = {
             has_completed_focus = GEH_Expanded_feeding_department
+        }
+        ai_will_do = {
+            factor = 300
         }
         complete_effect = {
             
@@ -1292,6 +1322,9 @@ GEH_societies_dec_category = {
         days_re_enable = 30
         on_map_mode = map_only
         state_target = yes
+        ai_will_do = {
+            factor = 200
+        }
         available = {
             FROM = {
                 OWNER = {
@@ -1423,6 +1456,9 @@ GEH_societies_dec_category = {
         days_re_enable = 30
         on_map_mode = map_only
         state_target = yes
+        ai_will_do = {
+            factor = 204
+        }
         available = {
             FROM = {
                 OWNER = {
@@ -1543,7 +1579,7 @@ GEH_societies_dec_category = {
         available = {
             FROM = {
                 OWNER = {
-                    has_completed_focus = GEH_Boot_trouble
+                    has_completed_focus = GEH_conversation_with_Food_Research
                 }
             }           
         }
@@ -1633,6 +1669,9 @@ GEH_societies_dec_category = {
                 }
             }
         }
+        ai_will_do = {
+            factor = 203
+        }
         visible = {
             FROM = {
                 OWNER = {
@@ -1700,11 +1739,14 @@ GEH_societies_dec_category = {
         days_re_enable = 60
         on_map_mode = map_only
         state_target = yes
+        ai_will_do = {
+            factor = 203
+        }
         available = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    has_completed_focus = GEH_Boot_trouble
+                    has_completed_focus = GEH_Solving_food_supply_problems
                     has_country_flag = GEH_hina_apprehend_gourmet_research 
                 }
             }
@@ -1732,6 +1774,40 @@ GEH_societies_dec_category = {
                         id = GEH_discipline_committee_events.14
                     }              
                 }
+            }
+        }
+    }
+}
+
+GEH_comb68_societies_dec_category = {
+    GEH_comb68_societies_dec = {
+        icon = GFX_GEH_aru_dec
+        cost = 68
+        days_remove = 120
+        on_map_mode = map_only
+        state_target = any_controlled_state
+        target_trigger = {
+            FROM = {
+                is_capital = yes
+            }
+        }
+        available = {
+            NOT = {
+                has_global_flag = GEH_comb68_working
+            }
+        }
+        ai_will_do = {
+            factor = 1000
+        }
+        complete_effect = {
+            set_global_flag = GEH_comb68_working
+        }
+        remove_effect = {
+            if = {
+                limit = {
+                    has_global_flag = GEH_comb68_working
+                }
+                clr_global_flag = GEH_comb68_working
             }
         }
     }

@@ -1,4 +1,7 @@
 ﻿l_simp_chinese:
+ GEH_societies_dec_category: "格黑娜社团问题"
+ GEH_comb68_societies_dec_category: "便利屋68"
+ GEH_comb68_working: "便利屋工作中"
  GEH_societies_status_text: "风纪委员会活跃度：[?This.GEH_discipline_committee_ability|O]/100 效率：[?This.GEH_discipline_committee_repression|O]/100 \n给食部活跃度：[?This.GEH_food_service_activity|C]/100 效率：[?This.GEH_food_service_efficiency|C]/100\n温泉开发部活跃度：[?This.GEH_hot_spring_activity|G]/100 恶名：[?This.GEH_hot_spring_destructive|G]/100\n美食研究会活跃度：[?This.GEH_gourmet_research_activity|H]/100 恶名：[?This.GEH_gourmet_research_destructive|H]/100\n便利屋68活跃度：[?This.GEH_comb68_activity|g]/100 恶名：[?This.GEH_com68_destructive|g]/100\n"
  GEH_discipline_committee_gangsters_eviction: "驱逐越境不良"
  GEH_discipline_committee_establish_border_patrol_system: "建立边境巡逻制度"
