@@ -1,0 +1,81 @@
+spriteTypes = {
+    
+    spriteType = {
+        name = "GFX_BARE_dynamic_topbar_container_mini_bg_icon"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/top_information_mini_bg_icon.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_dynamic_topbar_container_button"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/top_information_button.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_top_common_categories"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/top_information_button.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_dynamic_top_information_null"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/top_information_null.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_dynamic_top_information_null_2"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/top_information_null_2.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_stability_factor"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_stability_factor.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_stability_weekly"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_stability_factor.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_defensive_war_stability_factor"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_stability_factor.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_war_support_factor"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_defensive_war_stability_factor.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_war_support_weekly"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_defensive_war_stability_factor.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_casualties"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_casualties.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_warscore"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_warscore.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_surrender_limit"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_surrender_limit.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_surrender_progress"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_surrender_limit.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_consumer_goods"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_consumer_goods.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_min_consumer_goods"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_min_consumer_goods.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_number_of_nuclear_bombs"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_number_of_nuclear_bombs.dds"
+    }
+
+
+    spriteType = {
+        name = "GFX_TRI_kirifuji_nagisa_paranoia_level"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/TRI_kirifuji_nagisa_paranoia_level.dds"
+    }
+    spriteType = {
+        name = "GFX_BARE_great_game_coin"
+        texturefile = "gfx/interface/BARE_gui/BARE_dynamic_topbar_container/BARE_great_game_coin.dds"
+    }
+}

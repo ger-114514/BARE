@@ -54,12 +54,12 @@ TRI_region_generate_state_modifiers = {
 		set_variable = { region_state_resources_factor = PREV.region_stability@var:region }
 		set_variable = { region_local_manpower = PREV.region_stability@var:region }
 		set_variable = { region_state_production_speed_factor = PREV.region_stability@var:region }
-		subtract_from_variable = { region_state_resources_factor = 0.75 }
-		subtract_from_variable = { region_local_manpower = 0.75 }
-		subtract_from_variable = { region_state_production_speed_factor = 0.75 }
-		divide_variable = { region_state_resources_factor = 3 }
-		divide_variable = { region_local_manpower = 3 }
-		divide_variable = { region_state_production_speed_factor = 3 }
+		subtract_from_variable = { region_state_resources_factor = 0.8 }
+		subtract_from_variable = { region_local_manpower = 0.8 }
+		subtract_from_variable = { region_state_production_speed_factor = 0.8 }
+		divide_variable = { region_state_resources_factor = 2 }
+		divide_variable = { region_local_manpower = 2 }
+		divide_variable = { region_state_production_speed_factor = 2 }
 	}
 }
 TRI_region_generate_ruling_association = {
