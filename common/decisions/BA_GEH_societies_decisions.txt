@@ -519,7 +519,7 @@ GEH_societies_dec_category = {
                 OWNER = {
                     tag = GEH 
                     check_variable = { GEH_hot_spring_activity > 50 }
-                    #has_completed_focus = GEH_Hot_spring_development
+                    has_completed_focus = GEH_Hot_spring_development
                 }
                 has_state_flag = GEH_hot_spring_damage
             }
