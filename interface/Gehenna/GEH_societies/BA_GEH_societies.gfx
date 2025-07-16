@@ -205,4 +205,10 @@ spriteTypes = {
         noOfFrames = 1
         effectFile = "gfx/FX/buttonstate.shader"
     }
+	SpriteType = {
+		name = "GFX_GEH_aru_dec"
+		texturefile = "gfx/interface/GEH_societies/GEH_aru_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
 }

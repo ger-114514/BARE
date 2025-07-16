@@ -2606,8 +2606,9 @@ focus_tree = {
         relative_position_id =  GEH_The_First_Eden_Treaty
 
         prerequisite = {  focus =  GEH_The_First_Eden_Treaty }
-
+        unlock_decision_category_tooltip = GEH_societies_dec_category
         completion_reward = {
+            set_country_flag = GEH_societies_start
             set_variable = {
                 GEH_discipline_committee_ability = 30
             }
@@ -2617,7 +2618,7 @@ focus_tree = {
             }
             #温泉部活跃度
             set_variable = {
-                GEH_hot_spring_activity = 20
+                GEH_hot_spring_activity = 10
             }
             #温泉部恶名
             set_variable = {
@@ -2625,15 +2626,15 @@ focus_tree = {
             }
             #给食部活跃度
             set_variable = {
-                GEH_food_service_activity = 1
+                GEH_food_service_activity = 10
             }
             #给食部效率
             set_variable = {
-                GEH_food_service_efficiency = 1
+                GEH_food_service_efficiency = 5
             }
             #美食部活跃度
             set_variable = {
-                GEH_gourmet_research_activity = 20
+                GEH_gourmet_research_activity = 10
             }
             #美食部恶名
             set_variable = {
@@ -2667,12 +2668,14 @@ focus_tree = {
             GEH_discipline_committee_calc = yes
             GEH_hot_spring_calc = yes
             GEH_food_service_and_gourmet_research_calc = yes    
-            random_controlled_state = {
-                set_state_flag = GEH_hot_spring_damage
-            }
-            random_controlled_state = {
-                set_state_flag = GEH_gourmet_research_damage
-            }
+            hidden_effect = {
+                random_controlled_state = {
+                    set_state_flag = GEH_hot_spring_damage
+                }
+                random_controlled_state = {
+                    set_state_flag = GEH_gourmet_research_damage
+                }
+            } 
         }
     }
 
@@ -2689,7 +2692,12 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
 
         completion_reward = {
-        
+            add_political_power = 100
+            add_to_variable = {
+                GEH_gourmet_research_destructive = -5
+            }
+            GEH_food_service_and_gourmet_research_calc = yes   
+            custom_effect_tooltip = GEH_Food_Lovers_Trouble_tooltip
         }
     }
 
@@ -2704,9 +2712,14 @@ focus_tree = {
         relative_position_id =  GEH_Food_Lovers_Trouble
 
         prerequisite = {  focus =  GEH_Food_Lovers_Trouble }
-
+        unlock_decision_tooltip = GEH_gourmet_research_education
         completion_reward = {
-        
+            add_political_power = 100
+            add_to_variable = {
+                GEH_food_service_efficiency = 10
+            }
+            GEH_food_service_and_gourmet_research_calc = yes 
+            custom_effect_tooltip = GEH_Solving_food_supply_problems_tooltip
         }
     }
 
@@ -2721,7 +2734,8 @@ focus_tree = {
         relative_position_id =  GEH_Solving_food_supply_problems
 
         prerequisite = {  focus =  GEH_Solving_food_supply_problems }
-
+        unlock_decision_tooltip = GEH_food_service_enrollment
+        unlock_decision_tooltip = GEH_expansion_of_canteen
         completion_reward = {
         
         }
@@ -2739,9 +2753,9 @@ focus_tree = {
         relative_position_id =  GEH_Solving_food_supply_problems
 
         prerequisite = {  focus =  GEH_Solving_food_supply_problems }
-
+        unlock_decision_tooltip = GEH_operation_food_service_1
         completion_reward = {
-        
+            custom_effect_tooltip = GEH_Optimizing_supply_chains_tooltip
         }
     }
 
@@ -2775,9 +2789,16 @@ focus_tree = {
         relative_position_id = GEH_Expanded_feeding_department
 
         prerequisite = {  focus =  GEH_Expanded_feeding_department }
-
+        unlock_decision_tooltip = GEH_hina_talking_gourmet_research
         completion_reward = {
-        
+            add_to_variable = {
+                GEH_gourmet_research_activity = 10
+            }
+            add_to_variable = {
+                GEH_gourmet_research_destructive = -10
+            }
+            GEH_food_service_and_gourmet_research_calc = yes 
+            custom_effect_tooltip = GEH_conversation_with_Food_Research_tooltip
         }
     }
 
@@ -2790,13 +2811,18 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_conversation_with_Food_Research 
-
+        unlock_decision_tooltip = GEH_gourmet_research_eating
         prerequisite = { focus = GEH_conversation_with_Food_Research }
+        available = {
+			check_variable = { GEH_gourmet_research_activity > 50 }
+            check_variable = { GEH_gourmet_research_destructive < 30 }
+		}
         completion_reward = {
             country_event = {
                 id = GEH_gourmet_research_events.1
             } 
             add_ideas = GEH_food_time_of_gourmet_research
+            custom_effect_tooltip = GEH_Delicious_time_tooltip
         }
     }
 
@@ -2813,7 +2839,15 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
 
         completion_reward = {
-        
+            add_political_power = 100
+            add_to_variable = {
+                GEH_hot_spring_destructive = -5
+            }
+            GEH_hot_spring_calc = yes
+            country_event = {
+                id = GEH_hot_spring_events.1
+            } 
+            custom_effect_tooltip = GEH_Cute_terrorists_tooltip
         }
     }
     
@@ -2829,7 +2863,7 @@ focus_tree = {
 
         prerequisite = {  focus =   GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Monitoring_trouble }
-      
+        unlock_decision_tooltip = GEH_hina_talking_hot_spring
         completion_reward = {
         
         }
@@ -2845,7 +2879,8 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_Boot_trouble
         prerequisite = {  focus =  GEH_Boot_trouble }
-       
+        
+        unlock_decision_tooltip = GEH_hot_spring_making
         completion_reward = {
         
         }
@@ -2863,7 +2898,7 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Hot_spring_development }
        
         completion_reward = {
-        
+            custom_effect_tooltip = GEH_Hot_Spring_Village_tooltip
         }
     }
 
@@ -2881,7 +2916,7 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Boot_trouble }
 
-      
+        unlock_decision_tooltip = GEH_hot_spring_education
         completion_reward = {
         
         }
@@ -2898,7 +2933,7 @@ focus_tree = {
         relative_position_id =   GEH_Monitoring_trouble
 
         prerequisite = {  focus =   GEH_Monitoring_trouble}
-      
+        unlock_decision_tooltip = GEH_hot_spring_using
       
         completion_reward = {
         
@@ -2919,7 +2954,7 @@ focus_tree = {
       
       
         completion_reward = {
-        
+            custom_effect_tooltip = GEH_Relaxing_time_tooltip
         }
     }
 
@@ -2957,9 +2992,17 @@ focus_tree = {
         relative_position_id =  GEH_Dealing_with_chaos
 
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
-
+        unlock_decision_tooltip = GEH_discipline_committee_gangsters_eviction
+        unlock_decision_tooltip = GEH_discipline_committee_establish_border_patrol_system
         completion_reward = {
-            
+            add_to_variable = {
+                GEH_discipline_committee_ability = 5
+            }
+            add_to_variable = {
+                GEH_discipline_committee_repression = 5
+            }
+            GEH_discipline_committee_calc = yes
+            custom_effect_tooltip = GEH_Dealing_with_bad_students_tooltip
         }
     }
 
@@ -2976,7 +3019,10 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Dealing_with_bad_students }
 
         completion_reward = {
-        
+            declare_war_on = {
+                target = A10
+                type = annex_everything
+            }
         }
     }
 
@@ -2991,7 +3037,9 @@ focus_tree = {
         relative_position_id =  GEH_Eliminate_the_base
 
         prerequisite = {  focus =  GEH_Eliminate_the_base }
-
+        unlock_decision_tooltip = GEH_discipline_committee_combat_helmet_regiments
+        unlock_decision_tooltip = GEH_discipline_committee_helmet_regiment_labor_reform
+        unlock_decision_tooltip = GEH_discipline_committee_helmet_regiment_teach_reform
         completion_reward = {
         
         }
@@ -3006,7 +3054,7 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Eliminate_the_base
-
+        unlock_decision_tooltip = GEH_hina_patrol
         prerequisite = {  focus =  GEH_Eliminate_the_base }
 
         completion_reward = {
@@ -3030,7 +3078,10 @@ focus_tree = {
        
 
         completion_reward = {
-        
+            add_political_power = 150
+            add_stability = 0.1
+            add_war_support = 0.1
+            custom_effect_tooltip = GEH_Order_in_Chaos_tooltip
         }
     }
 
@@ -3048,7 +3099,7 @@ focus_tree = {
        prerequisite = { focus = GEH_Discipline_inspection_officer }
 
         completion_reward = {
-        
+            custom_effect_tooltip = GEH_Let_a_hundred_flowers_bloom_tooltip
         }
     }
 

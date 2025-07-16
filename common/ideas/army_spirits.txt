@@ -1,0 +1,297 @@
+ideas = {
+	academy_spirit = {
+		
+		bold_attack_spirit = {
+			ledger = army
+			available = { has_military_academy = yes }
+			modifier = {
+				custom_modifier_tooltip = bold_attack_spirit_tt
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		tenacious_defense_spirit = {
+			ledger = army
+			available = { has_military_academy = yes }
+			modifier = {
+				custom_modifier_tooltip = tenacious_defense_spirit_tt
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		meticulous_preparation_spirit = {
+			ledger = army
+			available = { has_military_academy = yes }
+			modifier = {
+				custom_modifier_tooltip = meticulous_preparation_spirit_tt
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		inventive_leadership_spirit = {
+			ledger = army
+			available = { has_military_academy = yes }
+			modifier = {
+				custom_modifier_tooltip = inventive_leadership_spirit_tt
+				trait_naval_invader_xp_gain_factor = 0.2
+				trait_commando_xp_gain_factor = 0.2
+				trait_trickster_xp_gain_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		experience_feedback_spirit = {
+			ledger = army
+			available = { has_military_academy = yes }
+			modifier = {
+				# 将领经验增长+20%，陆军师经验增长+15%
+				experience_gain_factor = 0.20
+				experience_gain_army_unit_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+
+	}
+
+	army_spirit = {
+		professional_command_club_spirit = {
+			ledger = army
+			modifier = {
+				experience_gain_army_unit_factor = 0.15
+				max_command_power = 30
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+		elevated_engineering_corps_spirit = {
+			ledger = army
+			modifier = {
+				unit_engineer_design_cost_factor = -1
+				dig_in_speed_factor = 0.1
+				railway_gun_bombardment_factor = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+		proper_heritage_spirit = {
+			ledger = army
+			modifier = {
+				experience_gain_factor = 0.1
+				unit_cavalry_design_cost_factor = -1
+				supply_combat_penalties_on_core_factor = -0.2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					factor = 2.0
+					is_historical_focus_on = yes
+					tag = SOU
+				}
+			}
+		}
+
+		quick_improvisation_spirit = {
+			ledger = army
+			modifier = {
+				command_abilities_cost_factor = -0.20
+				command_power_gain = 0.2
+				planning_speed = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					factor = 2.0
+					is_historical_focus_on = yes
+					original_tag = GER
+				}
+			}
+		}
+
+
+
+	}
+
+	division_command_spirit = {
+		static_warfare_spirit = {
+			ledger = army
+			modifier = {
+				tactic_elastic_defense_preferred_weight_factor = 1
+				tactic_overwhelming_fire_preferred_weight_factor = 1
+				max_dig_in_factor = 0.1
+				dig_in_speed_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					factor = 4
+					tag = SOU
+					GER = { is_ai = no }
+				}
+			}
+		}
+
+		flexible_organization_spirit = {
+			ledger = army
+			modifier = {
+				org_loss_when_moving = -0.15
+				army_speed_factor = 0.05
+				choose_preferred_tactics_cost = -15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+				modifier = {
+					factor = 4
+					original_tag = GER #Right now this is just better for AI Germany
+				}
+			}
+		}
+
+		aggressive_reconnaisance_spirit = {
+			ledger = army
+			modifier = {
+				tactic_infantry_charge_preferred_weight_factor = 1
+				intel_from_combat_factor = 0.15
+				recon_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+		reserve_officers_spirit = {
+			ledger = army
+			modifier = {
+				tactic_delay_preferred_weight_factor = 1
+				training_time_army_factor = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+		victory_or_death_spirit = {
+			ledger = army
+			visible = { original_tag = ARI }
+			modifier = {
+				tactic_human_wave_tactics_preferred_weight_factor = 1
+				org_loss_at_low_org_factor = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+		maneuver_warfare_spirit = {
+			modifier = {
+				tactic_unexpected_thrust_preferred_weight_factor = 1
+				army_speed_factor = 0.05
+				coordination_bonus = 0.05
+			}
+			ai_will_do = {
+				base = 1
+
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+
+				modifier = {
+					factor = 2
+					has_tech = mobile_warfare
+				}
+
+			}
+		}
+
+		smoke_and_fire_spirit = {
+			ledger = army
+			visible = { original_tag = TRI }
+			modifier = {
+				tactic_barrage_preferred_weight_factor = 1
+				breakthrough_factor = 0.05
+			}
+			ai_will_do = {
+				base = 1
+
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+
+				modifier = {
+					factor = 2
+					has_tech = superior_firepower
+				}
+			}
+		}
+
+
+	}
+}

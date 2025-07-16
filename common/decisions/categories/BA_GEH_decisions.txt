@@ -132,7 +132,7 @@ GEH_dualHeaded = {
 	scripted_gui = BARE_GEH_DualHeaded_SG
 	priority = 114
 }
-
+#社团决议组
 GEH_societies_dec_category = {
 	visible_when_empty = yes
     scripted_gui = GEH_societies_dec_window
@@ -140,9 +140,26 @@ GEH_societies_dec_category = {
 		original_tag = GEH
 	}
 	visible = {
-		always = yes
+		has_completed_focus = GEH_Dealing_with_chaos
 	}
 	priority = 1100
 }
-
+#便利屋68
+GEH_comb68_societies_dec_category = {
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			tag = A45
+			tag = A46
+			tag = A47
+			tag = A06
+			tag = A25
+			tag = CAB
+			tag = CAH
+			tag = CAP
+			tag = ABY
+		}
+	}
+	priority = 100
+}
 
