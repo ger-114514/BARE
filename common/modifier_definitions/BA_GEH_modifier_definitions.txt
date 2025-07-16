@@ -31,10 +31,10 @@ GEH_dualHeaded_Makoto_Weekly_factor = {
 }
 
 
-GEH_societies_food_service_destructive_weekly = {
+GEH_societies_gourmet_research_destructive_weekly = {
 	color_type = bad
 	value_type = number
-	precision = 2
+	precision = 0
 	category = country
 }
 
@@ -42,6 +42,67 @@ GEH_societies_food_service_destructive_weekly = {
 GEH_societies_hot_spring_destructive_weekly = {
 	color_type = bad
 	value_type = number
-	precision = 2
+	precision = 0
+	category = country
+}
+
+GEH_societies_com68_destructive_weekly = {
+	color_type = bad
+	value_type = number
+	precision = 0
+	category = country
+}
+
+
+GEH_societies_hot_spring_activity_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+GEH_societies_gourmet_research_activity_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+GEH_societies_com68_activity_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+
+GEH_societies_discipline_committee_activity_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+GEH_societies_food_service_activity_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+
+
+GEH_societies_discipline_committee_repression_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+
+GEH_societies_food_service_efficiency_weekly = {
+	color_type = good
+	value_type = number
+	precision = 0
 	category = country
 }

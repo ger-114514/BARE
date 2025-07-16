@@ -1,6 +1,6 @@
 add_namespace = GEH_daily
 
-country_event = { # 风纪委员会-事件报告 DESQ-2234
+country_event = { # 风纪委员会-事件报告 DESQ-2234 #好事件
     id = GEH_daily.11
     title = GEH_daily.11.t
     desc = GEH_daily.11.desc
@@ -9,14 +9,22 @@ country_event = { # 风纪委员会-事件报告 DESQ-2234
     is_triggered_only = yes
     option = {
         name = GEH_daily.11.a
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.04
+        }
     }
 
     option = {
         name = GEH_daily.11.b
+        add_Timed_idea = {
+            idea = GEH_daily_bath_water
+            days = 90
+        }
     }
 }
 
-country_event = { # 风纪委员会运营资金被万魔殿扣押
+country_event = { # 风纪委员会运营资金被万魔殿扣押 #坏事件
     id = GEH_daily.12
     title = GEH_daily.12.t
     desc = GEH_daily.12.desc
@@ -25,13 +33,26 @@ country_event = { # 风纪委员会运营资金被万魔殿扣押
     is_triggered_only = yes
     option = {
         name = GEH_daily.12.a
+        add_political_power = 20
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
     option = {
         name = GEH_daily.12.b
+        add_timed_idea = {
+            idea = GEH_daily_seize_funds
+            days = 30
+        }
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
 }
 
-country_event = { # 商业街发生餐厅爆炸事件
+country_event = { # 商业街发生餐厅爆炸事件 #坏事件
     id = GEH_daily.13
     title = GEH_daily.13.t
     desc = GEH_daily.13.desc
@@ -40,13 +61,38 @@ country_event = { # 商业街发生餐厅爆炸事件
     is_triggered_only = yes
     option = {
         name = GEH_daily.13.a
+        add_political_power = -10
+        add_stability = 0.05
+        random_state = {
+            limit = {
+                is_owned_by = GEH
+            }
+            damage_building = {
+                type = infrastructure
+                damage = 1
+            }
+        }
     }
     option = {
         name = GEH_daily.13.b
+        add_political_power = -20
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+        random_state = {
+            limit = {
+                is_owned_by = GEH
+            }
+            damage_building = {
+                type = infrastructure
+                damage = 1
+            }
+        }
     }
 }
 
-country_event = { # 万魔殿因伊吹布丁失踪整体陷入瘫痪状态
+country_event = { # 万魔殿因伊吹布丁失踪整体陷入瘫痪状态 #坏事件
     id = GEH_daily.14
     title = GEH_daily.14.t
     desc = GEH_daily.14.desc
@@ -55,14 +101,20 @@ country_event = { # 万魔殿因伊吹布丁失踪整体陷入瘫痪状态
     is_triggered_only = yes
     option = {
         name = GEH_daily.14.a
+        add_political_power = 10
     }
     option = {
         name = GEH_daily.14.b
+        add_political_power = -15
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
 }
 
 
-country_event = { # 虎丸坦克载人空投实验
+country_event = { # 虎丸坦克载人空投实验 //跳过
     id = GEH_daily.15
     title = GEH_daily.15.t
     desc = GEH_daily.15.desc
@@ -77,7 +129,7 @@ country_event = { # 虎丸坦克载人空投实验
     }
 }
 
-country_event = { # 真琴议长的24小时环格赫那飞艇演讲巡演
+country_event = { # 真琴议长的24小时环格赫那飞艇演讲巡演 //坏事件
     id = GEH_daily.16
     title = GEH_daily.16.t
     desc = GEH_daily.16.desc
@@ -86,13 +138,23 @@ country_event = { # 真琴议长的24小时环格赫那飞艇演讲巡演
     is_triggered_only = yes
     option = {
         name = GEH_daily.16.a
+        add_stability = -0.05
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
     option = {
         name = GEH_daily.16.b
+        add_stability = 0.1
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
 }
 
-country_event = { # 风纪委员带头破坏风纪?万魔殿特派员千秋独家报道——风纪委员会的内幕
+country_event = { # 风纪委员带头破坏风纪?万魔殿特派员千秋独家报道——风纪委员会的内幕 #
     id = GEH_daily.17
     title = GEH_daily.17.t
     desc = GEH_daily.17.desc
@@ -101,13 +163,16 @@ country_event = { # 风纪委员带头破坏风纪?万魔殿特派员千秋独�
     is_triggered_only = yes
     option = {
         name = GEH_daily.17.a
+        add_political_power = -15
+        add_stability = 0.05
     }
     option = {
         name = GEH_daily.17.b
+        add_political_power = 5
     }
 }
 
-country_event = { # 风纪委员会日奈会长钢琴独奏限定BD预售，好评如潮
+country_event = { # 风纪委员会日奈会长钢琴独奏限定BD预售，好评如潮 #好事件
     id = GEH_daily.18
     title = GEH_daily.18.t
     desc = GEH_daily.18.desc
@@ -116,13 +181,23 @@ country_event = { # 风纪委员会日奈会长钢琴独奏限定BD预售，好�
     is_triggered_only = yes
     option = {
         name = GEH_daily.18.a
+        add_stability = 0.05
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
     option = {
         name = GEH_daily.18.b
+        add_political_power = 50
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
 }
 
-country_event = { # 急救医学部最新数据统计显示，格赫那学员因扰乱风纪而被镇压造成的伤患率下降了三个百分点
+country_event = { # 急救医学部最新数据统计显示，格赫那学员因扰乱风纪而被镇压造成的伤患率下降了三个百分点  #好事件
     id = GEH_daily.19
     title = GEH_daily.19.t
     desc = GEH_daily.19.desc
@@ -131,13 +206,22 @@ country_event = { # 急救医学部最新数据统计显示，格赫那学员因
     is_triggered_only = yes
     option = {
         name = GEH_daily.19.a
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.075
+        }
     }
     option = {
         name = GEH_daily.19.b
+        add_stability = 0.1
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
 }
 
-country_event = { # 由于供给部部长放假而导致美食研究会开始在格黑娜各处大肆破坏
+country_event = { # 由于供给部部长放假而导致美食研究会开始在格黑娜各处大肆破坏 #坏事件
     id = GEH_daily.20
     title = GEH_daily.20.t
     desc = GEH_daily.20.desc
@@ -146,13 +230,26 @@ country_event = { # 由于供给部部长放假而导致美食研究会开始在
     is_triggered_only = yes
     option = {
         name = GEH_daily.20.a
+        add_political_power = -25
+        add_ideas = GEH_daily_chef
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
     option = {
         name = GEH_daily.20.b
+        add_political_power = -25
+        add_stability = -0.1
+        add_ideas = GEH_daily_gold_metallurgy
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
 }
 
-country_event = { # 《不忍之心》电影系列连载漫画正式发售，一起来看忍者和坦克同台战斗的飒爽英姿吧
+country_event = { # 《不忍之心》电影系列连载漫画正式发售，一起来看忍者和坦克同台战斗的飒爽英姿吧 #跳过
     id = GEH_daily.21
     title = GEH_daily.21.t
     desc = GEH_daily.21.desc
@@ -161,13 +258,23 @@ country_event = { # 《不忍之心》电影系列连载漫画正式发售，一
     is_triggered_only = yes
     option = {
         name = GEH_daily.21.a
+        add_stability = 0.05
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
     option = {
         name = GEH_daily.21.b
+        add_stability = 0.05
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
 }
 
-country_event = { # 行政官亚子的擅自行动
+country_event = { # 行政官亚子的擅自行动 #剧情事件，跳过
     id = GEH_daily.22
     title = GEH_daily.22.t
     desc = GEH_daily.22.desc
@@ -176,13 +283,34 @@ country_event = { # 行政官亚子的擅自行动
     is_triggered_only = yes
     option = {
         name = GEH_daily.22.a
+        add_political_power = -100
+        add_stability = -0.05
+        add_timed_idea = {
+            idea = GEH_daily_abydos_compensation_in
+            days = 90
+        }
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+        ABY = {
+            add_timed_idea = {
+                idea = GEH_daily_abydos_compensation_out
+                days = 90
+            }
+        }
     }
     option = {
         name = GEH_daily.22.b
+        add_stability = -0.1
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.15
+        }
     }
 }
 
-country_event = { # 装甲部队的建设分歧
+country_event = { # 装甲部队的建设分歧 #好事件
     id = GEH_daily.23
     title = GEH_daily.23.t
     desc = GEH_daily.23.desc
@@ -191,28 +319,67 @@ country_event = { # 装甲部队的建设分歧
     is_triggered_only = yes
     option = {
         name = GEH_daily.23.a
+        add_political_power = 25
+        add_ideas = GEH_daily_mass_production_tanks
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+
     }
     option = {
         name = GEH_daily.23.b
+        add_war_support = 0.05
+        add_ideas = GEH_daily_armored_technology_revolution
+        add_tech_bonus = {
+            bonus = 1
+            name = 研究
+            uses = 1
+            category = armor
+        }
+        add_timed_idea = {
+            idea = GEH_daily_resource_purchase
+            days = 180
+        }
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
 }
 
-country_event = { # 神秘自传的争议
+country_event = { # 神秘自传的争议 #坏事件 一次性
     id = GEH_daily.24
     title = GEH_daily.24.t
     desc = GEH_daily.24.desc
     picture = GFX_GEH_daily_news_event_1
+
+    immediate = {
+        set_global_flag = GEH_daily_24_has_happened
+    }
     
     is_triggered_only = yes
     option = {
         name = GEH_daily.24.a
+        add_stability = -0.05
+        add_political_power = -25
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.08
+        }
     }
     option = {
         name = GEH_daily.24.b
+        add_war_support = 0.05
+        add_political_power = 25
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
     }
 }
 
-country_event = { # 学生食堂暴动
+country_event = { # 学生食堂暴动 #坏事件
     id = GEH_daily.25
     title = GEH_daily.25.t
     desc = GEH_daily.25.desc
@@ -221,13 +388,28 @@ country_event = { # 学生食堂暴动
     is_triggered_only = yes
     option = {
         name = GEH_daily.25.a
+        add_stability = 0.05
+        add_manpower = -100
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
     option = {
         name = GEH_daily.25.b
+        add_political_power = -15
+        add_timed_idea = {
+            idea = GEH_daily_lecture
+            days = 90
+        }
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.07
+        }
     }
 }
 
-country_event = { # 火力研究部的失误
+country_event = { # 火力研究部的失误 #坏事件
     id = GEH_daily.26
     title = GEH_daily.26.t
     desc = GEH_daily.26.desc
@@ -236,13 +418,41 @@ country_event = { # 火力研究部的失误
     is_triggered_only = yes
     option = {
         name = GEH_daily.26.a
+        add_political_power = -30
+        random_state = {
+            limit = {
+                is_owned_by = GEH
+            }
+            damage_building = {
+                type = industrial_complex
+                damage = 1
+            }
+        }
     }
     option = {
         name = GEH_daily.26.b
+        add_equipment_to_stockpile = {
+            type = light_fire_support_equipment
+            amount = 100
+            producer = GEH
+        }
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = 0.05
+        }
+        random_state = {
+            limit = {
+                is_owned_by = GEH
+            }
+            damage_building = {
+                type = industrial_complex
+                damage = 1
+            }
+        }
     }
 }
 
-country_event = { # 暴动的...松饼？
+country_event = { # 暴动的...松饼？ #坏事件
     id = GEH_daily.27
     title = GEH_daily.27.t
     desc = GEH_daily.27.desc
@@ -251,8 +461,23 @@ country_event = { # 暴动的...松饼？
     is_triggered_only = yes
     option = {
         name = GEH_daily.27.a
+        add_command_power = -10
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -10
+            producer = GEH
+        }
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
     option = {
         name = GEH_daily.27.b
+        add_political_power = -10
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
     }
 }

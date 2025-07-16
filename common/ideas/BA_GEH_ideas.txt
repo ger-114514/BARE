@@ -62,7 +62,7 @@ ideas = {
                army_org_factor = 0.05
                army_morale_factor = 0.05
 
-               GEH_societies_food_service_destructive_weekly = -0.25
+               GEH_societies_gourmet_research_destructive_weekly = -0.25
                GEH_societies_hot_spring_destructive_weekly = -0.25
             }
         }
@@ -85,7 +85,7 @@ ideas = {
                 political_power_factor = 0.05
 
 
-               GEH_societies_food_service_destructive_weekly = 0.25
+               GEH_societies_gourmet_research_destructive_weekly = 0.25
                GEH_societies_hot_spring_destructive_weekly = 0.25
             }
         }
@@ -1269,6 +1269,12 @@ ideas = {
                 political_power_factor = -0.1
                 stability_weekly= -0.001
                 GEH_dualHeaded_Hina_Weekly_factor = 0.05
+                GEH_societies_gourmet_research_destructive_weekly = -0.2
+                GEH_societies_com68_destructive_weekly = -0.2
+                GEH_societies_hot_spring_destructive_weekly = -0.2
+                GEH_societies_discipline_committee_activity_weekly = 0.5
+                GEH_societies_discipline_committee_repression_weekly = 0.5
+
             }
             allowed = {
                 original_tag = GEH
@@ -1281,6 +1287,11 @@ ideas = {
             modifier = {
                 political_power_factor = -0.05
                 GEH_dualHeaded_Hina_Weekly_factor = 0.025
+                GEH_societies_gourmet_research_destructive_weekly = -0.1
+                GEH_societies_com68_destructive_weekly = -0.1
+                GEH_societies_hot_spring_destructive_weekly = -0.1
+                GEH_societies_discipline_committee_activity_weekly = 0.25
+                GEH_societies_discipline_committee_repression_weekly = 0.25
             }
             allowed = {
                 original_tag = GEH
@@ -1305,6 +1316,12 @@ ideas = {
             modifier = {
                 political_power_factor = 0.1
                 GEH_dualHeaded_Makoto_Weekly_factor = 0.025
+                GEH_societies_hot_spring_activity_weekly = 0.1
+                GEH_societies_gourmet_research_activity_weekly = 0.1
+                GEH_societies_com68_activity_weekly= 0.1
+                GEH_societies_food_service_activity_weekly = 0.1
+                GEH_societies_discipline_committee_repression_weekly = -0.25
+                
             }
             allowed = {
                 original_tag = GEH
@@ -1318,6 +1335,11 @@ ideas = {
                 political_power_factor = 0.15
                 stability_weekly = -0.001
                 GEH_dualHeaded_Makoto_Weekly_factor = 0.05
+                GEH_societies_hot_spring_activity_weekly = 0.2
+                GEH_societies_gourmet_research_activity_weekly = 0.2
+                GEH_societies_com68_activity_weekly= 0.2
+                GEH_societies_food_service_activity_weekly = 0.2
+                GEH_societies_discipline_committee_repression_weekly = -0.5
             }
             allowed = {
                 original_tag = GEH
@@ -1349,6 +1371,31 @@ ideas = {
             }
             allowed = {
                 original_tag = GEH
+            }
+        }
+
+
+        GEH_joint_operations_command_ideas_1 = {
+            name =  GEH_joint_operations_command_ideas
+            picture = unknown
+
+            modifier = {
+               land_reinforce_rate = 0.01
+               army_morale_factor = 0.05
+               planning_speed = 0.05
+		       max_planning = 0.05
+            }
+            allowed = {
+               or = {
+                  original_tag = GEH
+                  original_tag = TRI
+               }
+            }
+
+            cancel_trigger = {
+                NOT = {
+                    has_war_with = ARI
+                }
             }
         }
         #社团线
@@ -1395,7 +1442,140 @@ ideas = {
                 original_tag = GEH
             }
         }
+
+
+                    ###日常事件idea
+        GEH_daily_seize_funds = {
+            name = GEH_daily_seize_funds
+            picture = unknown
+
+            modifier = {
+                consumer_goods_factor = 0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_daily_bath_water = {
+            name = GEH_daily_bath_water
+            picture = unknown
+
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_daily_chef = {
+            name = GEH_daily_chef
+            picture = unknown
+
+            modifier = {
+                consumer_goods_factor = -0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_daily_gold_metallurgy = {
+            name = GEH_daily_gold_metallurgy
+            picture = unknown
+
+            modifier = {
+                political_power_cost = 0.1
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+                army_strength_factor = 0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_daily_abydos_compensation_in = {
+            name = GEH_daily_abydos_compensation_in
+            picture = unknown
+
+            modifier = {
+                consumer_goods_factor = 0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_daily_abydos_compensation_out = {
+            name = GEH_daily_abydos_compensation_out
+            picture = unknown
+
+            modifier = {
+                consumer_goods_factor = -0.05
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_daily_mass_production_tanks = {
+            name = GEH_daily_mass_production_tanks
+            picture = unknown
+
+            equipment_bonus = {
+            armor = {
+                build_cost_ic = -0.05 instant = yes
+                    hardness = -0.05
+                    soft_attack = -0.05
+                    hard_attack = -0.05
+                    reliability = -0.1
+                    armor_value = -0.03
+            }
+        }
+        }
+        GEH_daily_armored_technology_revolution = {
+            name = GEH_daily_armored_technology_revolution
+            picture = unknown
+
+            equipment_bonus = {
+            armor = {
+                    hardness = 0.05 instant = yes
+                    soft_attack = 0.05
+                    hard_attack = 0.05
+            }
+        }
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.075
+            }
+        }
+        GEH_daily_resource_purchase = {
+            name = GEH_daily_resource_purchase
+            picture = unknown
+
+            modifier = {
+                consumer_goods_factor = 0.15
+            }
+        }
+        GEH_daily_miss_makoto = {
+            name = GEH_daily_miss_makoto
+            picture = unknown
+
+            modifier = {
+                political_power_gain = -1
+                stability_factor = -0.5
+            }
+        }
+        GEH_daily_lecture = {
+            name = GEH_daily_lecture
+            picture = unknown
+
+            modifier = {
+                stability_weekly = -0.005
+                war_support_weekly = 0.005
+                weekly_manpower = 500
+            }
+        }
+    
     }
+   
+ 
+
 
     hidden_ideas = {
     }

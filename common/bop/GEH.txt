@@ -10,6 +10,7 @@ GEH_bp_between_chaos_and_order = {
 		modifier = {
 			#power_balance_weekly = 0.01
 			power_balance_weekly = 0.002
+			custom_modifier_tooltip = GEH_bp_badevents_1
 		}
 	}
 	side = { #秩序（左）
@@ -84,7 +85,7 @@ GEH_bp_between_chaos_and_order = {
 				stability_factor = -0.05
 				war_support_factor = -0.05
 				power_balance_weekly = -0.005
-				custom_modifier_tooltip = GEH_bp_badevents_1
+				custom_modifier_tooltip = GEH_bp_badevents_2
 			}
 
 			on_activate = {
@@ -113,7 +114,7 @@ GEH_bp_between_chaos_and_order = {
 				war_support_factor = -0.1
 				power_balance_weekly = -0.01
 				consumer_goods_factor = 0.05
-				custom_modifier_tooltip = GEH_bp_badevents_2
+				custom_modifier_tooltip = GEH_bp_badevents_3
 			}
 
 			on_activate = {

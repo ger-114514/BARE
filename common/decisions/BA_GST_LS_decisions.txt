@@ -1512,6 +1512,198 @@ GST_LS_XC_DEBUFF_category = {
 			base = 100
 		}
 	}
+
+
+
+	GST_XC_DM_JingPiLiJie_GEH = { #消除精疲力竭 - 主动
+		icon = generic_research
+		priority = 11
+		state_target = yes #这是州定向决议
+    	target_array = global.GST_JS_ZBH
+		on_map_mode = map_and_decisions_view
+    	target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+			}
+			if = {
+				limit = {
+					original_tag = GEH
+					has_completed_focus = GEH_Focus_attack
+					FROM = { is_owned_by = GEH }
+				}
+				FROM = {
+					has_state_flag = GEH_advance_exploration
+				}
+			}
+    	}
+		visible = {
+
+			FROM = {
+				OR = { #检测该州是否有部队存在
+					is_controlled_by_ROOT_or_subject = yes
+					ROOT = {
+						divisions_in_state = {
+							size > 0
+							state = FROM
+						}
+					}
+					any_neighbor_state = { #检测该州周围是否有部队存在
+						OR = {
+							ROOT = {
+								divisions_in_state = {
+									size > 0
+									state = prev
+								}
+							}
+							is_controlled_by_ROOT_or_subject = yes
+						}
+					}
+				}
+			}
+		}
+		available = {
+			command_power > 14.9
+		}
+		days_remove = 21
+		complete_effect = {
+			add_command_power = -15
+		}
+
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = ARI
+				}
+				hidden_effect = {
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+						scope = TRI
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+						scope = GEH
+					}
+				}
+				
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					OR = { #检测该州是否有部队存在
+						is_controlled_by_ROOT_or_subject = yes
+						ROOT = {
+							divisions_in_state = {
+								size > 0
+								state = FROM
+							}
+						}
+						any_neighbor_state = { #检测该州周围是否有部队存在
+							OR = {
+								ROOT = {
+									divisions_in_state = {
+										size > 0
+										state = prev
+									}
+								}
+								is_controlled_by_ROOT_or_subject = yes
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 3
+				command_power > 50
+			}
+		}
+	}
+	GST_XC_DM_JingPiLiJie_AUTO_GEH = { #消除精疲力竭 - 自动
+		icon = generic_research
+		priority = 11
+		state_target = yes #这是州定向决议
+    	target_array = global.GST_JS_ZBH
+		on_map_mode = map_and_decisions_view
+    	target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+			}
+			if = {
+				limit = {
+					original_tag = GEH
+					FROM = { is_owned_by = GEH }
+				}
+				FROM = {
+					has_state_flag = GEH_advance_exploration
+				}
+			}
+    	}
+		visible = { #完全控制
+			FROM = {
+				OR = { #检测该州是否有部队存在
+					is_controlled_by_ROOT_or_subject = yes
+					ROOT = {
+						divisions_in_state = {
+							size > 0
+							state = FROM
+						}
+					}
+					any_neighbor_state = { #检测该州周围是否有部队存在
+						ROOT = {
+							divisions_in_state = {
+								size > 0
+								state = prev
+							}
+						}
+					}
+				}
+			}
+		}
+		days_remove = 90
+		remove_effect = {
+			FROM = {
+				custom_effect_tooltip = CW_fully_controlled_90_days
+				remove_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = ARI
+				}
+				hidden_effect = {
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+						scope = TRI
+					}
+					remove_dynamic_modifier = {
+						modifier = TRI_ARI_GEH_JingPiLiJie
+						scope = GEH
+					}
+				}
+				
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					OR = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				any_subject_country = {
+					has_full_control_of_state = FROM
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+
+	
 	# GST_XC_DM_JingPiLiJie_AUTO = { #自动消除精疲力竭任务
 	# 	icon = generic_research
 	# 	priority = 20
