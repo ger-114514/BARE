@@ -435,3 +435,300 @@ GEH_weekly_variable_change = {
 	}	
 	
 }
+
+GEH_monthly_random_daily_event = {
+	set_temp_variable = {
+		GEH_bad_event_temp = 2
+	}
+	set_temp_variable = {
+		GEH_good_event_temp = 2
+	}
+	if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < -0.6 
+			}
+		}
+		set_temp_variable = {
+			GEH_good_event_temp = 0.2
+		}
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < -0.2 
+			}
+		}
+		set_temp_variable = {
+			GEH_good_event_temp = 0.1
+		}
+
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < 0.2 
+			}
+		}
+		set_temp_variable = {
+			GEH_bad_event_temp = 0.1
+		}
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < 0.6 
+			}
+		}
+		set_temp_variable = {
+			GEH_bad_event_temp = 0.2
+		}
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < 1
+			}
+		}
+		set_temp_variable = {
+			GEH_bad_event_temp = 0.3
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				GEH_good_event_temp > random
+			}
+		}
+
+		set_temp_variable = {
+			GEH_random_event_no_temp = random
+		}
+		multiply_temp_variable = {
+			GEH_random_event_no_temp = 8
+		}
+		
+		round_temp_variable = GEH_random_event_no_temp
+
+		clamp_variable = {
+			var = GEH_random_event_no_temp
+			min = 0
+			max = 7
+		}
+
+		set_temp_variable = {
+			GEH_random_event_days_temp = random
+		}
+
+		multiply_temp_variable = {
+			GEH_random_event_days_temp = 20
+		}
+
+		round_temp_variable = GEH_random_event_days_temp
+
+
+		if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 0
+				}
+			}
+			country_event = {
+				id = GEH_daily.11
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 1
+				}
+			}
+			country_event = {
+				id = GEH_daily.18
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 2
+				}
+			}
+			country_event = {
+				id = GEH_daily.19
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 3
+				}
+			}
+			country_event = {
+				id = GEH_daily.23
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 4
+				}
+			}
+			country_event = {
+				id = GEH_daily.28
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 5
+				}
+			}
+			country_event = {
+				id = GEH_daily.29
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 6
+				}
+			}
+			country_event = {
+				id = GEH_daily.30
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 7
+				}
+			}
+			country_event = {
+				id = GEH_daily.31
+				days = GEH_random_event_days_temp
+			}
+		}
+	}else_if = {
+
+		limit = {
+			check_variable = {
+				GEH_bad_event_temp > random
+			}
+		}
+
+		set_temp_variable = {
+			GEH_random_event_no_temp = random
+		}
+		multiply_temp_variable = {
+			GEH_random_event_no_temp = 8
+		}
+		
+		round_temp_variable =GEH_random_event_no_temp
+
+		clamp_variable = {
+			var = GEH_random_event_no_temp
+			min = 0
+			max = 7
+		}
+
+		set_temp_variable = {
+			GEH_random_event_days_temp = random
+		}
+
+		multiply_temp_variable = {
+			GEH_random_event_days_temp = 20
+		}
+
+		round_temp_variable =GEH_random_event_days_temp
+
+
+		if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 0
+				}
+			}
+			country_event = {
+				id = GEH_daily.12
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 1
+				}
+			}
+			country_event = {
+				id = GEH_daily.13
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 2
+				}
+			}
+			country_event = {
+				id = GEH_daily.14
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 3
+				}
+			}
+			country_event = {
+				id = GEH_daily.16
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 4
+				}
+			}
+			country_event = {
+				id = GEH_daily.20
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 5
+				}
+			}
+			country_event = {
+				id = GEH_daily.25
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 6
+				}
+			}
+			country_event = {
+				id = GEH_daily.26
+				days = GEH_random_event_days_temp
+			}
+		}else_if = {
+			limit = {
+				chechk_variable = {
+					GEH_random_event_no_temp = 7
+				}
+			}
+			country_event = {
+				id = GEH_daily.27
+				days = GEH_random_event_days_temp
+			}
+		}
+
+
+	}
+	
+
+
+}

@@ -333,7 +333,7 @@ country_event = { # 装甲部队的建设分歧 #好事件
         add_ideas = GEH_daily_armored_technology_revolution
         add_tech_bonus = {
             bonus = 1
-            name = 研究
+            name = "研究"
             uses = 1
             category = armor
         }
@@ -479,5 +479,118 @@ country_event = { # 暴动的...松饼？ #坏事件
             id = GEH_bp_between_chaos_and_order
             value = -0.05
         }
+    }
+}
+
+
+
+
+
+country_event = { # 美食研究会每月推荐 #好事件
+    id = GEH_daily.28
+    title = GEH_daily.28.t
+    desc = GEH_daily.28.desc
+    picture = GFX_GEH_daily_news_event_3
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.28.a
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+    }
+    option = {
+        name = GEH_daily.28.b
+        add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+
+        hidden_effect = {
+            set_temp_variable = {
+                BARE_duelHead_Chance_temp = 0.03
+            }
+            add_to_variable = {
+                GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+            }
+            GEH_dualHeaded_Influence_Factor_Change = yes
+
+        }
+        custom_effect_tooltip =GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
+    }
+}
+
+
+
+country_event = { # 温泉开发部的新温泉 #好事件
+    id = GEH_daily.29
+    title = GEH_daily.29.t
+    desc = GEH_daily.29.desc
+    picture = GFX_GEH_daily_news_event_3
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.29.a
+        add_political_power = 25
+        add_stability = 0.03
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+    }
+    option = {
+        name = GEH_daily.29.b
+        add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+    }
+}
+
+
+country_event = { # 捷足先登 #好事件
+    id = GEH_daily.30
+    title = GEH_daily.30.t
+    desc = GEH_daily.30.desc
+    picture = GFX_GEH_daily_news_event_3
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.30.a
+        add_political_power = 50
+        add_stability = 0.03
+         add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.01
+        }
+        
+    }
+    option = {
+        name = GEH_daily.30.b
+        army_experience = 25
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+    }
+}
+
+
+
+country_event = { # 捷足先登 #好事件
+    id = GEH_daily.30
+    title = GEH_daily.30.t
+    desc = GEH_daily.30.desc
+    picture = GFX_GEH_daily_news_event_3
+    
+    is_triggered_only = yes
+    option = {
+        name = GEH_daily.30.a
+        add_power_balance_value = {
+            id = GEH_bp_between_chaos_and_order
+            value = -0.05
+        }
+        
     }
 }

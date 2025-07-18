@@ -1398,6 +1398,138 @@ ideas = {
                 }
             }
         }
+
+        GEH_joint_operations_command_ideas_1_3 = {
+            name =  GEH_joint_operations_command_ideas
+            picture = unknown
+
+            modifier = {
+               land_reinforce_rate = 0.01
+               army_morale_factor = 0.05
+               planning_speed = 0.05
+		       max_planning = 0.05
+
+               air_cas_efficiency = 0.1
+		       ground_attack_factor = 0.15
+            }
+            allowed = {
+               or = {
+                  original_tag = GEH
+                  original_tag = TRI
+               }
+            }
+
+            cancel_trigger = {
+                NOT = {
+                    has_war_with = ARI
+                }
+            }
+        }
+
+        
+        GEH_joint_operations_command_ideas_1_2 = {
+            name =  GEH_joint_operations_command_ideas
+            picture = unknown
+
+            modifier = {
+               land_reinforce_rate = 0.03
+               army_morale_factor = 0.1
+               planning_speed = 0.1
+		       max_planning = 0.1
+               army_org_factor = 0.1
+               industrial_capacity_factory = 0.2
+            }
+            allowed = {
+               or = {
+                  original_tag = GEH
+                  original_tag = TRI
+               }
+            }
+
+            cancel_trigger = {
+                NOT = {
+                    has_war_with = ARI
+                }
+            }
+        }
+
+
+        GEH_joint_operations_command_ideas_1_2_3 = {
+            name =  GEH_joint_operations_command_ideas
+            picture = unknown
+
+            modifier = {
+               land_reinforce_rate = 0.03
+               army_morale_factor = 0.1
+               planning_speed = 0.1
+		       max_planning = 0.1
+               army_org_factor = 0.1
+               industrial_capacity_factory = 0.2
+
+               air_cas_efficiency = 0.1
+		       ground_attack_factor = 0.15
+            }
+            allowed = {
+               or = {
+                  original_tag = GEH
+                  original_tag = TRI
+               }
+            }
+
+            cancel_trigger = {
+                NOT = {
+                    has_war_with = ARI
+                }
+            }
+        }
+
+
+        GEH_spare_no_effort_idea = {
+            name =  GEH_spare_no_effort_idea
+            picture = unknown
+
+            
+            modifier = {
+               stability_weekly_factor = -0.03
+               army_attack_factor = 0.2 
+               army_defence_factor = 0.2
+               army_morale_factor = 0.1
+               army_org_factor = 0.2
+               army_speed_factor = 0.1
+            }
+
+            allowed = {
+                original_tag = GEH
+            }
+            cancel_trigger = {
+                NOT = {
+                    has_war_with = ARI
+                }
+            }
+
+        }
+
+        GEH_Great_Motherland_idea = {
+            name =  GEH_Great_Motherland_idea
+            picture = unknown
+
+            
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                industrial_capacity_factory = 0.15
+                consumer_goods_expected_value = -0.05
+                army_org_factor = 0.15
+                war_support_weekly_factor = 0.005
+                stability_weekly_factor = 0.005
+                political_power_factor = 0.15
+                power_balance_weekly = -0.02
+            }
+
+            allowed = {
+                original_tag = GEH
+            }
+        
+        }
         #社团线
         #风纪委员会的日常
         GEH_daytoday_work_of_discipline_committee = {

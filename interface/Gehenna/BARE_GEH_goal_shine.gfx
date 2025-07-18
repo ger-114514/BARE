@@ -1376,11 +1376,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_GEH_Collaboration_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Collaboration.dds"
+		name = "GFX_goal_GEH_United_air_force_shine"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_United_air_force.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Collaboration.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_United_air_force.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1393,7 +1393,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Collaboration.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_United_air_force.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1408,11 +1408,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_GEH_Military_industry_complementarity_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Military_industry_complementarity.dds"
+		name = "GFX_goal_GEH_Shared_equipment_shine"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Shared_equipment.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Military_industry_complementarity.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Shared_equipment.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1425,7 +1425,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Military_industry_complementarity.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Shared_equipment.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
