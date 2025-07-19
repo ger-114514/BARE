@@ -315,46 +315,20 @@ GEH_food_service_and_gourmet_research_calc = {
 GEH_weekly_variable_change = {
 	#每周破坏度变化
 	add_to_variable = {
-		GEH_hot_spring_destructive = modifier@GEH_societies_hot_spring_destructive_weekly
-	}
-	add_to_variable = {
-		GEH_gourmet_research_destructive = modifier@GEH_societies_gourmet_research_destructive_weekly
-	}
-
-	add_to_variable = {
-		GEH_com68_destructive = modifier@GEH_societies_com68_destructive_weekly
-	}
-
-	add_to_variable = {
 		GEH_hot_spring_activity = modifier@GEH_societies_hot_spring_activity_weekly
 	}
-
-
 	add_to_variable = {
 		GEH_gourmet_research_activity = modifier@GEH_societies_gourmet_research_activity_weekly
 	}
-
 	add_to_variable = {
 		GEH_com68_activity = modifier@GEH_societies_com68_activity_weekly
 	}
-
-
 	add_to_variable = {
 		GEH_discipline_committee_activity = modifier@GEH_societies_discipline_committee_activity_weekly
 	}
-
 	add_to_variable = {
 		GEH_food_service_activity = modifier@GEH_societies_food_service_activity_weekly
 	}
-
-	add_to_variable = {
-		GEH_discipline_committee_repression = modifier@GEH_societies_discipline_committee_repression_weekly
-	}
-
-	add_to_variable = {
-		GEH_food_service_efficiency = modifier@GEH_societies_food_service_efficiency_weekly
-	}
-
 	add_to_variable = { GEH_food_service_activity = 1 }
 	add_to_variable = { GEH_gourmet_research_activity = 1 }
 	add_to_variable = { GEH_hot_spring_activity = 1 }
@@ -381,6 +355,9 @@ GEH_weekly_variable_change = {
 			    }			
 	        }
 		    add_to_variable = { GEH_com68_destructive = GEH_com68_destructive_temp }
+			add_to_variable = {
+		        GEH_com68_destructive = modifier@GEH_societies_com68_destructive_weekly
+	        }
 	    }
 		clamp_variable = {
 		    var = GEH_comb68_activity
@@ -400,6 +377,9 @@ GEH_weekly_variable_change = {
 			}			
 		}
 		add_to_variable = { GEH_food_service_efficiency = GEH_food_service_efficiency_temp }
+		add_to_variable = {
+		    GEH_food_service_efficiency = modifier@GEH_societies_food_service_efficiency_weekly
+	    }
 	}
 	if = {
 		limit = {
@@ -408,6 +388,9 @@ GEH_weekly_variable_change = {
 			}			
 		}
 		add_to_variable = { GEH_gourmet_research_destructive = GEH_gourmet_research_destructive_temp }
+		add_to_variable = {
+		    GEH_gourmet_research_destructive = modifier@GEH_societies_gourmet_research_destructive_weekly
+	    }
 	}
 	if = {
 		limit = {
@@ -416,6 +399,9 @@ GEH_weekly_variable_change = {
 			}			
 		}
 		add_to_variable = { GEH_hot_spring_destructive = GEH_hot_spring_destructive_temp }
+		add_to_variable = {
+		    GEH_hot_spring_destructive = modifier@GEH_societies_hot_spring_destructive_weekly
+	    }
 	}
 	if = {
 		limit = {
@@ -424,14 +410,9 @@ GEH_weekly_variable_change = {
 			}			
 		}
 		add_to_variable = { GEH_discipline_committee_repression = GEH_discipline_committee_repression_temp }
-	}
-	if = {
-		limit = {
-			NOT = {
-                check_variable = { GEH_com68_destructive = 0 }
-			}			
-		}
-		#add_to_variable = { GEH_com68_destructive = GEH_com68_destructive_temp }
+		add_to_variable = {
+		    GEH_discipline_committee_repression = modifier@GEH_societies_discipline_committee_repression_weekly
+	    }
 	}	
 	
 }

@@ -18,7 +18,7 @@ GEH_societies_dec_category = {
             set_variable = {
                 GEH_hot_spring_activity = 20
             }
-            #温泉部破坏性
+            #温泉部破坏度
             set_variable = {
                 GEH_hot_spring_destructive = 31
             }
@@ -34,7 +34,7 @@ GEH_societies_dec_category = {
             set_variable = {
                 GEH_gourmet_research_activity = 20
             }
-            #美食部破坏性
+            #美食部破坏度
             set_variable = {
                 GEH_gourmet_research_destructive = 21
             }
@@ -42,7 +42,7 @@ GEH_societies_dec_category = {
             set_variable = {
                 GEH_comb68_activity = 20
             }
-            #便利屋68破坏性
+            #便利屋68破坏度
             set_variable = {
                 GEH_com68_destructive = 20
             }
@@ -84,7 +84,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_gourmet_research_activity = 20
             }
-            #美食部破坏性
+            #美食部破坏度
             add_to_variable = {
                 GEH_gourmet_research_destructive = 20
             }
@@ -101,7 +101,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_hot_spring_activity = 20
             }
-            #温泉部破坏性
+            #温泉部破坏度
             add_to_variable = {
                 GEH_hot_spring_destructive = 20
             }
@@ -158,6 +158,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_discipline_committee_repression = 5
             }
+            custom_effect_tooltip = GEH_discipline_committee_gangsters_eviction_tt
             GEH_discipline_committee_calc = yes
         }
     }
@@ -189,6 +190,7 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_repression = 5
             }
             GEH_discipline_committee_calc = yes
+            custom_effect_tooltip = GEH_discipline_committee_gangsters_eviction_tt
         }
         timeout_effect = {
             add_to_variable = {
@@ -197,6 +199,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_discipline_committee_max = 1
             }
+            custom_effect_tooltip = GEH_discipline_committee_establish_border_patrol_system_tt
         }
     }
     #打击头盔团
@@ -222,6 +225,7 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_repression = 5
             }
             GEH_discipline_committee_calc = yes
+            custom_effect_tooltip = GEH_discipline_committee_combat_helmet_regiments_tt
         }
         timeout_effect = {
             add_to_variable = {
@@ -247,9 +251,6 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_num = 1
             }
             stability_factor = -0.05
-            add_to_variable = {
-                GEH_discipline_committee_ability = 5
-            }
             GEH_discipline_committee_calc = yes
         }
         timeout_effect = {
@@ -257,9 +258,13 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_num = -1
             }
             add_to_variable = {
+                GEH_discipline_committee_ability = 5
+            }
+            add_to_variable = {
                 GEH_discipline_committee_repression = 5
             }
             GEH_discipline_committee_calc = yes
+            custom_effect_tooltip = GEH_discipline_committee_gangsters_eviction_tt
         }
     }
     #头盔团教育改造
@@ -293,6 +298,7 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_ability = 5
             }
             GEH_discipline_committee_calc = yes
+            custom_effect_tooltip = GEH_discipline_committee_helmet_regiment_teach_reform_tt
         }
     }
 ##############温泉开发部#############
@@ -306,7 +312,7 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    check_variable = { GEH_hot_spring_destructive > 30 }
+                    check_variable = { GEH_hot_spring_destructive > 20 }
                     check_variable = { GEH_hot_spring_destructive < 50 }
                 }
                 has_state_flag = GEH_hot_spring_damage
@@ -316,7 +322,7 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    check_variable = { GEH_hot_spring_destructive > 30 }
+                    check_variable = { GEH_hot_spring_destructive > 20 }
                     check_variable = { GEH_hot_spring_destructive < 50 }
                 }
                 has_state_flag = GEH_hot_spring_damage
@@ -335,7 +341,7 @@ GEH_societies_dec_category = {
                         OR = {
                             has_country_flag = GEH_hina_apprehend_hot_spring
                             check_variable = { GEH_hot_spring_destructive > 50 }
-                            check_variable = { GEH_hot_spring_destructive < 30 }
+                            check_variable = { GEH_hot_spring_destructive < 20 }
                         }                  
                     }
                 }                     
@@ -355,6 +361,7 @@ GEH_societies_dec_category = {
                     country_event = {
                         id = GEH_hot_spring_events.7
                     } 
+                    custom_effect_tooltip = GEH_operation_hot_spring_1_tt
                 }
             }
             hidden_effect = {
@@ -418,6 +425,7 @@ GEH_societies_dec_category = {
                     country_event = {
                         id = GEH_hot_spring_events.8
                     } 
+                    custom_effect_tooltip = GEH_operation_hot_spring_2_tt
                 }
             }
             hidden_effect = {
@@ -485,6 +493,7 @@ GEH_societies_dec_category = {
                     country_event = {
                         id = GEH_hot_spring_events.9
                     } 
+                    custom_effect_tooltip = GEH_operation_hot_spring_3_tt
                 }
             }
             hidden_effect = {
@@ -508,7 +517,10 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    check_variable = { GEH_hot_spring_activity > 50 }
+                    custom_trigger_tooltip = {
+                        tooltip = GEH_hot_spring_making_tooltip
+                        check_variable = { GEH_hot_spring_activity > 50 }
+                    }
                     has_completed_focus = GEH_Hot_spring_development
                 }
                 has_state_flag = GEH_hot_spring_damage
@@ -589,6 +601,14 @@ GEH_societies_dec_category = {
         days_re_enable = 30
         on_map_mode = map_only
         state_target = yes
+        available = {
+            FROM = {
+                GEH = {
+                    has_completed_focus = GEH_Hot_Spring_Experience
+                }
+                state = 385
+            }
+        }
         target_trigger = {
             FROM = {
                 GEH = {
@@ -672,10 +692,11 @@ GEH_societies_dec_category = {
                             NOT = {has_country_flag = GEH_fuuka_protected}
                         }
                         add_to_variable = { GEH_food_service_activity = -2 }
-                        add_to_variable = { GEH_gourmet_research_activity = 2 }                     
+                        add_to_variable = { GEH_gourmet_research_activity = 2 }                  
                     }
                     add_to_variable = { GEH_gourmet_research_destructive = 1 }
                     GEH_food_service_and_gourmet_research_calc = yes
+                    custom_effect_tooltip = GEH_operation_gourmet_research_1_tt   
                     country_event = {
                         id = GEH_gourmet_research_events.3
                     } 
@@ -745,6 +766,7 @@ GEH_societies_dec_category = {
                         add_to_variable = { GEH_gourmet_research_activity = 4 }                     
                     }
                     add_to_variable = { GEH_gourmet_research_destructive = 2 }
+                    custom_effect_tooltip = GEH_operation_gourmet_research_2_tt
                     GEH_food_service_and_gourmet_research_calc = yes
                     country_event = {
                         id = GEH_gourmet_research_events.4
@@ -815,6 +837,7 @@ GEH_societies_dec_category = {
                     }
                     add_to_variable = { GEH_gourmet_research_destructive = 3 }
                     GEH_food_service_and_gourmet_research_calc = yes
+                    custom_effect_tooltip = GEH_operation_gourmet_research_3_tt
                     country_event = {
                         id = GEH_gourmet_research_events.5
                     } 
@@ -881,6 +904,7 @@ GEH_societies_dec_category = {
                         add_to_variable = { GEH_gourmet_research_activity = 8 }                     
                     }
                     add_to_variable = { GEH_gourmet_research_destructive = 4 }
+                    custom_effect_tooltip = GEH_operation_gourmet_research_3_tt
                     GEH_food_service_and_gourmet_research_calc = yes
                     country_event = {
                         id = GEH_gourmet_research_events.6
@@ -904,7 +928,10 @@ GEH_societies_dec_category = {
             FROM = {
                 OWNER = {
                     tag = GEH 
-                    check_variable = { GEH_gourmet_research > 50 }
+                    custom_trigger_tooltip = {
+                        tooltip = GEH_gourmet_research_eating_tooltip
+                        check_variable = { GEH_gourmet_research > 50 }
+                    }                    
                     has_completed_focus = GEH_Delicious_time
                 }
                 has_state_flag = GEH_gourmet_research_damage
@@ -948,6 +975,7 @@ GEH_societies_dec_category = {
                 OWNER = {
                     add_to_variable = { GEH_gourmet_research_activity = 5 }                     
                     GEH_food_service_and_gourmet_research_calc = yes
+                    custom_effect_tooltip = GEH_gourmet_research_eating_tt
                 }                 
             }
         }
@@ -976,7 +1004,8 @@ GEH_societies_dec_category = {
                     set_country_flag = GEH_fuuka_protected
                     671 = {
                         set_state_flag = GEH_food_service_trans
-                    } 
+                    }
+                    custom_effect_tooltip =  GEH_fuuka_protect_tt
                 }                                  
             }
         }        
@@ -1009,6 +1038,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_food_service_activity = 10
             }
+            custom_effect_tooltip = GEH_food_service_enrollment_tt
         }      
     }
     #给食部食堂扩建
@@ -1033,6 +1063,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_food_service_activity = 30
             }
+            custom_effect_tooltip = GEH_expansion_of_canteen_tt
         }      
     }
 #给食部食物运输
@@ -1402,6 +1433,7 @@ GEH_societies_dec_category = {
                         id = GEH_discipline_committee_events.8
                     }
                 }
+                custom_effect_tooltip = GEH_ioli_patrol_tt
             }
         }
     }
@@ -1441,7 +1473,8 @@ GEH_societies_dec_category = {
                             has_country_flag = GEH_ioli_working
                         }
                         clr_country_flag = GEH_ioli_working 
-                    }                      
+                    }
+                    custom_effect_tooltip = GEH_ako_protect_tt                     
                     country_event = {
                         id = GEH_discipline_committee_events.9
                     }           
@@ -1504,16 +1537,17 @@ GEH_societies_dec_category = {
                         has_state_flag = GEH_gourmet_research_damage
                     } 
                     clr_state_flag = GEH_gourmet_research_damage
+                    OWNER = {
+                        set_country_flag = GEH_hina_apprehend_gourmet_research
+                        add_to_variable = { GEH_gourmet_research_activity = -6 }
+                        add_to_variable = { GEH_gourmet_research_destructive = -12 } 
+                        GEH_hot_spring_calc = yes
+                        country_event = {
+                            id = GEH_discipline_committee_events.10
+                        } 
+                    }
                 }
-                OWNER = {
-                    set_country_flag = GEH_hina_apprehend_gourmet_research
-                    add_to_variable = { GEH_gourmet_research_activity = -6 }
-                    add_to_variable = { GEH_gourmet_research_destructive = -12 } 
-                    GEH_hot_spring_calc = yes
-                    country_event = {
-                        id = GEH_discipline_committee_events.10
-                    } 
-                }
+                custom_effect_tooltip = GEH_hina_patrol_tt
             }
         }
     }
@@ -1555,6 +1589,7 @@ GEH_societies_dec_category = {
                         add_to_variable = { GEH_hot_spring_activity = 2 }                     
                         add_to_variable = { GEH_hot_spring_destructive = -6 }
                         GEH_hot_spring_calc = yes
+                        custom_effect_tooltip = GEH_hina_talking_hot_spring_tt
                         country_event = {
                             id = GEH_discipline_committee_events.13
                         } 
@@ -1605,7 +1640,8 @@ GEH_societies_dec_category = {
                         }
                         add_to_variable = { GEH_gourmet_research_activity = 2 }                     
                         add_to_variable = { GEH_gourmet_research_destructive = -6 }
-                        GEH_hot_spring_calc = yes
+                        GEH_food_service_and_gourmet_research_calc = yes
+                        custom_effect_tooltip = GEH_hina_talking_gourmet_research_tt
                         country_event = {
                             id = GEH_discipline_committee_events.12
                         } 
@@ -1691,6 +1727,7 @@ GEH_societies_dec_category = {
                     add_to_variable = { GEH_hot_spring_activity = 5 }
                     add_to_variable = { GEH_hot_spring_destructive = -15 } 
                     GEH_hot_spring_calc = yes
+                    custom_effect_tooltip = GEH_hot_spring_education_tt
                     country_event = {
                         id = GEH_discipline_committee_events.15
                     }               
@@ -1769,7 +1806,8 @@ GEH_societies_dec_category = {
                 OWNER = {
                     add_to_variable = { GEH_gourmet_research_activity = 5 }
                     add_to_variable = { GEH_gourmet_research_destructive = -15 } 
-                    GEH_hot_spring_calc = yes 
+                    GEH_food_service_and_gourmet_research_calc = yes
+                    custom_effect_tooltip = GEH_gourmet_research_education_tt
                     country_event = {
                         id = GEH_discipline_committee_events.14
                     }              
