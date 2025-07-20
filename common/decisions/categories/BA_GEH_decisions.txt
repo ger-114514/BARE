@@ -136,10 +136,8 @@ GEH_dualHeaded = {
 GEH_societies_dec_category = {
 	visible_when_empty = yes
     scripted_gui = GEH_societies_dec_window
-	allowed = {
-		original_tag = GEH
-	}
 	visible = {
+		original_tag = GEH
 		has_completed_focus = GEH_Dealing_with_chaos
 	}
 	priority = 1100

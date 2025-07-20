@@ -2876,7 +2876,9 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Solving_food_supply_problems
-
+        modifier = {
+            GEH_societies_food_service_activity_weekly = 1
+        }
         prerequisite = {  focus =  GEH_Solving_food_supply_problems }
         unlock_decision_tooltip = GEH_operation_food_service_1
         completion_reward = {
@@ -2939,8 +2941,11 @@ focus_tree = {
         unlock_decision_tooltip = GEH_gourmet_research_eating
         prerequisite = { focus = GEH_conversation_with_Food_Research }
         available = {
-			check_variable = { GEH_gourmet_research_activity > 50 }
-            check_variable = { GEH_gourmet_research_destructive < 30 }
+            custom_trigger_tooltip = {
+                tooltip = GEH_Delicious_time_tt
+                check_variable = { GEH_gourmet_research_activity > 50 }
+                check_variable = { GEH_gourmet_research_destructive < 30 }
+            }
 		}
         completion_reward = {
             country_event = {
@@ -2985,7 +2990,14 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =   GEH_Cute_terrorists
-
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_Boot_trouble_tt
+                check_variable = { GEH_hot_spring_activity > 30 }
+                check_variable = { GEH_hot_spring_destructive < 50 }
+            }
+        }
+        
         prerequisite = {  focus =   GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Monitoring_trouble }
         unlock_decision_tooltip = GEH_hina_talking_hot_spring
@@ -3037,7 +3049,13 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =   GEH_Cute_terrorists
-
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_Monitoring_trouble_tt
+                check_variable = { GEH_hot_spring_destructive < 50 }
+            }
+        }
+        
         prerequisite = {  focus =  GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Boot_trouble }
 
@@ -3239,10 +3257,14 @@ focus_tree = {
         relative_position_id =  GEH_Let_a_hundred_flowers_bloom
 
         
-       prerequisite = { focus = GEH_Let_a_hundred_flowers_bloom focus = GEH_Order_in_Chaos}
-       
-       
-
+        prerequisite = { focus = GEH_Let_a_hundred_flowers_bloom focus = GEH_Order_in_Chaos}
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = GEH_Daily_life_of_the_Discipline_tt
+                check_variable = { GEH_discipline_committee_ability > 80 }
+                check_variable = { GEH_discipline_committee_repression > 80 }
+            }
+        }
         completion_reward = {
             country_event = {
                 id = GEH_discipline_committee_events.1
