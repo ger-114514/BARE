@@ -267,7 +267,7 @@ GEH_food_service_and_gourmet_research_calc = {
 			GEH = {
 				has_completed_focus = GEH_Delicious_time
 			}
-			chechk_variable = {
+			check_variable = {
 				GEH_gourmet_research_activity = 100
 			}
 		}
@@ -499,7 +499,7 @@ GEH_monthly_random_daily_event = {
 	if = {
 		limit = {
 			check_variable = {
-				GEH_good_event_temp > random
+				GEH_good_event_temp < random
 			}
 		}
 
@@ -531,96 +531,104 @@ GEH_monthly_random_daily_event = {
 
 		if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 0
 				}
 			}
 			country_event = {
 				id = GEH_daily.11
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 1
 				}
 			}
 			country_event = {
 				id = GEH_daily.18
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 2
 				}
 			}
 			country_event = {
 				id = GEH_daily.19
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 3
 				}
 			}
 			country_event = {
 				id = GEH_daily.23
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 4
 				}
 			}
 			country_event = {
 				id = GEH_daily.28
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 5
 				}
 			}
 			country_event = {
 				id = GEH_daily.29
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 6
 				}
 			}
 			country_event = {
 				id = GEH_daily.30
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 7
 				}
 			}
 			country_event = {
 				id = GEH_daily.31
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}
 	}else_if = {
+		
 
 		limit = {
+			set_temp_variable = {
+				GEH_random_event_chance = random
+			}
+			log = "GEH_random_event_chance [?GEH_random_event_chance]"
 			check_variable = {
-				GEH_bad_event_temp > random
+				GEH_bad_event_temp < GEH_random_event_chance
 			}
 		}
 
 		set_temp_variable = {
 			GEH_random_event_no_temp = random
 		}
+
+		log = "GEH_random_event_no_temp a [?GEH_random_event_no_temp]"
+
 		multiply_temp_variable = {
 			GEH_random_event_no_temp = 8
 		}
@@ -632,7 +640,7 @@ GEH_monthly_random_daily_event = {
 			min = 0
 			max = 7
 		}
-
+		log = "GEH_random_event_no_temp b [?GEH_random_event_no_temp]"
 		set_temp_variable = {
 			GEH_random_event_days_temp = random
 		}
@@ -646,83 +654,84 @@ GEH_monthly_random_daily_event = {
 
 		if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 0
 				}
 			}
+			log = "GEH_random_event_no_temp 12 [?GEH_random_event_no_temp]"
 			country_event = {
 				id = GEH_daily.12
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 1
 				}
 			}
 			country_event = {
 				id = GEH_daily.13
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 2
 				}
 			}
 			country_event = {
 				id = GEH_daily.14
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 3
 				}
 			}
 			country_event = {
 				id = GEH_daily.16
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 4
 				}
 			}
 			country_event = {
 				id = GEH_daily.20
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 5
 				}
 			}
 			country_event = {
 				id = GEH_daily.25
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 6
 				}
 			}
 			country_event = {
 				id = GEH_daily.26
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
-				chechk_variable = {
+				check_variable = {
 					GEH_random_event_no_temp = 7
 				}
 			}
 			country_event = {
 				id = GEH_daily.27
-				days = GEH_random_event_days_temp
+				GEH_random_event_no_temp
 			}
 		}
 
