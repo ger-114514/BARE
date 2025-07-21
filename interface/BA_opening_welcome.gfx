@@ -1,28 +1,35 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_ipad_bg"
-		textureFile = "gfx/interface/opening_welcome/ipad_bg.png"
+		name = "GFX_BARE_openingWelcome_bg"
+		textureFile = "gfx/interface/opening_welcome/BARE_openingWelcome_bg.dds"
 	}
 	spriteType = {
-		name = "GFX_pad_button1"
-		textureFile = "gfx/interface/opening_welcome/pad_button1.png"
+		name = "GFX_BARE_openingWelcome_confirm_button"
+		textureFile = "gfx/interface/opening_welcome/BARE_openingWelcome_confirm_button.dds"
 	}
     spriteType = {
-		name = "GFX_pad_button2"
-		textureFile = "gfx/interface/opening_welcome/pad_button2.png"
+		name = "GFX_BARE_openingWelcome_school_bg_normal"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_normal.dds"
 	}
-    spriteType = {
-		name = "GFX_pad_button3"
-		textureFile = "gfx/interface/opening_welcome/pad_button3.png"
+	spriteType = {
+		name = "GFX_BARE_openingWelcome_school_bg_TRI"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_TRI.dds"
 	}
-    spriteType = {
-		name = "GFX_pad_button4"
-		textureFile = "gfx/interface/opening_welcome/pad_button4.png"
+	    spriteType = {
+		name = "GFX_BARE_openingWelcome_school_bg_GEH"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_GEH.dds"
 	}
-    spriteType = {
-		name = "GFX_pad_exitbar"
-		textureFile = "gfx/interface/opening_welcome/pad_exitbar.png"
+	    spriteType = {
+		name = "GFX_BARE_openingWelcome_school_bg_ARI"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_ARI.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_BARE_openingWelcome_type_button"
+		textureFile = "gfx/interface/opening_welcome/BARE_openingWelcome_type_button_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_BARE_openingWelcome_NotFound"
+		textureFile = "gfx/interface/opening_welcome/BARE_openingWelcome_NotFound.dds"
+	}
 }
 
