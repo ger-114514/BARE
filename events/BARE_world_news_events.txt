@@ -96,6 +96,18 @@ country_event = {
 			id = BARE_World_News.14
 			days = 1800
 		}
+
+		#FOX逮捕若藻
+		news_event = {
+			id = BARE_World_News.15
+			days = 70
+		}
+
+		#SRT废校！
+		news_event = {
+			id = BARE_World_News.16
+			days = 730
+		}
 	}
 
 	option = {
@@ -654,6 +666,76 @@ news_event = {
 		trigger = {
 			OR = {
 				TAG = SHA
+			}
+		}
+	}
+}
+
+
+#“灾厄之狐”被逮捕！
+news_event = {
+	id = BARE_World_News.15
+	picture = GFX_BA_news_2
+	title = BARE_World_News.15.t
+	desc = BARE_World_News.15.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#可算少了个大麻烦
+	option = {
+		name = BARE_World_News.15.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SRT
+				}
+			}
+		}
+	}
+
+	#这就是SRT的实力！
+	option = {
+		name = BARE_World_News.15.b
+		trigger = {
+			OR = {
+				TAG = SRT
+			}
+		}
+	}
+}
+
+
+#SRT废校！
+news_event = {
+	id = BARE_World_News.16
+	picture = GFX_BA_news_2
+	title = BARE_World_News.16.t
+	desc = BARE_World_News.16.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#飞鸟尽，良弓藏
+	option = {
+		name = BARE_World_News.16.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = CEN
+				}
+			}
+		}
+	}
+
+	#这并非我们所愿...
+	option = {
+		name = BARE_World_News.16.b
+		trigger = {
+			OR = {
+				TAG = CEN
 			}
 		}
 	}
