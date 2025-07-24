@@ -21,3 +21,704 @@ GEH_degrade_debuff_of_troop = {
 		}
 	}
 }
+
+
+GEH_dualHeaded_Influence_Factor_Change = {
+	clamp_variable = {
+		var = GEH_dualHeaded_Influence_Factor
+		min = 0
+		max = 1
+	}
+
+	set_variable = {
+		GEH_dualHeaded_Influence_Factor_Hina_Text = GEH_dualHeaded_Influence_Factor
+	}
+	set_variable = {
+		GEH_dualHeaded_Influence_Factor_Makoto_Text = 1
+	}
+	subtract_from_variable = {
+		GEH_dualHeaded_Influence_Factor_Makoto_Text = GEH_dualHeaded_Influence_Factor
+	}
+	set_variable = {
+		GEH_dualHeaded_Influence_Factor_FRAME = GEH_dualHeaded_Influence_Factor
+	}
+	multiply_variable = {
+		GEH_dualHeaded_Influence_Factor_FRAME = 1000
+	}
+	
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.2
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		add_ideas = GEH_dualHeaded_balance_hina_2
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.2
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.4
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_hina_1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.4
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.6
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_normal
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.6
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.8
+				compare = less_than
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_2
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_makoto_1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.8
+				compare = greater_than_or_equals
+			}
+		}
+		remove_ideas = GEH_dualHeaded_balance_makoto_1
+		remove_ideas = GEH_dualHeaded_balance_normal
+		remove_ideas = GEH_dualHeaded_balance_hina_1
+		remove_ideas = GEH_dualHeaded_balance_hina_2
+		add_ideas = GEH_dualHeaded_balance_makoto_2
+	}
+}
+
+
+#风纪委相关计算
+GEH_discipline_committee_calc = {
+	clamp_variable = {
+		var = GEH_discipline_committee_ability
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GEH_discipline_committee_repression
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Order_in_Chaos
+			}
+			check_variable = { GEH_discipline_committee_ability = 100 }
+		}
+		set_variable = { GEH_discipline_committee_max_political_power = 0.2 }
+	}
+	else_if = {
+        limit = {
+			GEH = {
+				has_completed_focus = GEH_Let_a_hundred_flowers_bloom
+			}
+			check_variable = { GEH_discipline_committee_ability = 100 }
+		}
+		set_variable = { GEH_discipline_committee_max_political_power = 0.1 }
+		set_variable = { GEH_discipline_committee_max_research = 0.3 }
+	}
+	set_variable = { GEH_discipline_committee_research = GEH_discipline_committee_ability }
+    set_variable = { GEH_discipline_committee_stability_factor = GEH_discipline_committee_ability }
+    set_variable = { GEH_discipline_committee_stability_weekly = GEH_discipline_committee_ability }
+    set_variable = { GEH_discipline_committee_army_org_factor = GEH_discipline_committee_ability }
+    set_variable = { GEH_discipline_committee_production_factory_max = GEH_discipline_committee_repression }
+    set_variable = { GEH_discipline_committee_production_factory_start = GEH_discipline_committee_repression }
+	set_variable = { GEH_discipline_committee_stability_factor_temp = GEH_discipline_committee_repression }
+	set_variable = { GEH_discipline_committee_stability_weekly_temp = GEH_discipline_committee_repression }
+	add_to_variable = { GEH_discipline_committee_production_factory_max = -100 }
+	add_to_variable = { GEH_discipline_committee_production_factory_start = -100 }
+	add_to_variable = { GEH_discipline_committee_stability_factor_temp = -100 }
+	add_to_variable = { GEH_discipline_committee_stability_weekly_temp = -100 }
+	multiply_variable = { GEH_discipline_committee_research = -0.001}
+	multiply_variable = { GEH_discipline_committee_stability_factor = 0.002 }
+	multiply_variable = { GEH_discipline_committee_stability_weekly = 0.000005}
+	multiply_variable = { GEH_discipline_committee_army_org_factor = 0.002 }
+	multiply_variable = { GEH_discipline_committee_production_factory_max = 0.002 }
+	multiply_variable = { GEH_discipline_committee_production_factory_start = 0.002 }
+	multiply_variable = { GEH_discipline_committee_stability_factor_temp = 0.002 }
+	multiply_variable = { GEH_discipline_committee_stability_weekly_temp = 0.000002 }
+	add_to_variable = { GEH_discipline_committee_stability_factor = GEH_discipline_committee_stability_factor_temp }
+	add_to_variable = { GEH_discipline_committee_stability_weekly = GEH_discipline_committee_stability_weekly_temp }
+	add_to_variable = { GEH_discipline_committee_research = GEH_discipline_committee_max_research }
+}
+#温泉部相关计算
+GEH_hot_spring_calc = {
+	clamp_variable = {
+		var = GEH_hot_spring_activity
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GEH_hot_spring_destructive
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Hot_Spring_Village
+			}
+			check_variable = { GEH_hot_spring_activity = 100 }
+		}
+		set_variable = { GEH_hot_spring_max_local_resources = 0.1 }
+		set_variable = { GEH_hot_spring_max_production_speed_infrastructure = 0.1 }
+	}
+	else = {
+		set_variable = { GEH_hot_spring_max_local_resources = 0 }
+		set_variable = { GEH_hot_spring_max_production_speed_infrastructure = 0 }
+	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Relaxing_time
+			}
+			check_variable = { GEH_hot_spring_activity = 100 }
+		}
+		set_variable = { GEH_hot_spring_max_production_speed_buildings = 0.1 }
+	}
+	else = {
+		set_variable = { GEH_hot_spring_max_production_speed_buildings = 0 }
+	}
+    set_variable = { GEH_hot_spring_production_speed_buildings = GEH_hot_spring_activity }
+	set_variable = { GEH_hot_spring_industry_repair = GEH_hot_spring_activity }
+	set_variable = { GEH_hot_spring_line_change_production = GEH_hot_spring_destructive }
+	set_variable = { GEH_hot_spring_production_factory_efficiency = GEH_hot_spring_destructive }
+	set_variable = { GEH_hot_spring_industry_repair_temp = GEH_hot_spring_destructive }
+	multiply_variable = { GEH_hot_spring_production_speed_buildings = 0.002 }
+	multiply_variable = { GEH_hot_spring_industry_repair = 0.002 }
+	multiply_variable = { GEH_hot_spring_line_change_production = -0.002 }
+	multiply_variable = { GEH_hot_spring_production_factory_efficiency = -0.002 }
+	multiply_variable = { GEH_hot_spring_industry_repair_temp = -0.005}
+	add_to_variable = { GEH_hot_spring_industry_repair = GEH_hot_spring_industry_repair_temp }
+	add_to_variable = { GEH_hot_spring_production_speed_buildings = GEH_hot_spring_max_production_speed_buildings }
+}
+#给食部和美食研相关计算
+GEH_food_service_and_gourmet_research_calc = {
+	clamp_variable = {
+		var = GEH_food_service_activity
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GEH_food_service_efficiency
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GEH_gourmet_research_activity
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GEH_gourmet_research_destructive
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = {
+			GEH = {
+				has_completed_focus = GEH_Delicious_time
+			}
+			check_variable = {
+				GEH_gourmet_research_activity = 100
+			}
+		}
+		set_variable = { GEH_gourmet_research_max_research = 0.1 }
+		set_variable = { GEH_gourmet_research_max_consumer_goods = -0.1 }
+		set_variable = { GEH_gourmet_research_max_speed = 0.1 } 
+	}
+	else = {
+		set_variable = { GEH_gourmet_research_max_research = 0 }
+		set_variable = { GEH_gourmet_research_max_consumer_goods = 0 } 
+		set_variable = { GEH_gourmet_research_max_speed = 0 } 
+	}
+	set_variable = { GEH_food_service_supply_consumption = GEH_food_service_activity }
+	set_variable = { GEH_food_serviceno_supply_grace = GEH_food_service_activity }
+	set_variable = { GEH_food_service_supply_node_range = GEH_food_service_activity }
+	multiply_variable = { GEH_food_service_supply_node_range = 0.001 }
+	set_variable = { GEH_food_service_consumer_goods_factor = GEH_food_service_activity }
+	set_variable = { GEH_food_service_consumer_goods_factor_temp = GEH_gourmet_research_activity }
+	set_variable = { GEH_gourmet_research_production_speed_industrial = GEH_gourmet_research_activity }
+	set_variable = { GEH_gourmet_research_army_morale_factor = GEH_gourmet_research_activity }
+	multiply_variable = { GEH_gourmet_research_army_morale_factor = 0.001 }
+	set_variable = { GEH_food_service_efficiency_factor = GEH_food_service_efficiency }
+	multiply_variable = { GEH_food_service_efficiency_factor = 0.001 }
+	set_variable = { GEH_gourmet_research_production_speed_buildings = GEH_gourmet_research_destructive }
+	set_variable = { GEH_gourmet_research_army_morale_factor_temp = GEH_gourmet_research_destructive }
+	set_variable = { GEH_food_service_supply_consumption_temp = GEH_gourmet_research_destructive }
+	set_variable = { GEH_food_service_supply_node_range_temp = GEH_gourmet_research_destructive }
+	multiply_variable = { GEH_food_service_supply_node_range_temp = -0.001 }
+    multiply_variable = { GEH_food_service_supply_consumption = -0.002 }
+	multiply_variable = { GEH_food_serviceno_supply_grace = 0.6 }	
+	multiply_variable = { GEH_food_service_consumer_goods_factor = -0.001 }
+	multiply_variable = { GEH_food_service_consumer_goods_factor_temp = 0.001 }
+	multiply_variable = { GEH_gourmet_research_production_speed_industrial = 0.001 }	
+	multiply_variable = { GEH_gourmet_research_production_speed_buildings = -0.001 }
+	multiply_variable = { GEH_gourmet_research_army_morale_factor_temp = -0.001 }
+	multiply_variable = { GEH_food_service_supply_consumption_temp = 0.001 }
+	
+	add_to_variable = { GEH_food_service_supply_consumption = GEH_food_service_supply_consumption_temp }
+	add_to_variable = { GEH_food_service_supply_node_range = GEH_food_service_supply_node_range_temp }
+	add_to_variable = { GEH_food_service_consumer_goods_factor = GEH_food_service_consumer_goods_factor_temp }
+	add_to_variable = { GEH_food_service_consumer_goods_factor = GEH_gourmet_research_max_consumer_goods }
+	add_to_variable = { GEH_gourmet_research_army_morale_factor = GEH_gourmet_research_army_morale_factor_temp }
+}
+#每周格黑那变化
+GEH_weekly_variable_change = {
+	#每周破坏度变化
+	add_to_variable = {
+		GEH_hot_spring_activity = modifier@GEH_societies_hot_spring_activity_weekly
+	}
+	add_to_variable = {
+		GEH_gourmet_research_activity = modifier@GEH_societies_gourmet_research_activity_weekly
+	}
+	add_to_variable = {
+		GEH_com68_activity = modifier@GEH_societies_com68_activity_weekly
+	}
+	add_to_variable = {
+		GEH_discipline_committee_activity = modifier@GEH_societies_discipline_committee_activity_weekly
+	}
+	add_to_variable = {
+		GEH_food_service_activity = modifier@GEH_societies_food_service_activity_weekly
+	}
+	add_to_variable = { GEH_food_service_activity = 1 }
+	add_to_variable = { GEH_gourmet_research_activity = 1 }
+	add_to_variable = { GEH_hot_spring_activity = 1 }
+	add_to_variable = { GEH_discipline_committee_ability = 1 }
+	set_variable = { GEH_food_service_efficiency_temp = GEH_food_service_activity }
+	multiply_variable = { GEH_food_service_efficiency_temp = 0.002 }
+	set_variable = { GEH_gourmet_research_destructive_temp = GEH_gourmet_research_activity }
+	multiply_variable = { GEH_gourmet_research_destructive_temp = 0.002 }
+	set_variable = { GEH_hot_spring_destructive_temp = GEH_hot_spring_activity }
+	multiply_variable = { GEH_hot_spring_destructive_temp = 0.002 }
+	set_variable = { GEH_discipline_committee_repression_temp = GEH_discipline_committee_ability }
+	multiply_variable = { GEH_discipline_committee_repression_temp = 0.002 }
+	if = {
+		limit = {
+			has_global_flag = GEH_comb68_working
+		}
+		add_to_variable = { GEH_comb68_activity = 1 }
+		set_variable = { GEH_com68_destructive_temp = GEH_comb68_activity }
+	    multiply_variable = { GEH_com68_destructive_temp = 0.002 }
+		if = {
+		    limit = {
+			    NOT = {
+                    check_variable = { GEH_com68_destructive = 0 }
+			    }			
+	        }
+		    add_to_variable = { GEH_com68_destructive = GEH_com68_destructive_temp }
+			add_to_variable = {
+		        GEH_com68_destructive = modifier@GEH_societies_com68_destructive_weekly
+	        }
+	    }
+		clamp_variable = {
+		    var = GEH_comb68_activity
+		    min = 0
+		    max = 100
+	    }	
+		clamp_variable = {
+		    var = GEH_com68_destructive
+		    min = 0
+		    max = 100
+	    }
+	}
+	if = {
+		limit = {
+			NOT = {
+                check_variable = { GEH_food_service_efficiency = 0 }
+			}			
+		}
+		add_to_variable = { GEH_food_service_efficiency = GEH_food_service_efficiency_temp }
+		add_to_variable = {
+		    GEH_food_service_efficiency = modifier@GEH_societies_food_service_efficiency_weekly
+	    }
+	}
+	if = {
+		limit = {
+			NOT = {
+                check_variable = { GEH_gourmet_research_destructive = 0 }
+			}			
+		}
+		add_to_variable = { GEH_gourmet_research_destructive = GEH_gourmet_research_destructive_temp }
+		add_to_variable = {
+		    GEH_gourmet_research_destructive = modifier@GEH_societies_gourmet_research_destructive_weekly
+	    }
+	}
+	if = {
+		limit = {
+			NOT = {
+                check_variable = { GEH_hot_spring_destructive = 0 }
+			}			
+		}
+		add_to_variable = { GEH_hot_spring_destructive = GEH_hot_spring_destructive_temp }
+		add_to_variable = {
+		    GEH_hot_spring_destructive = modifier@GEH_societies_hot_spring_destructive_weekly
+	    }
+	}
+	if = {
+		limit = {
+			NOT = {
+                check_variable = { GEH_discipline_committee_repression = 0 }
+			}			
+		}
+		add_to_variable = { GEH_discipline_committee_repression = GEH_discipline_committee_repression_temp }
+		add_to_variable = {
+		    GEH_discipline_committee_repression = modifier@GEH_societies_discipline_committee_repression_weekly
+	    }
+	}	
+	
+}
+
+GEH_monthly_random_daily_event = {
+	set_temp_variable = {
+		GEH_bad_event_temp = 2
+	}
+	set_temp_variable = {
+		GEH_good_event_temp = 2
+	}
+	if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < -0.6 
+			}
+		}
+		set_temp_variable = {
+			GEH_good_event_temp = 0.2
+		}
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < -0.2 
+			}
+		}
+		set_temp_variable = {
+			GEH_good_event_temp = 0.1
+		}
+
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < 0.2 
+			}
+		}
+		set_temp_variable = {
+			GEH_bad_event_temp = 0.1
+		}
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < 0.6 
+			}
+		}
+		set_temp_variable = {
+			GEH_bad_event_temp = 0.2
+		}
+	}else_if = {
+		limit = {
+			power_balance_value = {
+				id = GEH_bp_order
+				value < 1
+			}
+		}
+		set_temp_variable = {
+			GEH_bad_event_temp = 0.3
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				GEH_good_event_temp < random
+			}
+		}
+
+		set_temp_variable = {
+			GEH_random_event_no_temp = random
+		}
+		multiply_temp_variable = {
+			GEH_random_event_no_temp = 8
+		}
+		
+		round_temp_variable = GEH_random_event_no_temp
+
+		clamp_variable = {
+			var = GEH_random_event_no_temp
+			min = 0
+			max = 7
+		}
+
+		set_temp_variable = {
+			GEH_random_event_days_temp = random
+		}
+
+		multiply_temp_variable = {
+			GEH_random_event_days_temp = 20
+		}
+
+		round_temp_variable = GEH_random_event_days_temp
+
+
+		if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 0
+				}
+			}
+			country_event = {
+				id = GEH_daily.11
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 1
+				}
+			}
+			country_event = {
+				id = GEH_daily.18
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 2
+				}
+			}
+			country_event = {
+				id = GEH_daily.19
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 3
+				}
+			}
+			country_event = {
+				id = GEH_daily.23
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 4
+				}
+			}
+			country_event = {
+				id = GEH_daily.28
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 5
+				}
+			}
+			country_event = {
+				id = GEH_daily.29
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 6
+				}
+			}
+			country_event = {
+				id = GEH_daily.30
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 7
+				}
+			}
+			country_event = {
+				id = GEH_daily.31
+				GEH_random_event_no_temp
+			}
+		}
+	}else_if = {
+		
+
+		limit = {
+			set_temp_variable = {
+				GEH_random_event_chance = random
+			}
+			log = "GEH_random_event_chance [?GEH_random_event_chance]"
+			check_variable = {
+				GEH_bad_event_temp < GEH_random_event_chance
+			}
+		}
+
+		set_temp_variable = {
+			GEH_random_event_no_temp = random
+		}
+
+		log = "GEH_random_event_no_temp a [?GEH_random_event_no_temp]"
+
+		multiply_temp_variable = {
+			GEH_random_event_no_temp = 8
+		}
+		
+		round_temp_variable =GEH_random_event_no_temp
+
+		clamp_variable = {
+			var = GEH_random_event_no_temp
+			min = 0
+			max = 7
+		}
+		log = "GEH_random_event_no_temp b [?GEH_random_event_no_temp]"
+		set_temp_variable = {
+			GEH_random_event_days_temp = random
+		}
+
+		multiply_temp_variable = {
+			GEH_random_event_days_temp = 20
+		}
+
+		round_temp_variable =GEH_random_event_days_temp
+
+
+		if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 0
+				}
+			}
+			log = "GEH_random_event_no_temp 12 [?GEH_random_event_no_temp]"
+			country_event = {
+				id = GEH_daily.12
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 1
+				}
+			}
+			country_event = {
+				id = GEH_daily.13
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 2
+				}
+			}
+			country_event = {
+				id = GEH_daily.14
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 3
+				}
+			}
+			country_event = {
+				id = GEH_daily.16
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 4
+				}
+			}
+			country_event = {
+				id = GEH_daily.20
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 5
+				}
+			}
+			country_event = {
+				id = GEH_daily.25
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 6
+				}
+			}
+			country_event = {
+				id = GEH_daily.26
+				GEH_random_event_no_temp
+			}
+		}else_if = {
+			limit = {
+				check_variable = {
+					GEH_random_event_no_temp = 7
+				}
+			}
+			country_event = {
+				id = GEH_daily.27
+				GEH_random_event_no_temp
+			}
+		}
+
+
+	}
+	
+
+
+}

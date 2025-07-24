@@ -13,3 +13,18 @@ animation = {
     name = "stryker_unarmed_moving_animation"
     file = "stryker_unarmed/stryker_unarmed_moving.anim"
 }
+
+animation = {
+    name = "bradley_idle_animation"
+    file = "bradley_ifv/bradley_idle.anim"
+}
+
+animation = {
+    name = "bradley_attacking_animation"
+    file = "bradley_ifv/bradley_attacking.anim"
+}
+
+animation = {
+    name = "bradley_moving_animation"
+    file = "bradley_ifv/bradley_moving.anim"
+}

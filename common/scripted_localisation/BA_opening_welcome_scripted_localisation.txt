@@ -1,72 +1,252 @@
-BA_welcome_text = {
-	name = BA_welcome_text
+Get_BARE_welcome_text = {
+	name = Get_BARE_welcome_text
+
 	text = {
 		trigger = { 
-			has_country_flag = BA_intro_button_1_clicked
+			check_variable = {
+				BARE_opening_welcome_type = 0
+			}
 			tag = TRI
 		}
-		localization_key = TRI_wecome_text_1
+		localization_key = TRI_welcome_text_1
+	}
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 1
+			}
+			tag = TRI
+		}
+		localization_key = TRI_welcome_text_2
 	}
 	text = {
 		trigger = { 
-			has_country_flag = BA_intro_button_2_clicked
-			tag = TRI
+			check_variable = {
+				BARE_opening_welcome_type = 0
+			}
+			tag = GEH
 		}
-		localization_key = TRI_wecome_text_2
+		localization_key = GEH_welcome_text_1
+	}
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 1
+			}
+			tag = GEH
+		}
+		localization_key = GEH_welcome_text_2
 	}
 	text = {
 		trigger = { 
-			has_country_flag = BA_intro_button_3_clicked
-			tag = TRI
+			check_variable = {
+				BARE_opening_welcome_type = 0
+			}
+			tag = ARI
 		}
-		localization_key = TRI_wecome_text_3
+		localization_key = ARI_welcome_text_1
+	}
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 1
+			}
+			tag = ARI
+		}
+		localization_key = ARI_welcome_text_2
+	}
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 0
+			}
+		}
+		localization_key = welcome_text_1
+	}
+	
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 1
+			}
+		}
+		localization_key = welcome_text_2
 	}
 	text = {
 		trigger = { 
-			has_country_flag = BA_intro_button_4_clicked
-			tag = TRI
+			check_variable = {
+				BARE_opening_welcome_type = 2
+			}
 		}
-		localization_key = TRI_wecome_text_4
+		localization_key = welcome_text_3
+	}
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 3
+			}
+		}
+		localization_key = welcome_text_4
+	}
+	text = {
+		localization_key = ""
 	}
 }
 
 
-BA_pad_button1_text = {
-	name = BA_pad_button1_text
+
+Get_BARE_openingWelcome_type_button_1_text = {
+	name = Get_BARE_openingWelcome_type_button_1_text
+
 	text = {
 		trigger = { 
-			tag = TRI
+			check_variable = {
+				BARE_opening_welcome_type = 0
+			}
 		}
-		localization_key = BA_pad_button1_text_TRI
+		localization_key = BARE_openingWelcome_type_button_1_on
+	}
+
+	text = {
+		trigger = { 
+			not = {
+				check_variable = {
+					BARE_opening_welcome_type = 0
+				}
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_1_off
 	}
 }
 
-BA_pad_button2_text = {
-	name = BA_pad_button2_text
+
+
+Get_BARE_openingWelcome_type_button_2_text = {
+	name = Get_BARE_openingWelcome_type_button_2_text
+
 	text = {
 		trigger = { 
-			tag = TRI
+			check_variable = {
+				BARE_opening_welcome_type = 1
+			}
 		}
-		localization_key = BA_pad_button2_text_TRI
+		localization_key = BARE_openingWelcome_type_button_2_on
+	}
+
+	text = {
+		trigger = { 
+			not = {
+				check_variable = {
+					BARE_opening_welcome_type = 1
+				}
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_2_off
 	}
 }
 
-BA_pad_button3_text = {
-	name = BA_pad_button3_text
+
+
+Get_BARE_openingWelcome_type_button_3_text = {
+	name = Get_BARE_openingWelcome_type_button_3_text
+
 	text = {
 		trigger = { 
-			tag = TRI
+			check_variable = {
+				BARE_opening_welcome_type = 2
+			}
 		}
-		localization_key = BA_pad_button3_text_TRI
+		localization_key = BARE_openingWelcome_type_button_3_on
+	}
+
+	text = {
+		trigger = { 
+			not = {
+				check_variable = {
+					BARE_opening_welcome_type = 2
+				}
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_3_off
 	}
 }
 
-BA_pad_button4_text = {
-	name = BA_pad_button4_text
+
+
+Get_BARE_openingWelcome_type_button_4_text = {
+	name = Get_BARE_openingWelcome_type_button_4_text
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 3
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_4_on
+	}
+
+	text = {
+		trigger = { 
+			not = {
+				check_variable = {
+					BARE_opening_welcome_type = 3
+				}
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_4_off
+	}
+}
+
+
+
+Get_BARE_openingWelcome_school_bg = {
+	name = Get_BARE_openingWelcome_school_bg
+
 	text = {
 		trigger = { 
 			tag = TRI
 		}
-		localization_key = BA_pad_button4_text_TRI
+		localization_key = "GFX_BARE_openingWelcome_school_bg_TRI"
+	}
+
+	text = {
+		trigger = { 
+			tag = GEH
+		}
+		localization_key = "GFX_BARE_openingWelcome_school_bg_GEH"
+	}
+	text = {
+		trigger = { 
+			tag = ARI
+		}
+		localization_key = "GFX_BARE_openingWelcome_school_bg_ARI"
+	}
+	text = {
+		localization_key = "GFX_BARE_openingWelcome_school_bg_normal"
+	}
+}
+
+
+
+Get_BARE_openingWelcome_confirm_button_text = {
+	name = Get_BARE_openingWelcome_confirm_button_text
+
+	text = {
+		trigger = { 
+			or = {
+				tag = TRI
+				tag = ARI
+				tag = GEH
+			}
+		}
+		localization_key = BARE_openingWelcome_confirm_button_text_on
+	}
+
+	text = {
+		localization_key = BARE_openingWelcome_confirm_button_text_off
 	}
 }

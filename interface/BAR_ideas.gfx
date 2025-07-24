@@ -1,4 +1,91 @@
 spriteTypes = {
+    ###通用法案###
+	spriteType = {
+		name = "GFX_idea_ecolaws_civilian_economy"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_civilian_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_research_first"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_research_first.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_supply_first"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_supply_first.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_army_first"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_army_first.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_war_economy"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_war_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_geh_special_war_economy"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_geh_special_war_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_ari_controlled_by_beatrice"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_ari_controlled_by_beatrice.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_mil_all_for_research"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_mil_all_for_research.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_idea_tralaws_closed_economy"
+		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_closed_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tralaws_normal_trade"
+		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_normal_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tralaws_massive_normal_trade"
+		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_massive_normal_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tralaws_massive_trade"
+		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_massive_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tralaws_free_trade"
+		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_free_trade.dds"
+	}
+	#
+	spriteType = {
+		name = "GFX_idea_millaws_defense_outsourcing"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_defense_outsourcing.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_choose_carefully"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_choose_carefully.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_volunteer_first"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_volunteer_first.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_battlefield_mission"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_battlefield_mission.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_class_requirements"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_class_requirements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_massive_mission"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_massive_mission.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_student_duty"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_student_duty.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_millaws_beatrice_order"
+		texturefile = "gfx/interface/ideas/law_and_manpower/millaws_beatrice_order.dds"
+	}
 
 	### ABY
 	spriteType = {
@@ -302,6 +389,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
 	}
 
+		#伊甸条约阶段0 1 2 3 5图标
+	SpriteType = {
+		name = "GFX_idea_eden_treaty_step_normal_modifier"
+		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
+	}
+
+
 	#伊甸条约阶段4图标
 	SpriteType = {
 		name = "GFX_eden_treaty_step_bad_modifier"
@@ -438,5 +532,11 @@ spriteTypes = {
 		name = "GFX_idea_BARE_Global_College_Autonomous_Region"
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_College_Autonomous_Region.dds"
 	}
-	
+
+	###MIO###
+	#哦天哪这东西注册在ideas里吗
+	spriteType = {
+		name = "GFX_MIO_Gehenna_Volcano_support_equipment_organization_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/Gehenna_Volcano_support_equipment_organization_icon.dds"
+	}
 }

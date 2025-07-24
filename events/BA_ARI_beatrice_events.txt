@@ -7,7 +7,7 @@ country_event = {
     id = ARI_beatrice.1
     title = ARI_beatrice.1.t
     desc = ARI_beatrice.1.desc
-    #picture =  
+    picture = TRI_news_event_13
     
     is_triggered_only = yes
     #突袭成功
@@ -52,7 +52,7 @@ country_event = {
     id = ARI_beatrice.3
     title = ARI_beatrice.3.t
     desc = ARI_beatrice.3.desc
-    #picture =  
+    picture = TRI_news_event_13
     
     is_triggered_only = yes
     #突袭成功
@@ -83,7 +83,7 @@ country_event = {
     id = ARI_beatrice.4
     title = ARI_beatrice.4.t
     desc = ARI_beatrice.4.desc
-    #picture =  
+    picture = TRI_news_event_10
     
     is_triggered_only = yes
     #愿以后我们不会在战场上再见
@@ -139,7 +139,7 @@ country_event = {
     id = ARI_beatrice.6
     title = ARI_beatrice.6.t
     desc = ARI_beatrice.6.desc
-    #picture =  
+    picture = TRI_news_event_13
     
     is_triggered_only = yes
     option = {
@@ -151,7 +151,7 @@ country_event = {
     id = ARI_beatrice.7
     title = ARI_beatrice.7.t
     desc = ARI_beatrice.7.desc
-    #picture =  
+    picture = TRI_news_event_18
     
     is_triggered_only = yes
     option = {
@@ -163,7 +163,7 @@ country_event = {
     id = ARI_beatrice.8
     title = ARI_beatrice.8.t
     desc = ARI_beatrice.8.desc
-    #picture =  
+    picture = TRI_news_event_13
     
     is_triggered_only = yes
     option = {
@@ -175,7 +175,7 @@ country_event = {
     id = ARI_beatrice.9
     title = ARI_beatrice.9.t
     desc = ARI_beatrice.9.desc
-    #picture =  
+    picture = TRI_news_event_19
     
     is_triggered_only = yes
     option = {
@@ -198,7 +198,7 @@ country_event = {
     id = ARI_beatrice.10
     title = ARI_beatrice.10.t
     desc = ARI_beatrice.10.desc
-    #picture =  
+    picture = TRI_news_event_20
     
     is_triggered_only = yes
     option = {
@@ -216,7 +216,7 @@ country_event = {
     id = ARI_beatrice.11
     title = ARI_beatrice.11.t
     desc = ARI_beatrice.11.desc
-    #picture =  
+    picture = TRI_news_event_20
     
     is_triggered_only = yes
     option = {
@@ -228,7 +228,7 @@ country_event = {
     id = ARI_beatrice.12
     title = ARI_beatrice.12.t
     desc = ARI_beatrice.12.desc
-    #picture =  
+    picture = TRI_news_event_10
     
     is_triggered_only = yes
     option = {
@@ -241,7 +241,7 @@ country_event = {
     id = ARI_beatrice.200
     title = ARI_beatrice.200.t
     desc = ARI_beatrice.200.desc
-    #picture =  
+    picture = TRI_news_event_20
     
     is_triggered_only = yes
     option = {
@@ -282,7 +282,7 @@ country_event = {
     title = ARI_beatrice.100.t
     desc = ARI_beatrice.100.desc
     timeout_days = 2
-    #picture =
+    picture = TRI_news_event_18
 
     is_triggered_only = yes
     option = {
@@ -299,7 +299,7 @@ country_event = {
     title = ARI_beatrice.101.t
     desc = ARI_beatrice.101.desc
     timeout_days = 2
-    #picture =
+    picture = TRI_news_event_10
 
     is_triggered_only = yes
     option = {
@@ -317,7 +317,7 @@ country_event = {
     id = ARI_beatrice.102
     title = ARI_beatrice.102.t
     desc = ARI_beatrice.102.desc
-    #picture =
+    picture = TRI_news_event_20
 
     is_triggered_only = yes
     option = {
@@ -359,7 +359,7 @@ country_event = {
     id = ARI_beatrice_revolt.1
     title = ARI_beatrice_revolt.1.t
     desc = ARI_beatrice_revolt.1.desc
-    #picture =  
+    picture = TRI_news_event_20
     immediate = {
         hidden_effect = {
             ARI_initialize_suppression_system = yes
@@ -393,7 +393,7 @@ country_event = {
     id = ARI_beatrice_revolt.2
     title = ARI_beatrice_revolt.2.t
     desc = ARI_beatrice_revolt.2.desc
-    #picture =  
+    picture = TRI_news_event_20
     immediate = {
         hidden_effect = {
             137 = {
@@ -424,7 +424,7 @@ country_event = {
     id = ARI_beatrice_revolt.3
     title = ARI_beatrice_revolt.3.t
     desc = ARI_beatrice_revolt.3.desc
-    #picture =  
+    picture = TRI_news_event_20
     immediate = {
         hidden_effect = {
             136 = {
@@ -470,7 +470,7 @@ country_event = {
     id = ARI_beatrice_revolt.4
     title = ARI_beatrice_revolt.4.t
     desc = ARI_beatrice_revolt.4.desc
-    #picture =  
+    picture = TRI_news_event_20 
     immediate = {
         hidden_effect = {
             139 = {
@@ -516,7 +516,7 @@ country_event = {
     id = ARI_beatrice_revolt.5
     title = ARI_beatrice_revolt.5.t
     desc = ARI_beatrice_revolt.5.desc
-    #picture =  
+    picture = TRI_news_event_20
     immediate = {
         hidden_effect = {
             137 = { 
@@ -550,7 +550,7 @@ country_event = {
     id = ARI_beatrice_revolt.1000
     title = ARI_beatrice_revolt.1000.t
     desc = ARI_beatrice_revolt.1000.desc
-    #picture =  
+    picture = TRI_news_event_20
     
     is_triggered_only = yes
     option = {
@@ -562,7 +562,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.1
     title = ARI_beatrice_diplomacy.1.t
     desc = ARI_beatrice_diplomacy.1.desc
-    #picture =  
+    picture = TRI_news_event_21
     
     is_triggered_only = yes
     option = {
@@ -574,7 +574,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.2
     title = ARI_beatrice_diplomacy.2.t
     desc = ARI_beatrice_diplomacy.2.desc
-    #picture =  
+    picture = TRI_news_event_21
     
     is_triggered_only = yes
     option = {
@@ -586,7 +586,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.3
     title = ARI_beatrice_diplomacy.3.t
     desc = ARI_beatrice_diplomacy.3.desc
-    #picture =  
+    picture = TRI_news_event_22
     
     is_triggered_only = yes
     option = {
@@ -598,7 +598,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.4
     title = ARI_beatrice_diplomacy.4.t
     desc = ARI_beatrice_diplomacy.4.desc
-    #picture =  
+    picture = TRI_news_event_19
     
     is_triggered_only = yes
     option = {
@@ -606,12 +606,12 @@ country_event = {
         add_political_power = 20
     }
 }
-#密约
+#特别训练
 country_event = {
     id = ARI_beatrice_diplomacy.5
     title = ARI_beatrice_diplomacy.5.t
     desc = ARI_beatrice_diplomacy.5.desc
-    #picture =  
+    picture = TRI_news_event_19
     
     is_triggered_only = yes
     option = {
@@ -624,7 +624,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.6
     title = ARI_beatrice_diplomacy.6.t
     desc = ARI_beatrice_diplomacy.6.desc
-    #picture =  
+    picture = TRI_news_event_21
     
     is_triggered_only = yes
     option = {
@@ -636,7 +636,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.7
     title = ARI_beatrice_diplomacy.7.t
     desc = ARI_beatrice_diplomacy.7.desc
-    #picture =  
+    picture = TRI_news_event_15
     
     is_triggered_only = yes
     option = {
@@ -648,7 +648,7 @@ country_event = {
     id = ARI_beatrice_diplomacy.8
     title = ARI_beatrice_diplomacy.8.t
     desc = ARI_beatrice_diplomacy.8.desc
-    #picture =  
+    picture = TRI_news_event_18
     
     is_triggered_only = yes
     option = {
@@ -660,7 +660,7 @@ country_event = {
     id = ARI_beatrice_operations.1
     title = ARI_beatrice_operations.1.t
     desc = ARI_beatrice_operations.1.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -672,7 +672,7 @@ country_event = {
     id = ARI_beatrice_operations.2
     title = ARI_beatrice_operations.2.t
     desc = ARI_beatrice_operations.2.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -684,7 +684,7 @@ country_event = {
     id = ARI_beatrice_operations.3
     title = ARI_beatrice_operations.3.t
     desc = ARI_beatrice_operations.3.desc
-    #picture =
+    picture = TRI_news_event_23
 
     is_triggered_only = yes
     option = {
@@ -696,7 +696,7 @@ country_event = {
     id = ARI_beatrice_operations.4
     title = ARI_beatrice_operations.4.t
     desc = ARI_beatrice_operations.4.desc
-    #picture =
+    picture = TRI_news_event_23
 
     is_triggered_only = yes
     option = {
@@ -708,7 +708,7 @@ country_event = {
     id = ARI_beatrice_operations.5
     title = ARI_beatrice_operations.5.t
     desc = ARI_beatrice_operations.5.desc
-    #picture =
+    picture = TRI_news_event_23
 
     is_triggered_only = yes
     option = {
@@ -720,7 +720,7 @@ country_event = {
     id = ARI_beatrice_operations.6
     title = ARI_beatrice_operations.6.t
     desc = ARI_beatrice_operations.6.desc
-    #picture =
+    picture = TRI_news_event_6
 
     is_triggered_only = yes
     option = {
@@ -732,7 +732,7 @@ country_event = {
     id = ARI_beatrice_operations.7
     title = ARI_beatrice_operations.7.t
     desc = ARI_beatrice_operations.7.desc
-    #picture =
+    picture = TRI_news_event_6
 
     is_triggered_only = yes
     option = {
@@ -744,7 +744,7 @@ country_event = {
     id = ARI_beatrice_operations.8
     title = ARI_beatrice_operations.8.t
     desc = ARI_beatrice_operations.8.desc
-    #picture =
+    picture = TRI_news_event_24
 
     is_triggered_only = yes
     option = {
@@ -756,7 +756,7 @@ country_event = {
     id = ARI_beatrice_operations.9
     title = ARI_beatrice_operations.9.t
     desc = ARI_beatrice_operations.9.desc
-    #picture =
+    picture = TRI_news_event_24
 
     is_triggered_only = yes
     option = {
@@ -768,7 +768,7 @@ country_event = {
     id = ARI_beatrice_operations.10
     title = ARI_beatrice_operations.10.t
     desc = ARI_beatrice_operations.10.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -780,7 +780,7 @@ country_event = {
     id = ARI_beatrice_operations.11
     title = ARI_beatrice_operations.11.t
     desc = ARI_beatrice_operations.11.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -792,7 +792,7 @@ country_event = {
     id = ARI_beatrice_operations.12
     title = ARI_beatrice_operations.12.t
     desc = ARI_beatrice_operations.12.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -804,7 +804,7 @@ country_event = {
     id = ARI_beatrice_operations.13
     title = ARI_beatrice_operations.13.t
     desc = ARI_beatrice_operations.13.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -816,7 +816,7 @@ country_event = {
     id = ARI_beatrice_operations.14
     title = ARI_beatrice_operations.14.t
     desc = ARI_beatrice_operations.14.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -828,7 +828,7 @@ country_event = {
     id = ARI_beatrice_operations.15
     title = ARI_beatrice_operations.15.t
     desc = ARI_beatrice_operations.15.desc
-    #picture =
+    picture = TRI_news_event_25
 
     is_triggered_only = yes
     option = {
@@ -840,7 +840,7 @@ country_event = {
     id = ARI_beatrice_operations.16
     title = ARI_beatrice_operations.16.t
     desc = ARI_beatrice_operations.16.desc
-    #picture =
+    picture = TRI_news_event_25
 
     is_triggered_only = yes
     option = {
@@ -852,7 +852,7 @@ country_event = {
     id = ARI_beatrice_operations.17
     title = ARI_beatrice_operations.17.t
     desc = ARI_beatrice_operations.17.desc
-    #picture =
+    picture = TRI_news_event_25
 
     is_triggered_only = yes
     option = {
@@ -864,7 +864,7 @@ country_event = {
     id = ARI_beatrice_operations.18
     title = ARI_beatrice_operations.18.t
     desc = ARI_beatrice_operations.18.desc
-    #picture =
+    picture = TRI_news_event_25
 
     is_triggered_only = yes
     option = {
@@ -876,7 +876,7 @@ country_event = {
     id = ARI_beatrice_operations.19
     title = ARI_beatrice_operations.19.t
     desc = ARI_beatrice_operations.19.desc
-    #picture =
+    picture = TRI_news_event_22
 
     is_triggered_only = yes
     option = {
@@ -909,7 +909,7 @@ country_event = {
     id = ARI_beatrice_operations.21
     title = ARI_beatrice_operations.21.t
     desc = ARI_beatrice_operations.21.desc
-    #picture =
+    picture = TRI_news_event_27
 
     is_triggered_only = yes
     option = {
@@ -921,7 +921,7 @@ country_event = {
     id = ARI_beatrice_operations.22
     title = ARI_beatrice_operations.22.t
     desc = ARI_beatrice_operations.22.desc
-    #picture =
+    picture = TRI_news_event_27
 
     is_triggered_only = yes
     option = {
@@ -933,7 +933,7 @@ country_event = {
     id = ARI_beatrice_operations.23
     title = ARI_beatrice_operations.23.t
     desc = ARI_beatrice_operations.23.desc
-    #picture =
+    picture = TRI_news_event_27
 
     is_triggered_only = yes
     option = {
@@ -945,7 +945,7 @@ country_event = {
     id = ARI_beatrice_operations.24
     title = ARI_beatrice_operations.24.t
     desc = ARI_beatrice_operations.24.desc
-    #picture =
+    picture = TRI_news_event_27
 
     is_triggered_only = yes
     option = {
@@ -957,7 +957,7 @@ country_event = {
     id = ARI_beatrice_operations.25
     title = ARI_beatrice_operations.25.t
     desc = ARI_beatrice_operations.25.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -969,7 +969,7 @@ country_event = {
     id = ARI_beatrice_operations.26
     title = ARI_beatrice_operations.26.t
     desc = ARI_beatrice_operations.26.desc
-    #picture =
+    picture = TRI_news_event_21
 
     is_triggered_only = yes
     option = {
@@ -981,7 +981,7 @@ country_event = {
     id = ARI_beatrice_operations.27
     title = ARI_beatrice_operations.27.t
     desc = ARI_beatrice_operations.27.desc
-    #picture =
+    picture = TRI_news_event_25
 
     is_triggered_only = yes
     option = {
@@ -993,7 +993,7 @@ country_event = {
     id = ARI_beatrice_operations.28
     title = ARI_beatrice_operations.28.t
     desc = ARI_beatrice_operations.28.desc
-    #picture =
+    picture = TRI_news_event_25
 
     is_triggered_only = yes
     option = {
@@ -1005,7 +1005,7 @@ country_event = {
     id = ARI_beatrice_operations.29
     title = ARI_beatrice_operations.29.t
     desc = ARI_beatrice_operations.29.desc
-    #picture =
+    picture = TRI_news_event_19
 
     is_triggered_only = yes
     option = {

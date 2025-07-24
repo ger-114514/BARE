@@ -1,0 +1,593 @@
+# Notes:
+# SL_has_northern_winter and SL_has_southern_winter, state flags for nations that have winter GFX.
+
+on_actions = {
+	on_startup = {
+		effect = {
+			# 茶话会
+			118 = { 
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				} 
+				#set_state_flag = SL_has_southern_winter
+			}
+			add_to_array = { 118.lore_entries = 1 }
+
+			# 大教堂
+			116 = { 
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				} 
+			}
+			add_to_array = { 116.lore_entries = 2 }
+
+			# 黑市南部市场
+			201 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 201.lore_entries = 3 }
+
+			# 圣所之塔
+			329 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 329.lore_entries = 4 }
+
+			# 克洛诺斯学院
+			11 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 11.lore_entries = 5 }
+
+			# 凯撒大厦
+			28 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 28.lore_entries = 6 }
+
+			# 海兰德铁道学院
+			81 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 81.lore_entries = 7 }
+
+			# MOMOFriend总店
+			47 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 47.lore_entries = 8 }
+
+			# 狂猎艺术学院
+			87 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 87.lore_entries = 9 }
+
+			# 史林皮亚
+			637 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 637.lore_entries = 10 }
+
+			# 柴关拉面
+			273 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 273.lore_entries = 11 }
+
+			# 章鱼银行本部
+			258 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 258.lore_entries = 12 }
+
+			# 黑市人力资源中心
+			195 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 195.lore_entries = 13 }
+
+			# 凯撒武器产业园
+			220 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 220.lore_entries = 14 }
+
+			# 便利屋68事务所
+			232 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 232.lore_entries = 15 }
+			
+			# 希诺姆主山脉
+			397 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 397.lore_entries = 16 }
+
+			# 格黑娜旧校舍
+			384 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 384.lore_entries = 17 }
+
+			# 万魔殿（万魔殿议事厅）
+			305 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 305.lore_entries = 18 }
+
+			# 格黑娜第二校舍
+			304 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 304.lore_entries = 19 }
+
+			# 格黑娜学生广场
+			184 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 184.lore_entries = 20 }
+
+			# 格黑娜风纪委员会本部
+			306 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 306.lore_entries = 21 }
+
+			# 格黑娜温泉酒店
+			176 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 176.lore_entries = 22 }
+
+			# 古书馆大藏书室
+			122 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 122.lore_entries = 23 }
+
+			# 古圣堂
+			140 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 140.lore_entries = 24 }
+
+			# 音乐厅主厅
+			112 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 112.lore_entries = 25 }
+
+			# 圣三一美术馆
+			125 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 125.lore_entries = 26 }
+
+			# Schola Hall
+			121 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 121.lore_entries = 27 }
+
+			# 中央图书馆
+			113 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 113.lore_entries = 28 }
+
+			# 圣三一喷泉广场
+			114 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 114.lore_entries = 29 }
+
+			# 会馆大堂
+			124 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 124.lore_entries = 30 }
+
+			# 正义实现委员会会馆
+			55 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 55.lore_entries = 31 }
+
+			# 圣三一历史陈列馆
+			54 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 54.lore_entries = 32 }
+
+			# 瓦尔基里本部
+			74 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 74.lore_entries = 33 }
+
+			# SRT作战总部
+			72 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 72.lore_entries = 34 }
+
+			# 红冬会长办公室
+			265 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 265.lore_entries = 35 }
+
+			# 木材主仓库
+			262 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 262.lore_entries = 36 }
+
+			# 第三公共食堂
+			263 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 263.lore_entries = 37 }
+
+			# 红熊广播塔
+			268 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 268.lore_entries = 38 }
+
+			# 第一公共校舍
+			269 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 269.lore_entries = 39 }
+
+			# 红须革命广场
+			271 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 271.lore_entries = 40 }
+
+			# 真理报社
+			241 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 241.lore_entries = 41 }
+
+			# 红熊出版社
+			242 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 242.lore_entries = 42 }
+
+			# 红冬第一旧校舍
+			587 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 587.lore_entries = 43 }
+
+			# 人民大厦
+			247 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 247.lore_entries = 44 }
+
+			# 大神木
+			284 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 284.lore_entries = 45 }
+
+			# 百鬼夜行历史馆
+			282 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 282.lore_entries = 46 }
+
+			# 第一观景台
+			276 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 276.lore_entries = 47 }
+
+			# 大庭院中心
+			277 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 277.lore_entries = 48 }
+
+			# 阴阳部本部
+			359 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 359.lore_entries = 49 }
+
+			# 公演大厅
+			278 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 278.lore_entries = 50 }
+
+			# 中央喷泉
+			280 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 280.lore_entries = 51 }
+
+			# 旋涡电影村
+			288 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 288.lore_entries = 52 }
+
+			# 千年体育中心
+			342 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 342.lore_entries = 53 }
+
+			# 千年发电所
+			338 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 338.lore_entries = 54 }
+
+			# 千年信息中心
+			326 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 326.lore_entries = 55 }
+
+			# 千年实习中心
+			343 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 343.lore_entries = 56 }
+
+			# 千年图书馆
+			327 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 327.lore_entries = 57 }
+
+			# 千年巨塔
+			337 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 337.lore_entries = 58 }
+
+			# 千年数据中心
+			335 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 335.lore_entries = 59 }
+
+			# 千年商场
+			336 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 336.lore_entries = 60 }
+
+			# 迷途竹林
+			415 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 415.lore_entries = 61 }
+
+			# 山海茶园
+			406 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 406.lore_entries = 62 }
+
+			# 熊猫公园
+			407 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 406.lore_entries = 63 }
+
+			# 炼丹术研究所
+			162 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 162.lore_entries = 64 }
+
+			# 梅花园托儿所
+			167 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 167.lore_entries = 65 }
+
+			# 中央玄武商会
+			357 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 357.lore_entries = 66 }
+
+			# 世外桃源
+			164 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 164.lore_entries = 67 }
+
+			# 白虎公园
+			165 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 165.lore_entries = 68 }
+
+			# 六和阁
+			319 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 319.lore_entries = 69 }
+
+			# 昆仑山
+			416 = {
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 416.lore_entries = 70 }
+
+			##黑市地区追加
+			##青蓝丘
+			199 = { 
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 199.lore_entries = 71 }
+
+			##黑市休闲中心
+			197 = { 
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 197.lore_entries = 72 }
+
+			200 = { 
+				add_to_array = { 
+					global.state_with_lore = THIS.id 
+				}
+			}
+			add_to_array = { 200.lore_entries = 73 }
+		}
+	}
+}

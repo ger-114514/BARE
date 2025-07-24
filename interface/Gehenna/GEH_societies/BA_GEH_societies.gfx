@@ -1,0 +1,214 @@
+spriteTypes = {	
+    SpriteType = {
+		name = "GFX_GEH_discipline_committee"
+		texturefile = "gfx/interface/GEH_societies/GEH_discipline_committee.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		name = "GFX_GEH_eat_or_die"
+		texturefile = "gfx/interface/GEH_societies/GEH_eat_or_die.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		name = "GFX_GEH_geishi"
+		texturefile = "gfx/interface/GEH_societies/GEH_geishi.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		name = "GFX_GEH_hot_spring"
+		texturefile = "gfx/interface/GEH_societies/GEH_hot_spring.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		name = "GFX_GEH_convenie68"
+		texturefile = "gfx/interface/GEH_societies/GEH_convenie68.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    progressbartype = {
+		    name = "GFX_GEH_discipline_committee_ability"
+		    color = { 0.5 1.0 1.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_discipline_committee_repression"
+		    color = { 1.0 0.0 0.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_hot_spring_activity"
+		    color = { 0.5 1.0 1.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_hot_spring_destructive"
+		    color = { 1.0 0.0 0.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_food_service_activity"
+		    color = { 0.5 1.0 1.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_food_service_efficiency"
+		    color = { 1.0 0.0 0.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_gourmet_research_activity"
+		    color = { 0.5 1.0 1.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_gourmet_research_destructive"
+		    color = { 1.0 0.0 0.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_comb68_activity"
+		    color = { 0.5 1.0 1.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    progressbartype = {
+		    name = "GFX_GEH_com68_destructive"
+		    color = { 1.0 0.0 0.0 }
+	 	    colortwo = { 0.0 0.0 0.0 }
+		    size = { x = 80 y = 6 }
+		    effectFile = "gfx/FX/progress.lua"
+		    horizontal = yes
+	  }
+    SpriteType = {
+		name = "GFX_kasumi_test"
+		texturefile = "gfx/interface/GEH_societies/kasumi_test.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		name = "GFX_hina_test"
+		texturefile = "gfx/interface/GEH_societies/hina_test.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		    name = "GFX_GEH_hina_smile_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_hina_dec_smile.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_hina_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_hina_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		    name = "GFX_GEH_ioli_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_ioli_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		    name = "GFX_GEH_kasumi_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_kasumi_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_kasumi_kuku_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_kasumi_kuku_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		    name = "GFX_GEH_megumu_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_megumu_dec.dds"
+            noOfFrames = 1
+            effectFile = "gfx/FX/buttonstate.shader"
+    }
+    SpriteType = {
+		    name = "GFX_GEH_ako_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_ako_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_izumi_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_izumi_dec.dds"
+			noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_junko_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_junko_dec.dds"
+			noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_akari_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_akari_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_haruna_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_haruna_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_haruna_kunhuo_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_haruna_kunhuo_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		    name = "GFX_GEH_fuuka_dec"
+		    texturefile = "gfx/interface/GEH_societies/GEH_fuuka_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		name = "GFX_GEH_fuuka_working_dec"
+		texturefile = "gfx/interface/GEH_societies/GEH_fuuka_working_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+	SpriteType = {
+		name = "GFX_GEH_aru_dec"
+		texturefile = "gfx/interface/GEH_societies/GEH_aru_dec.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.shader"
+    }
+}

@@ -1,0 +1,935 @@
+####三一####
+
+category = {
+	name = "Voices"
+	soundeffects = {
+		TRI_infantry_retreat
+		TRI_infantry_neural_combat
+		TRI_infantry_positive_combat
+		TRI_infantry_idle
+		TRI_infantry_move_out
+		ARI_infantry_retreat
+		ARI_infantry_neural_combat
+		ARI_infantry_positive_combat
+		ARI_infantry_idle
+		ARI_infantry_move_out
+		GEH_infantry_retreat
+		GEH_infantry_neural_combat
+		GEH_infantry_positive_combat
+		GEH_infantry_idle
+		GEH_infantry_move_out
+    }
+}
+
+
+
+#撤退
+soundeffect = {
+	name = "TRI_infantry_retreat"
+	
+	sounds = {
+		sound = TRI_retreat_1
+		sound = TRI_retreat_2
+		sound = TRI_retreat_3
+		sound = TRI_retreat_4
+		sound = TRI_retreat_5
+		sound = TRI_retreat_6
+		sound = TRI_retreat_7
+		sound = TRI_retreat_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#进攻
+soundeffect = {
+	name = "TRI_infantry_neural_combat"
+	
+	sounds = {
+		sound = TRI_fight_1
+		sound = TRI_fight_2
+		sound = TRI_fight_3
+		sound = TRI_fight_4
+		sound = TRI_fight_5
+		sound = TRI_fight_6
+		sound = TRI_fight_7
+		sound = TRI_fight_8
+		sound = TRI_fight_9
+		sound = TRI_fight_10
+		sound = TRI_fight_11
+		sound = TRI_fight_12
+		sound = TRI_fight_13
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+#进攻
+soundeffect = {
+	name = "TRI_infantry_positive_combat"
+	
+	sounds = {
+		sound = TRI_fight_1
+		sound = TRI_fight_2
+		sound = TRI_fight_3
+		sound = TRI_fight_4
+		sound = TRI_fight_5
+		sound = TRI_fight_6
+		sound = TRI_fight_7
+		sound = TRI_fight_8
+		sound = TRI_fight_9
+		sound = TRI_fight_10
+		sound = TRI_fight_11
+		sound = TRI_fight_12
+		sound = TRI_fight_13
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#选中
+soundeffect = {
+	name = "TRI_infantry_idle"
+	
+	sounds = {
+		sound = TRI_idle_1
+		sound = TRI_idle_2
+		sound = TRI_idle_3
+		sound = TRI_idle_4
+		sound = TRI_idle_5
+		sound = TRI_idle_6
+		sound = TRI_idle_7
+		sound = TRI_idle_8
+		sound = TRI_idle_9
+		sound = TRI_idle_10
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#移动
+soundeffect = {
+	name = "TRI_infantry_move_out"
+	
+	sounds = {
+		sound = TRI_move_out_1
+		sound = TRI_move_out_2
+		sound = TRI_move_out_3
+		sound = TRI_move_out_4
+		sound = TRI_move_out_5
+		sound = TRI_move_out_6
+		sound = TRI_move_out_7
+		sound = TRI_move_out_8
+		sound = TRI_move_out_9
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+
+####阿里乌斯####
+
+#撤退
+soundeffect = {
+	name = "ARI_infantry_retreat"
+	
+	sounds = {
+		sound = ARI_retreat_1
+		sound = ARI_retreat_2
+		sound = ARI_retreat_3
+		sound = ARI_retreat_4
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#进攻
+soundeffect = {
+	name = "ARI_infantry_neural_combat"
+	
+	sounds = {
+		sound = ARI_fight_1
+		sound = ARI_fight_2
+		sound = ARI_fight_3
+		sound = ARI_fight_4
+		sound = ARI_fight_5
+		sound = ARI_fight_6
+		sound = ARI_fight_7
+		sound = ARI_fight_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+#进攻
+soundeffect = {
+	name = "ARI_infantry_positive_combat"
+	
+	sounds = {
+		sound = ARI_fight_1
+		sound = ARI_fight_2
+		sound = ARI_fight_3
+		sound = ARI_fight_4
+		sound = ARI_fight_5
+		sound = ARI_fight_6
+		sound = ARI_fight_7
+		sound = ARI_fight_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#选中
+soundeffect = {
+	name = "ARI_infantry_idle"
+	
+	sounds = {
+		sound = ARI_idle_1
+		sound = ARI_idle_2
+		sound = ARI_idle_3
+		sound = ARI_idle_4
+		sound = ARI_idle_5
+		sound = ARI_idle_6
+		sound = ARI_idle_7
+		sound = ARI_idle_8
+		sound = ARI_idle_9
+		sound = ARI_idle_10
+		sound = ARI_idle_11
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#移动
+soundeffect = {
+	name = "ARI_infantry_move_out"
+	
+	sounds = {
+		sound = ARI_move_out_1
+		sound = ARI_move_out_2
+		sound = ARI_move_out_3
+		sound = ARI_move_out_4
+		sound = ARI_move_out_5
+		sound = ARI_move_out_6
+		sound = ARI_move_out_7
+		sound = ARI_move_out_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+####格黑娜####
+
+#撤退
+soundeffect = {
+	name = "GEH_infantry_retreat"
+	
+	sounds = {
+		sound = GEH_retreat_1
+		sound = GEH_retreat_2
+		sound = GEH_retreat_3
+		sound = GEH_retreat_4
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#进攻
+soundeffect = {
+	name = "GEH_infantry_neural_combat"
+	
+	sounds = {
+		sound = GEH_fight_1
+		sound = GEH_fight_2
+		sound = GEH_fight_3
+		sound = GEH_fight_4
+		sound = GEH_fight_5
+		sound = GEH_fight_6
+		sound = GEH_fight_7
+		sound = GEH_fight_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+#进攻
+soundeffect = {
+	name = "GEH_infantry_positive_combat"
+	
+	sounds = {
+		sound = GEH_fight_1
+		sound = GEH_fight_2
+		sound = GEH_fight_3
+		sound = GEH_fight_4
+		sound = GEH_fight_5
+		sound = GEH_fight_6
+		sound = GEH_fight_7
+		sound = GEH_fight_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#选中
+soundeffect = {
+	name = "GEH_infantry_idle"
+	
+	sounds = {
+		sound = GEH_idle_1
+		sound = GEH_idle_2
+		sound = GEH_idle_3
+		sound = GEH_idle_4
+		sound = GEH_idle_5
+		sound = GEH_idle_6
+		sound = GEH_idle_7
+		sound = GEH_idle_8
+		sound = GEH_idle_9
+		sound = GEH_idle_10
+		sound = GEH_idle_11
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#移动
+soundeffect = {
+	name = "GEH_infantry_move_out"
+	
+	sounds = {
+		sound = GEH_move_out_1
+		sound = GEH_move_out_2
+		sound = GEH_move_out_3
+		sound = GEH_move_out_4
+		sound = GEH_move_out_5
+		sound = GEH_move_out_6
+		sound = GEH_move_out_7
+		sound = GEH_move_out_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+
+##################
+#Animations Sound Effect
+##################
+#撤退
+sound = {
+	name = "ARI_retreat_1"
+	file = "BARE_ARI_sound/ARI_retreat_1.wav"
+}
+
+sound = {
+	name = "ARI_retreat_2"
+	file = "BARE_ARI_sound/ARI_retreat_2.wav"
+}
+
+sound = {
+	name = "ARI_retreat_3"
+	file = "BARE_ARI_sound/ARI_retreat_3.wav"
+}
+
+sound = {
+	name = "ARI_retreat_4"
+	file = "BARE_ARI_sound/ARI_retreat_4.wav"
+}
+
+#交战
+sound = {
+	name = "ARI_fight_1"
+	file = "BARE_ARI_sound/ARI_fight_1.wav"
+}
+
+sound = {
+	name = "ARI_fight_2"
+	file = "BARE_ARI_sound/ARI_fight_2.wav"
+}
+
+sound = {
+	name = "ARI_fight_3"
+	file = "BARE_ARI_sound/ARI_fight_3.wav"
+}
+
+sound = {
+	name = "ARI_fight_4"
+	file = "BARE_ARI_sound/ARI_fight_4.wav"
+}
+
+sound = {
+	name = "ARI_fight_5"
+	file = "BARE_ARI_sound/ARI_fight_5.wav"
+}
+
+sound = {
+	name = "ARI_fight_6"
+	file = "BARE_ARI_sound/ARI_fight_6.wav"
+}
+
+sound = {
+	name = "ARI_fight_7"
+	file = "BARE_ARI_sound/ARI_fight_7.wav"
+}
+
+sound = {
+	name = "ARI_fight_8"
+	file = "BARE_ARI_sound/ARI_fight_8.wav"
+}
+
+#选中
+sound = {
+	name = "ARI_idle_1"
+	file = "BARE_ARI_sound/ARI_idle_1.wav"
+}
+
+sound = {
+	name = "ARI_idle_2"
+	file = "BARE_ARI_sound/ARI_idle_2.wav"
+}
+
+sound = {
+	name = "ARI_idle_3"
+	file = "BARE_ARI_sound/ARI_idle_3.wav"
+}
+
+sound = {
+	name = "ARI_idle_4"
+	file = "BARE_ARI_sound/ARI_idle_4.wav"
+}
+
+sound = {
+	name = "ARI_idle_5"
+	file = "BARE_ARI_sound/ARI_idle_5.wav"
+}
+
+sound = {
+	name = "ARI_idle_6"
+	file = "BARE_ARI_sound/ARI_idle_6.wav"
+}
+
+sound = {
+	name = "ARI_idle_7"
+	file = "BARE_ARI_sound/ARI_idle_7.wav"
+}
+
+sound = {
+	name = "ARI_idle_8"
+	file = "BARE_ARI_sound/ARI_idle_8.wav"
+}
+
+sound = {
+	name = "ARI_idle_9"
+	file = "BARE_ARI_sound/ARI_idle_9.wav"
+}
+
+sound = {
+	name = "ARI_idle_10"
+	file = "BARE_ARI_sound/ARI_idle_10.wav"
+}
+
+sound = {
+	name = "ARI_idle_11"
+	file = "BARE_ARI_sound/ARI_idle_11.wav"
+}
+
+#移动
+sound = {
+	name = "ARI_move_out_1"
+	file = "BARE_ARI_sound/ARI_idle_1.wav"
+}
+
+sound = {
+	name = "ARI_move_out_2"
+	file = "BARE_ARI_sound/ARI_idle_2.wav"
+}
+
+sound = {
+	name = "ARI_move_out_3"
+	file = "BARE_ARI_sound/ARI_idle_3.wav"
+}
+
+sound = {
+	name = "ARI_move_out_4"
+	file = "BARE_ARI_sound/ARI_idle_4.wav"
+}
+
+sound = {
+	name = "ARI_move_out_5"
+	file = "BARE_ARI_sound/ARI_idle_5.wav"
+}
+
+sound = {
+	name = "ARI_move_out_6"
+	file = "BARE_ARI_sound/ARI_idle_6.wav"
+}
+
+sound = {
+	name = "ARI_move_out_7"
+	file = "BARE_ARI_sound/ARI_idle_7.wav"
+}
+
+sound = {
+	name = "ARI_move_out_8"
+	file = "BARE_ARI_sound/ARI_idle_8.wav"
+}
+
+
+
+
+
+
+##################
+#Animations Sound Effect
+##################
+###音效注册###
+#撤退
+sound = {
+	name = "GEH_retreat_1"
+	file = "BARE_GEH_sound/GEH_retreat_1.wav"
+}
+
+sound = {
+	name = "GEH_retreat_2"
+	file = "BARE_GEH_sound/GEH_retreat_2.wav"
+}
+
+sound = {
+	name = "GEH_retreat_3"
+	file = "BARE_GEH_sound/GEH_retreat_3.wav"
+}
+
+sound = {
+	name = "GEH_retreat_4"
+	file = "BARE_GEH_sound/GEH_retreat_4.wav"
+}
+
+sound = {
+	name = "GEH_retreat_5"
+	file = "BARE_GEH_sound/GEH_retreat_5.wav"
+}
+
+sound = {
+	name = "GEH_retreat_6"
+	file = "BARE_GEH_sound/GEH_retreat_6.wav"
+}
+
+#交战（进攻+防御）
+sound = {
+	name = "GEH_fight_1"
+	file = "BARE_GEH_sound/GEH_fight_1.wav"
+}
+
+sound = {
+	name = "GEH_fight_2"
+	file = "BARE_GEH_sound/GEH_fight_2.wav"
+}
+
+sound = {
+	name = "GEH_fight_3"
+	file = "BARE_GEH_sound/GEH_fight_3.wav"
+}
+
+sound = {
+	name = "GEH_fight_4"
+	file = "BARE_GEH_sound/GEH_fight_4.wav"
+}
+
+sound = {
+	name = "GEH_fight_5"
+	file = "BARE_GEH_sound/GEH_fight_5.wav"
+}
+
+sound = {
+	name = "GEH_fight_6"
+	file = "BARE_GEH_sound/GEH_fight_6.wav"
+}
+
+sound = {
+	name = "GEH_fight_7"
+	file = "BARE_GEH_sound/GEH_fight_7.wav"
+}
+
+sound = {
+	name = "GEH_fight_8"
+	file = "BARE_GEH_sound/GEH_fight_8.wav"
+}
+
+
+#选中
+sound = {
+	name = "GEH_idle_1"
+	file = "BARE_GEH_sound/GEH_idle_1.wav"
+}
+
+sound = {
+	name = "GEH_idle_2"
+	file = "BARE_GEH_sound/GEH_idle_2.wav"
+}
+
+sound = {
+	name = "GEH_idle_3"
+	file = "BARE_GEH_sound/GEH_idle_3.wav"
+}
+
+sound = {
+	name = "GEH_idle_4"
+	file = "BARE_GEH_sound/GEH_idle_4.wav"
+}
+
+sound = {
+	name = "GEH_idle_5"
+	file = "BARE_GEH_sound/GEH_idle_5.wav"
+}
+
+sound = {
+	name = "GEH_idle_6"
+	file = "BARE_GEH_sound/GEH_idle_6.wav"
+}
+
+sound = {
+	name = "GEH_idle_7"
+	file = "BARE_GEH_sound/GEH_idle_7.wav"
+}
+
+sound = {
+	name = "GEH_idle_8"
+	file = "BARE_GEH_sound/GEH_idle_8.wav"
+}
+
+sound = {
+	name = "GEH_idle_9"
+	file = "BARE_GEH_sound/GEH_idle_9.wav"
+}
+
+sound = {
+	name = "GEH_idle_10"
+	file = "BARE_GEH_sound/GEH_idle_10.wav"
+}
+
+sound = {
+	name = "GEH_idle_11"
+	file = "BARE_GEH_sound/GEH_idle_11.wav"
+}
+
+sound = {
+	name = "GEH_idle_12"
+	file = "BARE_GEH_sound/GEH_idle_12.wav"
+}
+
+
+#移动
+sound = {
+	name = "GEH_move_out_1"
+	file = "BARE_GEH_sound/GEH_move_out_1.wav"
+}
+
+sound = {
+	name = "GEH_move_out_2"
+	file = "BARE_GEH_sound/GEH_move_out_2.wav"
+}
+
+sound = {
+	name = "GEH_move_out_3"
+	file = "BARE_GEH_sound/GEH_move_out_3.wav"
+}
+
+sound = {
+	name = "GEH_move_out_4"
+	file = "BARE_GEH_sound/GEH_move_out_4.wav"
+}
+
+sound = {
+	name = "GEH_move_out_5"
+	file = "BARE_GEH_sound/GEH_move_out_5.wav"
+}
+
+sound = {
+	name = "GEH_move_out_6"
+	file = "BARE_GEH_sound/GEH_move_out_6.wav"
+}
+
+sound = {
+	name = "GEH_move_out_7"
+	file = "BARE_GEH_sound/GEH_move_out_7.wav"
+}
+
+sound = {
+	name = "GEH_move_out_8"
+	file = "BARE_GEH_sound/GEH_move_out_8.wav"
+}
+
+sound = {
+	name = "GEH_move_out_9"
+	file = "BARE_GEH_sound/GEH_move_out_9.wav"
+}
+
+sound = {
+	name = "GEH_move_out_10"
+	file = "BARE_GEH_sound/GEH_move_out_10.wav"
+}
+
+sound = {
+	name = "GEH_move_out_11"
+	file = "BARE_GEH_sound/GEH_move_out_11.wav"
+}
+
+
+##################
+#Animations Sound Effect
+##################
+###音效注册###
+#撤退
+sound = {
+	name = "TRI_retreat_1"
+	file = "BARE_TRI_sound/TRI_retreat_1.wav"
+}
+
+sound = {
+	name = "TRI_retreat_2"
+	file = "BARE_TRI_sound/TRI_retreat_2.wav"
+}
+
+sound = {
+	name = "TRI_retreat_3"
+	file = "BARE_TRI_sound/TRI_retreat_3.wav"
+}
+
+sound = {
+	name = "TRI_retreat_4"
+	file = "BARE_TRI_sound/TRI_retreat_4.wav"
+}
+
+sound = {
+	name = "TRI_retreat_5"
+	file = "BARE_TRI_sound/TRI_retreat_5.wav"
+}
+
+sound = {
+	name = "TRI_retreat_6"
+	file = "BARE_TRI_sound/TRI_retreat_6.wav"
+}
+
+sound = {
+	name = "TRI_retreat_7"
+	file = "BARE_TRI_sound/TRI_retreat_7.wav"
+}
+
+sound = {
+	name = "TRI_retreat_8"
+	file = "BARE_TRI_sound/TRI_retreat_8.wav"
+}
+
+#交战（进攻+防御）
+sound = {
+	name = "TRI_fight_1"
+	file = "BARE_TRI_sound/TRI_fight_1.wav"
+}
+
+sound = {
+	name = "TRI_fight_2"
+	file = "BARE_TRI_sound/TRI_fight_2.wav"
+}
+
+sound = {
+	name = "TRI_fight_3"
+	file = "BARE_TRI_sound/TRI_fight_3.wav"
+}
+
+sound = {
+	name = "TRI_fight_4"
+	file = "BARE_TRI_sound/TRI_fight_4.wav"
+}
+
+sound = {
+	name = "TRI_fight_5"
+	file = "BARE_TRI_sound/TRI_fight_5.wav"
+}
+
+sound = {
+	name = "TRI_fight_6"
+	file = "BARE_TRI_sound/TRI_fight_6.wav"
+}
+
+sound = {
+	name = "TRI_fight_7"
+	file = "BARE_TRI_sound/TRI_fight_7.wav"
+}
+
+sound = {
+	name = "TRI_fight_8"
+	file = "BARE_TRI_sound/TRI_fight_8.wav"
+}
+
+sound = {
+	name = "TRI_fight_9"
+	file = "BARE_TRI_sound/TRI_fight_9.wav"
+}
+
+sound = {
+	name = "TRI_fight_10"
+	file = "BARE_TRI_sound/TRI_fight_10.wav"
+}
+
+sound = {
+	name = "TRI_fight_11"
+	file = "BARE_TRI_sound/TRI_fight_11.wav"
+}
+
+sound = {
+	name = "TRI_fight_12"
+	file = "BARE_TRI_sound/TRI_fight_12.wav"
+}
+
+sound = {
+	name = "TRI_fight_13"
+	file = "BARE_TRI_sound/TRI_fight_13.wav"
+}
+
+
+#选中
+sound = {
+	name = "TRI_idle_1"
+	file = "BARE_TRI_sound/TRI_idle_1.wav"
+}
+
+sound = {
+	name = "TRI_idle_2"
+	file = "BARE_TRI_sound/TRI_idle_2.wav"
+}
+
+sound = {
+	name = "TRI_idle_3"
+	file = "BARE_TRI_sound/TRI_idle_3.wav"
+}
+
+sound = {
+	name = "TRI_idle_4"
+	file = "BARE_TRI_sound/TRI_idle_4.wav"
+}
+
+sound = {
+	name = "TRI_idle_5"
+	file = "BARE_TRI_sound/TRI_idle_5.wav"
+}
+
+sound = {
+	name = "TRI_idle_6"
+	file = "BARE_TRI_sound/TRI_idle_6.wav"
+}
+
+sound = {
+	name = "TRI_idle_7"
+	file = "BARE_TRI_sound/TRI_idle_7.wav"
+}
+
+sound = {
+	name = "TRI_idle_8"
+	file = "BARE_TRI_sound/TRI_idle_8.wav"
+}
+
+sound = {
+	name = "TRI_idle_9"
+	file = "BARE_TRI_sound/TRI_idle_9.wav"
+}
+
+
+#移动
+sound = {
+	name = "TRI_move_out_1"
+	file = "BARE_TRI_sound/TRI_move_out_1.wav"
+}
+
+sound = {
+	name = "TRI_move_out_2"
+	file = "BARE_TRI_sound/TRI_move_out_2.wav"
+}
+
+sound = {
+	name = "TRI_move_out_3"
+	file = "BARE_TRI_sound/TRI_move_out_3.wav"
+}
+
+sound = {
+	name = "TRI_move_out_4"
+	file = "BARE_TRI_sound/TRI_move_out_4.wav"
+}
+
+sound = {
+	name = "TRI_move_out_5"
+	file = "BARE_TRI_sound/TRI_move_out_5.wav"
+}
+
+sound = {
+	name = "TRI_move_out_6"
+	file = "BARE_TRI_sound/TRI_move_out_6.wav"
+}
+
+sound = {
+	name = "TRI_move_out_7"
+	file = "BARE_TRI_sound/TRI_move_out_7.wav"
+}
+
+sound = {
+	name = "TRI_move_out_8"
+	file = "BARE_TRI_sound/TRI_move_out_8.wav"
+}
+
+sound = {
+	name = "TRI_move_out_9"
+	file = "BARE_TRI_sound/TRI_move_out_9.wav"
+}
+
+sound = {
+	name = "TRI_move_out_10"
+	file = "BARE_TRI_sound/TRI_move_out_10.wav"
+}

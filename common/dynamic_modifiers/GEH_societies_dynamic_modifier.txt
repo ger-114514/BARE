@@ -1,0 +1,45 @@
+#风纪委巡逻中
+GEH_discipline_committee_on_patrol = {
+    icon = "GFX_idea_unknown"
+
+    research_speed_factor = GEH_discipline_committee_research
+    stability_factor = GEH_discipline_committee_stability_factor
+    stability_weekly = GEH_discipline_committee_stability_weekly
+    army_org_factor = GEH_discipline_committee_army_org_factor
+    production_factory_max_efficiency_factor = GEH_discipline_committee_production_factory_max
+    production_factory_start_efficiency_factor = GEH_discipline_committee_production_factory_start
+    political_power_factor = GEH_discipline_committee_max_political_power
+}
+#温泉开发部
+GEH_hot_spring_committee = {
+    icon = "GFX_idea_unknown"
+
+    production_speed_buildings_factor = GEH_hot_spring_production_speed_buildings
+    industry_repair_factor = GEH_hot_spring_industry_repair
+    line_change_production_efficiency_factor = GEH_hot_spring_line_change_production
+    production_factory_efficiency_gain_factor = GEH_hot_spring_production_factory_efficiency
+    local_resources_factor = GEH_hot_spring_max_local_resources
+    production_speed_infrastructure_factor = GEH_hot_spring_max_production_speed_infrastructure
+}
+#供餐问题
+GEH_meal_service_issues = {
+    icon = "GFX_idea_unknown"
+
+    supply_consumption_factor = GEH_food_service_supply_consumption
+    no_supply_grace = GEH_food_serviceno_supply_grace
+    supply_node_range = GEH_food_service_supply_node_range
+    consumer_goods_factor = GEH_food_service_consumer_goods_factor
+    production_speed_industrial_complex_factor = GEH_gourmet_research_production_speed_industrial
+    production_speed_buildings_factor = GEH_gourmet_research_production_speed_buildings
+    army_morale_factor = GEH_gourmet_research_army_morale_factor
+    research_speed_factor = GEH_gourmet_research_max_research
+    army_speed_factor = GEH_gourmet_research_max_speed
+}
+#格黑那武装食品运输队
+GEH_armed_food_convoys = {
+    icon = "GFX_idea_unknown"
+
+    mechanized_attack_factor = GEH_food_service_efficiency_factor
+    army_org_factor = GEH_food_service_efficiency_factor
+    max_planning = GEH_food_service_efficiency_factor
+}

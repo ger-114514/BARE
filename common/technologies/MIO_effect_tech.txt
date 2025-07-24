@@ -1,0 +1,42 @@
+technologies = {
+	#工程
+	GVS_Blasting_Rope_tech = {
+		research_cost = 1.5
+
+		allow = {
+			always =  no
+		}
+
+		engineer = {	
+			breakthrough = 0.1
+			fort = {
+				attack = 0.1
+			}
+		}
+
+		show_effect_as_desc = yes
+		
+		categories = {
+			support
+			support_all
+		}
+	}
+
+	GVS_Logistical_support_tools_trait_tech = {
+		research_cost = 1.5
+
+		allow = {
+			always =  no
+		}
+
+		no_supply_grace = 48
+		out_of_supply_factor = -0.1
+
+		show_effect_as_desc = yes
+		
+		categories = {
+			support
+			support_all
+		}
+	}
+}

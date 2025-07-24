@@ -209,7 +209,13 @@ country_event = {
     title = Eden_pact.100.t
     desc = Eden_pact.100.d
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
+    #picture =
+
+    immediate = {
+        set_global_flag = BA_2st_eden_pact_end
+    }
+
     option = {
 		name = Eden_pact.100.a
         trigger = {
@@ -249,7 +255,7 @@ country_event = {
     desc = Eden_pact.101.d
     timeout_days = 3
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
     option = {
 		name = Eden_pact.101.a
         trigger = {
@@ -272,7 +278,7 @@ country_event = {
     desc = Eden_pact.102.d
     timeout_days = 3
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
     option = {
 		name = Eden_pact.102.a
         trigger = {
@@ -294,7 +300,7 @@ country_event = {
     desc = Eden_pact.103.d
     timeout_days = 3
     is_triggered_only = yes
-    #picture = 
+    picture = TRI_news_event_1
     option = {
 		name = Eden_pact.103.a
         trigger = {
@@ -316,7 +322,7 @@ country_event = {
     desc = Eden_pact.200.d
     is_triggered_only = yes
     timeout_days = 2
-    #picture = 
+    picture = TRI_news_event_15
     option = {
 		name = Eden_pact.200.a
         set_country_flag = ARI_lock_foreign_operation
@@ -407,6 +413,15 @@ news_event = {
                 limit = { original_tag = GEH }
                 mark_focus_tree_layout_dirty = yes
                 complete_national_focus = GEH_fire_was_rising
+                add_war_support = 0.05 #战争支持度修正
+				add_stability = -0.05 #稳定度修正
+				add_dynamic_modifier = {
+					modifier = GEH_a_unpredictable_attack #措手不及
+				}
+
+
+
+
             }
             else_if = {
                 limit = { original_tag = TRI }

@@ -17,14 +17,26 @@ GEH_production_efficiency = {
 }
 #措手不及
 GEH_a_unpredictable_attack = {
-	army_attack_factor = GEH_a_unpredictable_attack_army_attack_factor
+	# army_attack_factor = GEH_a_unpredictable_attack_army_attack_factor
+	# army_defence_factor = GEH_a_unpredictable_attack_army_defence_factor
+	# army_org_regain = GEH_a_unpredictable_attack_army_org_regain
+	# army_speed_factor = GEH_a_unpredictable_attack_army_speed_factor
+	# supply_consumption_factor = GEH_a_unpredictable_attack_supply_consumption_factor
+	# out_of_supply_factor = GEH_a_unpredictable_attack_out_of_supply_factor
+	# land_reinforce_rate = GEH_a_unpredictable_attack_land_reinforce_rate
+	# breakthrough_factor = GEH_a_unpredictable_attack_breakthrough_factor
+
+	army_org_factor = GEH_a_unpredictable_attack_army_org_factor
+	army_morale_factor = GEH_a_unpredictable_attack_army_morale_factor
 	army_defence_factor = GEH_a_unpredictable_attack_army_defence_factor
-	army_org_regain = GEH_a_unpredictable_attack_army_org_regain
-	army_speed_factor = GEH_a_unpredictable_attack_army_speed_factor
-	supply_consumption_factor = GEH_a_unpredictable_attack_supply_consumption_factor
-	out_of_supply_factor = GEH_a_unpredictable_attack_out_of_supply_factor
-	land_reinforce_rate = GEH_a_unpredictable_attack_land_reinforce_rate
-	breakthrough_factor = GEH_a_unpredictable_attack_breakthrough_factor
+	land_reinforce_rate = GEH_a_unpredictable_land_reinforce_rate
+
+
+	remove_trigger = { 
+		not = {
+			has_war_with = ARI
+		}
+	}
 }
 
 GEH_gehenna_club_activity = {

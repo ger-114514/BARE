@@ -1,0 +1,16 @@
+unique_id = bare_achievements
+
+### Any achievement ID starting with 0 denotes a global achievement. They are tagged as such so that they appear first in the order. All other achievements are named after their respective tags.
+
+TRI_greetings_achievement = {
+	possible = {
+		tag = TRI
+		difficulty > 1
+		has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+        date > 2019.01.02
+	}
+}

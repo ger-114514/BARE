@@ -1,25 +1,17 @@
-sp_ba_T2_air_project = {
+sp_ba_T1_drone_project = {
     specialization = specialization_air
     project_tags = {
-        sp_tag_aircraft
-        sp_tag_radar
+        # sp_tag_tank
+	    # sp_tag_artillery
     }
     available = {
-        FROM = {
-        OR = {
-            has_tech = T1_electronic
-            has_tech = T1_drone
-        }
-        }
+       
     }
     visible = {
         FROM= {
-        NOT = {
-            AND = {
-                has_tech = T2_electronic
-                has_tech = T2_drone               
+            not = {
+                has_tech = T1_drone
             }
-        }
         }
     }
     breakthrough_cost = {
@@ -29,7 +21,7 @@ sp_ba_T2_air_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_air_bouncing_bomb
+    icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
 
@@ -49,8 +41,67 @@ sp_ba_T2_air_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T23_electronic = 1
+               T1_drone = 1
             }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T2_drone_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T1_drone
+    }
+    visible = {
+        FROM= {
+            has_tech = T1_drone
+            not = {
+                has_tech = T2_drone
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 15
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
             set_technology = {
                T2_drone = 1
             }
@@ -66,32 +117,26 @@ sp_ba_T2_air_project = {
 
     }
     generic_prototype_rewards = {
-	
+
     }
 }
 
-sp_ba_T3_air_project = {
+
+sp_ba_T3_drone_project = {
     specialization = specialization_air
     project_tags = {
-        sp_tag_aircraft
-        sp_tag_radar
+        # sp_tag_tank
+	    # sp_tag_artillery
     }
     available = {
-        FROM = {
-        OR = {
-            has_tech = T2_electronic
-            has_tech = T2_drone
-        }
-        }
+       has_tech = T2_drone
     }
     visible = {
         FROM= {
-        NOT = {
-            AND = {
-                has_tech = T3_electronic
-                has_tech = T3_drone               
+            has_tech = T2_drone
+            not = {
+                has_tech = T3_drone
             }
-        }
         }
     }
     breakthrough_cost = {
@@ -101,16 +146,16 @@ sp_ba_T3_air_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_nuclear_radar
+    icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.long
+    prototype_time = sp_time.prototype.medium
 
     resource_cost = {
         resources = {
-            resources_rm = 10
+            resources_cm = 20
         }
     }
-    complexity = sp_complexity.medium
+    complexity = sp_complexity.small
 
     ai_will_do = {
         base = 1.5
@@ -120,9 +165,6 @@ sp_ba_T3_air_project = {
     }
     project_output = {
         country_effects = {
-            set_technology = {
-               T3_electronic = 1
-            }
             set_technology = {
                T3_drone = 1
             }
@@ -138,52 +180,44 @@ sp_ba_T3_air_project = {
 
     }
     generic_prototype_rewards = {
-	
+
     }
 }
 
-
-sp_ba_T4_air_project = {
+sp_ba_T4_drone_project = {
     specialization = specialization_air
     project_tags = {
-        sp_tag_aircraft
-        sp_tag_radar
+        # sp_tag_tank
+	    # sp_tag_artillery
     }
     available = {
-        FROM = {
-        OR = {
-            has_tech = T3_electronic
-            has_tech = T3_drone
-        }
-        }
+       has_tech = T3_drone
     }
     visible = {
-        FROM = {
-        NOT = {
-            AND = {
-                has_tech = T4_electronic
-                has_tech = T4_drone               
+        FROM= {
+            has_tech = T3_drone
+            not = {
+                has_tech = T4_drone
             }
-        }
         }
     }
     breakthrough_cost = {
-        specialization_air = 2
+        specialization_air = 1
     }
     #narrative = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_rockets_flying_bomb
+    icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.long
+    prototype_time = sp_time.prototype.medium
 
     resource_cost = {
         resources = {
-            resources_ec = 10
+            resources_cm = 25
         }
     }
-    complexity = sp_complexity.large
+    complexity = sp_complexity.small
 
     ai_will_do = {
         base = 1.5
@@ -193,9 +227,6 @@ sp_ba_T4_air_project = {
     }
     project_output = {
         country_effects = {
-            set_technology = {
-               T4_electronic = 1
-            }
             set_technology = {
                T4_drone = 1
             }
@@ -211,51 +242,43 @@ sp_ba_T4_air_project = {
 
     }
     generic_prototype_rewards = {
-	
+
     }
 }
-
-sp_ba_T5_air_project = {
+sp_ba_T5_drone_project = {
     specialization = specialization_air
     project_tags = {
-        sp_tag_aircraft
-        sp_tag_radar
+        # sp_tag_tank
+	    # sp_tag_artillery
     }
     available = {
-        FROM = {
-        OR = {
-            has_tech = T4_electronic
-            has_tech = T4_drone
-        }
-        }
+       has_tech = T4_drone
     }
     visible = {
         FROM= {
-        NOT = {
-            AND = {
-                has_tech = T5_electronic
-                has_tech = T5_drone               
+            has_tech = T4_drone
+            not = {
+                has_tech = T5_drone
             }
-        }
         }
     }
     breakthrough_cost = {
-        specialization_air = 3
+        specialization_air = 1
     }
     #narrative = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_rockets_rocket_engine
+    icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.very_long
+    prototype_time = sp_time.prototype.medium
 
     resource_cost = {
         resources = {
-            resources_mm = 4
+            resources_cm = 30
         }
     }
-    complexity = sp_complexity.insane
+    complexity = sp_complexity.small
 
     ai_will_do = {
         base = 1.5
@@ -265,9 +288,6 @@ sp_ba_T5_air_project = {
     }
     project_output = {
         country_effects = {
-            set_technology = {
-               T5_electronic = 1
-            }
             set_technology = {
                T5_drone = 1
             }
@@ -283,6 +303,628 @@ sp_ba_T5_air_project = {
 
     }
     generic_prototype_rewards = {
-	
+
+    }
+}
+
+
+
+sp_ba_T1_infantry_weapon_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       
+    }
+    visible = {
+        FROM= {
+            not = {
+                has_tech = T1_infantry_weapon
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 10
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T1_infantry_weapon = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T2_infantry_weapon_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T1_infantry_weapon
+    }
+    visible = {
+        FROM= {
+            has_tech = T1_infantry_weapon
+            not = {
+                has_tech = T2_infantry_weapon
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 15
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T2_infantry_weapon = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+
+sp_ba_T3_infantry_weapon_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T2_infantry_weapon
+    }
+    visible = {
+        FROM= {
+            has_tech = T2_infantry_weapon
+            not = {
+                has_tech = T3_infantry_weapon
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 20
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T3_infantry_weapon = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T4_infantry_weapon_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T3_infantry_weapon
+    }
+    visible = {
+        FROM= {
+            has_tech = T3_infantry_weapon
+            not = {
+                has_tech = T4_infantry_weapon
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 25
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T4_infantry_weapon = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+sp_ba_T5_infantry_weapon_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T4_infantry_weapon
+    }
+    visible = {
+        FROM= {
+            has_tech = T4_infantry_weapon
+            not = {
+                has_tech = T5_infantry_weapon
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 30
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T5_infantry_weapon = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+
+
+sp_ba_T1_electronic_project_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       
+    }
+    visible = {
+        FROM= {
+            not = {
+                has_tech = T1_electronic_project
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 10
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T1_electronic_project = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T2_electronic_project_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T1_electronic_project
+    }
+    visible = {
+        FROM= {
+            has_tech = T1_electronic_project
+            not = {
+                has_tech = T2_electronic_project
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 15
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T2_electronic_project = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+
+sp_ba_T3_electronic_project_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T2_electronic_project
+    }
+    visible = {
+        FROM= {
+            has_tech = T2_electronic_project
+            not = {
+                has_tech = T3_electronic_project
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 20
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T3_electronic_project = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+
+sp_ba_T4_electronic_project_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T3_electronic_project
+    }
+    visible = {
+        FROM= {
+            has_tech = T3_electronic_project
+            not = {
+                has_tech = T4_electronic_project
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 25
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T4_electronic_project = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
+    }
+}
+sp_ba_T5_electronic_project_project = {
+    specialization = specialization_air
+    project_tags = {
+        # sp_tag_tank
+	    # sp_tag_artillery
+    }
+    available = {
+       has_tech = T4_electronic_project
+    }
+    visible = {
+        FROM= {
+            has_tech = T4_electronic_project
+            not = {
+                has_tech = T5_electronic_project
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_air = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_air_flamethrower_tank
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 30
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
+            set_technology = {
+               T5_electronic_project = 1
+            }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+
     }
 }

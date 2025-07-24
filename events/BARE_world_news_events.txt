@@ -1,0 +1,742 @@
+add_namespace = BARE_World_News
+
+
+#on action触发，用于时间控制
+country_event = {
+	id = BARE_World_News.1111
+	title = BARE_World_News.1111.t
+	desc = BARE_World_News.1111.d
+	
+	is_triggered_only = yes
+	
+	#hidden = yes
+
+	immediate = {
+		
+		#vol1.1~1.2
+		news_event = {
+			id = BARE_World_News.1
+			days = 350
+		}
+
+		#百夜堂海之家
+		news_event = {
+			id = BARE_World_News.2
+			days = 1660
+		}
+
+		#便利屋68和风纪委闯入阿拜多斯
+		news_event = {
+			id = BARE_World_News.3
+			days = 175
+		}
+
+		#阿拜多斯攻防战
+		news_event = {
+			id = BARE_World_News.4
+			days = 245
+		}
+
+		#伊凡库帕拉节的举办
+		news_event = {
+			id = BARE_World_News.5
+			days = 700 #延后了
+		}
+
+		#“千年大赏”公布颁奖结果
+		news_event = {
+			id = BARE_World_News.6
+			days = 545 #延后了
+		}
+
+		#百鬼夜行樱花祭
+		news_event = {
+			id = BARE_World_News.7
+			days = 490 #延后了
+		}
+
+		#兔女郎活动
+		news_event = {
+			id = BARE_World_News.8
+			days = 895 #延后了
+		}
+
+		#新春狂想曲
+		news_event = {
+			id = BARE_World_News.9
+			days = 398 #第二年的新春
+		}
+
+		#情人节和大狐狸
+		news_event = {
+			id = BARE_World_News.10
+			days = 774 #第三年的2.14
+		}
+
+		#万年参走私案
+		news_event = {
+			id = BARE_World_News.11
+			days = 1640
+		}
+
+		#白亚的预告信
+		news_event = {
+			id = BARE_World_News.12
+			days = 1460
+		}
+
+		#歌剧魅影
+		news_event = {
+			id = BARE_World_News.13
+			days = 1180
+		}
+
+		#龙武同舟
+		news_event = {
+			id = BARE_World_News.14
+			days = 1800
+		}
+
+		#FOX逮捕若藻
+		news_event = {
+			id = BARE_World_News.15
+			days = 70
+		}
+
+		#SRT废校！
+		news_event = {
+			id = BARE_World_News.16
+			days = 730
+		}
+	}
+
+	option = {
+		name = BARE_World_News.1111.a
+	}
+}
+
+
+#凯撒陷入绑架学生的丑闻
+news_event = {
+	id = BARE_World_News.1
+	picture = GFX_BA_news_5
+	title = BARE_World_News.1.t
+	desc = BARE_World_News.1.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#令人感叹
+	option = {
+		name = BARE_World_News.1.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = CAE
+					TAG = CAP
+					TAG = CAB
+					TAG = CAH
+					TAG = CAO
+					TAG = ABY
+				}
+			}
+		}
+	}
+
+	#星野，你没事就好
+	option = {
+		name = BARE_World_News.1.b
+		trigger = {
+			TAG = ABY
+		}
+	}
+
+	#啊？
+	option = {
+		name = BARE_World_News.1.c
+		trigger = {
+			OR = {
+				TAG = CAE
+				TAG = CAP
+				TAG = CAB
+				TAG = CAH
+				TAG = CAO
+			}
+		}
+	}
+}
+
+
+#度假村狩猎
+news_event = {
+	id = BARE_World_News.2
+	picture = GFX_BA_news_6
+	title = BARE_World_News.2.t
+	desc = BARE_World_News.2.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#至少度假多了个去处
+	option = {
+		name = BARE_World_News.2.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = ABY
+					TAG = GEH
+					TAG = HYA
+				}
+			}
+		}
+	}
+
+	#怎么又是凯撒集团
+	option = {
+		name = BARE_World_News.2.b
+		trigger = {
+			OR = {
+				TAG = GEH
+			}
+		}
+	}
+
+	#开庆典了！
+	option = {
+		name = BARE_World_News.2.c
+		trigger = {
+			OR = {
+				TAG = HYA
+				TAG = ABY
+			}
+		}
+	}
+}
+
+
+#阿拜多斯-格黑娜边境冲突
+news_event = {
+	id = BARE_World_News.3
+	picture = GFX_BA_news_7
+	title = BARE_World_News.3.t
+	desc = BARE_World_News.3.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#阿拜多斯，那是哪里？
+	option = {
+		name = BARE_World_News.3.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = ABY
+					TAG = GEH
+					TAG = CAE
+					TAG = CAP
+					TAG = CAB
+					TAG = CAH
+					TAG = CAO
+				}
+			}
+		}
+	}
+
+	#这里是我们的家园！
+	option = {
+		name = BARE_World_News.3.b
+		trigger = {
+			OR = {
+				TAG = ABY
+			}
+		}
+	}
+
+	#都给我好好写检讨！
+	option = {
+		name = BARE_World_News.3.c
+		trigger = {
+			OR = {
+				TAG = GEH
+			}
+		}
+	}
+
+	#都给我好好写检讨！
+	option = {
+		name = BARE_World_News.3.d
+		trigger = {
+			OR = {
+				TAG = CAE
+				TAG = CAP
+				TAG = CAB
+				TAG = CAH
+				TAG = CAO
+			}
+		}
+	}
+}
+
+
+#阿拜多斯攻防战
+news_event = {
+	id = BARE_World_News.4
+	picture = GFX_BA_news_7
+	title = BARE_World_News.4.t
+	desc = BARE_World_News.4.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#少女的倔强
+	option = {
+		name = BARE_World_News.4.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = ABY
+					TAG = CAE
+					TAG = CAP
+					TAG = CAB
+					TAG = CAH
+					TAG = CAO
+				}
+			}
+		}
+	}
+
+	#星野，我们来了！
+	option = {
+		name = BARE_World_News.4.b
+		trigger = {
+			OR = {
+				TAG = ABY
+			}
+		}
+	}
+
+	#你们这都能翻车？
+	option = {
+		name = BARE_World_News.4.c
+		trigger = {
+			OR = {
+				TAG = CAE
+				TAG = CAP
+				TAG = CAB
+				TAG = CAH
+				TAG = CAO
+			}
+		}
+	}
+}
+
+
+#伊凡库帕拉节的举办
+news_event = {
+	id = BARE_World_News.5
+	picture = GFX_BA_news_8
+	title = BARE_World_News.5.t
+	desc = BARE_World_News.5.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#属实是一场盛大的节日庆典
+	option = {
+		name = BARE_World_News.5.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = RWT
+				}
+			}
+		}
+	}
+
+	#这一切都归功于伟大的切里诺会长！
+	option = {
+		name = BARE_World_News.5.b
+		trigger = {
+			OR = {
+				TAG = RWT
+			}
+		}
+	}
+}
+
+
+
+
+#“千年大赏”公布颁奖结果
+news_event = {
+	id = BARE_World_News.6
+	picture = GFX_BA_news_9
+	title = BARE_World_News.6.t
+	desc = BARE_World_News.6.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#一起玩游戏！
+	option = {
+		name = BARE_World_News.6.a
+	}
+}
+
+
+
+#百鬼夜行樱花祭成功举办
+news_event = {
+	id = BARE_World_News.7
+	picture = GFX_BA_news_11
+	title = BARE_World_News.7.t
+	desc = BARE_World_News.7.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#玩的开心！
+	option = {
+		name = BARE_World_News.7.a
+		trigger = {
+			OR = {
+				TAG = HYA
+			}
+		}
+	}
+
+	#令人难忘的庆典
+	option = {
+		name = BARE_World_News.7.b
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = HYA
+				}
+			}
+		}
+	}
+}
+
+
+#千禧研讨会成员涉嫌金融犯罪被逮捕
+news_event = {
+	id = BARE_World_News.8
+	picture = GFX_BA_news_12
+	title = BARE_World_News.8.t
+	desc = BARE_World_News.8.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#还好我没买那个债券
+	option = {
+		name = BARE_World_News.8.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = MIL
+				}
+			}
+		}
+	}
+
+	#你们就不能给我省点心吗
+	option = {
+		name = BARE_World_News.8.b
+		trigger = {
+			OR = {
+				TAG = MIL
+			}
+		}
+	}
+}
+
+
+#新春大骚乱
+news_event = {
+	id = BARE_World_News.9
+	picture = GFX_BA_news_10
+	title = BARE_World_News.9.t
+	desc = BARE_World_News.9.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#少女的坚持令人敬佩
+	option = {
+		name = BARE_World_News.9.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = GEH
+				}
+			}
+		}
+	}
+
+	#为什么新年还要加班呀
+	option = {
+		name = BARE_World_News.9.b
+		trigger = {
+			OR = {
+				TAG = GEH
+			}
+		}
+	}
+}
+
+
+
+#“灾厄之狐”逍遥法外
+news_event = {
+	id = BARE_World_News.10
+	picture = GFX_BA_news_2
+	title = BARE_World_News.10.t
+	desc = BARE_World_News.10.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#瓦尔基里怎么废材的吗？
+	option = {
+		name = BARE_World_News.10.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = VAL
+				}
+			}
+		}
+	}
+
+	#丢人现眼
+	option = {
+		name = BARE_World_News.10.b
+		trigger = {
+			OR = {
+				TAG = VAL
+			}
+		}
+	}
+}
+
+
+#山海经“万年参走私案”告破
+news_event = {
+	id = BARE_World_News.11
+	picture = GFX_BA_news_10
+	title = BARE_World_News.11.t
+	desc = BARE_World_News.11.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#万年参？好吃吗？
+	option = {
+		name = BARE_World_News.11.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHA
+				}
+			}
+		}
+	}
+
+	#起码事情解决了
+	option = {
+		name = BARE_World_News.11.b
+		trigger = {
+			OR = {
+				TAG = SHA
+			}
+		}
+	}
+}
+
+
+#地下文物交易被破获
+news_event = {
+	id = BARE_World_News.12
+	picture = GFX_BA_news_13
+	title = BARE_World_News.12.t
+	desc = BARE_World_News.12.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#有趣
+	option = {
+		name = BARE_World_News.12.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = MIL
+				}
+			}
+		}
+	}
+
+	#过程错误，结果正确，就这样吧
+	option = {
+		name = BARE_World_News.12.b
+		trigger = {
+			OR = {
+				TAG = MIL
+			}
+		}
+	}
+}
+
+
+#著名歌剧院突发爆炸
+news_event = {
+	id = BARE_World_News.13
+	picture = GFX_BA_news_13
+	title = BARE_World_News.13.t
+	desc = BARE_World_News.13.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#有趣
+	option = {
+		name = BARE_World_News.13.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = VAL
+				}
+			}
+		}
+	}
+
+	#白捡的业绩太香了
+	option = {
+		name = BARE_World_News.13.b
+		trigger = {
+			OR = {
+				TAG = VAL
+			}
+		}
+	}
+}
+
+
+#山海经“月影祭”成功举办
+news_event = {
+	id = BARE_World_News.14
+	picture = GFX_BA_news_10
+	title = BARE_World_News.14.t
+	desc = BARE_World_News.14.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#起码月饼很好吃
+	option = {
+		name = BARE_World_News.14.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SHA
+				}
+			}
+		}
+	}
+
+	#这次我们撑过去了，但下次呢？
+	option = {
+		name = BARE_World_News.14.b
+		trigger = {
+			OR = {
+				TAG = SHA
+			}
+		}
+	}
+}
+
+
+#“灾厄之狐”被逮捕！
+news_event = {
+	id = BARE_World_News.15
+	picture = GFX_BA_news_2
+	title = BARE_World_News.15.t
+	desc = BARE_World_News.15.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#可算少了个大麻烦
+	option = {
+		name = BARE_World_News.15.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SRT
+				}
+			}
+		}
+	}
+
+	#这就是SRT的实力！
+	option = {
+		name = BARE_World_News.15.b
+		trigger = {
+			OR = {
+				TAG = SRT
+			}
+		}
+	}
+}
+
+
+#SRT废校！
+news_event = {
+	id = BARE_World_News.16
+	picture = GFX_BA_news_2
+	title = BARE_World_News.16.t
+	desc = BARE_World_News.16.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	#飞鸟尽，良弓藏
+	option = {
+		name = BARE_World_News.16.a
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = CEN
+				}
+			}
+		}
+	}
+
+	#这并非我们所愿...
+	option = {
+		name = BARE_World_News.16.b
+		trigger = {
+			OR = {
+				TAG = CEN
+			}
+		}
+	}
+}
