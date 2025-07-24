@@ -114,3 +114,18 @@
  Eden_pact.2003.c: "复仇时刻已到！"
  Eden_pact.2003.d.general: "最新消息！今日上午，一枚导弹袭击了伊甸条约会场。由于导弹来袭的时间正好是两方领导人面对面会谈时，整个会谈会场连同圣三一和格黑娜双方的领导人都遭受到了导弹的直接打击。由于目前来自谈判现场的连线已经中断，我们暂不清楚双方领导人是否安全，但考虑到本次导弹直接击中谈判现场，她们的情况可能凶多吉少。目前圣三一和格黑娜都用史无前例的激烈言辞严厉谴责了对方的背叛行为，并宣称“要让对方的可耻行径付出代价”，双方的部队也已经在边境开始接触，并爆发了猛烈的交火。基沃托斯的未来到底何去何从，只能等待事件的后续发展。"
  Eden_pact.2003.d: "到底发生了什么事情！？"
+#####
+ Eden_cathedral_war: "阿里乌斯复仇战争"
+ Eden_cathedral_war_desc: "沉淀在历史中的疏漏终于铸就大错：\n\n阿里乌斯已经再次崛起，并开始执行它天命所归的这场复仇。只有一方能在这场可怕的冲突中站到最后——对所有卷入这场动荡中的人来说，已再无退路可言。\n\n\n[ROOT.Cathedral_war_decision_desc_sl]\n\n\n§R“我看见一匹白马，地狱随之而来。”§!\n\n"
+ Eden_cathedral_war_goes_on: "冲突继续……"
+
+ Cathedral_war_state_status_control_by_us: "    --[THIS.GetName]:    §G在我方控制下§!"
+ Cathedral_war_state_status_control_by_ally: "    --[THIS.GetName]:    §C在盟友控制下§!"
+ Cathedral_war_state_status_control_by_others: "    --[THIS.GetName]:    §9在第三方控制下§!"
+ Cathedral_war_state_status_status_control_by_enemy: "    --[THIS.GetName]:    §R在敌人控制下§!"
+
+ Cathedral_war_decision_desc_sl_TRI: "§Y胜利条件§!：控制所有§G关键目标§!。\n\n§Y关键目标：§!\n[140.Cathedral_war_state_status_TRI]\n[118.Cathedral_war_state_status_TRI]\n[305.Cathedral_war_state_status_TRI]\n\n§Y主要目标：§!\n[684.Cathedral_war_state_status_TRI]\n[529.Cathedral_war_state_status_TRI]\n[141.Cathedral_war_state_status_TRI]\n\n§Y次要目标：§!\n[135.Cathedral_war_state_status_TRI]\n[131.Cathedral_war_state_status_TRI]"
+
+ Cathedral_war_decision_desc_sl_ARI: "§Y胜利条件§!：控制所有§G关键目标§!。\n\n§Y关键目标：§!\n[140.Cathedral_war_state_status_ARI]\n[118.Cathedral_war_state_status_ARI]\n[305.Cathedral_war_state_status_ARI]\n\n§Y主要目标：§!\n[684.Cathedral_war_state_status_ARI]\n[529.Cathedral_war_state_status_ARI]\n[141.Cathedral_war_state_status_ARI]\n\n§Y次要目标：§!\n[135.Cathedral_war_state_status_ARI]\n[131.Cathedral_war_state_status_ARI]"
+
+ Cathedral_war_decision_desc_sl_GEH: "§Y胜利条件§!：控制所有§G关键目标§!。\n\n§Y关键目标：§!\n[140.Cathedral_war_state_status_GEH]\n[118.Cathedral_war_state_status_GEH]\n[305.Cathedral_war_state_status_GEH]\n\n§Y主要目标：§!\n[684.Cathedral_war_state_status_GEH]\n[529.Cathedral_war_state_status_GEH]\n[141.Cathedral_war_state_status_GEH]\n\n§Y次要目标：§!\n[135.Cathedral_war_state_status_GEH]\n[131.Cathedral_war_state_status_GEH]"
