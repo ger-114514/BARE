@@ -112,6 +112,13 @@ Great_Game_add_cannot_invade = {
 		add_to_array = { Great_Game_cannot_invade = target }
 	}
 }
+Great_Game_remove_cannot_invade = {
+	if = {
+		is_in_array = { Great_Game_cannot_invade = target }
+		custom_effect_tooltip = Great_Game_remove_cannot_invade
+		remove_from_array = { Great_Game_cannot_invade = target }
+	}
+}
 Great_Game_invite_to_ally = {
 	custom_effect_tooltip = {
 		localization_key = Great_Game_join_ally_tt
