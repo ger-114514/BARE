@@ -103,6 +103,15 @@ Great_Game_generate_global_chart = {
 		add_to_array = { global.Great_Game_overlords_chart = 0 }
 	}
 }
+Great_Game_add_cannot_invade = {
+	if = {
+		NOT = {
+			is_in_array = { Great_Game_cannot_invade = target }
+		}
+		custom_effect_tooltip = Great_Game_add_cannot_invade
+		add_to_array = { Great_Game_cannot_invade = target }
+	}
+}
 Great_Game_invite_to_ally = {
 	custom_effect_tooltip = {
 		localization_key = Great_Game_join_ally_tt
