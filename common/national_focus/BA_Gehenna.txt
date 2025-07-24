@@ -2801,6 +2801,9 @@ focus_tree = {
                     set_state_flag = GEH_gourmet_research_damage
                 }
             } 
+            country_event = {
+                id = GEH_societies_events.1
+            }
         }
     }
 
@@ -2837,7 +2840,7 @@ focus_tree = {
         relative_position_id =  GEH_Food_Lovers_Trouble
 
         prerequisite = {  focus =  GEH_Food_Lovers_Trouble }
-        unlock_decision_tooltip = GEH_gourmet_research_education
+        
         completion_reward = {
             add_political_power = 100
             add_to_variable = {
@@ -2845,6 +2848,7 @@ focus_tree = {
             }
             GEH_food_service_and_gourmet_research_calc = yes 
             custom_effect_tooltip = GEH_Solving_food_supply_problems_tooltip
+            unlock_decision_tooltip = GEH_gourmet_research_education
         }
     }
 
@@ -2859,10 +2863,10 @@ focus_tree = {
         relative_position_id =  GEH_Solving_food_supply_problems
 
         prerequisite = {  focus =  GEH_Solving_food_supply_problems }
-        unlock_decision_tooltip = GEH_food_service_enrollment
-        unlock_decision_tooltip = GEH_expansion_of_canteen
-        completion_reward = {
         
+        completion_reward = {
+            unlock_decision_tooltip = GEH_food_service_enrollment
+            unlock_decision_tooltip = GEH_expansion_of_canteen
         }
     }
 
@@ -2876,13 +2880,11 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Solving_food_supply_problems
-        modifier = {
-            GEH_societies_food_service_activity_weekly = 1
-        }
         prerequisite = {  focus =  GEH_Solving_food_supply_problems }
-        unlock_decision_tooltip = GEH_operation_food_service_1
+        
         completion_reward = {
             custom_effect_tooltip = GEH_Optimizing_supply_chains_tooltip
+            unlock_decision_tooltip = GEH_operation_food_service_1
         }
     }
 
@@ -2895,7 +2897,7 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_Optimizing_supply_chains
-
+        
         prerequisite = {  focus =  GEH_Optimizing_supply_chains }
 
         completion_reward = {
@@ -2916,7 +2918,7 @@ focus_tree = {
         relative_position_id = GEH_Expanded_feeding_department
 
         prerequisite = {  focus =  GEH_Expanded_feeding_department }
-        unlock_decision_tooltip = GEH_hina_talking_gourmet_research
+        
         completion_reward = {
             add_to_variable = {
                 GEH_gourmet_research_activity = 10
@@ -2926,6 +2928,7 @@ focus_tree = {
             }
             GEH_food_service_and_gourmet_research_calc = yes 
             custom_effect_tooltip = GEH_conversation_with_Food_Research_tooltip
+            unlock_decision_tooltip = GEH_hina_talking_gourmet_research
         }
     }
 
@@ -2938,7 +2941,7 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_conversation_with_Food_Research 
-        unlock_decision_tooltip = GEH_gourmet_research_eating
+        
         prerequisite = { focus = GEH_conversation_with_Food_Research }
         available = {
             custom_trigger_tooltip = {
@@ -2953,6 +2956,7 @@ focus_tree = {
             } 
             add_ideas = GEH_food_time_of_gourmet_research
             custom_effect_tooltip = GEH_Delicious_time_tooltip
+            unlock_decision_tooltip = GEH_gourmet_research_eating
         }
     }
 
@@ -3000,9 +3004,9 @@ focus_tree = {
         
         prerequisite = {  focus =   GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Monitoring_trouble }
-        unlock_decision_tooltip = GEH_hina_talking_hot_spring
-        completion_reward = {
         
+        completion_reward = {
+            unlock_decision_tooltip = GEH_hina_talking_hot_spring
         }
     }
 
@@ -3017,9 +3021,9 @@ focus_tree = {
         relative_position_id = GEH_Boot_trouble
         prerequisite = {  focus =  GEH_Boot_trouble }
         
-        unlock_decision_tooltip = GEH_hot_spring_making
-        completion_reward = {
         
+        completion_reward = {
+            unlock_decision_tooltip = GEH_hot_spring_making
         }
     }
 
@@ -3059,9 +3063,9 @@ focus_tree = {
         prerequisite = {  focus =  GEH_Cute_terrorists }
         mutually_exclusive = { focus = GEH_Boot_trouble }
 
-        unlock_decision_tooltip = GEH_hot_spring_education
-        completion_reward = {
         
+        completion_reward = {
+            unlock_decision_tooltip = GEH_hot_spring_education
         }
     }
 
@@ -3076,10 +3080,10 @@ focus_tree = {
         relative_position_id =   GEH_Monitoring_trouble
 
         prerequisite = {  focus =   GEH_Monitoring_trouble}
-        unlock_decision_tooltip = GEH_hot_spring_using
+        
       
         completion_reward = {
-        
+            unlock_decision_tooltip = GEH_hot_spring_using
         }
     }
 
@@ -3111,11 +3115,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_Relaxing_time
 
-        prerequisite = {  focus = GEH_Relaxing_time  focus = GEH_Hot_Spring_Village}
-       
-      
-      
-      
+        prerequisite = {  focus = GEH_Relaxing_time  focus = GEH_Hot_Spring_Village}      
         completion_reward = {
             country_event = {
                 id = GEH_hot_spring_events.4
@@ -3135,8 +3135,7 @@ focus_tree = {
         relative_position_id =  GEH_Dealing_with_chaos
 
         prerequisite = {  focus =  GEH_Dealing_with_chaos }
-        unlock_decision_tooltip = GEH_discipline_committee_gangsters_eviction
-        unlock_decision_tooltip = GEH_discipline_committee_establish_border_patrol_system
+        
         completion_reward = {
             add_to_variable = {
                 GEH_discipline_committee_ability = 5
@@ -3146,6 +3145,8 @@ focus_tree = {
             }
             GEH_discipline_committee_calc = yes
             custom_effect_tooltip = GEH_Dealing_with_bad_students_tooltip
+            unlock_decision_tooltip = GEH_discipline_committee_gangsters_eviction
+            unlock_decision_tooltip = GEH_discipline_committee_establish_border_patrol_system
         }
     }
 
@@ -3166,6 +3167,10 @@ focus_tree = {
                 target = A10
                 type = annex_everything
             }
+            add_timed_idea = {
+                idea = GEH_end_of_the_paving_stone
+                days = 120
+            }
         }
     }
 
@@ -3180,11 +3185,11 @@ focus_tree = {
         relative_position_id =  GEH_Eliminate_the_base
 
         prerequisite = {  focus =  GEH_Eliminate_the_base }
-        unlock_decision_tooltip = GEH_discipline_committee_combat_helmet_regiments
-        unlock_decision_tooltip = GEH_discipline_committee_helmet_regiment_labor_reform
-        unlock_decision_tooltip = GEH_discipline_committee_helmet_regiment_teach_reform
-        completion_reward = {
         
+        completion_reward = {
+            unlock_decision_tooltip = GEH_discipline_committee_combat_helmet_regiments
+            unlock_decision_tooltip = GEH_discipline_committee_helmet_regiment_labor_reform
+            unlock_decision_tooltip = GEH_discipline_committee_helmet_regiment_teach_reform
         }
     }
 
@@ -3197,11 +3202,11 @@ focus_tree = {
         y = 1
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id =  GEH_Eliminate_the_base
-        unlock_decision_tooltip = GEH_hina_patrol
+        
         prerequisite = {  focus =  GEH_Eliminate_the_base }
 
         completion_reward = {
-       
+            unlock_decision_tooltip = GEH_hina_patrol
         }
     }
 

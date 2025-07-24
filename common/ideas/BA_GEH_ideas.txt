@@ -1567,8 +1567,33 @@ ideas = {
 
             modifier = {
               army_morale_factor = 0.1
-              research_speed_factor = 0.2
-              political_power_factor = -0.2
+              research_speed_factor = 0.1
+              political_power_factor = -0.1
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        GEH_end_of_the_paving_stone = {
+            name = GEH_end_of_the_paving_stone
+
+            targeted_modifier = {
+                tag = A10
+			    attack_bonus_against = 0.25
+			    defense_bonus_against = 0.25
+            }
+            allowed = {
+                original_tag = GEH
+            }
+        }
+        #生命之水
+        GEH_90degrees_of_water = {
+            name = GEH_90degrees_of_water
+            picture = unknown
+
+            modifier = {
+              research_speed_factor = 0.1
+              political_power_factor = -0.1
             }
             allowed = {
                 original_tag = GEH
