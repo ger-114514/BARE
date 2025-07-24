@@ -66,7 +66,9 @@ sp_ba_T2_assult_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T1_assult_vehicle
+       FROM = {
+            has_tech = T1_assult_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -129,7 +131,9 @@ sp_ba_T3_assult_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T2_assult_vehicle
+       FROM = {
+            has_tech = T2_assult_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -191,7 +195,9 @@ sp_ba_T4_assult_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T3_assult_vehicle
+      FROM = {
+            has_tech = T3_assult_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -210,7 +216,7 @@ sp_ba_T4_assult_vehicle_project = {
     #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.long
 
     resource_cost = {
         resources = {
@@ -252,7 +258,9 @@ sp_ba_T5_assult_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T4_assult_vehicle
+        FROM = {
+            has_tech = T4_assult_vehicle
+        }
     }
     visible = {
         FROM= {
@@ -271,7 +279,7 @@ sp_ba_T5_assult_vehicle_project = {
     #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.very_long
 
     resource_cost = {
         resources = {
@@ -377,7 +385,9 @@ sp_ba_T2_mobile_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T1_mobile_vehicle
+       FROM = {
+            has_tech = T1_mobile_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -440,7 +450,9 @@ sp_ba_T3_mobile_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T2_mobile_vehicle
+       FROM = {
+            has_tech = T2_mobile_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -502,7 +514,9 @@ sp_ba_T4_mobile_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T3_mobile_vehicle
+       FROM = {
+            has_tech = T3_mobile_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -521,7 +535,7 @@ sp_ba_T4_mobile_vehicle_project = {
     #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.long
 
     resource_cost = {
         resources = {
@@ -563,7 +577,9 @@ sp_ba_T5_mobile_vehicle_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T4_mobile_vehicle
+      FROM = {
+            has_tech = T4_mobile_vehicle
+       }
     }
     visible = {
         FROM= {
@@ -582,7 +598,7 @@ sp_ba_T5_mobile_vehicle_project = {
     #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.very_long
 
     resource_cost = {
         resources = {
@@ -688,7 +704,9 @@ sp_ba_T2_production_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T1_production
+       FROM = {
+            has_tech = T1_production
+       }
     }
     visible = {
         FROM= {
@@ -751,7 +769,9 @@ sp_ba_T3_production_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T2_production
+       FROM = {
+            has_tech = T2_production
+       }
     }
     visible = {
         FROM= {
@@ -813,7 +833,9 @@ sp_ba_T4_production_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T3_production
+        FROM = {
+            has_tech = T3_production
+       }
     }
     visible = {
         FROM= {
@@ -832,7 +854,7 @@ sp_ba_T4_production_project = {
     #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.long
 
     resource_cost = {
         resources = {
@@ -874,7 +896,9 @@ sp_ba_T5_production_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T4_production
+        FROM = {
+            has_tech = T4_production
+       }
     }
     visible = {
         FROM= {
@@ -893,7 +917,7 @@ sp_ba_T5_production_project = {
     #}
     icon = GFX_sp_land_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.very_long
 
     resource_cost = {
         resources = {

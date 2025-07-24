@@ -1,24 +1,15 @@
-sp_ba_T2_industry_project = {
+sp_ba_T1_opaz_project = {
     specialization = specialization_ba_tech
     project_tags = {
         sp_tag_batech
     }
     available = {
-        FROM = {
-        OR = {
-            has_tech = T1_production
-            has_tech = T1_opaz
-        }
-        }
     }
     visible = {
         FROM= {
-        NOT = {
-            AND = {
-            has_tech = T2_production
-            has_tech = T2_opaz            
+            NOT = {
+                has_tech = T1_opaz   
             }
-        }
         }
     }
     breakthrough_cost = {
@@ -48,8 +39,68 @@ sp_ba_T2_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T2_production = 1
+               T2_opaz = 1
             }
+        }
+        facility_state_effects = {
+
+        }
+        scientist_effects = {
+
+        }
+    }
+    unique_prototype_rewards = {
+
+    }
+    generic_prototype_rewards = {
+        
+    }
+}
+
+sp_ba_T2_opaz_project = {
+    specialization = specialization_ba_tech
+    project_tags = {
+        sp_tag_batech
+    }
+    available = {
+        FROM = {
+            has_tech = T1_opaz
+        }
+    }
+    visible = {
+        FROM= {
+            has_tech = T1_opaz
+            NOT = {
+                has_tech = T2_opaz   
+            }
+        }
+    }
+    breakthrough_cost = {
+        specialization_ba_tech = 1
+    }
+    #narrative = {
+        #name = "my_project_name_loc_key"
+        #desc = "my_project_desc_loc_key"
+    #}
+    icon = GFX_sp_commercial_nuclear_reactor
+    blueprint_image = "GFX_my_project_blueprint"
+    prototype_time = sp_time.prototype.medium
+
+    resource_cost = {
+        resources = {
+            resources_cm = 10
+        }
+    }
+    complexity = sp_complexity.small
+
+    ai_will_do = {
+        base = 1.5
+    }
+    special_project_parent = {
+
+    }
+    project_output = {
+        country_effects = {
             set_technology = {
                T2_opaz = 1
             }
@@ -69,27 +120,22 @@ sp_ba_T2_industry_project = {
     }
 }
 
-sp_ba_T3_industry_project = {
+sp_ba_T3_opaz_project = {
     specialization = specialization_ba_tech
     project_tags = {
         sp_tag_batech
     }
     available = {
         FROM = {
-        OR = {
-            has_tech = T2_production
             has_tech = T2_opaz
-        }
         }
     }
     visible = {
-        FROM= {
-        NOT = {
-            AND = {
-            has_tech = T3_production
-            has_tech = T3_opaz            
+         FROM= {
+            has_tech = T2_opaz
+            NOT = {
+                has_tech = T3_opaz   
             }
-        }
         }
     }
     breakthrough_cost = {
@@ -119,9 +165,6 @@ sp_ba_T3_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T3_production = 1
-            }
-            set_technology = {
                T3_opaz = 1
             }
         }
@@ -141,27 +184,22 @@ sp_ba_T3_industry_project = {
 }
 
 
-sp_ba_T4_industry_project = {
+sp_ba_T4_opaz_project = {
     specialization = specialization_ba_tech
     project_tags = {
         sp_tag_batech
     }
     available = {
-        FROM = {
-        OR = {
-            has_tech = T3_production
+       FROM = {
             has_tech = T3_opaz
-        }
         }
     }
     visible = {
-        FROM= {
-        NOT = {
-            AND = {
-            has_tech = T4_production
-            has_tech = T4_opaz            
+         FROM= {
+            has_tech = T3_opaz
+            NOT = {
+                has_tech = T4_opaz   
             }
-        }
         }
     }
     breakthrough_cost = {
@@ -191,9 +229,6 @@ sp_ba_T4_industry_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T4_production = 1
-            }
-            set_technology = {
                T4_opaz = 1
             }
         }
@@ -212,27 +247,22 @@ sp_ba_T4_industry_project = {
     }
 }
 
-sp_ba_T5_industry_project = {
+sp_ba_T5_opaz_project = {
     specialization = specialization_ba_tech
     project_tags = {
         sp_tag_batech
     }
     available = {
         FROM = {
-        OR = {
-            has_tech = T4_production
             has_tech = T4_opaz
-        }
         }
     }
     visible = {
         FROM= {
-        NOT = {
-            AND = {
-            has_tech = T5_production
-            has_tech = T5_opaz            
+            has_tech = T4_opaz
+            NOT = {
+                has_tech = T5_opaz   
             }
-        }
         }
     }
     breakthrough_cost = {
@@ -261,9 +291,6 @@ sp_ba_T5_industry_project = {
     }
     project_output = {
         country_effects = {
-            set_technology = {
-               T5_production = 1
-            }
             set_technology = {
                T5_opaz = 1
             }

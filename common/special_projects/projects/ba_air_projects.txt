@@ -66,7 +66,10 @@ sp_ba_T2_drone_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T1_drone
+        FROM = {
+            has_tech = T1_drone
+        }
+       
     }
     visible = {
         FROM= {
@@ -129,7 +132,9 @@ sp_ba_T3_drone_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T2_drone
+        FROM = {
+            has_tech = T2_drone
+        }
     }
     visible = {
         FROM= {
@@ -191,7 +196,9 @@ sp_ba_T4_drone_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T3_drone
+       FROM = {
+            has_tech = T3_drone
+        }
     }
     visible = {
         FROM= {
@@ -210,7 +217,7 @@ sp_ba_T4_drone_project = {
     #}
     icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.long
 
     resource_cost = {
         resources = {
@@ -252,7 +259,9 @@ sp_ba_T5_drone_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T4_drone
+       FROM = {
+            has_tech = T4_drone
+        }
     }
     visible = {
         FROM= {
@@ -271,7 +280,7 @@ sp_ba_T5_drone_project = {
     #}
     icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.very_long
 
     resource_cost = {
         resources = {
@@ -377,7 +386,10 @@ sp_ba_T2_infantry_weapon_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T1_infantry_weapon
+        FROM = {
+            has_tech = T1_infantry_weapon
+        }
+      
     }
     visible = {
         FROM= {
@@ -440,7 +452,9 @@ sp_ba_T3_infantry_weapon_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T2_infantry_weapon
+        FROM = {
+            has_tech = T2_infantry_weapon
+        }
     }
     visible = {
         FROM= {
@@ -502,7 +516,9 @@ sp_ba_T4_infantry_weapon_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T3_infantry_weapon
+        FROM = {
+            has_tech = T3_infantry_weapon
+        }
     }
     visible = {
         FROM= {
@@ -521,7 +537,7 @@ sp_ba_T4_infantry_weapon_project = {
     #}
     icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time =sp_time.prototype.long
 
     resource_cost = {
         resources = {
@@ -563,7 +579,9 @@ sp_ba_T5_infantry_weapon_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T4_infantry_weapon
+        FROM = {
+            has_tech = T4_infantry_weapon
+        }
     }
     visible = {
         FROM= {
@@ -582,7 +600,7 @@ sp_ba_T5_infantry_weapon_project = {
     #}
     icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.very_long
 
     resource_cost = {
         resources = {
@@ -632,7 +650,7 @@ sp_ba_T1_electronic_project_project = {
     visible = {
         FROM= {
             not = {
-                has_tech = T1_electronic_project
+                has_tech = T1_electronic
             }
         }
     }
@@ -663,7 +681,7 @@ sp_ba_T1_electronic_project_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T1_electronic_project = 1
+               T1_electronic = 1
             }
         }
         facility_state_effects = {
@@ -688,13 +706,15 @@ sp_ba_T2_electronic_project_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T1_electronic_project
+        FROM = {
+            has_tech = T1_electronic
+        }
     }
     visible = {
         FROM= {
-            has_tech = T1_electronic_project
+            has_tech = T1_electronic
             not = {
-                has_tech = T2_electronic_project
+                has_tech = T2_electronic
             }
         }
     }
@@ -725,7 +745,7 @@ sp_ba_T2_electronic_project_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T2_electronic_project = 1
+               T2_electronic = 1
             }
         }
         facility_state_effects = {
@@ -751,13 +771,15 @@ sp_ba_T3_electronic_project_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T2_electronic_project
+      FROM = {
+            has_tech = T2_electronic
+        }
     }
     visible = {
         FROM= {
-            has_tech = T2_electronic_project
+            has_tech = T2_electronic
             not = {
-                has_tech = T3_electronic_project
+                has_tech = T3_electronic
             }
         }
     }
@@ -788,7 +810,7 @@ sp_ba_T3_electronic_project_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T3_electronic_project = 1
+               T3_electronic = 1
             }
         }
         facility_state_effects = {
@@ -813,13 +835,15 @@ sp_ba_T4_electronic_project_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T3_electronic_project
+        FROM = {
+            has_tech = T3_electronic
+        }
     }
     visible = {
         FROM= {
-            has_tech = T3_electronic_project
+            has_tech = T3_electronic
             not = {
-                has_tech = T4_electronic_project
+                has_tech = T4_electronic
             }
         }
     }
@@ -832,7 +856,7 @@ sp_ba_T4_electronic_project_project = {
     #}
     icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.long
 
     resource_cost = {
         resources = {
@@ -850,7 +874,7 @@ sp_ba_T4_electronic_project_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T4_electronic_project = 1
+               T4_electronic = 1
             }
         }
         facility_state_effects = {
@@ -874,13 +898,15 @@ sp_ba_T5_electronic_project_project = {
 	    # sp_tag_artillery
     }
     available = {
-       has_tech = T4_electronic_project
+        FROM = {
+            has_tech = T4_electronic
+        }
     }
     visible = {
         FROM= {
-            has_tech = T4_electronic_project
+            has_tech = T4_electronic
             not = {
-                has_tech = T5_electronic_project
+                has_tech = T5_electronic
             }
         }
     }
@@ -893,7 +919,7 @@ sp_ba_T5_electronic_project_project = {
     #}
     icon = GFX_sp_air_flamethrower_tank
     blueprint_image = "GFX_my_project_blueprint"
-    prototype_time = sp_time.prototype.medium
+    prototype_time = sp_time.prototype.very_long
 
     resource_cost = {
         resources = {
@@ -911,7 +937,7 @@ sp_ba_T5_electronic_project_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T5_electronic_project = 1
+               T5_electronic = 1
             }
         }
         facility_state_effects = {

@@ -1,0 +1,182 @@
+add_namespace = bare_long_text_hidden_event
+
+
+#阿里乌斯夫人胜利线事件
+country_event = {
+    id = bare_long_text_hidden_event.1
+    title = bare_long_text_hidden_event.1.t
+    desc = bare_long_text_hidden_event.1.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 1
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟3小时开
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 3
+		}
+		#这个就是夫人事件的效果，与框架无关
+		country_event = {
+			id = bare_long_text_hidden_event.2
+			days = 3
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.1.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+country_event = {
+    id = bare_long_text_hidden_event.2
+    title = bare_long_text_hidden_event.2.t
+    desc = bare_long_text_hidden_event.2.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 2
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟3小时开
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 3
+		}
+		#这个就是夫人事件的效果，与框架无关
+		country_event = {
+			id = bare_long_text_hidden_event.3
+			days = 3
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.2.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+country_event = {
+    id = bare_long_text_hidden_event.3
+    title = bare_long_text_hidden_event.3.t
+    desc = bare_long_text_hidden_event.3.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 3
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟3小时开
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 3
+		}
+			#这个就是夫人事件的效果，与框架无关
+		country_event = {
+			id = bare_long_text_hidden_event.4
+			days = 1
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.3.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.4
+    title = bare_long_text_hidden_event.4.t
+    desc = bare_long_text_hidden_event.4.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 4
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.4.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+#从5开始，4被占用了
+country_event = { #开gui事件
+    id = bare_long_text_hidden_event.114514
+    title = bare_long_text_hidden_event.114514.t
+    desc = bare_long_text_hidden_event.114514.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		set_country_flag = BARE_long_event_show
+		
+
+	}
+    option = {
+		name = bare_hidden_event.1.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}

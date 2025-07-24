@@ -275,5 +275,35 @@ guiTypes = {
 			}
 		}
 	}
-	
+	#突然死亡结局
+	containerWindowType = {
+		name = "BARE_sudden_death_end_container"
+		position = { x = 0 y = 0 }
+		size = { width = 1920 height = 1080 }
+		Orientation = center
+		Origo = center
+		clipping = no	
+		moveable = yes
+		
+		iconType = {
+			name ="BARE_sudden_death_end_bg"
+			spriteType = "GFX_BARE_sudden_death_event_1"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "BARE_sudden_death_end_tooltip"
+		}
+
+		instantTextBoxType = {
+			name = "BARE_sudden_death_end_text"
+			position = { x = 190 y = 210 }
+			font = "FZLanTYJW_B_30"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_sudden_death_end_text"
+			alwaysTransparent = yes
+			maxWidth = 1500
+			maxHeight = 1080
+			fixedsize = yes	
+			format = center
+		}
+
+	}
 }

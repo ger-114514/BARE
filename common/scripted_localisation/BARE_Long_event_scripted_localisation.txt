@@ -1,0 +1,34 @@
+defined_text = {  #长事件文本
+	name = Get_BARE_long_event_title
+	text = {
+		localization_key = "BARE_long_event_title_[?BARE_long_event_id]"
+	}
+} 
+
+defined_text = {  #长事件文本
+	name = Get_BARE_long_event_text
+	text = {
+		localization_key = "BARE_long_event_text_[?BARE_long_event_id]"
+	}
+} 
+
+defined_text = {  #长事件文本
+	name = Get_BARE_long_event_button_text
+	text = {
+		localization_key = "BARE_long_event_button_text_[?BARE_long_event_id]_[?v]"
+	}
+} 
+
+defined_text = {  #长事件文本
+	name = Get_BARE_long_event_button_effect_text
+	text = {
+		localization_key = "BARE_long_event_button_effect_text_[?BARE_long_event_id]_[?v]"
+	}
+} 
+
+defined_text = {  #长事件文本
+	name = Get_BARE_long_event_photo
+	text = {
+		localization_key = "GFX_BARE_long_event_photo_[?BARE_long_event_id]"
+	}
+} 

@@ -1,59 +1,59 @@
 Test_time_decisions_categories = {
-	Test_time_decisions_year_add = {
-		complete_effect = {
-			add_to_variable = { global.Time_years = 1 }
-		}
-	}
-	Test_time_decisions_month_add = {
-		complete_effect = {
-			add_to_variable = { global.Time_months = 1 }
-		}
-	}
-	Test_time_decisions_day_add = {
-		complete_effect = {
-			add_to_variable = { global.Time_days = 1 }
-		}
-	}
-	Test_time_decisions_hour_add = {
-		complete_effect = {
-			add_to_variable = { global.Time_hours = 1 }
-		}
-	}
-	Test_time_decisions_minute_add = {
-		complete_effect = {
-			add_to_variable = { global.Time_minutes = 2 }
-		}
-	}
-	Test_time_decisions_year_subtract = {
-		complete_effect = {
-			subtract_from_variable = { global.Time_years = 1 }
-		}
-	}
-	Test_time_decisions_month_subtract = {
-		complete_effect = {
-			subtract_from_variable = { global.Time_months = 1 }
-		}
-	}
-	Test_time_decisions_day_subtract = {
-		complete_effect = {
-			subtract_from_variable = { global.Time_days = 1 }
-		}
-	}
-	Test_time_decisions_hour_subtract = {
-		complete_effect = {
-			subtract_from_variable = { global.Time_hours = 1 }
-		}
-	}
-	Test_time_decisions_minute_subtract = {
-		complete_effect = {
-			subtract_from_variable = { global.Time_minutes = 2 }
-		}
-	}
-	Test_time_decisions_start = {
-		complete_effect = {
-			country_event = TimeTest.1
-		}
-	}
+	# Test_time_decisions_year_add = {
+	# 	complete_effect = {
+	# 		add_to_variable = { global.Time_years = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_month_add = {
+	# 	complete_effect = {
+	# 		add_to_variable = { global.Time_months = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_day_add = {
+	# 	complete_effect = {
+	# 		add_to_variable = { global.Time_days = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_hour_add = {
+	# 	complete_effect = {
+	# 		add_to_variable = { global.Time_hours = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_minute_add = {
+	# 	complete_effect = {
+	# 		add_to_variable = { global.Time_minutes = 2 }
+	# 	}
+	# }
+	# Test_time_decisions_year_subtract = {
+	# 	complete_effect = {
+	# 		subtract_from_variable = { global.Time_years = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_month_subtract = {
+	# 	complete_effect = {
+	# 		subtract_from_variable = { global.Time_months = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_day_subtract = {
+	# 	complete_effect = {
+	# 		subtract_from_variable = { global.Time_days = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_hour_subtract = {
+	# 	complete_effect = {
+	# 		subtract_from_variable = { global.Time_hours = 1 }
+	# 	}
+	# }
+	# Test_time_decisions_minute_subtract = {
+	# 	complete_effect = {
+	# 		subtract_from_variable = { global.Time_minutes = 2 }
+	# 	}
+	# }
+	# Test_time_decisions_start = {
+	# 	complete_effect = {
+	# 		country_event = TimeTest.1
+	# 	}
+	# }
 
 	Test_unit_tech_decision = {
 		complete_effect = {
@@ -110,6 +110,27 @@ Test_time_decisions_categories = {
 			set_country_flag = BA_show_welcome_splash
 		}
 	}
+
+	Test_long_text_gui = {
+		complete_effect = {
+			country_event = bare_long_text_hidden_event.1
+		}
+	}
+
+	Test_long_text_gui_off = {
+		complete_effect = {
+			clr_country_flag = BARE_long_event_show
+		}
+	}
+
+	
+	Test_sudden_deat_gui_on = {
+		complete_effect = {
+			set_global_flag = BARE_sudden_death_end_flag
+		}
+	}
+	
+
 	Test_log = {
 		complete_effect = {
 

@@ -80,4 +80,10 @@ spriteTypes = {
 		name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_STRIKE"
 		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_strike.dds"
 	}
+
+	#突然死亡结局
+	spriteType = {
+		name = "GFX_BARE_sudden_death_event_1"
+		textureFile = "gfx/interface/SuperEvent/sudden_death_event/sudden_death_event_1.dds"
+	}
 }

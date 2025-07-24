@@ -50,4 +50,17 @@ scripted_gui = {
 		}
 
 	}
+
+	BARE_sudden_death_end_SG = {
+		context_type = player_context
+		window_name = "BARE_sudden_death_end_container"
+
+		visible = {
+			has_global_flag = BARE_sudden_death_end_flag
+		}
+
+		effects = {
+			
+		}
+	}
 }	
