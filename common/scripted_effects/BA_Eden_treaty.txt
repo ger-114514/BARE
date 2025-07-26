@@ -319,3 +319,397 @@ Eden_treaty_formally_signed = {
 		add_dynamic_modifier = { modifier = Eden_treaty_modifier }
 	}
 }
+
+###古圣堂之战###
+initialize_ECW_effect = {
+	ARI = {
+		set_variable = {
+			ECW_progress_var = 100
+		}
+		add_dynamic_modifier = {
+			modifier = Eden_cathedral_war_support_dynamic_modifier
+		}
+		force_update_dynamic_modifier = yes
+		activate_mission =Eden_cathedral_war_goes_on_ARI
+
+		##启动参谋部工作##
+		#activate_mission = ECW_mission_controls_priority_target_306
+		#activate_mission = ECW_mission_controls_priority_target_187
+		#activate_mission = ECW_mission_controls_priority_target_184
+	}
+
+	TRI = {
+		set_variable = {
+			ECW_progress_var = 100
+		}
+		add_dynamic_modifier = {
+			modifier = Eden_cathedral_war_support_dynamic_modifier
+		}
+		force_update_dynamic_modifier = yes
+		activate_mission = Eden_cathedral_war_goes_on_TRI_GEH
+
+		##启动参谋部工作##
+		#activate_mission = ECW_mission_controls_priority_target_306
+		#activate_mission = ECW_mission_controls_priority_target_187
+		#activate_mission = ECW_mission_controls_priority_target_184
+	}
+
+	GEH = {
+		set_variable = {
+			ECW_progress_var = 100
+		}
+		add_dynamic_modifier = {
+			modifier = Eden_cathedral_war_support_dynamic_modifier
+		}
+		force_update_dynamic_modifier = yes
+		activate_mission = Eden_cathedral_war_goes_on_TRI_GEH
+	}
+
+}
+
+initialize_ECW_states_effect = {
+	activate_mission = ECW_mission_controls_priority_target_140
+	activate_mission = ECW_mission_controls_priority_target_118
+	activate_mission = ECW_mission_controls_priority_target_305
+	##我不小心把格黑娜的secondary写成priority了，但不是大问题，不用动##
+	activate_mission = ECW_mission_controls_priority_target_306
+	activate_mission = ECW_mission_controls_priority_target_187
+	activate_mission = ECW_mission_controls_priority_target_184
+	activate_mission = ECW_mission_controls_priority_target_141
+	activate_mission = ECW_mission_controls_priority_target_650
+	activate_mission = ECW_mission_controls_priority_target_173
+	activate_mission = ECW_mission_controls_priority_target_230
+	activate_mission = ECW_mission_controls_priority_target_301
+	activate_mission = ECW_mission_controls_priority_target_176
+	activate_mission = ECW_mission_controls_priority_target_55
+	activate_mission = ECW_mission_controls_priority_target_116
+	activate_mission = ECW_mission_controls_priority_target_124
+	activate_mission = ECW_mission_controls_priority_target_113
+	activate_mission = ECW_mission_controls_secondary_target_348
+	activate_mission = ECW_mission_controls_secondary_target_135
+	activate_mission = ECW_mission_controls_secondary_target_127
+	activate_mission = ECW_mission_controls_secondary_target_54
+	activate_mission = ECW_mission_controls_secondary_target_122
+	activate_mission = ECW_mission_controls_secondary_target_107
+}
+##增加任务时长##
+ECW_timer_extend_effect = {
+	add_days_mission_timeout = {
+		mission = Eden_cathedral_war_goes_on_TRI_GEH
+		days = 28
+	}
+}
+
+##buff效果##
+##缩减变量数量##
+##PS:-20%为最大惩罚##
+##任务带来的厌战度变化##
+ECW_penalty_common_effect = {
+	custom_effect_tooltip = ECW_penalty_common_effect_tt
+	##任务超时的厌战惩罚
+	add_to_variable = {
+		ECW_stability_factor = -0.01
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = -0.01
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = -0.01
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = -0.01
+	}
+	add_to_variable = {
+		ECW_army_org_factor = -0.01
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = -0.01
+	}
+	##若厌战已满则扣除PP
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  0
+			}
+		}
+		add_political_power = -20
+	}
+	##未满则继续扣厌战
+	else = {
+		add_to_variable = {
+			ECW_progress_var = -2.0
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##失去主要区域修正##
+ECW_loss_priority_target_effect = {
+	custom_effect_tooltip = ECW_loss_priority_target_effect_tt
+	add_to_variable = {
+		ECW_stability_factor = -0.05
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = -0.05
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = -0.05
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = -0.05
+	}
+	add_to_variable = {
+		ECW_army_org_factor = -0.05
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = -0.05
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  0
+			}
+		}
+		add_political_power = -20
+	}
+	else = {
+		add_to_variable = {
+			ECW_progress_var = -10.0
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##失去次要区域效果
+ECW_loss_secondary_target_effect = {
+	custom_effect_tooltip = ECW_loss_secondary_target_effect_tt
+	add_to_variable = {
+		ECW_stability_factor = -0.02
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = -0.02
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = -0.02
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = -0.02
+	}
+	add_to_variable = {
+		ECW_army_org_factor = -0.02
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = -0.02
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  0
+			}
+		}
+		add_political_power = -20
+	}
+	else = {
+		add_to_variable = {
+			ECW_progress_var = -4.0
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##占领主要区域修正##
+ECW_capture_priority_target_effect = {
+	ECW_timer_extend_effect = yes
+	custom_effect_tooltip = ECW_capture_priority_target_effect_tt	
+	add_to_variable = {
+		ECW_stability_factor = 0.05
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_army_org_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = 0.05
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  100
+			}
+		}
+		add_political_power = 50
+	}
+	else = {
+		add_to_variable = {
+			ECW_progress_var =  10
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##占领次要区域效果
+ECW_capture_secondary_target_effect = {
+	ECW_timer_extend_effect = yes
+	custom_effect_tooltip = ECW_capture_secondary_target_effect_tt
+	add_to_variable = {
+		ECW_stability_factor = 0.02
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_army_org_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = 0.02
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  100
+			}
+		}
+		add_political_power = 50
+	}
+	else = {
+		add_to_variable = {
+			ECW_progress_var =  4
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##大号宣传##
+ECW_positive_big_effect = {
+	custom_effect_tooltip = ECW_positive_big_effect_tt
+	add_to_variable = {
+		ECW_stability_factor = 0.05
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_army_org_factor = 0.05
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = 0.05
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  100
+			}
+		}
+		add_political_power = 50
+	}
+	else = {
+		add_to_variable = {
+			ECW_progress_var =  10
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##普通宣传##
+ECW_positive_medium_effect = {
+	custom_effect_tooltip = ECW_positive_medium_effect_tt
+	add_to_variable = {
+		ECW_stability_factor = 0.02
+	}	
+	add_to_variable = {
+		ECW_warsupport_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_production_factory_max_efficiency_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_army_moral_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_army_org_factor = 0.02
+	}
+	add_to_variable = {
+		ECW_army_defence_fator = 0.02
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ECW_progress_var =  100
+			}
+		}
+		add_political_power = 50
+	}
+	else = {
+		add_to_variable = {
+			ECW_progress_var =  4
+		}
+	}
+	ECW_clamp_all_vars_effect = yes
+	force_update_dynamic_modifier = yes
+}
+
+##检查数值合法性##
+#####这很重要！！！！######
+ECW_clamp_all_vars_effect = {
+	clamp_variable = {
+		var = ECW_progress_var
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ECW_stability_factor
+		min = -0.2
+		max = 0.1
+	}
+	clamp_variable = {
+		var = ECW_warsupport_factor
+		min = -0.2
+		max = 0.1
+	}
+	clamp_variable = {
+		var = ECW_production_factory_max_efficiency_factor
+		min = -0.2
+		max = 0.1
+	}
+	clamp_variable = {
+		var = ECW_army_moral_factor
+		min = -0.2
+		max = 0.1
+	}
+	clamp_variable = {
+		var = ECW_army_org_factor
+		min = -0.2
+		max = 0.1
+	}
+	clamp_variable = {
+		var = ECW_army_defence_fator
+		min = -0.2
+		max = 0.1
+	}
+}

@@ -1,0 +1,12 @@
+##古圣堂之战Trigger##
+ECW_progress_var_is_low = {
+	check_variable = {
+		ECW_progress_var < 80
+	}
+}
+
+ECW_progress_var_is_very_low = {
+	check_variable = {
+		ECW_progress_var < 50
+	}
+}

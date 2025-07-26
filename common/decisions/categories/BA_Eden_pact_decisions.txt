@@ -35,9 +35,36 @@ Eden_cathedral_war = {
 		}
 	}
 	visible = {
-		has_war = yes
+		OR = {
+			has_war = yes
+			is_debug = yes
+		}
+		
 		#has_global_flag = WOR_ancient_cathedral_has_been_attacked
 	}
 	visible_when_empty = yes
+	scripted_gui = Eden_cathedral_war_decision_ui_progressbar_sg
+	
 	priority = 9999
+}
+
+Eden_cathedral_war_progress_collector = {
+	allowed = {
+		OR = {
+			original_tag = GEH
+			original_tag = TRI
+			original_tag = ARI
+		}
+	}
+	visible = {
+		OR = {
+			has_war = yes
+			is_debug = yes
+		}
+		
+		#has_global_flag = WOR_ancient_cathedral_has_been_attacked
+	}
+	visible_when_empty = yes
+	
+	priority = 9000
 }

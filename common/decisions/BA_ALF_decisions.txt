@@ -1,0 +1,27 @@
+ALF_military_reform_decision_category = {
+    ALF_military_reform_decision_test_add_progress = {
+        visible = {
+            is_debug = yes
+        }		
+        cost = 0
+        #days_remove = 
+        complete_effect = {
+            set_variable = {
+                ALF_mrd_progressbar_var = 10
+            }
+        }
+    }
+
+    ALF_military_reform_decision_test_add_progress_90 = {
+        visible = {
+            is_debug = yes
+        }		
+        cost = 0
+        #days_remove = 
+        complete_effect = {
+            add_to_variable = {
+                ALF_mrd_progressbar_var = 90
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+scripted_gui = {
+	ALF_military_reform_decision_ui_progressbar_sg = {
+		context_type = decision_category
+		window_name = "ALF_military_reform_decision_ui_progressbar"
+
+		properties = {
+			progressbar = {
+				frame = ALF_mrd_progressbar_var
+			}
+		}
+	}
+}

@@ -155,3 +155,331 @@ defined_text = {
 		localization_key = Cathedral_war_state_status_control_by_others
 	}
 }
+
+####
+defined_text = {
+	name = ECW_State_mission_sl
+	text = {
+		trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRI
+					}
+				}
+				THIS = {
+					owner = {
+						NOT = {
+							tag = TRI
+						}
+						NOT = {
+							is_subject_of = TRI
+						}
+					}
+				}
+			}
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					ROOT = {
+						tag = GEH
+					}
+				}
+				THIS = {
+					owner = {
+						NOT = {
+							tag = GEH
+						}
+						NOT = {
+							is_subject_of = GEH
+						}
+					}
+				}
+			}
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					ROOT = {
+						tag = ARI
+					}
+				}
+				THIS = {
+					THIS = {
+						owner = {
+							NOT = {
+								tag = ARI
+							}
+							NOT = {
+								is_subject_of = ARI
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = ECW_State_mission_sl_enemystate
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRI
+					}
+				}
+				THIS = {
+					owner = {
+						OR = {
+							tag = TRI
+							is_subject_of = TRI
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = GEH
+					}
+				}
+				THIS = {
+					owner = {
+						OR = {
+							tag = GEH
+							is_subject_of = GEH
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = ARI
+					}
+				}
+				THIS = {
+					owner = {
+						OR = {
+							tag = ARI
+							is_subject_of = ARI
+						}
+					}
+				}
+			}
+		}
+		localization_key = ECW_State_mission_sl_ourstate
+	}
+	text = {
+	    localization_key = ECW_State_mission_sl_default
+	}
+}
+
+defined_text = {
+	name = ECW_State_mission_secondary_sl
+	text = {
+		trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRI
+					}
+				}
+				THIS = {
+					owner = {
+						NOT = {
+							tag = TRI
+						}
+						NOT = {
+							is_subject_of = TRI
+						}
+					}
+				}
+			}
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					ROOT = {
+						tag = GEH
+					}
+				}
+				THIS = {
+					owner = {
+						NOT = {
+							tag = GEH
+						}
+						NOT = {
+							is_subject_of = GEH
+						}
+					}
+				}
+			}
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					ROOT = {
+						tag = ARI
+					}
+				}
+				THIS = {
+					THIS = {
+						owner = {
+							NOT = {
+								tag = ARI
+							}
+							NOT = {
+								is_subject_of = ARI
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = ECW_State_mission_secondary_sl_enemystate
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRI
+					}
+				}
+				THIS = {
+					owner = {
+						OR = {
+							tag = TRI
+							is_subject_of = TRI
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = GEH
+					}
+				}
+				THIS = {
+					owner = {
+						OR = {
+							tag = GEH
+							is_subject_of = GEH
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = ARI
+					}
+				}
+				THIS = {
+					owner = {
+						OR = {
+							tag = ARI
+							is_subject_of = ARI
+						}
+					}
+				}
+			}
+		}
+		localization_key = ECW_State_mission_secondary_sl_ourstate
+	}
+	text = {
+	    localization_key = ECW_State_mission_secondary_sl_default
+	}
+}
+
+defined_text = {
+	name = ECW_State_mission_key_sl
+	text = {
+		trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRI
+					}
+				}
+				THIS = {
+					OR = {
+						state = 140
+						state = 305
+					}
+				}
+			}
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					ROOT = {
+						tag = GEH
+					}
+				}
+				THIS = {
+					OR = {
+						state = 140
+						state = 118
+					}
+				}
+			}
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					ROOT = {
+						tag = ARI
+					}
+				}
+				THIS = {
+					OR = {
+						state = 118
+						state = 305
+					}
+				}
+			}
+		}
+		localization_key = ECW_State_mission_key_sl_enemystate
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRI
+					}
+				}
+				THIS = {
+					state = 118
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = GEH
+					}
+				}
+				THIS = {
+					state = 305
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = ARI
+					}
+				}
+				THIS = {
+					THIS = {
+						state = 140
+					}
+				}
+			}
+		}
+		localization_key = ECW_State_mission_key_sl_ourstate
+	}
+	text = {
+	    localization_key = ECW_State_mission_key_sl_default
+	}
+}

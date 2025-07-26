@@ -76,4 +76,113 @@ guiTypes = {
 		}
 
 	}
+
+	###古圣堂之战的决议UI####
+	containerWindowType = {
+		name = "Eden_cathedral_war_decision_ui_progressbar"
+		position = { x = 0  y = 0 }
+		size = {
+			width = 100%
+			height = 580
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_title"
+			position = {x = 30 y = 20}
+			font = "hoi_24header"
+			text = "ECW_decision_ui_progressbar_title"
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_title_desc"
+			position = {x = 30 y = 50}
+			font = "hoi_16mbs"
+			text = "ECW_decision_ui_progressbar_title_desc"
+			maxWidth  = 400
+			maxHeight = 60
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_ARI_title"
+			position = {x = 30 y = 190}
+			font = "hoi_16mbs"
+			text = "ECW_progressbar_ARI_title"
+		}
+
+		iconType = {
+			name = "ECW_progressbar_ARI"
+			spriteType = "GFX_bare_blue_progressbar_399" 
+			position = { x = 30 y = 210}
+			pdx_tooltip = "ECW_progressbar_tt"
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_ARI_value"
+			position = {x = 210 y = 215}
+			font = "hoi_24header"
+			text = "[?ARI.ECW_progress_var]%"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_TRI_title"
+			position = {x = 30 y = 250}
+			font = "hoi_16mbs"
+			text = "ECW_progressbar_TRI_title"
+		}
+
+		iconType = {
+			name = "ECW_progressbar_TRI"
+			spriteType = "GFX_bare_blue_progressbar_399" 
+			position = { x = 30 y = 270}
+			pdx_tooltip = "ECW_progressbar_tt"
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_TRI_value"
+			position = {x = 210 y = 276}
+			font = "hoi_24header"
+			text = "[?TRI.ECW_progress_var]%"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_GEH_title"
+			position = {x = 30 y = 310}
+			font = "hoi_16mbs"
+			text = "ECW_progressbar_GEH_title"
+		}
+
+		iconType = {
+			name = "ECW_progressbar_GEH"
+			spriteType = "GFX_bare_blue_progressbar_399" 
+			position = { x = 30 y = 330}
+			pdx_tooltip = "ECW_progressbar_tt"
+		}
+
+		instantTextBoxType = {
+			name = "ECW_progressbar_GEH_value"
+			position = {x = 210 y = 336}
+			font = "hoi_24header"
+			text = "[?GEH.ECW_progress_var]%"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="Eden_cathedral_war_decision_picture"
+			spriteType = "GFX_Eden_cathedral_war_decision_picture"
+			position = { x = 30 y = 390 }
+			pdx_tooltip = "Eden_cathedral_war_decision_picture_tt"
+		}
+
+		instantTextBoxType = {
+			name = "ECW_cathedral_war_decision_picture_remark"
+			position = { x = 43 y = 527 }
+			font = "hoi_20bs"
+			text = "ECW_picture_Remark"
+			maxWidth  = 400
+			maxHeight = 60
+			alwaystransparent = yes
+		}
+	}
 }

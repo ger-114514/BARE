@@ -1,0 +1,34 @@
+guiTypes = {
+
+	##阿里乌斯军改进度条##
+	containerWindowType = {
+		name = "ALF_military_reform_decision_ui_progressbar"
+		position = { x = 0  y = 0 }
+		size = {
+			width = 100%
+			height = 120
+		}
+
+		instantTextBoxType = {
+			name = "progressbar_title"
+			position = {x = 30 y = 20}
+			font = "hoi_24header"
+			text = "ALF_mrd_title"
+		}
+
+		iconType = {
+			name = "progressbar"
+			spriteType = "GFX_bare_red_progressbar_399" 
+			position = { x = 50 y = 55}
+			pdx_tooltip = "ALF_mrd_progress_tt"
+		}
+
+		instantTextBoxType = {
+			name = "progressbar_value"
+			position = {x = 230 y = 60}
+			font = "hoi_24header"
+			text = "[?ALF_mrd_progressbar_var]%"
+			alwaystransparent = yes
+		}
+	}
+}
