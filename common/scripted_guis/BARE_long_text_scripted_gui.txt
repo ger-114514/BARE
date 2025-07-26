@@ -1,0 +1,37 @@
+scripted_gui = {
+	BARE_long_event_SG = {
+		context_type = player_context
+		window_name = "BARE_long_event_container"
+
+
+		visible = {
+			has_country_flag = BARE_long_event_show
+		}
+
+		effects = {
+			BARE_long_event_select_bg_button_click = {
+				clr_country_flag = BARE_long_event_show
+				meta_effect = {
+					v = "[?v]"
+					BARE_long_event_id = "[?BARE_long_event_id]"
+					text = {
+						BARE_Long_event_effect_[BARE_long_event_id]_[v] = yes
+					}
+				}
+
+			}
+		}
+
+		triggers = {
+			
+		}
+		dynamic_lists = {
+			BARE_long_event_select_List = {
+				array = BARE_long_event_select_array
+				value = v
+				entry_container = BARE_long_event_select_container
+			}
+		}
+		# BARE_long_event_select_container
+	}
+}

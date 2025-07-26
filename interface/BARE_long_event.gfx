@@ -1,0 +1,20 @@
+spritetypes = {
+	spriteType = {
+		name = "GFX_BARE_long_event_main_bg"
+		texturefile = "gfx/interface/long_event/BARE_long_event_main_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_BARE_long_event_main_clip"
+		texturefile = "gfx/interface/long_event/BARE_long_event_main_clip.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BARE_long_event_select_bg"
+		texturefile = "gfx/interface/long_event/BARE_long_event_select_bg.dds"
+	}
+	#事件图片
+	spriteType = {
+		name = "GFX_BARE_long_event_photo_normal"
+		texturefile = "gfx/interface/long_event/photo/BARE_long_event_photo_normal.dds"
+	}
+}

@@ -15,6 +15,12 @@ l_simp_chinese:
  GEH_bp_someways_chaos: "脱缰之马"
  GEH_bp_completely_chaos: "无序与混乱的深渊"
 
+ GEH_bp_goodevents_3: "每月中概率发生坏事。"
+ GEH_bp_goodevents_2: "每月较低概率发生坏事。"
+ GEH_bp_goodevents_1: "每月低概率发生坏事。"
+
+ GEH_bp_goodevents_2: "每月较低概率发生好事。"
+ GEH_bp_goodevents_1: "每月低概率发生好事。"
  GEH_bop_open_communication: "开启对话"
  #GEH_bop_open_communication_desc: ""
  GEH_bop_use_money_for_investment: "挪用经费用于投资"
@@ -43,8 +49,9 @@ l_simp_chinese:
  GEH_control_the_transport: "交通管制"
  GEH_forecing_mobilization: "强行征召"
  GEH_no_step_back: "死战不退"
- GEH_save_our_vip_students: "营救领导层"
- GEH_3_times_get_back_characters: "§Y在连续执行三次本决议后，我们将能够救出我们的领导层§!"
+ GEH_save_our_vip_students: "营救滞留的学生"
+GEH_3_times_get_back_characters: "该决议最多执行3次。"
+#  GEH_3_times_get_back_characters: "§Y在连续执行三次本决议后，我们将能够救出我们的领导层§!"
  GEH_reorganization_our_troop: "重新集结军队"
  GEH_reorganization_our_attack: "重新组织进攻"
 

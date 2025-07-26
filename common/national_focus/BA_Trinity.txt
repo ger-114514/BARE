@@ -2621,13 +2621,14 @@ focus_tree = {
 				set_variable = { TRI_political_focus_duration = 0 }
 			}
 			completion_reward = {
+				army_experience = 25
 				custom_effect_tooltip = TRI_reorgnize_teaparty_mob_tt
 				add_to_variable = { TRI_trinity_military_land_doctrine_cost_factor = -0.25 }
 				add_to_variable = { TRI_trinity_military_training_time_factor = 0.25 }
 				add_to_variable = { TRI_trinity_military_army_org_factor = 0.05 }
-				#圣三一下议会所有社团支持度-2%
-				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
-				set_temp_variable = { loyalty_change = -0.02 }
+				#圣三一上议会所有社团支持度-6%
+				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				set_temp_variable = { loyalty_change = -0.06 }
 				TRI_parliament_loyalty_change_parliament = yes
 			}			
 		}
@@ -2683,7 +2684,6 @@ focus_tree = {
 					cost_reduction = 0.25
 					category = land_doctrine
 				}
-				add_stability = -0.05
 				set_country_flag = TRI_cooperation_with_justice_club
 				#启用军事顾问：剑先鹤城
 				custom_effect_tooltip = {
@@ -2691,14 +2691,34 @@ focus_tree = {
 					CHAR = TRI_tsurugi_name
 					JOB = army_chief
 				}
+				add_stability = -0.05
 				custom_effect_tooltip = TRI_cooperation_with_justice_club_tt
 				add_to_variable = { TRI_trinity_military_army_infantry_attack_factor = 0.1 }
 				add_to_variable = { TRI_trinity_military_training_time_factor = -0.15 }
 				add_to_variable = { TRI_trinity_military_army_org_regain = -0.05 }
 
+				#圣三一上议会所有社团支持度-10%
 				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
 				set_temp_variable = { loyalty_change = -0.1 }
 				TRI_parliament_loyalty_change_parliament = yes
+
+				set_temp_variable = { association = token:TRI_parliament_association_3 }
+				set_temp_variable = { influence_change = 5 }
+				set_temp_variable = { region = token:TRI_center_campus_region }
+				TRI_change_region_association_influence = yes
+				set_temp_variable = { region = token:TRI_northern_campus_region }
+				TRI_change_region_association_influence = yes
+				set_temp_variable = { region = token:TRI_eastern_campus_region }
+				TRI_change_region_association_influence = yes
+				set_temp_variable = { region = token:TRI_southern_campus_region }
+				TRI_change_region_association_influence = yes
+
+				set_temp_variable = { loyalty_change = 0.05 }
+				TRI_parliament_loyalty_change = yes
+				
+				set_temp_variable = { association = token:TRI_parliament_association_0 }
+				set_temp_variable = { radicalism_change = 0.03 }
+				TRI_parliament_radicalism_change = yes
 			}			
 		}
 		focus = { #维持茶话会主导权
@@ -2731,7 +2751,7 @@ focus_tree = {
 				add_to_variable = { TRI_trinity_military_army_org_regain = -0.05 }
 				add_to_variable = { TRI_trinity_military_combat_readiness_recovery_percentage = 0.1 }
 				set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
-				set_temp_variable = { loyalty_change = 0.15 }
+				set_temp_variable = { loyalty_change = 0.03 }
 				TRI_parliament_loyalty_change_parliament = yes
 			}		
 		}
@@ -2754,6 +2774,9 @@ focus_tree = {
 			completion_reward = {
 				set_country_flag = TRI_standing_guard
 				add_to_variable = { TRI_tea_party_artillery_recruiting_use = 7 }
+				custom_effect_tooltip = TRI_standing_guard_tt_2
+				add_to_variable = { TRI_trinity_military_free_cost_combat_readiness_percentage = 0.05 }
+				add_to_variable = { TRI_trinity_military_training_time_factor = -0.05 }
 				custom_effect_tooltip = TRI_standing_guard_tt
 				show_ideas_tooltip = TRI_tea_party_artillery_5
 				hidden_effect = {
@@ -2836,8 +2859,11 @@ focus_tree = {
 				add_tech_bonus = {
 					category = fire_support
 					bonus = 1
-					ahead_reduction = 1
 					uses = 2
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.75
+					category = land_doctrine
 				}
 				random_owned_controlled_state = {
 					limit = {
@@ -2894,6 +2920,7 @@ focus_tree = {
 				every_unit_leader = {
 					add_attack = 1
 				}
+				#TODO:火炮相关学说的花费－10％
 				custom_effect_tooltip = TRI_expand_training_area_tt
 				add_to_variable = { TRI_trinity_military_consumer_goods_factor = 0.025 }
 				add_to_variable = { TRI_trinity_military_training_time_factor = -0.1 }
@@ -2984,11 +3011,14 @@ focus_tree = {
 				set_variable = { TRI_political_focus_duration = 0 }
 			}
 			completion_reward = {
+				add_breakthrough_points = {
+					specialization = specialization_land
+					value = 1
+				}
 				#减少1级火炮科技的超前研究惩罚并获得50%的研究加成，对下一次研究火炮支援连科技时有效。
 				add_tech_bonus = {
 					category = fire_support
 					bonus = 0.5
-					ahead_reduction = 1
 					uses = 1
 				}
 				add_ideas = TRI_trinity_artillery
@@ -3039,6 +3069,7 @@ focus_tree = {
 			x = 0
 			y = 1
 			search_filters = { FOCUS_FILTER_ARMY }
+			search_filters = { FOCUS_FILTER_RESEARCH }
 			select_effect = {
 				set_variable = { TRI_political_focus_duration = 0 }
 			}
@@ -3064,11 +3095,14 @@ focus_tree = {
 			}
 			completion_reward = {
 				army_experience = 20
+				add_breakthrough_points = {
+					specialization = specialization_land
+					value = 1
+				}
 				#减少1级主战坦克科技的超前研究惩罚并获得100%的研究加成，对下一次研究主战坦克科技时有效。
 				add_tech_bonus = {
 					category = tank
 					bonus = 0.5
-					ahead_reduction = 1
 					uses = 1
 				}
 				add_ideas = TRI_advanced_armour_idea
@@ -3106,7 +3140,21 @@ focus_tree = {
 					set_variable = { TRI_political_focus_duration = 0 }
 				}
 				completion_reward = {
-					add_ideas = TRI_integrated_air_ground_system
+					if = {
+						limit = {
+							has_idea = TRI_aeronautics_training
+						}
+						swap_ideas = {
+							remove_idea = TRI_aeronautics_training
+							add_idea = TRI_aeronautics_training_1_1
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = TRI_aeronautics_training_1_2
+							add_idea = TRI_aeronautics_training_2
+						}
+					}
 					add_advisor_role = {
 						character = TRI_commission_of_air_ground
 						activate = no
@@ -3220,7 +3268,21 @@ focus_tree = {
 					set_variable = { TRI_political_focus_duration = 0 }
 				}
 				completion_reward = {
-					add_ideas = TRI_professional_UAV_production
+					if = {
+						limit = {
+							has_idea = TRI_aeronautics_training
+						}
+						swap_ideas = {
+							remove_idea = TRI_aeronautics_training
+							add_idea = TRI_aeronautics_training_1_2
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = TRI_aeronautics_training_1_1
+							add_idea = TRI_aeronautics_training_2
+						}
+					}
 				}			
 			}
 		focus = { #参谋长委员会
@@ -3312,9 +3374,11 @@ focus_tree = {
 
 				add_dynamic_modifier = { modifier = material_allocation_modifier }
 				
-				#圣三一下议会所有社团支持度-2%
+				#圣三一下议会所有社团支持度-3%
 				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
-				set_temp_variable = { loyalty_change = -0.02 }
+				set_temp_variable = { loyalty_change = -0.03 }
+				TRI_parliament_loyalty_change_parliament = yes
+				set_temp_variable = { association = token:TRI_parliament_association_0 }
 				TRI_parliament_loyalty_change_parliament = yes
 			}		
 		}
@@ -3438,6 +3502,7 @@ focus_tree = {
 					add_to_variable = { ma_goods_factor = 0.05 }
 					add_to_variable = { ma_daily_power_gain = 0.25 }
 					add_to_variable = { ma_economy_cost = -0.2 }
+					add_to_variable = { ma_TRI_unity_weekly_modifier = 0.5 }
 				}
 				
 				custom_effect_tooltip = TRI_sufficient_sweets_supply_ns_tt
@@ -3582,6 +3647,13 @@ focus_tree = {
 				set_variable = { TRI_political_focus_duration = 0 }
 			}
 			completion_reward = {
+				generate_scientist_character = {
+					portrait_tag_override = TRI
+					gender = female
+					skills = {
+						specialization_ba_tech = 3
+					}
+				}
 				add_to_variable = { tim_industrial_building_speed = -0.05 }
 				add_to_variable = { tim_arms_factory_building_speed = 0.1 }
 				add_to_variable = { tim_production_efficiency_cap = 0.15 }
@@ -3615,17 +3687,15 @@ focus_tree = {
 				set_variable = { TRI_political_focus_duration = 0 }
 			}
 			completion_reward = {
+				add_breakthrough_points = {
+					specialization = specialization_ba_tech
+					value = 1
+				}
+				custom_effect_tooltip = TRI_amazing_ns_tt_alt
 				add_to_variable = { tim_building_speed = 0.05 }
 				#add_to_variable = {所有产品生产花费-5.0%}我亏你想得出来
 				add_to_variable = { tim_production_efficiency_gain = 0.10 }
 				add_to_variable = { tim_line_change_efficiency = 0.3 }
-				add_tech_bonus = {
-					name = TRI_gorgeous
-					category = industry
-					ahead_reduction = 1
-					uses = 1
-				}
-				custom_effect_tooltip = TRI_amazing_ns_tt_alt
 			}		
 		}
 	

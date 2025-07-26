@@ -1,0 +1,99 @@
+guitypes = {
+	containerWindowType = {
+		name = "BARE_long_event_container"
+		position = { x = 0 y = 0 }
+		size = { width = 707 height = 909 }
+		moveable = yes
+		orientation = CENTER
+		origo = center
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_BARE_long_event_main_bg"
+		}
+
+		iconType = {
+			name = "BARE_long_event_photo"
+			position = { x = 0 y = 661 }
+			quadTextureSprite = "GFX_null_button"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "BARE_long_event_main_clip_icon"
+			position = { x = 15 y = 684 }
+			quadTextureSprite = "GFX_BARE_long_event_main_clip"
+			alwaysTransparent = yes
+		}
+
+		
+
+		instantTextboxType = {
+            name = "BARE_long_event_title"
+            position = { x = 40 y = 50 }
+            orientation = UPPER_LEFT
+            font = "FZLanTYJW_B_36"
+            borderSize = {x = 0 y = 0}
+            text = "BARE_long_event_title"
+            format = center
+            scrollbarType = "BA_welcome_ipad_scroll"
+            maxWidth = 606
+            maxHeight = 500
+        }
+
+
+		instantTextboxType = {
+            name = "BARE_long_event_text"
+            position = { x = 46 y = 110 }
+            orientation = UPPER_LEFT
+            font = "FZLanTYJW_16"
+            borderSize = {x = 0 y = 0}
+            text = "BARE_long_event_text"
+            format = left
+            scrollbarType = "BA_welcome_ipad_scroll"
+            maxWidth = 606
+            maxHeight = 550
+        }
+
+
+		gridboxtype = { ##动态列表用的元素 剧情小分类的
+			name = "BARE_long_event_select_List"
+			position = { x = 334 y = 661 }
+			size = { width = 275 height = 208 }
+			slotsize = { width = 275 height = 104 }
+			max_slots = { x = 1 y = 2 }
+			add_horizontal = no
+		}
+	}
+
+	containerWindowType = {
+		name = "BARE_long_event_select_container"
+		position = { x = 0 y = 0 }
+		size = { width = 275 height = 104 }
+
+
+
+
+
+		buttonType = {
+			name = "BARE_long_event_select_bg_button"
+			position = { x = 67 y = 1 }
+			quadTextureSprite = "GFX_BARE_long_event_select_bg"
+			clicksound = click_checkbox
+		}
+
+
+		instantTextboxType = {
+            name = "BARE_long_event_select_text"
+            position = { x = 0 y = 52 }
+            orientation = UPPER_LEFT
+            font = "FZLanTYJW_16"
+            borderSize = {x = 0 y = 0}
+            text = "BARE_long_event_button_text"
+            format = center
+            maxWidth = 214
+            maxHeight = 80
+        }
+	}	
+
+}

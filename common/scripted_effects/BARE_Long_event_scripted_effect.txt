@@ -1,0 +1,9 @@
+#如果你想给选项加实际效果，在这写
+BARE_Long_event_effect_3_1 = { 
+
+}
+
+
+BARE_Long_event_effect_4_1 = { 
+	set_global_flag = BARE_sudden_death_end_flag
+}

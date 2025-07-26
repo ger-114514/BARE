@@ -1,0 +1,11 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			KRO = {
+				country_event = {
+					id = BARE_World_News.1111
+				}
+			}
+		}
+	}
+}

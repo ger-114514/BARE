@@ -19,8 +19,8 @@ GEH_emergency_time_decision_category = {
 
 	visible = {
 		original_tag = GEH
-		has_completed_focus = GEH_extraordinary_measures
-		NOT = { has_war_with = ARI } #和阿里乌斯处于和平
+		has_completed_focus = GEH_Extraordinary_measures
+		has_war_with = ARI #和阿里乌斯处于和平
 		#和阿里乌斯的战斗结束后消失
 	}
 	priority = 1098
@@ -132,17 +132,32 @@ GEH_dualHeaded = {
 	scripted_gui = BARE_GEH_DualHeaded_SG
 	priority = 114
 }
-
+#社团决议组
 GEH_societies_dec_category = {
 	visible_when_empty = yes
     scripted_gui = GEH_societies_dec_window
-	allowed = {
-		original_tag = GEH
-	}
 	visible = {
-		always = yes
+		original_tag = GEH
+		has_completed_focus = GEH_Dealing_with_chaos
 	}
 	priority = 1100
 }
-
+#便利屋68
+GEH_comb68_societies_dec_category = {
+	visible_when_empty = yes
+	visible = {
+		OR = {
+			tag = A45
+			tag = A46
+			tag = A47
+			tag = A06
+			tag = A25
+			tag = CAB
+			tag = CAH
+			tag = CAP
+			tag = ABY
+		}
+	}
+	priority = 100
+}
 
