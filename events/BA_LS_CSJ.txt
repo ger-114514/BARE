@@ -232,16 +232,9 @@ country_event = { #初次袭击简报
 				}
 			}
 			activate_decision = GST_ARI_defend_cathedral
-			##
-			ARI = {
-				activate_mission = Eden_cathedral_war_goes_on
-			}
-			GEH = {
-				activate_mission = Eden_cathedral_war_goes_on
-			}
-			TRI = {
-				activate_mission = Eden_cathedral_war_goes_on
-			}
+			
+			##启动厌战系统##
+			initialize_ECW_effect = yee
 			
 			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = ARI_time_for_final_action #完成国策 - 行动时刻

@@ -35,14 +35,10 @@ Eden_cathedral_war = {
 		}
 	}
 	visible = {
-		OR = {
-			has_war = yes
-			is_debug = yes
-		}
-		
-		#has_global_flag = WOR_ancient_cathedral_has_been_attacked
+		has_war = yes
+		has_global_flag = ECW_active_global_flag
 	}
-	visible_when_empty = yes
+	#visible_when_empty = yes
 	scripted_gui = Eden_cathedral_war_decision_ui_progressbar_sg
 	
 	priority = 9999
@@ -57,14 +53,10 @@ Eden_cathedral_war_progress_collector = {
 		}
 	}
 	visible = {
-		OR = {
-			has_war = yes
-			is_debug = yes
-		}
-		
-		#has_global_flag = WOR_ancient_cathedral_has_been_attacked
+		has_war = yes
+		has_global_flag = ECW_active_global_flag
 	}
-	visible_when_empty = yes
+	#visible_when_empty = yes
 	
 	priority = 9000
 }

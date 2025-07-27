@@ -1,4 +1,24 @@
 Hipper_test_decisions_categories = {
+	###FIRE ECW WAR###
+	###启动古圣堂之战##
+	Fire_ECW_WAR_HIPPER = {
+		visible = {
+			original_tag = TRI
+		}
+		available = {
+			is_debug = yes
+		}
+		complete_effect = {
+			ARI = {
+				set_variable = { ARI_ZhunBeiDu = 50 }
+				country_event = {
+					id = Eden_pact.200
+				}
+			}
+		}
+	}
+
+	###
 	Change_portrait_for_cool_nagisa = {
 		visible = {
 			original_tag = TRI

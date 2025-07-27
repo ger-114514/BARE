@@ -1785,7 +1785,6 @@ Eden_cathedral_war = {
 		is_good = no
 		days_mission_timeout = 28
 		available = {
-			always = no
 			OR = {
 				NOT = {
 					has_war_with = ARI
@@ -2034,6 +2033,7 @@ Eden_cathedral_war_progress_collector = {
 				limit = {
 					tag = ARI
 				}
+				activate_mission = GST_ZZ_ARI_XCJC_WQSL
 				ECW_loss_priority_target_effect = yes
 			}
 			else_if = {

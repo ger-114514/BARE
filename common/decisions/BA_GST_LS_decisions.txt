@@ -885,35 +885,36 @@ GST_LS_ZZ_category = {
 		}
 	}
 
-	GST_ARI_defend_cathedral = { #古圣堂之战-阿里乌斯_占领古圣堂
-		priority = 1000
-		visible = {
-			always = no
-		}
-		days_remove = -1
-		cancel_trigger = {
-			OR = {
-				NOT = {
-					has_war_with = GEH #不与格黑娜处于战争
-					has_war_with = TRI #不与圣三一处于战争
-				}
-				has_capitulated = yes
-				AND = {
-					NOT = {
-						has_completed_focus = ARI_the_final_step #没有完成 最后一步 国策
-					}
+	##该决议被整合至厌战决议##
+	#GST_ARI_defend_cathedral = { #古圣堂之战-阿里乌斯_占领古圣堂
+		#priority = 1000
+		#visible = {
+			#always = no
+		#}
+		#days_remove = -1
+		#cancel_trigger = {
+			#OR = {
+				#NOT = {
+					#has_war_with = GEH #不与格黑娜处于战争
+					#has_war_with = TRI #不与圣三一处于战争
+				#}
+				#has_capitulated = yes
+				#AND = {
+					#NOT = {
+						#has_completed_focus = ARI_the_final_step #没有完成 最后一步 国策
+					#}
 					#古圣堂(149)和其外围(529)不由阿里乌斯控制
-					NOT = {
-						controls_state = 140
-						controls_state = 529
-					}
-				}
-			}
-		}
-		cancel_effect = {
-			activate_mission = GST_ZZ_ARI_XCJC_WQSL
-		}
-	}
+					#NOT = {
+						#controls_state = 140
+						#controls_state = 529
+					#}
+				#}
+			#}
+		#}
+		#cancel_effect = {
+			#activate_mission = GST_ZZ_ARI_XCJC_WQSL
+		#}
+	#}
 	GST_ZZ_ARI_XCJC_WQSL = { #古圣堂之战-阿里乌斯_失去古圣堂7天任务
 		priority = 1000
 		activation = {
