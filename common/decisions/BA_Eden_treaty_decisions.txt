@@ -1903,34 +1903,6 @@ Eden_cathedral_war = {
 			}
 		}
 	}
-	Eden_cathedral_war_support_dynamic_modifier_test = {
-		priority = 1000
-		available = {
-		}
-		complete_effect = {
-			initialize_ECW_effect = yes
-		}
-	}
-	ECW_clamp_value_test = {
-		priority = 1000
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-			ECW_clamp_all_vars_effect = yes
-			force_update_dynamic_modifier = yes
-		}
-	}
-
-	ECW_initialize_ECW_states_effect_test = {
-		priority = 1000
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-			initialize_ECW_states_effect = yes
-		}
-	}
 }
 
 #####################

@@ -231,7 +231,8 @@ country_event = { #初次袭击简报
 					modifier = TRI_BeiAliWuSiTuXi
 				}
 			}
-			activate_decision = GST_ARI_defend_cathedral
+			##不需要这个了
+			#activate_decision = GST_ARI_defend_cathedral
 			
 			##启动厌战系统##
 			initialize_ECW_effect = yee
