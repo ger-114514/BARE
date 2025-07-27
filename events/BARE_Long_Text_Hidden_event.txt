@@ -181,6 +181,11 @@ country_event = {
 		add_to_array = { #选项号，最多2个
 			BARE_long_event_select_array = 1
 		}
+		#这个就是夫人事件的效果，与框架无关
+		country_event = {
+			id = bare_long_text_hidden_event.6
+			days = 3
+		}
 		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
 		country_event = {
 			id = bare_long_text_hidden_event.114514
@@ -209,7 +214,7 @@ country_event = {
 	immediate = {
 		clr_country_flag = BARE_long_event_show
 		set_variable = {
-			BARE_long_event_id = 5
+			BARE_long_event_id = 6
 		}
 		resize_array = {
 			array = BARE_long_event_select_array
@@ -219,6 +224,12 @@ country_event = {
 			BARE_long_event_select_array = 1
 		}
 		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = ARI_coup.10
+			days = 3
+		}
+
 		country_event = {
 			id = bare_long_text_hidden_event.114514
 			hours = 4
@@ -226,12 +237,382 @@ country_event = {
 
 	}
     option = {
-		name = bare_hidden_event.5.a
+		name = bare_hidden_event.6.a
 		ai_chance = {
 			base = 100
 		}
     }
 }
+
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.7
+    title = bare_long_text_hidden_event.7.t
+    desc = bare_long_text_hidden_event.7.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 7
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = bare_long_text_hidden_event.8
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.7.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+country_event = {
+    id = bare_long_text_hidden_event.8
+    title = bare_long_text_hidden_event.8.t
+    desc = bare_long_text_hidden_event.8.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 8
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = bare_long_text_hidden_event.9
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.8.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.9
+    title = bare_long_text_hidden_event.9.t
+    desc = bare_long_text_hidden_event.9.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 9
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = bare_long_text_hidden_event.10
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.9.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.10
+    title = bare_long_text_hidden_event.10.t
+    desc = bare_long_text_hidden_event.10.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 10
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = bare_long_text_hidden_event.11
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.10.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.11
+    title = bare_long_text_hidden_event.11.t
+    desc = bare_long_text_hidden_event.11.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 11
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = bare_long_text_hidden_event.12
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.11.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.12
+    title = bare_long_text_hidden_event.12.t
+    desc = bare_long_text_hidden_event.12.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 12
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		country_event = {
+			id = bare_long_text_hidden_event.13
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.12.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+country_event = {
+    id = bare_long_text_hidden_event.13
+    title = bare_long_text_hidden_event.13.t
+    desc = bare_long_text_hidden_event.13.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 13
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#事件
+		mark_focus_tree_layout_dirty = yes
+        add_to_array = { TRI_hoshubu_focus_line 			=token:TRI_moon_fall_sun_rise }
+        activate_shine_on_focus =TRI_moon_fall_sun_rise
+        country_event = {
+            id = TRI_autofocus.1
+            days = 7
+        }
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+		
+		
+
+		country_event = {
+			id = bare_long_text_hidden_event.14
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.13.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+country_event = {
+    id = bare_long_text_hidden_event.14
+    title = bare_long_text_hidden_event.14.t
+    desc = bare_long_text_hidden_event.14.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 14
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+
+		set_country_flag = TRI_seia_available
+        custom_effect_tooltip = {
+            localization_key = advisor_available_tt
+            CHAR = TRI_seia_name
+            JOB = political_advisor
+        }
+        TRI_mika = { custom_effect_tooltip = TRI_mika_arrested_tt }
+        custom_effect_tooltip = TRY_event_add_mika_to_survey
+        set_variable = { leader@TRI_parliament_association_0 = token:TRI_mika_arrested }
+        set_country_flag = TRI_mika_arrested
+        hidden_effect = {
+            ARI = {
+                #country_event = ARI_coup.8
+                country_event = bare_long_text_hidden_event.5
+            }
+        }
+
+		country_event = {
+			id = bare_long_text_hidden_event.14
+			days = 3
+		}
+
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.14.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
 
 #从5开始，4被占用了
 country_event = { #开gui事件
