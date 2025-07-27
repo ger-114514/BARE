@@ -100,14 +100,15 @@ country_event = {
 		#FOX逮捕若藻
 		news_event = {
 			id = BARE_World_News.15
-			days = 70
+			days = 5
 		}
 
 		#SRT废校！
 		news_event = {
 			id = BARE_World_News.16
-			days = 730
+			days = 1600
 		}
+
 	}
 
 	option = {

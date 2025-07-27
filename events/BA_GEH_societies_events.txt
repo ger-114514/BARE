@@ -14,7 +14,7 @@ country_event = {
 	fire_only_once = yes
 
     option = {
-		name = GEH_events.1.a
+		name = GEH_societies_events.1.a
         add_political_power = -100
 		add_stability = 10
 		ai_chance = {
@@ -23,7 +23,7 @@ country_event = {
     }
 
 	option = {
-		name = GEH_events.1.b
+		name = GEH_societies_events.1.b
         add_political_power = 200
 		add_stability = -20
 		ai_chance = {
@@ -339,6 +339,10 @@ country_event = {
 		country_event = {
 			id = GEH_hot_spring_events.2
 		}
+		add_to_variable = { GEH_hot_spring_activity = -5 }                     
+        add_to_variable = { GEH_hot_spring_destructive = -5 }
+        GEH_hot_spring_calc = yes
+		custom_effect_tooltip = GEH_hot_spring_events_tt_1
 		ai_chance = {
 			factor = 100
 		}
@@ -349,6 +353,10 @@ country_event = {
 		country_event = {
 			id = GEH_hot_spring_events.3
 		}
+		add_to_variable = { GEH_hot_spring_activity = 5 }                     
+        add_to_variable = { GEH_hot_spring_destructive = 5 }
+        GEH_hot_spring_calc = yes
+		custom_effect_tooltip = GEH_hot_spring_events_tt_2
 		ai_chance = {
 			factor = 100
 		}
@@ -367,7 +375,6 @@ country_event = {
 
     option = {
 		name = GEH_hot_spring_events.2.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_1
 		ai_chance = {
 			factor = 100
 		}
@@ -386,7 +393,6 @@ country_event = {
 
     option = {
 		name = GEH_hot_spring_events.3.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_2
 		ai_chance = {
 			factor = 100
 		}
@@ -425,7 +431,13 @@ country_event = {
 
     option = {
 		name = GEH_hot_spring_events.5.a
-        
+		add_timed_idea = {
+            idea = GEH_90degrees_of_water
+            days = 150
+		}
+        country_event = {
+			id = GEH_hot_spring_events.6
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -541,7 +553,7 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.2.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_1
+		custom_effect_tooltip = GEH_gourmet_research_events_tt_1
 		ai_chance = {
 			factor = 1000
 		}
@@ -560,7 +572,7 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.3.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_2
+		custom_effect_tooltip = GEH_gourmet_research_events_tt_2
 		ai_chance = {
 			factor = 1000
 		}
@@ -579,7 +591,7 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.4.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_3
+		custom_effect_tooltip = GEH_gourmet_research_events_tt_3
 		ai_chance = {
 			factor = 1000
 		}
@@ -598,7 +610,7 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.5.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_4
+		custom_effect_tooltip = GEH_gourmet_research_events_tt_4
 		ai_chance = {
 			factor = 1000
 		}
@@ -617,7 +629,7 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.6.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_5
+		custom_effect_tooltip = GEH_gourmet_research_events_tt_5
 		ai_chance = {
 			factor = 1000
 		}

@@ -75,3 +75,38 @@ Get_ARI_traveller_operation_2_progress = {
 		localization_key = ARI_traveller_operation_2_progress_1
 	}
 }
+
+Eden_cathedral_war_ARI = {
+	name = Eden_cathedral_war_ARI
+	text = {
+		trigger = {
+			tag = ARI
+		}
+		localization_key = Eden_cathedral_war_ARI
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+
+Eden_victory_trigger_text= {
+	name = Eden_victory_trigger_text
+	text = {
+		trigger = {
+			or = {
+				tag = GEH
+				tag = TRI
+			}
+		}
+		localization_key = Eden_victory_trigger_text_TRI
+	}
+	text = {
+		trigger = {
+			or = {
+				tag = ARI
+			}
+		}
+		localization_key = Eden_victory_trigger_text_ARI
+	}
+}

@@ -156,7 +156,7 @@ sub_units = {
 
 
 
-	infantry_sp_bbl = { #!圣女芭芭拉
+	infantry_sp_bbl = { #!圣女芭尔芭拉
 		abbreviation = "INFS"
 		sprite = infantry #兵模
 		map_icon_category = infantry #地图
@@ -408,7 +408,7 @@ sub_units = {
 		}
 	}
 
-	###!“圣女”芭芭拉
+	###!“圣女”芭尔芭拉
 	infantry_babala = {
 		abbreviation = "INFBBL"
 		sprite = infantry

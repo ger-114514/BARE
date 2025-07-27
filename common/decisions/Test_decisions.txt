@@ -85,7 +85,7 @@ Test_time_decisions_categories = {
 	}
 	Test_log_24 = {
 		complete_effect = {
-			BARE_SuperEvent_2_effect_4 = yes
+			BARE_SuperEvent_2_effect_6 = yes
 		}
 	}
 	Test_log_25 = {
@@ -93,7 +93,18 @@ Test_time_decisions_categories = {
 			BARE_SuperEvent_2_effect_7 = yes
 		}
 	}
+
+	Test_log_26 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_8 = yes
+		}
+	}
 	
+	Test_log_27 = {
+		complete_effect = {
+			BARE_SuperEvent_2_effect_9 = yes
+		}
+	}
 	Test_nuke = {
 		complete_effect = {
 			ARI = {

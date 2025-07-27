@@ -409,6 +409,7 @@ country_event = { #关于叛徒的报告
 	immediate = {
 		hidden_effect = {
 			add_ideas = ARI_eden_mystery_infantry_debuff_4 #被削弱的投影
+			
 			delete_units = {
 				division_template = "圣徒会的投影"
 				disband = no
@@ -417,7 +418,7 @@ country_event = { #关于叛徒的报告
 				create_unit = {
 					division = "name = \"圣徒会的投影\" division_template = \"圣徒会的投影\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 					owner = ROOT
-					count = 12
+					count = 24
 					allow_spawning_on_enemy_provs = yes #允许创建在敌方省份上
 					divisional_commander_xp = 1000 #为战地指挥官分配经验
 				}
@@ -637,5 +638,31 @@ country_event = { #格黑娜胜利事件
 
 	option = {
 		name = LS_GST.52.a
+	}
+}
+
+
+news_event = { #联邦学生会介入
+	id = LS_GST.61
+	title = LS_GST.61.t
+	desc = LS_GST.61.desc
+	picture = GFX_news_event_gsc_union
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			NOT = {
+				original_tag = ARI
+			}
+		}
+		name = LS_GST.61.a
+	}
+
+	option = {
+		trigger = {
+			original_tag = ARI
+		}
+		name = LS_GST.61.b
 	}
 }
