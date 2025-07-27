@@ -15,7 +15,6 @@ BARE_SuperEvent_2_fire_super_event = {
 			max = 59
 			integer = yes
 		}
-		log = "BARE_SuperEvent_2_temp_var [?BARE_SuperEvent_2_temp_var]"
 		set_variable = { BARE_SuperEvent_2_var = BARE_SuperEvent_2_temp_var }
 	}
 }
@@ -26,6 +25,8 @@ BARE_SuperEvent_1_effect_1 = {
 		limit = { is_ai = no }
 		set_temp_variable = { BARE_SuperEvent_1_temp_var = token:BARE_SuperEvent_1_SECOND_EDEN_TREATY }
 		set_variable = { BARE_SuperEvent_1_var = BARE_SuperEvent_1_temp_var }
+
+		
 	}
 }
 
@@ -82,5 +83,29 @@ BARE_SuperEvent_2_effect_7 = {
 		limit = { is_ai = no }
 		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_STRIKE }
 		BARE_SuperEvent_2_fire_super_event = yes
+		scoped_sound_effect = BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
+	}
+		
+}
+
+
+BARE_SuperEvent_2_effect_8 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_HELP_HOSHINO }
+		BARE_SuperEvent_2_fire_super_event = yes
+		scoped_sound_effect = BARE_SuperEvent_Sound_HELP_HOSHINO
+		
+	}
+}
+
+BARE_SuperEvent_2_effect_9 = {
+	every_country = {
+		limit = { is_ai = no }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_LSGSJ_GSC_IN }
+		BARE_SuperEvent_2_fire_super_event = yes
+
+
+
 	}
 }

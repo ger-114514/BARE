@@ -742,6 +742,24 @@ focus_tree = {
 						x = 0
 						y = 0
 					}
+					infantry_sp_bbl = {
+						x = 0
+						y = 1
+					}
+					infantry_sp_bbl = {
+						x = 0
+						y = 2
+					}
+					infantry_sp_bbl = {
+						x = 0
+						y = 3
+					}
+					infantry_sp_bbl = {
+						x = 0
+						y = 4
+					}
+
+					
 				}
 				support = {
 				}
@@ -749,7 +767,7 @@ focus_tree = {
 			#大教堂部署三个1营圣女投影
 			138 = {
 				create_unit = {
-					division = "division_template = \"圣女的投影\" start_experience_factor = 1 start_equipment_factor = 0.2 start_manpower_factor = 1"
+					division = "division_template = \"圣女的投影\" start_experience_factor = 0.2 start_equipment_factor = 1start_manpower_factor = 1"
 					owner = ROOT
 					count = 3
 				}
@@ -829,7 +847,7 @@ focus_tree = {
 			#移除民族精神“阿里乌斯对外情报和行动处”【完成】
 			#移除所有渗透度带来的buff【完成】
 			#获得36个10连神秘步兵【完成】
-			#5个1芭芭拉连【完成】
+			#5个1芭尔芭拉连【完成】
 			#每控制一个省份，
 			#每个月四阶段进度+1%
 			#现在需要彻底击败阿里乌斯才能结束古圣堂之战
@@ -847,57 +865,10 @@ focus_tree = {
 					id = ARI_beatrice.102
 					days = 5
 				}
-				division_template = {
-					name = "阿里乌斯神秘步兵大队"
-					regiments = {
-						infantry_sp = {
-							x = 0
-							y = 0
-						}
-						infantry_sp = {
-							x = 0
-							y = 1
-						}
-						infantry_sp = {
-							x = 0
-							y = 2
-						}
-						infantry_sp = {
-							x = 0
-							y = 3
-						}
-						infantry_sp = {
-							x = 1
-							y = 0
-						}
-						infantry_sp = {
-							x = 1
-							y = 1
-						}
-						infantry_sp = {
-							x = 1
-							y = 2
-						}
-						infantry_sp = {
-							x = 1
-							y = 3
-						}
-						infantry_sp = {
-							x = 2
-							y = 0
-						}
-						infantry_sp = {
-							x = 2
-							y = 1
-						}
-					}
-					support = {
-					}
-				}
 				#获得36个10连神秘步兵
 				138 = {
 					create_unit = {
-						division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+						division = "division_template = \"圣徒会的投影\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
 						owner = ROOT
 						count = 36
 					}
@@ -2102,14 +2073,6 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_category_tooltip = ARI_suppress_resistance_eden_decisions
 			#古圣堂获得48个10连神秘步兵营
-			138 = {
-				create_unit = {
-					division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-					count = 48
-				}
-			}
-			add_ideas = ARI_eden_action_chaos
 			hidden_effect = {
 				country_event = {
 					id = ARI_beatrice_operations.50
@@ -2302,13 +2265,6 @@ focus_tree = {
 				}
 			}
 			#获得4个10连特战步兵大队
-			138 = {
-				create_unit = {
-					division = "division_template = \"阿里乌斯神秘步兵大队\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
-					owner = ROOT
-					count = 4
-				}
-			}
 			#10个特战步兵
 			138 = {
 				create_unit = {

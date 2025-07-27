@@ -1,19 +1,22 @@
-add_namespace = LS_GST_ZJ
+add_namespace = ARI_ZJ
+add_namespace = TRI_ZJ
 
 country_event = {
 	id = ARI_ZJ.1
 	title = ARI_ZJ.1.t
 	desc = ARI_ZJ.1.d
 	is_triggered_only = yes
-	picture = TRI_news_event_10
+	# picture = TRI_news_event_10
 
 	option = {
 		name = ARI_ZJ.1.a
+		custom_effect_tooltip =ARI_end_tooltip_3
 		hidden_effect = {
 			ARI = {
 				country_event = {
 					id = ARI_ZJ.2
-					days = 71
+					# days = 71
+					days = 21
 				}
 			}
 		}
@@ -25,7 +28,7 @@ country_event = {
 	title = ARI_ZJ.2.t
 	desc = ARI_ZJ.2.d
 	is_triggered_only = yes
-	picture = TRI_news_event_10
+	# picture = TRI_news_event_10
 
 	option = {
 		name = ARI_ZJ.2.a
@@ -33,7 +36,7 @@ country_event = {
 			ARI = {
 				country_event = {
 					id = ARI_ZJ.3
-					days = 21
+					days = 14
 				}
 			}
 		}
@@ -54,7 +57,7 @@ country_event = {
 			ARI = {
 				country_event = {
 					id = ARI_ZJ.4
-					days = 21
+					days = 14
 				}
 			}
 		}
@@ -66,21 +69,10 @@ country_event = {
 	title = ARI_ZJ.4.t
 	desc = ARI_ZJ.4.d
 	is_triggered_only = yes
-	picture = TRI_news_event_10
+	# picture = TRI_news_event_10
 
 	option = {
 		name = ARI_ZJ.4.a
-		hidden_effect = {
-			ARI = {
-				country_event = {
-					id = ARI_ZJ.5
-					days = 21
-				}
-			}
-		}
-	}
-
-	immediate = {
 		remove_dynamic_modifier = { #阿里乌斯包税制
 			modifier = ARI_tax_farming
 		}
@@ -97,6 +89,17 @@ country_event = {
 			modifier = ARI_flame_of_revenge
 		}
 		hidden_effect = {
+			ARI = {
+				country_event = {
+					id = ARI_ZJ.5
+					days = 14
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
 			TRI = {
 				country_event = {
 					id = TRI_ZJ.1
@@ -112,7 +115,7 @@ country_event = {
 	title = TRI_ZJ.1.t
 	desc = TRI_ZJ.1.d
 	is_triggered_only = yes
-	picture = TRI_news_event_3
+	# picture = TRI_news_event_3
 
 	option = {
 		name = TRI_ZJ.1.a
@@ -124,7 +127,7 @@ country_event = {
 	title = ARI_ZJ.5.t
 	desc = ARI_ZJ.5.d
 	is_triggered_only = yes
-	picture = TRI_news_event_10
+	# picture = TRI_news_event_10
 
 	option = {
 		name = ARI_ZJ.5.a
@@ -144,7 +147,7 @@ country_event = {
 	title = ARI_ZJ.6.t
 	desc = ARI_ZJ.6.d
 	is_triggered_only = yes
-	picture = TRI_news_event_13
+	# picture = TRI_news_event_13
 
 	option = {
 		name = ARI_ZJ.6.a
@@ -172,7 +175,7 @@ country_event = {
 	title = TRI_ZJ.2.t
 	desc = TRI_ZJ.2.d
 	is_triggered_only = yes
-	picture = TRI_news_event_21
+	picture = TRI_news_event_14
 
 	option = {
 		name = TRI_ZJ.2.a
@@ -245,7 +248,7 @@ country_event = {
 	title = TRI_ZJ.3.t
 	desc = TRI_ZJ.3.d
 	is_triggered_only = yes
-	picture = TRI_news_event_21
+	picture = TRI_news_event_14
 
 	option = {
 		name = TRI_ZJ.3.a
@@ -257,7 +260,7 @@ country_event = {
 	title = ARI_ZJ.9.t
 	desc = ARI_ZJ.9.d
 	is_triggered_only = yes
-	picture = TRI_news_event_21
+	picture = TRI_news_event_14
 
 	option = {
 		name = ARI_ZJ.9.a

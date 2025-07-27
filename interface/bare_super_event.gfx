@@ -81,6 +81,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_strike.dds"
 	}
 
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_HELP_HOSHINO"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/help_hoshino.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BARE_SuperEvent_2_LSGSJ_GSC_IN"
+		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/lsgsj_gsc_in.dds"
+	}
+
 	#突然死亡结局
 	spriteType = {
 		name = "GFX_BARE_sudden_death_event_1"

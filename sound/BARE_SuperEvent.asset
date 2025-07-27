@@ -1,0 +1,40 @@
+
+soundeffect = {
+	name = BARE_SuperEvent_Sound_HELP_HOSHINO
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_HELP_HOSHINO
+	}
+}
+
+
+soundeffect = {
+	name = BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
+	}
+}
+
+sound =
+{
+	name = "BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE.wav"
+}
+
+
+
+sound =
+{
+	name = "BARE_SuperEvent_Sound_HELP_HOSHINO"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_HELP_HOSHINO.wav"
+}
+
+
+category = {
+	name = "BARE_SuperEvent_Sound"
+	soundeffects = {
+		BARE_SuperEvent_Sound_HELP_HOSHINO
+		BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
+	}
+}

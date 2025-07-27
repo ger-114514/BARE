@@ -159,6 +159,80 @@ country_event = {
     }
 }
 
+
+
+country_event = {
+    id = bare_long_text_hidden_event.5
+    title = bare_long_text_hidden_event.5.t
+    desc = bare_long_text_hidden_event.5.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 5
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.5.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
+
+
+country_event = {
+    id = bare_long_text_hidden_event.6
+    title = bare_long_text_hidden_event.6.t
+    desc = bare_long_text_hidden_event.6.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		clr_country_flag = BARE_long_event_show
+		set_variable = {
+			BARE_long_event_id = 5
+		}
+		resize_array = {
+			array = BARE_long_event_select_array
+			size = 0
+		}
+		add_to_array = { #选项号，最多2个
+			BARE_long_event_select_array = 1
+		}
+		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
+		country_event = {
+			id = bare_long_text_hidden_event.114514
+			hours = 4
+		}
+
+	}
+    option = {
+		name = bare_hidden_event.5.a
+		ai_chance = {
+			base = 100
+		}
+    }
+}
+
 #从5开始，4被占用了
 country_event = { #开gui事件
     id = bare_long_text_hidden_event.114514
@@ -169,7 +243,12 @@ country_event = { #开gui事件
 	hidden = yes
 
 	immediate = {
-		set_country_flag = BARE_long_event_show
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_country_flag = BARE_long_event_show
+		}
 		
 
 	}
