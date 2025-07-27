@@ -379,6 +379,7 @@ Eden_treaty_formally_signed = {
 
 ###古圣堂之战###
 initialize_ECW_effect = {
+	set_global_flag = ECW_active_global_flag
 	ARI = {
 		set_variable = {
 			ECW_progress_var = 100
@@ -388,11 +389,8 @@ initialize_ECW_effect = {
 		}
 		force_update_dynamic_modifier = yes
 		activate_mission =Eden_cathedral_war_goes_on_ARI
+		initialize_ECW_states_effect = yes
 
-		##启动参谋部工作##
-		#activate_mission = ECW_mission_controls_priority_target_306
-		#activate_mission = ECW_mission_controls_priority_target_187
-		#activate_mission = ECW_mission_controls_priority_target_184
 	}
 
 	TRI = {
@@ -404,11 +402,8 @@ initialize_ECW_effect = {
 		}
 		force_update_dynamic_modifier = yes
 		activate_mission = Eden_cathedral_war_goes_on_TRI_GEH
+		initialize_ECW_states_effect = yes
 
-		##启动参谋部工作##
-		#activate_mission = ECW_mission_controls_priority_target_306
-		#activate_mission = ECW_mission_controls_priority_target_187
-		#activate_mission = ECW_mission_controls_priority_target_184
 	}
 
 	GEH = {
@@ -420,6 +415,7 @@ initialize_ECW_effect = {
 		}
 		force_update_dynamic_modifier = yes
 		activate_mission = Eden_cathedral_war_goes_on_TRI_GEH
+		initialize_ECW_states_effect = yes
 	}
 
 }

@@ -231,87 +231,11 @@ country_event = { #初次袭击简报
 					modifier = TRI_BeiAliWuSiTuXi
 				}
 			}
-			activate_decision = GST_ARI_defend_cathedral
-			##
-			ARI = {
-				activate_mission = Eden_cathedral_war_goes_on
-			}
-			GEH = {
-				activate_mission = Eden_cathedral_war_goes_on
-			}
-			TRI = {
-				activate_mission = Eden_cathedral_war_goes_on
-			}
-
-
-			division_template = {
-				name = "阿里乌斯突袭特战部队" #古圣堂之战事件刷兵用 - fgvfgfs
-				regiments = { 
-					infantry_sf = { x = 0 y = 0 } #特战步兵
-					infantry_sf = { x = 0 y = 1 }
-					infantry_sf = { x = 0 y = 2 }
-					infantry_sf = { x = 0 y = 3 }
-					infantry_sf = { x = 0 y = 4 }
-					infantry_sf = { x = 1 y = 0 }
-					infantry_sf = { x = 1 y = 1 }
-					infantry_sf = { x = 1 y = 2 }
-					infantry_sf = { x = 1 y = 3 }
-					infantry_sf = { x = 1 y = 4 }
-					fire_support_team_la = { x = 2 y = 0 } #牵引式火炮
-					fire_support_team_la = { x = 2 y = 1 }
-					fire_support_team_ha = { x = 2 y = 2 } #反坦克火炮
-				}
-				is_locked = yes
-				support = {
-					recon = { x = 0 y = 0 }
-					engineer = { x = 0 y = 1 }
-				}
-			}
-
-			division_template = {
-				name = "圣徒会的投影" #古圣堂之战事件刷兵用 - fgvfgfs
-				regiments = { 
-					infantry_sp = { x = 0 y = 0 }
-					infantry_sp = { x = 0 y = 1 }
-					infantry_sp = { x = 0 y = 2 }
-					infantry_sp = { x = 0 y = 3 }
-					infantry_sp = { x = 0 y = 4 }
-					infantry_sp = { x = 1 y = 0 }
-					infantry_sp = { x = 1 y = 1 }
-					infantry_sp = { x = 1 y = 2 }
-					infantry_sp = { x = 1 y = 3 }
-					infantry_sp = { x = 1 y = 4 }
-					fire_support_team_sp = { x = 2 y = 0 }
-					fire_support_team_sp = { x = 2 y = 1 }
-				}
-				is_locked = yes
-			}
+			##不需要这个了
+			#activate_decision = GST_ARI_defend_cathedral
 			
-			division_template = {
-				name = "阿里乌斯突袭后备部队" #古圣堂之战事件刷兵用 - fgvfgfs
-				regiments = { 
-					infantry = { x = 0 y = 0 } #普通步兵
-					infantry = { x = 0 y = 1 } #普通步兵
-					infantry = { x = 0 y = 2 } #普通步兵
-					infantry = { x = 0 y = 3 } #普通步兵
-					infantry = { x = 0 y = 4 } #普通步兵
-					infantry = { x = 1 y = 0 } #普通步兵
-					infantry = { x = 1 y = 1 } #普通步兵
-					infantry = { x = 1 y = 2 } #普通步兵
-					infantry_heavy = { x = 1 y = 3 } #重装步兵
-					infantry_heavy = { x = 1 y = 4 } #重装步兵
-					fire_support_team_la = { x = 2 y = 0 } #牵引式火炮
-					fire_support_team_la = { x = 2 y = 1 }
-					fire_support_team_ha = { x = 2 y = 2 } #反坦克火炮
-
-				}
-				is_locked = yes
-				support = {
-					recon = { x = 0 y = 0 }
-					engineer = { x = 0 y = 1 }
-				}
-			}
-
+			##启动厌战系统##
+			initialize_ECW_effect = yee
 			
 			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = ARI_time_for_final_action #完成国策 - 行动时刻
