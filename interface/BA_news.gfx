@@ -12,44 +12,49 @@ spriteTypes = {
 		name = "GFX_BA_news_3"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_3.dds"
 	}	
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_4"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_4.dds"
 	}	
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_5"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_5.dds"
 	}	
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_6"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_6.dds"
 	}	
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_7"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_7.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_8"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_8.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_9"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_9.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_10"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_10.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_11"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_11.dds"
 	}	
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_12"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_12.dds"
 	}
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_13"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_13.dds"
-	}		
+	}	
+	#
+	spriteType = {
+		name = "GFX_BA_news_cathedral_war"
+		textureFile = "gfx/event_pictures/BA_news_event/BA_news_cathedral_war.dds"
+	}	
 }

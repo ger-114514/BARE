@@ -4,7 +4,9 @@ Eden_treaty_negotiation_decisions = {
 		priority = 1000
 		is_good = yes
 		days_mission_timeout = 30
-		available = { always = no }
+		available = {
+			always = no
+		}
 		activation = {
 			hidden_trigger = {
 				has_global_flag = Eden_treaty_negotiation_ongoing
@@ -20,36 +22,46 @@ Eden_treaty_negotiation_decisions = {
 		timeout_effect = {
 			effect_tooltip = {
 				TRI = {
-					set_temp_variable = { progress_change = modifier@Eden_treaty_progress_modifier }
+					set_temp_variable = {
+						progress_change = modifier@Eden_treaty_progress_modifier
+					}
 					Eden_treaty_change_progress = yes
 				}
 				GEH = {
-					set_temp_variable = { progress_change = modifier@Eden_treaty_progress_modifier }
+					set_temp_variable = {
+						progress_change = modifier@Eden_treaty_progress_modifier
+					}
 					Eden_treaty_change_progress = yes
 				}
 			}
 			hidden_effect = {
 				if = {
-					limit = { 
+					limit = {
 						original_tag = TRI
 					}
-					set_temp_variable = { progress_change = modifier@Eden_treaty_progress_modifier }
-					add_to_temp_variable = { progress_change = GEH.modifier@Eden_treaty_progress_modifier }
+					set_temp_variable = {
+						progress_change = modifier@Eden_treaty_progress_modifier
+					}
+					add_to_temp_variable = {
+						progress_change = GEH.modifier@Eden_treaty_progress_modifier
+					}
 					Eden_treaty_change_progress = yes
 				}
 			}
 			activate_mission = Eden_treaty_mutual_negotiation
 		}
 	}
-
-	Eden_TRI_ask_hardliner_to_cooperate = { #要求强硬派配合
+	Eden_TRI_ask_hardliner_to_cooperate = {
+		#要求强硬派配合
 		visible = {
 			original_tag = TRI
 		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = Eden_common_decision_CD_tt
-				NOT = { has_country_flag = Eden_common_decision_CD }
+				NOT = {
+					has_country_flag = Eden_common_decision_CD
+				}
 			}
 		}
 		cost = 30
@@ -57,41 +69,58 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_common_decision_CD
 			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
-			set_temp_variable = { target_faction = token:BOP_hardliner }
-			set_temp_variable = { loyalty_change = -0.05 }
+			set_temp_variable = {
+				target_faction = token:BOP_hardliner
+			}
+			set_temp_variable = {
+				loyalty_change = -0.05
+			}
 			TRI_parliament_loyalty_change_faction = yes
 		}
 		remove_effect = {
 			clr_country_flag = Eden_common_decision_CD
-			set_temp_variable = { weights_change = 5 }
+			set_temp_variable = {
+				weights_change = 5
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 0
 			modifier = {
 				add = 3
-				check_variable = { TRI_unity_weekly_modifier > 1 }
+				check_variable = {
+					TRI_unity_weekly_modifier > 1
+				}
 			}
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights > 50 }
+				check_variable = {
+					Eden_treaty_weights > 50
+				}
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_TRI_ask_conservative_to_cooperate = { #要求保守派配合
+	Eden_TRI_ask_conservative_to_cooperate = {
+		#要求保守派配合
 		visible = {
 			original_tag = TRI
 		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = Eden_common_decision_CD_tt
-				NOT = { has_country_flag = Eden_common_decision_CD }
+				NOT = {
+					has_country_flag = Eden_common_decision_CD
+				}
 			}
 		}
 		cost = 30
@@ -99,41 +128,58 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_common_decision_CD
 			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
-			set_temp_variable = { target_faction = token:BOP_conservative }
-			set_temp_variable = { loyalty_change = -0.05 }
+			set_temp_variable = {
+				target_faction = token:BOP_conservative
+			}
+			set_temp_variable = {
+				loyalty_change = -0.05
+			}
 			TRI_parliament_loyalty_change_faction = yes
 		}
 		remove_effect = {
 			clr_country_flag = Eden_common_decision_CD
-			set_temp_variable = { weights_change = 5 }
+			set_temp_variable = {
+				weights_change = 5
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 0
 			modifier = {
 				add = 3
-				check_variable = { TRI_unity_weekly_modifier > 1 }
+				check_variable = {
+					TRI_unity_weekly_modifier > 1
+				}
 			}
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights > 50 }
+				check_variable = {
+					Eden_treaty_weights > 50
+				}
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_TRI_ask_moderate_to_cooperate = { #要求温和派配合
+	Eden_TRI_ask_moderate_to_cooperate = {
+		#要求温和派配合
 		visible = {
 			original_tag = TRI
 		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = Eden_common_decision_CD_tt
-				NOT = { has_country_flag = Eden_common_decision_CD }
+				NOT = {
+					has_country_flag = Eden_common_decision_CD
+				}
 			}
 		}
 		cost = 30
@@ -141,48 +187,67 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_common_decision_CD
 			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
-			set_temp_variable = { target_faction = token:BOP_moderate }
-			set_temp_variable = { loyalty_change = -0.05 }
+			set_temp_variable = {
+				target_faction = token:BOP_moderate
+			}
+			set_temp_variable = {
+				loyalty_change = -0.05
+			}
 			TRI_parliament_loyalty_change_faction = yes
 		}
 		remove_effect = {
 			clr_country_flag = Eden_common_decision_CD
-			set_temp_variable = { weights_change = 5 }
+			set_temp_variable = {
+				weights_change = 5
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 0
 			modifier = {
 				add = 3
-				check_variable = { TRI_unity_weekly_modifier > 1 }
+				check_variable = {
+					TRI_unity_weekly_modifier > 1
+				}
 			}
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights > 50 }
+				check_variable = {
+					Eden_treaty_weights > 50
+				}
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_TRI_benefit_hardliner = { #让渡部分利益给强硬派
+	Eden_TRI_benefit_hardliner = {
+		#让渡部分利益给强硬派
 		visible = {
 			original_tag = TRI
 		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = Eden_common_decision_CD_tt
-				NOT = { has_country_flag = Eden_common_decision_CD }
+				NOT = {
+					has_country_flag = Eden_common_decision_CD
+				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		cost = 30
@@ -190,10 +255,16 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_common_decision_CD
 			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { target_faction = token:BOP_hardliner }
-			set_temp_variable = { loyalty_change = 0.03 }
+			set_temp_variable = {
+				target_faction = token:BOP_hardliner
+			}
+			set_temp_variable = {
+				loyalty_change = 0.03
+			}
 			TRI_parliament_loyalty_change_faction = yes
 		}
 		remove_effect = {
@@ -204,33 +275,44 @@ Eden_treaty_negotiation_decisions = {
 			base = 0
 			modifier = {
 				add = 3
-				check_variable = { TRI_unity_weekly_modifier < 0 }
+				check_variable = {
+					TRI_unity_weekly_modifier < 0
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 75 }
+				check_variable = {
+					Eden_treaty_weights > 75
+				}
 			}
 			modifier = {
 				factor = 0.2
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_TRI_benefit_conservative = { #让渡部分利益给保守派
+	Eden_TRI_benefit_conservative = {
+		#让渡部分利益给保守派
 		visible = {
 			original_tag = TRI
 		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = Eden_common_decision_CD_tt
-				NOT = { has_country_flag = Eden_common_decision_CD }
+				NOT = {
+					has_country_flag = Eden_common_decision_CD
+				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		cost = 30
@@ -238,10 +320,16 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_common_decision_CD
 			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { target_faction = token:BOP_conservative }
-			set_temp_variable = { loyalty_change = 0.03 }
+			set_temp_variable = {
+				target_faction = token:BOP_conservative
+			}
+			set_temp_variable = {
+				loyalty_change = 0.03
+			}
 			TRI_parliament_loyalty_change_faction = yes
 		}
 		remove_effect = {
@@ -252,33 +340,44 @@ Eden_treaty_negotiation_decisions = {
 			base = 0
 			modifier = {
 				add = 3
-				check_variable = { TRI_unity_weekly_modifier < 0 }
+				check_variable = {
+					TRI_unity_weekly_modifier < 0
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 75 }
+				check_variable = {
+					Eden_treaty_weights > 75
+				}
 			}
 			modifier = {
 				factor = 0.2
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_TRI_benefit_moderate = { #让渡部分利益给温和派
+	Eden_TRI_benefit_moderate = {
+		#让渡部分利益给温和派
 		visible = {
 			original_tag = TRI
 		}
 		available = {
 			custom_override_tooltip = {
 				tooltip = Eden_common_decision_CD_tt
-				NOT = { has_country_flag = Eden_common_decision_CD }
+				NOT = {
+					has_country_flag = Eden_common_decision_CD
+				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		cost = 30
@@ -289,10 +388,16 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			set_country_flag = Eden_common_decision_CD
 			custom_effect_tooltip = Eden_TRI_decision_shares_CD_tt
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { target_faction = token:BOP_moderate }
-			set_temp_variable = { loyalty_change = 0.03 }
+			set_temp_variable = {
+				target_faction = token:BOP_moderate
+			}
+			set_temp_variable = {
+				loyalty_change = 0.03
+			}
 			TRI_parliament_loyalty_change_faction = yes
 		}
 		remove_effect = {
@@ -302,19 +407,26 @@ Eden_treaty_negotiation_decisions = {
 			base = 0
 			modifier = {
 				add = 3
-				check_variable = { TRI_unity_weekly_modifier < 0 }
+				check_variable = {
+					TRI_unity_weekly_modifier < 0
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 75 }
+				check_variable = {
+					Eden_treaty_weights > 75
+				}
 			}
 			modifier = {
 				factor = 0.2
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_GEH_call_for_solidarity = { #呼吁团结一致
+	Eden_GEH_call_for_solidarity = {
+		#呼吁团结一致
 		visible = {
 			original_tag = GEH
 		}
@@ -326,7 +438,6 @@ Eden_treaty_negotiation_decisions = {
 				}
 				has_global_flag = Eden_treaty_negotiation_completed
 			}
-			
 		}
 		modifier = {
 			political_power_cost = 0.5
@@ -368,7 +479,8 @@ Eden_treaty_negotiation_decisions = {
 			}
 		}
 	}
-	Eden_GEH_cancel_call_for_solidarity = { #暂停呼吁团结一致
+	Eden_GEH_cancel_call_for_solidarity = {
+		#暂停呼吁团结一致
 		visible = {
 			original_tag = GEH
 			has_country_flag = Eden_GEH_call_for_solidarity
@@ -391,7 +503,8 @@ Eden_treaty_negotiation_decisions = {
 			}
 		}
 	}
-	Eden_GEH_invite_Schale = { #请求夏莱协调谈判
+	Eden_GEH_invite_Schale = {
+		#请求夏莱协调谈判
 		visible = {
 			original_tag = GEH
 		}
@@ -401,12 +514,16 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "25"
 				}
-				check_variable = { Eden_treaty_weights > 24.9 }
+				check_variable = {
+					Eden_treaty_weights > 24.9
+				}
 			}
 		}
 		days_re_enable = 60
 		complete_effect = {
-			set_temp_variable = { weights_change = -25 }
+			set_temp_variable = {
+				weights_change = -25
+			}
 			Eden_treaty_change_weights = yes
 			add_political_power = 150
 		}
@@ -422,19 +539,26 @@ Eden_treaty_negotiation_decisions = {
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0.1
-				check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < TRI.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_enhance_publicising = { #加大对外宣传
+	Eden_enhance_publicising = {
+		#加大对外宣传
 		available = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					NOT = {
+						has_country_flag = Eden_treaty_no_unity_cost
+					}
 					original_tag = TRI
 				}
 				custom_override_tooltip = {
@@ -442,12 +566,16 @@ Eden_treaty_negotiation_decisions = {
 						localization_key = TRI_has_unity
 						UNITY = "1"
 					}
-					check_variable = { TRI_unity > 0.9 }
+					check_variable = {
+						TRI_unity > 0.9
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					NOT = {
+						has_country_flag = Eden_treaty_no_BOP_change
+					}
 					original_tag = GEH
 				}
 				power_balance_value = {
@@ -462,15 +590,21 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					NOT = {
+						has_country_flag = Eden_treaty_no_unity_cost
+					}
 					original_tag = TRI
 				}
-				set_temp_variable = { TRI_unity_change = -1 }
+				set_temp_variable = {
+					TRI_unity_change = -1
+				}
 				TRI_change_unity = yes
 			}
 			else_if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					NOT = {
+						has_country_flag = Eden_treaty_no_BOP_change
+					}
 					original_tag = GEH
 				}
 				add_power_balance_value = {
@@ -481,9 +615,13 @@ Eden_treaty_negotiation_decisions = {
 			}
 		}
 		remove_effect = {
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
-			set_temp_variable = { weights_change = 10 }
+			set_temp_variable = {
+				weights_change = 10
+			}
 			Eden_treaty_change_weights = yes
 		}
 		ai_will_do = {
@@ -498,15 +636,21 @@ Eden_treaty_negotiation_decisions = {
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 1.5
 				original_tag = TRI
 				OR = {
 					has_country_flag = Eden_treaty_no_unity_cost
-					check_variable = { TRI_unity_weekly_modifier > 1 }
-					check_variable = { TRI_unity > 60 }
+					check_variable = {
+						TRI_unity_weekly_modifier > 1
+					}
+					check_variable = {
+						TRI_unity > 60
+					}
 				}
 			}
 			modifier = {
@@ -523,20 +667,28 @@ Eden_treaty_negotiation_decisions = {
 			modifier = {
 				factor = 1.5
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-
-	Eden_reduce_border_conflict = { #减少边境摩擦
+	Eden_reduce_border_conflict = {
+		#减少边境摩擦
 		visible = {
 			original_tag = TRI
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_opening
+			}
 		}
 		available = {
 			command_power > 49.9
@@ -544,9 +696,13 @@ Eden_treaty_negotiation_decisions = {
 		fire_only_once = yes
 		complete_effect = {
 			add_command_power = -50
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
-			set_temp_variable = { weights_change = 10 }
+			set_temp_variable = {
+				weights_change = 10
+			}
 			Eden_treaty_change_weights = yes
 		}
 		ai_will_do = {
@@ -557,23 +713,34 @@ Eden_treaty_negotiation_decisions = {
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights < 75 }
+				check_variable = {
+					Eden_treaty_weights < 75
+				}
 			}
 			modifier = {
 				factor = 1.5
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_persuade_parliament_of_treaty = { #说服院内群体
+	Eden_persuade_parliament_of_treaty = {
+		#说服院内群体
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_opening
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -581,18 +748,24 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "5"
 				}
-				check_variable = { Eden_treaty_weights > 4.9 }
+				check_variable = {
+					Eden_treaty_weights > 4.9
+				}
 			}
 		}
 		days_remove = 14
 		days_re_enable = 60
 		complete_effect = {
-			set_temp_variable = { weights_change = -5 }
+			set_temp_variable = {
+				weights_change = -5
+			}
 			Eden_treaty_change_weights = yes
 		}
 		remove_effect = {
 			if = {
-				limit = { original_tag = TRI }
+				limit = {
+					original_tag = TRI
+				}
 				TRI_unity_increase_5 = yes
 			}
 			else = {
@@ -607,26 +780,38 @@ Eden_treaty_negotiation_decisions = {
 			base = 1
 			modifier = {
 				factor = 0
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 1.2
 				original_tag = TRI
 				OR = {
-					check_variable = { TRI_unity_weekly_modifier < 0 }
-					check_variable = { TRI_unity < 50 }
+					check_variable = {
+						TRI_unity_weekly_modifier < 0
+					}
+					check_variable = {
+						TRI_unity < 50
+					}
 				}
 			}
 			modifier = {
 				factor = 0
 				original_tag = TRI
 				OR = {
-					check_variable = { TRI_unity_weekly_modifier > 2 }
-					check_variable = { TRI_unity > 80 }
+					check_variable = {
+						TRI_unity_weekly_modifier > 2
+					}
+					check_variable = {
+						TRI_unity > 80
+					}
 				}
 			}
 			modifier = {
@@ -648,19 +833,28 @@ Eden_treaty_negotiation_decisions = {
 			modifier = {
 				factor = 0.4
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_TRI_suppress_dissent = { #暂时压制异议
+	Eden_TRI_suppress_dissent = {
+		#暂时压制异议
 		visible = {
 			original_tag = TRI
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_opening
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -668,12 +862,16 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
 			TRI_unity_increase_5 = yes
 			add_stability = 0.05
@@ -682,11 +880,15 @@ Eden_treaty_negotiation_decisions = {
 			base = 1
 			modifier = {
 				factor = 0
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0.4
@@ -699,32 +901,47 @@ Eden_treaty_negotiation_decisions = {
 			modifier = {
 				factor = 1.2
 				OR = {
-					check_variable = { TRI_unity_weekly_modifier < 0 }
-					check_variable = { TRI_unity < 50 }
+					check_variable = {
+						TRI_unity_weekly_modifier < 0
+					}
+					check_variable = {
+						TRI_unity < 50
+					}
 				}
 			}
 			modifier = {
 				factor = 0
 				OR = {
-					check_variable = { TRI_unity_weekly_modifier > 2 }
-					check_variable = { TRI_unity > 80 }
+					check_variable = {
+						TRI_unity_weekly_modifier > 2
+					}
+					check_variable = {
+						TRI_unity > 80
+					}
 				}
 			}
 			modifier = {
 				factor = 0.4
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_GEH_regulate_media = { #暂时性媒体约束
+	Eden_GEH_regulate_media = {
+		#暂时性媒体约束
 		visible = {
 			original_tag = GEH
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_opening }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_opening
+			}
 		}
 		available = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					NOT = {
+						has_country_flag = Eden_treaty_no_BOP_change
+					}
 				}
 				power_balance_value = {
 					id = GEH_bp_between_chaos_and_order
@@ -740,18 +957,24 @@ Eden_treaty_negotiation_decisions = {
 				tooltip_side = GEH_bp_chaos
 			}
 			add_stability = -0.05
-			set_temp_variable = { weights_change = 10 }
+			set_temp_variable = {
+				weights_change = 10
+			}
 			Eden_treaty_change_weights = yes
 		}
 		ai_will_do = {
 			base = 2
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 0.8
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 1.5
@@ -777,15 +1000,19 @@ Eden_treaty_negotiation_decisions = {
 			}
 			modifier = {
 				factor = 1.5
-				check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < TRI.Eden_treaty_weights
+				}
 			}
 		}
 	}
-
-	Eden_TRI_point_out_error = { #提出对方的不妥
+	Eden_TRI_point_out_error = {
+		#提出对方的不妥
 		visible = {
 			original_tag = TRI
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -793,31 +1020,42 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_progress_tt
 					PROGRESS = "3"
 				}
-				check_variable = { global.Eden_treaty_progress > 2.9 }
+				check_variable = {
+					global.Eden_treaty_progress > 2.9
+				}
 			}
 		}
 		cost = 100
 		days_re_enable = 90
 		complete_effect = {
 			GEH = {
-				set_temp_variable = { weights_change = -10 }
+				set_temp_variable = {
+					weights_change = -10
+				}
 				Eden_treaty_change_weights = yes
 			}
-			set_temp_variable = { progress_change = -3 }
+			set_temp_variable = {
+				progress_change = -3
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 0
 			modifier = {
 				add = 1
-				check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < GEH.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_GEH_refute_the_doubt = { #反驳对方的质疑
+	Eden_GEH_refute_the_doubt = {
+		#反驳对方的质疑
 		visible = {
 			original_tag = GEH
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -825,30 +1063,41 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_progress_tt
 					PROGRESS = "3"
 				}
-				check_variable = { global.Eden_treaty_progress > 2.9 }
+				check_variable = {
+					global.Eden_treaty_progress > 2.9
+				}
 			}
 		}
 		cost = 100
 		days_re_enable = 90
 		complete_effect = {
 			TRI = {
-				set_temp_variable = { weights_change = -10 }
+				set_temp_variable = {
+					weights_change = -10
+				}
 				Eden_treaty_change_weights = yes
 			}
-			set_temp_variable = { progress_change = -3 }
+			set_temp_variable = {
+				progress_change = -3
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 0
 			modifier = {
 				add = 1
-				check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+				check_variable = {
+					Eden_treaty_weights < TRI.Eden_treaty_weights
+				}
 			}
 		}
 	}
-	Eden_research_cooperation = { #促进科研合作
+	Eden_research_cooperation = {
+		#促进科研合作
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -856,10 +1105,14 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 			if = {
-				limit = { original_tag = GEH }
+				limit = {
+					original_tag = GEH
+				}
 				has_political_power > 50
 			}
 		}
@@ -874,39 +1127,58 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			custom_effect_tooltip = Eden_treaty_research_cooperation_tt
 			if = {
-				limit = { original_tag = GEH }
+				limit = {
+					original_tag = GEH
+				}
 				add_political_power = -50
 			}
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0.4
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_economic_cooperation = { #加强经济合作
+	Eden_economic_cooperation = {
+		#加强经济合作
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -914,7 +1186,9 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		days_remove = 30
@@ -923,36 +1197,53 @@ Eden_treaty_negotiation_decisions = {
 			consumer_goods_factor = -0.2
 		}
 		complete_effect = {
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0.4
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_propagate_our_effort = { #宣传我们的努力
+	Eden_propagate_our_effort = {
+		#宣传我们的努力
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_negotiating
+			}
 		}
 		available = {
 			if = {
@@ -964,7 +1255,9 @@ Eden_treaty_negotiation_decisions = {
 						localization_key = TRI_has_unity
 						UNITY = "80"
 					}
-					check_variable = { TRI_unity > 79.9 }
+					check_variable = {
+						TRI_unity > 79.9
+					}
 				}
 			}
 			else = {
@@ -978,7 +1271,9 @@ Eden_treaty_negotiation_decisions = {
 		cost = 30
 		complete_effect = {
 			if = {
-				limit = { original_tag = TRI }
+				limit = {
+					original_tag = TRI
+				}
 				set_country_flag = Eden_treaty_no_unity_cost
 				custom_effect_tooltip = Eden_treaty_no_unity_cost
 			}
@@ -991,10 +1286,12 @@ Eden_treaty_negotiation_decisions = {
 			base = 100
 		}
 	}
-
-	Eden_earn_interest = { #争取更多利益
+	Eden_earn_interest = {
+		#争取更多利益
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_agreement
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -1002,27 +1299,41 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "15"
 				}
-				check_variable = { Eden_treaty_weights > 14.9 }
+				check_variable = {
+					Eden_treaty_weights > 14.9
+				}
 			}
 		}
 		days_re_enable = 90
 		complete_effect = {
-			set_temp_variable = { progress_change = -3 }
+			set_temp_variable = {
+				progress_change = -3
+			}
 			Eden_treaty_change_progress = yes
-			set_temp_variable = { weights_change = -15 }
+			set_temp_variable = {
+				weights_change = -15
+			}
 			Eden_treaty_change_weights = yes
 			if = {
-				limit = { original_tag = TRI }
+				limit = {
+					original_tag = TRI
+				}
 				GEH = {
-					set_temp_variable = { weights_change = -10 }
+					set_temp_variable = {
+						weights_change = -10
+					}
 					Eden_treaty_change_weights = yes
 				}
-				set_temp_variable = { TRI_unity_change = 2 }
+				set_temp_variable = {
+					TRI_unity_change = 2
+				}
 				TRI_change_unity = yes
 			}
 			else = {
 				TRI = {
-					set_temp_variable = { weights_change = -10 }
+					set_temp_variable = {
+						weights_change = -10
+					}
 					Eden_treaty_change_weights = yes
 				}
 				add_power_balance_value = {
@@ -1036,26 +1347,38 @@ Eden_treaty_negotiation_decisions = {
 			base = 1
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 1.2
 				original_tag = TRI
 				OR = {
-					check_variable = { TRI_unity_weekly_modifier < 0 }
-					check_variable = { TRI_unity < 50 }
+					check_variable = {
+						TRI_unity_weekly_modifier < 0
+					}
+					check_variable = {
+						TRI_unity < 50
+					}
 				}
 			}
 			modifier = {
 				factor = 0
 				original_tag = TRI
 				OR = {
-					check_variable = { TRI_unity_weekly_modifier > 2 }
-					check_variable = { TRI_unity > 80 }
+					check_variable = {
+						TRI_unity_weekly_modifier > 2
+					}
+					check_variable = {
+						TRI_unity > 80
+					}
 				}
 			}
 			modifier = {
@@ -1077,23 +1400,34 @@ Eden_treaty_negotiation_decisions = {
 			modifier = {
 				factor = 0.75
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_proper_compromise = { #适当妥协
+	Eden_proper_compromise = {
+		#适当妥协
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_agreement
+			}
 		}
 		available = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					NOT = {
+						has_country_flag = Eden_treaty_no_unity_cost
+					}
 					original_tag = TRI
 				}
 				custom_override_tooltip = {
@@ -1101,12 +1435,16 @@ Eden_treaty_negotiation_decisions = {
 						localization_key = TRI_has_unity
 						UNITY = "2"
 					}
-					check_variable = { TRI_unity > 1.9 }
+					check_variable = {
+						TRI_unity > 1.9
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					NOT = {
+						has_country_flag = Eden_treaty_no_BOP_change
+					}
 					original_tag = GEH
 				}
 				power_balance_value = {
@@ -1120,15 +1458,21 @@ Eden_treaty_negotiation_decisions = {
 		complete_effect = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_unity_cost }
+					NOT = {
+						has_country_flag = Eden_treaty_no_unity_cost
+					}
 					original_tag = TRI
 				}
-				set_temp_variable = { TRI_unity_change = -2 }
+				set_temp_variable = {
+					TRI_unity_change = -2
+				}
 				TRI_change_unity = yes
 			}
 			else_if = {
 				limit = {
-					NOT = { has_country_flag = Eden_treaty_no_BOP_change }
+					NOT = {
+						has_country_flag = Eden_treaty_no_BOP_change
+					}
 					original_tag = GEH
 				}
 				add_power_balance_value = {
@@ -1137,28 +1481,40 @@ Eden_treaty_negotiation_decisions = {
 					tooltip_side = GEH_bp_chaos
 				}
 			}
-			set_temp_variable = { progress_change = 10 }
+			set_temp_variable = {
+				progress_change = 10
+			}
 			Eden_treaty_change_progress = yes
-			set_temp_variable = { weights_change = 20 }
+			set_temp_variable = {
+				weights_change = 20
+			}
 			Eden_treaty_change_weights = yes
 		}
 		ai_will_do = {
 			base = 4
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0
 				original_tag = TRI
 				OR = {
 					has_country_flag = Eden_treaty_no_unity_cost
-					check_variable = { TRI_unity_weekly_modifier < 0 }
-					check_variable = { TRI_unity < 50 }
+					check_variable = {
+						TRI_unity_weekly_modifier < 0
+					}
+					check_variable = {
+						TRI_unity < 50
+					}
 				}
 			}
 			modifier = {
@@ -1166,8 +1522,12 @@ Eden_treaty_negotiation_decisions = {
 				original_tag = TRI
 				OR = {
 					has_country_flag = Eden_treaty_no_unity_cost
-					check_variable = { TRI_unity_weekly_modifier > 2 }
-					check_variable = { TRI_unity > 80 }
+					check_variable = {
+						TRI_unity_weekly_modifier > 2
+					}
+					check_variable = {
+						TRI_unity > 80
+					}
 				}
 			}
 			modifier = {
@@ -1195,18 +1555,27 @@ Eden_treaty_negotiation_decisions = {
 			modifier = {
 				factor = 1.5
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_research_cooperation_2 = { #进一步促进科研合作
+	Eden_research_cooperation_2 = {
+		#进一步促进科研合作
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_agreement
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -1214,7 +1583,9 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		cancel_trigger = {
@@ -1227,36 +1598,53 @@ Eden_treaty_negotiation_decisions = {
 		days_remove = -1
 		fire_only_once = yes
 		complete_effect = {
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0.4
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-	Eden_economic_cooperation_2 = { #进一步加强经济合作
+	Eden_economic_cooperation_2 = {
+		#进一步加强经济合作
 		visible = {
-			check_variable = { global.Eden_treaty_phase = token:Eden_treaty_phase_agreement }
+			check_variable = {
+				global.Eden_treaty_phase = token:Eden_treaty_phase_agreement
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -1264,7 +1652,9 @@ Eden_treaty_negotiation_decisions = {
 					localization_key = Eden_treaty_has_weights_tt
 					WEIGHTS = "10"
 				}
-				check_variable = { Eden_treaty_weights > 9.9 }
+				check_variable = {
+					Eden_treaty_weights > 9.9
+				}
 			}
 		}
 		days_remove = 30
@@ -1276,43 +1666,53 @@ Eden_treaty_negotiation_decisions = {
 			has_global_flag = Eden_treaty_negotiation_completed
 		}
 		complete_effect = {
-			set_temp_variable = { weights_change = -10 }
+			set_temp_variable = {
+				weights_change = -10
+			}
 			Eden_treaty_change_weights = yes
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
 				factor = 0.5
-				check_variable = { Eden_treaty_weights < 50 }
+				check_variable = {
+					Eden_treaty_weights < 50
+				}
 			}
 			modifier = {
 				factor = 3
-				check_variable = { Eden_treaty_weights > 100 }
+				check_variable = {
+					Eden_treaty_weights > 100
+				}
 			}
 			modifier = {
 				factor = 0.4
 				if = {
-					limit = { original_tag = TRI }
-					check_variable = { Eden_treaty_weights < GEH.Eden_treaty_weights }
+					limit = {
+						original_tag = TRI
+					}
+					check_variable = {
+						Eden_treaty_weights < GEH.Eden_treaty_weights
+					}
 				}
 				else = {
-					check_variable = { Eden_treaty_weights < TRI.Eden_treaty_weights }
+					check_variable = {
+						Eden_treaty_weights < TRI.Eden_treaty_weights
+					}
 				}
 			}
 		}
 	}
-
-	
 	Eden_GEH_treaty_publicity = {
 		visible = {
 			original_tag = GEH
 			has_completed_focus = GEH_Support_allies
-
 		}
 		available = {
-			
 		}
 		days_remove = 30
 		days_re_enable = 30
@@ -1323,7 +1723,9 @@ Eden_treaty_negotiation_decisions = {
 			has_global_flag = Eden_treaty_negotiation_completed
 		}
 		remove_effect = {
-			set_temp_variable = { progress_change = 5 }
+			set_temp_variable = {
+				progress_change = 5
+			}
 			Eden_treaty_change_progress = yes
 		}
 		ai_will_do = {
@@ -1331,14 +1733,21 @@ Eden_treaty_negotiation_decisions = {
 		}
 	}
 }
+
 Eden_treaty_to_be_signed_decisions = {
 	Eden_treaty_to_be_signed = {
 		days_mission_timeout = 70
-		available = { always = no }
+		available = {
+			always = no
+		}
 		activation = {
-			NOT = { has_global_flag = Eden_treaty_has_been_signed }
+			NOT = {
+				has_global_flag = Eden_treaty_has_been_signed
+			}
 			hidden_trigger = {
-				NOT = { has_global_flag = WOR_ancient_cathedral_has_been_attacked }
+				NOT = {
+					has_global_flag = WOR_ancient_cathedral_has_been_attacked
+				}
 				OR = {
 					original_tag = GEH
 					original_tag = TRI
@@ -1357,7 +1766,9 @@ Eden_treaty_to_be_signed_decisions = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { original_tag = TRI }
+					limit = {
+						original_tag = TRI
+					}
 					ARI = {
 						country_event = Eden_pact.200
 					}
@@ -1367,22 +1778,2950 @@ Eden_treaty_to_be_signed_decisions = {
 	}
 }
 
+##古圣堂之战##
 Eden_cathedral_war = {
-	Eden_cathedral_war_goes_on = {
-		priority = 1000
+	Eden_cathedral_war_goes_on_TRI_GEH = {
+		priority = 9999
 		is_good = no
-		days_mission_timeout = 30
-		available = { 
+		days_mission_timeout = 28
+		available = {
 			always = no
+			OR = {
+				NOT = {
+					has_war_with = ARI
+				}
+				has_capitulated = yes
+			}
 		}
 		activation = {
 			always = no
 		}
-		cancel_trigger = {
-			has_war = no
+		timeout_effect = {
+			##计算厌战度效果
+			ECW_penalty_common_effect = yes
+			activate_mission = Eden_cathedral_war_goes_on_TRI_GEH
+		}
+		complete_effect = {
+			remove_dynamic_modifier = {
+				modifier = Eden_cathedral_war_support_dynamic_modifier
+			}
+		}
+	}
+	Eden_cathedral_war_goes_on_ARI = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 14
+		fixed_random_seed = no
+		available = {
+			always = no
+			OR = {
+				AND = {
+					TRI = {
+						has_capitulated = yes
+					}
+					GEH = {
+						has_capitulated = yes
+					}
+				}
+				has_war = no
+			}
+		}
+		activation = {
+			always = no
 		}
 		timeout_effect = {
-			activate_mission = Eden_cathedral_war_goes_on
+			##计算厌战度效果
+			ECW_penalty_common_effect = yes
+			activate_mission = Eden_cathedral_war_goes_on_ARI
+		}
+		complete_effect = {
+			remove_dynamic_modifier = {
+				modifier = Eden_cathedral_war_support_dynamic_modifier
+			}
+		}
+	}
+	####
+	ECW_to_the_front_propaganda = {
+		priority = 1008
+		allowed = {
+		}
+		days_remove = 7
+		days_re_enable = 365
+		cost = 10
+		modifier = {
+		}
+		remove_effect = {
+			ECW_positive_big_effect = yes
+		}
+		cancel_trigger = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = Eden_cathedral_war_support_dynamic_modifier
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				ECW_progress_var_is_low = yes
+			}
+			modifier = {
+				factor = 10
+				ECW_progress_var_is_very_low = yes
+			}
+		}
+	}
+	####
+	ECW_heroic_propaganda = {
+		priority = 1007
+		allowed = {
+		}
+		days_remove = 7
+		days_re_enable = 84
+		cost = 50
+		modifier = {
+		}
+		remove_effect = {
+			ECW_positive_medium_effect = yes
+		}
+		cancel_trigger = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = Eden_cathedral_war_support_dynamic_modifier
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				ECW_progress_var_is_low = yes
+			}
+			modifier = {
+				factor = 10
+				ECW_progress_var_is_very_low = yes
+			}
+		}
+	}
+	Eden_cathedral_war_support_dynamic_modifier_test = {
+		priority = 1000
+		available = {
+		}
+		complete_effect = {
+			initialize_ECW_effect = yes
+		}
+	}
+	ECW_clamp_value_test = {
+		priority = 1000
+		available = {
+			is_debug = yes
+		}
+		complete_effect = {
+			ECW_clamp_all_vars_effect = yes
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	ECW_initialize_ECW_states_effect_test = {
+		priority = 1000
+		available = {
+			is_debug = yes
+		}
+		complete_effect = {
+			initialize_ECW_states_effect = yes
+		}
+	}
+}
+
+#####################
+#######
+#####################
+#####################
+#####################
+
+Eden_cathedral_war_progress_collector = {
+	##关键区域
+	##古圣堂##
+	ECW_mission_controls_priority_target_140 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					140 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					140 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				140 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				140 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				140 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.20
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.19
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			140 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_140
+		}
+	}
+	##茶话会
+	ECW_mission_controls_priority_target_118 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					118 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					118 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				118 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				118 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				118 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.43
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.44
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			118 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_118
+		}
+	}
+
+	##万魔殿
+	ECW_mission_controls_priority_target_305 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					305 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					305 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				305 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				305 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				305 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.13
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.14
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			305 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_305
+		}
+	}
+	##格赫娜的重要区域##
+	###################
+	###风纪委员会本部###
+	ECW_mission_controls_priority_target_306 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					306 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					306 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				306 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				306 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				306 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.11
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.12
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			306 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_306
+		}
+	}
+
+	####部栋室本馆####
+	ECW_mission_controls_priority_target_187 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					187 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					187 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				187 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				187 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				187 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.9
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.10
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			187 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_187
+		}
+	}
+
+	##格黑娜学生广场
+	ECW_mission_controls_priority_target_184 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					184 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					184 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				184 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				184 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				184 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.15
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.16
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			184 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_184
+		}
+	}
+
+	##格赫娜的次要区域##
+	##和平之门广场
+	ECW_mission_controls_priority_target_141 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					141 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					141 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				141 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				141 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				141 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.1
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.2
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			141 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_141
+		}
+	}
+
+	##莱茵港口
+	ECW_mission_controls_priority_target_650 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					650 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					650 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				650 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				650 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				650 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.3
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.4
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			650 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_650
+		}
+	}
+
+	##金色音乐厅
+	ECW_mission_controls_priority_target_173 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					173 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					173 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				173 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				173 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				173 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.7
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.8
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			173 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_173
+		}
+	}
+
+	##格黑娜化工厂
+	ECW_mission_controls_priority_target_230 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					230 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					230 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				230 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				230 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				230 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.5
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.6
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			230 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_230
+		}
+	}
+
+	##洛林商业中心
+	ECW_mission_controls_priority_target_301 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					301 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					301 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				301 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				301 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				301 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.21
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.22
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			301 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_301
+		}
+	}
+
+	##格黑娜温泉酒店
+	ECW_mission_controls_priority_target_176 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = GEH
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					176 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					176 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一和阿里乌斯
+			if = {
+				limit = {
+					tag = TRI
+				}
+				176 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				176 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				176 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.17
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = TRI
+				}
+				news_event = {
+					id = BASCE.18
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				limit = {
+					tag = GEH
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			176 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_176
+		}
+	}
+
+	##圣三一的重要区域##
+	###################
+	###正实会会馆###
+	ECW_mission_controls_priority_target_55 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					55 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					55 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				55 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				55 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				55 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.31
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.32
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			55 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_55
+		}
+	}
+
+	##圣三一大教堂##
+	ECW_mission_controls_priority_target_116 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					116 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					116 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				116 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				116 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				116 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.29
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.30
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			116 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_116
+		}
+	}
+
+	##圣三一部室会馆##
+	ECW_mission_controls_priority_target_124 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					124 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					124 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				124 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				124 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				124 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.35
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.36
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			124 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_124
+		}
+	}
+
+	##圣三一中央图书馆
+	ECW_mission_controls_priority_target_113 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					113 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					113 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				113 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				113 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				113 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.39
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.40
+				}
+				ECW_capture_priority_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_priority_target_effect = yes
+			}
+			113 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_priority_target_113
+		}
+	}
+
+	##圣三一次要目标##
+	##圣三一重工业园##
+	ECW_mission_controls_secondary_target_348 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					348 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					348 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				348 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				348 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				348 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.23
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.24
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			348 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_secondary_target_348
+		}
+	}
+	##圣三一高新区##
+	ECW_mission_controls_secondary_target_135 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					135 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					135 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				135 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				135 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				135 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.25
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.26
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			135 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_secondary_target_135
+		}
+	}
+
+	##圣三一圣殿博物馆
+	ECW_mission_controls_secondary_target_127 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					127 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					127 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				127 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				127 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				127 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.27
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.28
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			127 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_secondary_target_127
+		}
+	}
+	##圣三一文化馆
+	ECW_mission_controls_secondary_target_54 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					54 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					54 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				54 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				54 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				54 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.33
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.34
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			54 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_secondary_target_54
+		}
+	}
+
+	##
+	ECW_mission_controls_secondary_target_122 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					122 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					122 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				122 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				122 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				122 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.37
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.38
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			122 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_secondary_target_122
+		}
+	}
+
+	##
+	ECW_mission_controls_secondary_target_107 = {
+		priority = 9999
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			##如果我是圣三一##
+			if = {
+				limit = {
+					tag = TRI
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = Eden_cathedral_war_support_dynamic_modifier
+					}
+				}
+			}
+
+			##如果我是格黑娜
+			if = {
+				limit = {
+					tag = GEH
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ECW_ally_with_enemy_tt
+						is_ally_with = TRI
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					107 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+
+			##如果我是阿里乌斯
+			if = {
+				limit = {
+					tag = ARI
+				}
+				OR = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = Eden_cathedral_war_support_dynamic_modifier
+						}
+					}
+					107 = {
+						has_state_flag = ECW_has_been_captured_state_flag
+					}
+				}
+			}
+		}
+		available = {
+			##如果我是圣三一
+			if = {
+				limit = {
+					tag = TRI
+				}
+				107 = {
+					has_state_flag = ECW_has_been_captured_state_flag
+				}
+			}
+
+			##如果我是格赫娜##
+			if = {
+				limit = {
+					tag = GEH
+				}
+				107 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+			##如果我是阿里乌斯##
+			if = {
+				limit = {
+					tag = ARI
+				}
+				107 = {
+					is_controlled_by = ROOT
+				}
+			}
+
+		}
+		complete_effect = {
+			if = {
+				##如果我是阿里乌斯
+				limit = {
+					tag = ARI
+				}
+				news_event = {
+					id = BASCE.41
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是格黑娜
+				limit = {
+					tag = GEH
+				}
+				news_event = {
+					id = BASCE.42
+				}
+				ECW_capture_secondary_target_effect = yes
+			}
+			else_if = {
+				##如果我是圣三一
+				limit = {
+					tag = TRI
+				}
+				ECW_loss_secondary_target_effect = yes
+			}
+			107 = {
+				set_state_flag = ECW_has_been_captured_state_flag
+			}
+		}
+		timeout_effect = {
+			activate_mission = ECW_mission_controls_secondary_target_107
 		}
 	}
 }

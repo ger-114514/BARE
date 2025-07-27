@@ -26,6 +26,12 @@ leader_traits = {
         custom_modifier_tooltip = TRI_nagisa_a_cool_victory_tt
     }
 
+    TRI_Ichika_rules_trait = {
+        war_support_factor = 0.1
+        intelligence_agency_defense = 1
+        custom_modifier_tooltip = TRI_Ichika_rules_trait_tt
+    }
+
 
     #追根溯源
     TRI_nagisa_Find_the_root = {

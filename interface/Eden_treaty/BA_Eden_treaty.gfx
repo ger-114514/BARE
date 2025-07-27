@@ -19,4 +19,25 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 		steps = 100
 	}
+
+    ###古圣堂之战的资源####
+    progressbartype = {
+		name = "GFX_bare_blue_progressbar_399"
+		textureFile1 = "gfx/interface/decisions/sgui_component/bare_progress_bar_blue.dds"
+		textureFile2 = "gfx/interface/decisions/sgui_component/bare_progress_bar_background.dds"
+		size = {
+			x = 399
+			y = 38
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+		
+		#steps = 100
+	}
+
+    spriteType = {
+        name = "GFX_Eden_cathedral_war_decision_picture"
+        texturefile = "gfx/interface/decisions/eden_treaty/Eden_cathedral_war_decision_picture.dds"
+    }
+
 }

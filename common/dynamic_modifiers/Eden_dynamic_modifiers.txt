@@ -8,3 +8,22 @@ Eden_treaty_modifier = {
 	industrial_capacity_factory = Eden_treaty_modifier_industrial_capacity_factory
 	research_speed_factor = Eden_treaty_modifier_research_speed_factor
 }
+
+##古圣堂之战动态修正
+Eden_cathedral_war_support_dynamic_modifier = { 
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+	
+	stability_factor = ECW_stability_factor
+	war_support_factor = ECW_warsupport_factor
+	production_factory_max_efficiency_factor = ECW_production_factory_max_efficiency_factor
+	army_morale_factor = ECW_army_moral_factor
+	army_org_factor =ECW_army_org_factor
+	army_defence_factor = ECW_army_defence_fator
+	#org_loss_when_moving = ECW_org_loss_moving_factor
+	#breakthrough_factor = ECW_breakthrough_factor
+	#army_attack_factor = ECW_army_attack_factor
+	
+	#pocket_penalty = ECW_pocket_penalty
+	#max_planning_factor = ECW_max_planning_fator
+}

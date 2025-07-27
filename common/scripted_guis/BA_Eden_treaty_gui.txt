@@ -23,4 +23,24 @@ scripted_gui = {
 			}
 		}
 	}
+
+	##古圣堂之战的决议SGUI
+	Eden_cathedral_war_decision_ui_progressbar_sg = {
+		context_type = decision_category
+		window_name = "Eden_cathedral_war_decision_ui_progressbar"
+
+		properties = {
+			ECW_progressbar_ARI = {
+				frame = ARI.ECW_progress_var
+			}
+
+			ECW_progressbar_TRI = {
+				frame = TRI.ECW_progress_var
+			}
+
+			ECW_progressbar_GEH = {
+				frame = GEH.ECW_progress_var
+			}
+		}
+	}
 }

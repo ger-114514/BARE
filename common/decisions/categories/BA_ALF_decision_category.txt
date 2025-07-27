@@ -1,0 +1,13 @@
+ALF_military_reform_decision_category = {
+	icon = generic_research
+	allowed = {
+		original_tag = ALF
+	}
+	visible = {
+		original_tag = ALF
+	}
+	scripted_gui = ALF_military_reform_decision_ui_progressbar_sg
+	visible_when_empty = yes
+
+	priority = 9999
+}

@@ -57,3 +57,18 @@ country_event = {
 		TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
 	}
 }
+
+##一花彩蛋##
+add_namespace = easter_egg_test
+country_event = {
+	id = easter_egg_test.1
+	picture = GFX_common_event_gui_test
+	title = easter_egg_test.1.t
+	desc = easter_egg_test.1.desc
+	is_triggered_only = yes
+
+	option = {
+		name = easter_egg_test.1.a
+		promote_character = TRI_ichika
+	}
+}

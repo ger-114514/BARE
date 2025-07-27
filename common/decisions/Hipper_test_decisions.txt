@@ -157,6 +157,19 @@ Hipper_test_decisions_categories = {
 			BARE_SuperEvent_2_effect_7 = yes
 		}
 	}
+
+	###查看结算警告###
+	check_war_end_flavor_hipp = {
+		visible = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		complete_effect = {
+			TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_TRI_FOR_CAPITULATION = yes
+		}
+	}
 } 
 
 CEN_Operation_Uranus_categories = {

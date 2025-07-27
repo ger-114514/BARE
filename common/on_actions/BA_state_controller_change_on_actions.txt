@@ -1,0 +1,7 @@
+on_actions = {
+	#ROOT is new controller, FROM is old controller, FROM.FROM is state ID.
+	##我想了想还是不用这个on_actions了，我不如在决议写
+	on_state_control_changed = {
+		
+	}
+}

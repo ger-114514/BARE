@@ -1,0 +1,725 @@
+add_namespace = BASCE
+news_event = {
+	id = BASCE.99
+    picture = GFX_BA_news_5
+    title = BASCE.99.t
+    desc = BASCE.99.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.99.a
+	}
+}
+##本地化内容在news event文件##
+##古圣堂-和平之门广场-阿里乌斯
+news_event = {
+	id = BASCE.1
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.1.t
+    desc = BASCE.1.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.1.a
+	}
+}
+
+##古圣堂-和平之门广场-圣三一
+news_event = {
+	id = BASCE.2
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.2.t
+    desc = BASCE.2.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+    
+
+	option = {
+		name = BASCE.2.a
+	}
+}
+
+##莱茵港口-阿里乌斯
+news_event = {
+	id = BASCE.3
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.3.t
+    desc = BASCE.3.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.3.a
+	}
+}
+
+##莱茵港口-圣三一
+news_event = {
+	id = BASCE.4
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.4.t
+    desc = BASCE.4.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.4.a
+	}
+}
+
+##格黑娜化工厂-阿里乌斯
+news_event = {
+	id = BASCE.5
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.5.t
+    desc = BASCE.5.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.5.a
+	}
+}
+
+##格黑娜化工厂-圣三一
+news_event = {
+	id = BASCE.6
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.6.t
+    desc = BASCE.6.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.6.a
+	}
+}
+
+##金色音乐厅-阿里乌斯
+news_event = {
+	id = BASCE.7
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.7.t
+    desc = BASCE.7.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.7.a
+	}
+}
+
+##金色音乐厅-圣三一
+news_event = {
+	id = BASCE.8
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.8.t
+    desc = BASCE.8.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.8.a
+	}
+}
+
+##格黑娜部栋室本馆-阿里乌斯
+news_event = {
+	id = BASCE.9
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.9.t
+    desc = BASCE.9.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.9.a
+	}
+}
+
+##格黑娜部栋室本馆-圣三一
+news_event = {
+	id = BASCE.10
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.10.t
+    desc = BASCE.10.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.10.a
+	}
+}
+
+##格黑娜风纪委总部-阿里乌斯
+news_event = {
+	id = BASCE.11
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.11.t
+    desc = BASCE.11.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.11.a
+	}
+}
+
+##格黑娜风纪委总部-圣三一
+news_event = {
+	id = BASCE.12
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.12.t
+    desc = BASCE.12.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.12.a
+	}
+}
+
+##格黑娜万魔殿-阿里乌斯
+news_event = {
+	id = BASCE.13
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.13.t
+    desc = BASCE.13.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.13.a
+	}
+}
+
+##格黑娜万魔殿-圣三一
+news_event = {
+	id = BASCE.14
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.14.t
+    desc = BASCE.14.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.14.a
+	}
+}
+
+##格黑娜学生广场-阿里乌斯
+news_event = {
+	id = BASCE.15
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.15.t
+    desc = BASCE.15.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.15.a
+	}
+}
+
+##格黑娜学生广场-圣三一
+news_event = {
+	id = BASCE.16
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.16.t
+    desc = BASCE.16.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.16.a
+	}
+}
+
+##格黑娜温泉酒店
+news_event = {
+	id = BASCE.17
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.17.t
+    desc = BASCE.17.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.17.a
+	}
+}
+
+##格黑娜温泉酒店
+news_event = {
+	id = BASCE.18
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.18.t
+    desc = BASCE.18.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.18.a
+	}
+}
+
+##古圣堂-圣三一
+news_event = {
+	id = BASCE.19
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.19.t
+    desc = BASCE.19.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.19.a
+	}
+}
+
+news_event = {
+	id = BASCE.20
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.20.t
+    desc = BASCE.20.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.20.a
+	}
+}
+
+##洛林商业中心-阿里乌斯
+news_event = {
+	id = BASCE.21
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.21.t
+    desc = BASCE.21.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.21.a
+	}
+}
+
+##洛林商业中心-圣三一
+news_event = {
+	id = BASCE.22
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.22.t
+    desc = BASCE.22.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.22.a
+	}
+}
+
+
+##########
+#圣三一地区
+##########
+
+##圣三一重工业园-阿里乌斯
+news_event = {
+	id = BASCE.23
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.23.t
+    desc = BASCE.23.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.23.a
+	}
+}
+
+##圣三一工业园-格赫娜
+news_event = {
+	id = BASCE.24
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.24.t
+    desc = BASCE.24.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.24.a
+	}
+}
+
+##圣三一高新工业园-阿里乌斯
+news_event = {
+	id = BASCE.25
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.25.t
+    desc = BASCE.25.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.25.a
+	}
+}
+
+##圣三一高新工业园-格黑娜
+news_event = {
+	id = BASCE.26
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.26.t
+    desc = BASCE.26.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.26.a
+	}
+}
+
+##圣三一圣殿博物馆-阿里乌斯##
+news_event = {
+	id = BASCE.27
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.27.t
+    desc = BASCE.27.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.27.a
+	}
+}
+
+##圣三一圣殿博物馆-格黑娜##
+news_event = {
+	id = BASCE.28
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.28.t
+    desc = BASCE.28.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.28.a
+	}
+}
+
+##圣三一大教堂-阿里乌斯
+news_event = {
+	id = BASCE.29
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.29.t
+    desc = BASCE.29.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.29.a
+	}
+}
+
+##圣三一大教堂-格黑娜
+news_event = {
+	id = BASCE.30
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.30.t
+    desc = BASCE.30.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.30.a
+	}
+}
+
+##正实会总部-阿里乌斯
+news_event = {
+	id = BASCE.31
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.31.t
+    desc = BASCE.31.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.31.a
+	}
+}
+
+##正实会总部-格黑娜
+news_event = {
+	id = BASCE.32
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.32.t
+    desc = BASCE.32.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.32.a
+	}
+}
+
+##历史陈列馆-阿里乌斯
+news_event = {
+	id = BASCE.33
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.33.t
+    desc = BASCE.33.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.33.a
+	}
+}
+
+##历史陈列馆-格黑娜
+news_event = {
+	id = BASCE.34
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.34.t
+    desc = BASCE.34.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.34.a
+	}
+}
+
+##圣三一部室大堂-阿里乌斯
+news_event = {
+	id = BASCE.35
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.35.t
+    desc = BASCE.35.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.35.a
+	}
+}
+
+##圣三一部室大堂-格黑娜
+news_event = {
+	id = BASCE.36
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.36.t
+    desc = BASCE.36.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.36.a
+	}
+}
+
+##圣三一古书馆-阿里乌斯
+news_event = {
+	id = BASCE.37
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.37.t
+    desc = BASCE.37.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.37.a
+	}
+}
+
+
+##圣三一古书馆-格黑娜
+news_event = {
+	id = BASCE.38
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.38.t
+    desc = BASCE.38.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.38.a
+	}
+}
+
+##中央图书馆-阿里乌斯
+news_event = {
+	id = BASCE.39
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.39.t
+    desc = BASCE.39.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.39.a
+	}
+}
+
+##中央图书馆-格黑娜
+news_event = {
+	id = BASCE.40
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.40.t
+    desc = BASCE.40.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.40.a
+	}
+}
+
+##天鹅堡-阿里乌斯
+news_event = {
+	id = BASCE.41
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.41.t
+    desc = BASCE.41.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.41.a
+	}
+}
+
+##天鹅堡-格赫娜
+news_event = {
+	id = BASCE.42
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.42.t
+    desc = BASCE.42.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.42.a
+	}
+}
+
+##茶话会-阿里乌斯
+news_event = {
+	id = BASCE.43
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.43.t
+    desc = BASCE.43.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.43.a
+	}
+}
+
+##茶话会-格赫娜
+news_event = {
+	id = BASCE.44
+    picture = GFX_BA_news_cathedral_war
+    title = BASCE.44.t
+    desc = BASCE.44.d
+
+    major = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+		name = BASCE.44.a
+	}
+}

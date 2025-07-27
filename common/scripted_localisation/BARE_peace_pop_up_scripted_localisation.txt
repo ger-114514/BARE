@@ -17,6 +17,30 @@ defined_text = {
 		}
 		localization_key = BPW_TRI_wins_ARI_in_Total_War_DESC
 	}
+
+	text = {
+		trigger = {
+			event_target:winning_country = {
+				tag = ARI
+			}
+			event_target:losing_country = {
+				tag = GEH
+			}
+		}
+		localization_key = BPW_ARI_wins_GEH_in_Total_War_DESC
+	}
+
+	text = {
+		trigger = {
+			event_target:winning_country = {
+				tag = ARI
+			}
+			event_target:losing_country = {
+				tag = TRI
+			}
+		}
+		localization_key = BPW_ARI_wins_TRI_in_Total_War_DESC
+	}
 	
 	text = {
 	    localization_key = BPW_DEFAULT_WAR_DESC
@@ -37,6 +61,30 @@ defined_text = {
 			}
 		}
 		localization_key = BPW_TRI_wins_ARI_in_Total_War_FLAVOR
+	}
+
+	text = {
+		trigger = {
+			event_target:winning_country = {
+				tag = ARI
+			}
+			event_target:losing_country = {
+				tag = GEH
+			}
+		}
+		localization_key = BPW_ARI_wins_GEH_in_Total_War_FLAVOR
+	}
+
+	text = {
+		trigger = {
+			event_target:winning_country = {
+				tag = ARI
+			}
+			event_target:losing_country = {
+				tag = TRI
+			}
+		}
+		localization_key = BPW_ARI_wins_TRI_in_Total_War_FLAVOR
 	}
 	##默认##
 	text = {
