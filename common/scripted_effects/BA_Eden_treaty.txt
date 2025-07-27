@@ -284,6 +284,9 @@ Cathedral_war_ARI_cathedral_fall = {
 			add_to_faction = GEH
 		}
 	}
+	
+
+
 	Eden_treaty_formally_signed = yes
 }
 Cathedral_war_ARI_defeated = {
@@ -344,6 +347,9 @@ Cathedral_war_ARI_defeated = {
 	###结束###
 	load_focus_tree = ARI_NULL
 	country_lock_all_division_template = yes
+	ARI = {
+		country_event = ARI_ZJ.1
+	}
 	add_ideas = {
 		ARI_JSL
 	}

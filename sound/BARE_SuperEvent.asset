@@ -16,6 +16,14 @@ soundeffect = {
 	}
 }
 
+soundeffect = {
+	name = BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
+	}
+}
+
 sound =
 {
 	name = "BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE"
@@ -31,10 +39,18 @@ sound =
 }
 
 
+sound =
+{
+	name = "BARE_SuperEvent_Sound_SECOND_EDEN_TREATY"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_SECOND_EDEN_TREATY.wav"
+}
+
+
 category = {
 	name = "BARE_SuperEvent_Sound"
 	soundeffects = {
 		BARE_SuperEvent_Sound_HELP_HOSHINO
 		BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
+		BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
 	}
 }

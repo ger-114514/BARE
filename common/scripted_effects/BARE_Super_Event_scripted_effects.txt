@@ -25,7 +25,8 @@ BARE_SuperEvent_1_effect_1 = {
 		limit = { is_ai = no }
 		set_temp_variable = { BARE_SuperEvent_1_temp_var = token:BARE_SuperEvent_1_SECOND_EDEN_TREATY }
 		set_variable = { BARE_SuperEvent_1_var = BARE_SuperEvent_1_temp_var }
-
+		scoped_sound_effect = BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
+		
 		
 	}
 }
