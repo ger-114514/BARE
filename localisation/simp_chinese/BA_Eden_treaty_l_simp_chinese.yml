@@ -117,7 +117,12 @@
 #####古圣堂之战#####
 ##决议##
  Eden_cathedral_war: "阿里乌斯复仇战争"
- Eden_cathedral_war_desc: "沉淀在历史中的疏漏终于铸就大错：\n\n阿里乌斯已经再次崛起，并开始执行它天命所归的这场复仇。只有一方能在这场可怕的冲突中站到最后——对所有卷入这场动荡中的人来说，已再无退路可言。\n\n\n§Y胜利条件§!：控制所有§G关键目标§!。\n§Y注意：§!控制§R主要目标§!与§C次要目标§!将有助于赢得这场战争。\n\n[ROOT.Cathedral_war_decision_desc_sl]\n"
+ Eden_cathedral_war_desc: "沉淀在历史中的疏漏终于铸就大错：\n\n阿里乌斯已经再次崛起，并开始执行它天命所归的这场复仇。只有一方能在这场可怕的冲突中站到最后——对所有卷入这场动荡中的人来说，已再无退路可言。[Eden_cathedral_war_ARI]\n\n\n§Y胜利条件§!：[Eden_victory_trigger_text]\n§Y注意：§!控制§R主要目标§!与§C次要目标§!将有助于赢得这场战争。\n\n[ROOT.Cathedral_war_decision_desc_sl]\n"
+ Eden_cathedral_war_ARI: "\n\n\n§1先提醒下，什么复仇和崛起什么的，那只是让那群工具卖力打仗的借口而已。夫人希望通过突袭，尽可能多的俘获学生来完成她的计划，为此，我们需要击败圣三一和格黑娜其中之一，这样我们就能推进我们的计划，同时也能彻底解决那群学生的士气问题-如果战线长时间僵持，她们的士气可能会崩溃，同时我们也会失去对情况的控制。§!"
+
+
+ Eden_victory_trigger_text_TRI: "控制所有§G关键目标§!。"
+ Eden_victory_trigger_text_ARI: "击败圣三一和格黑娜其中之一，完成国策§Y最后一步§!，并完成夫人的计划，尽可能多的控制§G关键目标§!以达成目标。"
 
  Cathedral_war_state_status_control_by_us: "    --[THIS.GetName]:    §G在我方控制下§!"
  Cathedral_war_state_status_control_by_ally: "    --[THIS.GetName]:    §C在盟友控制下§!"
