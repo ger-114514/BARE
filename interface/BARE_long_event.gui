@@ -79,6 +79,7 @@ guitypes = {
 			name = "BARE_long_event_select_bg_button"
 			position = { x = 67 y = 1 }
 			quadTextureSprite = "GFX_BARE_long_event_select_bg"
+			pdx_tooltip = "BARE_long_event_button_effect_text"
 			clicksound = click_checkbox
 		}
 
@@ -90,6 +91,7 @@ guitypes = {
             font = "FZLanTYJW_16"
             borderSize = {x = 0 y = 0}
             text = "BARE_long_event_button_text"
+			alwaysTransparent = yes
             format = center
             maxWidth = 214
             maxHeight = 80

@@ -718,185 +718,195 @@ country_event = { #暗处涌流
     is_triggered_only = yes
     option = {
         name = TRI_coup.30.a
-        country_event = {
-            id = TRI_coup.31
-            days = 3
-        }
-    }
-}
-country_event = { #大师技艺
-    id = TRI_coup.31
-    title = TRI_coup.31.t
-    desc = TRI_coup.31.desc
-    picture = GFX_TRI_event_3
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.31.a
-        country_event = {
-            id = TRI_coup.32
-            days = 3
-        }
-    }
-}
-country_event = { #解脱之途
-    id = TRI_coup.32
-    title = TRI_coup.32.t
-    desc = TRI_coup.32.desc
-    picture = GFX_TRI_event_14
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.32.a
-        country_event = {
-            id = TRI_coup.33
-            days = 3
-        }
-    }
-}
-country_event = { #意外
-    id = TRI_coup.33
-    title = TRI_coup.33.t
-    desc = TRI_coup.33.desc
-    #picture =
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.33.a
-        country_event = {
-            id = TRI_coup.34
-            days = 3
-        }
-    }
-}
-country_event = { #死斗
-    id = TRI_coup.34
-    title = TRI_coup.34.t
-    desc = TRI_coup.34.desc
-    #picture =
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.34.a
-        country_event = {
-            id = TRI_coup.35
-            days = 3
-        }
-    }
-}
-country_event = { #不虞之隙
-    id = TRI_coup.35
-    title = TRI_coup.35.t
-    desc = TRI_coup.35.desc
-    #picture =
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.35.a
-        country_event = {
-            id = TRI_coup.36
-            days = 3
-        }
-    }
-}
-country_event = { #最终时刻·其一
-    id = TRI_coup.36
-    title = TRI_coup.36.t
-    desc = TRI_coup.36.desc
-    #picture =
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.36.a
-        country_event = {
-            id = TRI_coup.37
-            days = 3
-        }
-    }
-}
-country_event = { #最终时刻·其二
-    id = TRI_coup.37
-    title = TRI_coup.37.t
-    desc = TRI_coup.37.desc
-    #picture =
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.37.a
+        # country_event = {
+        #     id = TRI_coup.31
+        #     days = 3
+        # }
         hidden_effect = {
-            mark_focus_tree_layout_dirty = yes
-            add_to_array = { TRI_hoshubu_focus_line = token:TRI_moon_fall_sun_rise }
-            activate_shine_on_focus = TRI_moon_fall_sun_rise
-            country_event = {
-                id = TRI_autofocus.1
-                days = 7
-            }
-        }
-    }
-}
-country_event = { #风卷云散见月升
-    id = TRI_coup.38
-    title = TRI_coup.38.t
-    desc = TRI_coup.38.desc
-    #picture =
-
-    is_triggered_only = yes
-    option = {
-        name = TRI_coup.38.a
-        set_country_flag = TRI_seia_available
-        custom_effect_tooltip = {
-            localization_key = advisor_available_tt
-            CHAR = TRI_seia_name
-            JOB = political_advisor
-        }
-        TRI_mika = { custom_effect_tooltip = TRI_mika_arrested_tt }
-        custom_effect_tooltip = TRY_event_add_mika_to_survey
-        set_variable = { leader@TRI_parliament_association_0 = token:TRI_mika_arrested }
-        set_country_flag = TRI_mika_arrested
-        hidden_effect = {
-            ARI = {
-                country_event = ARI_coup.8
-            }
-        }
-    }
-}
-country_event = { #全军覆没
-    id = ARI_coup.8
-    title = ARI_coup.8.t
-    desc = ARI_coup.8.desc
-    picture = GFX_TRI_event_10
-    immediate = {
-        hidden_effect = {
-            country_event = {
-                id = ARI_coup.9
+             country_event = { #长事件
+                id = bare_long_text_hidden_event.7
                 days = 3
             }
         }
     }
-    is_triggered_only = yes
-    option = {
-        name = ARI_coup.8.a
-    }
 }
-country_event = { #突出重围
-    id = ARI_coup.9
-    title = ARI_coup.9.t
-    desc = ARI_coup.9.desc
-    picture = GFX_TRI_event_10
-    immediate = {
-        hidden_effect = {
-            country_event = {
-                id = ARI_coup.10
-                days = 3
-            }
-        }
-    }
-    is_triggered_only = yes
-    option = {
-        name = ARI_coup.9.a
-        add_manpower = -5000
-    }
-}
+#长事件
+# country_event = { #大师技艺
+#     id = TRI_coup.31
+#     title = TRI_coup.31.t
+#     desc = TRI_coup.31.desc
+#     picture = GFX_TRI_event_3
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.31.a
+#         country_event = {
+#             id = TRI_coup.32
+#             days = 3
+#         }
+#     }
+# }
+# country_event = { #解脱之途
+#     id = TRI_coup.32
+#     title = TRI_coup.32.t
+#     desc = TRI_coup.32.desc
+#     picture = GFX_TRI_event_14
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.32.a
+#         country_event = {
+#             id = TRI_coup.33
+#             days = 3
+#         }
+#     }
+# }
+# country_event = { #意外
+#     id = TRI_coup.33
+#     title = TRI_coup.33.t
+#     desc = TRI_coup.33.desc
+#     #picture =
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.33.a
+#         country_event = {
+#             id = TRI_coup.34
+#             days = 3
+#         }
+#     }
+# }
+# country_event = { #死斗
+#     id = TRI_coup.34
+#     title = TRI_coup.34.t
+#     desc = TRI_coup.34.desc
+#     #picture =
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.34.a
+#         country_event = {
+#             id = TRI_coup.35
+#             days = 3
+#         }
+#     }
+# }
+# country_event = { #不虞之隙
+#     id = TRI_coup.35
+#     title = TRI_coup.35.t
+#     desc = TRI_coup.35.desc
+#     #picture =
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.35.a
+#         country_event = {
+#             id = TRI_coup.36
+#             days = 3
+#         }
+#     }
+# }
+# country_event = { #最终时刻·其一
+#     id = TRI_coup.36
+#     title = TRI_coup.36.t
+#     desc = TRI_coup.36.desc
+#     #picture =
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.36.a
+#         country_event = {
+#             id = TRI_coup.37
+#             days = 3
+#         }
+#     }
+# }
+# country_event = { #最终时刻·其二
+#     id = TRI_coup.37
+#     title = TRI_coup.37.t
+#     desc = TRI_coup.37.desc
+#     #picture =
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.37.a
+#         hidden_effect = {
+#             mark_focus_tree_layout_dirty = yes
+#             add_to_array = { TRI_hoshubu_focus_line = token:TRI_moon_fall_sun_rise }
+#             activate_shine_on_focus = TRI_moon_fall_sun_rise
+#             country_event = {
+#                 id = TRI_autofocus.1
+#                 days = 7
+#             }
+#         }
+#     }
+# }
+# country_event = { #风卷云散见月升
+#     id = TRI_coup.38
+#     title = TRI_coup.38.t
+#     desc = TRI_coup.38.desc
+#     #picture =
+
+#     is_triggered_only = yes
+#     option = {
+#         name = TRI_coup.38.a
+#         set_country_flag = TRI_seia_available
+#         custom_effect_tooltip = {
+#             localization_key = advisor_available_tt
+#             CHAR = TRI_seia_name
+#             JOB = political_advisor
+#         }
+#         TRI_mika = { custom_effect_tooltip = TRI_mika_arrested_tt }
+#         custom_effect_tooltip = TRY_event_add_mika_to_survey
+#         set_variable = { leader@TRI_parliament_association_0 = token:TRI_mika_arrested }
+#         set_country_flag = TRI_mika_arrested
+#         hidden_effect = {
+#             ARI = {
+#                 #country_event = ARI_coup.8
+#                 country_event = bare_long_text_hidden_event.5
+#             }
+#         }
+#     }
+# }
+#长事件
+# country_event = { #全军覆没
+#     id = ARI_coup.8
+#     title = ARI_coup.8.t
+#     desc = ARI_coup.8.desc
+#     picture = GFX_TRI_event_10
+#     immediate = {
+#         hidden_effect = {
+#             country_event = {
+#                 id = ARI_coup.9
+#                 days = 3
+#             }
+#         }
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ARI_coup.8.a
+#     }
+# }
+#长事件
+# country_event = { #突出重围
+#     id = ARI_coup.9
+#     title = ARI_coup.9.t
+#     desc = ARI_coup.9.desc
+#     picture = GFX_TRI_event_10
+#     immediate = {
+#         hidden_effect = {
+#             country_event = {
+#                 id = ARI_coup.10
+#                 days = 3
+#             }
+#         }
+#     }
+#     is_triggered_only = yes
+#     option = {
+#         name = ARI_coup.9.a
+#         add_manpower = -5000
+#     }
+# }
 country_event = { #“旅者”行动总结-基本失败
     id = ARI_coup.10
     title = ARI_coup.10.t
