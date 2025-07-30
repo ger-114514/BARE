@@ -202,6 +202,15 @@ leader_traits = {
 
     }
 
+    #善意的假面
+    friendly_mask = {
+        random = no
+
+        political_power_gain = 0.05
+        stability_factor = 0.05
+
+    }
+
     #寡言的游击专家
     slience_guerrilla_warfare_master = {
         random = no

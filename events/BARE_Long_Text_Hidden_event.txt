@@ -247,9 +247,9 @@ country_event = {
 
 
 
-country_event = {
+country_event = { #大师技艺
     id = bare_long_text_hidden_event.7
-    title = bare_long_text_hidden_event.7.t
+    title = TRI_coup.31.t
     desc = bare_long_text_hidden_event.7.d
 
 	is_triggered_only = yes
@@ -289,9 +289,9 @@ country_event = {
 }
 
 
-country_event = {
+country_event = { #解脱之途
     id = bare_long_text_hidden_event.8
-    title = bare_long_text_hidden_event.8.t
+    title = TRI_coup.32.t
     desc = bare_long_text_hidden_event.8.d
 
 	is_triggered_only = yes
@@ -313,14 +313,28 @@ country_event = {
 
 		country_event = {
 			id = bare_long_text_hidden_event.9
-			days = 3
+			days = 7
 		}
 
 		country_event = {
 			id = bare_long_text_hidden_event.114514
 			hours = 4
 		}
-
+		#启用政治顾问：阿慈谷日富美
+        add_advisor_role = {
+            character = TRI_hifumi
+            activate = no
+            advisor = { 
+                slot = political_advisor
+                idea_token = TRI_hifumi_pa
+                traits = {
+                    ordinary_girl
+                }
+                ai_will_do = {
+                    base = 1
+                }
+            }
+        }
 	}
     option = {
 		name = bare_hidden_event.8.a
@@ -332,9 +346,9 @@ country_event = {
 
 
 
-country_event = {
+country_event = { #意外
     id = bare_long_text_hidden_event.9
-    title = bare_long_text_hidden_event.9.t
+    title = TRI_coup.33.t
     desc = bare_long_text_hidden_event.9.d
 
 	is_triggered_only = yes
@@ -356,7 +370,7 @@ country_event = {
 
 		country_event = {
 			id = bare_long_text_hidden_event.10
-			days = 3
+			days = 7
 		}
 
 		country_event = {
@@ -375,9 +389,9 @@ country_event = {
 
 
 
-country_event = {
+country_event = { #死斗
     id = bare_long_text_hidden_event.10
-    title = bare_long_text_hidden_event.10.t
+    title = TRI_coup.34.t
     desc = bare_long_text_hidden_event.10.d
 
 	is_triggered_only = yes
@@ -399,7 +413,7 @@ country_event = {
 
 		country_event = {
 			id = bare_long_text_hidden_event.11
-			days = 3
+			days = 7
 		}
 
 		country_event = {
@@ -418,9 +432,9 @@ country_event = {
 
 
 
-country_event = {
+country_event = { #不虞之隙
     id = bare_long_text_hidden_event.11
-    title = bare_long_text_hidden_event.11.t
+    title = TRI_coup.35.t
     desc = bare_long_text_hidden_event.11.d
 
 	is_triggered_only = yes
@@ -442,7 +456,7 @@ country_event = {
 
 		country_event = {
 			id = bare_long_text_hidden_event.12
-			days = 3
+			days = 7
 		}
 
 		country_event = {
@@ -462,9 +476,9 @@ country_event = {
 
 
 
-country_event = {
+country_event = { #最终时刻·其一
     id = bare_long_text_hidden_event.12
-    title = bare_long_text_hidden_event.12.t
+    title = TRI_coup.36.t
     desc = bare_long_text_hidden_event.12.d
 
 	is_triggered_only = yes
@@ -504,9 +518,9 @@ country_event = {
 }
 
 
-country_event = {
+country_event = { #最终时刻·其二
     id = bare_long_text_hidden_event.13
-    title = bare_long_text_hidden_event.13.t
+    title = TRI_coup.37.t
     desc = bare_long_text_hidden_event.13.d
 
 	is_triggered_only = yes
@@ -555,9 +569,9 @@ country_event = {
     }
 }
 
-country_event = {
+country_event = { #风卷云散见月升
     id = bare_long_text_hidden_event.14
-    title = bare_long_text_hidden_event.14.t
+    title = TRI_coup.38.t
     desc = bare_long_text_hidden_event.14.d
 
 	is_triggered_only = yes
@@ -593,11 +607,6 @@ country_event = {
                 country_event = bare_long_text_hidden_event.5
             }
         }
-
-		country_event = {
-			id = bare_long_text_hidden_event.14
-			days = 3
-		}
 
 		country_event = {
 			id = bare_long_text_hidden_event.114514

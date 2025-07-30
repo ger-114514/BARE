@@ -1022,10 +1022,7 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
-					country_event = {
-						id = TRI_events.44
-						days = 14
-					}
+					country_event = TRI_hoshubu_exam.1
 				}		
 			}
 			focus = { #无心插柳
@@ -1049,7 +1046,6 @@ focus_tree = {
 				y = 1
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				select_effect = {
-					country_event = TRI_coup.2
 				}
 				completion_reward = {
 					
@@ -1076,6 +1072,7 @@ focus_tree = {
 						}
 					}
 					country_event = TRI_events.43
+					country_event = TRI_coup.2
 					
 					custom_effect_tooltip = TRI_investigation_in_care_alt_ns_tt
 				}			
@@ -1102,22 +1099,13 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					add_political_power = 50
-					country_event = TRI_coup.4
-					#启用政治顾问：阿慈谷日富美
-					add_advisor_role = {
-						character = TRI_hifumi
-						activate = no
-						advisor = { 
+					TRI_hifumi = {
+						add_trait = {
 							slot = political_advisor
-							idea_token = TRI_hifumi_pa
-							traits = {
-								ordinary_girl
-							}
-							ai_will_do = {
-								base = 1
-							}
+							trait = friendly_mask
 						}
 					}
+					country_event = TRI_coup.4
 					#触发事件移除桐藤渚特质【追根溯源】
 					effect_tooltip = { 
 						custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
@@ -1344,7 +1332,13 @@ focus_tree = {
 				search_filters = { FOCUS_FILTER_POLITICAL }
 				completion_reward = {
 					TRI_unity_increase_5 = yes
-					country_event = TRI_coup.38
+					TRI_hifumi = {
+						add_trait = {
+							slot = political_advisor
+							trait = friendly_mask
+						}
+					}
+					country_event = bare_long_text_hidden_event.14
 				}
 			}
 
@@ -2387,6 +2381,11 @@ focus_tree = {
 				set_temp_variable = { bill = token:TRI_Bill_of_emergent_motion }
 				TRI_submit_the_bill = yes
 				custom_effect_tooltip = eden_step_4_to_5_desc
+				custom_effect_tooltip = {
+					localization_key = advisor_available_tt
+					CHAR = TRI_koharu_name
+					JOB = political_advisor
+				}
 			}			
 		}
 		focus = { #重铸前线
@@ -2502,7 +2501,6 @@ focus_tree = {
 					CHAR = TRI_hanako_name
 					JOB = political_advisor
 				}
-				set_country_flag = TRI_koharu_advisor_available
 				#获得任务：最后的阻碍：消灭阿里乌斯。当阿里乌斯被消灭后,30天,将会触发一个奖励事件(使得桐藤渚的特质得到提升。)
 				hidden_effect = {
 					TRI_BOP_calculate_house_seats = yes
