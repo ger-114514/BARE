@@ -656,6 +656,16 @@ news_event = { #联邦学生会介入
 			NOT = {
 				original_tag = ARI
 			}
+			is_ai = no
+		}
+		if = {
+			limit = {
+				not = {
+					has_global_flag = BARE_World_News_LS_GST_61_flag
+				}
+			}
+			set_global_flag = BARE_World_News_LS_GST_61_flag
+			BARE_SuperEvent_2_effect_9 = yes
 		}
 		name = LS_GST.61.a
 	}
@@ -663,7 +673,25 @@ news_event = { #联邦学生会介入
 	option = {
 		trigger = {
 			original_tag = ARI
+			is_ai = no
+		}
+
+		if = {
+			limit = {
+				not = {
+					has_global_flag = BARE_World_News_LS_GST_61_flag
+				}
+			}
+			set_global_flag = BARE_World_News_LS_GST_61_flag
+			BARE_SuperEvent_2_effect_9 = yes
 		}
 		name = LS_GST.61.b
+	}
+
+	option = {
+		trigger = {
+			is_ai = yes
+		}
+		name = LS_GST.61.c
 	}
 }

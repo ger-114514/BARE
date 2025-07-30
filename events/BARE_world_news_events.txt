@@ -34,7 +34,7 @@ country_event = {
 		#阿拜多斯攻防战
 		news_event = {
 			id = BARE_World_News.4
-			days = 245
+			days = 320
 		}
 
 		#伊凡库帕拉节的举办
@@ -125,13 +125,14 @@ news_event = {
 	desc = BARE_World_News.1.desc
 	is_triggered_only = yes
 	
-
+# BARE_SuperEvent_2_effect_8
 	major = yes
 
 	#令人感叹
 	option = {
 		name = BARE_World_News.1.a
 		trigger = {
+			is_ai = no
 			NOT = {
 				OR = {
 					TAG = CAE
@@ -143,13 +144,35 @@ news_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				not = {
+					has_global_flag = BARE_World_News_1_flag
+				}
+			}
+			set_global_flag = BARE_World_News_1_flag
+			BARE_SuperEvent_2_effect_8 = yes
+		}
+		
 	}
+
+	
 
 	#星野，你没事就好
 	option = {
 		name = BARE_World_News.1.b
 		trigger = {
 			TAG = ABY
+			is_ai = no
+		}
+		if = {
+			limit = {
+				not = {
+					has_global_flag = BARE_World_News_1_flag
+				}
+			}
+			set_global_flag = BARE_World_News_1_flag
+			BARE_SuperEvent_2_effect_8 = yes
 		}
 	}
 
@@ -157,6 +180,7 @@ news_event = {
 	option = {
 		name = BARE_World_News.1.c
 		trigger = {
+			is_ai = no
 			OR = {
 				TAG = CAE
 				TAG = CAP
@@ -164,6 +188,22 @@ news_event = {
 				TAG = CAH
 				TAG = CAO
 			}
+		}
+		if = {
+			limit = {
+				not = {
+					has_global_flag = BARE_World_News_1_flag
+				}
+			}
+			set_global_flag = BARE_World_News_1_flag
+			BARE_SuperEvent_2_effect_8 = yes
+		}
+	}
+
+	option = {
+		name = BARE_World_News.1.d
+		trigger = {
+			is_ai = yes
 		}
 	}
 }

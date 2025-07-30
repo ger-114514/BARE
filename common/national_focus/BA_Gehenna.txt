@@ -82,6 +82,9 @@ focus_tree = {
         relative_position_id = GEH_The_First_Eden_Treaty
         
 
+        available = {
+            always = no
+        }
         prerequisite = { focus = GEH_Looking_back_inside }
         mutually_exclusive = { focus = GEH_Steady_progress }
         mutually_exclusive = { focus = GEH_Wehrmacht_First }
@@ -102,6 +105,9 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_The_First_Eden_Treaty
 
+        available = {
+            always = no
+        }
         prerequisite = { focus = GEH_Looking_back_inside }
         mutually_exclusive = { focus = GEH_Steady_progress }
         mutually_exclusive = { focus = GEH_Discipline_Committee }
@@ -743,9 +749,9 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
 
-        # allow_branch = {
-        #     has_global_flag = BA_2st_eden_pact_begin
-        # }
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
 
         bypass = {
             hidden_trigger = {
@@ -975,9 +981,9 @@ focus_tree = {
         }
 
         
-        # allow_branch = {
-        #     has_global_flag = BA_2st_eden_pact_begin
-        # }
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
 
 
         bypass = {
@@ -1040,9 +1046,9 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         
-        # allow_branch = {
-        #     has_global_flag = BA_2st_eden_pact_begin
-        # }
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
 
         bypass = {
             hidden_trigger = {
@@ -1225,9 +1231,9 @@ focus_tree = {
         y = 6
         # prerequisite = {  focus =  GEH_peace_at_hand focus = GEH_United_Gehenna }
 
-        # allow_branch = {
-        #    has_global_flag =  WOR_ancient_cathedral_has_been_attacked
-        # }
+        allow_branch = {
+           has_global_flag =  WOR_ancient_cathedral_has_been_attacked
+        }
 
         available = {
             always = no

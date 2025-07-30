@@ -183,4 +183,58 @@ Test_time_decisions_categories = {
 			}
 		}
 	}
+
+	Test_faction = {
+		complete_effect = {
+			SCH = {
+            IF = {
+				limit = {
+					is_faction_leader = yes
+				}
+				set_faction_name = JWTS_FYLM
+			}
+
+			ELSE_IF = {
+				limit = {
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+
+				leave_faction = yes
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				create_faction = JWTS_FYLM
+			}
+			ELSE = {
+				create_faction = JWTS_FYLM
+			}
+        }
+			every_country = {
+				limit = {
+					not = {
+						is_in_faction_with = SCH
+					}
+				}
+			
+				# if = {
+				# 	limit = {
+				# 		is_faction_leader = yes
+				# 	}
+				# 	dismantle_faction = yes
+				# }
+				# else_if = {
+				# 	limit = {
+				# 		is_in_faction = yes
+				# 	}
+				# 	leave_faction = yes
+				# }
+
+				SCH = {
+					add_to_faction = PREV
+				}
+				
+			}
+		}
+	}
 } 
