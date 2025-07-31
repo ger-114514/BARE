@@ -187,7 +187,10 @@ country_event = {
 
     option = {
 		name = GEH_discipline_committee_events.8.a
-		custom_effect_tooltip = GEH_discipline_committee_events_tt_1
+		add_to_variable = {
+            GEH_discipline_committee_ability = 5
+        }
+		custom_effect_tooltip = GEH_discipline_committee_combat_helmet_regiments_tt
 		ai_chance = {
 			factor = 100
 		}
@@ -206,7 +209,11 @@ country_event = {
 
     option = {
 		name = GEH_discipline_committee_events.9.a
-		custom_effect_tooltip = GEH_discipline_committee_events_tt_2
+		add_to_variable = {
+                GEH_discipline_committee_repression = 5
+        }
+        GEH_discipline_committee_calc = yes
+		custom_effect_tooltip = GEH_discipline_committee_helmet_regiment_teach_reform_tt
 		ai_chance = {
 			factor = 100
 		}
@@ -225,7 +232,13 @@ country_event = {
 
     option = {
 		name = GEH_discipline_committee_events.10.a
-		custom_effect_tooltip = GEH_discipline_committee_events_tt_3
+		add_to_variable = {
+            GEH_discipline_committee_ability = 5
+        }
+        add_to_variable = {
+            GEH_discipline_committee_repression = 5
+        }
+		custom_effect_tooltip = GEH_discipline_committee_gangsters_eviction_tt
 		ai_chance = {
 			factor = 100
 		}
@@ -244,7 +257,13 @@ country_event = {
 
     option = {
 		name = GEH_discipline_committee_events.11.a
-		custom_effect_tooltip = GEH_discipline_committee_events_tt_4
+		add_to_variable = {
+            GEH_discipline_committee_ability = 5
+        }
+        add_to_variable = {
+            GEH_discipline_committee_repression = 5
+        }
+		custom_effect_tooltip = GEH_discipline_committee_gangsters_eviction_tt
 		ai_chance = {
 			factor = 100
 		}
@@ -474,7 +493,10 @@ country_event = {
 
     option = {
 		name = GEH_hot_spring_events.7.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_3
+		add_to_variable = { GEH_hot_spring_activity = 2 }                     
+        add_to_variable = { GEH_hot_spring_destructive = 1 }
+        GEH_hot_spring_calc = yes
+		custom_effect_tooltip = GEH_operation_hot_spring_1_tt
 		ai_chance = {
 			factor = 100
 		}
@@ -493,7 +515,10 @@ country_event = {
 
     option = {
 		name = GEH_hot_spring_events.8.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_4
+		add_to_variable = { GEH_hot_spring_activity = 4 }                     
+        add_to_variable = { GEH_hot_spring_destructive = 2 }
+        GEH_hot_spring_calc = yes
+        custom_effect_tooltip = GEH_operation_hot_spring_2_tt
 		ai_chance = {
 			factor = 1000
 		}
@@ -512,7 +537,10 @@ country_event = {
 
     option = {
 		name = GEH_hot_spring_events.9.a
-		custom_effect_tooltip = GEH_hot_spring_events_tt_5
+		add_to_variable = { GEH_hot_spring_activity = 6 }                     
+        add_to_variable = { GEH_hot_spring_destructive = 3 }
+        GEH_hot_spring_calc = yes
+		custom_effect_tooltip = GEH_operation_hot_spring_3_tt
 		ai_chance = {
 			factor = 1000
 		}
@@ -572,7 +600,10 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.3.a
-		custom_effect_tooltip = GEH_gourmet_research_events_tt_2
+		add_to_variable = { GEH_gourmet_research_activity = 2 }                  
+        add_to_variable = { GEH_gourmet_research_destructive = 1 }
+        GEH_food_service_and_gourmet_research_calc = yes
+        custom_effect_tooltip = GEH_operation_gourmet_research_1_tt   
 		ai_chance = {
 			factor = 1000
 		}
@@ -591,7 +622,11 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.4.a
-		custom_effect_tooltip = GEH_gourmet_research_events_tt_3
+		add_to_variable = { GEH_gourmet_research_activity = 4 }                     
+        add_to_variable = { GEH_gourmet_research_destructive = 2 }
+		GEH_food_service_and_gourmet_research_calc = yes
+        custom_effect_tooltip = GEH_operation_gourmet_research_2_tt
+                    
 		ai_chance = {
 			factor = 1000
 		}
@@ -610,7 +645,10 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.5.a
-		custom_effect_tooltip = GEH_gourmet_research_events_tt_4
+		add_to_variable = { GEH_gourmet_research_activity = 6 }                     
+        add_to_variable = { GEH_gourmet_research_destructive = 3 }
+        GEH_food_service_and_gourmet_research_calc = yes
+		custom_effect_tooltip = GEH_operation_gourmet_research_3_tt
 		ai_chance = {
 			factor = 1000
 		}
@@ -629,7 +667,9 @@ country_event = {
 
     option = {
 		name = GEH_gourmet_research_events.6.a
-		custom_effect_tooltip = GEH_gourmet_research_events_tt_5
+		add_to_variable = { GEH_gourmet_research_activity = 8 }                     
+        add_to_variable = { GEH_gourmet_research_destructive = 4 }
+        custom_effect_tooltip = GEH_operation_gourmet_research_4_tt
 		ai_chance = {
 			factor = 1000
 		}
