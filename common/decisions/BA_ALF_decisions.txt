@@ -1,27 +1,101 @@
 ALF_military_reform_decision_category = {
-    ALF_military_reform_decision_test_add_progress = {
-        visible = {
-            is_debug = yes
-        }		
-        cost = 0
-        #days_remove = 
-        complete_effect = {
-            set_variable = {
-                ALF_mrd_progressbar_var = 10
-            }
-        }
-    }
+	ALF_military_reform_decision_test_add_progress = {
+		visible = {
+			is_debug = yes
+		}
+		cost = 0
+		#days_remove = 
+		complete_effect = {
+			set_variable = {
+				ALF_mrd_progressbar_var = 10
+			}
+		}
+	}
+	ALF_military_reform_decision_test_add_progress_90 = {
+		visible = {
+			is_debug = yes
+		}
+		cost = 0
+		#days_remove = 
+		complete_effect = {
+			add_to_variable = {
+				ALF_mrd_progressbar_var = 90
+			}
+		}
+	}
+}
 
-    ALF_military_reform_decision_test_add_progress_90 = {
-        visible = {
-            is_debug = yes
-        }		
-        cost = 0
-        #days_remove = 
-        complete_effect = {
-            add_to_variable = {
-                ALF_mrd_progressbar_var = 90
-            }
-        }
-    }
+ALF_Livability_decision_category = {
+	ALF_Livability_decision_test = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		complete_effect = {
+			ALF_initialize_livability_system_effect = yes
+		}
+	}
+	ALF_calc_livability_test = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		complete_effect = {
+			ALF_calculate_livability_effect = yes
+		}
+	}
+}
+
+ALF_war_plan_protect_wing_category = {
+	ALF_war_plan_protect_wing_timer_mission = {
+		priority = 99
+		is_good = no
+		days_mission_timeout = 72
+
+		activation = {
+			always = no
+		}
+		available = {
+			NOT = {
+				country_exists = HTG
+				country_exists = COS
+			}
+		}
+		cost = 0
+		complete_effect = {
+			
+		}
+	}
+
+	ALF_war_with_HTG_decision = {
+		visible = {
+			tag = ALF
+		}
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		complete_effect = {
+			
+		}
+	}
+
+	ALF_war_with_COS_decision = {
+		visible = {
+			tag = ALF
+		}
+		available = {
+			is_ai = no
+		}
+		cost = 0
+		complete_effect = {
+			
+		}
+	}
 }

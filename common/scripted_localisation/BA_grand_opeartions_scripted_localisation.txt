@@ -483,3 +483,23 @@ defined_text = {
 	    localization_key = ECW_State_mission_key_sl_default
 	}
 }
+
+
+
+
+######################
+###流亡者 - 行动：庇护之羽
+######################
+defined_text = {
+	name = operation_protect_wing_sl
+	text = {
+		trigger = {
+			is_controlled_by = ROOT
+		}
+		localization_key = operation_protect_wing_sl_control_by_us
+	}
+
+	text = {
+	    localization_key = operation_protect_wing_sl_control_by_enemy
+	}
+}

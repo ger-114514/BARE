@@ -1,0 +1,7 @@
+##宜居度：一个整数标识符。
+##它主要会被用在精神修正里用于计算。
+ALF_Livability_int = {
+	color_type = good
+	value_type = number
+	precision = 2
+}

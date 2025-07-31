@@ -306,4 +306,77 @@ guiTypes = {
 		}
 
 	}
+
+###########################
+###########################
+### CLASSIC SUPER EVENT ###
+###########################
+###########################
+	containerWindowType = {
+		name = "BAREXP_Super_Event_Window"
+		size = { width = 1000 height = 720 }
+		position = { x= -550 y= -420 }
+		Orientation = center
+		clipping = no	
+		moveable = yes
+
+		background = {
+			name = "Background"	
+			spriteType ="GFX_BARE_super_event_background"
+		}
+
+        iconType = {
+			name ="BAREXP_super_event_gallery"
+			spriteType = "GFX_BAREXP_SE_img_1"
+			position = { x = 68  y = 140 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BAREXP_super_event_Title_textbox"
+			position = { x = 405 y = 102 }
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "[BAREXP_Super_Event_Get_Title]"
+			maxWidth = 290
+			maxHeight = 20
+			fixedsize = yes	
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BAREXP_super_event_Quote_textbox"
+			position = { x = 500 y = 560 }
+			font = "hoi_24header" 
+			borderSize = {x = 0 y = 0}
+			text = "[BAREXP_Super_Event_Get_Quote]"
+			maxWidth = 500
+			maxHeight = 300
+			fixedsize = no
+			format = right
+		}
+
+        ##关闭按钮
+		buttonType = {
+            name = "BAREXP_Super_Event_Close_Button"
+            position = { x = 379 y = 719 }
+            quadTextureSprite ="GFX_BAREXP_super_event_close_button"
+			#buttonText = "[BAREXP_Super_Event_Get_Remark]"
+			#buttonFont = "hoi_20bs"
+            clicksound = click_scroll
+        }
+
+		instantTextBoxType = {
+			name = "BAREXP_Super_Event_Close_Button_textbox"
+			position = { x = 390 y = 728 }
+			font = "hoi_20bs" 
+			borderSize = {x = 0 y = 0}
+			text = "[BAREXP_Super_Event_Get_Remark]"
+			maxWidth = 332
+			maxHeight = 37
+			fixedsize = no
+			format = center
+		}
+	}
+
 }
