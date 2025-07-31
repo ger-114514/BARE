@@ -49,7 +49,7 @@ entity = {
 }
 
 entity = {
-	name = "prime_student_council_gfx_infantry_2_entity"
+	name = "arius_culture_gfx_infantry_2_entity"
 	clone = "arius_culture_gfx_infantry_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_as_44_weapon_right_entity" }
@@ -68,7 +68,7 @@ entity = {
 }
 
 entity = {
-	name = "prime_student_council_gfx_infantry_3_entity"
+	name = "arius_culture_gfx_infantry_3_entity"
 	clone = "arius_culture_gfx_infantry_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_scar_l_weapon_right_entity" }

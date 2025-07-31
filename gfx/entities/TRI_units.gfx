@@ -118,7 +118,7 @@ objectTypes = {
 		animation = { id = "attack"			type = "stryker_unarmed_idle_animation" }
 		animation = { id = "idle"			type = "stryker_unarmed_idle_animation" }
 		animation = { id = "move"			type = "stryker_unarmed_moving_animation" }
-		scale = 0.5
+		#scale = 0.05	
 	}
 
 	pdxmesh = {
