@@ -74,7 +74,7 @@
 
 
  ARI_foreign_operations_decisions: "对外行动"
- ARI_foreign_operations_decisions_desc: "由于历史原因，阿里乌斯和她的学生一直过着隐姓埋名的生活，但这并不表示我们完全和外界隔绝。为了更好地执行我们的计划，我们需要从外界搜寻物资，并刺探我们敌人的情报。\n\n拥有物资：[?ARI_materials|Y=0]，每月增长[?modifier@ARI_materials_monthly_modifier|+=0]\n对§Y圣三一§!渗透进度:[?ARI_intelligence_in_TRI|Y1%%]\n对§Y格黑娜§!渗透进度:[?ARI_intelligence_in_GEH|Y1%%]"
+ ARI_foreign_operations_decisions_desc: "由于历史原因，阿里乌斯和她的学生一直过着隐姓埋名的生活，但这并不表示我们完全和外界隔绝。为了更好地执行我们的计划，我们需要从外界搜寻物资，并刺探我们敌人的情报。\n物资是行动的基础和成果，物资可以进行行动，或是换取装备，而提升对圣三一和格黑娜的渗透进度可以增强对抗她们的能力，同时重大行动也需要消耗渗透进度来进行准备，以达成更好的结果。\n\n拥有物资：[?ARI_materials|Y=0]，每月增长[?modifier@ARI_materials_monthly_modifier|+=0]\n对§Y圣三一§!渗透进度:[?ARI_intelligence_in_TRI|Y1%%]\n对§Y格黑娜§!渗透进度:[?ARI_intelligence_in_GEH|Y1%%]"
  ARI_first_time_back_cost: "§Y由于我们第一次使用该决议，将退回该决议的消耗！§!"
  ARI_outside_recon: "§Y勘探外界§!"
  ARI_outside_recon_desc: "在以前，我们只和外界保持了有限的接触，但为了我们的目的，是时候出山了，忠诚的“向导”会重新规划地下墓穴的路线，并进行探索，为接下来的行动做准备。\n§Y这是所有其它行动的基础！§!\n\n"

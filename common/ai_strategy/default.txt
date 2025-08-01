@@ -184,13 +184,13 @@ bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = medium_uav_equipment_1
+		id = medium_uav_airframe
 		value = 5
 	}
 
 	ai_strategy = {
 		type = unit_ratio
-		id = medium_uav_equipment_1
+		id = medium_uav_airframe
 		value = 5
 	}
 
@@ -208,13 +208,13 @@ bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = heavy_uav_equipment_1
+		id = heavy_uav_airframe
 		value = 1
 	}
 
 	ai_strategy = {
 		type = unit_ratio
-		id = heavy_uav_equipment_1
+		id =  heavy_uav_airframe
 		value = 1
 	}
 }

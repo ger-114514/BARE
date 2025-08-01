@@ -657,7 +657,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.14
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {

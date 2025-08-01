@@ -415,7 +415,7 @@ news_event = {
             if = {
                 limit = { original_tag = GEH }
                 mark_focus_tree_layout_dirty = yes
-                complete_national_focus = GEH_fire_was_rising
+                complete_national_focus = GEH_War_breaks_out
                 add_war_support = 0.05 #战争支持度修正
 				add_stability = -0.05 #稳定度修正
 				add_dynamic_modifier = {
@@ -578,7 +578,7 @@ news_event = {
             if = {
                 limit = { original_tag = GEH }
                 mark_focus_tree_layout_dirty = yes
-                complete_national_focus = GEH_fire_was_rising
+                complete_national_focus = GEH_War_breaks_out
             }
             else_if = {
                 limit = { original_tag = TRI }
@@ -732,7 +732,7 @@ news_event = {
             if = {
                 limit = { original_tag = GEH }
                 mark_focus_tree_layout_dirty = yes
-                complete_national_focus = GEH_fire_was_rising
+                complete_national_focus = GEH_War_breaks_out
             }
             else_if = {
                 limit = { original_tag = TRI }

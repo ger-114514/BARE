@@ -3,7 +3,7 @@ ideas = {
 
 		industry_liasons_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = {  }
 			research_bonus = {
 				light_air = 0.15
 				medium_air = 0.15
@@ -20,7 +20,7 @@ ideas = {
 		
 		effective_training_programs_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = {  }
 			modifier = {
 				air_training_xp_gain_factor = 0.25
 			}
@@ -34,7 +34,7 @@ ideas = {
 		}
 		branch_independence_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = {  }
 			modifier = {
 				experience_gain_air = 0.1
 				airforce_intel_to_others = -5
@@ -49,7 +49,7 @@ ideas = {
 		}
 		air_crew_surveys_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = {  }
 			modifier = {
 				air_doctrine_cost_factor = -0.15
 				air_accidents_factor = -0.25
@@ -67,7 +67,7 @@ ideas = {
 	air_force_command_spirit = {
 		battlefield_air_interdiction_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
+			available = { }
 			modifier = {
 				ground_attack_factor = 0.05
 				air_escort_efficiency = 0.05
@@ -83,7 +83,7 @@ ideas = {
 
 		centralized_control_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
+			available = {  }
 			modifier = {
 				air_superiority_detect_factor = 0.1
 				air_mission_efficiency = 0.1
@@ -99,7 +99,7 @@ ideas = {
 
 		air_power_projection_spirit = {
 			ledger = air
-			available = { has_air_force_command = yes }
+			available = {  }
 			modifier = {
 				air_power_projection_factor = 0.1
 			}

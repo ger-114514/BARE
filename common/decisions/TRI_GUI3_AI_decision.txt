@@ -1,49 +1,49 @@
-#GUI3的AI决议
-TRI_ai_bukebu_inv_decisions_categories = {
+# #GUI3的AI决议
+# TRI_ai_bukebu_inv_decisions_categories = {
 
-	#每7天随机调查
-	TRI_ai_random_bukebu_inv = {
-		icon = generic_industry
-		allowed = {
-			original_tag = TRI
-			has_country_flag = TRY_investigate_available
-		}
-		visible = {
-			is_ai = yes
-		}
-		fire_only_once = no
-		days_remove = 6 #7-1，因为决议要在下一天才回复
-		cost = 0
+# 	#每7天随机调查
+# 	TRI_ai_random_bukebu_inv = {
+# 		icon = generic_industry
+# 		allowed = {
+# 			original_tag = TRI
+# 			has_country_flag = TRI_investigate_available
+# 		}
+# 		visible = {
+# 			is_ai = yes
+# 		}
+# 		fire_only_once = no
+# 		days_remove = 6 #7-1，因为决议要在下一天才回复
+# 		cost = 0
 
-		remove_effect = {
-			random_list = {
-				10 = {
-					#调查小春成功，减少偏执度
-					set_country_flag = koharu_invest_success
-				}
-				10 = {
-					#同上
-					set_country_flag = azusa_invest_success
-				}
-				10 = {
-					set_country_flag = hanako_invest_success
-				}
-				10 = {
-					set_country_flag = hifumi_invest_success
-				}
-				10 = {
-					#什么都不发生
-				}
-				10 = {
-					#略微增加偏执度
-				}
-			}
-		}
+# 		remove_effect = {
+# 			random_list = {
+# 				10 = {
+# 					#调查小春成功，减少偏执度
+# 					set_country_flag = koharu_invest_success
+# 				}
+# 				10 = {
+# 					#同上
+# 					set_country_flag = azusa_invest_success
+# 				}
+# 				10 = {
+# 					set_country_flag = hanako_invest_success
+# 				}
+# 				10 = {
+# 					set_country_flag = hifumi_invest_success
+# 				}
+# 				10 = {
+# 					#什么都不发生
+# 				}
+# 				10 = {
+# 					#略微增加偏执度
+# 				}
+# 			}
+# 		}
 
-		#反正AI肯定会点
-		ai_will_do = {
-			factor = 100
-		}
-	}
+# 		#反正AI肯定会点
+# 		ai_will_do = {
+# 			factor = 100
+# 		}
+# 	}
 
-}
+# }
