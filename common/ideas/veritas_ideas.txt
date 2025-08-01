@@ -36,21 +36,21 @@ ideas = {
 		}
 
 		BARE_Global_Unacknowledged_College_Autonomous_Region = { #不被承认的学园自治区
-			picture = unknown
+			picture = BARE_Global_Unacknowledged_College_Autonomous_Region
             allowed = {
                 always = no
             }
 		}
 
 		BARE_Global_Trusteeship_Area = { #托管地区
-			picture = unknown
+			picture = BARE_Global_Trusteeship_Area
             allowed = {
                 always = no
             }
 		}
 
 		BARE_Global_Extrajudicial_Trusteeship_Area = { #法外托管地区
-			picture = unknown
+			picture = BARE_Global_Extrajudicial_Trusteeship_Area
             allowed = {
                 always = no
             }
@@ -77,6 +77,7 @@ ideas = {
 				political_power_factor = -10
 				industrial_capacity_factory = -10
 				industrial_capacity_dockyard = -10
+				production_speed_buildings_factor = -10
 				min_export = -10
 			}
 		}

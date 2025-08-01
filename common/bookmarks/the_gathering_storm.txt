@@ -11,10 +11,10 @@ bookmarks = {
 			history = ""
 			ideology = no_ideology
 			ideas = {
-
+				GEH_mild_inside_contradictio
 			}
 			focuses = {
-				
+				GEH_Restarting_talks
 			}
 		}
 
@@ -113,17 +113,17 @@ bookmarks = {
 		#	}
 		#}
 
-		CEN = {
-			minor = yes
-			history = "CEN_history_desc"
-			ideology = no_ideology
-			ideas = {
+		# CEN = {
+		# 	minor = yes
+		# 	history = "CEN_history_desc"
+		# 	ideology = no_ideology
+		# 	ideas = {
 				
-			}
-			focuses = {
+		# 	}
+		# 	focuses = {
 				
-			}
-		}
+		# 	}
+		# }
 
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
