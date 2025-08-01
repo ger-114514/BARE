@@ -641,11 +641,11 @@ BARE_Combat_Readiness_Count_Start_Init = {
 		value = token:fire_support_team_su_ha
 	}
 	set_variable = {
-		global.BARE_Combat_Readiness_Count_fire_support_team_su_sp = 0.03
+		global.BARE_Combat_Readiness_Count_fire_support_team_su_sa = 0.03
 	}
 	add_to_array = {
 		array = global.BARE_Combat_Readiness_Unit_Type_Array
-		value = token:fire_support_team_su_sp
+		value = token:fire_support_team_su_sa
 	}
 	#步战车 8个
 	set_variable = {

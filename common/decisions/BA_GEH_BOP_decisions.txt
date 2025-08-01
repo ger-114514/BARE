@@ -379,7 +379,7 @@ GEH_bop_decision_category = {
       #风纪委巡逻
     GEH_bop_patrol_in_gehnna = {
         visible = {
-            has_completed_focus = GEH_fight_rogue_across_board
+            has_completed_focus = GEH_Fighting_crime
             has_global_flag = Eden_treaty_negotiation_ongoing
         }
 		available = {

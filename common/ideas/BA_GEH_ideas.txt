@@ -330,7 +330,7 @@ ideas = {
 
             modifier = {
                 army_attack_factor = -0.3
-                armor_value = -0.6
+                armor_factor = -0.6
             }
         }
 
@@ -350,7 +350,7 @@ ideas = {
 
             modifier = {
                 army_attack_factor = -0.2
-                armor_value = -0.4
+                 armor_factor = -0.4
             }
         }
 
@@ -370,7 +370,7 @@ ideas = {
 
             modifier = {
                  army_attack_factor = -0.1
-                armor_value = -0.2
+                 armor_factor = -0.2
             }
         }
 
@@ -749,11 +749,9 @@ ideas = {
             modifier = {
                 unit_light_armor_design_cost_factor = -1
 				unit_medium_armor_design_cost_factor = -1
-				unit_modern_armor_design_cost_factor = -1
 				unit_heavy_armor_design_cost_factor = -1
-				unit_super_heavy_armor_design_cost_factor = -1
-				unit_motorized_design_cost_factor = -1
-				unit_mechanized_design_cost_factor = -1
+				unit_apc_unit_design_cost_factor = -1
+				unit_ifv_unit_design_cost_factor = -1
             }
         }
         
@@ -1392,7 +1390,7 @@ ideas = {
                }
             }
 
-            cancel_trigger = {
+             cancel = {
                 NOT = {
                     has_war_with = ARI
                 }
@@ -1419,7 +1417,7 @@ ideas = {
                }
             }
 
-            cancel_trigger = {
+             cancel = {
                 NOT = {
                     has_war_with = ARI
                 }
@@ -1446,7 +1444,7 @@ ideas = {
                }
             }
 
-            cancel_trigger = {
+             cancel = {
                 NOT = {
                     has_war_with = ARI
                 }
@@ -1476,7 +1474,7 @@ ideas = {
                }
             }
 
-            cancel_trigger = {
+             cancel = {
                 NOT = {
                     has_war_with = ARI
                 }
@@ -1501,7 +1499,7 @@ ideas = {
             allowed = {
                 original_tag = GEH
             }
-            cancel_trigger = {
+             cancel = {
                 NOT = {
                     has_war_with = ARI
                 }

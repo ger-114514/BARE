@@ -105,8 +105,10 @@ Great_Game_generate_global_chart = {
 }
 Great_Game_add_cannot_invade = {
 	if = {
-		NOT = {
-			is_in_array = { Great_Game_cannot_invade = target }
+		limit = {
+			NOT = {
+				is_in_array = { Great_Game_cannot_invade = target }
+			}
 		}
 		custom_effect_tooltip = Great_Game_add_cannot_invade
 		add_to_array = { Great_Game_cannot_invade = target }
@@ -114,7 +116,9 @@ Great_Game_add_cannot_invade = {
 }
 Great_Game_remove_cannot_invade = {
 	if = {
-		is_in_array = { Great_Game_cannot_invade = target }
+		limit = {
+			is_in_array = { Great_Game_cannot_invade = target }
+		}
 		custom_effect_tooltip = Great_Game_remove_cannot_invade
 		remove_from_array = { Great_Game_cannot_invade = target }
 	}

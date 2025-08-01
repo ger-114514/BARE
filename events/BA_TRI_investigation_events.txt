@@ -1,5 +1,7 @@
 #调查事件
 add_namespace = TRI_events
+#考试事件
+add_namespace = TRI_hoshubu_exam
 #小春
 country_event = { #正义实现委员会的精英？
     id = TRI_events.200
@@ -984,5 +986,111 @@ country_event = { #审讯记录4
 		ai_chance = {
 			base = 100
 		}
+    }
+}
+
+country_event = { #补习成果的展示
+    id = TRI_hoshubu_exam.1
+    title = TRI_hoshubu_exam.1.t
+    desc = TRI_hoshubu_exam.1.d
+    picture = GFX_TRI_event_4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_hoshubu_exam.1.a
+		country_event = TRI_hoshubu_exam.2
+    }
+}
+country_event = { #第一次特别能力考核成绩公布
+    id = TRI_hoshubu_exam.2
+    title = TRI_hoshubu_exam.2.t
+    desc = TRI_hoshubu_exam.2.d
+    picture = GFX_TRI_event_4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_hoshubu_exam.2.a
+		country_event = {
+			id = TRI_hoshubu_exam.3
+			days = 3
+		}
+    }
+}
+country_event = { #集训时间！！！！
+    id = TRI_hoshubu_exam.3
+    title = TRI_hoshubu_exam.3.t
+    desc = TRI_hoshubu_exam.3.d
+    picture = GFX_TRI_event_4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_hoshubu_exam.3.a
+		country_event = {
+			id = TRI_hoshubu_exam.4
+			days = 7
+		}
+    }
+}
+country_event = { #补习部最后的考验？
+    id = TRI_hoshubu_exam.4
+    title = TRI_hoshubu_exam.4.t
+    desc = TRI_hoshubu_exam.4.d
+    picture = GFX_TRI_event_4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	#TODO:获得一个补习部计数，但现阶段暂无对应机制
+    option = {
+		name = TRI_hoshubu_exam.4.a
+		country_event = {
+			id = TRI_hoshubu_exam.5
+			days = 14
+		}
+    }
+	#TODO:pp+75，移除一个补习部计数，但现阶段暂无对应机制
+	# option = {
+	# 	name = TRI_hoshubu_exam.4.b
+	# 	add_political_power = 75
+	# 	country_event = {
+	# 		id = TRI_hoshubu_exam.5
+	# 		days = 14
+	# 	}
+    # }
+}
+country_event = { #敞开心扉
+    id = TRI_hoshubu_exam.5
+    title = TRI_hoshubu_exam.5.t
+    desc = TRI_hoshubu_exam.5.d
+    picture = GFX_TRI_event_3
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRI_hoshubu_exam.5.a
+        custom_effect_tooltip = TRI_dissonance_modifier_ns_tt
+        add_to_variable = { ssi_operative_slot = 1 }
+        #获得间谍：白洲梓
+        create_operative_leader = {
+            name = "白洲梓"
+            GFX = GFX_portrait_TRI_azusa
+            gender = female
+            traits = {  }
+            bypass_recruitment = yes
+            available_to_spy_master = no
+            nationalities = { TRI ARI }
+        }
+        #在间谍机构【圣三一情报局】中添加任务：对茶话会的渗透#目前不做
     }
 }

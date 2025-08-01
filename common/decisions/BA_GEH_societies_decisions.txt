@@ -1,12 +1,12 @@
 GEH_societies_dec_category = {
     GEH_test_dec = {
+        visible = {
+            is_debug= yes
+        }
         complete_effect = {
             add_political_power = 100
             set_country_flag = GEH_societies_start
             #风纪委执行力
-            visible = {
-                is_debug= yes
-            }
             set_variable = {
                 GEH_discipline_committee_ability = 50
             }
@@ -217,7 +217,7 @@ GEH_societies_dec_category = {
             factor = 202
         }
         complete_effect = {
-            stability_factor = -0.1
+            add_stability = -0.1
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
@@ -250,7 +250,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
-            stability_factor = -0.05
+            add_stability = -0.05
             GEH_discipline_committee_calc = yes
         }
         timeout_effect = {
@@ -288,7 +288,7 @@ GEH_societies_dec_category = {
             add_to_variable = {
                 GEH_discipline_committee_num = 1
             }
-            war_support_factor = 0.05
+            add_war_support = 0.05
         }
         timeout_effect = {
             add_to_variable = {
@@ -904,7 +904,7 @@ GEH_societies_dec_category = {
                         add_to_variable = { GEH_gourmet_research_activity = 8 }                     
                     }
                     add_to_variable = { GEH_gourmet_research_destructive = 4 }
-                    custom_effect_tooltip = GEH_operation_gourmet_research_3_tt
+                    custom_effect_tooltip = GEH_operation_gourmet_research_4_tt
                     GEH_food_service_and_gourmet_research_calc = yes
                     country_event = {
                         id = GEH_gourmet_research_events.6

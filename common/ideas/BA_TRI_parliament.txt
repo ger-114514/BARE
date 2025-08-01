@@ -536,6 +536,7 @@ ideas = {
 					add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
 					add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
 					add_dynamic_modifier = { modifier = eden_treaty_step_5_modifier }
+					set_country_flag = TRI_koharu_advisor_available
 				}
 			}
 		}
