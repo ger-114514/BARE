@@ -27,7 +27,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Washino_Yuei
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Washino_Yuei_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Washino_Yuei
@@ -53,7 +53,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Yoshizawa_Yayoi
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Yoshizawa_Yayoi_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Yoshizawa_Yayoi
@@ -78,7 +78,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Saegusa_Yuwa
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Saegusa_Yuwa_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Saegusa_Yuwa
@@ -103,7 +103,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Shibasaki_Ichika
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Shibasaki_Ichika_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Shibasaki_Ichika
@@ -128,7 +128,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Maeoka_Yoshimi
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Maeoka_Yoshimi_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Maeoka_Yoshimi
@@ -153,7 +153,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Shigeki_Niki
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Shigeki_Niki_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Shigeki_Niki
@@ -178,7 +178,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Henmi_Ayu
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Henmi_Ayu_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Henmi_Ayu
@@ -203,7 +203,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Morishita_Kaho
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Morishita_Kaho_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Morishita_Kaho
@@ -228,7 +228,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Norimatsu_Miru
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Norimatsu_Miru_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Norimatsu_Miru
@@ -253,7 +253,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Toueshi_Dzuru
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Toueshi_Dzuru_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Toueshi_Dzuru
@@ -278,7 +278,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Kabahara_Miyoko
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Kabahara_Miyoko_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Kabahara_Miyoko
@@ -303,7 +303,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Nadao_Terumi
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Nadao_Terumi_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Nadao_Terumi
@@ -328,7 +328,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Kometani_Touna
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Kometani_Touna_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Kometani_Touna
@@ -353,7 +353,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_BAREXP_Portrait_ALF_Araki_Mika
-				#small = GFX_portrait_ARI_atsuko_small
+				small = GFX_BAREXP_Portrait_ALF_Araki_Mika_small
 			}
 			army = {
 				large = GFX_BAREXP_Portrait_ALF_Araki_Mika
@@ -372,10 +372,5 @@ characters = {
 		}
 	}
 }
-#"橋野 結瑛(はしの ゆえい)、吉澤 弥生(よしざわ やよい)、三枝 優葉(さえぐさ ゆうは)、柴崎 初彩(しばざき いちか)、前岡 好未(まえおか よしみ)、茂木 二輝(しげき にき)
-#邊見 安柚(へんみ あゆ)、森下 歌保(もりした かほ)、乘松 未留(のりまつ みる)、戶上 秋弦(とうえ しづる)
-#Hashino Yui Akira ( Wa Shi No Yue I ) , Yoshizawa Yayoi ( Yoshizawa Yayoi ) , Saegusa Yū Ha ( Sae Gusa Yū Wa ) , Shibasaki Hatsu Aya ( Shi Ba Zaki Ichi Ka ) , Mae Oka Kō Mi ( Ma e O ka Yoshimi ) , Motegi Ni Teru ( Shigeki Ni Ki ) 
-# Henmi Yasu Yuzu ( Hen Mi Ayu ) , Morishita Uta Ho ( Mori Shita Ka ho ) , Norimatsu Mi Tome ( Nori Matsu Miru ) , hù Jō Aki Gen ( To Ue Shi Dzuru )
-#蒲原 美代子(かばはら みよこ)、灘尾 旭茉(なだお てるみ)、米谷 冬那(こめたに とうな)、吳山 稀恵(くれやま きえ)、新木 美夏(あらき みか)
-#Kanbara Miyoko ( Ka Ba Hara Miyoko ) , Nadao Asahi mò ( Na Da O Teru Mi ) , Kome Tani Fuyu Na ( Kome Ta Ni To U na ) , wú shān Mare Megumi ( Kure Ya ma Kie ) , Shin Ki Minatsu ( Araki Mika )
+
 ##不要动最后的空行！！！！##

@@ -9,3 +9,382 @@ ALF = {
 		}
 	}
 }
+
+##西街暴力团
+WSG = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_gkt_1"
+				"GFX_Portrait_gkt_2"
+				"GFX_Portrait_gkt_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+		female = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+}
+
+##咔哒头盔团
+KHG = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_gkt_1"
+				"GFX_Portrait_gkt_2"
+				"GFX_Portrait_gkt_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+		female = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+}
+
+##金钗盗贼团
+HTG = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_hh_1"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_hh_1"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_hh_1"
+		}
+		male = {
+			"GFX_Portrait_hh_1"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_hh_1"
+		}
+		female = {
+			"GFX_Portrait_hh_1"
+		}
+	}
+}
+
+##圣徒升天会
+COS = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_tri_1"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_tri_1"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+		male = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_tri_1"
+		}
+		female = {
+			"GFX_Portrait_tri_1"
+		}
+	}
+}
+
+##阿里乌斯旧学生会
+AVG = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_ari_1"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_ari_1"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_ari_1"
+		}
+		male = {
+			"GFX_Portrait_ari_1"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_ari_1"
+		}
+		female = {
+			"GFX_Portrait_ari_1"
+		}
+	}
+}
+
+#黑市摩托队
+BMT = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_hd_1"
+				"GFX_Portrait_hd_2"
+				"GFX_Portrait_hd_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+}
+
+#黑市贫民窟
+BMR = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_hd_1"
+				"GFX_Portrait_hd_2"
+				"GFX_Portrait_hd_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+}
+
+#黑市安保
+BMG = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_hd_1"
+				"GFX_Portrait_hd_2"
+				"GFX_Portrait_hd_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+}
+
+#收债人
+DCA = {
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_hd_1"
+				"GFX_Portrait_hd_2"
+				"GFX_Portrait_hd_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+}

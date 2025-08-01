@@ -63,4 +63,27 @@ scripted_gui = {
 			
 		}
 	}
+
+	BAREXP_Super_Event_Classic_Window = {
+		context_type = player_context
+		window_name = "BAREXP_Super_Event_Window"
+
+		visible = {
+			check_variable = {
+				barexp_super_event_index > 0
+			}
+		}
+		
+        properties = {
+            BAREXP_super_event_gallery = {
+                image = [BAREXP_Super_Event_Get_Image]
+            }
+        }
+		
+		effects = {
+			BAREXP_Super_Event_Close_Button_click = {
+				BSE_Close_Super_Event_Effect = yes
+			}
+		}
+	}
 }	

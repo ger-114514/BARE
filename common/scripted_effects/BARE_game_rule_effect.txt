@@ -1,68 +1,89 @@
 BARE_RULE_story_settings_ALF_SELECTED_effect = {
 	195 = {
 		transfer_state_to = BMG
+		add_core_of = BMG
 	}
 	196 = {
 		transfer_state_to = DCA
+		add_core_of = DCA
 	}
 	197 = {
 		transfer_state_to = AVG
+		add_core_of = AVG
 	}
 	198 = {
 		transfer_state_to = COS
+		add_core_of = COS
 	}
 	##Add Via Event
 	#199 = { transfer_state_to = ALF }
 	200 = {
 		transfer_state_to = HTG
+		add_core_of = HTG
 	}
 	201 = {
 		transfer_state_to = COS
+		add_core_of = COS
 	}
 	202 = {
 		transfer_state_to = WSG
+		add_core_of = WSG
 	}
 	217 = {
 		transfer_state_to = WSG
+		add_core_of = WSG
 	}
 	218 = {
 		transfer_state_to = FSC
+		add_core_of = FSC
 	}
 	219 = {
 		transfer_state_to = FSC
+		add_core_of = FSC
 	}
 	221 = {
 		transfer_state_to = KHG
+		add_core_of = KHG
 	}
 	222 = {
 		transfer_state_to = BMR
+		add_core_of = BMR
 	}
 	524 = {
 		transfer_state_to = WSG
+		add_core_of = WSG
 	}
 	525 = {
 		transfer_state_to = FSC
+		add_core_of = FSC
 	}
 	526 = {
 		transfer_state_to = BMT
+		add_core_of = BMT
 	}
 	584 = {
 		transfer_state_to = BMG
+		add_core_of = BMG
 	}
 	657 = {
 		transfer_state_to = HTG
+		add_core_of = HTG
 	}
 	658 = {
 		transfer_state_to = WSG
+		add_core_of = WSG
 	}
 	659 = {
 		transfer_state_to = AVG
+		add_core_of = AVG
 	}
 	660 = {
 		transfer_state_to = BMT
+		add_core_of = BMT
 	}
 	661 = {
 		transfer_state_to = BMT
+		add_core_of = BMT
 	}
 	###指定政治状态###
 	A47 = {

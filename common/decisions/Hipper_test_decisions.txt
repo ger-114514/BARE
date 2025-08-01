@@ -1,58 +1,11 @@
 Hipper_test_decisions_categories = {
-	###FIRE ECW WAR###
-	###启动古圣堂之战##
-	Fire_ECW_WAR_HIPPER = {
-		visible = {
-			original_tag = TRI
-		}
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-			ARI = {
-				set_variable = { ARI_ZhunBeiDu = 50 }
-				country_event = {
-					id = Eden_pact.200
-				}
-			}
-		}
-	}
-
-	Eden_cathedral_war_support_dynamic_modifier_test = {
-		priority = 1000
-		available = {
-		}
-		complete_effect = {
-			initialize_ECW_effect = yes
-		}
-	}
-	ECW_clamp_value_test = {
-		priority = 1000
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-			ECW_clamp_all_vars_effect = yes
-			force_update_dynamic_modifier = yes
-		}
-	}
-
-	ECW_initialize_ECW_states_effect_test = {
-		priority = 1000
-		available = {
-			is_debug = yes
-		}
-		complete_effect = {
-			initialize_ECW_states_effect = yes
-		}
-	}
-
-	###
 	Change_portrait_for_cool_nagisa = {
 		visible = {
 			original_tag = TRI
+			is_debug = yes
 		}
 		available = {
+			is_ai = no
 			TRI = {
 			    has_country_leader = {
 					character = TRI_nagisa
@@ -76,8 +29,10 @@ Hipper_test_decisions_categories = {
 	Change_portrait_for_cool_makoto = {
 		visible = {
 			original_tag = GEH
+			is_debug = yes
 		}
 		available = {
+			is_ai = no
 			GEH = {
 			    has_country_leader = {
 					character = GEH_makoto
@@ -97,14 +52,71 @@ Hipper_test_decisions_categories = {
 		    } 
 		}
 	}
+	###FIRE ECW WAR###
+	###启动古圣堂之战##
+	Fire_ECW_WAR_HIPPER = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			ARI = {
+				set_variable = { ARI_ZhunBeiDu = 50 }
+				country_event = {
+					id = Eden_pact.200
+				}
+			}
+		}
+	}
+
+	Eden_cathedral_war_support_dynamic_modifier_test = {
+		priority = 1000
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			initialize_ECW_effect = yes
+		}
+	}
+	ECW_clamp_value_test = {
+		priority = 1000
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			ECW_clamp_all_vars_effect = yes
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	ECW_initialize_ECW_states_effect_test = {
+		priority = 1000
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			initialize_ECW_states_effect = yes
+		}
+	}
 
 	####发射超事件的测试器####
 	Fire_super_event_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_fire_super_event = yes
@@ -113,10 +125,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type1_event1_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_1_effect_1 = yes
@@ -125,10 +137,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event1_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_1 = yes
@@ -137,10 +149,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event2_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_2 = yes
@@ -149,10 +161,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event3_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_3 = yes
@@ -161,10 +173,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event4_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_4 = yes
@@ -173,10 +185,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event5_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_5 = yes
@@ -185,10 +197,10 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event6_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_6 = yes
@@ -197,26 +209,127 @@ Hipper_test_decisions_categories = {
 
 	Fire_super_type2_event7_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			BARE_SuperEvent_2_effect_7 = yes
 		}
 	}
 
+	#################
+	#################
+	BAREXP_show_superevent1_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_1 = yes
+		}
+	}
+
+	BAREXP_show_superevent2_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_2 = yes
+		}
+	}
+
+	BAREXP_show_superevent3_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_3 = yes
+		}
+	}
+
+	BAREXP_show_superevent4_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_4 = yes
+		}
+	}
+
+	BAREXP_show_superevent5_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_5 = yes
+		}
+	}
+
+	BAREXP_show_superevent6_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_6 = yes
+		}
+	}
+
+	BAREXP_show_superevent7_gui = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+		    BSE_Fire_Super_Event_index_7 = yes
+		}
+	}
+
 	###查看结算警告###
 	check_war_end_flavor_hipp = {
 		visible = {
-			always = yes
+			is_debug = yes
 		}
 		available = {
-			always = yes
+			is_ai = no
 		}
 		complete_effect = {
 			TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_TRI_FOR_CAPITULATION = yes
+		}
+	}
+
+	initializ_ALF_hipp = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			A47 = {
+				change_tag_from = ROOT
+			}
+			BARE_RULE_story_settings_ALF_SELECTED_effect = yes
 		}
 	}
 } 
@@ -225,9 +338,13 @@ CEN_Operation_Uranus_categories = {
     Uranus_Test_open_gui = {
 	    visible = {
 		    original_tag = CEN
+			is_debug = yes
 	    }
+		available = {
+			is_ai = no
+		}
 	    complete_effect = {
-		   
+			
 	    }
     }
 }

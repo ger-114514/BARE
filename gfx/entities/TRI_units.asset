@@ -491,7 +491,7 @@ entity = {
 			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
 			event = { time = 0 node="exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
 		}
-		scale = 0.05	
+		scale = 0.017
 	}
 
 	##infantry
@@ -854,7 +854,7 @@ entity = {
 	}
 
 	entity = {
-		name = "TRI_airborne_infantry_2_entity"
+		name = "trinity_culture_gfx_airborne_infantry_2_entity"
 		clone = "trinity_culture_gfx_airborne_infantry_entity"
 		
 		attach = { 	name = "vehicle"			vehicle = "trinity_culture_gfx_MI_8_AB_entity" }
@@ -862,7 +862,7 @@ entity = {
 	}
 
 	entity = {
-		name = "TRI_airborne_infantry_3_entity"
+		name = "trinity_culture_gfx_airborne_infantry_3_entity"
 		clone = "trinity_culture_gfx_airborne_infantry_entity"
 		
 		attach = { 	name = "vehicle"			vehicle = "trinity_culture_gfx_MI_8_AB_entity" }
@@ -956,7 +956,7 @@ entity = {
 		event = { time = 0 node="left_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes } 
 	}
 	
-	scale = 0.95
+	scale = 1.1
 
 	game_data = {
 		texture_anim_speed = 0.5
@@ -1003,7 +1003,7 @@ entity = {
 		event = { time = 0 node="right_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
 	}
 	
-	scale = 0.5
+	scale = 1.0
 
 	game_data = {
 		texture_anim_speed = 0.5
@@ -1054,7 +1054,7 @@ entity = {
 		event = { time = 0 node="right_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
 	}
 	
-	scale = 0.6
+	scale = 1.0
 
 	game_data = {
 		texture_anim_speed = 0.5
@@ -1117,6 +1117,9 @@ entity = {
     clone = "trinity_culture_gfx_medium_armor_0_entity"
 }
 
+#####
+#挑战者
+####
 entity = {
 	name = "trinity_culture_gfx_medium_armor_2_entity"
 	pdxmesh = "TRI_challenger_2_mesh"
@@ -1153,7 +1156,7 @@ entity = {
 		event = { time = 0 node="left_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
 	}
 	
-	scale = 0.95
+	scale = 0.7
 
 	game_data = {
 		texture_anim_speed = 0.5
@@ -1198,7 +1201,7 @@ entity = {
 		event = { time = 0 node="exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
 	}
 	
-	scale = 1.0
+	scale = 0.6
 
 	game_data = {
 		texture_anim_speed = 0.5
@@ -1242,7 +1245,7 @@ entity = {
 		event = { time = 0 node="right_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
 	}
 	
-	scale = 0.5
+	scale = 0.45
 
 	game_data = {
 		texture_anim_speed = 0.5

@@ -1,99 +1,149 @@
 
-spriteTypes = {	
-	#超事件1
-	SpriteType = {
-		name = "GFX_BARE_SuperEvent_BG_1"
-		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_BG_1.dds"
-	}
-	SpriteType = {
-		name = "GFX_BARE_SuperEvent_1_Point"
-		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_1_Point.dds"
-	}
-	SpriteType = {
-		name = "GFX_BARE_SuperEvent_1_Close"
-		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_1_Close.dds"
-	}
+spriteTypes = {
+    #超事件1
+    SpriteType = {
+        name = "GFX_BARE_SuperEvent_BG_1"
+        texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_BG_1.dds"
+    }
+    SpriteType = {
+        name = "GFX_BARE_SuperEvent_1_Point"
+        texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_1_Point.dds"
+    }
+    SpriteType = {
+        name = "GFX_BARE_SuperEvent_1_Close"
+        texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEvent_1_Close.dds"
+    }
 
-	#超事件1图片
-	SpriteType = {
-		name = "GFX_BARE_SuperEvent_1_SECOND_EDEN_TREATY"
-		texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEventPictures/SuperEvent_1_Photo_1.dds"
-	}
+    #超事件1图片
+    SpriteType = {
+        name = "GFX_BARE_SuperEvent_1_SECOND_EDEN_TREATY"
+        texturefile = "gfx/interface/SuperEvent/SuperEvent_1/SuperEventPictures/SuperEvent_1_Photo_1.dds"
+    }
 
-	#超事件2
+    #超事件2
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_close_button"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_button.dds"
-		TransparenceCheck = yes
-	}
-	
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_close_button_frame"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_button_frame.dds"
-		TransparenceCheck = yes
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_close_button"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_button.dds"
+        TransparenceCheck = yes
+    }
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_title"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_title.dds"
-	}	
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_close_button_frame"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_button_frame.dds"
+        TransparenceCheck = yes
+    }
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_frame"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_frame.dds"
-	}
-	#超事件2图片
-	############################################################
-	
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_trinity_home.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_NORMAL"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_normal.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_DOUBLE_TWELVE_COUP"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/double_twelve_coup.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/red_winter_civil_war.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_CAESAR_COUP_FAILED"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/caesar_coup_failed.dds"
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_title"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_title.dds"
+    }
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_MIKA_COUP_ARI"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/mika_coup_ari.dds"
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_frame"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/super_frame.dds"
+    }
+    #超事件2图片
+    ############################################################
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_STRIKE"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_strike.dds"
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_trinity_home.dds"
+    }
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_HELP_HOSHINO"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/help_hoshino.dds"
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_NORMAL"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_normal.dds"
+    }
 
-	spriteType = {
-		name = "GFX_BARE_SuperEvent_2_LSGSJ_GSC_IN"
-		textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/lsgsj_gsc_in.dds"
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_DOUBLE_TWELVE_COUP"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/double_twelve_coup.dds"
+    }
 
-	#突然死亡结局
-	spriteType = {
-		name = "GFX_BARE_sudden_death_event_1"
-		textureFile = "gfx/interface/SuperEvent/sudden_death_event/sudden_death_event_1.dds"
-	}
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/red_winter_civil_war.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_CAESAR_COUP_FAILED"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/caesar_coup_failed.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_MIKA_COUP_ARI"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/mika_coup_ari.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_EDEN_TREATY_STRIKE"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/eden_treaty_strike.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_HELP_HOSHINO"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/help_hoshino.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_LSGSJ_GSC_IN"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/lsgsj_gsc_in.dds"
+    }
+
+    #突然死亡结局
+    spriteType = {
+        name = "GFX_BARE_sudden_death_event_1"
+        textureFile = "gfx/interface/SuperEvent/sudden_death_event/sudden_death_event_1.dds"
+    }
+
+    ###########################
+    ###########################
+    ### CLASSIC SUPER EVENT ###
+    ###########################
+    ###########################
+    spriteType = {
+        name = "GFX_BARE_super_event_background"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_super_event_bg.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_super_event_close_button"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_super_event_close_button.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_1"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_1.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_2"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_2.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_3"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_3.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_4"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_4.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_5"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_5.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_6"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_6.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_7"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_7.dds"
+    }
 }
