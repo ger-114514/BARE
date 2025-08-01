@@ -904,7 +904,7 @@ GEH_societies_dec_category = {
                         add_to_variable = { GEH_gourmet_research_activity = 8 }                     
                     }
                     add_to_variable = { GEH_gourmet_research_destructive = 4 }
-                    custom_effect_tooltip = GEH_operation_gourmet_research_3_tt
+                    custom_effect_tooltip = GEH_operation_gourmet_research_4_tt
                     GEH_food_service_and_gourmet_research_calc = yes
                     country_event = {
                         id = GEH_gourmet_research_events.6
