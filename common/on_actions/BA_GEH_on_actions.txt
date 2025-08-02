@@ -61,7 +61,7 @@ on_actions = {
 			}
 		}
 	}
-	on_daily_GEH = {
+	on_monthly_GEH = {
 		effect = {
 			GEH_monthly_random_daily_event = yes
 		}
