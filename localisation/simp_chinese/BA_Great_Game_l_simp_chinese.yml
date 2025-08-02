@@ -37,7 +37,7 @@
  Great_Game_invade_succeeded_tt: "从§Y[?FROM.GetNameWithFlag]§!手中获取对§Y[?Great_Game_invade_target.GetNameWithFlag]§!的托管权"
  Great_Game_invade_failed_tt: "未能获取对§Y[?Great_Game_invade_target.GetNameWithFlag]§!的托管权"
  Great_Game_defend_succeeded_tt: "保住对§Y[?Great_Game_invade_target.GetNameWithFlag]§!的托管权"
- Great_Game_defend_failed_tt: "被§Y[?Great_Game_invader.OVERLORD.GetNameWithFlag]§!夺走§Y[?Great_Game_invade_target.GetNameWithFlag]§!的托管权"
+ Great_Game_defend_failed_tt: "被§Y[?Great_Game_invader.GetNameWithFlag]§!夺走§Y[?Great_Game_invade_target.GetNameWithFlag]§!的托管权"
  Great_Game_invade_cd: "发起进攻后的修整"
  Great_Game_coins: "£Great_Game_coin 演习代币"
  Great_Game_coin_tt: "演习代币，可用于兑换各种奖励"

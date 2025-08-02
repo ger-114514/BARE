@@ -1696,11 +1696,35 @@ focus_tree = {
 							check_variable = { i > 0 } 
 							any_controlled_state = {
 								has_state_flag = TRI_rebuilding_subsidy_fired
+								NOT = {
+									has_state_flag = TRI_shadow_scheme_fired
+								}
+								OR = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+									}
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+									}
+									free_building_slots = {
+										building = heavy_arms_factory
+										size > 0
+									}
+									free_building_slots = {
+										building = resource_distribution_center
+										size > 0
+									}
+								}
 							}
 						}
 						random_owned_controlled_state = {
 							limit = {
 								has_state_flag = TRI_rebuilding_subsidy_fired
+								NOT = {
+									has_state_flag = TRI_shadow_scheme_fired
+								}
 								OR = {
 									free_building_slots = {
 										building = industrial_complex
@@ -1782,7 +1806,9 @@ focus_tree = {
 									add_extra_state_shared_building_slots = 1
 								}
 							}
+							set_state_flag = TRI_shadow_scheme_fired
 						}
+						subtract_from_temp_variable = { i = 1 }
 					}
 				}
 				
