@@ -187,21 +187,26 @@ focus_tree = {
 				prerequisite = { focus = TRI_authorize_dove_faction }
 				prerequisite = { focus = TRI_turncoat_in_trinity }
 				available = {
-					custom_override_tooltip = {
-						tooltip = {
-							localization_key = TRI_focus_support_trigger
-							PARLIAMENT = BA_TRI_senate_seat
-							SUPPORT = "15"
-						}
-						check_variable = { position_support@BA_TRI_senate_seat > 15 }
-					}
-					custom_override_tooltip = {
-						tooltip = {
-							localization_key = TRI_focus_support_trigger
-							PARLIAMENT = BA_TRI_house_seat
-							SUPPORT = "50"
-						}
-						check_variable = { position_support@BA_TRI_house_seat > 50 }
+					OR = {
+						is_ai = yes
+						AND = {
+							custom_override_tooltip = {
+						        tooltip = {
+							        localization_key = TRI_focus_support_trigger
+							        PARLIAMENT = BA_TRI_senate_seat
+							        SUPPORT = "15"
+						        }
+						    check_variable = { position_support@BA_TRI_senate_seat > 15 }
+					        }
+                            custom_override_tooltip = {
+						        tooltip = {
+							    localization_key = TRI_focus_support_trigger
+							    PARLIAMENT = BA_TRI_house_seat
+							    SUPPORT = "50"
+						        }
+						    check_variable = { position_support@BA_TRI_house_seat > 50 }
+					        }
+						} 
 					}
 				}
 				cancel_if_invalid = no
@@ -1524,14 +1529,18 @@ focus_tree = {
 			relative_position_id = TRI_threading_a_needle
 			prerequisite = { focus = TRI_threading_a_needle }		
 			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = TRI_focus_support_trigger
-						PARLIAMENT = BA_TRI_senate_seat
-						SUPPORT = "24"
-					}
-					check_variable = { position_support@BA_TRI_senate_seat > 24 }
+				OR = {
+					is_ai = yes
+                    custom_override_tooltip = {
+					    tooltip = {
+						    localization_key = TRI_focus_support_trigger
+						    PARLIAMENT = BA_TRI_senate_seat
+						    SUPPORT = "24"
+					    }
+					    check_variable = { position_support@BA_TRI_senate_seat > 24 }
+				    }
 				}
+				
 			}
 			cost = 5
 			x = 0
@@ -2054,21 +2063,26 @@ focus_tree = {
 			relative_position_id = TRI_unexpected_accident
 			prerequisite = { focus = TRI_unexpected_accident }		
 			available = {
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = TRI_focus_support_trigger
-						PARLIAMENT = BA_TRI_senate_seat
-						SUPPORT = "12"
+				OR = {
+					is_ai = yes
+					AND = {
+                        custom_override_tooltip = {
+					        tooltip = {
+						        localization_key = TRI_focus_support_trigger
+						        PARLIAMENT = BA_TRI_senate_seat
+						        SUPPORT = "12"
+					        }
+					    check_variable = { position_support@BA_TRI_senate_seat > 12 }
+				        }
+				        custom_override_tooltip = {
+					        tooltip = {
+						        localization_key = TRI_focus_support_trigger
+						        PARLIAMENT = BA_TRI_house_seat
+						        SUPPORT = "25"
+					        }
+					    check_variable = { position_support@BA_TRI_house_seat > 25 }
+				        }
 					}
-					check_variable = { position_support@BA_TRI_senate_seat > 12 }
-				}
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = TRI_focus_support_trigger
-						PARLIAMENT = BA_TRI_house_seat
-						SUPPORT = "25"
-					}
-					check_variable = { position_support@BA_TRI_house_seat > 25 }
 				}
 			}	
 			cost = 5
