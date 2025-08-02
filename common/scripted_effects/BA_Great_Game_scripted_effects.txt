@@ -105,8 +105,10 @@ Great_Game_generate_global_chart = {
 }
 Great_Game_add_cannot_invade = {
 	if = {
-		NOT = {
-			is_in_array = { Great_Game_cannot_invade = target }
+		limit = {
+			NOT = {
+				is_in_array = { Great_Game_cannot_invade = target }
+			}
 		}
 		custom_effect_tooltip = Great_Game_add_cannot_invade
 		add_to_array = { Great_Game_cannot_invade = target }
@@ -114,7 +116,9 @@ Great_Game_add_cannot_invade = {
 }
 Great_Game_remove_cannot_invade = {
 	if = {
-		is_in_array = { Great_Game_cannot_invade = target }
+		limit = {
+			is_in_array = { Great_Game_cannot_invade = target }
+		}
 		custom_effect_tooltip = Great_Game_remove_cannot_invade
 		remove_from_array = { Great_Game_cannot_invade = target }
 	}
@@ -229,6 +233,7 @@ Great_Game_invade_succeeded = {
 				clear_variable = Great_Game_invade_target
 				clear_variable = Great_Game_invade_target_overlord
 				clear_variable = Great_Game_enemy
+				remove_mission = college_exercise_ongoing_ally
 			}
 			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
@@ -236,6 +241,7 @@ Great_Game_invade_succeeded = {
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
+			remove_mission = college_exercise_ongoing_defender
 		}
 		for_each_scope_loop = {
 			array = Great_Game_temp_allies
@@ -245,6 +251,7 @@ Great_Game_invade_succeeded = {
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
+			remove_mission = college_exercise_ongoing_ally
 		}
 		#白和
 		white_peace = FROM
@@ -298,7 +305,10 @@ Great_Game_invade_succeeded = {
 		clear_variable = Great_Game_enemy
 		set_country_flag = Great_Game_invade_cd
 		activate_mission = Great_Game_invade_cd
-
+		remove_targeted_decision = {
+			target = FROM
+			decision = college_exercise_ongoing_attacker
+		}
 		Great_Game_generate_global_chart = yes
 	}
 }
@@ -326,6 +336,7 @@ Great_Game_invade_failed = {
 				clear_variable = Great_Game_invade_target
 				clear_variable = Great_Game_invade_target_overlord
 				clear_variable = Great_Game_enemy
+				remove_mission = college_exercise_ongoing_ally
 			}
 			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
@@ -333,6 +344,7 @@ Great_Game_invade_failed = {
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
+			remove_mission = college_exercise_ongoing_defender
 		}
 		#增加连败
 		add_to_variable = { Great_Game_consecutive_defeats = 1 }
@@ -352,6 +364,7 @@ Great_Game_invade_failed = {
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
+			remove_mission = college_exercise_ongoing_ally
 		}
 		white_peace = FROM
 		clr_country_flag = involved_in_Great_Game_as_attacker
@@ -359,6 +372,12 @@ Great_Game_invade_failed = {
 		clear_variable = Great_Game_invade_target
 		clear_variable = Great_Game_invade_target_overlord
 		clear_variable = Great_Game_enemy
+		set_country_flag = Great_Game_invade_cd
+		activate_mission = Great_Game_invade_cd
+		remove_targeted_decision = {
+			target = FROM
+			decision = college_exercise_ongoing_attacker
+		}
 		
 		Great_Game_generate_global_chart = yes
 	}
