@@ -579,6 +579,7 @@ GST_LS_ZZ_category = {
 						has_war_with = GEH
 					}
 				}
+				has_global_flag = BARE_ARI_Last_step_start
 			}
 		}
 		available = {
@@ -930,7 +931,7 @@ GST_LS_ZZ_category = {
 		days_mission_timeout = 7
 		is_good = no
 		complete_effect = {
-			activate_decision = GST_ARI_defend_cathedral
+			# activate_decision = GST_ARI_defend_cathedral
 			remove_mission = GST_ZZ_ARI_XCJC_WQSL
 		}
 		cancel_trigger = {
@@ -946,6 +947,9 @@ GST_LS_ZZ_category = {
 		cancel_effect = {
 			Cathedral_war_ARI_cathedral_fall = yes
 			Cathedral_war_ARI_defeated = yes
+
+
+			
 		}
 		timeout_effect = {
 			Cathedral_war_ARI_cathedral_fall = yes

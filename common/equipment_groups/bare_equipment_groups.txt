@@ -18,9 +18,76 @@ cat_eq_all_uav = { #Includes Super Heavy Tank Chassis
 		medium_uav_cas_airframe
 		heavy_uav_airframe
 		heavy_uav_cas_airframe
-		transport_plane_equipment
 		small_uav_recon_airframe
 	}
 }
+cat_eq_all_apc = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		apc_equipment
+		apc_aa_equipment
+		apc_artillery_equipment
+		apc_at_equipment
+	}
+}
 
-
+cat_eq_all_ifv = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		ifv_equipment
+		ifv_aa_equipment
+		ifv_artillery_equipment
+		ifv_at_equipment
+	}
+}
+cat_eq_all_fire_support = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		fire_support_equipment
+		light_fire_support_equipment
+		heavy_fire_support_equipment
+		special_fire_support_equipment
+	}
+}
+cat_eq_all_bm= { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		light_bm_equipment
+		light_bm_artillery_equipment
+		light_bm_aa_equipment
+		light_bm_destroyer_equipment
+		medium_bm_equipment
+		medium_bm_artillery_equipment
+		medium_bm_aa_equipment
+		medium_bm_destroyer_equipment
+		heavy_bm_equipment
+		heavy_bm_artillery_equipment
+		heavy_bm_aa_equipment
+		heavy_bm_destroyer_equipment
+	}
+}
+mio_cat_eq_all_tank_artillery_BA = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		light_tank_artillery_equipment
+		medium_tank_artillery_equipment
+		heavy_tank_artillery_equipment
+	}
+}
+mio_cat_eq_all_tank_aa_BA = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		light_tank_aa_equipment
+		medium_tank_aa_equipment
+		heavy_tank_aa_equipment
+	}
+}
+mio_cat_eq_all_tank_destroyers_BA = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		light_tank_destroyers_equipment
+		medium_tank_destroyers_equipment
+		heavy_tank_destroyers_equipment
+	}
+}
+mio_cat_eq_all_support_equipment = { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		support_engineer_equipment
+		support_security_equipment
+		support_logistics_equipment
+		support_equipment
+	}
+}

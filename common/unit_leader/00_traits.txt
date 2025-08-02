@@ -290,11 +290,11 @@ leader_traits = {
 		unit_trigger = {
 			OR = {
 				division_has_majority_template = infantry
-				division_has_majority_template = bicycle_battalion
-				division_has_majority_template = marine
-				division_has_majority_template = mountaineers
-				division_has_majority_template = paratrooper
-				division_has_majority_template = penal_battalion
+				division_has_majority_template = infantry_sf
+				division_has_majority_template = infantry_am
+				division_has_majority_template = infantry_heavy
+				division_has_majority_template = infantry_sp
+				division_has_majority_template = infantry_militia
 				
 				
 			}
@@ -331,17 +331,15 @@ leader_traits = {
 		trait_type = personality_trait
 		unit_type = {
 			type = cavalry
-			type = camelry
-			type = motorized
-			type = mechanized
+			type = ifv_unit
+			type = apc_unit
 		}
 		
 		unit_trigger = {
 			OR = {
 				division_has_majority_template = cavalry
-				division_has_majority_template = camelry
-				division_has_majority_template = motorized
-				division_has_majority_template = mechanized
+				division_has_majority_template = ifv_unit
+				division_has_majority_template = apc_unit
 			}
 
 		}
@@ -381,7 +379,6 @@ leader_traits = {
 				division_has_majority_template = light_armor
 				division_has_majority_template = medium_armor
 				division_has_majority_template = heavy_armor
-				division_has_majority_template = super_heavy_armor
 				
 
 				

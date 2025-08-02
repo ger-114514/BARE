@@ -174,7 +174,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			FROM = {
 				set_technology = {
 					GVS_Blasting_Rope_tech = 1
-					pop_up = no
+					popup = no
 				}
 				custom_effect_tooltip = GVS_Blasting_Rope_tech_tt
 			}
@@ -491,7 +491,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			FROM = {
 				set_technology = {
 					GVS_Logistical_support_tools_trait_tech = 1
-					pop_up = no
+					popup = no
 				}
 				custom_effect_tooltip = GVS_Logistical_support_tools_trait_tech_tt
 			}

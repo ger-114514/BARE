@@ -1,0 +1,91 @@
+##宜居度##
+##初始化宜居度效果##
+ALF_initialize_livability_system_effect = {
+    custom_effect_tooltip = initialize_livability_system_tt
+    ##将黑市的每个省份加入数组
+    every_state = {
+        limit = {
+            is_core_of = A47
+        }
+        add_to_array = {
+            array = global.black_market_state
+            value = THIS.id
+        }
+    }
+
+    ##初始化宜居度所需数值##
+    ALF = {
+        set_variable = {
+            ALF.Livability_var = 1
+        }
+        set_variable = {
+            ALF.ALF_Livability_dynamic_modifier_var = 0
+        }
+        ALF = {
+            add_dynamic_modifier = {
+                modifier = ARI_Livability_dynamic_modifier
+            }
+        }
+        ##测试用，记得最后删掉##
+        set_variable = {
+            ALF.Livability_from_event_var = 6
+        }
+    }
+}
+
+##先计算宜居度导致的效果，再计算宜居度##
+
+##计算所有宜居度相关数据
+ALF_calculate_livability_effect = {
+    custom_effect_tooltip = ALF_calculate_livability_state_tt
+
+    ##计算目前宜居度
+    add_to_variable = {
+        ALF.Livability_var = modifier@ALF_Livability_int
+    }
+
+    ##获取省份数量##
+    for_each_scope_loop = {
+        array = global.black_market_state
+        if = {
+            limit = {
+                is_owned_and_controlled_by = ALF
+            }
+            add_to_temp_variable = {
+                ALF.Livability_state_var = 1
+            }
+        }
+    }
+
+    ##计算省份带来的宜居度需求##
+    set_variable = {
+        ALF.Livability_standard_var = ALF.Livability_state_var
+    }
+
+    ##计算事件带来的宜居度需求##
+    add_to_variable = {
+        ALF.Livability_standard_var = ALF.Livability_from_event_var
+    }
+
+    ##计算目前的宜居度##
+    set_variable = {
+        ALF.Livability_quantity_d_var = ALF.Livability_var
+    }
+
+    ##计算宜居度的差值
+    subtract_from_variable = {
+        var = ALF.Livability_quantity_d_var
+        value = ALF.Livability_standard_var
+    }
+
+    ##TODO：计算差值带来的效果，以buff形式写入动态精神中##
+}
+
+##
+ALF_improve_livability_modifier_effect = {
+    custom_effect_tooltip = ALF_improve_livability_modifier_effect_tt
+    add_to_variable = {
+        ALF.ALF_Livability_dynamic_modifier_var = 0.1
+    }
+    force_update_dynamic_modifier = yes
+}

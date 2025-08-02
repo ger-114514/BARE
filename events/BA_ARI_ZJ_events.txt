@@ -8,8 +8,13 @@ country_event = {
 	is_triggered_only = yes
 	# picture = TRI_news_event_10
 
+	immediate = {
+		set_country_flag = ARI_Locker_Squad_flag
+	}
+
 	option = {
 		name = ARI_ZJ.1.a
+		custom_effect_tooltip = ARI_ZJ_1_tooltip
 		custom_effect_tooltip =ARI_end_tooltip_3
 		hidden_effect = {
 			ARI = {
@@ -73,6 +78,9 @@ country_event = {
 
 	option = {
 		name = ARI_ZJ.4.a
+
+		custom_effect_tooltip = ARI_ZJ_4_tooltip
+
 		remove_dynamic_modifier = { #阿里乌斯包税制
 			modifier = ARI_tax_farming
 		}
@@ -232,6 +240,7 @@ country_event = {
 
 	option = {
 		name = ARI_ZJ.8.a
+		custom_effect_tooltip = ARI_ZJ_8_tooltip
 	}
 
 	immediate = {

@@ -518,7 +518,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.11
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -528,7 +528,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.18
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -538,7 +538,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.19
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -548,7 +548,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.23
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -558,7 +558,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.28
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -568,7 +568,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.29
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -578,7 +578,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.30
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -588,7 +588,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.31
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}
 	}else_if = {
@@ -598,7 +598,6 @@ GEH_monthly_random_daily_event = {
 			set_temp_variable = {
 				GEH_random_event_chance = random
 			}
-			log = "GEH_random_event_chance [?GEH_random_event_chance]"
 			check_variable = {
 				GEH_bad_event_temp < GEH_random_event_chance
 			}
@@ -607,8 +606,6 @@ GEH_monthly_random_daily_event = {
 		set_temp_variable = {
 			GEH_random_event_no_temp = random
 		}
-
-		log = "GEH_random_event_no_temp a [?GEH_random_event_no_temp]"
 
 		multiply_temp_variable = {
 			GEH_random_event_no_temp = 8
@@ -621,7 +618,6 @@ GEH_monthly_random_daily_event = {
 			min = 0
 			max = 7
 		}
-		log = "GEH_random_event_no_temp b [?GEH_random_event_no_temp]"
 		set_temp_variable = {
 			GEH_random_event_days_temp = random
 		}
@@ -639,10 +635,9 @@ GEH_monthly_random_daily_event = {
 					GEH_random_event_no_temp = 0
 				}
 			}
-			log = "GEH_random_event_no_temp 12 [?GEH_random_event_no_temp]"
 			country_event = {
 				id = GEH_daily.12
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -652,7 +647,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.13
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -662,7 +657,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.14
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -672,7 +667,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.16
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -682,7 +677,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.20
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -692,7 +687,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.25
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -702,7 +697,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.26
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}else_if = {
 			limit = {
@@ -712,7 +707,7 @@ GEH_monthly_random_daily_event = {
 			}
 			country_event = {
 				id = GEH_daily.27
-				GEH_random_event_no_temp
+				days = GEH_random_event_no_temp
 			}
 		}
 

@@ -282,7 +282,6 @@ country_event = {
     title = ARI_beatrice.100.t
     desc = ARI_beatrice.100.desc
     timeout_days = 2
-    picture = TRI_news_event_18
 
     is_triggered_only = yes
     option = {
@@ -293,13 +292,31 @@ country_event = {
     }
 }
 
+
+country_event = {
+    id = ARI_beatrice.104
+    title = ARI_beatrice.104.t
+    desc = ARI_beatrice.104.desc
+    timeout_days = 2
+
+    immediate = {
+        set_country_flag = ARI_Locker_Squad_flag
+    }
+
+    is_triggered_only = yes
+    option = {
+        name = ARI_beatrice.104.a
+      
+    }
+}
+
+
 #阿里乌斯的骚动
 country_event = {
     id = ARI_beatrice.101
     title = ARI_beatrice.101.t
     desc = ARI_beatrice.101.desc
     timeout_days = 2
-    picture = TRI_news_event_10
 
     is_triggered_only = yes
     option = {
@@ -317,9 +334,13 @@ country_event = {
     id = ARI_beatrice.102
     title = ARI_beatrice.102.t
     desc = ARI_beatrice.102.desc
-    picture = TRI_news_event_20
+
+    timeout_days = 1
 
     is_triggered_only = yes
+
+    
+
     option = {
         name = ARI_beatrice.102.a
 
@@ -336,21 +357,118 @@ country_event = {
                 ARI_intelligence_in_GEH_3
                 ARI_intelligence_in_GEH_4
             }
+            news_event = {
+                id = LS_GST.61
+            }
+
+
+             SCH = {
+                IF = {
+                    limit = {
+                        is_faction_leader = yes
+                    }
+                    set_faction_name = JWTS_FYLM
+                }
+
+                ELSE_IF = {
+                    limit = {
+                        is_in_faction = yes
+                        is_faction_leader = no
+                    }
+
+                    leave_faction = yes
+
+                    custom_effect_tooltip = generic_skip_one_line_tt
+
+                    create_faction = JWTS_FYLM
+                }
+
+                ELSE = {
+                    create_faction = JWTS_FYLM
+                }
+            }
+            TRI = {
+                if = {
+                    limit = {
+                        is_faction_leader = yes
+                    }
+                    dismantle_faction = yes
+                }
+                else_if = {
+                    limit = {
+                        is_in_faction = yes
+                    }
+                    leave_faction = yes
+                }
+            
+            }
+            GEH = {
+                if = {
+                    limit = {
+                        is_faction_leader = yes
+                    }
+                    dismantle_faction = yes
+                }
+                else_if = {
+                    limit = {
+                        is_in_faction = yes
+                    }
+                    leave_faction = yes
+                }
+                
+            }
+            SCH = {
+                add_to_faction = TRI
+                add_to_faction = GEH
+            }
+            set_global_flag = BARE_ARI_Last_step_start
+            set_global_flag = ARIUS_IN_DISABLED
             every_country = {
                 limit = {
                     AND = {
                         NOT = { original_tag = ARI }
                         NOT = { has_war_with = ARI }
+                        or = {
+                            not = {
+                                has_idea = BARE_Global_Blockade_Zone
+                            }
+                        }
                     }
                 }
-
                 #TODO:要排除掉所有的废墟地区
                 declare_war_on = {
                     target = ARI
                     type = annex_everything
                 }
+                if = {
+                    limit = {
+                        not = {
+                            is_in_faction_with = SCH 
+                        }
+                    }
+                    if = {
+                        limit = {
+                            is_faction_leader = yes
+                        }
+                        dismantle_faction = yes
+                    }
+                    else_if = {
+                        limit = {
+                            is_in_faction = yes
+                        }
+                        leave_faction = yes
+                    }
+
+                    SCH = {
+                        add_to_faction = PREV
+                    }
+                }
             }
         }
+
+
+        
+       
     }
 }
 

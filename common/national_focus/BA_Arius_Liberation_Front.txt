@@ -1,0 +1,273 @@
+####阿里乌斯解放阵线####
+####主线国策####
+focus_tree = {
+	id = ALF_Common_Focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALF
+		}
+	}
+	continuous_focus_position = {
+		x = 50
+		y = 3000
+	}
+	default = no
+	
+	##第一阶段
+	focus = {
+		#一场伟大的逃亡
+		id = ALF_a_great_march
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 4
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#故园
+		id = ALF_memory_of_old_home
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_a_great_march
+		prerequisite = { focus = ALF_a_great_march }
+
+		cost = 1
+		x = -2
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#收敛旧物
+		id = ALF_recovery_old_stuff
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_memory_of_old_home
+		prerequisite = { focus = ALF_memory_of_old_home }
+
+		cost = 1
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#新家
+		id = ALF_settled_in_new_home
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_a_great_march
+		prerequisite = { focus = ALF_a_great_march }
+
+		cost = 1
+		x = 2
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#播下新种
+		id = ALF_begin_new_journey
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_settled_in_new_home
+		prerequisite = { focus = ALF_settled_in_new_home }
+
+		cost = 1
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#站稳脚跟
+		id = ALF_stand_our_ground
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_recovery_old_stuff
+		prerequisite = { focus = ALF_recovery_old_stuff }
+		prerequisite = { focus = ALF_begin_new_journey }
+
+		cost = 1
+		x = 2
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#阴影……
+		id = ALF_threat_is_coming
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_stand_our_ground
+		prerequisite = { focus = ALF_stand_our_ground }
+
+		cost = 1
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#组建自警团
+		id = ALF_establish_law_enforement_team
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_threat_is_coming
+		prerequisite = { focus = ALF_threat_is_coming }
+
+		cost = 1
+		x = -3
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {
+		#启用废弃库存
+		id = ALF_Enable_abandoned_inventory
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_threat_is_coming
+		prerequisite = { focus = ALF_threat_is_coming }
+
+		cost = 1
+		x = -1
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#重组邮政系统
+		id = ALF_Reorganize_the_postal_system
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_threat_is_coming
+		prerequisite = { focus = ALF_threat_is_coming }
+
+		cost = 1
+		x = 1
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#进行社区摸排
+		id = ALF_Conduct_community_surveys
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_threat_is_coming
+		prerequisite = { focus = ALF_threat_is_coming }
+
+		cost = 1
+		x = 3
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {
+		#作战计划：庇护之羽
+		id = ALF_operation_protect_wing
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_threat_is_coming
+		prerequisite = { focus = ALF_threat_is_coming }
+
+		cost = 1
+		x = 0
+		y = 2
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#目标：金钗盗贼团
+		id = ALF_target_HTG
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_operation_protect_wing
+		prerequisite = { focus = ALF_operation_protect_wing }
+
+		cost = 1
+		x = -2
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#目标：圣徒升天会
+		id = ALF_target_COS
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_operation_protect_wing
+		prerequisite = { focus = ALF_operation_protect_wing }
+
+		cost = 1
+		x = 2
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#噤声行动
+		id = ALF_target_AVG
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_operation_protect_wing
+		prerequisite = { focus = ALF_operation_protect_wing }
+
+		cost = 1
+		x = 0
+		y = 2
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		#升起旗帜
+		id = ALF_Raise_the_flag
+		icon = GFX_goal_unknown
+		relative_position_id = ALF_target_AVG
+		prerequisite = { focus = ALF_target_AVG }
+
+		cost = 1
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+		}
+	}
+}

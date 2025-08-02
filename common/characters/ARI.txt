@@ -76,6 +76,11 @@ characters = {
 			traits = {
 				princess_of_arius
 			}
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -88,6 +93,12 @@ characters = {
 			defense_skill = 5
 			planning_skill = 3
 			logistics_skill = 3
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 		}
 	}
 	ARI_saori = {
@@ -107,6 +118,12 @@ characters = {
 			traits = {
 				sword_of_arius
 			}
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 			cost = 100
 			ai_will_do = {
 				factor = 1
@@ -120,6 +137,12 @@ characters = {
 			defense_skill = 4
 			planning_skill = 1
 			logistics_skill = 4
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 		}
 	}
 	ARI_misaki = {
@@ -143,6 +166,12 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 		}
 		field_marshal = {
 			traits = {trickster adaptable guerilla_fighter
@@ -152,6 +181,12 @@ characters = {
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 3
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 		}
 	}
 	ARI_hiyori = {
@@ -171,6 +206,12 @@ characters = {
 			traits = {
 				master_of_massive_bombing
 			}
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -183,6 +224,12 @@ characters = {
 			defense_skill = 4
 			planning_skill = 3
 			logistics_skill = 2
+
+			visible = {
+				not = {
+					has_country_flag = ARI_Locker_Squad_flag
+				}
+			}
 		}
 	}
 	ARI_igarashi_ai = {# 五十岚-爱 劳动部长

@@ -14,6 +14,7 @@ ideas = {
             traits = { industrial_concern }
             modifier = {
                 production_speed_buildings_factor = 0.05
+                consumer_goods_factor = -0.1
             }
         }
 
@@ -40,7 +41,7 @@ ideas = {
             }
             traits = { electronics_concern }
             modifier = {
-                research_speed_factor = 0.05
+                research_speed_factor = 0.1
             }
         }
 
@@ -53,7 +54,7 @@ ideas = {
             traits = { industrial_concern }
             modifier = {
                 political_power_factor = 0.15
-                stability_weekly = 0.005
+                stability_weekly = 0.001
             }
         }
 
@@ -84,7 +85,8 @@ ideas = {
             traits = { industrial_concern }
             modifier = {
                 political_power_factor = -0.20
-                consumer_goods_factor = -0.25
+                consumer_goods_factor = -0.1
+                industrial_factory_donations = 15
             }
         }
         # 专属工业企业

@@ -1,5 +1,6 @@
 add_namespace = ALF
 
+#无心漫谈
 country_event = {
 	id = ALF.99
 	#picture = GFX_common_event_gui_test
@@ -11,7 +12,10 @@ country_event = {
 		name = ALF.99.a
 		custom_effect_tooltip = ALF_arrives_in_slience_tt
 		hidden_effect = {
-			199 = { transfer_state_to = ALF }
+			199 = { 
+				add_core_of = ALF
+				transfer_state_to = ALF
+			}
 			ALF = {
 				load_oob = ALF_oob_2019
 			}
@@ -24,6 +28,7 @@ country_event = {
 	}
 }
 
+#问候
 country_event = {
 	id = ALF.1
 	#picture = GFX_common_event_gui_test
@@ -38,6 +43,7 @@ country_event = {
 	}
 }
 
+#新家
 country_event = {
 	id = ALF.2
 	#picture = GFX_common_event_gui_test
@@ -50,6 +56,7 @@ country_event = {
 	}
 }
 
+#故园
 country_event = {
 	id = ALF.3
 	#picture = GFX_common_event_gui_test
@@ -62,6 +69,7 @@ country_event = {
 	}
 }
 
+#第一波人潮
 country_event = {
 	id = ALF.4
 	#picture = GFX_common_event_gui_test
@@ -74,6 +82,7 @@ country_event = {
 	}
 }
 
+#第二波人潮
 country_event = {
 	id = ALF.5
 	#picture = GFX_common_event_gui_test
@@ -90,6 +99,7 @@ country_event = {
 	}
 }
 
+#第三波人潮
 country_event = {
 	id = ALF.6
 	#picture = GFX_common_event_gui_test
@@ -108,6 +118,7 @@ country_event = {
 	}
 }
 
+###第四波，遗失的部队
 country_event = {
 	id = ALF.7
 	#picture = GFX_common_event_gui_test
@@ -135,4 +146,110 @@ country_event = {
 			load_oob = "ALF_oob_commandos"
 		}
 	}
+}
+
+#第五波
+country_event = {
+	id = ALF.8
+	#picture = GFX_common_event_gui_test
+	title = ALF.8.t
+	desc = ALF.8.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.8.a
+	}
+
+	option = {
+		name = ALF.8.b
+	}
+
+}
+
+#最后的人潮
+country_event = {
+	id = ALF.9
+	#picture = GFX_common_event_gui_test
+	title = ALF.9.t
+	desc = ALF.9.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.9.a
+		custom_effect_tooltip = alf_now_we_stands_tt
+	}
+
+}
+##站稳脚跟##
+country_event = {
+	id = ALF.10
+	#picture = GFX_common_event_gui_test
+	title = ALF.10.t
+	desc = ALF.10.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.10.a
+		ALF_improve_livability_modifier_effect = yes
+	}
+
+}
+
+#袭击
+country_event = {
+	id = ALF.11
+	#picture = GFX_common_event_gui_test
+	title = ALF.11.t
+	desc = ALF.11.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.11.a
+		custom_effect_tooltip = ALF_this_is_not_good_tt
+		complete_national_focus = ALF_threat_is_coming
+	}
+
+}
+
+#行动：庇护之羽
+country_event = {
+	id = ALF.12
+	#picture = GFX_common_event_gui_test
+	title = ALF.12.t
+	desc = ALF.12.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.12.a
+	}
+
+}
+
+#谎言与真实
+country_event = {
+	id = ALF.13
+	#picture = GFX_common_event_gui_test
+	title = ALF.13.t
+	desc = ALF.13.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.13.a
+		activate_mission = ALF_war_plan_protect_wing_timer_mission
+	}
+
+}
+
+country_event = {
+	id = ALF.14
+	#picture = GFX_common_event_gui_test
+	title = ALF.14.t
+	desc = ALF.14.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.14.a
+		custom_effect_tooltip = ALF_then_give_them_war_tt
+	}
+
 }

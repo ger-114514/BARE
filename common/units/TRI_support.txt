@@ -8,7 +8,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
-		active = yes
+		active = no
 		affects_speed = no
 		is_artillery_brigade = yes
         special_forces = yes
@@ -73,7 +73,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
-		active = yes
+		active = no
 		affects_speed = no
 
 		type = {
@@ -109,8 +109,7 @@ sub_units = {
 		
 		# Important Ability
 		suppression_factor = 0.25
-        land_reinforce_rate = 0.20
-        initiative = 0.1
+        initiative = 0.2
 
 
 		essential = {
@@ -134,7 +133,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
-		active = yes
+		active = no
 		affects_speed = no
 
 		type = {
@@ -241,7 +240,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
-		active = yes
+		active = no
 		affects_speed = no
 		is_artillery_brigade = yes
 

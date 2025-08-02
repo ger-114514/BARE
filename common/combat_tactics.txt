@@ -239,6 +239,27 @@ tactic_delay = {
 	defender = -0.15
 }
 
+tactic_ambush = { #counters shock
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill_advantage > 1
+			skill > 2
+			has_trait = trickster
+		}
+	}
+	
+	active = yes
+	
+	base =  { factor = 4 }
+	picture = ambush
+	countered_by = tactic_breakthrough
+	
+	attacker = -0.25
+}
+
 tactic_shock = { #counters delay
 	is_attacker = yes
 	trigger = {
@@ -674,14 +695,11 @@ tactic_sf_armor_supported_assault = { #Assault using specialist armoured vehicle
 	trigger = {
 		is_attacker = yes
 		phase = street_fighting
-		custom_trigger_tooltip = {
-			tooltip = has_flame_tank_units
-			OR = {
-				has_unit_type = light_flame_tank
-				has_unit_type = medium_flame_tank
-				has_unit_type = heavy_flame_tank
+		OR = {
+				has_unit_type = light_armor
+				has_unit_type = medium_armor
+				has_unit_type = heavy_armor
 			}
-		}
 	}
 	
 	active = yes 
@@ -704,7 +722,6 @@ tactic_sf_mouse_holing = { #House to House assaul, avoiding open streets where p
 		phase = street_fighting
 		OR = {
 			has_unit_type = engineer
-			has_unit_type = pioneer_support
 		}
 	}
 	

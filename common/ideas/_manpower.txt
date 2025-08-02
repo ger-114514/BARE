@@ -98,14 +98,15 @@ ideas = {
 				combat_readiness_factor = 0.05 #战备系数
 				can_use_combat_readiness_percentage = 0.01 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.01 #常备战备比例
-				free_cost_combat_readiness = 20 #额外常备战备值（k）
-				combat_readiness_recovery_percentage = 0.2 #战备恢复速度
-				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+				free_cost_combat_readiness = 5 #额外常备战备值（k）
+				combat_readiness_recovery_percentage = 0.1 #战备恢复速度
+				combat_readiness_recovery = 1 #每月额外恢复战备值（k）
 
 				army_org_factor = 0.2
 				army_org_regain = 0.1
-				production_speed_buildings_factor = 0.3
+				production_speed_buildings_factor = 0.1
 				industrial_capacity_factory = 0.1
+				
 			}
 		}
 
@@ -130,14 +131,13 @@ ideas = {
 				can_use_combat_readiness_percentage = 0.1 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.05 #常备战备比例
 				free_cost_combat_readiness = 2 #额外常备战备值（k）
-				combat_readiness_recovery_percentage = 0.2 #战备恢复速度
+				combat_readiness_recovery_percentage = 0.1 #战备恢复速度
 				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
 
 				army_org_factor = 0.2
 				army_org_regain = 0.1
-				army_attack_factor = 0.1
+				army_attack_factor = 0.05
 				army_defence_factor = 0.1
-				production_speed_buildings_factor = 0.1
 				air_mission_xp_gain_factor = 0.1
 			}
 		}
@@ -163,8 +163,8 @@ ideas = {
 				can_use_combat_readiness_percentage = 0.1 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.05 #常备战备比例
 				free_cost_combat_readiness = 2 #额外常备战备值（k）
-				combat_readiness_recovery_percentage = 0.2 #战备恢复速度
-				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+				combat_readiness_recovery_percentage = 0.25 #战备恢复速度
+				combat_readiness_recovery = 5 #每月额外恢复战备值（k）
 
 				army_org_factor = 0.1
 				army_org_regain = 0.1
@@ -191,9 +191,9 @@ ideas = {
 				combat_readiness_factor = 0.2 #战备系数
 				can_use_combat_readiness_percentage = 0.15 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.1 #常备战备比例
-				free_cost_combat_readiness = 2 #额外常备战备值（k）
+				# free_cost_combat_readiness = 2 #额外常备战备值（k）
 				combat_readiness_recovery_percentage = 0.15 #战备恢复速度
-				combat_readiness_recovery = 2 #每月额外恢复战备值（k）
+				combat_readiness_recovery = 1 #每月额外恢复战备值（k）
 
 				army_org_factor = 0.1
 			}
@@ -219,7 +219,7 @@ ideas = {
 				combat_readiness_factor = 0.25 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.1 #常备战备比例
-				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				# free_cost_combat_readiness = 1 #额外常备战备值（k）
 				combat_readiness_recovery_percentage = 0.1 #战备恢复速度
 				combat_readiness_recovery = 3 #每月额外恢复战备值（k）
 
@@ -247,9 +247,9 @@ ideas = {
 				combat_readiness_factor = 0.3 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.15 #常备战备比例
-				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				# free_cost_combat_readiness = 1 #额外常备战备值（k）
 				combat_readiness_recovery_percentage = 0.05 #战备恢复速度
-				combat_readiness_recovery = 1 #每月额外恢复战备值（k）
+				# combat_readiness_recovery = 1 #每月额外恢复战备值（k）
 
 				army_org_factor = -0.1
 				army_org_regain = -0.15
@@ -278,9 +278,9 @@ ideas = {
 				combat_readiness_factor = 0.4 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.2 #常备战备比例
-				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				# free_cost_combat_readiness = 1 #额外常备战备值（k）
 				combat_readiness_recovery_percentage = 0.03 #战备恢复速度
-				combat_readiness_recovery = 1 #每月额外恢复战备值（k）
+				# combat_readiness_recovery = 1 #每月额外恢复战备值（k）
 
 				army_org_factor = -0.3
 				army_org_regain = -0.15
@@ -321,7 +321,7 @@ ideas = {
 				combat_readiness_factor = 0.4 #战备系数
 				can_use_combat_readiness_percentage = 0.2 #可转化战备比例
 				free_cost_combat_readiness_percentage = 0.2 #常备战备比例
-				free_cost_combat_readiness = 1 #额外常备战备值（k）
+				# free_cost_combat_readiness = 1 #额外常备战备值（k）
 				combat_readiness_recovery_percentage = 0.03 #战备恢复速度
 				combat_readiness_recovery = 3 #每月额外恢复战备值（k）
 

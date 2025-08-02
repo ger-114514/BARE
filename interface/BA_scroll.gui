@@ -6,7 +6,7 @@ guiTypes = {
         leftbutton = "pad_downButton"
 		rightbutton = "pad_upButton"
         size = {x =8 y =8 }
-        position = {x= 6 y -2}
+        position = {x= 6 y = -2}
         priority = 100			
         borderSize = {x = 8 y = 8}	
         maxValue =1 

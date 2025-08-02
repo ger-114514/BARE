@@ -1,7 +1,7 @@
 
 soundeffect = {
 	name = BARE_SuperEvent_Sound_HELP_HOSHINO
-	volume = 0.8
+	volume = 0.6
 	sounds = {
 		sound = BARE_SuperEvent_Sound_HELP_HOSHINO
 	}
@@ -10,7 +10,7 @@ soundeffect = {
 
 soundeffect = {
 	name = BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
-	volume = 0.8
+	volume = 0.6
 	sounds = {
 		sound = BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
 	}
@@ -21,6 +21,23 @@ soundeffect = {
 	volume = 0.8
 	sounds = {
 		sound = BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
+	}
+}
+
+
+soundeffect = {
+	name = BARE_SuperEvent_Sound_MIKA_COUP_ARI
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_MIKA_COUP_ARI
+	}
+}
+
+soundeffect = {
+	name = BARE_SuperEvent_Sound_LSGSJ_GSC_IN
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_LSGSJ_GSC_IN
 	}
 }
 
@@ -46,11 +63,26 @@ sound =
 }
 
 
+sound =
+{
+	name = "BARE_SuperEvent_Sound_MIKA_COUP_ARI"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_MIKA_COUP_ARI.wav"
+}
+
+
+sound =
+{
+	name = "BARE_SuperEvent_Sound_LSGSJ_GSC_IN"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_LSGSJ_GSC_IN.wav"
+}
+
 category = {
 	name = "BARE_SuperEvent_Sound"
 	soundeffects = {
 		BARE_SuperEvent_Sound_HELP_HOSHINO
 		BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
 		BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
+		BARE_SuperEvent_Sound_MIKA_COUP_ARI
+		BARE_SuperEvent_Sound_LSGSJ_GSC_IN
 	}
 }

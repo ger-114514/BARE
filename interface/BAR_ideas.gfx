@@ -533,6 +533,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_College_Autonomous_Region.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_BARE_Global_Unacknowledged_College_Autonomous_Region"
+		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Unacknowledged_College_Autonomous_Region.dds"
+	}
+
+		spriteType = {
+		name = "GFX_idea_BARE_Global_Trusteeship_Area"
+		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Trusteeship_Area.dds"
+	}
+
+		spriteType = {
+		name = "GFX_idea_BARE_Global_Extrajudicial_Trusteeship_Area"
+		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Extrajudicial_Trusteeship_Area.dds"
+	}
+
 	###MIO###
 	#哦天哪这东西注册在ideas里吗
 	spriteType = {
