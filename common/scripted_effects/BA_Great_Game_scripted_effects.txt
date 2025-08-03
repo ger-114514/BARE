@@ -130,25 +130,27 @@ Great_Game_invite_to_ally = {
 		LEADER = "[?leader.GetNameWithFlag]"
 		ENEMY = "[?enemy.GetNameWithFlag]"
 	}
-	var:leader = {
-		add_to_array = { Great_Game_temp_allies = var:ally }
-		add_to_variable = { Great_Game_power_score_faction = var:ally:Great_Game_power_score }
-	}
-	var:ally = {
-		if = {
-			limit = {
-				var:leader = { has_country_flag = involved_in_Great_Game_as_attacker }
+	hidden_effect = {
+		var:leader = {
+			add_to_array = { Great_Game_temp_allies = var:ally }
+			add_to_variable = { Great_Game_power_score_faction = var:ally:Great_Game_power_score }
+		}
+		var:ally = {
+			if = {
+				limit = {
+					var:leader = { has_country_flag = involved_in_Great_Game_as_attacker }
+				}
+				set_country_flag = involved_in_Great_Game_as_attacker
 			}
-			set_country_flag = involved_in_Great_Game_as_attacker
+			else = {
+				set_country_flag = involved_in_Great_Game_as_defender
+			}
+			set_variable = { Great_Game_invader = var:leader:Great_Game_invader }
+			set_variable = { Great_Game_invade_target = var:leader:Great_Game_invade_target }
+			set_variable = { Great_Game_invade_target_overlord = var:leader:Great_Game_invade_target_overlord }
+			set_variable = { Great_Game_enemy = var:leader:Great_Game_enemy }
+			set_variable = { Great_Game_ally_leader = var:leader }
 		}
-		else = {
-			set_country_flag = involved_in_Great_Game_as_defender
-		}
-		set_variable = { Great_Game_invader = var:leader:Great_Game_invader }
-		set_variable = { Great_Game_invade_target = var:leader:Great_Game_invade_target }
-		set_variable = { Great_Game_invade_target_overlord = var:leader:Great_Game_invade_target_overlord }
-		set_variable = { Great_Game_enemy = var:leader:Great_Game_enemy }
-		set_variable = { Great_Game_ally_leader = var:leader }
 	}
 }
 Great_Game_start_invasion = {
@@ -158,10 +160,7 @@ Great_Game_start_invasion = {
 			target = FROM
 			type = take_trusteeship
 		}
-		activate_targeted_decision = {
-			target = FROM.OVERLORD
-			decision = college_exercise_ongoing_attacker
-		}
+		activate_mission = college_exercise_ongoing_attacker
 		#攻方盟友
 		for_each_scope_loop = {
 			array = Great_Game_temp_allies
@@ -169,17 +168,11 @@ Great_Game_start_invasion = {
 				targeted_alliance = ROOT
 				enemy = FROM.OVERLORD
 			}
-			activate_targeted_decision = {
-				target = FROM.OVERLORD
-				decision = college_exercise_ongoing_ally
-			}
+			activate_mission = college_exercise_ongoing_ally
 		}
 		FROM.OVERLORD = {
 			#守方
-			activate_targeted_decision = {
-				target = ROOT
-				decision = college_exercise_ongoing_defender
-			}
+			activate_mission = college_exercise_ongoing_defender
 			#守方盟友
 			for_each_scope_loop = {
 				array = Great_Game_temp_allies
@@ -187,10 +180,7 @@ Great_Game_start_invasion = {
 					targeted_alliance = PREV
 					enemy = ROOT
 				}
-				activate_targeted_decision = {
-					target = ROOT
-					decision = college_exercise_ongoing_ally
-				}
+				activate_mission = college_exercise_ongoing_ally
 			}
 		}
 	}
@@ -204,12 +194,12 @@ Great_Game_invade_succeeded = {
 		clear_variable = Great_Game_consecutive_defeats
 		#记录
 		set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
-		set_variable = { Great_Game_record_enemy^Great_Game_record_count = FROM }
+		set_variable = { Great_Game_record_enemy^Great_Game_record_count = var:Great_Game_enemy }
 		set_variable = { Great_Game_record_result^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
-		FROM = {
+		var:Great_Game_invade_target_overlord = {
 			Great_Game_get_coins = yes
 			#增加连败
 			add_to_variable = { Great_Game_consecutive_defeats = 1 }
@@ -225,36 +215,15 @@ Great_Game_invade_succeeded = {
 				array = BA_trusteeship_areas
 				value = var:Great_Game_invade_target
 			}
-			for_each_scope_loop = {
-				array = Great_Game_temp_allies
-				Great_Game_get_coins = yes
-				clr_country_flag = involved_in_Great_Game_as_defender
-				clear_variable = Great_Game_invader
-				clear_variable = Great_Game_invade_target
-				clear_variable = Great_Game_invade_target_overlord
-				clear_variable = Great_Game_enemy
-				remove_mission = college_exercise_ongoing_ally
-			}
-			clear_array = Great_Game_temp_allies
+			
 			clr_country_flag = involved_in_Great_Game_as_defender
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
-			remove_mission = college_exercise_ongoing_defender
-		}
-		for_each_scope_loop = {
-			array = Great_Game_temp_allies
-			Great_Game_get_coins = yes
-			clr_country_flag = involved_in_Great_Game_as_attacker
-			clear_variable = Great_Game_invader
-			clear_variable = Great_Game_invade_target
-			clear_variable = Great_Game_invade_target_overlord
-			clear_variable = Great_Game_enemy
-			remove_mission = college_exercise_ongoing_ally
 		}
 		#白和
-		white_peace = FROM
+		white_peace = var:Great_Game_invade_target_overlord
 		#夺取托管地区
 		add_to_array = { BA_trusteeship_areas = var:Great_Game_invade_target }
 		if = {
@@ -305,10 +274,6 @@ Great_Game_invade_succeeded = {
 		clear_variable = Great_Game_enemy
 		set_country_flag = Great_Game_invade_cd
 		activate_mission = Great_Game_invade_cd
-		remove_targeted_decision = {
-			target = FROM
-			decision = college_exercise_ongoing_attacker
-		}
 		Great_Game_generate_global_chart = yes
 	}
 }
@@ -316,7 +281,7 @@ Great_Game_invade_failed = {
 	custom_effect_tooltip = Great_Game_invade_failed_tt
 	Great_Game_get_coins = yes
 	hidden_effect = {
-		FROM = {
+		var:Great_Game_invade_target_overlord = {
 			#增加连胜
 			add_to_variable = { Great_Game_consecutive_wins = 1 }
 			clear_variable = Great_Game_consecutive_defeats
@@ -328,45 +293,23 @@ Great_Game_invade_failed = {
 			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
 			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 			Great_Game_add_record = yes
-			for_each_scope_loop = {
-				array = Great_Game_temp_allies
-				Great_Game_get_coins = yes
-				clr_country_flag = involved_in_Great_Game_as_defender
-				clear_variable = Great_Game_invader
-				clear_variable = Great_Game_invade_target
-				clear_variable = Great_Game_invade_target_overlord
-				clear_variable = Great_Game_enemy
-				remove_mission = college_exercise_ongoing_ally
-			}
-			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
-			remove_mission = college_exercise_ongoing_defender
 		}
 		#增加连败
 		add_to_variable = { Great_Game_consecutive_defeats = 1 }
 		clear_variable = Great_Game_consecutive_wins
 		#记录
 		set_variable = { Great_Game_record_target^Great_Game_record_count = var:Great_Game_invade_target }
-		set_variable = { Great_Game_record_enemy^Great_Game_record_count = FROM }
+		set_variable = { Great_Game_record_enemy^Great_Game_record_count = var:Great_Game_invade_target_overlord }
 		set_variable = { Great_Game_record_result^Great_Game_record_count = 2 }
 		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
-		for_each_scope_loop = {
-			array = Great_Game_temp_allies
-			Great_Game_get_coins = yes
-			clr_country_flag = involved_in_Great_Game_as_attacker
-			clear_variable = Great_Game_invader
-			clear_variable = Great_Game_invade_target
-			clear_variable = Great_Game_invade_target_overlord
-			clear_variable = Great_Game_enemy
-			remove_mission = college_exercise_ongoing_ally
-		}
-		white_peace = FROM
+		white_peace = var:Great_Game_invade_target_overlord
 		clr_country_flag = involved_in_Great_Game_as_attacker
 		clear_variable = Great_Game_invader
 		clear_variable = Great_Game_invade_target
@@ -374,13 +317,32 @@ Great_Game_invade_failed = {
 		clear_variable = Great_Game_enemy
 		set_country_flag = Great_Game_invade_cd
 		activate_mission = Great_Game_invade_cd
-		remove_targeted_decision = {
-			target = FROM
-			decision = college_exercise_ongoing_attacker
-		}
 		
 		Great_Game_generate_global_chart = yes
 	}
+}
+Great_Game_ally_leave = {
+	Great_Game_get_coins = yes
+	var:Great_Game_enemy = {
+		white_peace = ROOT
+		for_each_scope_loop = {
+			array = Great_Game_temp_allies
+			white_peace = ROOT
+		}
+	}
+	clr_country_flag = involved_in_Great_Game_as_attacker
+	clr_country_flag = involved_in_Great_Game_as_defender
+	clear_variable = Great_Game_invader
+	clear_variable = Great_Game_invade_target
+	clear_variable = Great_Game_invade_target_overlord
+	clear_variable = Great_Game_enemy
+	var:Great_Game_ally_leader = {
+		remove_from_array = {
+			array = Great_Game_temp_allies
+			value = ROOT
+		}
+	}
+	clear_variable = Great_Game_ally_leader
 }
 Great_Game_add_record = {
 	add_to_variable = { Great_Game_record_count = 1 }
