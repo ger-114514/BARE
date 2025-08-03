@@ -1217,6 +1217,50 @@ A45 = {#小橙子家族
 	}
 }
 
+A46 = {#黑龟组
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_hd_1"
+				"GFX_Portrait_hd_2"
+				"GFX_Portrait_hd_3"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+		female = {
+			"GFX_Portrait_hd_1"
+			"GFX_Portrait_hd_2"
+			"GFX_Portrait_hd_3"
+		}
+	}
+}
+
 A47 = {#黑市
 	army = { #将领随机
 		male = {
@@ -1292,7 +1336,7 @@ HH = {#混混
 	}
 }
 
-HLD = {#海兰德
+HIL = {#海兰德
 	army = { #将领随机
 		male = {
 			"GFX_Portrait_hld_1"

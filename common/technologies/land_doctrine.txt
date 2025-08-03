@@ -583,7 +583,7 @@ technologies = {
 			leads_to_tech = robot_13
 			research_cost_coeff = 1
 		}
-		category_bm {
+		category_bm = {
 			max_organisation = 5
 			supply_consumption = -0.1
 		}
@@ -648,47 +648,7 @@ technologies = {
 			}
 		}
 	}
-	robot_13 = {
-		xp_research_type = army
-		xp_unlock_cost = 70
 
-		path = {
-			leads_to_tech = robot_15
-			research_cost_coeff = 1
-		}
-		category_bm {
-			max_organisation = 5
-			defense = 0.1
-		}
-		land_reinforce_rate = 0.02
-		max_planning = 0.1
-		command_power_gain = 0.25
-		doctrine = yes
-		research_cost = 4.5
-		categories = {
-			land_doctrine
-			cat_grand_battle_plan
-		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
-		ai_will_do = {
-			factor = 25 
-			modifier = {
-				not = {
-					has_army_experience > 90
-				}
-				factor = 0.8
-			}
-		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
-	}
 	robot_14 = {
 		xp_research_type = army
 		xp_unlock_cost = 30
@@ -717,6 +677,47 @@ technologies = {
 			name = land_doctrine_folder
 			position = {
 				x = 2
+				y = 2
+			}
+		}
+	}
+	robot_13 = {
+		xp_research_type = army
+		xp_unlock_cost = 70
+
+		path = {
+			leads_to_tech = robot_15
+			research_cost_coeff = 1
+		}
+		category_bm = {
+			max_organisation = 5
+			defense = 0.1
+		}
+		land_reinforce_rate = 0.02
+		max_planning = 0.1
+		command_power_gain = 0.25
+		doctrine = yes
+		research_cost = 4.5
+		categories = {
+			land_doctrine
+			cat_grand_battle_plan
+		}
+		# dependencies = {
+		# 	pre_assault_bombardment = 1
+		# }
+		ai_will_do = {
+			factor = 25 
+			modifier = {
+				not = {
+					has_army_experience > 90
+				}
+				factor = 0.8
+			}
+		}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
 				y = 2
 			}
 		}
@@ -1515,7 +1516,7 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 		}
-		category_tank_destroyers {
+		category_tank_destroyers = {
 			hard_attack = 0.05
 		}
 		category_bm = {
@@ -1721,7 +1722,7 @@ technologies = {
 		category_support_battalions = {
             maximum_speed = 1
 		}
-		category_bm {
+		category_bm = {
 			soft_attack = 0.1
 		}	
 		category_tank_destroyers = {
@@ -2516,7 +2517,7 @@ technologies = {
 			leads_to_tech = robot_33
 			research_cost_coeff = 1
 		}
-		category_bm {
+		category_bm = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}	
@@ -2648,7 +2649,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_bm {
+		category_bm = {
 			max_organisation = 5
 			soft_attack = 0.05
 			maximum_speed = 0.1

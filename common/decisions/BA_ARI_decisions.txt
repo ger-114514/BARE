@@ -3671,7 +3671,10 @@ ARI_power_chaser_decisions = {
 
 		remove_effect = {
 			custom_effect_tooltip = ARI_the_time_has_come
-			#结算事件
+			#最终结算事件
+			hidden_effect = {
+				country_event = bare_long_text_hidden_event.1
+			}
 		}
 		ai_will_do = {
 			base = 1000
