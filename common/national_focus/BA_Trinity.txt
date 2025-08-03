@@ -438,7 +438,9 @@ focus_tree = {
 					}
 					add_political_power = 100
 					add_stability = 0.05
-					country_event = TRI_events.50
+					set_global_flag = BA_2st_eden_pact_TRI_leader
+					Eden_treaty_start = yes
+					news_event = Eden_pact.1001
 					#桐藤渚偏执度-10%
 					TRI_paranoia_decrease_10 = yes
 					add_ideas = TRI_prepare_for_meeting
