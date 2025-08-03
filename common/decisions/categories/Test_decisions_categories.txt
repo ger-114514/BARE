@@ -1,6 +1,6 @@
 Test_time_decisions_categories = {
 	visible = {
-		is_ai = no
+		always = no
 	}
 	priority = 100
 	visible_when_empty = yes

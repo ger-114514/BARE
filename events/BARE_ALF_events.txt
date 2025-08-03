@@ -253,3 +253,17 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = ALF.15
+	#picture = GFX_common_event_gui_test
+	title = ALF.15.t
+	desc = ALF.15.desc
+	is_triggered_only = yes
+
+	option = {
+		name = ALF.15.a
+		custom_effect_tooltip = ALF_raise_flag_tt
+	}
+
+}

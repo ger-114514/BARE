@@ -417,19 +417,20 @@ BA_Great_Game_decisions = {
 			always = no
 		}
 		activation = {
-			always = no
+			has_war = no
 		}
 		available = {
 			always = no
 		}
 		days_mission_timeout = 30
-		remove_effect = {
+		timeout_effect = {
 			custom_effect_tooltip = {
 				localization_key = Great_Game_start_invasion_tt
 				ATTACKER = "[?FROM.GetNameWithFlag]"
 				DEFENDER = "[?ROOT.GetNameWithFlag]"
 				GOAL = "[?Great_Game_invade_target.GetNameWithFlag]"
 			}
+			
 		}
 	}
 	Great_Game_ask_for_support = {
@@ -443,6 +444,7 @@ BA_Great_Game_decisions = {
 		visible = {
 			has_country_flag = involved_in_Great_Game_as_ally_leader
 			Great_Game_is_involved = yes
+			has_war = no
 		}
 
 		available = {
@@ -486,14 +488,13 @@ BA_Great_Game_decisions = {
 					}
 					AND = {
 						has_capitulated = yes
-						days_since_capitulated > 1
+						days_since_capitulated > 30
 					}
 				}
 			}
 		}
 		complete_effect = {
 			Great_Game_invade_succeeded = yes
-			remove_mission = college_exercise_ongoing_attacker
 		}
 
 		remove_effect = {
@@ -532,6 +533,12 @@ BA_Great_Game_decisions = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = Great_Game_defend_succeeded_tt
+			hidden_effect = {
+				remove_targeted_decision = {
+					target = FROM
+					decision = college_exercise_ongoing_attacker
+				}
+			}
 		}
 
 		remove_effect = {
@@ -550,12 +557,24 @@ BA_Great_Game_decisions = {
 					Great_Game_get_coins = yes
 				}
 			}
+			hidden_effect = {
+				remove_targeted_decision = {
+					target = FROM
+					decision = college_exercise_ongoing_attacker
+				}
+			}
 		}
 		cancel_trigger = {
 			surrender_progress > 0.3
 		}
 		cancel_effect = {
 			custom_effect_tooltip = Great_Game_defend_failed_tt
+			hidden_effect = {
+				remove_targeted_decision = {
+					target = FROM
+					decision = college_exercise_ongoing_attacker
+				}
+			}
 			effect_tooltip = {
 				Great_Game_get_coins = yes
 			}
@@ -577,16 +596,83 @@ BA_Great_Game_decisions = {
 		complete_effect = {
 			Great_Game_get_coins = yes
 			white_peace = FROM
+			FROM = {
+				for_each_scope_loop = {
+					array = Great_Game_temp_allies
+					white_peace = ROOT
+				}
+			}
 			clr_country_flag = involved_in_Great_Game_as_attacker
 			clr_country_flag = involved_in_Great_Game_as_defender
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
+			var:Great_Game_ally_leader = {
+				remove_from_array = {
+					array = Great_Game_temp_allies
+					value = ROOT
+				}
+			}
+			hidden_effect = {
+				remove_targeted_decision = {
+					target = FROM
+					decision = college_exercise_ongoing_ally
+				}
+			}
+		}
+		timeout_effect = {
+			Great_Game_get_coins = yes
+			white_peace = FROM
+			FROM = {
+				for_each_scope_loop = {
+					array = Great_Game_temp_allies
+					white_peace = ROOT
+				}
+			}
+			clr_country_flag = involved_in_Great_Game_as_attacker
+			clr_country_flag = involved_in_Great_Game_as_defender
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+			var:Great_Game_ally_leader = {
+				remove_from_array = {
+					array = Great_Game_temp_allies
+					value = ROOT
+				}
+			}
+			hidden_effect = {
+				remove_targeted_decision = {
+					target = FROM
+					decision = college_exercise_ongoing_ally
+				}
+			}
 		}
 		cancel_trigger = {
 			NOT = {
 				has_war_with = FROM
+			}
+		}
+		cancel_effect = {
+			
+			clr_country_flag = involved_in_Great_Game_as_attacker
+			clr_country_flag = involved_in_Great_Game_as_defender
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+			var:Great_Game_ally_leader = {
+				remove_from_array = {
+					array = Great_Game_temp_allies
+					value = ROOT
+				}
+			}
+			hidden_effect = {
+				remove_targeted_decision = {
+					target = FROM
+					decision = college_exercise_ongoing_ally
+				}
 			}
 		}
 	}

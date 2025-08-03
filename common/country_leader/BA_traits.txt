@@ -353,14 +353,15 @@ leader_traits = {
     #"浪漫"的思索者
     thinker_of_romantic = {
         random = no
-
+        industrial_factory_donations = 4
         stability_factor = -0.05
-        consumer_goods_factor = -0.05
+        consumer_goods_factor = -0.1
+        production_factory_max_efficiency_factor = 0.05
     }
     #战争艺术
     natsu_art_of_war = {
         random = no
-
+        
         land_doctrine_cost_factor = -0.1
         custom_modifier_tooltip = natsu_art_of_war_tt
     }
@@ -368,23 +369,26 @@ leader_traits = {
     mint_icecream = {
         random = no
 
+        land_reinforce_rate = 0.01
+        stability_factor = 0.1
         war_support_factor = -0.05
-        consumer_goods_factor = -0.05
+        consumer_goods_factor = -0.1
     }
 
     #稀有甜品猎人
     rare_sweet_hunter = {
         random = no
-
-        consumer_goods_factor = -0.05
-        political_power_gain = -0.05
+        industrial_factory_donations = 5
+        consumer_goods_factor = -0.1
+        political_power_gain = -0.1
     }
 
     #凯西帕鲁格的传说
     legend_of_kathy_paruge = {
         random = no
-
+        army_attack_factor = 0.05
         consumer_goods_factor = -0.1
+        industrial_factory_donations = 3
         stability_factor = -0.1
     }
 
@@ -483,7 +487,7 @@ leader_traits = {
 
         army_infantry_attack_factor = 0.3
         army_org_factor = -0.1
-        army_infantry_defence_factor = -0.1
+        army_infantry_defence_factor = -0.15
     }
 
     #风纪委医疗后援
@@ -522,7 +526,8 @@ leader_traits = {
     leisurely_manager = {
         random = no
 
-        political_power_gain = 0.5
+        political_power_gain = 0.3
+        armor_factor = 0.05
         consumer_goods_factor = 0.05
     }
 
@@ -577,7 +582,7 @@ leader_traits = {
     cthulu_food = {
         random = no
 
-        army_attack_factor = 0.5
+        army_attack_factor = 0.2
         army_defence_factor = -0.25
         army_org_factor = -0.15
 
@@ -586,8 +591,8 @@ leader_traits = {
     #美食的探求者
     seeker_of_real_food = {
         random = no
-
-        consumer_goods_factor = -0.2
+        industrial_factory_donations = 4
+        consumer_goods_factor = -0.25
         political_power_factor = -0.1
     }
 
@@ -595,7 +600,7 @@ leader_traits = {
     great_eater = {
         random = no
 
-        army_attack_factor = 0.2
+        army_attack_factor = 0.15
         supply_consumption_factor = 0.1
 
     }

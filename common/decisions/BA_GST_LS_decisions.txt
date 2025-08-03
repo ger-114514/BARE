@@ -1071,11 +1071,9 @@ GST_LS_XC_DEBUFF_category = {
 		visible = {
 			original_tag = TRI
 			has_completed_focus = TRI_advance_exploration
+		}
+		target_trigger = {
 			FROM = {
-				is_in_array = {
-					array = global.GST_JS_ZBH
-					value = THIS
-				}
 				is_owned_by = TRI
 				NOT = {
 					has_state_flag = TRI_advance_exploration
