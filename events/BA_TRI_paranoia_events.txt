@@ -9,6 +9,7 @@ country_event = { #顾问被指控为不安定分子
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.1.a
+		TRI_unity_decrease_5 = yes
 		TRI_purge_character = yes
 		ai_chance = {
 			base = 10
@@ -57,6 +58,8 @@ country_event = { #文职部员队伍中的阴谋
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.2.a
+		set_temp_variable = { TRI_unity_change = -2 }
+		TRI_change_unity = yes
 		add_timed_idea = {
 			idea = TRI_inspected_administration
 			days = 180
@@ -110,6 +113,8 @@ country_event = { #圣三一情报局的背叛？
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.3.a
+		set_temp_variable = { TRI_unity_change = -2 }
+		TRI_change_unity = yes
 		TRI_nagisa = {
 			add_country_leader_trait = BA_TRI_nagisa_paranoid
 		}
@@ -172,6 +177,7 @@ unit_leader_event = { #将军被指控为不安定分子
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.11.a
+		TRI_unity_decrease_5 = yes
 		TRI_purge_character = yes
 		ai_chance = {
 			base = 10
@@ -220,6 +226,8 @@ country_event = { #陆军成员中的流言
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.12.a
+		set_temp_variable = { TRI_unity_change = -2 }
+		TRI_change_unity = yes
 		add_ideas = TRI_inspected_army
 		TRI_paranoia_decrease_10 = yes
 
@@ -270,6 +278,8 @@ country_event = { #反破坏分子运动（陆军）
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.13.a
+		set_temp_variable = { TRI_unity_change = -2 }
+		TRI_change_unity = yes
 		add_timed_idea = {
 			idea = TRI_training_activities_curtailed
 			days = 180
@@ -324,6 +334,8 @@ country_event = { #空军成员中的流言
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.22.a
+		set_temp_variable = { TRI_unity_change = -2 }
+		TRI_change_unity = yes
 		add_ideas = TRI_inspected_airforce
 		TRI_paranoia_decrease_10 = yes
 
@@ -374,6 +386,8 @@ country_event = { #反破坏分子运动（空军）
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.23.a
+		set_temp_variable = { TRI_unity_change = -2 }
+		TRI_change_unity = yes
 		add_timed_idea = {
 			idea = TRI_ground_based_training
 			days = 180

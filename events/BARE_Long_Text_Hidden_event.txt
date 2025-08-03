@@ -548,12 +548,6 @@ country_event = { #最终时刻·其二
         }
 		#为了防止玩家忘关事件走事件，先关事件然后延迟4小时开
 		
-		
-
-		country_event = {
-			id = bare_long_text_hidden_event.14
-			days = 3
-		}
 
 		country_event = {
 			id = bare_long_text_hidden_event.114514
