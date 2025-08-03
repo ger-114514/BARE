@@ -289,7 +289,7 @@ TRI_parliament_decisions_categories = {
 					TRI_parliament_radicalism_change = yes
 				}
 			}
-			country_event = TRI_BOP_decision.3
+			country_event = TRI_BOP_decision.10
 		}
 		ai_will_do = {
 			base = 1
@@ -320,7 +320,7 @@ TRI_parliament_decisions_categories = {
 		days_re_enable = 180
 		complete_effect = {
 			custom_effect_tooltip = TRI_BOP_resource_distribution_tt
-			country_event = TRI_BOP_decision.4
+			country_event = TRI_BOP_decision.20
 		}
 		ai_will_do = {
 			base = 1
@@ -351,7 +351,7 @@ TRI_parliament_decisions_categories = {
 		days_re_enable = 40
 		complete_effect = {
 			custom_effect_tooltip = TRI_BOP_appease_association_tt
-			country_event = TRI_BOP_decision.5
+			country_event = TRI_BOP_decision.30
 		}
 		ai_will_do = {
 			base = 1
