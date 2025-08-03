@@ -122,5 +122,6 @@ country_event = { #法案未通过
 	}
 	option = {
 		name = TRI_parliament_bill.2.a
+		custom_effect_tooltip = TRI_parliament_bill.2.tt
 	}
 }
