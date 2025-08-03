@@ -2390,5 +2390,25 @@ spriteType = {
 		noOfFrames = 2
 	}
 
+	####
+	#Adding Backgrounds for new tree
+	spriteType = {
+		name = "GFX_ifv_techtree_bg"
+		textureFile = "gfx/interface/techtree/ifv_techtree_bg.dds"
+	}
 
+	spriteType = {
+		name = "GFX_industry_resource_techtree_bg"
+		textureFile = "gfx/interface/techtree/industry_resource_techtree_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bd_techtree_bg"
+		textureFile = "gfx/interface/techtree/bd_techtree_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_breakthrough_techtree_bg"
+		textureFile = "gfx/interface/techtree/breakthrough_techtree_bg.dds"
+	}
 }
