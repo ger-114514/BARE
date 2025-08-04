@@ -3,9 +3,9 @@ capital = 329
 oob = "CEN_2019"
 set_air_oob = "CEN_2019_air_legacy"
 ##设置背景##
-set_variable = {
-	has_special_background = 1
-}
+# set_variable = {
+# 	has_special_background = 1
+# }
 
 set_stability = 0.50
 set_war_support = 0.50
