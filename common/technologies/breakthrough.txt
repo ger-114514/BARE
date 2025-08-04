@@ -8,7 +8,10 @@ technologies = {
 		}
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		path = { leads_to_tech = T2_infantry_weapon }
@@ -23,7 +26,10 @@ technologies = {
 		}
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		path = { leads_to_tech = T3_infantry_weapon }
@@ -38,7 +44,10 @@ technologies = {
 		}
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		path = { leads_to_tech = T4_infantry_weapon }
@@ -53,7 +62,10 @@ technologies = {
 		}
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 		
 		path = { leads_to_tech = T5_infantry_weapon }
@@ -64,7 +76,10 @@ technologies = {
 		research_cost = 8
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		folder = {
@@ -78,7 +93,10 @@ technologies = {
     T1_mobile_vehicle = {
 		research_cost = 2
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 
@@ -94,7 +112,10 @@ technologies = {
 		research_cost = 3
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 
@@ -110,7 +131,10 @@ technologies = {
 		research_cost = 4
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		folder = {
@@ -125,7 +149,10 @@ technologies = {
 		research_cost = 6
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		folder = {
@@ -140,7 +167,10 @@ technologies = {
 		research_cost = 8
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		folder = {
@@ -154,7 +184,10 @@ technologies = {
     T1_assult_vehicle = {
 		research_cost = 2
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		folder = {
@@ -169,7 +202,10 @@ technologies = {
 		research_cost = 3
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		folder = {
@@ -184,7 +220,10 @@ technologies = {
 		research_cost = 4
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }
 		}
 
 		folder = {
@@ -199,7 +238,10 @@ technologies = {
 		research_cost = 6
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		folder = {
@@ -214,7 +256,10 @@ technologies = {
 		research_cost = 8
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		folder = {
@@ -229,7 +274,10 @@ technologies = {
 		research_cost = 2
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		folder = {
@@ -243,7 +291,10 @@ technologies = {
     T2_drone = {
 		research_cost = 3
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		folder = {
@@ -258,7 +309,10 @@ technologies = {
 		research_cost = 4
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -271,7 +325,10 @@ technologies = {
     T4_drone = {
 		research_cost = 6
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 
 		folder = {
@@ -286,7 +343,10 @@ technologies = {
 		research_cost = 8
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -300,7 +360,10 @@ technologies = {
 		research_cost = 2
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -314,7 +377,10 @@ technologies = {
 		research_cost = 3
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -328,7 +394,10 @@ technologies = {
 		research_cost = 4
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -342,7 +411,10 @@ technologies = {
 		research_cost = 6
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -356,7 +428,10 @@ technologies = {
 		research_cost = 8
 
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -369,7 +444,10 @@ technologies = {
     T1_electronic = {
 		research_cost = 2
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -383,7 +461,10 @@ technologies = {
     T2_electronic = {
 		research_cost = 3
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -396,7 +477,10 @@ technologies = {
     T3_electronic = {
 		research_cost = 4
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -409,7 +493,10 @@ technologies = {
     T4_electronic = {
 		research_cost = 6
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -422,7 +509,10 @@ technologies = {
     T5_electronic = {
 		research_cost = 8
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -435,7 +525,10 @@ technologies = {
     T1_opaz = {
 		research_cost = 2
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -448,7 +541,10 @@ technologies = {
     T2_opaz = {
 		research_cost = 3
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -461,7 +557,10 @@ technologies = {
     T3_opaz = {
 		research_cost = 4
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -474,7 +573,10 @@ technologies = {
     T4_opaz = {
 		research_cost = 6
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
@@ -487,7 +589,10 @@ technologies = {
     T5_opaz = {
 		research_cost = 8
 		allow = {
-			num_of_factories < 60
+			custom_trigger_tooltip = {
+				num_of_factories < 60
+		        tooltip = breakthrough_tech_text		        
+	        }	
 		}
 		folder = {
 			name = breakthrough_folder
