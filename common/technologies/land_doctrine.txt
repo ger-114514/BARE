@@ -583,7 +583,7 @@ technologies = {
 			leads_to_tech = robot_13
 			research_cost_coeff = 1
 		}
-		category_bm {
+		category_bm = {
 			max_organisation = 5
 			supply_consumption = -0.1
 		}
@@ -648,47 +648,7 @@ technologies = {
 			}
 		}
 	}
-	robot_13 = {
-		xp_research_type = army
-		xp_unlock_cost = 70
 
-		path = {
-			leads_to_tech = robot_15
-			research_cost_coeff = 1
-		}
-		category_bm {
-			max_organisation = 5
-			defense = 0.1
-		}
-		land_reinforce_rate = 0.02
-		max_planning = 0.1
-		command_power_gain = 0.25
-		doctrine = yes
-		research_cost = 4.5
-		categories = {
-			land_doctrine
-			cat_grand_battle_plan
-		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
-		ai_will_do = {
-			factor = 25 
-			modifier = {
-				not = {
-					has_army_experience > 90
-				}
-				factor = 0.8
-			}
-		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
-	}
 	robot_14 = {
 		xp_research_type = army
 		xp_unlock_cost = 30
@@ -717,6 +677,47 @@ technologies = {
 			name = land_doctrine_folder
 			position = {
 				x = 2
+				y = 2
+			}
+		}
+	}
+	robot_13 = {
+		xp_research_type = army
+		xp_unlock_cost = 70
+
+		path = {
+			leads_to_tech = robot_15
+			research_cost_coeff = 1
+		}
+		category_bm = {
+			max_organisation = 5
+			defense = 0.1
+		}
+		land_reinforce_rate = 0.02
+		max_planning = 0.1
+		command_power_gain = 0.25
+		doctrine = yes
+		research_cost = 4.5
+		categories = {
+			land_doctrine
+			cat_grand_battle_plan
+		}
+		# dependencies = {
+		# 	pre_assault_bombardment = 1
+		# }
+		ai_will_do = {
+			factor = 25 
+			modifier = {
+				not = {
+					has_army_experience > 90
+				}
+				factor = 0.8
+			}
+		}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
 				y = 2
 			}
 		}
@@ -1515,7 +1516,7 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 		}
-		category_tank_destroyers {
+		category_tank_destroyers = {
 			hard_attack = 0.05
 		}
 		category_bm = {
@@ -1721,7 +1722,7 @@ technologies = {
 		category_support_battalions = {
             maximum_speed = 1
 		}
-		category_bm {
+		category_bm = {
 			soft_attack = 0.1
 		}	
 		category_tank_destroyers = {
@@ -2516,7 +2517,7 @@ technologies = {
 			leads_to_tech = robot_33
 			research_cost_coeff = 1
 		}
-		category_bm {
+		category_bm = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}	
@@ -2648,7 +2649,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_bm {
+		category_bm = {
 			max_organisation = 5
 			soft_attack = 0.05
 			maximum_speed = 0.1
@@ -2760,16 +2761,9 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
-		path = {
-			leads_to_tech = Gehenna_2
-			research_cost_coeff = 1
-		}
 		enable_tactic = tactic_tank_22
 		category_all_armor = {
 			max_organisation = 2
-		}
-		category_tanks = {
-			soft_attack = 0.1
 		}
 		no_supply_grace = 48
 		planning_speed = 0.5
@@ -2794,20 +2788,25 @@ technologies = {
 	}
 	Gehenna_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
+		xp_unlock_cost = 50
 		#xp_research_bonus = 1
 
 		doctrine = yes
 		research_cost = 4.5
+		xor = { Gehenna_1 }
 		categories = {
 			land_doctrine
 		}
 		category_tanks = {
-			soft_attack = 0.1
+			soft_attack = 0.05
+		}
+		category_all_infantry = {
 			max_organisation = 5
 		}
-		org_loss_when_moving = -0.2
-		enable_tactic = tactic_Gehenna
+		allow = {
+			tag = GEH
+		}
+		enable_tactic = tactic_tank_22
 		folder = {
 			name = land_doctrine_folder
 			position = {
@@ -2823,12 +2822,8 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
-		path = {
-			leads_to_tech = Trinity_2
-			research_cost_coeff = 1
-		}
 		category_support_battalions = {
-			soft_attack = 0.3
+			soft_attack = 0.2
 		}
 		category_anti_air = {
 			air_attack = 0.1
@@ -2855,23 +2850,24 @@ technologies = {
 	}
 	Trinity_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
+		xp_unlock_cost = 50
 		#xp_research_bonus = 1
 
 		doctrine = yes
 		research_cost = 4.5
+		xor = { Trinity_1 }
 		categories = {
 			land_doctrine
 		}
 		category_self_propelled_artillery = {
-            soft_attack = 0.2
+            soft_attack = 0.1
 		}
-		category_support_battalions = {
-			soft_attack = 0.2
-		}
-		enable_tactic = tactic_Trinity
+		enable_tactic = tactic_artillery_22
 		ai_will_do = {
 			factor = 30
+		}
+		allow = {
+			tag = TRI
 		}
 		folder = {
 			name = land_doctrine_folder
@@ -3258,16 +3254,11 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
-		path = {
-			leads_to_tech = Arius_2
-			research_cost_coeff = 1
-		}
 		doctrine = yes
 		research_cost = 4.5
 		category_special_infantry = {
-			soft_attack = 0.1
 			hard_attack = 0.1
-			max_organisation = 5
+			max_organisation = 10
 		}
 		enable_tactic = tactic_infantry_21
 		categories = {
@@ -3289,21 +3280,25 @@ technologies = {
 	}
 	Arius_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
+		xp_unlock_cost = 50
 		#xp_research_bonus = 1
 
 		doctrine = yes
 		research_cost = 4.5
+		xor = { Arius_1 }
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		category_all_infantry = {
-			soft_attack = 0.3
-			defense = -0.3
-			hard_attack = 0.3
+			soft_attack = 0.2
+			defense = -0.2
+			hard_attack = 0.2
 		}
-		enable_tactic = tactic_Arius
+		allow = {
+			tag = ARI
+		}
+		enable_tactic = tactic_infantry_21
 		ai_will_do = {
 			factor = 30
 		}

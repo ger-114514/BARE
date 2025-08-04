@@ -116,7 +116,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_variable = {
-				ARI_mystic_progress = 0
+				# ARI_mystic_progress = 0
+				ARI_mystic_progress = 50 #开局给点进度
 			}
 			set_variable = {
 				ARI_mystic_rank = 1
@@ -1540,12 +1541,18 @@ focus_tree = {
 				custom_effect_tooltip = ARI_traveller_operation_2_progress_low_tt
 			}
 			#需要对应事件（“旅者”行动）
-			else = {
+			else_if = {
+				limit = {
+					not ={
+						has_global_flag = ARITRI_Coup_is_Happened
+					}
+				}
 				ARITRI_coup_effect = yes
+				hidden_effect = {
+					country_event = bare_hidden_event.1
+				}
 			}
-			hidden_effect = {
-				country_event = bare_hidden_event.1
-			}
+			
 		}
 		ai_will_do = {
 			factor = 100

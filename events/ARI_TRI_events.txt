@@ -13,6 +13,17 @@ country_event = { #逐渐强烈的杂音
 
     option = {
 		name = TRI_coup.1.a
+        #如果没完成国策，自动完成
+        if = {
+            limit = {
+                not = {
+                    has_completed_focus = ARI_traveller_operation
+                }
+            }
+            complete_national_focus = ARI_traveller_operation
+        }
+        
+
 
 		ai_chance = {
 			base = 100
@@ -273,6 +284,25 @@ country_event = { #旅者”行动总结-部分成功
 
     immediate = {
         hidden_effect = {
+
+             if = {
+                limit = {
+                    not = {
+                        has_completed_focus = ARI_traveller_operation
+                    }
+                }
+                complete_national_focus = ARI_traveller_operation
+            }
+
+            if = {
+                limit = {
+                    not = {
+                        has_completed_focus = ARI_traveller_operation_lost
+                    }
+                }
+                complete_national_focus = ARI_traveller_operation_lost
+            }
+            mark_focus_tree_layout_dirty = yes
             set_variable = {
                 ARI_lesson_traveller_operation_war_support_factor = -0.2
             }
@@ -671,6 +701,8 @@ country_event = { #一切顺利？
 
     is_triggered_only = yes
     option = {
+     
+
         name = ARI_coup.6.a
 
     }
@@ -950,6 +982,26 @@ country_event = { #“旅者”行动总结-基本失败
     option = {
         name = ARI_coup.10.a
         mark_focus_tree_layout_dirty = yes
+
+        if = {
+            limit = {
+                not = {
+                    has_completed_focus = ARI_traveller_operation
+                }
+            }
+            complete_national_focus = ARI_traveller_operation
+        }
+
+         if = {
+            limit = {
+                not = {
+                    has_completed_focus = ARI_traveller_operation_lost
+                }
+            }
+            complete_national_focus = ARI_traveller_operation_lost
+        }
+
+
         effect_tooltip = {
             set_variable = {
                 ARI_lesson_traveller_operation_war_support_factor = -0.2

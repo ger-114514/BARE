@@ -36,32 +36,32 @@ guiTypes = {
 			iconType = {
 				name ="great_war_doctrine_bg"
 				spriteType = "GFX_great_war_doctrine_bg"
-				position = { x=595 y =33 }
+				position = { x=0 y =0 }
 			}
 
-			iconType = {
-				name ="sup_firepower_bg"
-				spriteType = "GFX_sup_firepower_bg"
-				position = { x=525 y = 380 }
-			}
+			# iconType = {
+			# 	name ="sup_firepower_bg"
+			# 	spriteType = "GFX_sup_firepower_bg"
+			# 	position = { x=525 y = 380 }
+			# }
 
-			iconType = {
-				name ="grand_battleplan_bg"
-				spriteType = "GFX_grand_battleplan_bg"
-				position = { x=45 y =380 }
-			}
+			# iconType = {
+			# 	name ="grand_battleplan_bg"
+			# 	spriteType = "GFX_grand_battleplan_bg"
+			# 	position = { x=45 y =380 }
+			# }
 
-			iconType = {
-				name ="mob_warfare_bg"
-				spriteType = "GFX_mob_warfare_bg"
-				position = { x=1000 y =380 }
-			}
+			# iconType = {
+			# 	name ="mob_warfare_bg"
+			# 	spriteType = "GFX_mob_warfare_bg"
+			# 	position = { x=1000 y =380 }
+			# }
 
-			iconType = {
-				name ="mass_assault_bg"
-				spriteType = "GFX_mass_assault_bg"
-				position = { x=1480 y=380 }
-			}	
+			# iconType = {
+			# 	name ="mass_assault_bg"
+			# 	spriteType = "GFX_mass_assault_bg"
+			# 	position = { x=1480 y=380 }
+			# }	
 
 			iconType = {
 				name = "highlight_grand_battle_plan"
@@ -396,6 +396,13 @@ guiTypes = {
 				slotsize = { width=60 height= 60 }
 				format = "UP"
 			}
+			gridboxtype = {
+				name = "Gehenna_2_tree"
+				position = { x=20 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
 
 			gridboxtype = {
 				name = "Trinity_1_tree"
@@ -404,58 +411,9 @@ guiTypes = {
 				slotsize = { width=60 height= 60 }
 				format = "UP"
 			}
-
 			gridboxtype = {
-				name = "Millennium_1_tree"
-				position = { x=340 y =140 }
-				size = { width = 480 height = 1350 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "Abydos_1_tree"
-				position = { x=500 y =140 }
-				size = { width = 480 height = 1350 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "Hyakkiyako_1_tree"
-				position = { x=660 y =140 }
-				size = { width = 480 height = 1350 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "Shanhaijing_1_tree"
-				position = { x=820 y =140 }
-				size = { width = 480 height = 1350 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "RedWinter_1_tree"
-				position = { x=980 y =140 }
-				size = { width = 480 height = 1350 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "Specialresponseteam_1_tree"
-				position = { x=1140 y =140 }
-				size = { width = 480 height = 1350 }
-				slotsize = { width=60 height= 60 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "Valkyrie_1_tree"
-				position = { x=1300 y =140 }
+				name = "Trinity_2_tree"
+				position = { x=180 y =140 }
 				size = { width = 480 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -463,11 +421,74 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "Arius_1_tree"
-				position = { x=1460 y =140 }
+				position = { x=340 y =140 }
 				size = { width = 480 height = 1350 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
 			}
+			gridboxtype = {
+				name = "Arius_2_tree"
+				position = { x=340 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			#gridboxtype = {
+				#name = "Abydos_1_tree"
+				#position = { x=500 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Hyakkiyako_1_tree"
+				#position = { x=660 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Shanhaijing_1_tree"
+				#position = { x=820 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "RedWinter_1_tree"
+				#position = { x=980 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Specialresponseteam_1_tree"
+				#position = { x=1140 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Valkyrie_1_tree"
+				#position = { x=1300 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Millennium_1_tree"
+				#position = { x=1460 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
 		}
 
 		    
