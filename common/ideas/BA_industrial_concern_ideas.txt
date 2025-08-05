@@ -3,6 +3,7 @@ ideas = {
     industrial_concern = {
         # 通用工业企业
         ba_angel_24_enterprise = {
+            picture = ba_angel_24_enterprise
             allowed = {
                 not = {
                     original_tag = ARI
@@ -19,6 +20,7 @@ ideas = {
         }
 
         ba_kaiser_outsourcing_heavy_industry = {
+            picture =  ba_kaiser_outsourcing_heavy_industry
             allowed = {
                 not = {
                     original_tag = ARI
@@ -31,6 +33,7 @@ ideas = {
         }
 
         ba_electric_fire_society = {
+             picture =  ba_electric_fire_society
             allowed = {
                 not = {
                     original_tag = ARI
@@ -46,6 +49,7 @@ ideas = {
         }
 
         ba_momo_enterprise = {
+            picture =  ba_momo_enterprise
             allowed = {
                 not = {
                     original_tag = ARI
@@ -59,6 +63,7 @@ ideas = {
         }
 
         ba_highland_local_depot = {
+            picture =  ba_highland_local_depot
             allowed = {
                 not = {
                     original_tag = ARI
@@ -77,6 +82,7 @@ ideas = {
         }
 
         ba_octopus_bank = {
+            picture = ba_octopus_bank
             allowed = {
                 not = {
                     original_tag = ARI
@@ -91,6 +97,7 @@ ideas = {
         }
         # 专属工业企业
         ba_gehenna_onsen_development = {
+            picture = ba_gehenna_onsen_development
             allowed = {
                 original_tag = GEH
             }
@@ -102,6 +109,7 @@ ideas = {
         }
 
         ba_trinity_tea_chain = {
+            picture =  ba_trinity_tea_chain
             allowed = {
                 original_tag = TRI
             }
@@ -113,6 +121,7 @@ ideas = {
         }
 
         ba_millennium_engineering_construction = {
+            picture =  ba_millennium_engineering_construction
             allowed = {
                 original_tag = MIL
             }
@@ -126,6 +135,7 @@ ideas = {
         }
 
         ba_millennium_truth_security_research = {
+            picture =   ba_millennium_truth_security_research
             allowed = {
                 original_tag = MIL
             }
@@ -138,6 +148,7 @@ ideas = {
         }
 
         ba_arius_construction_team_213 = {
+             picture =   ba_arius_construction_team_213
             allowed = {
                 original_tag = ARI
             }
@@ -149,6 +160,7 @@ ideas = {
         }
 
         ba_arius_research_group_18 = {
+             picture =   ba_arius_research_group_18
             allowed = {
                 original_tag = ARI
             }
@@ -162,6 +174,7 @@ ideas = {
         }
 
         ba_arius_electrical_team_44 = {
+            picture =   ba_arius_electrical_team_44
             allowed = {
                 original_tag = ARI
             }

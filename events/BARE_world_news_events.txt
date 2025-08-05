@@ -781,3 +781,101 @@ news_event = {
 		}
 	}
 }
+
+
+
+#条约开始
+news_event = {
+	id = BARE_World_News.17
+	picture = GFX_news_event_eden_pact_start
+	title = BARE_World_News.17.t
+	desc = BARE_World_News.17.desc
+	is_triggered_only = yes
+	
+
+	major = yes
+
+	option = {
+		name = BARE_World_News.17.a
+		trigger = {
+			is_ai = no
+			OR = {
+				TAG = TRI
+				TAG = GEH
+			}
+			
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					not = {
+						has_global_flag = BARE_SuperEvent_2_effect_9_happened 
+					}
+				}
+				set_global_flag = BARE_SuperEvent_2_effect_9_happened
+				BARE_SuperEvent_2_effect_9 = yes
+				
+			}
+			
+		}
+		
+	}
+
+	option = {
+		name = BARE_World_News.17.b
+		trigger = {
+			is_ai = no
+			TAG = ARI
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					not = {
+						has_global_flag = BARE_SuperEvent_2_effect_9_happened 
+					}
+				}
+				set_global_flag = BARE_SuperEvent_2_effect_9_happened
+				BARE_SuperEvent_2_effect_9 = yes
+				
+			}
+			
+		}
+	}
+
+	option = {
+		name = BARE_World_News.17.c
+		trigger = {
+			is_ai = no
+			not = {
+				TAG = ARI
+				TAG = TRI
+				TAG = GEH
+			}
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					not = {
+						has_global_flag = BARE_SuperEvent_2_effect_9_happened 
+					}
+				}
+				set_global_flag = BARE_SuperEvent_2_effect_9_happened
+				BARE_SuperEvent_2_effect_9 = yes
+				
+			}
+			
+		}
+	}
+
+	option = {
+		name = BARE_World_News.17.d
+		trigger = {
+			is_ai = yes
+			
+		}
+
+
+	}
+}
