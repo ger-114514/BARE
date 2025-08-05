@@ -111,7 +111,7 @@ guiTypes = {
 
 		iconType = {
 			name = "ECW_progressbar_ARI"
-			spriteType = "GFX_bare_blue_progressbar_399" 
+			spriteType = "GFX_bare_red_progressbar_399" 
 			position = { x = 30 y = 210}
 			pdx_tooltip = "ECW_progressbar_tt"
 		}
@@ -133,7 +133,7 @@ guiTypes = {
 
 		iconType = {
 			name = "ECW_progressbar_TRI"
-			spriteType = "GFX_bare_blue_progressbar_399" 
+			spriteType = "GFX_bare_red_progressbar_399" 
 			position = { x = 30 y = 270}
 			pdx_tooltip = "ECW_progressbar_tt"
 		}
@@ -155,7 +155,7 @@ guiTypes = {
 
 		iconType = {
 			name = "ECW_progressbar_GEH"
-			spriteType = "GFX_bare_blue_progressbar_399" 
+			spriteType = "GFX_bare_red_progressbar_399" 
 			position = { x = 30 y = 330}
 			pdx_tooltip = "ECW_progressbar_tt"
 		}
