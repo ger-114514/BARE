@@ -4,7 +4,7 @@
  BARE_PEACE_POPUP_FLAVOR: "[BARE_PEACE_POPUP_FLAVOR]"
  BARE_PEACE_POPUP_DESCRIPTION: "[BARE_PEACE_POPUP_WAR_DESCRIPTION]"
  ###
- BPW_DEFAULT_WAR_DESC: "在正在进行的冲突中，§Y[winning_country.GetNameWithFlag]§!在战场上击败了§Y[losing_country.GetNameWithFlag]§!。"
+ BPW_DEFAULT_WAR_DESC: "在正在进行的冲突中，§Y[winning_country.GetNameWithFlag]§!击败了§Y[losing_country.GetNameWithFlag]§!。"
  BPW_TRI_wins_ARI_in_Total_War_DESC: "属于§Y[losing_country.GetNameWithFlag]§!的复仇烈火，已被§Y[winning_country.GetNameWithFlag]§!无情熄灭……§R再一次。§!"
 
  BPW_ARI_wins_GEH_in_Total_War_DESC: "属于§Y[winning_country.GetNameWithFlag]§!的复仇烈火，已将§Y[losing_country.GetNameWithFlag]§!焚为无声瓦砾。"
