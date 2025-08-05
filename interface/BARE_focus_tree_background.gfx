@@ -1,19 +1,23 @@
 spriteTypes = {
-	corneredTileSpriteType = {
-		name = "GFX_CEN_focus_tree_background"
-		size= { x=1920 y=1080 }
-		textureFile = "gfx//interface//focus_tree_background//GFX_CEN_focus_tree_background.dds"
-		size= { x=1920 y=1080 }
-		tilingCenter = no
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	spriteType = {
+		name = "GFX_G_focus_tree_background"
+		texturefile = "gfx//interface//focus_tree_background//G_BG.png"
+	}
+	spriteType = {
+		name = "GFX_B_focus_tree_background"
+		texturefile = "gfx//interface//focus_tree_background//B_BG.png"
+	}
+	spriteType = {
+		name = "GFX_NULL_focus_tree_background"
+		texturefile = "gfx//interface//focus_tree_background//BULL_BG.png"
 	}
 
-	corneredTileSpriteType = {
+	spriteType = {
+		name = "GFX_CEN_focus_tree_background"
+		texturefile = "gfx//interface//focus_tree_background//GFX_CEN_focus_tree_background.png"
+	}
+	spriteType = {
 		name = "GFX_TRI_focus_tree_background"
-		size= { x=1920 y=1080 }
-		textureFile = "gfx//interface//focus_tree_background//GFX_TRI_focus_tree_background.dds"
-		size= { x=1920 y=1080 }
-		tilingCenter = no
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		texturefile = "gfx//interface//focus_tree_background//GFX_TRI_focus_tree_background.png"
 	}
 }

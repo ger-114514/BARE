@@ -1,31 +1,44 @@
 guiTypes = {
 	##背景组件在此，一旦有UI更新，请将此处剪切至新的UI##
 	containerWindowType = {
-	    name = "z_BARE_CEN_focus_tree_background"
-	    position = { x=0 y=47 }
-	    size = { width = 100%% height = 100%% }		
-	   
-	    background = {
-		    name = "BARE_CEN_focus_tree_background"
-		    position = { x= 0 y= 9 }
-		    quadTextureSprite ="GFX_CEN_focus_tree_background"
-		    alwaystransparent = yes
-	    }
+		name = "z_BARE_CEN_focus_tree_background"
+		position = { x=0 y=47 }
+		size = { width = 100%% height = 100%% }
 
-    }
+		background = {
+			name = "BARE_CEN_focus_tree_background"
+			position = { x= 0 y= 9 }
+			quadTextureSprite ="GFX_CEN_focus_tree_background"
+			alwaystransparent = yes
+		}
+
+	}
 	##背景组件结束
-	
-	containerWindowType = {
-	    name = "z_BARE_TRI_focus_tree_background"
-	    position = { x=0 y=47 }
-	    size = { width = 100%% height = 100%% }
-			
-	    background = {
-		    name = "BARE_TRI_focus_tree_background"
-		    position = { x= 0 y= 9 }
-		    quadTextureSprite ="GFX_TRI_focus_tree_background"
-		    alwaystransparent = yes
-	    } 
 
-    }
+	containerWindowType = {
+		name = "z_BARE_TRI_focus_tree_background"
+		size = { width = 100%% height = 100%% }
+		position = { x = 0 y = 0 }
+		orientation = upper_left
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_bg"
+			alwaystransparent = yes
+		}
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_focus_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "focus_background_image"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_TRI_focus_tree_background"
+			alwaystransparent = yes
+		}
+
+	}
 }

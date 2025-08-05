@@ -1,37 +1,16 @@
 scripted_gui = {
-	###天哪这真是我这辈子写的最傻鸟的代码了……
-	###我恨你，驴UI
-	###因为使用background组件，只能按容器进行定义了
-
-	##联邦学生会
 	BARE_focus_tree_background = {
 		context_type = player_context
-		parent_window_name = "nationalfocusview"
-        window_name = "z_BARE_CEN_focus_tree_background"
-
-		visible = {
-			original_tag = CEN
-			check_variable = {
-				has_special_background = 1
-			}
-		}
-		triggers = {
-		}
-	}
-
-    ##圣三一
-	BARE_focus_tree_background = {
-		context_type = player_context
-		parent_window_name = "nationalfocusview"
+		parent_window_name = "focus_background"
         window_name = "z_BARE_TRI_focus_tree_background"
 
 		visible = {
-			original_tag = TRI
-			check_variable = {
-				has_special_background = 2
-			}
+			ROOT = { is_ai = no }
 		}
-		triggers = {
+		properties = {
+			focus_background_image = {
+                image = "[THIS.GetFocusBG]"
+			}
 		}
 	}
 }
