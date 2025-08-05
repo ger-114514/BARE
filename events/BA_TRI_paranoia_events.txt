@@ -539,16 +539,60 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
+			set_temp_variable = { event_days = 14 }
 			if = {
-				limit = {
-					NOT = { has_country_flag = TRI_paranoia_random_purge_cooldown }
-					check_variable = { TRI_nagisa_paranoia_total > 25 }
+				limit = { NOT = { has_country_flag = TRI_paranoia_random_purge_cooldown } }
+				#每级偏执度等级+5%
+				set_temp_variable = { TRI_purge_chance_paranoia = TRI_nagisa_paranoia_rank }
+				multiply_temp_variable = { TRI_purge_chance_paranoia = 5 }
+				add_to_variable = { TRI_purge_chance = TRI_purge_chance_paranoia }
+				#随政治国策累积，每140天+10%
+				set_temp_variable = { pfd = TRI_political_focus_duration }
+				while_loop_effect = {
+					limit = { 
+						check_variable = { pfd > 139 }
+					}
+					subtract_from_temp_variable = { pfd = 140 }
+					add_to_temp_variable = { TRI_purge_chance = 10 }
 				}
-				add_to_variable = { TRI_purge_chance_time_accumulation = 10 }
+				clamp_variable = {
+					var = TRI_purge_chance
+					min = 0
+					max = 100
+				}
+				#按照概率决定是否清洗
+				random = {
+					chance = TRI_purge_chance
+					random_list = {
+						1 = {
+							modifier = {
+								factor = 0
+								BA_TRI_can_purge_administration = no
+							}
+							TRI_purge_administration = yes
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								BA_TRI_can_purge_army = no
+							}
+							TRI_purge_army = yes
+						}
+						1 = {
+							modifier = {
+								factor = 0
+								BA_TRI_can_purge_airforce = no
+							}
+							TRI_purge_airforce = yes
+						}
+					}
+					add_to_temp_variable = { event_days = 14 }
+				}
 			}
+
 			country_event = {
 				id = TRI_paranoia.100
-				days = 14
+				days = event_days
 			}
 		}
 	}

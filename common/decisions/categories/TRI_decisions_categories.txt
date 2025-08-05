@@ -10,7 +10,7 @@ TRI_debug_decisions = {
 #偏执度
 TRI_paranoia_system = {
 
-	priority = 1001
+	priority = 1002
 
 	icon = generic
 
@@ -57,6 +57,15 @@ TRI_mika_investigation = {
 		has_country_flag = TRI_mika_investigation_available
 	}
 }
+#法案
+TRI_bill_voting_decisions_categories = {
+	icon = tri_parliament
+	allowed = {
+		original_tag = TRI
+	}
+
+	priority = 1001
+}
 #焦点
 TRI_parliament_decisions_categories = {
 	icon = tri_parliament
@@ -67,17 +76,8 @@ TRI_parliament_decisions_categories = {
 		has_country_flag = TRI_parliament_available
 	}
 
-	priority = 1002
+	priority = 1000
 	visible_when_empty = yes
-}
-#法案
-TRI_bill_voting_decisions_categories = {
-	icon = tri_parliament
-	allowed = {
-		original_tag = TRI
-	}
-
-	priority = 1001
 }
 #权力平衡
 TRI_BOP_system = {

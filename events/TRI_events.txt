@@ -162,6 +162,12 @@ country_event = {
         #刷新国策树
         hidden_effect = {
             load_focus_tree = TRI_focus_stage_2
+            set_variable = { TRI_parliament_negative_event_chance = 3 }
+            country_event = {
+                id = TRI_political_focus.0
+                days = 14
+            }
+            
         }
         #将【圣三一的权力平衡】焦点设置为：《伊甸条约》的签订
         set_country_flag = TRI_parliament_available
@@ -260,6 +266,11 @@ country_event = {
 		name = TRI_events.8.a
 
         trigger = { has_country_flag = ba_enabled_nonhistoric_choice }
+        
+        #启用偏执度系统
+        BA_TRI_initialize_paranoia_system = yes
+        #通过触发事件使桐藤渚获得特质
+        #桐藤渚获得特质——追根溯源:每周偏执度+2%,稳定度+5%,改善关系-40%
 
 		ai_chance = {
 			base = 100
@@ -268,6 +279,11 @@ country_event = {
 
     option = {
 		name = TRI_events.8.b
+        
+        #启用偏执度系统
+        BA_TRI_initialize_paranoia_system = yes
+        #通过触发事件使桐藤渚获得特质
+        #桐藤渚获得特质——追根溯源:每周偏执度+2%,稳定度+5%,改善关系-40%
 
 		ai_chance = {
 			base = 100
