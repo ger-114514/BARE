@@ -589,5 +589,11 @@ ideas = {
 				clear_variable = TRI_focus_consumer_goods_factor
 			}
 		}
+		#向社团提供资源
+		TRI_provide_resource_for_associations = {
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
 	}
 }

@@ -1489,6 +1489,7 @@ focus_tree = {
             add_ideas = GEH_joint_operations_command_ideas_1
             TRI = {
                 add_ideas = GEH_joint_operations_command_ideas_1
+                
             }
 
             
@@ -1853,7 +1854,7 @@ focus_tree = {
                 amount = 10000
                 producer = TRI
             }
-
+            add_ideas = GEH_army_factory_cooperation
             TRI = {
                 add_equipment_to_stockpile = {
                     type = light_tank_chassis
@@ -1875,6 +1876,7 @@ focus_tree = {
                     amount = 10000
                     producer = GEH
                 }
+                add_ideas = GEH_army_factory_cooperation
             }
         }
         ai_will_do = {

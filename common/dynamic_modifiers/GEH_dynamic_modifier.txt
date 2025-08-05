@@ -43,3 +43,20 @@ GEH_gehenna_club_activity = {
 	icon = "GFX_idea_GEH_gehenna_club_activity"
 	enable = { always = yes }
 }
+
+GEH_army_Armed_Forces = { #格黑娜武装力量
+    enable = { always = yes }
+
+    icon = "GFX_idea_GEH_army_Armed_Forces"
+
+    army_speed_factor = GEH_army_speed_factor #陆军速度
+    army_attack_factor = GEH_army_attack_factor #陆军进攻
+    land_reinforce_rate = GEH_land_reinforce_rate #增援率
+    army_org_factor = GEH_army_org_factor  #陆军组织度
+    army_morale_factor = GEH_army_morale_factor #组织度恢复
+    no_supply_grace = GEH_no_supply_grace #陆军携行补给
+    org_loss_when_moving = GEH_org_loss_when_moving #陆军移动中组织度减少损耗
+
+
+
+}

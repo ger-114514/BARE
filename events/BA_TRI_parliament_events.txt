@@ -1,6 +1,7 @@
 #焦点事件
 add_namespace = TRI_parliament_focus
 add_namespace = TRI_parliament_bill
+add_namespace = TRI_political_focus
 country_event = { #实装圣娅
 	id = TRI_parliament_focus.0
 	title = TRI_parliament_focus.0.t
@@ -125,3 +126,456 @@ country_event = { #法案未通过
 		custom_effect_tooltip = TRI_parliament_bill.2.tt
 	}
 }
+
+country_event = { #自动触发负面事件
+	id = TRI_political_focus.0
+	title = TRI_political_focus.0.t
+	desc = TRI_political_focus.0.desc
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		random = {
+			chance = TRI_parliament_negative_event_chance
+			TRI_random_parliament_negative_event = yes
+			set_variable = { TRI_parliament_negative_event_chance = 3 }
+			divide_variable = { TRI_parliament_negative_event_chance = 2 }
+		}
+		multiply_variable = { TRI_parliament_negative_event_chance = 2 }
+		clamp_variable = {
+			var = TRI_parliament_negative_event_chance
+			max = 100
+		}
+		country_event = {
+			id = TRI_political_focus.0
+			days = 14
+		}
+	}
+}
+country_event = { #学生抗议
+	id = TRI_political_focus.1
+	title = TRI_political_focus.1.t
+	desc = TRI_political_focus.1.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_political_focus.1.a
+		TRI_random_parliament_negative_event = yes
+	}
+	option = {
+		name = TRI_political_focus.1.b
+		custom_effect_tooltip = TRI_negative_event_rejection_count_tt
+		add_to_variable = { TRI_negative_event_rejection_count = 1 }
+		add_political_power = -25
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				}
+				1 = {
+					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				}
+			}
+		}
+		set_temp_variable = { loyalty_change = -0.02 }
+		TRI_parliament_loyalty_change_parliament = yes
+		set_temp_variable = { radicalism_change = 0.02 }
+		TRI_parliament_radicalism_change_parliament = yes
+	}
+}
+country_event = { #社团资源不足
+	id = TRI_political_focus.2
+	title = TRI_political_focus.2.t
+	desc = TRI_political_focus.2.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_political_focus.2.a
+		add_political_power = -75
+		add_timed_idea = {
+			idea = TRI_provide_resource_for_associations
+			days = 75
+		}
+		set_variable = { TRI_negative_event_rejection_count = 0 }
+	}
+	option = {
+		name = TRI_political_focus.2.b
+		custom_effect_tooltip = TRI_negative_event_rejection_count_tt
+		add_to_variable = { TRI_negative_event_rejection_count = 1 }
+		add_political_power = -25
+		set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+		set_temp_variable = { loyalty_change = -0.02 }
+		TRI_parliament_loyalty_change_parliament = yes
+		set_temp_variable = { radicalism_change = 0.02 }
+		TRI_parliament_radicalism_change_parliament = yes
+	}
+}
+country_event = { #学生沉迷宗教活动
+	id = TRI_political_focus.3
+	title = TRI_political_focus.3.t
+	desc = TRI_political_focus.3.desc
+	#picture = 
+	is_triggered_only = yes
+
+	option = {
+		name = TRI_political_focus.3.a
+		add_political_power = -75
+		set_temp_variable = { association = token:TRI_paranoia_association_4 }
+		set_temp_variable = { loyalty_change = -0.02 }
+		TRI_parliament_loyalty_change = yes
+		set_variable = { TRI_negative_event_rejection_count = 0 }
+	}
+	option = {
+		name = TRI_political_focus.3.b
+		custom_effect_tooltip = TRI_negative_event_rejection_count_tt
+		add_to_variable = { TRI_negative_event_rejection_count = 1 }
+		add_political_power = -25
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				}
+				1 = {
+					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				}
+			}
+		}
+		set_temp_variable = { loyalty_change = -0.02 }
+		TRI_parliament_loyalty_change_parliament = yes
+		set_temp_variable = { radicalism_change = 0.02 }
+		TRI_parliament_radicalism_change_parliament = yes
+		set_temp_variable = { association = token:TRI_paranoia_association_4 }
+		set_temp_variable = { loyalty_change = 0.04 }
+		TRI_parliament_loyalty_change = yes
+	}
+}
+country_event = { #地区建设落后
+	id = TRI_political_focus.4
+	title = TRI_political_focus.4.t
+	desc = TRI_political_focus.4.desc
+	#picture = 
+	is_triggered_only = yes
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						free_building_slots = {
+							building = infrastructure
+							size = 0
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:infrastructure }
+					set_variable = { TRI_negative_event_invest_goal = building_level@infrastructure }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target = PREV }
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size = 0
+							include_locked = no
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:industrial_complex }
+					set_variable = { TRI_negative_event_invest_goal = building_level@industrial_complex }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target = PREV }
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size = 0
+							include_locked = no
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:arms_factory }
+					set_variable = { TRI_negative_event_invest_goal = building_level@arms_factory }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = TRI_political_focus.4.a
+		activate_mission = TRI_invest_in_region_factory_1
+	}
+	option = {
+		name = TRI_political_focus.4.b
+		custom_effect_tooltip = TRI_negative_event_rejection_count_tt
+		add_to_variable = { TRI_negative_event_rejection_count = 1 }
+		add_political_power = -50
+		hidden_effect = {
+			var:TRI_negative_event_invest_target = {
+				clear_variable = TRI_negative_event_invest_building
+				clear_variable = TRI_negative_event_invest_goal
+			}
+			clear_variable = TRI_negative_event_invest_target
+			random_list = {
+				1 = {
+					set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+				}
+				1 = {
+					set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+				}
+			}
+		}
+		set_temp_variable = { loyalty_change = -0.02 }
+		TRI_parliament_loyalty_change_parliament = yes
+		set_temp_variable = { radicalism_change = 0.02 }
+		TRI_parliament_radicalism_change_parliament = yes
+	}
+}
+country_event = { #激进的抗议活动
+	id = TRI_political_focus.10
+	title = TRI_political_focus.10.t
+	desc = TRI_political_focus.10.desc
+	#picture = 
+	is_triggered_only = yes
+	immediate = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						free_building_slots = {
+							building = infrastructure
+							size = 0
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:infrastructure }
+					set_variable = { TRI_negative_event_invest_goal = building_level@infrastructure }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target_1 = PREV }
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size = 0
+							include_locked = no
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:industrial_complex }
+					set_variable = { TRI_negative_event_invest_goal = building_level@industrial_complex }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target_1 = PREV }
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						free_building_slots = {
+							building = arms_factory
+							size = 0
+							include_locked = no
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:arms_factory }
+					set_variable = { TRI_negative_event_invest_goal = building_level@arms_factory }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target_1 = PREV }
+					}
+				}
+			}
+		}
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							state = var:TRI_negative_event_invest_target_1
+							free_building_slots = {
+								building = infrastructure
+								size = 0
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						NOT = { state = var:TRI_negative_event_invest_target_1 }
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:infrastructure }
+					set_variable = { TRI_negative_event_invest_goal = building_level@infrastructure }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target_2 = PREV }
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							state = var:TRI_negative_event_invest_target_1
+							free_building_slots = {
+								building = industrial_complex
+								size = 0
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						NOT = { state = var:TRI_negative_event_invest_target_1 }
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:industrial_complex }
+					set_variable = { TRI_negative_event_invest_goal = building_level@industrial_complex }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target_2 = PREV }
+					}
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							state = var:TRI_negative_event_invest_target_1
+							free_building_slots = {
+								building = arms_factory
+								size = 0
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						NOT = { state = var:TRI_negative_event_invest_target_1 }
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = no
+						}
+					}
+					set_variable = { TRI_negative_event_invest_building = token:arms_factory }
+					set_variable = { TRI_negative_event_invest_goal = building_level@arms_factory }
+					add_to_variable = { TRI_negative_event_invest_goal = 1 }
+					ROOT = {
+						set_variable = { TRI_negative_event_invest_target_2 = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = TRI_political_focus.10.a
+		activate_mission = TRI_invest_in_region_factory_2
+	}
+	option = {
+		name = TRI_political_focus.10.b
+		add_political_power = -50
+		add_command_power = -15
+		add_stability = -0.1
+		set_temp_variable = { loyalty_change = -0.03 }
+		TRI_parliament_all_loyalty_change = yes
+		set_temp_variable = { radicalism_change = 0.05 }
+		TRI_parliament_all_radicalism_change = yes
+		TRI_unity_decrease_5 = yes
+		hidden_effect = {
+			var:TRI_negative_event_invest_target_1 = {
+				clear_variable = TRI_negative_event_invest_building
+				clear_variable = TRI_negative_event_invest_goal
+			}
+			var:TRI_negative_event_invest_target_2 = {
+				clear_variable = TRI_negative_event_invest_building
+				clear_variable = TRI_negative_event_invest_goal
+			}
+			clear_variable = TRI_negative_event_invest_target_1
+			clear_variable = TRI_negative_event_invest_target_2
+		}
+	}
+}
+

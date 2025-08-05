@@ -674,7 +674,8 @@ BA_Design_tank_Organization_Producter = {#坦克製造商
 	available = {}
 
 	equipment_type = {		
-		armor
+		# armor
+		cat_eq_all_tank_BA
 	}
 	research_categories = { mio_cat_tech_all_armor_and_modules}
 
@@ -695,7 +696,7 @@ BA_Design_tank_Organization_Producter = {#坦克製造商
 		icon = GFX_generic_mio_department_icon_tank_general_conversion
 
 		position = { x=1 y=0 }
-		equipment_type = {armor}
+		# equipment_type = {armor}
 		
 		equipment_bonus = {
 			defense = 0.05
@@ -709,7 +710,7 @@ BA_Design_tank_Organization_Producter = {#坦克製造商
 		icon = GFX_generic_mio_department_icon_tank_general_armor
 
 		position = { x=1 y=2.5 }
-		equipment_type = {armor}
+		# equipment_type = {armor}
 		all_parents = {
 			BA_design_organization_producter_tank
 		}
@@ -1366,7 +1367,9 @@ BA_Design_mecha_Organization_Producter = {#机甲製造商
 	}
 	
 
-	available = {}
+	available = {
+
+	}
 
 	equipment_type = {		
 		cat_eq_all_bm
@@ -1429,7 +1432,7 @@ BA_Design_mecha_Organization_Producter = {#机甲製造商
 
 		position = { x=0 y=2 }
 		all_parents = {
-			BA_design_organization_producter_mecha
+			 BA_design_organization_producter_mecha2
 		}
 		
 		

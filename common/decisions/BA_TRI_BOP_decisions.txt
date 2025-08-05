@@ -566,6 +566,142 @@ TRI_BOP_system = {
 			}
 		}
 	}
+	TRI_invest_in_region_factory_1 = {
+		activation = {
+			always = no
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_invest_in_region_factory_1_tt
+				var:TRI_negative_event_invest_target = {
+					OR = {
+						check_variable = { TRI_negative_event_invest_goal = building_level@var:TRI_negative_event_invest_building }
+						check_variable = { TRI_negative_event_invest_goal < building_level@var:TRI_negative_event_invest_building }
+					}
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = var:TRI_negative_event_invest_target
+			}
+		}
+
+		days_mission_timeout = 180
+		is_good = no
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		timeout_effect = {
+			custom_effect_tooltip = TRI_negative_event_rejection_count_tt
+			add_to_variable = { TRI_negative_event_rejection_count = 1 }
+			add_political_power = -50
+			hidden_effect = {
+				var:TRI_negative_event_invest_target = {
+					clear_variable = TRI_negative_event_invest_building
+					clear_variable = TRI_negative_event_invest_goal
+				}
+				clear_variable = TRI_negative_event_invest_target
+				random_list = {
+					1 = {
+						set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+					}
+					1 = {
+						set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+					}
+				}
+			}
+			set_temp_variable = { loyalty_change = -0.02 }
+			TRI_parliament_loyalty_change_parliament = yes
+			set_temp_variable = { radicalism_change = 0.02 }
+			TRI_parliament_radicalism_change_parliament = yes
+		}
+		complete_effect = {
+			set_variable = { TRI_negative_event_rejection_count = 0 }
+			hidden_effect = {
+				var:TRI_negative_event_invest_target = {
+					clear_variable = TRI_negative_event_invest_building
+					clear_variable = TRI_negative_event_invest_goal
+				}
+				clear_variable = TRI_negative_event_invest_target
+			}
+		}
+	}
+	TRI_invest_in_region_factory_2 = {
+		activation = {
+			always = no
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TRI_invest_in_region_factory_2_tt_1
+				var:TRI_negative_event_invest_target_1 = {
+					OR = {
+						check_variable = { TRI_negative_event_invest_goal = building_level@var:TRI_negative_event_invest_building }
+						check_variable = { TRI_negative_event_invest_goal < building_level@var:TRI_negative_event_invest_building }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = TRI_invest_in_region_factory_2_tt_2
+				var:TRI_negative_event_invest_target_2 = {
+					OR = {
+						check_variable = { TRI_negative_event_invest_goal = building_level@var:TRI_negative_event_invest_building }
+						check_variable = { TRI_negative_event_invest_goal < building_level@var:TRI_negative_event_invest_building }
+					}
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = var:TRI_negative_event_invest_target
+			}
+		}
+
+		days_mission_timeout = 180
+		is_good = no
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+		timeout_effect = {
+			add_political_power = -50
+			add_command_power = -15
+			add_stability = -0.1
+			set_temp_variable = { loyalty_change = -0.03 }
+			TRI_parliament_all_loyalty_change = yes
+			set_temp_variable = { radicalism_change = 0.05 }
+			TRI_parliament_all_radicalism_change = yes
+			TRI_unity_decrease_5 = yes
+			hidden_effect = {
+				var:TRI_negative_event_invest_target_1 = {
+					clear_variable = TRI_negative_event_invest_building
+					clear_variable = TRI_negative_event_invest_goal
+				}
+				var:TRI_negative_event_invest_target_2 = {
+					clear_variable = TRI_negative_event_invest_building
+					clear_variable = TRI_negative_event_invest_goal
+				}
+				clear_variable = TRI_negative_event_invest_target_1
+				clear_variable = TRI_negative_event_invest_target_2
+			}
+		}
+		complete_effect = {
+			set_variable = { TRI_negative_event_rejection_count = 0 }
+			hidden_effect = {
+				var:TRI_negative_event_invest_target_1 = {
+					clear_variable = TRI_negative_event_invest_building
+					clear_variable = TRI_negative_event_invest_goal
+				}
+				var:TRI_negative_event_invest_target_2 = {
+					clear_variable = TRI_negative_event_invest_building
+					clear_variable = TRI_negative_event_invest_goal
+				}
+				clear_variable = TRI_negative_event_invest_target_1
+				clear_variable = TRI_negative_event_invest_target_2
+			}
+		}
+	}
 	#委派更多权利
 	TRI_BOP_transfer_right = {
 		available = {
@@ -2023,316 +2159,316 @@ TRI_region_interaction_decisions_category = {
 		visible = {
 			has_country_flag = TRI_hear_and_command
 		}
-	complete_effect = {
-		if = {
-			limit = { has_country_flag = TRI_big_tea_party_visible }
-			clr_country_flag = TRI_big_tea_party_visible
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TRI_big_tea_party_visible }
+				clr_country_flag = TRI_big_tea_party_visible
+			}
+			else = {
+				set_country_flag = TRI_big_tea_party_visible
+			}
 		}
-		else = {
-			set_country_flag = TRI_big_tea_party_visible
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_country_flag = TRI_big_tea_party_visible
+			}
 		}
 	}
-	ai_will_do = {
-		base = 100
-		modifier = {
-			factor = 0
-			has_country_flag = TRI_big_tea_party_visible
-		}
-	}
-}
 
-TRI_big_tea_party = {
-	state_target = yes
-	target_array = TRI_region_present_state
-	target_trigger = {
-		FROM = {  is_controlled_by = ROOT }
-	}
-	highlight_states = {
-		highlight_states_trigger = {
-			check_variable = { state_region = PREV.FROM.state_region }
+	TRI_big_tea_party = {
+		state_target = yes
+		target_array = TRI_region_present_state
+		target_trigger = {
+			FROM = {  is_controlled_by = ROOT }
 		}
-	}
-	on_map_mode = map_only
-	visible = {
-		has_country_flag = TRI_big_tea_party_visible
-		has_country_flag = TRI_hear_and_command
-		NOT = { has_country_flag = TRI_big_tea_party_ongoing }
-	}
-	available = {
-		custom_override_tooltip = {
-			tooltip = only_one_state_same_time
+		highlight_states = {
+			highlight_states_trigger = {
+				check_variable = { state_region = PREV.FROM.state_region }
+			}
+		}
+		on_map_mode = map_only
+		visible = {
+			has_country_flag = TRI_big_tea_party_visible
+			has_country_flag = TRI_hear_and_command
 			NOT = { has_country_flag = TRI_big_tea_party_ongoing }
 		}
-	}
-	cost = 125
-	days_remove = 70
-	complete_effect = {
-		set_country_flag = TRI_big_tea_party_ongoing
-	}
-	remove_effect = {
-		clr_country_flag = TRI_big_tea_party_ongoing
-
-		add_stability = 0.05
-		random_controlled_state = {
-			limit = {
-				check_variable = { state_region = PREV.FROM.state_region }
-				NOT = { infrastructure > 4 }
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
+		available = {
+			custom_override_tooltip = {
+				tooltip = only_one_state_same_time
+				NOT = { has_country_flag = TRI_big_tea_party_ongoing }
 			}
 		}
-		set_temp_variable = { association = token:TRI_parliament_association_1 }
-		set_temp_variable = { region = FROM.state_region }
-		set_temp_variable = { stability_change = 0.05 }
-		TRI_change_region_stability = yes
-		set_temp_variable = { loyalty_change = 0.05 }
-		set_temp_variable = { radicalism_change = -0.1 }
-		if = {
-			limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party } }
-			add_to_temp_variable = { loyalty_change = 0.1 }
-			add_to_temp_variable = { radicalism_change = -0.1 }
+		cost = 125
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = TRI_big_tea_party_ongoing
 		}
-		else = {
-			custom_effect_tooltip = TRI_big_tea_party_tt
-		}
-		TRI_parliament_loyalty_change = yes
-		TRI_parliament_radicalism_change = yes
-		set_temp_variable = { association = token:TRI_parliament_association_tea_party }
-		set_temp_variable = { influence_change = 15 }
-		TRI_change_region_association_influence = yes
+		remove_effect = {
+			clr_country_flag = TRI_big_tea_party_ongoing
 
-		
-		
-	}
-	ai_will_do = {
-		base = 1
-		modifier = {
-			factor = 5
-			FROM = {
-				TRI_is_tea_party_state = no
-				OR = {
-					check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
-					check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+			add_stability = 0.05
+			random_controlled_state = {
+				limit = {
+					check_variable = { state_region = PREV.FROM.state_region }
+					NOT = { infrastructure > 4 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
 			}
+			set_temp_variable = { association = token:TRI_parliament_association_1 }
+			set_temp_variable = { region = FROM.state_region }
+			set_temp_variable = { stability_change = 0.05 }
+			TRI_change_region_stability = yes
+			set_temp_variable = { loyalty_change = 0.05 }
+			set_temp_variable = { radicalism_change = -0.1 }
+			if = {
+				limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party } }
+				add_to_temp_variable = { loyalty_change = 0.1 }
+				add_to_temp_variable = { radicalism_change = -0.1 }
+			}
+			else = {
+				custom_effect_tooltip = TRI_big_tea_party_tt
+			}
+			TRI_parliament_loyalty_change = yes
+			TRI_parliament_radicalism_change = yes
+			set_temp_variable = { association = token:TRI_parliament_association_tea_party }
+			set_temp_variable = { influence_change = 15 }
+			TRI_change_region_association_influence = yes
+
+			
+			
 		}
-		modifier = {
-			factor = 2
-			FROM = {
-				check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				FROM = {
+					TRI_is_tea_party_state = no
+					OR = {
+						check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_1 }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
 			}
 		}
-		modifier = {
-			factor = 1.5
-			has_political_power > 300
-		}
 	}
-}
-#举办对外敌战术研讨会
+	#举办对外敌战术研讨会
 
-TRI_switch_anti_GEH_Tactical_Seminar = {
-	visible = {
-		has_country_flag = TRI_hear_and_command
-	}
-	complete_effect = {
-		if = {
-			limit = { has_country_flag = TRI_anti_GEH_Tactical_Seminar_visible }
-			clr_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
+	TRI_switch_anti_GEH_Tactical_Seminar = {
+		visible = {
+			has_country_flag = TRI_hear_and_command
 		}
-		else = {
-			set_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TRI_anti_GEH_Tactical_Seminar_visible }
+				clr_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
+			}
+			else = {
+				set_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
+			}
+		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
+			}
 		}
 	}
-	ai_will_do = {
-		base = 100
-		modifier = {
-			factor = 0
+
+	TRI_anti_GEH_Tactical_Seminar = {
+		state_target = yes
+		target_array = TRI_region_present_state
+		target_trigger = {
+			FROM = {  is_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				check_variable = { state_region = PREV.FROM.state_region }
+			}
+		}
+		on_map_mode = map_only
+		visible = {
 			has_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
-		}
-	}
-}
-
-TRI_anti_GEH_Tactical_Seminar = {
-	state_target = yes
-	target_array = TRI_region_present_state
-	target_trigger = {
-		FROM = {  is_controlled_by = ROOT }
-	}
-	highlight_states = {
-		highlight_states_trigger = {
-			check_variable = { state_region = PREV.FROM.state_region }
-		}
-	}
-	on_map_mode = map_only
-	visible = {
-		has_country_flag = TRI_anti_GEH_Tactical_Seminar_visible
-		has_country_flag = TRI_hear_and_command
-		NOT = { has_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing }
-	}
-	available = {
-		custom_override_tooltip = {
-			tooltip = only_one_state_same_time
+			has_country_flag = TRI_hear_and_command
 			NOT = { has_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing }
 		}
-	}
-	cost = 125
-	days_remove = 70
-	complete_effect = {
-		set_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing
-	}
-	remove_effect = {
-		clr_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing
-		army_experience = 25
-		add_command_power = 20
-		set_temp_variable = { region = FROM.state_region }
-		set_temp_variable = { stability_change = 0.05 }
-		TRI_change_region_stability = yes
-		set_temp_variable = { association = token:TRI_parliament_association_0 }
-		set_temp_variable = { loyalty_change = 0.05 }
-		set_temp_variable = { radicalism_change = -0.1 }
-		if = {
-			limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party }}
-			add_to_temp_variable = { loyalty_change = 0.1 }
-			add_to_temp_variable = { radicalism_change = -0.1 }
+		available = {
+			custom_override_tooltip = {
+				tooltip = only_one_state_same_time
+				NOT = { has_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing }
+			}
 		}
-		else = {
-			custom_effect_tooltip = TRI_anti_GEH_Tactical_Seminar_tt
+		cost = 125
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing
 		}
-		TRI_parliament_loyalty_change = yes
-		TRI_parliament_radicalism_change = yes
-		set_temp_variable = { association = token:TRI_parliament_association_tea_party }
-		set_temp_variable = { influence_change = 10 }
-		TRI_change_region_association_influence = yes
-	}
-	ai_will_do = {
-		base = 1
-		modifier = {
-			factor = 5
-			FROM = {
-				TRI_is_tea_party_state = no
-				OR = {
-					check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
-					check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+		remove_effect = {
+			clr_country_flag = TRI_anti_GEH_Tactical_Seminar_ongoing
+			army_experience = 25
+			add_command_power = 20
+			set_temp_variable = { region = FROM.state_region }
+			set_temp_variable = { stability_change = 0.05 }
+			TRI_change_region_stability = yes
+			set_temp_variable = { association = token:TRI_parliament_association_0 }
+			set_temp_variable = { loyalty_change = 0.05 }
+			set_temp_variable = { radicalism_change = -0.1 }
+			if = {
+				limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party }}
+				add_to_temp_variable = { loyalty_change = 0.1 }
+				add_to_temp_variable = { radicalism_change = -0.1 }
+			}
+			else = {
+				custom_effect_tooltip = TRI_anti_GEH_Tactical_Seminar_tt
+			}
+			TRI_parliament_loyalty_change = yes
+			TRI_parliament_radicalism_change = yes
+			set_temp_variable = { association = token:TRI_parliament_association_tea_party }
+			set_temp_variable = { influence_change = 10 }
+			TRI_change_region_association_influence = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				FROM = {
+					TRI_is_tea_party_state = no
+					OR = {
+						check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+					}
 				}
 			}
-		}
-		modifier = {
-			factor = 2
-			FROM = {
-				check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_0 }
+			modifier = {
+				factor = 2
+				FROM = {
+					check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_0 }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
 			}
 		}
-		modifier = {
-			factor = 1.5
-			has_political_power > 300
-		}
 	}
-}
 
-#举办阅读会
-TRI_switch_reading_activity = {
-	visible = {
-		has_country_flag = TRI_hear_and_command
-	}
-	complete_effect = {
-		if = {
-			limit = { has_country_flag = TRI_reading_activity_visible }
-			clr_country_flag = TRI_reading_activity_visible
+	#举办阅读会
+	TRI_switch_reading_activity = {
+		visible = {
+			has_country_flag = TRI_hear_and_command
 		}
-		else = {
-			set_country_flag = TRI_reading_activity_visible
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TRI_reading_activity_visible }
+				clr_country_flag = TRI_reading_activity_visible
+			}
+			else = {
+				set_country_flag = TRI_reading_activity_visible
+			}
+		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_country_flag = TRI_reading_activity_visible
+			}
 		}
 	}
-	ai_will_do = {
-		base = 100
-		modifier = {
-			factor = 0
+	TRI_reading_activity = {
+		state_target = yes
+		target_array = TRI_region_present_state
+		target_trigger = {
+			FROM = {  is_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				check_variable = { state_region = PREV.FROM.state_region }
+			}
+		}
+		on_map_mode = map_only
+		visible = {
 			has_country_flag = TRI_reading_activity_visible
-		}
-	}
-}
-TRI_reading_activity = {
-	state_target = yes
-	target_array = TRI_region_present_state
-	target_trigger = {
-		FROM = {  is_controlled_by = ROOT }
-	}
-	highlight_states = {
-		highlight_states_trigger = {
-			check_variable = { state_region = PREV.FROM.state_region }
-		}
-	}
-	on_map_mode = map_only
-	visible = {
-		has_country_flag = TRI_reading_activity_visible
-		has_country_flag = TRI_hear_and_command
-		NOT = { has_country_flag = TRI_reading_activity_ongoing }
-	}
-	available = {
-		custom_override_tooltip = {
-			tooltip = only_one_state_same_time
+			has_country_flag = TRI_hear_and_command
 			NOT = { has_country_flag = TRI_reading_activity_ongoing }
 		}
-	}
-	cost = 85
-	days_remove = 70
-	complete_effect = {
-		set_country_flag = TRI_reading_activity_ongoing
-	}
-	modifier = {
-		research_speed_factor = 0.025
-		political_power_cost = -0.1
-	}
-	remove_effect = {
-		clr_country_flag = TRI_reading_activity_ongoing
-		
-		set_temp_variable = { region = FROM.state_region }
-		set_temp_variable = { stability_change = 0.1 }
-		TRI_change_region_stability = yes
-		set_temp_variable = { association = token:TRI_parliament_association_2 }
-		set_temp_variable = { loyalty_change = 0.05 }
-		set_temp_variable = { radicalism_change = -0.1 }
-		if = {
-			limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party } }
-			add_to_temp_variable = { loyalty_change = 0.1 }
-			add_to_temp_variable = { radicalism_change = -0.1 }
+		available = {
+			custom_override_tooltip = {
+				tooltip = only_one_state_same_time
+				NOT = { has_country_flag = TRI_reading_activity_ongoing }
+			}
 		}
-		else = {
-			custom_effect_tooltip = TRI_reading_activity_tt
+		cost = 85
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = TRI_reading_activity_ongoing
 		}
-		TRI_parliament_loyalty_change = yes
-		TRI_parliament_radicalism_change = yes
-		set_temp_variable = { association = token:TRI_parliament_association_tea_party }
-		set_temp_variable = { influence_change = 10 }
-		TRI_change_region_association_influence = yes
-	}
-	ai_will_do = {
-		base = 1
 		modifier = {
-			factor = 5
-			FROM = {
-				TRI_is_tea_party_state = no
-				OR = {
-					check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
-					check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+			research_speed_factor = 0.025
+			political_power_cost = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = TRI_reading_activity_ongoing
+			
+			set_temp_variable = { region = FROM.state_region }
+			set_temp_variable = { stability_change = 0.1 }
+			TRI_change_region_stability = yes
+			set_temp_variable = { association = token:TRI_parliament_association_2 }
+			set_temp_variable = { loyalty_change = 0.05 }
+			set_temp_variable = { radicalism_change = -0.1 }
+			if = {
+				limit = { check_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party } }
+				add_to_temp_variable = { loyalty_change = 0.1 }
+				add_to_temp_variable = { radicalism_change = -0.1 }
+			}
+			else = {
+				custom_effect_tooltip = TRI_reading_activity_tt
+			}
+			TRI_parliament_loyalty_change = yes
+			TRI_parliament_radicalism_change = yes
+			set_temp_variable = { association = token:TRI_parliament_association_tea_party }
+			set_temp_variable = { influence_change = 10 }
+			TRI_change_region_association_influence = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				FROM = {
+					TRI_is_tea_party_state = no
+					OR = {
+						check_variable = { loyalty@ruling_association@var:state_region < 1.2 }
+						check_variable = { radicalism@ruling_association@var:state_region > 0.09 }
+					}
 				}
 			}
-		}
-		modifier = {
-			factor = 2
-			FROM = {
-				check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_2 }
+			modifier = {
+				factor = 2
+				FROM = {
+					check_variable = { ruling_association@var:state_region = token:TRI_parliament_association_2 }
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_political_power > 300
 			}
 		}
-		modifier = {
-			factor = 1.5
-			has_political_power > 300
-		}
 	}
-}
 }
 
 
