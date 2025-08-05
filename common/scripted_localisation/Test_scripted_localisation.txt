@@ -19,3 +19,72 @@ defined_text = {
         localization_key = Time_day_night_text_day
     }
 }
+
+defined_text = {#别问我为啥在text
+    name = Get_BARE_GEH_dualHeaded_influence_Text
+     text = {
+        trigger = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.2
+				compare = less_than
+			}
+        }
+        localization_key = BARE_GEH_dualHeaded_influence_hina_2
+    }
+    text = {
+        trigger = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.2
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.4
+				compare = less_than
+			}
+        }
+        localization_key = BARE_GEH_dualHeaded_influence_hina_1
+    }
+     text = {
+        trigger = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.4
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.6
+				compare = less_than
+			}
+        }
+        localization_key = BARE_GEH_dualHeaded_influence_normal
+    }
+    text = {
+        trigger = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.6
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.8
+				compare = less_than
+			}
+        }
+        localization_key = BARE_GEH_dualHeaded_influence_makoto_1
+    }
+     text = {
+        trigger = {
+			check_variable = {
+				var = GEH_dualHeaded_Influence_Factor
+				value = 0.8
+				compare = greater_than_or_equals
+			}
+        }
+        localization_key = BARE_GEH_dualHeaded_influence_makoto_2
+    }
+}

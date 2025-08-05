@@ -33,7 +33,7 @@ Get_ARI_traveller_operation_2_progress = {
 	text = {
 		trigger = {
 			check_variable = {
-				ARI_traveller_operation_progress > 1259.99
+				ARI_traveller_operation_progress > 999
 			}
 		}
 		localization_key = ARI_traveller_operation_2_progress_5
@@ -42,7 +42,7 @@ Get_ARI_traveller_operation_2_progress = {
 	text = {
 		trigger = {
 			check_variable = {
-				ARI_traveller_operation_progress > 999
+				ARI_traveller_operation_progress > 749
 			}
 		}
 		localization_key = ARI_traveller_operation_2_progress_4
@@ -51,7 +51,7 @@ Get_ARI_traveller_operation_2_progress = {
 	text = {
 		trigger = {
 			check_variable = {
-				ARI_traveller_operation_progress > 699
+				ARI_traveller_operation_progress > 499
 			}
 		}
 		localization_key = ARI_traveller_operation_2_progress_3
@@ -61,7 +61,7 @@ Get_ARI_traveller_operation_2_progress = {
 	text = {
 		trigger = {
 			check_variable = {
-				ARI_traveller_operation_progress > 399
+				ARI_traveller_operation_progress > 249
 			}
 		}
 		localization_key = ARI_traveller_operation_2_progress_2

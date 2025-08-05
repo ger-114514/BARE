@@ -125,6 +125,7 @@ add_ideas = {
 	GEH_factory_management_in_chaos #混乱的工厂
 	GEH_severe_inside_contradiction
 	BARE_Global_College_Autonomous_Region
+	millaws_battlefield_mission
 }
 
 recruit_character = GEH_makoto #万魔殿
@@ -211,3 +212,6 @@ set_power_balance = {
 }
 
 
+set_variable = {
+	GEH_dualHeaded_Influence_Factor = 0.5
+}

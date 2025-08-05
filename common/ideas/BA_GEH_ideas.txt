@@ -323,9 +323,7 @@ ideas = {
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -343,9 +341,7 @@ ideas = {
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -363,9 +359,7 @@ ideas = {
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -462,9 +456,7 @@ ideas = {
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -484,9 +476,7 @@ ideas = {
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -506,9 +496,7 @@ ideas = {
 
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -529,9 +517,7 @@ ideas = {
 
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -1264,8 +1250,8 @@ ideas = {
             picture = unknown
 
             modifier = {
-                political_power_factor = -0.1
-                stability_weekly= -0.001
+                political_power_factor = -0.3
+                stability_weekly= -0.01
                 GEH_dualHeaded_Hina_Weekly_factor = 0.05
                 GEH_societies_gourmet_research_destructive_weekly = -0.2
                 GEH_societies_com68_destructive_weekly = -0.2
@@ -1283,7 +1269,8 @@ ideas = {
             picture = unknown
 
             modifier = {
-                political_power_factor = -0.05
+                political_power_factor = -0.15
+                stability_weekly = -0.05
                 GEH_dualHeaded_Hina_Weekly_factor = 0.025
                 GEH_societies_gourmet_research_destructive_weekly = -0.1
                 GEH_societies_com68_destructive_weekly = -0.1
@@ -1313,6 +1300,7 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.1
+                stability_weekly = -0.05
                 GEH_dualHeaded_Makoto_Weekly_factor = 0.025
                 GEH_societies_hot_spring_activity_weekly = 0.1
                 GEH_societies_gourmet_research_activity_weekly = 0.1
@@ -1331,7 +1319,7 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.15
-                stability_weekly = -0.001
+                stability_weekly = -0.01
                 GEH_dualHeaded_Makoto_Weekly_factor = 0.05
                 GEH_societies_hot_spring_activity_weekly = 0.2
                 GEH_societies_gourmet_research_activity_weekly = 0.2
@@ -1391,9 +1379,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1418,9 +1404,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1445,9 +1429,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1475,9 +1457,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1500,9 +1480,7 @@ ideas = {
                 original_tag = GEH
             }
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
         }

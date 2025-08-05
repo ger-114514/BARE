@@ -35,7 +35,7 @@ GEH_after_eden_war_decision_category = {
 	visible = {
 		original_tag = GEH
 		has_completed_focus = GEH_War_breaks_out
-		NOT = { has_war_with = ARI } #和阿里乌斯处于和平
+		has_global_flag = Arius_defeated #和阿里乌斯处于和平
 	}
 	priority = 1098
 }

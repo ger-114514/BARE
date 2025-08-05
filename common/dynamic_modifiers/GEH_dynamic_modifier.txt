@@ -33,9 +33,7 @@ GEH_a_unpredictable_attack = {
 
 
 	remove_trigger = { 
-		not = {
-			has_war_with = ARI
-		}
+		has_global_flag = Arius_defeated
 	}
 }
 

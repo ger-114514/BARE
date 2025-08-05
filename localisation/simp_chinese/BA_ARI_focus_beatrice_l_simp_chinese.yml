@@ -102,9 +102,9 @@
 
 
  ARI_traveller_operation_1_trigger_tt: "“旅者”行动内部准备进度达到§Y100§!%，当前为[?ARI_traveller_operation_prepare_progress|Y2]%"
- ARI_traveller_operation_1_progress_low_tt: "当圣三一渗透进度达到80%以上时，每次成功渗透超出80%的部分会额外转化为准备度。"
+ ARI_traveller_operation_1_progress_low_tt: "当圣三一渗透进度达到50%以上时，每次成功渗透超出80%的部分，每1%都会额外转化为2.5%准备度。"
 
- ARI_traveller_operation_2_trigger_tt: "“旅者”行动外部态势达到§Y时机已至§!/1260，当前为[Get_ARI_traveller_operation_2_progress]/[?ARI_traveller_operation_progress|Y2]"
+ ARI_traveller_operation_2_trigger_tt: "“旅者”行动外部态势达到§Y时机已至§!/1000，当前为[Get_ARI_traveller_operation_2_progress]/[?ARI_traveller_operation_progress|Y2]"
  ARI_traveller_operation_2_progress_low_tt: "“旅者”行动的外部态势进度每天会增长§Y1§!\n提高§Y圣三一渗透进度§!和降低§Y圣三一团结度§!均可§G加快§!准备速度"
  ARI_traveller_operation_3_trigger_tt: "夫人没有授予对外行动处临机指挥权"
 

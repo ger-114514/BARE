@@ -203,6 +203,7 @@ country_event = {
 					type = XiaoMieWeiXie
 					target = ARI
 				}
+				set_global_flag = TRI_Rescue_Operation_start_global_flag
 			}
 		}
 		set_global_flag = ARIUS_IN_DISABLED
