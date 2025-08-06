@@ -119,14 +119,14 @@ BARE_SuperEvent_2_effect_8 = {
 BARE_SuperEvent_2_effect_9 = {
 	every_country = {
 		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_LSGSJ_GSC_IN }
+		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_START }
 		BARE_SuperEvent_2_fire_super_event = yes
-		hidden_effect = {
-			scoped_sound_effect = BARE_SuperEvent_Sound_LSGSJ_GSC_IN
-			scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
-		}
+		# hidden_effect = {
+		# 	scoped_sound_effect = BARE_SuperEvent_Sound_HELP_HOSHINO
+		# 	scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
+		# }
 		
-
+		
 	}
 }
 

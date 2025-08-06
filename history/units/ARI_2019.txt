@@ -72,7 +72,7 @@ division_template = {
 		ifv_unit = {x = 1 y = 0}
 		ifv_unit = {x = 1 y = 1}
 		ifv_artillery_unit = {x = 2 y = 0}
-		ifv_at_unit = { x = 2 y = 2 }
+		ifv_at_unit = { x = 2 y = 1 }
 	}
 	support = {
 		ifv_recon = {

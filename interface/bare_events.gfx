@@ -19,6 +19,11 @@ spriteTypes = {
 		name = "GFX_news_event_eden_pact_ruin"
 		texturefile = "gfx/event_pictures/news_event/news_event_eden_pact_ruin.dds"			
 	}
+
+	SpriteType = {
+		name = "GFX_news_event_eden_pact_start"
+		texturefile = "gfx/event_pictures/news_event/news_event_eden_pact_start.dds"			
+	}
 	#ari
 	SpriteType = {
 		name = "GFX_news_event_eden_pact_attack"

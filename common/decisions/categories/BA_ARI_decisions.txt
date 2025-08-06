@@ -125,7 +125,7 @@ ARI_power_chaser_decisions = {
 
 	visible = {
 		original_tag = ARI
-		has_completed_focus = ARI_Sparta_discipline
+		has_completed_focus = ARI_desire_of_power
 	}
 	priority = 1098
 
@@ -139,10 +139,13 @@ ARI_traveller_operation_caretaking_decisions = {
 
 	visible = {
 		original_tag = ARI
-		has_completed_focus = ARI_traveller_operation
 		OR = {
-			has_idea = ARI_catastrophic_traveller_operation
-			has_idea = ARI_lesson_traveller_operation
+			has_dynamic_modifier = {
+				modifier = ARI_catastrophic_traveller_operation
+			}
+			has_dynamic_modifier = {
+				modifier = ARI_lesson_traveller_operation
+			}
 		}
 	}
 	priority = 1098

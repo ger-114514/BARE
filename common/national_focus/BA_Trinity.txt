@@ -681,7 +681,10 @@ focus_tree = {
 				completion_reward = {
 					add_stability = -0.10
 					#建立间谍机构：【圣三一情报局】
-					create_intelligence_agency = yes
+					create_intelligence_agency = {
+						name = "茶会情报部"
+						icon = GFX_bare_intelligence_agency_logo_tri	                    
+					}
 					country_event = TRI_events.6
 					set_temp_variable = { loyalty_change = -0.06 }
 					TRI_parliament_all_loyalty_change = yes

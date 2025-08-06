@@ -277,7 +277,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_tech = mystical_infantry_weapons_T1
+					has_tech = mystical_infantry_weapons_T2
 				}
 				add_tech_bonus = {
 					bonus = 0.5
@@ -287,7 +287,7 @@ focus_tree = {
 			}
 			else = {
 				set_technology = {
-					mystical_infantry_weapons_T1 = 1
+					mystical_infantry_weapons_T2 = 1
 				}
 			}
 			division_template = {
@@ -311,7 +311,7 @@ focus_tree = {
 					}
 					fire_support_team_sp = {
 						x = 2
-						y = 1
+						y = 0
 					}
 				}
 				support = {
@@ -1129,6 +1129,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
+			factor = 10
 			modifier = {
 				factor = 3
 				date > 2020.1.1
@@ -1285,6 +1286,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
+			factor = 5
 			modifier = {
 				factor = 3
 				date > 2020.1.1
@@ -1307,7 +1309,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			create_intelligence_agency = yes
+			create_intelligence_agency = {
+				name = "阿里乌斯对外情报行动部"
+				icon = GFX_bare_intelligence_agency_logo_ari	            
+			}
 			hidden_effect = {
 				random_intelligence_agency_upgrades = yes
 				random_intelligence_agency_upgrades = yes
@@ -1329,6 +1334,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
+			factor = 10
 			modifier = {
 				factor = 3
 				date > 2020.1.1
@@ -1362,6 +1368,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
+			factor = 10
 			modifier = {
 				factor = 3
 				date > 2020.1.1
@@ -1396,6 +1403,7 @@ focus_tree = {
 			unlock_decision_tooltip = ARI_attack_Trinity_facilities
 		}
 		ai_will_do = {
+			factor = 10
 			modifier = {
 				factor = 3
 				date > 2020.1.1
@@ -1490,7 +1498,7 @@ focus_tree = {
 			custom_override_tooltip = {
 				tooltip = ARI_traveller_operation_2_trigger_tt
 				check_variable = {
-					ARI_traveller_operation_progress = 1260
+					ARI_traveller_operation_progress = 1000
 				}
 			}
 			custom_override_tooltip = {
@@ -1704,7 +1712,7 @@ focus_tree = {
 			add_stability = 0.2
 			add_war_support = 0.2
 			#减少“旅者”行动的灾难的效果
-			unlock_decision_tooltip = ARI_get_back_revenge_spirit_de
+			# unlock_decision_tooltip = ARI_get_back_revenge_spirit_de
 		}
 		ai_will_do = {
 			factor = 2

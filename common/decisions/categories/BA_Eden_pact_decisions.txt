@@ -37,6 +37,9 @@ Eden_cathedral_war = {
 	visible = {
 		has_war = yes
 		has_global_flag = ECW_active_global_flag
+		not = {
+			has_global_flag = Arius_defeated
+		}
 	}
 	#visible_when_empty = yes
 	scripted_gui = Eden_cathedral_war_decision_ui_progressbar_sg
@@ -55,6 +58,9 @@ Eden_cathedral_war_progress_collector = {
 	visible = {
 		has_war = yes
 		has_global_flag = ECW_active_global_flag
+		not = {
+			has_global_flag = Arius_defeated
+		}
 	}
 	#visible_when_empty = yes
 	

@@ -131,7 +131,7 @@ ARI_traveller_operation_prepare_progress_update_effect = {
 		if = {
 			limit = {
 				check_variable = {
-					ARI_intelligence_in_TRI > 80
+					ARI_intelligence_in_TRI > 50
 				}
 			}
 
@@ -147,13 +147,16 @@ ARI_traveller_operation_prepare_progress_update_effect = {
 				ARI_intelligence_in_TRI_conut_temp = intelligence_change
 			}
 			add_to_temp_variable = {
-				ARI_intelligence_in_TRI_conut_temp = -80
+				ARI_intelligence_in_TRI_conut_temp = -50
 			}
 			if = {
 				limit = {
 					check_variable = {
 						ARI_intelligence_in_TRI_conut_temp > 0
 					}
+				}
+				multiply_variable = {
+					ARI_intelligence_in_TRI_conut_temp = 2.5
 				}
 				add_to_variable = {
 					ARI_traveller_operation_prepare_progress = ARI_intelligence_in_TRI_conut_temp

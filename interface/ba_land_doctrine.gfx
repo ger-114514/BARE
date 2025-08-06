@@ -11,7 +11,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_tank_22_medium"
+		name = "GFX_tank_21_medium"
 		texturefile = "gfx/interface/technologies/armored_spearhead.dds"
 		alwaystransparent = yes
 	}
@@ -36,7 +36,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_artillery_22_medium"
+		name = "GFX_Trinity_2_medium"
 		texturefile = "gfx/interface/technologies/combined_arms.dds"
 		alwaystransparent = yes
 	}
@@ -46,7 +46,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_infantry_12_medium"
+		name = "GFX_Arius_1_medium"
 		texturefile = "gfx/interface/technologies/delay.dds"
 		alwaystransparent = yes
 	}
@@ -56,7 +56,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_tank_32_medium"
+		name = "GFX_Gehenna_2_medium"
 		texturefile = "gfx/interface/technologies/elastic_defence.dds"
 		alwaystransparent = yes
 	}
@@ -66,7 +66,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_artillery_12_medium"
+		name = "GFX_Trinity_1_medium"
 		texturefile = "gfx/interface/technologies/forward_observers.dds"
 		alwaystransparent = yes
 	}
@@ -167,7 +167,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_infantry_22_medium"
+		name = "GFX_Arius_2_medium"
 		texturefile = "gfx/interface/technologies/infantry_offensive.dds"
 		alwaystransparent = yes
 	}
@@ -222,7 +222,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	SpriteType = {
-		name = "GFX_tank_12_medium"
+		name = "GFX_Gehenna_1_medium"
 		texturefile = "gfx/interface/technologies/prepared_defense.dds"
 		alwaystransparent = yes
 	}
@@ -305,7 +305,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_tank_21_medium"
+		name = "GFX_tank_22_medium"
 		texturefile = "gfx/interface/technologies/peoples_army.dds"
 		alwaystransparent = yes
 	}

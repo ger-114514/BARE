@@ -35,7 +35,7 @@ ideas = {
         #团结的格黑娜
         GEH_unity_gehennna = {
             name = GEH_unity_gehennna
-            picture = unknown
+            picture = "GEH_unity_gehennna"
 
             allowed = {
                 original_tag = GEH
@@ -50,7 +50,7 @@ ideas = {
 
         GEH_ideas_peace_at_hand = {
             name =  GEH_ideas_peace_at_hand
-            picture = unknown
+            picture = "GEH_ideas_peace_at_hand"
 
             allowed = {
                 original_tag = GEH
@@ -71,7 +71,7 @@ ideas = {
 
         GEH_ideas_pandemonium_leader = {
             name =  GEH_ideas_pandemonium_leader
-            picture = unknown
+            picture = "GEH_ideas_pandemonium_leader"
 
             allowed = {
                 original_tag = GEH
@@ -93,7 +93,7 @@ ideas = {
         #筹备会谈
         GEH_ideas_prepare_for_conference_1 = {
             name = GEH_ideas_prepare_for_conference_1
-            picture = unknown
+            picture = "GEH_ideas_prepare_for_conference_1"
 
             allowed = {
                 original_tag = GEH
@@ -113,7 +113,7 @@ ideas = {
         #筹备和圣三一的会谈
         GEH_ideas_prepare_for_conference_2 = {
             name = GEH_ideas_prepare_for_conference_2
-            picture = unknown
+            picture = "GEH_ideas_prepare_for_conference_2"
 
             allowed = {
                 original_tag = GEH
@@ -135,7 +135,7 @@ ideas = {
         #完善的筹备
         GEH_ideas_prepare_for_conference_3 = {
             name = GEH_ideas_prepare_for_conference_3
-            picture = unknown
+            picture = "GEH_ideas_prepare_for_conference_3"
 
             allowed = {
                 original_tag = GEH
@@ -160,7 +160,7 @@ ideas = {
         #会谈支持度：无人在意
         GEH_ideas_conference_support_1 = {
             name = GEH_ideas_conference_support_1 
-            picture = unknown
+            picture = "GEH_ideas_conference_support_1"
 
             allowed = {
                 original_tag = GEH
@@ -177,7 +177,7 @@ ideas = {
         #会谈支持度：略有耳闻
         GEH_ideas_conference_support_3 = {
             name = GEH_ideas_conference_support_3 
-            picture = unknown
+            picture = GEH_ideas_conference_support_3
 
             allowed = {
                 original_tag = GEH
@@ -197,7 +197,7 @@ ideas = {
         #会谈支持度：骚乱不断
         GEH_ideas_conference_support_2 = {
             name = GEH_ideas_conference_support_2 
-            picture = unknown
+            picture = GEH_ideas_conference_support_2
 
             allowed = {
                 original_tag = GEH
@@ -219,7 +219,7 @@ ideas = {
         #会谈支持度：稳步向前
         GEH_ideas_conference_support_4 = {
             name = GEH_ideas_conference_support_4
-            picture = unknown
+            picture = "GEH_ideas_conference_support_4"
 
             allowed = {
                 original_tag = GEH
@@ -315,17 +315,15 @@ ideas = {
 
         #部队混乱(3次)
         GEH_army_in_chaos = {
-            name = GEH_unity_gehennna
-            picture = unknown
+            name = GEH_army_in_chaos
+            picture = "GEH_army_in_chaos"
 
             allowed = {
                 original_tag = GEH
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -335,17 +333,15 @@ ideas = {
         }
 
         GEH_army_in_chaos_2 = {
-            name = GEH_unity_gehennna
-            picture = unknown
+            name = GEH_army_in_chaos_2
+            picture = "GEH_army_in_chaos_2"
 
             allowed = {
                 original_tag = GEH
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -355,17 +351,15 @@ ideas = {
         }
 
         GEH_army_in_chaos_3 = {
-            name = GEH_unity_gehennna
-            picture = unknown
+            name = GEH_army_in_chaos_3
+            picture = "GEH_army_in_chaos_3"
 
             allowed = {
                 original_tag = GEH
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -378,7 +372,7 @@ ideas = {
         #不遗余力
         GEH_fight_to_the_end = {
             name = GEH_unity_gehennna
-            picture = unknown
+            picture = "GEH_fight_to_the_end"
 
             allowed = {
                 original_tag = GEH
@@ -399,8 +393,8 @@ ideas = {
 
         #三一-格黑娜军工协作
         GEH_army_factory_cooperation = {
-            name = GEH_unity_gehennna
-            picture = unknown
+            name = GEH_army_factory_cooperation
+            picture = "GEH_army_factory_cooperation"
 
             allowed = {
                 original_tag = GEH
@@ -415,7 +409,7 @@ ideas = {
         #对圣三一外交支持
         GEH_dip_support_to_trinity = {
             name = GEH_dip_support_to_trinity
-            picture = unknown
+            picture = "GEH_dip_support_to_trinity"
 
             allowed = {
                 original_tag = GEH
@@ -434,7 +428,7 @@ ideas = {
         #圣三一 外交支持
         TRI_gehenna_dip_support = {
             name = TRI_gehenna_dip_support
-            picture = unknown
+            picture = TRI_gehenna_dip_support
 
             allowed = {
                 original_tag = TRI
@@ -455,16 +449,14 @@ ideas = {
         #非常措施
         GEH_emergency_methods_for_arius = {
             name = GEH_emergency_methods_for_arius
-            picture = unknown
+            picture = "GEH_emergency_methods_for_arius"
 
             allowed = {
                 original_tag = GEH
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -477,16 +469,14 @@ ideas = {
         #铁腕镇压
         GEH_supress_the_choas_idea = {
             name =  GEH_supress_the_choas_idea
-            picture = unknown
+            picture = "GEH_supress_the_choas_idea"
 
             allowed = {
                 original_tag = GEH
             }
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -498,7 +488,7 @@ ideas = {
         #管制交通
         GEH_control_the_transport_idea = {
             name = GEH_control_the_transport_idea
-            picture = unknown
+            picture = "GEH_control_the_transport_idea"
 
             allowed = {
                 original_tag = GEH
@@ -506,9 +496,7 @@ ideas = {
 
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -521,7 +509,7 @@ ideas = {
         #不许后退
         GEH_no_step_back_idea = {
             name = GEH_unity_gehennna
-            picture = unknown
+            picture = "GEH_no_step_back_idea"
 
             allowed = {
                 original_tag = GEH
@@ -529,9 +517,7 @@ ideas = {
 
 
             cancel = {
-                not = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
             modifier = {
@@ -584,7 +570,7 @@ ideas = {
         #战时工业
         GEH_war_industry_modifier = {
             name = GEH_war_industry_modifier
-            picture = unknown
+            picture = "GEH_war_industry_modifier"
 
             allowed = {
                 original_tag = GEH
@@ -1264,8 +1250,8 @@ ideas = {
             picture = unknown
 
             modifier = {
-                political_power_factor = -0.1
-                stability_weekly= -0.001
+                political_power_factor = -0.3
+                stability_weekly= -0.01
                 GEH_dualHeaded_Hina_Weekly_factor = 0.05
                 GEH_societies_gourmet_research_destructive_weekly = -0.2
                 GEH_societies_com68_destructive_weekly = -0.2
@@ -1283,7 +1269,8 @@ ideas = {
             picture = unknown
 
             modifier = {
-                political_power_factor = -0.05
+                political_power_factor = -0.15
+                stability_weekly = -0.05
                 GEH_dualHeaded_Hina_Weekly_factor = 0.025
                 GEH_societies_gourmet_research_destructive_weekly = -0.1
                 GEH_societies_com68_destructive_weekly = -0.1
@@ -1313,6 +1300,7 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.1
+                stability_weekly = -0.05
                 GEH_dualHeaded_Makoto_Weekly_factor = 0.025
                 GEH_societies_hot_spring_activity_weekly = 0.1
                 GEH_societies_gourmet_research_activity_weekly = 0.1
@@ -1331,7 +1319,7 @@ ideas = {
 
             modifier = {
                 political_power_factor = 0.15
-                stability_weekly = -0.001
+                stability_weekly = -0.01
                 GEH_dualHeaded_Makoto_Weekly_factor = 0.05
                 GEH_societies_hot_spring_activity_weekly = 0.2
                 GEH_societies_gourmet_research_activity_weekly = 0.2
@@ -1391,9 +1379,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1418,9 +1404,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1445,9 +1429,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1475,9 +1457,7 @@ ideas = {
             }
 
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
         }
 
@@ -1500,9 +1480,7 @@ ideas = {
                 original_tag = GEH
             }
              cancel = {
-                NOT = {
-                    has_war_with = ARI
-                }
+                 has_global_flag = Arius_defeated
             }
 
         }
