@@ -214,28 +214,31 @@ on_actions = {
 	}
 	on_daily = {
 		effect = {
-			for_each_scope_loop = {
-				array = global.GST_JS_ZBH
-				if = {
-					limit = {
-						has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
-						has_state_flag = CW_fully_control_check
-					}
+			KRO = {
+				for_each_scope_loop = {
+					array = global.GST_JS_ZBH
 					if = {
 						limit = {
-							NOT = {
-								is_fully_controlled_by = TRI
-								is_fully_controlled_by = GEH
-								is_fully_controlled_by = ARI
-							}
+							has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+							has_state_flag = CW_fully_control_check
 						}
-						modify_state_flag = {
-							flag = CW_fully_control_check
-							days = 90
+						if = {
+							limit = {
+								NOT = {
+									is_fully_controlled_by = TRI
+									is_fully_controlled_by = GEH
+									is_fully_controlled_by = ARI
+								}
+							}
+							modify_state_flag = {
+								flag = CW_fully_control_check
+								days = 90
+							}
 						}
 					}
 				}
 			}
+			
 		}
 	}
 }
