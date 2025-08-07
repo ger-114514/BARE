@@ -1349,8 +1349,8 @@ GEH_societies_dec_category = {
     GEH_ioli_patrol = {
         icon = GFX_GEH_ioli_dec
         cost = 30
-        days_remove = 30
-        days_re_enable = 30
+        days_remove = 20
+        days_re_enable = 40
         on_map_mode = map_only
         state_target = yes
         ai_will_do = {
@@ -1359,10 +1359,10 @@ GEH_societies_dec_category = {
         available = {
             FROM = {
                 OWNER = {
-                    divisions_in_state = {
-							size > 0
-							state = FROM
-					}
+                    #divisions_in_state = {
+							#size > 0
+							#state = FROM
+					#}
                     NOT = {
                         has_country_flag = GEH_ioli_working
                     }
