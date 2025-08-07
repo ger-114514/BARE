@@ -16,7 +16,7 @@ country_event = {
     option = {
 		name = GEH_societies_events.1.a
         add_political_power = -100
-		add_stability = 10
+		add_stability = 0.1
 		ai_chance = {
 			factor = 300
 		}
@@ -25,7 +25,7 @@ country_event = {
 	option = {
 		name = GEH_societies_events.1.b
         add_political_power = 200
-		add_stability = -20
+		add_stability = -0.2
 		ai_chance = {
 			factor = 100
 		}

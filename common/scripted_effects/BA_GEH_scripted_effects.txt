@@ -179,12 +179,14 @@ GEH_discipline_committee_calc = {
 	add_to_variable = { GEH_discipline_committee_stability_weekly_temp = -100 }
 	multiply_variable = { GEH_discipline_committee_research = -0.001}
 	multiply_variable = { GEH_discipline_committee_stability_factor = 0.002 }
-	multiply_variable = { GEH_discipline_committee_stability_weekly = 0.000005}
+	multiply_variable = { GEH_discipline_committee_stability_weekly = 0.001}
+	multiply_variable = { GEH_discipline_committee_stability_weekly = 0.05}
 	multiply_variable = { GEH_discipline_committee_army_org_factor = 0.002 }
 	multiply_variable = { GEH_discipline_committee_production_factory_max = 0.002 }
 	multiply_variable = { GEH_discipline_committee_production_factory_start = 0.002 }
 	multiply_variable = { GEH_discipline_committee_stability_factor_temp = 0.002 }
-	multiply_variable = { GEH_discipline_committee_stability_weekly_temp = 0.000002 }
+	multiply_variable = { GEH_discipline_committee_stability_weekly_temp = 0.001 }
+	multiply_variable = { GEH_discipline_committee_stability_weekly_temp = 0.02 }
 	add_to_variable = { GEH_discipline_committee_stability_factor = GEH_discipline_committee_stability_factor_temp }
 	add_to_variable = { GEH_discipline_committee_stability_weekly = GEH_discipline_committee_stability_weekly_temp }
 	add_to_variable = { GEH_discipline_committee_research = GEH_discipline_committee_max_research }
@@ -334,13 +336,13 @@ GEH_weekly_variable_change = {
 	add_to_variable = { GEH_hot_spring_activity = 1 }
 	add_to_variable = { GEH_discipline_committee_ability = 1 }
 	set_variable = { GEH_food_service_efficiency_temp = GEH_food_service_activity }
-	multiply_variable = { GEH_food_service_efficiency_temp = 0.002 }
+	multiply_variable = { GEH_food_service_efficiency_temp = 0.02 }
 	set_variable = { GEH_gourmet_research_destructive_temp = GEH_gourmet_research_activity }
-	multiply_variable = { GEH_gourmet_research_destructive_temp = 0.002 }
+	multiply_variable = { GEH_gourmet_research_destructive_temp = 0.02 }
 	set_variable = { GEH_hot_spring_destructive_temp = GEH_hot_spring_activity }
-	multiply_variable = { GEH_hot_spring_destructive_temp = 0.002 }
+	multiply_variable = { GEH_hot_spring_destructive_temp = 0.02 }
 	set_variable = { GEH_discipline_committee_repression_temp = GEH_discipline_committee_ability }
-	multiply_variable = { GEH_discipline_committee_repression_temp = 0.002 }
+	multiply_variable = { GEH_discipline_committee_repression_temp = 0.02 }
 	if = {
 		limit = {
 			has_global_flag = GEH_comb68_working
@@ -348,16 +350,9 @@ GEH_weekly_variable_change = {
 		add_to_variable = { GEH_comb68_activity = 1 }
 		set_variable = { GEH_com68_destructive_temp = GEH_comb68_activity }
 	    multiply_variable = { GEH_com68_destructive_temp = 0.002 }
-		if = {
-		    limit = {
-			    NOT = {
-                    check_variable = { GEH_com68_destructive = 0 }
-			    }			
-	        }
-		    add_to_variable = { GEH_com68_destructive = GEH_com68_destructive_temp }
-			add_to_variable = {
-		        GEH_com68_destructive = modifier@GEH_societies_com68_destructive_weekly
-	        }
+		add_to_variable = { GEH_com68_destructive = GEH_com68_destructive_temp }
+		add_to_variable = {
+		    GEH_com68_destructive = modifier@GEH_societies_com68_destructive_weekly
 	    }
 		clamp_variable = {
 		    var = GEH_comb68_activity
@@ -370,51 +365,26 @@ GEH_weekly_variable_change = {
 		    max = 100
 	    }
 	}
-	if = {
-		limit = {
-			NOT = {
-                check_variable = { GEH_food_service_efficiency = 0 }
-			}			
-		}
+	    add_to_variable = {
+		    GEH_food_service_efficiency_temp = modifier@GEH_societies_food_service_efficiency_weekly
+	    }
 		add_to_variable = { GEH_food_service_efficiency = GEH_food_service_efficiency_temp }
+		
 		add_to_variable = {
-		    GEH_food_service_efficiency = modifier@GEH_societies_food_service_efficiency_weekly
+		    GEH_gourmet_research_destructive_temp = modifier@GEH_societies_gourmet_research_destructive_weekly
 	    }
-	}
-	if = {
-		limit = {
-			NOT = {
-                check_variable = { GEH_gourmet_research_destructive = 0 }
-			}			
-		}
 		add_to_variable = { GEH_gourmet_research_destructive = GEH_gourmet_research_destructive_temp }
+		
 		add_to_variable = {
-		    GEH_gourmet_research_destructive = modifier@GEH_societies_gourmet_research_destructive_weekly
+		    GEH_hot_spring_destructive_temp = modifier@GEH_societies_hot_spring_destructive_weekly
 	    }
-	}
-	if = {
-		limit = {
-			NOT = {
-                check_variable = { GEH_hot_spring_destructive = 0 }
-			}			
-		}
 		add_to_variable = { GEH_hot_spring_destructive = GEH_hot_spring_destructive_temp }
+		
 		add_to_variable = {
-		    GEH_hot_spring_destructive = modifier@GEH_societies_hot_spring_destructive_weekly
+		    GEH_discipline_committee_repression_temp = modifier@GEH_societies_discipline_committee_repression_weekly
 	    }
-	}
-	if = {
-		limit = {
-			NOT = {
-                check_variable = { GEH_discipline_committee_repression = 0 }
-			}			
-		}
 		add_to_variable = { GEH_discipline_committee_repression = GEH_discipline_committee_repression_temp }
-		add_to_variable = {
-		    GEH_discipline_committee_repression = modifier@GEH_societies_discipline_committee_repression_weekly
-	    }
-	}	
-	
+				
 }
 
 GEH_monthly_random_daily_event = {
