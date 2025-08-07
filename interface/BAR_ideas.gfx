@@ -320,7 +320,94 @@ spriteTypes = {
 		name = "GFX_idea_GEH_gehenna_club_activity"
 		texturefile = "gfx/interface/ideas/GEH/GEH_gehenna_club_activity.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_idea_GEH_army_factory_cooperation"
+		texturefile = "gfx/interface/ideas/GEH/GEH_army_factory_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_army_in_chaos"
+		texturefile = "gfx/interface/ideas/GEH/GEH_army_in_chaos.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_army_in_chaos_2"
+		texturefile = "gfx/interface/ideas/GEH/GEH_army_in_chaos_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_army_in_chaos_3"
+		texturefile = "gfx/interface/ideas/GEH/GEH_army_in_chaos_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_control_the_transport_idea"
+		texturefile = "gfx/interface/ideas/GEH/GEH_control_the_transport_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_dip_support_to_trinity"
+		texturefile = "gfx/interface/ideas/GEH/GEH_dip_support_to_trinity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_emergency_methods_for_arius"
+		texturefile = "gfx/interface/ideas/GEH/GEH_emergency_methods_for_arius.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_fight_to_the_end"
+		texturefile = "gfx/interface/ideas/GEH/GEH_fight_to_the_end.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_conference_support_1"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_conference_support_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_conference_support_2"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_conference_support_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_conference_support_3"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_conference_support_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_conference_support_4"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_conference_support_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_pandemonium_leader"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_pandemonium_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_peace_at_hand"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_peace_at_hand.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_prepare_for_conference_1"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_prepare_for_conference_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_prepare_for_conference_2"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_prepare_for_conference_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_ideas_prepare_for_conference_3"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_prepare_for_conference_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_no_step_back_idea"
+		texturefile = "gfx/interface/ideas/GEH/GEH_no_step_back_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_supress_the_choas_idea"
+		texturefile = "gfx/interface/ideas/GEH/GEH_supress_the_choas_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_unity_gehennna"
+		texturefile = "gfx/interface/ideas/GEH/GEH_unity_gehennna.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEH_war_industry_modifier"
+		texturefile = "gfx/interface/ideas/GEH/GEH_war_industry_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TRI_gehenna_dip_support"
+		texturefile = "gfx/interface/ideas/GEH/TRI_gehenna_dip_support.dds"
+	}
 	
 	### MIL
 	spriteType = {
@@ -337,6 +424,8 @@ spriteTypes = {
 		name = "GFX_idea_eden_treaty_step_4_modifier"
 		texturefile = "gfx/interface/ideas/TRI/idea_eden_treaty_step_4_modifier.dds"
 	}
+
+
 
 	#6.18新增
 	#以战止戈
@@ -543,7 +632,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Trusteeship_Area.dds"
 	}
 
-		spriteType = {
+	spriteType = {
 		name = "GFX_idea_BARE_Global_Extrajudicial_Trusteeship_Area"
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Extrajudicial_Trusteeship_Area.dds"
 	}
@@ -553,5 +642,64 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_MIO_Gehenna_Volcano_support_equipment_organization_icon"
 		texturefile = "gfx/interface/military_industrial_organization/mio_icons/Gehenna_Volcano_support_equipment_organization_icon.dds"
+	}
+
+	#制造商
+	spriteType = {
+		name = "GFX_idea_ba_angel_24_enterprise"
+		texturefile = "gfx/interface/ideas/industrial/ba_angel_24_enterprise.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_kaiser_outsourcing_heavy_industry"
+		texturefile = "gfx/interface/ideas/industrial/ba_kaiser_outsourcing_heavy_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_electric_fire_society"
+		texturefile = "gfx/interface/ideas/industrial/ba_electric_fire_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_momo_enterprise"
+		texturefile = "gfx/interface/ideas/industrial/ba_momo_enterprise.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_highland_local_depot"
+		texturefile = "gfx/interface/ideas/industrial/ba_highland_local_depot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_octopus_bank"
+		texturefile = "gfx/interface/ideas/industrial/ba_octopus_bank.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_gehenna_onsen_development"
+		texturefile = "gfx/interface/ideas/industrial/ba_gehenna_onsen_development.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_trinity_tea_chain"
+		texturefile = "gfx/interface/ideas/industrial/ ba_trinity_tea_chain.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ba_millennium_engineering_construction"
+		texturefile = "gfx/interface/ideas/industrial/ba_millennium_engineering_construction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ba_millennium_truth_security_research"
+		texturefile = "gfx/interface/ideas/industrial/ba_millennium_truth_security_research.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_idea_ba_arius_construction_team_213"
+		texturefile = "gfx/interface/ideas/industrial/ba_arius_construction_team_213.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ba_arius_research_group_18"
+		texturefile = "gfx/interface/ideas/industrial/ba_arius_research_group_18.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ba_arius_electrical_team_44"
+		texturefile = "gfx/interface/ideas/industrial/ba_arius_electrical_team_44.dds"
 	}
 }

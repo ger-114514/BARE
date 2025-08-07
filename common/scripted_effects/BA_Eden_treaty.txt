@@ -268,26 +268,35 @@ Eden_treaty_get_winner = {
 	}
 }
 Cathedral_war_ARI_cathedral_fall = {
-	dismantle_faction = yes
-	delete_units = {
-		division_template = "圣徒会的投影"
-		disband = no
-	}
 	if = {
-		limit = { 
-			SCH = {
-				is_in_faction = no
+		limit = {
+			not = {
+				has_global_flag = ARI_Cathedral_war_ARI_cathedral_fall
 			}
 		}
-		TRI = {
-			create_faction = TRI_AND_GEH_FACTION_NAME
-			add_to_faction = GEH
+		set_global_flag = ARI_Cathedral_war_ARI_cathedral_fall
+		dismantle_faction = yes
+		delete_units = {
+			division_template = "圣徒会的投影"
+			disband = no
 		}
-	}
+		if = {
+			limit = { 
+				SCH = {
+					is_in_faction = no
+				}
+			}
+			TRI = {
+				create_faction = TRI_AND_GEH_FACTION_NAME
+				add_to_faction = GEH
+			}
+		}
 	
 
 
-	Eden_treaty_formally_signed = yes
+		Eden_treaty_formally_signed = yes
+	}
+
 }
 Cathedral_war_ARI_defeated = {
 	set_global_flag = Arius_defeated

@@ -563,6 +563,25 @@ TRI_add_main_faction_modifier = {
 			}
 		}
 	}
+	#指定议院社团
+	TRI_parliament_radicalism_change_parliament = {
+		custom_effect_tooltip = {
+			localization_key = TRI_parliament_radicalism_change_tt
+			TARGET = "[?target_parliament.GetTokenLocalizedKey]"
+		}
+		hidden_effect = {
+			for_each_loop = {
+				array = TRI_parliament_association
+				value = association
+				if = {
+					limit = { 
+						check_variable = { status@var:association = var:target_parliament } 
+					}
+					TRI_parliament_radicalism_change = yes
+				}
+			}
+		}
+	}
 	#指定派系社团
 	TRI_parliament_radicalism_change_faction = {
 		custom_effect_tooltip = {
@@ -622,3 +641,25 @@ TRI_add_main_faction_modifier = {
 		multiply_variable = { TRI_player_focus_position_x = 200 }
 		TRI_init_senate_house = yes
 	}
+#随机触发负面事件
+TRI_random_parliament_negative_event = {
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { TRI_negative_event_rejection_count < 3 } }
+			random_list = {
+				1 = {
+					country_event = TRI_political_focus.1
+				}
+				1 = {
+					country_event = TRI_political_focus.2
+				}
+				1 = {
+					country_event = TRI_political_focus.3
+				}
+			}
+		}
+		else = {
+			country_event = TRI_political_focus.10
+		}
+	}
+}

@@ -47,19 +47,38 @@ cat_eq_all_fire_support = { #Includes Super Heavy Tank Chassis
 	}
 }
 cat_eq_all_bm= { #Includes Super Heavy Tank Chassis
+
 	equipment_type = {
-		light_bm_equipment
-		light_bm_artillery_equipment
-		light_bm_aa_equipment
-		light_bm_destroyer_equipment
-		medium_bm_equipment
-		medium_bm_artillery_equipment
-		medium_bm_aa_equipment
-		medium_bm_destroyer_equipment
-		heavy_bm_equipment
-		heavy_bm_artillery_equipment
-		heavy_bm_aa_equipment
-		heavy_bm_destroyer_equipment
+		light_bm_chassis
+		light_bm_artillery_chassis
+		light_bm_aa_chassis
+		light_bm_destroyer_chassis
+		medium_bm_chassis
+		medium_bm_artillery_chassis
+		medium_bm_aa_chassis
+		medium_bm_destroyer_chassis
+		heavy_bm_chassis
+		heavy_bm_artillery_chassis
+		heavy_bm_aa_chassis
+		heavy_bm_destroyer_chassis
+	}
+}
+
+
+cat_eq_all_tank_BA= { #Includes Super Heavy Tank Chassis
+	equipment_type = {
+		light_tank_chassis
+		light_tank_artillery_chassis
+		light_tank_aa_chassis
+		light_tank_destroyer_chassis
+		medium_tank_chassis
+		medium_tank_artillery_chassis
+		medium_tank_aa_chassis
+		medium_tank_destroyer_chassis
+		heavy_tank_chassis
+		heavy_tank_artillery_chassis
+		heavy_tank_aa_chassis
+		heavy_tank_destroyer_chassis
 	}
 }
 mio_cat_eq_all_tank_artillery_BA = { #Includes Super Heavy Tank Chassis

@@ -1,8 +1,0 @@
-on_actions = {
-	on_capitulation_immediate = {	
-		##发射外交警告##
-	    effect = {
-		    BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
-	    }
-	}
-}

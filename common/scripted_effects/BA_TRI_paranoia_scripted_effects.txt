@@ -26,35 +26,38 @@ BA_TRI_initialize_paranoia_system = {
 }
 #自定义偏执度变化量，需要先设置临时变量
 TRI_change_paranoia = {
-	add_to_variable = { TRI_nagisa_paranoia_total = TRI_paranoia_change }
-	custom_effect_tooltip = TRI_paranoia_change_tt
-	#偏执度溢出时改变等级
-	while_loop_effect = {
-		limit = {
-			check_variable = { TRI_nagisa_paranoia_total > 99 }
-			check_variable = { TRI_nagisa_paranoia_rank < 5 }
+	if = {
+		limit = { has_country_flag = TRI_paranoia_system_active }
+		add_to_variable = { TRI_nagisa_paranoia_total = TRI_paranoia_change }
+		custom_effect_tooltip = TRI_paranoia_change_tt
+		#偏执度溢出时改变等级
+		while_loop_effect = {
+			limit = {
+				check_variable = { TRI_nagisa_paranoia_total > 99 }
+				check_variable = { TRI_nagisa_paranoia_rank < 5 }
+			}
+			subtract_from_variable = { TRI_nagisa_paranoia_total = 100 }
+			TRI_paranoia_rank_up = yes
 		}
-		subtract_from_variable = { TRI_nagisa_paranoia_total = 100 }
-		TRI_paranoia_rank_up = yes
-	}
-	while_loop_effect = {
-		limit = {
-			check_variable = { TRI_nagisa_paranoia_total < 0 }
-			check_variable = { TRI_nagisa_paranoia_rank > 0 }
+		while_loop_effect = {
+			limit = {
+				check_variable = { TRI_nagisa_paranoia_total < 0 }
+				check_variable = { TRI_nagisa_paranoia_rank > 0 }
+			}
+			TRI_paranoia_rank_down = yes
 		}
-		TRI_paranoia_rank_down = yes
+		clamp_variable = {
+			var = TRI_nagisa_paranoia_total
+			min = 0
+			max = 100
+		}
+		clamp_variable = {
+			var = TRI_nagisa_paranoia_rank
+			min = 0
+			max = 5
+		}
+		BA_TRI_generate_paranoia_frame = yes
 	}
-	clamp_variable = {
-		var = TRI_nagisa_paranoia_total
-		min = 0
-		max = 100
-	}
-	clamp_variable = {
-		var = TRI_nagisa_paranoia_rank
-		min = 0
-		max = 5
-	}
-	BA_TRI_generate_paranoia_frame = yes
 }
 TRI_paranoia_rank_up = {
 	custom_effect_tooltip = TRI_paranoia_rank_up_tt
@@ -169,7 +172,6 @@ TRI_purge_administration = {
 	}
 	set_country_flag = { flag = TRI_paranoia_random_purge_cooldown days = 14 }
 	set_variable = { TRI_purge_chance_time_accumulation = 0 }
-	set_variable = { TRI_political_focus_duration = 0 }
 }
 #清洗陆军
 TRI_purge_army = {
@@ -235,7 +237,6 @@ TRI_purge_army = {
 	}
 	set_country_flag = { flag = TRI_paranoia_random_purge_cooldown days = 14 }
 	set_variable = { TRI_purge_chance_time_accumulation = 0 }
-	set_variable = { TRI_political_focus_duration = 0 }
 }
 #清洗空军
 TRI_purge_airforce = {
@@ -257,7 +258,6 @@ TRI_purge_airforce = {
 	}
 	set_country_flag = { flag = TRI_paranoia_random_purge_cooldown days = 14 }
 	set_variable = { TRI_purge_chance_time_accumulation = 0 }
-	set_variable = { TRI_political_focus_duration = 0 }
 }
 TRI_purge_character = {
 	var:TRI_purge_event_target = {

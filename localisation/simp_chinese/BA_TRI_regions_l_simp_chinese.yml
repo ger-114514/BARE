@@ -52,6 +52,11 @@
 
  TRI_invest_in_region_factory: "在§Y[?TRI_invest_region.GetTokenLocalizedKey]§!大区的投资"
  TRI_invest_in_region_factory_tt: "在§Y[?TRI_invest_region.GetTokenLocalizedKey]§!大区的任意一个地区建造了一次§Y[?TRI_building_goal_type.GetTokenLocalizedKey]§!"
+ TRI_invest_in_region_factory_1: "社团要求在§Y[?TRI_negative_event_invest_target.GetName]§!投资"
+ TRI_invest_in_region_factory_1_tt: "在§Y[?TRI_negative_event_invest_target.GetName]§!建造了一次§Y[?TRI_negative_event_invest_building.GetTokenLocalizedKey]§!"
+ TRI_invest_in_region_factory_2: "社团要求大规模投资"
+ TRI_invest_in_region_factory_2_tt_1: "在§Y[?TRI_negative_event_invest_target_1.GetName]§!建造了一次§Y[?var:TRI_negative_event_invest_target_1:TRI_negative_event_invest_building.GetTokenLocalizedKey]§!"
+ TRI_invest_in_region_factory_2_tt_2: "在§Y[?TRI_negative_event_invest_target_2.GetName]§!建造了一次§Y[?var:TRI_negative_event_invest_target_2:TRI_negative_event_invest_building.GetTokenLocalizedKey]§!"
 
  TRI_region.101.t: "社团希望投资建设"
  TRI_region.101.desc: "正义实现委员会  [?global.TRI_invest_regions^0.GetTokenLocalizedKey]  [?global.TRI_region_investment_building^0.GetTokenLocalizedKey]\n修女会  [?global.TRI_invest_regions^1.GetTokenLocalizedKey]  [?global.TRI_region_investment_building^1.GetTokenLocalizedKey]\n救护骑士团  [?global.TRI_invest_regions^2.GetTokenLocalizedKey]  [?global.TRI_region_investment_building^2.GetTokenLocalizedKey]"

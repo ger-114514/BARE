@@ -779,6 +779,155 @@ TRI_bill_voting_decisions_categories = {
 			base = 100
 		}
 	}
+	TRI_infra_money = { #调拨基建资金
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			production_speed_buildings_factor = 0.3
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { loyalty_change = -0.06 }
+			TRI_parliament_loyalty_change_parliament = yes
+			set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { loyalty_change = -0.08 }
+			TRI_parliament_loyalty_change_parliament = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
+	TRI_mobilize_students = { #征召预备学员
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			weekly_manpower = 600
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { loyalty_change = -0.02 }
+			TRI_parliament_loyalty_change_parliament = yes
+			set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { loyalty_change = -0.1 }
+			TRI_parliament_loyalty_change_parliament = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
+	TRI_army_exercise = { #组织陆军演习
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			army_experience = 0.45
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { loyalty_change = -0.08 }
+			TRI_parliament_all_loyalty_change = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
+	TRI_air_exercise = { #组织空军演习
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			air_experience = 0.45
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { loyalty_change = -0.08 }
+			TRI_parliament_all_loyalty_change = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
+	TRI_study_trip = { #开展研学旅行
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			research_speed_factor = 0.15
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { loyalty_change = -0.1 }
+			TRI_parliament_loyalty_change_parliament = yes
+			set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { loyalty_change = -0.04 }
+			TRI_parliament_loyalty_change_parliament = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
+	TRI_production_budget = { #提高生产预算
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.25
+			line_change_production_efficiency_factor = 0.15
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { target_parliament = token:BA_TRI_senate_seat }
+			set_temp_variable = { loyalty_change = -0.04 }
+			TRI_parliament_loyalty_change_parliament = yes
+			set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
+			set_temp_variable = { loyalty_change = -0.1 }
+			TRI_parliament_loyalty_change_parliament = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
+	TRI_traditional_culture = { #宣讲传统文化
+		visible = {
+			has_country_flag = TRI_unity_system_visible
+			NOT = {
+				has_country_flag = TRI_unity_unchangeable
+			}
+		}
+		available = {
+			NOT = { has_country_flag = TRI_temp_bill_activated }
+		}
+		days_remove = 180
+		days_re_enable = 60
+		modifier = {
+			TRI_unity_weekly_modifier = 1
+		}
+		complete_effect = {
+			set_country_flag = TRI_temp_bill_activated
+			set_temp_variable = { loyalty_change = -0.1 }
+			TRI_parliament_all_loyalty_change = yes
+		}
+		remove_effect = {
+			clr_country_flag = TRI_temp_bill_activated
+		}
+	}
 }
 TRI_hanako_decisions = {
 	#加快修女会世俗化进程
