@@ -2,7 +2,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "ba_manpower_number_container"
-		position = { x=-4 y=-1 }
+		position = { x=0 y=0 }
 		
 		iconType ={
 			name ="ba_manpower_value_bg"
@@ -29,7 +29,7 @@ guiTypes = {
 
 		iconType = {
 			name = "ba_manpower_number_icon"
-			position = { x= 321 y = 3 }
+			position = { x= 324 y = 6 }
 			spriteType = "GFX_manpower_icon"
 			pdx_tooltip = "BARE_Combat_Readiness_Tooltip_desc"
 			#pdx_tooltip_delayed = "BARE_Combat_Readiness_Tooltip_desc"

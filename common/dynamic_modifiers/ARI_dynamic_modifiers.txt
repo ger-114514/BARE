@@ -174,13 +174,13 @@ ARI_catastrophic_traveller_operation = {
 	icon = "GFX_idea_ARI_catastrophic_traveller_operation"
 	enable = { always = yes }
 
-	army_attack_factor = ARI_catastrophic_traveller_operation_army_attack_factor
-	army_defence_factor = ARI_catastrophic_traveller_operation_army_defence_factor
-	army_org_factor = ARI_catastrophic_traveller_operation_army_org_factor
-	industrial_capacity_factory = ARI_catastrophic_traveller_operation_industrial_capacity_factory
-	war_support_factor = ARI_catastrophic_traveller_operation_war_support_factor
-	stability_factor =  ARI_catastrophic_traveller_operation_stability
-	consumer_goods_factor = ARI_catastrophic_traveller_operation_goods_factor
+	army_attack_factor = ARI_lesson_traveller_operation_army_attack_factor
+	army_defence_factor = ARI_lesson_traveller_operation_army_defence_factor
+	army_org_factor = ARI_lesson_traveller_operation_army_org_factor
+	industrial_capacity_factory = ARI_lesson_traveller_operation_industrial_capacity_factory
+	war_support_factor = ARI_lesson_traveller_operation_war_support_factor
+	stability_factor =  ARI_lesson_traveller_operation_stability
+	consumer_goods_factor = ARI_lesson_traveller_operation_goods_factor
 }
 
 #“旅者”行动的教训

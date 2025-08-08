@@ -69,32 +69,32 @@ on_actions = {
 				# 	add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				# }
 				TRI_tsurugi  = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_hasumi = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_ichika = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_mashiro = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 
 				TRI_sakurako = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_hinata = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 				TRI_mari = {
-				 	add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
+					add_to_array = { global.ARI_ShouHaiZheMingDan_ER = THIS }
 					add_to_array = { global.ARI_ShouHaiZheMingDan_SAN =  THIS }
 				}
 			}
@@ -116,7 +116,7 @@ on_actions = {
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					original_tag = GEH
 				}
 				SCH = {
@@ -128,7 +128,7 @@ on_actions = {
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					original_tag = ARI
 					ARI = {
 						ARI_NO_GOV_MODE = {
@@ -163,7 +163,7 @@ on_actions = {
 								}
 							}
 						}
-						
+
 
 
 						create_unit = {
@@ -238,7 +238,7 @@ on_actions = {
 					}
 				}
 			}
-			
+
 		}
 	}
 }

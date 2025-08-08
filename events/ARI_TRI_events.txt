@@ -302,6 +302,7 @@ country_event = { #旅者”行动总结-部分成功
                 }
                 complete_national_focus = ARI_traveller_operation_lost
             }
+            set_global_flag  =ARI_traveller_operation_Has_Completed
             mark_focus_tree_layout_dirty = yes
             set_variable = {
                 ARI_lesson_traveller_operation_war_support_factor = -0.2
@@ -344,6 +345,7 @@ country_event = { #旅者”行动总结-部分成功
             add_dynamic_modifier = {
                 modifier = ARI_lesson_traveller_operation
             }
+            
         }
         hidden_effect = {
 	        BARE_SuperEvent_2_effect_6 = yes
@@ -973,8 +975,9 @@ country_event = { #“旅者”行动总结-基本失败
                 ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
             }
             add_dynamic_modifier = {
-                modifier = ARI_lesson_traveller_operation
+                modifier = ARI_catastrophic_traveller_operation
             }
+            set_global_flag  =ARI_traveller_operation_Has_Completed
         }
     }
 
@@ -1001,7 +1004,7 @@ country_event = { #“旅者”行动总结-基本失败
             complete_national_focus = ARI_traveller_operation_lost
         }
 
-
+        
         effect_tooltip = {
             set_variable = {
                 ARI_lesson_traveller_operation_war_support_factor = -0.2
