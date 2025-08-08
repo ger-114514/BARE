@@ -1,0 +1,52 @@
+bitmapfonts = {
+
+	##我暂时不想改UI，所以不要动这个字体
+	bitmapfont = {
+		name = "loadscreen_header"
+#		path = "gfx/fonts/hoi_30header"
+		fontfiles = { 
+			###
+			"gfx/fonts/chinese/hoi_30header_1of4"
+			"gfx/fonts/chinese/hoi_30header_2of4"
+			"gfx/fonts/chinese/hoi_30header_3of4"
+			"gfx/fonts/chinese/hoi_30header_4of4"
+			#"gfx/fonts/Arial_26_0"
+			#"gfx/fonts/Arial_26_1"
+			#"gfx/fonts/Arial_26_2"			
+#			"gfx/fonts/hoi_20bs"
+#			"gfx/fonts/hoi_20bs_cryllic"
+		}	
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+
+	bitmapfont = {
+		name = "loadscreen_tip"
+#		path = "gfx/fonts/hoi_24header"
+		fontfiles = { 		
+			"gfx/fonts/Arial_16_0"
+			"gfx/fonts/Arial_16_1"
+#			"gfx/fonts/hoi_20bs"
+#			"gfx/fonts/hoi_20bs_cryllic"
+		}		
+		cursor_offset = { 0 4 }
+		color = 0xffffffff
+
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	
+}

@@ -1,0 +1,18 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BAREXP_politic_view_window"
+		position = { x= 370 y = 171 }
+		size = { width = 255 height = 60 }
+		clipping = no
+
+		instantTextboxType = {
+			name = "BAREXP_ruling_party"
+			position = { x = 9 y = 8 }
+			font = "hoi_18mbs"
+			text = "BAREXP_ruling_party"
+			maxWidth = 155
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+	}
+}
