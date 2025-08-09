@@ -128,7 +128,7 @@ technologies = {
 
 	bd_language= {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		political_power_factor = 0.075
 		max_planning_factor = 0.075
 		BARE_BD_Research_limit = -1
@@ -211,7 +211,7 @@ technologies = {
 	bd_math = {
 
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		consumer_goods_factor = -0.1
 		army_artillery_attack_factor = 0.1
 		BARE_BD_Research_limit = -1
@@ -294,7 +294,7 @@ technologies = {
 
 
 	bd_sports = {
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		army_strength_factor = 0.05
 		army_morale_factor = 0.1
 
@@ -381,7 +381,7 @@ technologies = {
 	
 	bd_art = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		stability_factor = 0.05
 		opinion_gain_monthly_factor = 0.2
 
@@ -469,7 +469,7 @@ technologies = {
 	bd_physics= {
 
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		production_factory_max_efficiency_factor = 0.05
 		production_speed_buildings_factor = 0.1
 
@@ -554,7 +554,7 @@ technologies = {
 
 	bd_chemistry = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		production_factory_efficiency_gain_factor = 0.1
 		industrial_capacity_factory = 0.1
 
@@ -638,7 +638,7 @@ technologies = {
 
 	bd_ideology = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		stability_weekly_factor = 0.001
 
 		BARE_BD_Research_limit = -1
@@ -720,7 +720,7 @@ technologies = {
 	
 	bd_music = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		political_power_gain = 0.15
 		opinion_gain_monthly_factor = 0.1
 
@@ -804,7 +804,7 @@ technologies = {
 
 	bd_politics	= {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		political_power_factor = 0.1
 		political_power_cost = -0.1
 
@@ -890,7 +890,7 @@ technologies = {
 
 	bd_history = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		research_speed_factor = 0.05
 		planning_speed = 0.05
 
@@ -976,7 +976,7 @@ technologies = {
 	bd_homemaking = {
 
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		production_factory_start_efficiency_factor = 0.05
 		industrial_capacity_factory = 0.05
 
@@ -1061,7 +1061,7 @@ technologies = {
 
 	bd_biology = {
 	
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		research_speed_factor = 0.03
 		experience_loss_factor = -0.05
 		can_use_combat_readiness_percentage = 0.05
@@ -1147,7 +1147,7 @@ technologies = {
 	
 	bd_computer = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		research_speed_factor = 0.05
 		industrial_capacity_factory = 0.075
 
@@ -1233,7 +1233,7 @@ technologies = {
 
 	bd_law = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		stability_factor = 0.05
 		political_power_cost = -0.15
 
@@ -1318,7 +1318,7 @@ technologies = {
 	bd_management = {
 
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		political_power_gain = 0.1
 		free_cost_combat_readiness_percentage = 0.1
 		command_power_gain_mult = 0.1
@@ -1404,7 +1404,7 @@ technologies = {
 
 	bd_medical = {
 
-		custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
+		#custom_modifier_tooltip = BARE_BD_Research_limit_Tooltip_1
 		experience_loss_factor = -0.15
 		combat_readiness_recovery_percentage = 0.1
 
