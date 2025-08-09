@@ -3,4 +3,9 @@ spriteTypes = {
 		name = "GFX_barexp_pol_view_bg"
 		textureFile = "gfx/interface/politicview/barexp_pol_view_bg.dds"
 	}
+
+	spriteType = {
+		name = "GFX_barexp_ideology_name_bg"
+		textureFile = "gfx/interface/politicview/barexp_ideology_name_bg.dds"
+	}
 }

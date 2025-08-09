@@ -208,6 +208,13 @@ country_event = { #初次袭击简报
 	timeout_days = 2
 	immediate = {
 		hidden_effect = {
+			if = {
+				limit = {
+					tag = ARI
+				}
+				add_threat = 20
+			}
+
 			declare_war_on = { #向指定国家宣战
 				target = GEH #被宣战国家TAG
 				type = annex_everything #战争目标类型 - 颠覆政权

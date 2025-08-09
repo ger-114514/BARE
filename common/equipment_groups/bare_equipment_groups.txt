@@ -110,3 +110,45 @@ mio_cat_eq_all_support_equipment = { #Includes Super Heavy Tank Chassis
 		support_equipment
 	}
 }
+
+mio_cat_eq_support_artillery_equipment = { #ALL ART Weapons
+	equipment_type = {
+		light_fire_support_equipment
+		apc_artillery_equipment
+		ifv_artillery_equipment
+		light_tank_artillery_chassis
+		medium_tank_artillery_chassis
+		heavy_tank_artillery_chassis
+		light_bm_artillery_chassis
+		medium_bm_artillery_chassis
+		heavy_bm_artillery_chassis
+	}
+}
+
+mio_cat_eq_support_at_equipment = { #ALL AT Weapons
+	equipment_type = {
+		heavy_fire_support_equipment
+		apc_at_equipment
+		ifv_at_equipment
+		light_tank_destroyer_chassis
+		medium_tank_destroyer_chassis
+		heavy_tank_destroyer_chassis
+		light_bm_destroyer_chassis
+		medium_bm_destroyer_chassis
+		heavy_bm_destroyer_chassis
+	}
+}
+
+mio_cat_eq_support_aa_equipment = { #ALL AA Weapons
+	equipment_type = {
+		infantry_anti_air_equipment
+		apc_aa_equipment
+		ifv_aa_equipment
+		light_tank_aa_chassis
+		medium_tank_aa_chassis
+		heavy_tank_aa_chassis
+		light_bm_aa_chassis
+		medium_bm_aa_chassis
+		heavy_bm_aa_chassis
+	}
+}

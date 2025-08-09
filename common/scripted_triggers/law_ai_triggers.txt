@@ -1,0 +1,60 @@
+is_tralaws_closed_economy_ideology_group_trigger = {
+	custom_override_tooltip = {
+		tooltip = is_tralaws_closed_economy_ideology_group_trigger_tt
+		OR = {
+			has_country_leader_ideology = MYC_default_type
+		    has_country_leader_ideology = MYC_ARI_Beatrice_type
+		}
+	}
+}
+
+is_tralaws_normal_trade_ideology_group_trigger = {
+	custom_override_tooltip = {
+		tooltip = is_tralaws_normal_trade_ideology_group_trigger_tt
+		OR = {
+			##暂时没有
+		}
+	}
+}
+
+is_tralaws_massive_normal_trade_ideology_group_trigger = {
+	custom_override_tooltip = {
+		tooltip = is_tralaws_massive_normal_trade_ideology_group_trigger_tt
+		OR = {
+			has_country_leader_ideology = no_ideology_type
+		}
+	}
+}
+
+is_tralaws_massive_trade_ideology_group_trigger = {
+	custom_override_tooltip = {
+		tooltip = is_tralaws_massive_trade_ideology_group_trigger_tt
+		OR = {
+			has_country_leader_ideology = PGM_default_type
+			has_country_leader_ideology = PGM_TRI_Nagisa_type
+			has_country_leader_ideology = ELM_default_type
+			has_country_leader_ideology = ELM_TRI_Mika_type
+		}
+	}
+}
+
+is_tralaws_free_trade_ideology_group_trigger = {
+	custom_override_tooltip = {
+		tooltip = is_tralaws_free_trade_ideology_group_trigger_tt
+		OR = {
+			has_country_leader_ideology = LBM_default_type
+			has_country_leader_ideology = LBM_TRI_Seia_type
+			has_country_leader_ideology = LBM_GEH_After_Terrible
+		}
+	}
+}
+
+
+bare_has_large_ally_not_pick_closed_economy_trigger = {
+	any_of_scopes = {
+		array = faction_members
+
+		NOT = { tag = PREV }
+		num_of_military_factories > 30
+	}
+}

@@ -112,10 +112,12 @@ recruit_character = ARI_imai_asuka
 # recruit_character = ARI_code_21
 
 set_politics = {
-	ruling_party = no_ideology
+	ruling_party = Mysticism_ideology
 }
 set_popularities = {
-	no_ideology = 100
+	no_ideology = 30
+	Mysticism_ideology = 40
+	Authoritarian_ideology = 30
 }
 #阿里乌斯武装学生部队
 	add_dynamic_modifier = { modifier = ARI_armed_students_modifier }

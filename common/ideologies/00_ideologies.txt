@@ -1,13 +1,190 @@
 ideologies = {
 	
+	##默认##
 	no_ideology = {
 		types = {
-		
+			##政治冷感##
 			no_ideology_type  = {
-				color = { 192 192 192 }
+				color = { 176 196 222 }
 			}
 		}
 		color = { 192 192 192 }
+
+		##我无视世界，世界也无视我
+		war_impact_on_world_tension = 0
+	    faction_impact_on_world_tension = 0
+
+		##她们不在乎基沃托斯的局势##
+		rules = {
+			can_puppet = no
+			can_create_factions = no
+			can_force_government = no
+			can_create_collaboration_government = no
+			can_lower_tension = no
+			can_send_volunteers = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+
+		modifiers = {
+			##她们不在乎冲突和潜在的威胁
+			civilian_intel_to_others = 50.0
+			army_intel_to_others = 20.0
+			airforce_intel_to_others = 20.0
+		}
+		faction_modifiers = {
+
+		}
+
+		ai_neutral = yes
+	}
+
+	##进步哲学
+	Progressivism_ideology = {
+		types = {
+			##进步哲学 - 默认
+			PGM_default_type  = {
+				war_impact_on_world_tension = 1
+				rules = {
+
+				}
+			}
+
+			##进步哲学 - 大渚教
+			PGM_TRI_Nagisa_type  = {
+				can_be_randomly_selected = no
+			}
+		}
+		color = { 65 105 225 }
+
+		can_host_government_in_exile = yes
+
+		##进步主义的行动不被视为主要威胁……
+		war_impact_on_world_tension = 0.15
+		faction_impact_on_world_tension = 0.1
+		
+		rules = {
+			##关闭这些功能，确保游戏不会出现故障##
+			can_puppet = no
+			can_create_factions = no
+			can_create_collaboration_government = no
+			can_join_factions = no
+
+			##进步主义者希望影响世界局势
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_lower_tension = no
+			##保独功能要日后重新定义
+			can_guarantee_other_ideologies = yes
+			
+		}
+
+		modifiers = {
+			##情报##
+			##进步主义者希望展示自己的建设成果
+			civilian_intel_to_others = 30.0
+			trade_opinion_factor = 0.1
+			##军事情报标准泄露值
+			army_intel_to_others = 15.0
+			airforce_intel_to_others = 10.0
+
+			##进步主义者希望影响世界局势
+			embargo_cost_factor = -0.5
+			send_volunteer_factor = 0.3
+			air_volunteer_cap = 100
+		}
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50
+		}
+
+		ai_democratic = yes
+	}
+
+	##专制主义
+	Authoritarian_ideology = {
+		types = {
+
+			
+			ATN_default_type  = {
+               
+			}
+
+			ATN_TRI_Hawk_type  = {
+                can_be_randomly_selected = no
+			}
+
+		}
+		color = { 105 105 105 }
+
+		##坏人（
+		war_impact_on_world_tension = 5.0
+		faction_impact_on_world_tension = 5.0
+		
+		rules = {
+			##关闭这些功能，确保游戏不会出现故障##
+			can_puppet = no
+			can_create_factions = no
+			can_create_collaboration_government = no
+			can_join_factions = no
+
+			##专制主义者不在乎自己被人指责
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_lower_tension = no
+
+			##专制主义者随心所欲
+			send_volunteer_factor = 0.1
+			air_volunteer_cap = 100
+
+			##保独功能要日后重新定义
+			can_guarantee_other_ideologies = no
+		}
+
+		modifiers = {
+			
+		}
+
+		modifiers = {
+			##情报##
+			##神秘主义在办大事之前不希望泄漏情报
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 5.0
+			airforce_intel_to_others = 5.0
+
+			###神秘主义者对无关的世界不关心##
+			lend_lease_tension = 1
+			request_lease_tension = 1
+			embargo_threshold_factor = -1
+		}
+
+		faction_modifiers = {
+		}
+
+		ai_fascist = yes
+	}
+    
+
+	##平等主义
+	##暂时用不上##
+	Egalitarianism_ideology = {
+		types = {
+
+			##默认
+			ELM_default_type = {
+				
+			}
+
+			##圣三一-未花
+			ELM_TRI_Mika_type = {
+				
+			}
+
+			##阿里乌斯解放阵线 - 领袖派
+			ELM_ALF_Leader_type  = {
+                can_be_randomly_selected = no
+			}
+		}
+		color = { 220 20 60 }
 
 		war_impact_on_world_tension = 0
 		faction_impact_on_world_tension = 0
@@ -19,13 +196,136 @@ ideologies = {
 		}
 
 		modifiers = {
-			civilian_intel_to_others = 20.0
-			army_intel_to_others = 20.0
-			airforce_intel_to_others = 20.0
+			
 		}
 		faction_modifiers = {
 		}
 
-		ai_neutral = yes
+		##什么都不写就是康米AI
+		#ai_communism = yes
+	}
+
+	##神秘哲学##
+	##暂时也用不上##
+	Mysticism_ideology = {
+		types = {
+
+			##神秘主义 - 默认
+			MYC_default_type  = {
+
+			}
+
+			MYC_ARI_Beatrice_type = {
+                can_be_randomly_selected = no
+			}
+
+		}
+		color = { 128 0 128 }
+
+		##不像好人
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			##关闭这些功能，确保游戏不会出现故障##
+			can_puppet = no
+			can_create_factions = no
+			can_create_collaboration_government = no
+			can_join_factions = no
+
+			##神秘主义者只想着吃吃吃和办大事
+			can_force_government = yes
+			can_send_volunteers = no
+			can_lower_tension = no
+
+			##保独功能要日后重新定义
+			can_guarantee_other_ideologies = no
+		}
+
+		modifiers = {
+			
+		}
+
+		modifiers = {
+			##情报##
+			##神秘主义在办大事之前不希望泄漏情报
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 5.0
+			airforce_intel_to_others = 5.0
+
+			###神秘主义者对无关的世界不关心##
+			lend_lease_tension = 1
+			request_lease_tension = 1
+			embargo_threshold_factor = -1
+		}
+
+		faction_modifiers = {
+		}
+
+		ai_fascist = yes
+	}
+
+	##开明哲学##
+	Liberalism_ideology = {
+		types = {
+
+			##默认
+			LBM_default_type = {
+				
+			}
+
+			##圣娅-乐园基石
+			LBM_TRI_Seia_type  = {
+                can_be_randomly_selected = no
+			}
+
+			##后雷帝共识
+			LBM_GEH_After_Terrible = {
+				can_be_randomly_selected = no
+			}
+		}
+		color = { 255 215 0 }
+
+		war_impact_on_world_tension = 0.5
+		faction_impact_on_world_tension = 0.5
+		
+		rules = {
+			##关闭这些功能，确保游戏不会出现故障##
+			can_puppet = no
+			can_create_factions = no
+			can_create_collaboration_government = no
+			can_join_factions = no
+
+			##自由哲学不会破坏世界局势
+			can_force_government = no
+			can_send_volunteers = yes
+			can_lower_tension = yes
+			##保独功能要日后重新定义
+			can_guarantee_other_ideologies = yes
+			
+		}
+
+		modifiers = {
+			##情报##
+			##进步主义者希望展示自己的建设成果
+			civilian_intel_to_others = 30.0
+			trade_opinion_factor = 0.1
+			##军事情报标准泄露值
+			army_intel_to_others = 15.0
+			airforce_intel_to_others = 10.0
+
+			##自由哲学影响世界局势有前提
+			lend_lease_tension = 0.3
+			send_volunteers_tension = 0.3
+			embargo_cost_factor = -0.5
+		}
+
+		modifiers = {
+			
+		}
+		faction_modifiers = {
+		}
+
+		ai_democratic = yes
 	}
 }

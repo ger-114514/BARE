@@ -1,0 +1,71 @@
+##本地化内容位于parties_l_simp_chinese中
+defined_text = {
+	name = get_current_sub_ideology
+	##政治冷感组
+	text = {
+		trigger = {				
+            has_country_leader_ideology = no_ideology_type
+		}
+		localization_key = no_ideology_type
+	}
+
+	##进步哲学组
+	text = {
+		trigger = {				
+            has_country_leader_ideology = PGM_TRI_Nagisa_type
+		}
+		localization_key = PGM_TRI_Nagisa_type
+	}
+
+	##平等哲学组
+	text = {
+		trigger = {				
+            has_country_leader_ideology = ELM_default_type
+		}
+		localization_key = ELM_default_type
+	}
+
+	##专制哲学组
+	text = {
+		trigger = {				
+            has_country_leader_ideology = ATN_default_type
+		}
+		localization_key = ATN_default_type
+	}
+
+
+	text = {
+		trigger = {				
+            has_country_leader_ideology = ATN_TRI_Hawk_type
+		}
+		localization_key = ATN_TRI_Hawk_type
+	}
+
+	##神秘哲学组##
+	text = {
+		trigger = {				
+            has_country_leader_ideology = MYC_default_type
+		}
+		localization_key = MYC_default_type
+	}
+
+	text = {
+		trigger = {				
+            has_country_leader_ideology = MYC_ARI_Beatrice_type
+		}
+		localization_key = MYC_ARI_Beatrice_type
+	}
+
+	##开明哲学组
+	text = {
+		trigger = {				
+            has_country_leader_ideology = LBM_GEH_After_Terrible
+		}
+		localization_key = LBM_GEH_After_Terrible
+	}
+
+	text = {
+		localization_key = get_current_sub_ideology_default
+	}
+	
+}

@@ -414,7 +414,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "spirit_title"
-					position = { x = 27 y = -9 }
+					position = { x = 27 y = -4 }
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
 					text = "FE_COUNTRY_SPIRIT"
@@ -424,7 +424,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "national_spirit_container"
-					position = { x = -390 y = -8 }
+					position = { x = -420 y = 0 }
 					size = { width = 375 height = 74 }
 					verticalScrollbar = "right_vertical_slider"
 					orientation = upper_right
@@ -436,7 +436,7 @@ guiTypes = {
 
 					gridboxtype = {
 						name = "national_spirit_ideas_grid"
-						position = { x = -5 y = 2 }
+						position = { x = 10 y = 2 }
 						size = { width = 360 height = 68 }
 						slotsize = { width = 60 height = 68 }
 						max_slots = { x = 6 y = 1 }

@@ -128,6 +128,17 @@ news_event = {
 # BARE_SuperEvent_2_effect_8
 	major = yes
 
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CAP
+				}
+				add_threat = 10
+			}
+		}
+	}
+
 	#令人感叹
 	option = {
 		name = BARE_World_News.1.a
@@ -265,6 +276,24 @@ news_event = {
 	desc = BARE_World_News.3.desc
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = GEH
+				}
+				add_threat = 5
+			}
+	
+			if = {
+				limit = {
+					tag = ABY
+				}
+				add_threat = 5
+			}
+		}
+	}
+	
 
 	major = yes
 
@@ -330,6 +359,16 @@ news_event = {
 	desc = BARE_World_News.4.desc
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CAP
+				}
+				add_threat = 10
+			}
+		}
+	}
 
 	major = yes
 
@@ -547,6 +586,17 @@ news_event = {
 	is_triggered_only = yes
 	
 
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CEN
+				}
+				add_threat = 3
+			}
+		}
+	}
+
 	major = yes
 
 	#瓦尔基里怎么废材的吗？
@@ -651,6 +701,16 @@ news_event = {
 	desc = BARE_World_News.13.desc
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = GEH
+				}
+				add_threat = 2
+			}
+		}
+	}
 
 	major = yes
 
@@ -756,6 +816,16 @@ news_event = {
 	desc = BARE_World_News.16.desc
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = CEN
+				}
+				add_threat = 5
+			}
+		}
+	}
 
 	major = yes
 
