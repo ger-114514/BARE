@@ -380,6 +380,111 @@ heavy_infantry_ARI = {
 	}
 }
 
+
+
+sp_infantry_ARI = {
+
+	available_for = {
+		ARI
+	}
+
+	role = sp_infantry
+	
+	upgrade_prio = {
+		base = 5
+	}
+	
+	sp_infantry_1_ARI = {
+	
+		upgrade_prio = {
+			base = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				fire_support_team_su_sa = 1
+			}
+			
+			regiments = {
+				infantry_sp = 10
+			}
+		}
+		reinforce_prio = 1
+		replace_at_match = 0.5
+		replace_with = sp_infantry_2_ARI
+		target_min_match = 0.5
+	}
+	sp_infantry_2_ARI = {
+
+		upgrade_prio = {
+			base = 2
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					date > 2020.1.1
+					num_of_military_factories > 20
+				}
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				fire_support_team_su_ha = 1
+				fire_support_team_su_sa = 1
+			}
+			
+			regiments = {
+				infantry_sp = 10
+				infantry_sp = 2
+			}
+		}
+		reinforce_prio = 1
+		replace_at_match = 0.8
+		replace_with = sp_infantry_3_ARI
+		target_min_match = 0.8
+	}
+	sp_infantry_3_ARI = {
+	
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 3
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 1.5
+				date > 2022.1.1
+			}
+
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				recon = 1
+				fire_support_team_su_ha = 1
+				fire_support_team_su_sa = 1
+			}
+			
+			regiments = {
+				infantry_sp = 12
+				infantry_sp = 4
+			}
+		}
+		reinforce_prio = 1
+		replace_at_match = 0.8
+		target_min_match = 0.8
+	}
+}
+
 garrison_ARI = {
 
 	available_for = {

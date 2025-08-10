@@ -68,7 +68,8 @@ on_actions = {
 					add_dynamic_modifier = {
 						modifier = ARI_NOGOVMODE
 					}
-					country_lock_all_division_template = yes
+					delete_unit = {}
+					# country_lock_all_division_template = yes
 					530 = {
 						PREV = {
 							division_template = {

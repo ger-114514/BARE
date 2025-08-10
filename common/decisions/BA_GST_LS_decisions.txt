@@ -877,7 +877,7 @@ GST_LS_ZZ_category = {
 				load_focus_tree = ARI_NULL
 				mark_focus_tree_layout_dirty = yes
 				ARI = {
-					country_lock_all_division_template = yes
+					# country_lock_all_division_template = yes
 					add_ideas = {
 						ARI_JSL
 					}
