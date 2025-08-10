@@ -130,10 +130,7 @@ news_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					tag = CAP
-				}
+			CAP = {
 				add_threat = 10
 			}
 		}
@@ -278,17 +275,11 @@ news_event = {
 	
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					tag = GEH
-				}
+		    GEH = {
 				add_threat = 5
 			}
 	
-			if = {
-				limit = {
-					tag = ABY
-				}
+			ABY = {
 				add_threat = 5
 			}
 		}
@@ -361,10 +352,7 @@ news_event = {
 	
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					tag = CAP
-				}
+			CAP = {
 				add_threat = 10
 			}
 		}
@@ -588,10 +576,7 @@ news_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					tag = CEN
-				}
+			CEN = {
 				add_threat = 3
 			}
 		}
@@ -703,10 +688,7 @@ news_event = {
 	
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					tag = GEH
-				}
+			GEH = {
 				add_threat = 2
 			}
 		}
@@ -818,10 +800,7 @@ news_event = {
 	
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					tag = CEN
-				}
+			CEN = {
 				add_threat = 5
 			}
 		}
