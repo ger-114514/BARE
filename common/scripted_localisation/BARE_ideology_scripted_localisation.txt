@@ -59,9 +59,9 @@ defined_text = {
 	##开明哲学组
 	text = {
 		trigger = {				
-            has_country_leader_ideology = LBM_GEH_After_Terrible
+            has_country_leader_ideology = LBM_GEH_After_Terrible_type
 		}
-		localization_key = LBM_GEH_After_Terrible
+		localization_key = LBM_GEH_After_Terrible_type
 	}
 
 	text = {
