@@ -353,6 +353,7 @@ country_event = { #地区建设落后
 	}
 	option = {
 		name = TRI_political_focus.4.a
+		add_ideas = TRI_invest_in_region_factory_1
 		activate_mission = TRI_invest_in_region_factory_1
 	}
 	option = {
@@ -563,6 +564,7 @@ country_event = { #激进的抗议活动
 	}
 	option = {
 		name = TRI_political_focus.10.a
+		add_ideas = TRI_invest_in_region_factory_2
 		activate_mission = TRI_invest_in_region_factory_2
 	}
 	option = {

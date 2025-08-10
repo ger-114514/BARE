@@ -595,5 +595,17 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+		
+		TRI_invest_in_region_factory_1 = {
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		TRI_invest_in_region_factory_2 = {
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
 	}
 }
