@@ -591,6 +591,7 @@ country_event = { #示之假寐
         }
         add_to_variable = { TRI_nagisa_paranoia_modifier_increase = 4 }
         set_country_flag = TRI_negative_paranoia_event
+        set_country_flag = TRI_paranoia_event_alternative
     }
 }
 country_event = { #负面事件1-“繁文苛政”

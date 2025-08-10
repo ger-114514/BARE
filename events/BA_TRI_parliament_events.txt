@@ -126,6 +126,17 @@ country_event = { #法案未通过
 		custom_effect_tooltip = TRI_parliament_bill.2.tt
 	}
 }
+country_event = { #休会期结束
+	id = TRI_parliament_bill.3
+	title = TRI_parliament_bill.3.t
+	desc = TRI_parliament_bill.3.desc
+	picture = GFX_TRI_event_2
+	is_triggered_only = yes
+	option = {
+		name = TRI_parliament_bill.3.a
+		custom_effect_tooltip = TRI_parliament_bill.3.tt
+	}
+}
 
 country_event = { #自动触发负面事件
 	id = TRI_political_focus.0
