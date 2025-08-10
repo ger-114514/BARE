@@ -603,6 +603,21 @@ TRI_bill_voting_decisions_categories = {
 		days_mission_timeout = 70
 		timeout_effect = {
 			clr_country_flag = TRI_parliament_adjourn
+			#如果还有法案可以手动提交，则触发事件提醒
+			hidden_effect = {
+				if = {
+					limit = {
+						any_of = {
+							array = TRI_bills_to_be_passed
+							value = bill
+							NOT = {
+								check_variable = { bill = 0 }
+							}
+						}
+					}
+					country_event = TRI_parliament_bill.3
+				}
+			}
 		}
 	}
 	TRI_emergent_voting = {

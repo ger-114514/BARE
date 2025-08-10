@@ -1,5 +1,5 @@
 BA_Common_Design_Infantry_Organization_Producter = {#通用步兵制造商
-	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	icon = GFX_MIO_BA_Common_Design_Infantry_Organization_Producter_icon
 	background = GFX_MIO_details_background_factory
 	allowed = {
 		always = yes
@@ -352,7 +352,7 @@ BA_Common_Design_Infantry_Organization_Producter = {#通用步兵制造商
 }
 BA_Design_artillary_Organization_Producter = {#通用火力支援装备制造商
 	#GFX_idea_generic_artillery_manufacturer_1
-	icon = GFX_idea_generic_artillery_manufacturer_3
+	icon = GFX_MIO_BA_Design_artillary_Organization_Producter_icon
 	background = GFX_MIO_details_background_factory
 	allowed = {
 		always = yes
@@ -643,7 +643,7 @@ BA_Design_artillary_Organization_Producter = {#通用火力支援装备制造商
 }
 
 BA_Design_tank_Organization_Producter = {#坦克製造商
-	icon = GFX_idea_generic_tank_manufacturer_1
+	icon = GFX_MIO_BA_Design_tank_Organization_Producter_icon
 	background = GFX_MIO_details_background_tank
 	allowed = {
 		always = yes
@@ -957,7 +957,7 @@ BA_Design_tank_Organization_Producter = {#坦克製造商
 	}
 }
 BA_Design_truck_Organization_Producter = {#机动载具制造商
-	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
+	icon = GFX_MIO_BA_Design_truck_Organization_Producter_icon
 	background = GFX_MIO_details_background_factory
 	allowed = {
 		always = yes
@@ -1337,7 +1337,7 @@ BA_Design_truck_Organization_Producter = {#机动载具制造商
 	}
 }
 BA_Design_mecha_Organization_Producter = {#机甲製造商
-	icon = GFX_idea_generic_tank_manufacturer_2
+	icon = GFX_MIO_BA_Design_mecha_Organization_Producter_icon
 	background = GFX_MIO_details_background_tank
 	allowed = {
 		always = yes
@@ -1695,7 +1695,7 @@ BA_Design_mecha_Organization_Producter = {#机甲製造商
 }
 
 BA_Design_plane_Organization_Producter = {#普通的基沃托斯无人机制造商
-	icon = GFX_idea_generic_air_manufacturer_1
+	icon = GFX_MIO_BA_Design_plane_Organization_Producter_icon
 	background = GFX_MIO_details_background_plane
 	allowed = {
 		always = yes
@@ -2116,7 +2116,7 @@ BA_Design_plane_Organization_Producter = {#普通的基沃托斯无人机制造�
 }
 
 BA_Design_helicopter_Organization_Producter = {#普通的基沃托斯直升机制造商
-	icon = GFX_idea_generic_air_manufacturer_2
+	icon = GFX_MIO_BA_Design_helicopter_Organization_Producter_icon
 	background = GFX_MIO_details_background_tank
 	allowed = {
 		always = yes

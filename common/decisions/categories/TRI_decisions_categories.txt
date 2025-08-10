@@ -63,7 +63,9 @@ TRI_bill_voting_decisions_categories = {
 	allowed = {
 		original_tag = TRI
 	}
-
+	visible = {
+		has_country_flag = TRI_parliament_available
+	}
 	priority = 1001
 }
 #焦点

@@ -3659,6 +3659,8 @@ ARI_power_chaser_decisions = {
 			has_country_flag = ARI_rank3_achieved
 		}
 
+		fire_only_once = yes
+
 		available = {
 			custom_override_tooltip = {
 				tooltip = {

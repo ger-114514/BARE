@@ -9,6 +9,9 @@ country_event = { #顾问被指控为不安定分子
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.1.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		TRI_unity_decrease_5 = yes
 		TRI_purge_character = yes
 		ai_chance = {
@@ -19,9 +22,11 @@ country_event = { #顾问被指控为不安定分子
 		name = TRI_paranoia.1.b
 
 		trigger = {
-			NOT = { has_political_power < 50 }
+			NOT = {
+				has_political_power < 50
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
-
 		add_political_power = -50
 		TRI_paranoia_increase_10 = yes
 		ai_chance = {
@@ -48,6 +53,14 @@ country_event = { #顾问被指控为不安定分子
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 country_event = { #文职部员队伍中的阴谋
 	id = TRI_paranoia.2
@@ -58,6 +71,9 @@ country_event = { #文职部员队伍中的阴谋
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.2.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		set_temp_variable = { TRI_unity_change = -2 }
 		TRI_change_unity = yes
 		add_timed_idea = {
@@ -74,7 +90,10 @@ country_event = { #文职部员队伍中的阴谋
 		name = TRI_paranoia.2.b
 
 		trigger = {
-			NOT = { has_political_power < 50 }
+			NOT = {
+				has_political_power < 50
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -50
@@ -103,6 +122,14 @@ country_event = { #文职部员队伍中的阴谋
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 country_event = { #圣三一情报局的背叛？
 	id = TRI_paranoia.3
@@ -113,6 +140,9 @@ country_event = { #圣三一情报局的背叛？
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.3.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		set_temp_variable = { TRI_unity_change = -2 }
 		TRI_change_unity = yes
 		TRI_nagisa = {
@@ -133,7 +163,10 @@ country_event = { #圣三一情报局的背叛？
 		name = TRI_paranoia.3.b
 
 		trigger = {
-			NOT = { has_political_power < 75 }
+			NOT = {
+				has_political_power < 50
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -75
@@ -166,6 +199,14 @@ country_event = { #圣三一情报局的背叛？
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 
 unit_leader_event = { #将军被指控为不安定分子
@@ -177,6 +218,9 @@ unit_leader_event = { #将军被指控为不安定分子
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.11.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		TRI_unity_decrease_5 = yes
 		TRI_purge_character = yes
 		ai_chance = {
@@ -187,7 +231,10 @@ unit_leader_event = { #将军被指控为不安定分子
 		name = TRI_paranoia.11.b
 
 		trigger = {
-			NOT = { has_political_power < 50 }
+			NOT = {
+				has_political_power < 50
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -50
@@ -216,6 +263,14 @@ unit_leader_event = { #将军被指控为不安定分子
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 country_event = { #陆军成员中的流言
 	id = TRI_paranoia.12
@@ -226,6 +281,9 @@ country_event = { #陆军成员中的流言
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.12.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		set_temp_variable = { TRI_unity_change = -2 }
 		TRI_change_unity = yes
 		add_ideas = TRI_inspected_army
@@ -239,7 +297,10 @@ country_event = { #陆军成员中的流言
 		name = TRI_paranoia.12.b
 
 		trigger = {
-			NOT = { has_political_power < 50 }
+			NOT = {
+				has_political_power < 50
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -50
@@ -268,6 +329,14 @@ country_event = { #陆军成员中的流言
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 country_event = { #反破坏分子运动（陆军）
 	id = TRI_paranoia.13
@@ -278,6 +347,9 @@ country_event = { #反破坏分子运动（陆军）
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.13.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		set_temp_variable = { TRI_unity_change = -2 }
 		TRI_change_unity = yes
 		add_timed_idea = {
@@ -294,7 +366,10 @@ country_event = { #反破坏分子运动（陆军）
 		name = TRI_paranoia.13.b
 
 		trigger = {
-			NOT = { has_political_power < 60 }
+			NOT = {
+				has_political_power < 60
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -60
@@ -323,6 +398,14 @@ country_event = { #反破坏分子运动（陆军）
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 
 country_event = { #空军成员中的流言
@@ -334,6 +417,9 @@ country_event = { #空军成员中的流言
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.22.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		set_temp_variable = { TRI_unity_change = -2 }
 		TRI_change_unity = yes
 		add_ideas = TRI_inspected_airforce
@@ -345,9 +431,11 @@ country_event = { #空军成员中的流言
 	}
 	option = { #停停停
 		name = TRI_paranoia.22.b
-
 		trigger = {
-			NOT = { has_political_power < 50 }
+			NOT = {
+				has_political_power < 50
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -50
@@ -376,6 +464,14 @@ country_event = { #空军成员中的流言
 			}
 		}
 	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
+	}
 }
 country_event = { #反破坏分子运动（空军）
 	id = TRI_paranoia.23
@@ -386,6 +482,9 @@ country_event = { #反破坏分子运动（空军）
 
 	option = { #鲨鲨鲨
 		name = TRI_paranoia.23.a
+		trigger = {
+			NOT = { has_country_flag = TRI_paranoia_event_alternative }
+		}
 		set_temp_variable = { TRI_unity_change = -2 }
 		TRI_change_unity = yes
 		add_timed_idea = {
@@ -400,9 +499,11 @@ country_event = { #反破坏分子运动（空军）
 	}
 	option = { #停停停
 		name = TRI_paranoia.23.b
-
 		trigger = {
-			NOT = { has_political_power < 60 }
+			NOT = {
+				has_political_power < 60
+				has_country_flag = TRI_paranoia_event_alternative
+			}
 		}
 
 		add_political_power = -60
@@ -430,6 +531,14 @@ country_event = { #反破坏分子运动（空军）
 				has_political_power > 200
 			}
 		}
+	}
+	option = {
+		name = TRI_paranoia_event_alternative.option
+		trigger = {
+			has_country_flag = TRI_paranoia_event_alternative			
+		}
+
+		custom_effect_tooltip = TRI_paranoia_event_alternative_tt
 	}
 }
 country_event = { #对社团的调查

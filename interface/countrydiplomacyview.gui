@@ -251,7 +251,8 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "political_pie_chart"
-					position = { x = 143 y = 3 }
+					# position = { x = 143 y = 3 } 
+					position = { x = 9999 y = 9999 } #去虚空吧
 					size = { width=330 height=30 }
 					clipping = no
 
@@ -286,7 +287,8 @@ guiTypes = {
 
 					instantTextboxType = {
 						name = "ideology_name"
-						position = { x = 5 y = 10 }
+						# position = { x = 5 y = 10 }
+						position = { x = 9999 y = 9999 }
 						font = "hoi_16mbs"
 						text = "ideology"
 						maxWidth = 245
@@ -295,7 +297,8 @@ guiTypes = {
 
 					instantTextboxType = {
 						name = "elections"
-						position = { x = 5 y = 25 }
+						# position = { x = 5 y = 25 }
+						position = { x = 9999 y = 9999 }
 						font = "hoi_16mbs"
 						text = "elections"
 						maxWidth = 245

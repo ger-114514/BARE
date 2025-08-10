@@ -214,15 +214,19 @@
  TRI_study_trip: "开展研学旅行"
  TRI_production_budget: "提高生产预算"
  TRI_infra_money: "调拨基建资金"
+ TRI_traditional_culture: "宣讲传统文化"
 
  TRI_parliament_bill.1.t: "法案通过"
  TRI_parliament_bill.1.desc: "在令人略感压抑的投票环节结束后，显示在大银幕中的结果令人欣喜：我们提议的法案顺利通过。\n这无疑宣誓着我们所做的努力赢得了姊妹们的认可！"
  TRI_parliament_bill.1.a: "我们承诺：这项法案将会推动圣三一迈向更光明的未来！"
-
  TRI_parliament_bill.2.t: "法案未通过"
  TRI_parliament_bill.2.desc: "在令人略感压抑的投票环节结束后，显示在大银幕中的结果令人沮丧：我们提议的法案未能通过...\n无论我们如何论证该项法案将会带来好处，却依旧无法说服更多姊妹们为我们投下代表信任的一票。"
  TRI_parliament_bill.2.a: "好吧..."
  TRI_parliament_bill.2.tt: "§Y行政官，下次例会前的准备时期务必争取尽可能多的支持，我们没有更多的时间可以浪费了。§!"
+ TRI_parliament_bill.3.t: "休会期结束"
+ TRI_parliament_bill.3.desc: "行政官的报告：[?country_leader.GetName]大人，休会期已经结束，我们注意到，先前我们已将一些新的法案提交给了议会，是时候向议会提起审核它们了。"
+ TRI_parliament_bill.3.a: "好的，我清楚了"
+ TRI_parliament_bill.3.tt: "§Y议会休会期已结束，可以在决议界面提起新的法案投票§!"
 
  TRI_negative_event_rejection_count_tt: "如果一直无视社团的请求（已连续拒绝[?TRI_negative_event_rejection_count|Y0]次），§R矛盾可能会严重激化§!"
  TRI_political_focus.1.t: "学生抗议"
