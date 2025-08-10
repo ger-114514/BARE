@@ -11,4 +11,31 @@ scripted_gui = {
 			
 		}
 	}
+
+	BARE_hide_chart_button_politic_view_SG = {
+		window_name = "BARE_hide_chart_button_politic_view_window"
+		context_type = player_context
+		parent_window_token = politics_tab
+		
+		visible = {
+			always = yes
+		}
+		effects = {
+			
+		}
+	}
+	
+	BARE_hide_chart_button_diplomancy_view_SG = {
+		window_name = "BARE_hide_chart_button_diplomancy_view_window"
+		context_type = player_context
+		parent_window_name = diplomacy_tab_top
+		
+		visible = {
+			always = yes
+		}
+		effects = {
+			
+		}
+	}
+	
 }

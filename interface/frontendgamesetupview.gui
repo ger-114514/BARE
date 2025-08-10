@@ -841,7 +841,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology_label"
-				position = { x = 0 y = 35 }
+				# position = { x = 0 y = 35 }
+				position = { x = 9999 y = 9999 }
 				textureFile = ""
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
@@ -852,7 +853,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology"
-				position = { x = 0 y = 52 }
+				# position = { x = 0 y = 52 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -861,7 +863,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "government_label"
-				position = { x = 0 y = 75 }
+				# position = { x = 0 y = 75 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "GOVERNMENT"
@@ -871,7 +874,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "government"
-				position = { x = 0 y = 92 }
+				# position = { x = 0 y = 92 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "FE_INTERESTING_COUNTRIES"
@@ -881,7 +885,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "elections_label"
-				position = { x = 0 y = 115 }
+				# position = { x = 0 y = 115 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "ELECTIONS"
@@ -891,7 +896,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "elections"
-				position = { x = 0 y = 132 }
+				# position = { x = 0 y = 132 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -900,7 +906,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party_label"
-				position = { x = 0 y = 155 }
+				# position = { x = 0 y = 155 }
+				position = { x = 0 y = 35 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "RULING_PARTY"
@@ -910,7 +917,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party"
-				position = { x = 0 y = 172 }
+				# position = { x = 0 y = 172 }
+				position = { x = 0 y = 52 }
 				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -1061,7 +1069,8 @@ guiTypes = {
 
 		gridboxtype = {
 			name = "spirit_grid"
-			position = { x = 253 y = 30 }
+			# position = { x = 253 y = 30 }
+			position = { x = 183 y = 30 }
 			size = { width = 300 height = 68 }
 			slotsize = { width = 60 height = 68 }
 			max_slots = { x = 5 y = 1 }
@@ -1079,7 +1088,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "political_pie_chart"
-			position = { x= 185 y = 40 }
+			# position = { x= 185 y = 40 }
+			position = { x= 9999 y = 9999 } #去虚空吧
 			size = { width=100 height=100 }
 			clipping = no
 
@@ -1127,7 +1137,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology_label"
-				position = { x = 6 y = 27 }
+				# position = { x = 6 y = 27 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
 				text = "IDEOLOGY"
@@ -1137,7 +1148,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology"
-				position = { x = 72 y = 27 }
+				# position = { x = 72 y = 27 }
+				position = { x = 9999 y = 9999 }
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -1146,7 +1158,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "government_label"
-				position = { x = 6 y = 51 }
+				position = { x = 9999 y = 9999 }
+				# position = { x = 6 y = 51 }
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
 				text = "GOVERNMENT"
@@ -1156,7 +1169,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "government"
-				position = { x = 72 y = 51 }
+				position = { x = 9999 y = 9999 }
+				# position = { x = 72 y = 51 }
 				textureFile = ""
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
@@ -1166,7 +1180,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "elections_label"
-				position = { x = 6 y = 75 }
+				# position = { x = 6 y = 75 }
+				position = { x = 9999 y = 9999 }
 				textureFile = ""
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
@@ -1177,7 +1192,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "elections"
-				position = { x = 72 y = 75 }
+				# position = { x = 72 y = 75 }
+				position = { x = 9999 y = 9999 }
 				textureFile = ""
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
@@ -1187,7 +1203,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party_label"
-				position = { x = 6 y = 99 }
+				# position = { x = 6 y = 99 }
+				position = { x = 6 y = 27 }
 				textureFile = ""
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
@@ -1198,7 +1215,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party"
-				position = { x = 148 y = 99 }
+				# position = { x = 148 y = 99 }
+				position = { x = 148 y = 27 }
 				textureFile = ""
 				font = "hoi_20bs"
 				borderSize = {x = 0 y = 0}
