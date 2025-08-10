@@ -716,7 +716,6 @@ focus_tree = {
 					add_dynamic_modifier = { modifier = TRI_special_services_investigations }
 					#桐藤渚获得特质描述
 					custom_effect_tooltip = focus_select_effect_tt
-					effect_tooltip = { BA_TRI_initialize_paranoia_system = yes }
 					hidden_effect = {
 						#初始化自动国策线
 						add_to_array = { TRI_hoshubu_focus_line = token:TRI_investigation_in_care }
