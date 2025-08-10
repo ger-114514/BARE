@@ -33,6 +33,12 @@ ARI_unit_production = {
 	}
 
 	ai_strategy = {
+		type = role_ratio
+		id = sp_infantry
+		value = 20
+	}
+
+	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
 		value = 10
