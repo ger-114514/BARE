@@ -1,4 +1,9 @@
 ﻿l_simp_chinese:
  bare_achievements: "自始复新：§Y成就§!"
  TRI_greetings_achievement_NAME: "下午茶邀约"
- TRI_greetings_achievement_DESC: "作为§Y圣三一§!，度过游戏中的第一天。\n\n\n\n§L被<茶话会>邀请是一种荣誉，但也仅限于一种荣誉。对某人来说，这甚至算得上一种枷锁。\n\n——浦和花子§!"
+ TRI_greetings_achievement_DESC: "§L被<茶话会>邀请是一种荣誉，但也仅限于一种荣誉。对某人来说，这甚至算得上一种枷锁。\n\n——浦和花子§!"
+ TRI_greetings_achievement_condition_tt: "作为§Y[TRI.GetFlag]圣三一§!，度过游戏中的第一天。"
+
+ TRI_politic_allies_achievement_NAME: "政治影响"
+ TRI_politic_allies_achievement_DESC: "§L“乌合之众”的另一个意思是，人多力量大。§!"
+ TRI_politic_allies_achievement_condition_tt: "作为§Y[TRI.GetFlag]圣三一§!，同时任用§G三名政治顾问§!。"
