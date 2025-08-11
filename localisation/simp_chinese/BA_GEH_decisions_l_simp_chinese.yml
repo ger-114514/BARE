@@ -60,3 +60,33 @@ GEH_3_times_get_back_characters: "该决议最多执行3次。"
  GEH_stop_war_industry: "停止产能动员"
 
 
+GEH_dualHeaded_makoto_stay_calm: "让真琴保持镇静"
+GEH_dualHeaded_makoto_stay_calm_desc: "虽然真琴一直想让万魔殿压过风纪委员会，但他的做法往往适得其反...我们可以用一些比较“烧钱”的活动来糊弄下真琴，让他保持镇静，虽然这些活动很难有什么效果，但起码能阻止真琴的反效果。"
+GEH_dualHeaded_makoto_take_hina_job: "临时接管部分风纪委员会工作"
+GEH_dualHeaded_makoto_take_hina_job_desc: "风纪委员会承担了格黑娜大量的工作，这让她们的声望如日中天，利用万魔殿的权力，万魔殿可以主动接管风纪委员会的部分工作，在体现万魔殿的“宽宏大量”的同时也能增强万魔殿的存在感，不过嘛，活就会干的有些糙就是了。"
+
+custom_cost_GEH_dualHeaded_makoto_take_hina_job: "£command_power  §Y40§!"
+custom_cost_GEH_dualHeaded_makoto_take_hina_job_blocked: "£command_power  §R40§!"
+GEH_dualHeaded_makoto_publicity: "宣传万魔殿威姿"
+GEH_dualHeaded_makoto_publicity_desc: "利用我们的渠道，我们可以轻易将关于万魔殿威姿宣传材料的传播到全格黑娜，这在一定程度上能提升万魔殿的影响力。"
+
+
+GEH_dualHeaded_makoto_alliance_with_sensei: "劝说老师和万魔殿结盟"
+GEH_dualHeaded_makoto_alliance_with_sensei_desc: "英明神武的真琴看到了老师的潜力，只要老师和万魔殿合作，格黑娜就能征服整个基沃托斯。\n虽然大概率会被老师拒绝，但也能向老师刷一波存在感，\n§R这个决议只能使用一次§!"
+
+GEH_dualHeaded_makoto_send_away_hina: "暂时支开日奈"
+GEH_dualHeaded_makoto_send_away_hina_desc: "通过安排一些特训任务，我们能创造一个日奈消失的短暂空档，让我们自由发挥。\n§R这个决议只能使用一次§!"
+
+
+GEH_dualHeaded_hina_enforce_discipline: "整肃风纪委员会纪律"
+GEH_dualHeaded_hina_enforce_discipline_desc: "“你就是这么马马虎虎的做风纪委员的工作吗？真可耻！”"
+
+GEH_dualHeaded_hina_job_sharing: "分担日奈的工作"
+GEH_dualHeaded_hina_job_sharing_desc: "“你心情很好嘛。”\n“那是当然的，大家都在尽自己的责任，日奈也一直在努力着，我也是加把劲骑士！”"
+
+
+GEH_dualHeaded_hina_job_sharing: "放任真琴整活"
+GEH_dualHeaded_hina_job_sharing_desc: "反正风纪委始终都是要给真琴整的活擦屁股，不如让我们晚点再擦，让真琴再难堪一点。"
+
+GEH_dualHeaded_hina_job_sharing: "请求与老师的合作"
+GEH_dualHeaded_hina_job_sharing_desc: "我们发现，只要日奈和老师在一起，她的心情都会变得舒畅起来，压力也减轻了不少，我们可以设法多安排一点和老师合作的机会，让日奈放松一下。"

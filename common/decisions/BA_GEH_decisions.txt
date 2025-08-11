@@ -368,3 +368,281 @@ GEH_after_eden_war_decision_category = {
 	}
 }
 
+GEH_dualHeaded = {
+	GEH_dualHeaded_makoto_stay_calm = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+		}
+
+		cost = 50
+		days_remove = 20
+		days_re_enable = 45
+
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = {
+			set_country_flag = GEH_dualHeaded_changing
+		}
+
+		remove_effect = {
+			clr_country_flag = GEH_dualHeaded_changing
+			  hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.05
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.4
+					compare = less_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+
+	GEH_dualHeaded_makoto_take_hina_job = {
+		visible = {
+			has_completed_focus = GEH_Steady_progress
+		}
+		days_remove = 35
+		days_re_enable = 180
+
+		modifier = {
+			GEH_dualHeaded_Makoto_Weekly_factor = 0.015
+			power_balance_weekly = 0.015
+		}
+
+		custom_cost_trigger = {
+			command_power > 40
+		}
+
+		custom_cost_text = custom_cost_GEH_dualHeaded_makoto_take_hina_job
+		complete_effect = {
+			add_command_power = -40
+			set_country_flag = GEH_dualHeaded_changing
+		}
+		remove_effect = {
+			clr_country_flag = GEH_dualHeaded_changing
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.4
+					compare = less_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+	GEH_dualHeaded_makoto_publicity = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+			
+		}
+
+		days_remove = 28
+		days_re_enable = 90
+
+		modifier = {
+			consumer_goods_factor = 0.5
+			political_power_factor = 0.2
+		}
+
+		
+		complete_effect = {
+			set_country_flag = GEH_dualHeaded_changing
+		}
+		remove_effect = {
+			clr_country_flag = GEH_dualHeaded_changing
+			hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.075
+                }
+                add_to_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+
+            }
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.4
+					compare = less_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+	GEH_dualHeaded_makoto_send_away_hina = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+			
+		}
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		modifier = {
+			political_power_factor = 0.5
+			GEH_dualHeaded_Makoto_Weekly_factor = 0.05
+			power_balance_weekly = 0.03
+		}
+
+		
+		complete_effect = {
+			set_country_flag = GEH_dualHeaded_changing
+		}
+		remove_effect = {
+			clr_country_flag = GEH_dualHeaded_changing
+			
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.4
+					compare = less_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+	GEH_dualHeaded_makoto_send_away_hina = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+			
+		}
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		modifier = {
+			political_power_factor = 0.5
+			GEH_dualHeaded_Makoto_Weekly_factor = 0.05
+			power_balance_weekly = 0.03
+		}
+
+		
+		complete_effect = {
+			set_country_flag = GEH_dualHeaded_changing
+		}
+		remove_effect = {
+			clr_country_flag = GEH_dualHeaded_changing
+			
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.4
+					compare = less_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+	GEH_dualHeaded_makoto_alliance_with_sensei = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			SCH = {
+				country_event = {
+					id = GEH_events.10
+				}
+			}
+		}
+
+		remove_effect = {
+			  
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.4
+					compare = less_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+}

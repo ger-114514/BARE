@@ -305,6 +305,107 @@ country_event = {
     }
 }
 
+#万魔殿和老师结盟
+country_event = {
+    id = GEH_events.10
+    title = GEH_events.10.t
+    desc = GEH_events.10.d
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_events.10.a
+
+		GEH = {
+			country_event = {
+				id = GEH_events.11
+				hours = 24
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+    }
+
+	option = {
+		name = GEH_events.10.b
+
+		GEH = {
+			country_event = {
+				id = GEH_events.12
+				hours = 24
+			}
+		}
+
+		custom_effect_tooltip =  GEH_events.10_tooltip
+
+		ai_chance = {
+			factor = 0
+		}
+    }
+}
+
+
+country_event = {
+    id = GEH_events.11
+    title = GEH_events.11.t
+    desc = GEH_events.11.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_events.11.a
+
+		add_political_power = 100
+
+		hidden_effect = {
+            set_temp_variable = {
+                BARE_duelHead_Chance_temp = 0.05
+            }
+            add_to_variable = {
+                GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+            }
+            GEH_dualHeaded_Influence_Factor_Change = yes
+
+        }
+
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+country_event = {
+    id = GEH_events.12
+    title = GEH_events.12.t
+    desc = GEH_events.12.d
+    picture = GFX_GEH_events_pic
+
+	is_triggered_only = yes
+
+    option = {
+		name = GEH_events.12.a
+
+		every_country = {
+			GEH = {
+				annex_country = {
+					target = PREV
+				}
+			}
+		}
+
+		custom_effect_tooltip = GEH_events.12_tooltip
+
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
 ###外交
 #格黑娜提出外交声援
 country_event = {
