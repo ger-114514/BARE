@@ -6,11 +6,37 @@ TRI_greetings_achievement = {
 	possible = {
 		tag = TRI
 		difficulty > 1
-		has_any_custom_difficulty_setting = no
+		#has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 	}
 
 	happened = {
-        date > 2019.01.02
+		custom_override_tooltip = {
+			tooltip = TRI_greetings_achievement_condition_tt
+			hidden_effect = {
+				date > 2019.01.02
+			}
+		}
+	}
+}
+
+TRI_politic_allies_achievement = {
+	possible = {
+		tag = TRI
+		difficulty > 1
+		#has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = TRI_politic_allies_achievement_condition_tt
+			amount_taken_ideas = {
+				amount > 2
+				slots = {
+					political_advisor
+				}
+			}
+		}
 	}
 }

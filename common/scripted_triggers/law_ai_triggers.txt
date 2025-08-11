@@ -44,7 +44,7 @@ is_tralaws_free_trade_ideology_group_trigger = {
 		OR = {
 			has_country_leader_ideology = LBM_default_type
 			has_country_leader_ideology = LBM_TRI_Seia_type
-			has_country_leader_ideology = LBM_GEH_After_Terrible
+			has_country_leader_ideology = LBM_GEH_After_Terrible_type
 		}
 	}
 }
