@@ -1151,10 +1151,6 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			add_ideas = ARI_intelligence_in_GEH_0
-			set_variable = {
-				ARI_intelligence_in_GEH_rank = 0
-			}
 			country_event = ARI_beatrice.9
 			#解锁对外行动决议
 			unlock_decision_tooltip = {
