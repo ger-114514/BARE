@@ -877,7 +877,7 @@ GST_LS_ZZ_category = {
 				load_focus_tree = ARI_NULL
 				mark_focus_tree_layout_dirty = yes
 				ARI = {
-					country_lock_all_division_template = yes
+					# country_lock_all_division_template = yes
 					add_ideas = {
 						ARI_JSL
 					}
@@ -996,15 +996,7 @@ GST_LS_ZZ_category = {
 		
 		timeout_effect = {
 			hidden_effect = {
-				set_temp_variable = { mystic_progress_change = 0 }
-				for_each_loop = {
-					array = ARI.controlled_states
-					#每月进度+1
-					add_to_variable = {
-						var = mystic_progress_change
-						value = 1
-					}
-				}
+				set_temp_variable = { mystic_progress_change = ARI.controlled_states^num }
 			}
 			ARI_change_mystic_progress = yes
 			activate_mission = GST_ZZ_ARI_ZHYB_TS_JDRW

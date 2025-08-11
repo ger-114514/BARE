@@ -1,13 +1,84 @@
 ﻿l_simp_chinese:
  ###回头有时间整理###
-
  BAREXP_ruling_party: "[ROOT.GetRulingPartyLong]"
+ BAREXP_ruling_sub_ideology: "[ROOT.get_current_sub_ideology]"
+ get_current_sub_ideology_default: "墙头草"
 
  #no_ideology_type_desc: "总之可别当成画大饼了。"
 
- no_ideology: "基沃托斯意识形态"
- no_ideology_desc: "基沃托斯意识形态"
- no_ideology_noun: "基沃托斯意识形态"
- no_ideology_type: "基沃托斯意识形态"
+ no_ideology: "沉默多数"
+ no_ideology_desc: "沉默多数"
+ no_ideology_noun: "沉默多数"
 
- no_ideology_type_desc: "说实话，用所谓的意识形态，简单的对一群有着无限可能的学生附上标签，然后对她们的行为一刀切，这实在是对这群可爱的学生不负责任的表现-老师"
+ no_ideology_type: "政治冷感"
+ no_ideology_type_desc: "§C政治冷感§!\n--------------\n政治冷感并非一种系统化的意识形态，而只是一种个体在政治领域行为或态度的描述，即不关心政治，也不参与政治。政治冷感人群或许会关心时政新闻，并对其拥有观点，但不会因此主动参与政治运动，或鼓动身边的人参与。\n\n一般而言，基沃托斯中的大多数学生与市民都可被划分为这一群体。但随着基沃托斯局势的变化，或重大事件的发生，政治冷感的人群也会逐渐形成对特定政治观点的兴趣。一言以蔽之，他们即是“沉默的大多数”。\n--------------\n§Y“总之，你不能阻止政治对你产生兴趣。”§!\n"
+
+l_simp_chinese:
+ Progressivism_ideology: "进步哲学"
+ Progressivism_ideology_noun: "进步哲学"
+ Progressivism_ideology_desc: "进步哲学"
+
+ PGM_TRI_Nagisa_type: "圣三一改良路线"
+ PGM_TRI_Nagisa_type_desc: "§C圣三一改良路线§!\n--------------\n圣三一改良路线代表着圣三一学园的领导者们对于改革的思考。其支持者们认为，圣三一长久以来的派系斗争和身份歧视必须得到改变，但与此同时，也必须确保圣三一政治格局的稳定。因此，该模式追求在现有的茶话会框架下实施进步措施，以期在不造成混乱的情况下，完成对既有规则的改革。\n\n尽管如此，该模式仍经受考验：温和的改革势必缺乏核心推动力，若要达成目的，桐藤渚和她的支持者们必须寻求更多坚定支持进步哲学的盟友。\n--------------\n§Y“崭新航线，但要平稳航行。”§!\n\n§C权力机关：§!茶话会\n--------------\n茶话会是缔造圣三一的『第一次公会议』所确立的权力机构。它由最具影响力的三个派系，§G菲利乌斯§!、§R帕特尔§!以及§Y圣库斯特§!组成。因此，茶话会所作出的决定，即代表三个派系所共同做出的决定，在这一基础上，几乎鲜有政治力量，能够违抗茶话会的意志。\n根据茶话会的制度，茶话会的首席，由三个派系的领袖轮流出任。\n"
+
+ Egalitarianism_ideology: "平等哲学"
+ Egalitarianism_ideology_noun: "平等哲学"
+ Egalitarianism_ideology_desc: "平等哲学"
+
+ ELM_default_type: "平等哲学"
+ ELM_default_type_desc: "§C平等哲学§!\n--------------\n“生而平等”是平等哲学的共识。平等哲学通常认为，人与人在道德上拥有相同的价值，也因此是“平等”的。\n\n但在另一方面，平等哲学也并非单纯的均分思想。关于实现平等哲学的路径，则拥有许多的看法。例如，资源平等哲学就认为，应当通过分配方式确保每个人得到相同资源；而相对的，机会平等哲学则认为，所有人的天赋与能力并不相同，确保所有人的机会平等才能实现社会平等。\n--------------\n§Y“拜托，这本来不是个神学观点吗？”§!\n"
+
+ Authoritarian_ideology: "专制哲学"
+ Authoritarian_ideology_noun: "专制哲学"
+ Authoritarian_ideology_desc: "专制哲学"
+ 
+ ATN_default_type: "集权体制"
+
+ ATN_TRI_Hawk_type: "圣三一强硬路线"
+ ATN_TRI_Hawk_type_desc: "§Y圣三一强硬路线§!\n--------------\n圣三一发祥于诸多派系的联合——尽管如此，“实力至上”一直是一股不容忽略的声音：掌握力量的派系理应主政圣三一学园，这是自然之理。\n\n所谓的圣三一强硬路线正是诞生于这种尚武的氛围中，并在在帕特尔分派和正义实现委员会的部分成员中受到支持。围绕着某些个人能力强大的学生，这些崇尚个人英武的成员自发地形成了一个支持强硬路线的团体，而这种联结又在“同僚情谊”的影响下反过来得到强化。这使得她们的观点显得有些偏激——“唯有将一切敌对者以绝对的实力征服才能获得真正意义上的团结与未来。”\n\n无论这种政见正确与否，其经由战斗纪律所确立的秩序与共识可称得上极端顽固。这使得她们的观点即便遭受挑战也极难改变。她们的确尊崇强者，但即便是这位“精神领袖”，也必须和她们保持步调一致的共识。随着环境日趋紧张，她们的声势与影响力也在渐渐提升。\n--------------\n§Y“我行我心澄如明镜，做所作为皆为正义。”§!\n"
+
+ Mysticism_ideology: "神秘哲学"
+ Mysticism_ideology_noun: "神秘哲学"
+ Mysticism_ideology_desc: "神秘哲学"
+
+ MYC_default_type: "神授制度"
+
+ MYC_ARI_Beatrice_type: "谎言帷幕"
+ MYC_ARI_Beatrice_type_desc: "§Y谎言帷幕§!\n--------------\n贝阿多莉切在阿里乌斯所实施的统治，是一种将军事政治与仇恨思想，辅以被扭曲的哲学结合起来的高压统治模式。在被夫人刻意扭曲的“虚无主义”影响下，个人的存在被抹去，一切皆为虚无，而夫人给予了她们存在的唯一意义——对曾经的迫害者复仇。在此基础上，军事化制度会将剩余的不谐之音剔除，由此让学生彻底成为夫人的傀儡。\n\n当然，这并非长久之计：这种蒙骗极端依赖夫人用谎言与仇恨编织的共同认知，而一但茧房破开一角，这种叙事就会像是开了口的气球一般转瞬便土崩瓦解。在实际执行中，被刻意营造的苦难在一时间或许能够藉由高压态势裱裱糊糊，但裂痕终会渐渐扩大，对仇恨行为的放任也将使得整个阿里乌斯也将逐渐陷入动荡之中，直至彻底失去控制。\n\n不过，夫人也没打算长期维持自己的统治——阿里乌斯对于她而言不过是在滚烫的混沌中捞起所求之物的工具，只要达成目标，就可以随意扔掉。至于阿里乌斯的命运？她并不在乎。\n--------------\n§R“不论如何标榜，没有谎言能千秋万代。”§!\n"
+
+ Liberalism_ideology: "开明哲学"
+ Liberalism_ideology_noun: "开明哲学"
+ Liberalism_ideology_desc: "开明哲学"
+
+ LBM_GEH_After_Terrible: "后雷帝共识"
+ LBM_GEH_After_Terrible_desc: "§Y后雷帝共识§!\n--------------\n后雷帝共识是如今在格黑娜主要流行的思想，也可被视为雷帝对格黑娜的统治所留下的伤痕。实际上，它是一个大篷车式的派系集合。只要反对雷帝和她留下的政治遗产，任何思想都能被纳入后雷帝共识的范畴。这也导致如今领导着格黑娜的万魔殿始终没有形成统一的政治思想，不仅各个派系各自为战，做事风格也普遍毫无边界。\n\n对于多数生活在格黑娜的成员而言，对后雷帝共识的理解往往会被简化为一个政治正确：凡是雷帝支持的，她们就应该坚决反对；凡是雷帝反对的，她们就应该全力支持。这也导致后雷帝共识逐渐朝更加不可解的方向倾斜，对向往秩序的人而言，后雷帝共识已经化为确凿无疑的混乱象征。\n--------------\n§Y“秩序是文明的毒药……”§!\n"
+
+#####
+ TRI_no_ideology_party: "普罗大众"
+ TRI_no_ideology_party_long: "普罗大众"
+
+ TRI_Progressivism_ideology_party: "菲利乌斯派"
+ TRI_Progressivism_ideology_party_long: "茶话会-菲利乌斯派"
+
+ TRI_Egalitarianism_ideology_party: "帕特尔派（中央）"
+ TRI_Egalitarianism_ideology_party_long: "茶话会-帕特尔派（中央）"
+
+ TRI_Authoritarian_ideology_party: "帕特尔派（激进）"
+ TRI_Authoritarian_ideology_party_long: "茶话会-帕特尔派（激进）"
+
+ TRI_Liberalism_ideology_party: "桑库特斯派"
+ TRI_Liberalism_ideology_party_long: "茶话会-桑库特斯派"
+
+#  ARI_Mysticism_ideology_party: "贝阿多莉切独裁"
+#  ARI_Mysticism_ideology_party_long: "贝阿多莉切独裁"
+
+ ARI_Mysticism_ideology_party: "阿里乌斯代理学生会"
+ ARI_Mysticism_ideology_party_long: "阿里乌斯代理学生会"
+
+ ALF_Egalitarianism_ideology_party: "解放阵线"
+ ALF_Egalitarianism_ideology_party_long: "阿里乌斯解放阵线"
+
+ GEH_Liberalism_ideology_party: "万魔殿（中央）"
+ GEH_Liberalism_ideology_party_long: "万魔殿-保守派系"
+ ##
+ BAREXP_ruling_party: "[ROOT.GetRulingPartyLong]"

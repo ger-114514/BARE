@@ -164,10 +164,10 @@
  SCALED_LAW_MODIFIER: "$LAW$（因驻军情况，效果变化$RATIO|R.0%$）"
  STABILITY_RESISTANCE_PENALTY: "占领区的抵抗目标： $PENALTY|%%.0R$"
  MAIN_GARRISON_TEMPLATE: "领土管理"
- OCCUPATION_SHOW_NO_RESISTING_COUNTRIES: "显示无抵抗国家（$NUM$）"
+ OCCUPATION_SHOW_NO_RESISTING_COUNTRIES: "显示无抵抗势力（$NUM$）"
  DEFAULT_LAW_SELECTION: "默认法案"
  FOREIGN_SUPPORT: "外国支持"
- FOREIGN_SUPPORT_TOOLTIP: "其他国家提供的战备值。"
+ FOREIGN_SUPPORT_TOOLTIP: "其他势力提供的战备值。"
  FOREIGN_SUPPORT_IN_GARRISON: "$NUMBER|H*$于驻军："
  FOREIGN_SUPPORT_IN_RESERVE: "$NUMBER|H*$被储存："
  #disabled for now
@@ -176,4 +176,4 @@
  #OCCUPATION_STATE_OCCUPATION_INFO: "The state has a resistance from $COUNTRY|H$"
  #OCCUPATION_STATE_OCCUPATION_INFO_NO_RESISTANCE: "There is no resistance in the state"
  non_core_controller: "无核心的控制者"
- non_core_controller_desc: "这个地区被无核心的国家控制"
+ non_core_controller_desc: "这个地区被无核心的势力控制"

@@ -10,6 +10,14 @@ characters={
 			}	
 		}
 
+		country_leader = {
+			ideology = LBM_TRI_Seia_type
+			desc = "TRI_seia_description"
+			traits = { }
+			expire = "9999.1.1.1"
+			id = -1
+		}
+
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_seia_pa
@@ -103,7 +111,7 @@ characters={
 		}
 
         country_leader = {
-			ideology = no_ideology_type
+			ideology = PGM_TRI_Nagisa_type
 			desc = "TRI_nagisa_description"
 			traits = { TRI_nagisa_Mild_leader }
 			expire = "9999.1.1.1"
@@ -187,7 +195,7 @@ characters={
 		}
 
         country_leader = {
-			ideology = no_ideology_type
+			ideology = PGM_TRI_Nagisa_type
 			traits = { missing_leader }
 			expire = "9999.1.1.1"
 			id = -1
@@ -202,6 +210,14 @@ characters={
 				large=GFX_portrait_TRI_mika
 				small=GFX_portrait_TRI_mika_small
 			}	
+		}
+
+		country_leader = {
+			ideology = ELM_TRI_Mika_type
+			desc = "TRI_mika_description"
+			traits = { }
+			expire = "9999.1.1.1"
+			id = -1
 		}
 
 		advisor = {
@@ -713,7 +729,7 @@ characters={
 		}
 
         country_leader = {
-			ideology = no_ideology_type
+			ideology = PGM_TRI_Nagisa_type
 			traits = { h_loved_sage }
 			expire = "9999.1.1.1"
 			id = -1

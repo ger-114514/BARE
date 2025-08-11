@@ -1,0 +1,17 @@
+spriteTypes = {
+	#意识形态
+	spriteType = {
+		name = "GFX_ideology_no_ideology_group"
+		texturefile = "gfx/interface/ideologies/no_ideology.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PGM_TRI_Nagisa_type"
+		texturefile = "gfx/interface/ideologies/PGM_TRI_Nagisa_type.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MYC_ARI_Beatrice_type"
+		texturefile = "gfx/interface/ideologies/MYC_ARI_Beatrice_type.dds"
+	}
+}

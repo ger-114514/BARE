@@ -34,7 +34,7 @@
  CAN_SURRENDER_FACTION_MEMBERS: "他们正在与其所属的阵营并肩战斗，只有当这场战争中该阵营的全部主要成员势力停止抵抗时他们才会投降。\n尚未停止抵抗的主要阵营成员势力：\n$MEMBER_LIST|Y$"
  CAN_SURRENDER_SUBJECT: "他们目前正和宗主势力并肩作战，只有当宗主势力停止抵抗后他们才会投降。\n宗主势力：$OVERLORD|Y$"
  CAN_SURRENDER: "他们目前正孤军奋战，因此其停止抵抗时即会投降。"
- SURRENDER_GIE_LEGITIMACY: "如果他们停止抵抗，便将转为§H流亡政府§!，其§H正统性§!将为$LEGITIMACY|0Y$。"
+ SURRENDER_GIE_LEGITIMACY: "如果他们停止抵抗，便将转为§H流亡势力§!，其§H正统性§!将为$LEGITIMACY|0Y$。"
  CANNOT_SURRENDER_NOT_ENOUGH_DAYS: "他们目前仅参战$DAYS|Y$日，其至少需要参战时间超过$MIN_DAYS|Y$日才会投降。"
  ALLY_CALLED: "§R你已经召唤过该名盟友§!"
  NO_ALLIES_TO_CALL: "§R你无法召唤任何盟友§!"

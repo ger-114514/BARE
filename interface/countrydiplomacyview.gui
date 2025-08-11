@@ -251,7 +251,8 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "political_pie_chart"
-					position = { x = 143 y = 3 }
+					# position = { x = 143 y = 3 } 
+					position = { x = 9999 y = 9999 } #去虚空吧
 					size = { width=330 height=30 }
 					clipping = no
 
@@ -286,7 +287,8 @@ guiTypes = {
 
 					instantTextboxType = {
 						name = "ideology_name"
-						position = { x = 5 y = 10 }
+						# position = { x = 5 y = 10 }
+						position = { x = 9999 y = 9999 }
 						font = "hoi_16mbs"
 						text = "ideology"
 						maxWidth = 245
@@ -295,7 +297,8 @@ guiTypes = {
 
 					instantTextboxType = {
 						name = "elections"
-						position = { x = 5 y = 25 }
+						# position = { x = 5 y = 25 }
+						position = { x = 9999 y = 9999 }
 						font = "hoi_16mbs"
 						text = "elections"
 						maxWidth = 245
@@ -414,7 +417,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "spirit_title"
-					position = { x = 27 y = -9 }
+					position = { x = 27 y = -4 }
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}
 					text = "FE_COUNTRY_SPIRIT"
@@ -424,8 +427,8 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "national_spirit_container"
-					position = { x = -390 y = -8 }
-					size = { width = 375 height = 74 }
+					position = { x = -420 y = 0 }
+					size = { width = 410 height = 72 }
 					verticalScrollbar = "right_vertical_slider"
 					orientation = upper_right
 
@@ -436,7 +439,7 @@ guiTypes = {
 
 					gridboxtype = {
 						name = "national_spirit_ideas_grid"
-						position = { x = -5 y = 2 }
+						position = { x = 10 y = 2 }
 						size = { width = 360 height = 68 }
 						slotsize = { width = 60 height = 68 }
 						max_slots = { x = 6 y = 1 }
@@ -445,9 +448,9 @@ guiTypes = {
 					gridboxtype = {
 						name = "nat_spirit_ideas_grid_over_defined"
 						position = { x = 10 y = 2 }
-						size = { width = 330 height = 68 }
+						size = { width = 360 height = 68 }
 						slotsize = { width = 33 height = 34 }
-						max_slots_horizontal = 10
+						max_slots_horizontal = 11
 						format = "UPPER_LEFT"
 					}
 				}

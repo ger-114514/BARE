@@ -40,6 +40,8 @@ NDefines.NAir.AIR_REGION_SUPERIORITY_PIXEL_SCALE = 0.02
 NDefines.NNavy.NAVAL_RANGE_TO_INGAME_DISTANCE = 0.24							-- Scale the ship stats "naval_range" to the ingame distance
 
 NDefines.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 4
+NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5
+NDefines.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 4
 
 NDefines.NGraphics.COUNTRY_FLAG_LARGE_STRIPE_MAX_HEIGHT = 24000        -- VANILLA: 8192
 NDefines.NGraphics.COUNTRY_FLAG_SMALL_TEX_MAX_SIZE = 512            -- VANILLA: 64

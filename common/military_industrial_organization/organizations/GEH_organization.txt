@@ -14,10 +14,10 @@ Gehenna_Volcano_support_equipment_organization = {
 		tag = GEH
 	}
 	equipment_type = {
-		support
-		artillery
-		anti_tank
-		anti_air
+		mio_cat_eq_all_support_equipment
+		mio_cat_eq_support_artillery_equipment
+		mio_cat_eq_support_at_equipment
+		mio_cat_eq_support_aa_equipment
 	}
 	##影响所有支援栏##
 	research_categories = {
@@ -112,7 +112,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			num_parents_needed = 1
 		}
 		limit_to_equipment_type = {
-			heavy_fire_support_equipment
+			mio_cat_eq_support_at_equipment
 		}		# optional
 		equipment_bonus = {
 			hard_attack = 0.05
@@ -134,7 +134,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			num_parents_needed = 1
 		}
 		limit_to_equipment_type = {
-			heavy_fire_support_equipment
+			mio_cat_eq_support_at_equipment
 		}		# optional
 		equipment_bonus = {
 			ap_attack = 0.05
@@ -149,7 +149,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			y = 0
 		}
 		limit_to_equipment_type = {
-			light_fire_support_equipment
+			mio_cat_eq_support_artillery_equipment
 		}		# optional
 		equipment_bonus = {
 			soft_attack = 0.03
@@ -204,9 +204,9 @@ Gehenna_Volcano_support_equipment_organization = {
 			num_parents_needed = 1
 		}
 		limit_to_equipment_type = {
-			light_fire_support_equipment
-			heavy_fire_support_equipment
-			infantry_anti_air_equipment
+			mio_cat_eq_support_artillery_equipment
+			mio_cat_eq_support_at_equipment
+			mio_cat_eq_support_aa_equipment
 		}		# optional
 		equipment_bonus = {
 			ap_attack = 0.01
@@ -230,9 +230,9 @@ Gehenna_Volcano_support_equipment_organization = {
 			num_parents_needed = 2
 		}
 		limit_to_equipment_type = {
-			light_fire_support_equipment
-		    heavy_fire_support_equipment
-		    infantry_anti_air_equipment
+			mio_cat_eq_support_artillery_equipment
+			mio_cat_eq_support_at_equipment
+			mio_cat_eq_support_aa_equipment
 		}
 		equipment_bonus = {
 			build_cost_ic = 0.02
@@ -264,7 +264,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			}
 		}
 		limit_to_equipment_type = {
-			heavy_fire_support_equipment
+			mio_cat_eq_support_at_equipment
 		}
 		equipment_bonus = {
 			ap_attack = 0.5
@@ -299,8 +299,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			}
 			num_parents_needed = 1
 		}
-		limit_to_equipment_type = {
-		}		# optional
+		# optional
 		equipment_bonus = {
 			reliability = 0.05
 		}
@@ -314,12 +313,10 @@ Gehenna_Volcano_support_equipment_organization = {
 			y = 0
 		}
 		limit_to_equipment_type = {
-		}		# optional
-		limit_to_equipment_type = {
-			light_fire_support_equipment
-		    heavy_fire_support_equipment
-		    infantry_anti_air_equipment
-		}		# optional
+			mio_cat_eq_support_artillery_equipment
+		    mio_cat_eq_support_at_equipment
+		    mio_cat_eq_support_aa_equipment
+		}
 		equipment_bonus = {
 			build_cost_ic = -0.03
 			breakthrough = 0.02
@@ -341,9 +338,9 @@ Gehenna_Volcano_support_equipment_organization = {
 			num_parents_needed = 1
 		}
 		limit_to_equipment_type = {
-			light_fire_support_equipment
-		    heavy_fire_support_equipment
-		    infantry_anti_air_equipment
+			mio_cat_eq_support_artillery_equipment
+		    mio_cat_eq_support_at_equipment
+		    mio_cat_eq_support_aa_equipment
 		}		# optional
 		equipment_bonus = {
 			reliability = 0.03
@@ -404,9 +401,9 @@ Gehenna_Volcano_support_equipment_organization = {
 			GVS_Invest_Logistics_production_department_trait
 		}
 		limit_to_equipment_type = {
-			light_fire_support_equipment
-		    heavy_fire_support_equipment
-		    infantry_anti_air_equipment
+			mio_cat_eq_support_artillery_equipment
+		    mio_cat_eq_support_at_equipment
+		    mio_cat_eq_support_aa_equipment
 		}
 		production_bonus = {
 			production_conversion_speed_factor = 0.5
@@ -431,9 +428,9 @@ Gehenna_Volcano_support_equipment_organization = {
 			num_parents_needed = 1
 		}
 		limit_to_equipment_type = {
-			light_fire_support_equipment
-		    heavy_fire_support_equipment
-		    infantry_anti_air_equipment
+			mio_cat_eq_support_artillery_equipment
+		    mio_cat_eq_support_at_equipment
+		    mio_cat_eq_support_aa_equipment
 		}
 		equipment_bonus = {
 			soft_attack = 0.02
@@ -462,7 +459,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			GVS_Invest_Roaring_artillery_Design_bureau_trait
 		}
 		limit_to_equipment_type = {
-			support_equipment
+			mio_cat_eq_all_support_equipment
 		}
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
@@ -497,7 +494,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			}
 		}
 		limit_to_equipment_type = {
-			support_equipment
+			mio_cat_eq_all_support_equipment
 		}
 		equipment_bonus = {
 			reliability = 0.05
@@ -547,6 +544,7 @@ Gehenna_Volcano_support_equipment_organization = {
 			set_variable = {
 				GVS_special_traits = 1
 			}
+			add_ideas = GVS_Expansion_daily_necessities_Production_Idea
 		}
 		organization_modifier = {
 			military_industrial_organization_funds_gain = -0.05

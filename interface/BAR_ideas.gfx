@@ -644,6 +644,41 @@ spriteTypes = {
 		texturefile = "gfx/interface/military_industrial_organization/mio_icons/Gehenna_Volcano_support_equipment_organization_icon.dds"
 	}
 
+	spriteType = {
+		name = "GFX_MIO_BA_Common_Design_Infantry_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Common_Design_Infantry_Organization_Producter_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MIO_BA_Design_artillary_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Design_artillary_Organization_Producter_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MIO_BA_Design_tank_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Design_tank_Organization_Producter_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MIO_BA_Design_truck_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Design_truck_Organization_Producter_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MIO_BA_Design_mecha_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Design_mecha_Organization_Producter_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MIO_BA_Design_plane_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Design_plane_Organization_Producter_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MIO_BA_Design_helicopter_Organization_Producter_icon"
+		texturefile = "gfx/interface/military_industrial_organization/mio_icons/BA_Design_helicopter_Organization_Producter_Icon.dds"
+	}
+
 	#制造商
 	spriteType = {
 		name = "GFX_idea_ba_angel_24_enterprise"
