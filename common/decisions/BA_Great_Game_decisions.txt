@@ -151,6 +151,18 @@ BA_Great_Game_decisions = {
 				set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
 				set_country_flag = involved_in_Great_Game_as_attacker
 				set_country_flag = involved_in_Great_Game_as_ally_leader
+				FROM = {
+					every_neighbor_country = {
+						limit = {
+							is_subject_of = ROOT
+							has_autonomy_state = autonomy_bare_trusteeship_area_2
+						}
+						set_temp_variable = { leader = ROOT }
+						set_temp_variable = { ally = THIS }
+						set_temp_variable = { enemy = FROM.OVERLORD }
+						Great_Game_invite_to_ally = yes
+					}
+				}
 				FROM.OVERLORD = {
 					set_variable = { Great_Game_invader = ROOT }
 					set_variable = { Great_Game_enemy = ROOT }
@@ -193,59 +205,12 @@ BA_Great_Game_decisions = {
 				GOAL = "[?FROM.GetNameWithFlag]"
 			}
 			Great_Game_start_invasion = yes
-			FROM = {
-				every_neighbor_country = {
-					limit = {
-						is_subject_of = ROOT
-						has_autonomy_state = autonomy_bare_trusteeship_area_2
-					}
-					add_to_war = {
-						targeted_alliance = ROOT
-						enemy = FROM.OVERLORD
-					}
-				}
-			}
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
-				factor = 0
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio < 1
-				}
-			}
-			modifier = {
-				factor = 1.5
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio > 1.5
-				}
-			}
-			modifier = {
-				factor = 3
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio > 2
-				}
-			}
-			modifier = {
 				factor = 0.1
 				fuel_ratio < 0.7
-			}
-			modifier = {
-				factor = 0
-				has_opinion = {
-					target = FROM.OVERLORD
-					value > 30
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = FROM.OVERLORD
-					value < -30
-				}
 			}
 		}
 	}
@@ -310,6 +275,18 @@ BA_Great_Game_decisions = {
 						Great_Game_invite_to_ally = yes
 					}
 				}
+				FROM = {
+					every_neighbor_country = {
+						limit = {
+							is_subject_of = CEN
+							has_autonomy_state = autonomy_CEN_trusteeship_area
+						}
+						set_temp_variable = { leader = ROOT }
+						set_temp_variable = { ally = THIS }
+						set_temp_variable = { enemy = FROM.OVERLORD }
+						Great_Game_invite_to_ally = yes
+					}
+				}
 				FROM.OVERLORD = {
 					set_variable = { Great_Game_invader = ROOT }
 					set_variable = { Great_Game_enemy = ROOT }
@@ -331,59 +308,12 @@ BA_Great_Game_decisions = {
 				GOAL = "[?FROM.GetNameWithFlag]"
 			}
 			Great_Game_start_invasion = yes
-			FROM = {
-				every_neighbor_country = {
-					limit = {
-						is_subject_of = CEN
-						has_autonomy_state = autonomy_CEN_trusteeship_area
-					}
-					add_to_war = {
-						targeted_alliance = ROOT
-						enemy = FROM.OVERLORD
-					}
-				}
-			}
 		}
 		ai_will_do = {
 			base = 0.3
 			modifier = {
-				factor = 0
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio < 1
-				}
-			}
-			modifier = {
-				factor = 1.5
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio > 1.5
-				}
-			}
-			modifier = {
-				factor = 3
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio > 2
-				}
-			}
-			modifier = {
 				factor = 0.1
 				fuel_ratio < 0.7
-			}
-			modifier = {
-				factor = 0
-				has_opinion = {
-					target = FROM.OVERLORD
-					value > 30
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = FROM.OVERLORD
-					value < -30
-				}
 			}
 		}
 	}
@@ -434,6 +364,21 @@ BA_Great_Game_decisions = {
 				set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
 				set_country_flag = involved_in_Great_Game_as_attacker
 				set_country_flag = involved_in_Great_Game_as_ally_leader
+				FROM = {
+					every_neighbor_country = {
+						limit = {
+							is_subject_of = CAE
+							OR = {
+								has_autonomy_state = autonomy_Ceaser_sub_branch
+								has_autonomy_state = autonomy_Ceaser_trusteeship_area
+							}
+						}
+						set_temp_variable = { leader = ROOT }
+						set_temp_variable = { ally = THIS }
+						set_temp_variable = { enemy = FROM.OVERLORD }
+						Great_Game_invite_to_ally = yes
+					}
+				}
 				FROM.OVERLORD = {
 					set_variable = { Great_Game_invader = ROOT }
 					set_variable = { Great_Game_enemy = ROOT }
@@ -470,62 +415,12 @@ BA_Great_Game_decisions = {
 		}
 		remove_effect = {
 			Great_Game_start_invasion = yes
-			FROM = {
-				every_neighbor_country = {
-					limit = {
-						is_subject_of = CAE
-						OR = {
-							has_autonomy_state = autonomy_Ceaser_sub_branch
-							has_autonomy_state = autonomy_Ceaser_trusteeship_area
-						}
-					}
-					add_to_war = {
-						targeted_alliance = ROOT
-						enemy = FROM.OVERLORD
-					}
-				}
-			}
 		}
 		ai_will_do = {
 			base = 1
 			modifier = {
-				factor = 0
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio < 1
-				}
-			}
-			modifier = {
-				factor = 1.5
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio > 1.5
-				}
-			}
-			modifier = {
-				factor = 3
-				strength_ratio = {
-					tag = FROM.OVERLORD
-					ratio > 2
-				}
-			}
-			modifier = {
 				factor = 0.1
 				fuel_ratio < 0.7
-			}
-			modifier = {
-				factor = 0
-				has_opinion = {
-					target = FROM.OVERLORD
-					value > 30
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = FROM.OVERLORD
-					value < -30
-				}
 			}
 		}
 	}

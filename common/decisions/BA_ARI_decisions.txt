@@ -2909,7 +2909,7 @@ ARI_black_market_decisions = {
 		days_re_enable = 30
 		complete_effect = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment
+				type = support_equipment
 				amount = -1000
 			}
 		}
