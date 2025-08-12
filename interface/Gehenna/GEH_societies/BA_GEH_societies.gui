@@ -2,15 +2,15 @@ guiTypes = {
     containerWindowType = {
         name = "GEH_societies_dec_gui"
         position = { x = 0 y = 0 }
-		size = { width = 500 height = 450 }
+		size = { width = 500 height = 500 }
         instantTextBoxType = {
 			name = "GEH_societies_dec_textbox"
-			position = { x = 10 y = 320 }
-			font = "hoi_18mbs"
+			position = { x = 2 y = 320 }
+			font = "hoi_16mbs"
 			text = "GEH_societies_status_text"
 			format = left
 			maxWidth = 500
-			maxHeight = 130
+			maxHeight = 180
 		}
         iconType = {
             name = "GEH_discipline_committee"
