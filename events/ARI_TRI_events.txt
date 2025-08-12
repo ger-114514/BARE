@@ -426,8 +426,8 @@ country_event = { #动摇
         name = TRI_coup.20.a
         #于【GUI：圣三一情报局】的界面中揭示【浦和花子】的真实状态，若【浦和花子】已被揭示，则在剩余被调查学生中随机揭示一个学生真实状态。
         if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
-            set_variable = { pemission@TRI_hanako = 1 }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
+            set_variable = { permission@TRI_hanako = 1 }
             add_to_variable = { TRI_permitted_hoshubu_member = 1 }
             set_variable = { enable@TRI_hanako_inv1 = 1 }
             set_variable = { enable@TRI_hanako_inv2 = 1 }
@@ -444,9 +444,9 @@ country_event = { #动摇
                 1 = {
                     modifier = {
                         factor = 0
-                        check_variable = { pemission@TRI_azusa = 1 }
+                        check_variable = { permission@TRI_azusa = 1 }
                     }
-                    set_variable = { pemission@TRI_azusa = 1 }
+                    set_variable = { permission@TRI_azusa = 1 }
                     add_to_variable = { TRI_permitted_hoshubu_member = 1 }
                     set_variable = { enable@TRI_azusa_inv1 = 1 }
                     set_variable = { enable@TRI_azusa_inv2 = 1 }
@@ -461,9 +461,9 @@ country_event = { #动摇
                 1 = {
                     modifier = {
                         factor = 0
-                        check_variable = { pemission@TRI_koharu = 1 }
+                        check_variable = { permission@TRI_koharu = 1 }
                     }
-                    set_variable = { pemission@TRI_koharu = 1 }
+                    set_variable = { permission@TRI_koharu = 1 }
                     add_to_variable = { TRI_permitted_hoshubu_member = 1 }
                     set_variable = { enable@TRI_koharu_inv1 = 1 }
                     set_variable = { enable@TRI_koharu_inv2 = 1 }
@@ -478,9 +478,9 @@ country_event = { #动摇
                 1 = {
                     modifier = {
                         factor = 0
-                        check_variable = { pemission@TRI_hifumi = 1 }
+                        check_variable = { permission@TRI_hifumi = 1 }
                     }
-                    set_variable = { pemission@TRI_hifumi = 1 }
+                    set_variable = { permission@TRI_hifumi = 1 }
                     add_to_variable = { TRI_permitted_hoshubu_member = 1 }
                     set_variable = { enable@TRI_hifumi_inv1 = 1 }
                     set_variable = { enable@TRI_hifumi_inv2 = 1 }

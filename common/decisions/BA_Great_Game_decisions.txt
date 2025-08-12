@@ -207,12 +207,28 @@ BA_Great_Game_decisions = {
 			Great_Game_start_invasion = yes
 		}
 		ai_will_do = {
-			base = 1
+			base = 0.2
+			
 			modifier = {
 				factor = 0.1
 				fuel_ratio < 0.7
 			}
+			modifier = {
+				factor = 0
+				num_divisions < 40
+			}
+			modifier = {
+				factor = 0
+				date > 2021.7.1
+				num_divisions < 60
+			}
+			modifier = {
+				factor = 0
+				date > 2023.7.1
+				num_divisions < 80
+			}
 		}
+		
 	}
 	Great_Game_CEN_college_lauch_invade = {
 		visible = {
@@ -310,7 +326,7 @@ BA_Great_Game_decisions = {
 			Great_Game_start_invasion = yes
 		}
 		ai_will_do = {
-			base = 0.3
+			base = 0.1
 			modifier = {
 				factor = 0.1
 				fuel_ratio < 0.7
@@ -417,7 +433,7 @@ BA_Great_Game_decisions = {
 			Great_Game_start_invasion = yes
 		}
 		ai_will_do = {
-			base = 1
+			base = 0.2
 			modifier = {
 				factor = 0.1
 				fuel_ratio < 0.7
@@ -489,7 +505,7 @@ BA_Great_Game_decisions = {
 			}
 		}
 
-		remove_effect = {
+		timeout_effect = {
 			if = { #攻方胜利
 				limit = {
 					var:Great_Game_invade_target = { has_capitulated = yes }
@@ -534,7 +550,7 @@ BA_Great_Game_decisions = {
 			}
 		}
 
-		remove_effect = {
+		timeout_effect = {
 			if = { #攻方胜利
 				limit = {
 					var:Great_Game_invade_target = { has_capitulated = yes }
@@ -573,10 +589,8 @@ BA_Great_Game_decisions = {
 		available = {
 			OR = {
 				surrender_progress > 0.3
-				var:Great_Game_invader = {
-					NOT = {
-						has_war_with = var:Great_Game_invade_target_overlord
-					}
+				var:Great_Game_invade_target_overlord = {
+					NOT = { has_war_with = var:Great_Game_invader }
 				}
 			}
 		}
@@ -590,9 +604,6 @@ BA_Great_Game_decisions = {
 			NOT = {
 				has_war_with = var:Great_Game_enemy
 			}
-		}
-		cancel_effect = {
-			Great_Game_ally_leave = yes
 		}
 	}
 	Great_Game_invade_cd = {

@@ -1104,17 +1104,13 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_operation_dark_zone
 		}
-		cost = 3
+		cost = 1
 		x = -1
 		y = 2
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			add_ideas = ARI_intelligence_in_TRI_0
-			set_variable = {
-				ARI_intelligence_in_TRI_rank = 0
-			}
 			country_event = ARI_beatrice.8
 			#解锁对外行动决议
 			unlock_decision_tooltip = {
@@ -1144,7 +1140,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARI_Trinity_operation
 		}
-		cost = 3
+		cost = 1
 		x = -1
 		y = 1
 		search_filters = {
@@ -1179,6 +1175,9 @@ focus_tree = {
 		relative_position_id = ARI_Gehenna_operation
 		prerequisite = {
 			focus = ARI_Gehenna_operation
+		}
+		available = {
+			has_country_flag = ARI_intelligence_Gehenna_branch_established
 		}
 		x = 0
 		y = 1
@@ -1252,6 +1251,9 @@ focus_tree = {
 		relative_position_id = ARI_Trinity_operation
 		prerequisite = {
 			focus = ARI_Trinity_operation
+		}
+		available = {
+			has_country_flag = ARI_intelligence_Trinity_branch_established
 		}
 		x = 1
 		y = 1
@@ -1627,7 +1629,7 @@ focus_tree = {
 			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_1
 			hidden_effect = {
 				add_to_variable = {
-					ARI_catastrophic_traveller_operation_army_org_factor = 0.2
+					ARI_lesson_traveller_operation_army_org_factor = 0.2
 				}
 				
 				ARI_check_if_traveller_idea_replaced = yes

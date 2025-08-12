@@ -2,14 +2,14 @@
     name = noa_test_koharu
     text = {
         trigger = {
-            check_variable = { pemission@TRI_koharu = 1 }
-			#check_variable = { pemission@TRI_koharu = 1 }
+            check_variable = { permission@TRI_koharu = 1 }
+			#check_variable = { permission@TRI_koharu = 1 }
         }
         localization_key = noa_test_koharu_ok
     }
     text = {
         # trigger = {
-		# 	NOT = { check_variable = { pemission@TRI_koharu = 1 } }
+		# 	NOT = { check_variable = { permission@TRI_koharu = 1 } }
         # }
         localization_key = noa_test_koharu_not_ok
     }
@@ -19,13 +19,13 @@ defined_text = {
     name = noa_test_hanako
     text = {
         trigger = {
-            check_variable = { pemission@TRI_hanako = 1 }
+            check_variable = { permission@TRI_hanako = 1 }
         }
         localization_key = noa_test_hanako_ok
     }
     text = {
         # trigger = {
-		# 	NOT = { check_variable = { pemission@TRI_hanako = 1 } }
+		# 	NOT = { check_variable = { permission@TRI_hanako = 1 } }
         # }
         localization_key = noa_test_hanako_not_ok
     }
@@ -35,13 +35,13 @@ defined_text = {
     name = noa_test_azusa
     text = {
         trigger = {
-            check_variable = { pemission@TRI_azusa = 1 }
+            check_variable = { permission@TRI_azusa = 1 }
         }
         localization_key = noa_test_azusa_ok
     }
     text = {
         trigger = {
-			NOT = { check_variable = { pemission@TRI_azusa = 1 } }
+			NOT = { check_variable = { permission@TRI_azusa = 1 } }
         }
         localization_key = noa_test_azusa_not_ok
     }
@@ -51,13 +51,13 @@ defined_text = {
     name = noa_test_hifumi
     text = {
         trigger = {
-            check_variable = { pemission@TRI_hifumi = 1 }
+            check_variable = { permission@TRI_hifumi = 1 }
         }
         localization_key = noa_test_hifumi_ok
     }
     text = {
         trigger = {
-			NOT = { check_variable = { pemission@TRI_hifumi = 1 } }
+			NOT = { check_variable = { permission@TRI_hifumi = 1 } }
         }
         localization_key = noa_test_hifumi_not_ok
     }

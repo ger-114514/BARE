@@ -1369,7 +1369,6 @@ ARI_foreign_operations_decisions = {
 		remove_effect = {
 			random_list = {
 				4 = {
-					country_event = ARI_beatrice_operations.6
 					TRI = {
 						country_event = ARI_beatrice_operations.10
 						add_stability = -0.01
@@ -1379,13 +1378,12 @@ ARI_foreign_operations_decisions = {
 					set_temp_variable = { intelligence_change = 5 }
 					ARI_traveller_operation_prepare_progress_update_effect = yes
 					ARI_change_intelligence_in_TRI = yes
-					country_event = ARI_action.13
+					country_event = ARI_beatrice_operations.6
 				}
 				1 = {
-					country_event = ARI_beatrice_operations.7
 					set_temp_variable = { material_change = 25 }
 					ARI_change_materials = yes
-					country_event = ARI_action.14
+					country_event = ARI_beatrice_operations.7
 				}
 			}
 		}
@@ -1441,7 +1439,6 @@ ARI_foreign_operations_decisions = {
 		remove_effect = {
 			random_list = {
 				4 = {
-					country_event = ARI_beatrice_operations.8
 					GEH = {
 						country_event = ARI_beatrice_operations.10
 						add_stability = -0.01
@@ -1450,13 +1447,12 @@ ARI_foreign_operations_decisions = {
 					ARI_change_revenge_progress = yes
 					set_temp_variable = { intelligence_change = 5 }
 					ARI_change_intelligence_in_GEH = yes
-					country_event = ARI_action.13
+					country_event = ARI_beatrice_operations.8
 				}
 				1 = {
 					country_event = ARI_beatrice_operations.9
 					set_temp_variable = { material_change = 25 }
 					ARI_change_materials = yes
-					country_event = ARI_action.14
 				}
 			}
 		}
@@ -2698,7 +2694,7 @@ ARI_foreign_operations_decisions = {
 			}
 		}
 	}
-	#参与温泉部发掘行动
+	#参与美食研讨会行动
 	ARI_join_food_seminar_club_activity = {
 		visible = {
 			has_completed_focus = ARI_join_gehenna_club_fake
@@ -3897,13 +3893,7 @@ ARI_traveller_operation_caretaking_decisions = {
 				tooltip = ARI_get_back_special_force_count_nomore_for_5times_tt
 
 				##不触发超过五次
-				NOT = {
-					check_variable = { 
-						var = ARI_get_back_special_force_count
-						value = 5
-						compare = greater_than_or_equals
-					}
-				}
+				check_variable = { ARI_get_back_special_force_count < 6 }
 			}
 		}
 
@@ -3923,8 +3913,8 @@ ARI_traveller_operation_caretaking_decisions = {
 			hidden_effect = {
 				add_to_variable = { ARI_get_back_special_force_count = 1 }
 
-				add_to_variable = { ARI_catastrophic_traveller_operation_army_attack_factor = 0.05 }
-				add_to_variable = { ARI_catastrophic_traveller_operation_army_defence_factor = 0.05 }
+				add_to_variable = { ARI_lesson_traveller_operation_army_attack_factor = 0.05 }
+				add_to_variable = { ARI_lesson_traveller_operation_army_defence_factor = 0.05 }
 
 				ARI_check_if_traveller_idea_replaced = yes
 			}

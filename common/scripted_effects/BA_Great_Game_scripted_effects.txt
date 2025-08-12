@@ -199,6 +199,15 @@ Great_Game_invade_succeeded = {
 		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
+		#盟友退战
+		every_other_country = {
+			limit = {
+				has_war_together_with = ROOT
+				Great_Game_is_involved = yes
+			}
+			Great_Game_ally_leave = yes
+		}
+		clear_array = Great_Game_temp_allies
 		var:Great_Game_invade_target_overlord = {
 			Great_Game_get_coins = yes
 			#增加连败
@@ -211,6 +220,15 @@ Great_Game_invade_succeeded = {
 			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
 			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 			Great_Game_add_record = yes
+			#盟友退战
+			every_other_country = {
+				limit = {
+					has_war_together_with = PREV
+					Great_Game_is_involved = yes
+				}
+				Great_Game_ally_leave = yes
+			}
+			clear_array = Great_Game_temp_allies
 			remove_from_array = {
 				array = BA_trusteeship_areas
 				value = var:Great_Game_invade_target
@@ -293,6 +311,15 @@ Great_Game_invade_failed = {
 			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
 			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 			Great_Game_add_record = yes
+			#盟友退战
+			every_other_country = {
+				limit = {
+					has_war_together_with = PREV
+					Great_Game_is_involved = yes
+				}
+				Great_Game_ally_leave = yes
+			}
+			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
@@ -309,6 +336,15 @@ Great_Game_invade_failed = {
 		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
+		#盟友退战
+		every_other_country = {
+			limit = {
+				has_war_together_with = ROOT
+				Great_Game_is_involved = yes
+			}
+			Great_Game_ally_leave = yes
+		}
+		clear_array = Great_Game_temp_allies
 		white_peace = var:Great_Game_invade_target_overlord
 		clr_country_flag = involved_in_Great_Game_as_attacker
 		clear_variable = Great_Game_invader
@@ -323,12 +359,14 @@ Great_Game_invade_failed = {
 }
 Great_Game_ally_leave = {
 	Great_Game_get_coins = yes
-	var:Great_Game_enemy = {
-		white_peace = ROOT
-		for_each_scope_loop = {
-			array = Great_Game_temp_allies
-			white_peace = ROOT
+	every_enemy_country = {
+		limit = {
+			OR = {
+				Great_Game_is_involved = yes
+			}
+			
 		}
+		white_peace = PREV
 	}
 	clr_country_flag = involved_in_Great_Game_as_attacker
 	clr_country_flag = involved_in_Great_Game_as_defender
@@ -343,6 +381,13 @@ Great_Game_ally_leave = {
 		}
 	}
 	clear_variable = Great_Game_ally_leader
+	remove_mission = college_exercise_ongoing_ally
+	set_country_flag = Great_Game_invade_cd
+	activate_mission = Great_Game_invade_cd
+	add_days_mission_timeout = {
+		mission = Great_Game_invade_cd
+		days = -120
+	}
 }
 Great_Game_add_record = {
 	add_to_variable = { Great_Game_record_count = 1 }
