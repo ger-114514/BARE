@@ -368,7 +368,7 @@ country_event = {
             GEH_dualHeaded_Influence_Factor_Change = yes
 
         }
-
+		  custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Right_Tooltip
 
 		ai_chance = {
 			factor = 100
