@@ -89,6 +89,7 @@ ARI_armed_students_modifier = {
 ARI_special_force = {
 	icon = "GFX_idea_ARI_special_force"
 	army_speed_factor = ARI_special_force_army_speed_factor
+	army_attack_factor = ARI_special_force_modifier_army_attack_factor
 	special_forces_attack_factor = ARI_special_force_special_forces_attack_factor
 	special_forces_defence_factor = ARI_special_force_special_forces_defence_factor
 	special_forces_cap = ARI_special_force_special_forces_cap

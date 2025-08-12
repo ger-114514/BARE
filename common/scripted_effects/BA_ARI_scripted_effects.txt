@@ -93,24 +93,11 @@ ARI_upgrade_mystery_tech = {
 ARI_check_if_traveller_idea_replaced = {
 	if = {
 		limit = {
-			check_variable = {
-				var = ARI_catastrophic_traveller_operation_army_attack_factor
-				value = 0
-			}
-
-			check_variable = {
-				var = ARI_catastrophic_traveller_operation_army_defence_factor
-				value = 0
-			}
-
-			check_variable = {
-				var = ARI_catastrophic_traveller_operation_army_org_factor
-				value = 0
-			}
-
+			check_variable = { ARI_lesson_traveller_operation_army_attack_factor = 0 }
+			check_variable = { ARI_lesson_traveller_operation_army_defence_factor = 0 }
+			check_variable = { ARI_lesson_traveller_operation_army_org_factor = 0 }
 			NOT = { has_country_flag = ARI_lock_foreign_operation }
 		}
-
 		remove_dynamic_modifier = { modifier = ARI_catastrophic_traveller_operation }
 		add_dynamic_modifier = { modifier = ARI_lesson_traveller_operation }
 	}

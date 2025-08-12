@@ -573,11 +573,35 @@ TRI_bill_voting_decisions_categories = {
 				TRI_parliament_all_loyalty_change = yes
 			}
 			if = {
-				limit = { 
+				limit = {
 					check_variable = { bill_support@BA_TRI_senate_seat > senate_needed_support@var:TRI_debated_bill }
-					check_variable = { bill_support@BA_TRI_house_seat > house_needed_support@var:TRI_debated_bill } 
+					check_variable = { bill_support@BA_TRI_house_seat > house_needed_support@var:TRI_debated_bill }
 				}
 				country_event = TRI_parliament_bill.1
+			}
+			else_if = {
+				limit = { is_ai = yes }
+				country_event = TRI_parliament_bill.1
+				if = {
+					limit = {
+						NOT = { check_variable = { bill_support@BA_TRI_senate_seat > senate_needed_support@var:TRI_debated_bill } }
+					}
+					set_temp_variable = { pp_senate = senate_needed_support@var:TRI_debated_bill }
+					subtract_from_temp_variable = { pp_senate = bill_support@BA_TRI_senate_seat }
+					add_to_temp_variable = { pp_senate = 1 }
+					multiply_temp_variable = { pp_senate = -30 }
+					add_political_power = pp_senate
+				}
+				if = {
+					limit = {
+						NOT = { check_variable = { bill_support@BA_TRI_house_seat > house_needed_support@var:TRI_debated_bill } }
+					}
+					set_temp_variable = { pp_house = house_needed_support@var:TRI_debated_bill }
+					subtract_from_temp_variable = { pp_house = bill_support@BA_TRI_house_seat }
+					add_to_temp_variable = { pp_house = 1 }
+					multiply_temp_variable = { pp_house = -10 }
+					add_political_power = pp_house
+				}
 			}
 			else = {
 				if = {

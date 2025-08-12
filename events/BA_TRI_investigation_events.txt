@@ -144,7 +144,7 @@ country_event = { #小春1
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_koharu = 0 } }
+            limit = { check_variable = { permission@TRI_koharu = 0 } }
 			set_variable = { enable@TRI_koharu_inv1 = 1 }
 			set_variable = { enable@TRI_koharu_inv2 = 1 }
 			set_variable = { enable@TRI_koharu_inv3 = 1 }
@@ -159,7 +159,7 @@ country_event = { #小春1
     		SAFE = TRI_safe
 			NAME = TRI_koharu_name
 		}
-		set_variable = { pemission@TRI_koharu = 1 }
+		set_variable = { permission@TRI_koharu = 1 }
 		add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 		TRI_paranoia_decrease_10 = yes
 		if = {
@@ -186,7 +186,7 @@ country_event = { #小春2
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_koharu = 0 } }
+            limit = { check_variable = { permission@TRI_koharu = 0 } }
 			set_variable = { enable@TRI_koharu_inv1 = 1 }
 			set_variable = { enable@TRI_koharu_inv2 = 1 }
 			set_variable = { enable@TRI_koharu_inv3 = 1 }
@@ -201,7 +201,7 @@ country_event = { #小春2
 			SAFE = TRI_safe
 			NAME = TRI_koharu_name
 		}
-		set_variable = { pemission@TRI_koharu = 1 }
+		set_variable = { permission@TRI_koharu = 1 }
 		add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 		TRI_paranoia_decrease_10 = yes
 		if = {
@@ -228,7 +228,7 @@ country_event = { #小春3
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_koharu = 0 } }
+            limit = { check_variable = { permission@TRI_koharu = 0 } }
 			set_variable = { enable@TRI_koharu_inv1 = 1 }
 			set_variable = { enable@TRI_koharu_inv2 = 1 }
 			set_variable = { enable@TRI_koharu_inv3 = 1 }
@@ -243,7 +243,7 @@ country_event = { #小春3
 			SAFE = TRI_safe
 			NAME = TRI_koharu_name
 		}
-		set_variable = { pemission@TRI_koharu = 1 }
+		set_variable = { permission@TRI_koharu = 1 }
 		add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 		TRI_paranoia_decrease_10 = yes
 		if = {
@@ -270,7 +270,7 @@ country_event = { #小春4
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_koharu = 0 } }
+            limit = { check_variable = { permission@TRI_koharu = 0 } }
 			set_variable = { enable@TRI_koharu_inv1 = 1 }
 			set_variable = { enable@TRI_koharu_inv2 = 1 }
 			set_variable = { enable@TRI_koharu_inv3 = 1 }
@@ -286,7 +286,7 @@ country_event = { #小春4
 			SAFE = TRI_safe
 			NAME = TRI_koharu_name
 		}
-		set_variable = { pemission@TRI_koharu = 1 }
+		set_variable = { permission@TRI_koharu = 1 }
 		add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 		TRI_paranoia_decrease_10 = yes
 		if = {
@@ -313,7 +313,7 @@ country_event = { #花子1
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
 			set_variable = { enable@TRI_hanako_inv1 = 1 }
 			set_variable = { enable@TRI_hanako_inv2 = 1 }
 			set_variable = { enable@TRI_hanako_inv3 = 1 }
@@ -324,13 +324,13 @@ country_event = { #花子1
     option = {
 		name = TRI_events.230.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_hanako_name
 			}
-			set_variable = { pemission@TRI_hanako = 1 }
+			set_variable = { permission@TRI_hanako = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -357,7 +357,7 @@ country_event = { #花子2
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
 			set_variable = { enable@TRI_hanako_inv1 = 1 }
 			set_variable = { enable@TRI_hanako_inv2 = 1 }
 			set_variable = { enable@TRI_hanako_inv3 = 1 }
@@ -368,13 +368,13 @@ country_event = { #花子2
     option = {
 		name = TRI_events.231.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_hanako_name
 			}
-			set_variable = { pemission@TRI_hanako = 1 }
+			set_variable = { permission@TRI_hanako = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -406,7 +406,7 @@ country_event = { #花子3
     option = {
 		name = TRI_events.232.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_nosafe
@@ -442,7 +442,7 @@ country_event = { #花子4
     option = {
 		name = TRI_events.233.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hanako = 0 } }
+            limit = { check_variable = { permission@TRI_hanako = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_nosafe
@@ -474,7 +474,7 @@ country_event = { #梓1
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			set_variable = { enable@TRI_azusa_inv1 = 1 }
 			set_variable = { enable@TRI_azusa_inv2 = 1 }
 			set_variable = { enable@TRI_azusa_inv3 = 1 }
@@ -485,13 +485,13 @@ country_event = { #梓1
     option = {
 		name = TRI_events.220.a
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_azusa_name
 			}
-			set_variable = { pemission@TRI_azusa = 1 }
+			set_variable = { permission@TRI_azusa = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -509,13 +509,13 @@ country_event = { #梓1
     option = {
 		name = TRI_events.220.b
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_azusa_name
 			}
-			set_variable = { pemission@TRI_azusa = 1 }
+			set_variable = { permission@TRI_azusa = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -543,7 +543,7 @@ country_event = { #梓2
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			set_variable = { enable@TRI_azusa_inv1 = 1 }
 			set_variable = { enable@TRI_azusa_inv2 = 1 }
 			set_variable = { enable@TRI_azusa_inv3 = 1 }
@@ -554,13 +554,13 @@ country_event = { #梓2
     option = {
 		name = TRI_events.221.a
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_azusa_name
 			}
-			set_variable = { pemission@TRI_azusa = 1 }
+			set_variable = { permission@TRI_azusa = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -578,13 +578,13 @@ country_event = { #梓2
     option = {
 		name = TRI_events.221.b
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_azusa_name
 			}
-			set_variable = { pemission@TRI_azusa = 1 }
+			set_variable = { permission@TRI_azusa = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -617,7 +617,7 @@ country_event = { #梓3
     option = {
 		name = TRI_events.222.a
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_nosafe
@@ -653,7 +653,7 @@ country_event = { #梓4
     option = {
 		name = TRI_events.223.a
 		if = {
-            limit = { check_variable = { pemission@TRI_azusa = 0 } }
+            limit = { check_variable = { permission@TRI_azusa = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_nosafe
@@ -709,7 +709,7 @@ country_event = { #日富美1
     option = {
 		name = TRI_events.240.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hifumi = 0 } }
+            limit = { check_variable = { permission@TRI_hifumi = 0 } }
 			set_country_flag = hifumi_invest_success
 
 			custom_effect_tooltip = {
@@ -717,7 +717,7 @@ country_event = { #日富美1
 				SAFE = TRI_safe
 				NAME = TRI_hifumi_name
 			}
-		set_variable = { pemission@TRI_hifumi = 1 }
+		set_variable = { permission@TRI_hifumi = 1 }
 		add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -744,7 +744,7 @@ country_event = { #日富美2
 	immediate = {
 		clr_country_flag = TRI_in_inv_cooldown
 		if = {
-            limit = { check_variable = { pemission@TRI_hifumi = 0 } }
+            limit = { check_variable = { permission@TRI_hifumi = 0 } }
 			set_variable = { enable@TRI_hifumi_inv1 = 1 }
 			set_variable = { enable@TRI_hifumi_inv2 = 1 }
 			set_variable = { enable@TRI_hifumi_inv3 = 1 }
@@ -755,13 +755,13 @@ country_event = { #日富美2
     option = {
 		name = TRI_events.241.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hifumi = 0 } }
+            limit = { check_variable = { permission@TRI_hifumi = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_hifumi_name
 			}
-			set_variable = { pemission@TRI_hifumi = 1 }
+			set_variable = { permission@TRI_hifumi = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -779,13 +779,13 @@ country_event = { #日富美2
     option = {
 		name = TRI_events.241.b
 		if = {
-            limit = { check_variable = { pemission@TRI_hifumi = 0 } }
+            limit = { check_variable = { permission@TRI_hifumi = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_safe
 				NAME = TRI_hifumi_name
 			}
-			set_variable = { pemission@TRI_hifumi = 1 }
+			set_variable = { permission@TRI_hifumi = 1 }
 			add_to_variable = { TRI_permitted_hoshubu_member = 1 }
 			TRI_paranoia_decrease_10 = yes
 		}
@@ -817,7 +817,7 @@ country_event = { #日富美3
     option = {
 		name = TRI_events.242.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hifumi = 0 } }
+            limit = { check_variable = { permission@TRI_hifumi = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_nosafe
@@ -853,7 +853,7 @@ country_event = { #日富美4
     option = {
 		name = TRI_events.243.a
 		if = {
-            limit = { check_variable = { pemission@TRI_hifumi = 0 } }
+            limit = { check_variable = { permission@TRI_hifumi = 0 } }
 			custom_effect_tooltip = {
 				localization_key = TRI_investigation_safe_tt
 				SAFE = TRI_nosafe

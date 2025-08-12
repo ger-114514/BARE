@@ -105,7 +105,7 @@ scripted_gui = {
 
         triggers = {
             GFX_TRI_investigation_permission_visible = {
-                check_variable = { pemission@var:name = 1 }
+                check_variable = { permission@var:name = 1 }
             }
             TRI_investigation_button_visible = {
                 NOT = { check_variable = { enable@var:decision = 1 } }

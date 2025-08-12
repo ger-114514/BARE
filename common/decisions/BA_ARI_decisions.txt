@@ -1331,6 +1331,7 @@ ARI_foreign_operations_decisions = {
 			set_variable = { ARI_intelligence_in_GEH = 0 }
 			set_variable = { ARI_min_intelligence_in_GEH = 0 }
 			add_ideas = ARI_intelligence_in_GEH_0
+			country_event = ARI_beatrice.9
 			set_country_flag = ARI_intelligence_Gehenna_branch_established
 		}
 		ai_will_do = {
@@ -1369,7 +1370,6 @@ ARI_foreign_operations_decisions = {
 		remove_effect = {
 			random_list = {
 				4 = {
-					country_event = ARI_beatrice_operations.6
 					TRI = {
 						country_event = ARI_beatrice_operations.10
 						add_stability = -0.01
@@ -1379,13 +1379,12 @@ ARI_foreign_operations_decisions = {
 					set_temp_variable = { intelligence_change = 5 }
 					ARI_traveller_operation_prepare_progress_update_effect = yes
 					ARI_change_intelligence_in_TRI = yes
-					country_event = ARI_action.13
+					country_event = ARI_beatrice_operations.6
 				}
 				1 = {
-					country_event = ARI_beatrice_operations.7
 					set_temp_variable = { material_change = 25 }
 					ARI_change_materials = yes
-					country_event = ARI_action.14
+					country_event = ARI_beatrice_operations.7
 				}
 			}
 		}
@@ -1441,7 +1440,6 @@ ARI_foreign_operations_decisions = {
 		remove_effect = {
 			random_list = {
 				4 = {
-					country_event = ARI_beatrice_operations.8
 					GEH = {
 						country_event = ARI_beatrice_operations.10
 						add_stability = -0.01
@@ -1450,13 +1448,12 @@ ARI_foreign_operations_decisions = {
 					ARI_change_revenge_progress = yes
 					set_temp_variable = { intelligence_change = 5 }
 					ARI_change_intelligence_in_GEH = yes
-					country_event = ARI_action.13
+					country_event = ARI_beatrice_operations.8
 				}
 				1 = {
 					country_event = ARI_beatrice_operations.9
 					set_temp_variable = { material_change = 25 }
 					ARI_change_materials = yes
-					country_event = ARI_action.14
 				}
 			}
 		}
@@ -2698,7 +2695,7 @@ ARI_foreign_operations_decisions = {
 			}
 		}
 	}
-	#参与温泉部发掘行动
+	#参与美食研讨会行动
 	ARI_join_food_seminar_club_activity = {
 		visible = {
 			has_completed_focus = ARI_join_gehenna_club_fake
@@ -3548,10 +3545,17 @@ ARI_special_training_decisions = {
 			clr_country_flag = ARI_special_training_ongoing
 			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
 			army_experience = 25
-			custom_effect_tooltip = ARI_CQB_training_tt
-			set_technology = {
-				ARI_CQB_training = 1
+			add_unit_bonus = {
+				infantry_sf = {
+					urban = {
+						attack = 0.3
+						defence = 0.1
+						movement = 0.1
+					}
+				}
 			}
+			add_to_variable = { ARI_special_force_modifier_army_attack_factor = 0.02 }
+			custom_effect_tooltip = ARI_CQB_training_tt
 		}
 		ai_will_do = {
 			base = 10
@@ -3897,13 +3901,7 @@ ARI_traveller_operation_caretaking_decisions = {
 				tooltip = ARI_get_back_special_force_count_nomore_for_5times_tt
 
 				##不触发超过五次
-				NOT = {
-					check_variable = { 
-						var = ARI_get_back_special_force_count
-						value = 5
-						compare = greater_than_or_equals
-					}
-				}
+				check_variable = { ARI_get_back_special_force_count < 6 }
 			}
 		}
 
@@ -3923,8 +3921,8 @@ ARI_traveller_operation_caretaking_decisions = {
 			hidden_effect = {
 				add_to_variable = { ARI_get_back_special_force_count = 1 }
 
-				add_to_variable = { ARI_catastrophic_traveller_operation_army_attack_factor = 0.05 }
-				add_to_variable = { ARI_catastrophic_traveller_operation_army_defence_factor = 0.05 }
+				add_to_variable = { ARI_lesson_traveller_operation_army_attack_factor = 0.05 }
+				add_to_variable = { ARI_lesson_traveller_operation_army_defence_factor = 0.05 }
 
 				ARI_check_if_traveller_idea_replaced = yes
 			}

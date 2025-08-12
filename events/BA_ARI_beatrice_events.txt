@@ -995,7 +995,7 @@ country_event = {
     title = ARI_beatrice_operations.19.t
     desc = ARI_beatrice_operations.19.desc
     picture = TRI_news_event_22
-
+    fire_only_once = yes
     is_triggered_only = yes
     option = {
         name = ARI_beatrice_operations.19.a
@@ -1007,17 +1007,8 @@ country_event = {
     title = ARI_beatrice_operations.20.t
     desc = ARI_beatrice_operations.20.desc
     picture = GFX_event_ARI_beatrice_operations_20_event_pic
-
+    fire_only_once = yes
     is_triggered_only = yes
-    option = {
-        name = ARI_beatrice_operations.20.a
-    }
-    option = {
-        name = ARI_beatrice_operations.20.a
-    }
-    option = {
-        name = ARI_beatrice_operations.20.a
-    }
     option = {
         name = ARI_beatrice_operations.20.a
     }
