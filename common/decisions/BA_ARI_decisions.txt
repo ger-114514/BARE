@@ -3545,10 +3545,17 @@ ARI_special_training_decisions = {
 			clr_country_flag = ARI_special_training_ongoing
 			subtract_from_variable = { ARI_special_training_decisions_count = 1 }
 			army_experience = 25
-			custom_effect_tooltip = ARI_CQB_training_tt
-			set_technology = {
-				ARI_CQB_training = 1
+			add_unit_bonus = {
+				infantry_sf = {
+					urban = {
+						attack = 0.3
+						defence = 0.1
+						movement = 0.1
+					}
+				}
 			}
+			add_to_variable = { ARI_special_force_modifier_army_attack_factor = 0.02 }
+			custom_effect_tooltip = ARI_CQB_training_tt
 		}
 		ai_will_do = {
 			base = 10
