@@ -1331,6 +1331,7 @@ ARI_foreign_operations_decisions = {
 			set_variable = { ARI_intelligence_in_GEH = 0 }
 			set_variable = { ARI_min_intelligence_in_GEH = 0 }
 			add_ideas = ARI_intelligence_in_GEH_0
+			country_event = ARI_beatrice.9
 			set_country_flag = ARI_intelligence_Gehenna_branch_established
 		}
 		ai_will_do = {

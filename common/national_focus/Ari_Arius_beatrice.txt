@@ -1147,7 +1147,6 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			country_event = ARI_beatrice.9
 			#解锁对外行动决议
 			unlock_decision_tooltip = {
 				decision = ARI_intelligence_Gehenna_branch
