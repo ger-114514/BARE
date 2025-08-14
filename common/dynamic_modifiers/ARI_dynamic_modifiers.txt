@@ -117,6 +117,7 @@ ARI_nihilism = {
 	supply_consumption_factor = ARI_nihilism_supply_consumption_factor
 	ARI_materials_monthly_modifier = ARI_nihilism_ARI_materials_monthly_modifier
 	non_puppet_opnion = -1000
+	custom_effect_tooltip = ARI_nihilism_cant_market_tooltip
 }
 #复仇之焰
 ARI_flame_of_revenge = {

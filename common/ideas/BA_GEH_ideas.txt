@@ -628,7 +628,7 @@ ideas = {
 
             modifier = {
                 production_factory_max_efficiency_factor = 0.15
-                production_factory_efficiency_gain_factor = 0.1
+                
             }
         }
 
@@ -659,7 +659,7 @@ ideas = {
 
             modifier = {
                 industrial_capacity_factory = 0.1
-                production_factory_efficiency_gain_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.1
             }
         }
 
@@ -689,8 +689,8 @@ ideas = {
 
             modifier = {
                 army_org_factor = 0.1
-                supply_consumption_factor = -0.2
-                out_of_supply_factor = -0.2
+                supply_consumption_factor = -0.1
+                out_of_supply_factor = -0.1
             }
         }
         
