@@ -162,6 +162,16 @@ BA_Great_Game_decisions = {
 						set_temp_variable = { enemy = FROM.OVERLORD }
 						Great_Game_invite_to_ally = yes
 					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = offer_military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = no
+					}
 				}
 				FROM.OVERLORD = {
 					set_variable = { Great_Game_invader = ROOT }
@@ -171,6 +181,16 @@ BA_Great_Game_decisions = {
 					set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
 					set_country_flag = involved_in_Great_Game_as_defender
 					set_country_flag = involved_in_Great_Game_as_ally_leader
+					diplomatic_relation = {
+						country = ROOT
+						relation = offer_military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = no
+					}
 					if = {
 						limit = {
 							Great_Game_can_be_CEN_overlord = yes
@@ -302,6 +322,16 @@ BA_Great_Game_decisions = {
 						set_temp_variable = { enemy = FROM.OVERLORD }
 						Great_Game_invite_to_ally = yes
 					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = offer_military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = no
+					}
 				}
 				FROM.OVERLORD = {
 					set_variable = { Great_Game_invader = ROOT }
@@ -311,6 +341,16 @@ BA_Great_Game_decisions = {
 					set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
 					set_country_flag = involved_in_Great_Game_as_defender
 					set_country_flag = involved_in_Great_Game_as_ally_leader
+					diplomatic_relation = {
+						country = ROOT
+						relation = offer_military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = no
+					}
 					country_event = Great_Game.1
 				}
 			}
@@ -394,6 +434,16 @@ BA_Great_Game_decisions = {
 						set_temp_variable = { enemy = FROM.OVERLORD }
 						Great_Game_invite_to_ally = yes
 					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = offer_military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = no
+					}
 				}
 				FROM.OVERLORD = {
 					set_variable = { Great_Game_invader = ROOT }
@@ -403,6 +453,16 @@ BA_Great_Game_decisions = {
 					set_variable = { Great_Game_power_score_faction = Great_Game_power_score }
 					set_country_flag = involved_in_Great_Game_as_defender
 					set_country_flag = involved_in_Great_Game_as_ally_leader
+					diplomatic_relation = {
+						country = ROOT
+						relation = offer_military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = no
+					}
 					if = {
 						limit = {
 							Great_Game_can_be_CEN_overlord = yes

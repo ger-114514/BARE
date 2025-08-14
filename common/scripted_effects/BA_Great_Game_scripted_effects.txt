@@ -150,6 +150,32 @@ Great_Game_invite_to_ally = {
 			set_variable = { Great_Game_invade_target_overlord = var:leader:Great_Game_invade_target_overlord }
 			set_variable = { Great_Game_enemy = var:leader:Great_Game_enemy }
 			set_variable = { Great_Game_ally_leader = var:leader }
+			
+		}
+		var:enemy = {
+			diplomatic_relation = {
+				country = var:ally
+				relation = offer_military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = var:ally
+				relation = military_access
+				active = no
+			}
+			for_each_scope_loop = {
+				array = Great_Game_temp_allies
+				diplomatic_relation = {
+					country = var:ally
+					relation = offer_military_access
+					active = no
+				}
+				diplomatic_relation = {
+					country = var:ally
+					relation = military_access
+					active = no
+				}
+			}
 		}
 	}
 }

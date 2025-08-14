@@ -31,6 +31,13 @@ on_actions = {
 								original_tag = PREV
 								is_ally_with = PREV
 								has_war_with = PREV
+								Great_Game_is_involved = yes
+								AND = {
+									is_subject = yes
+									OVERLORD = {
+										Great_Game_is_involved = yes
+									}
+								}
 							}
 						}
 						diplomatic_relation = {
