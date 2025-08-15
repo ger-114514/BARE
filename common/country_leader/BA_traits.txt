@@ -438,7 +438,13 @@ leader_traits = {
         custom_modifier_tooltip = student_of_kakugo_tt
     }
 
+    #空地协调委员会
+    TRI_commission_of_air_ground_trait = {
+        random = no
 
+        special_forces_attack_factor = 0.15
+        special_forces_cap_flat = 10
+    }
     
 ###格黑娜###
     ##彩单##
