@@ -869,7 +869,7 @@ TRI_bill_voting_decisions_categories = {
 		days_remove = 180
 		days_re_enable = 60
 		modifier = {
-			army_experience = 0.45
+			experience_gain_army = 0.45
 		}
 		complete_effect = {
 			set_country_flag = TRI_temp_bill_activated
@@ -887,7 +887,7 @@ TRI_bill_voting_decisions_categories = {
 		days_remove = 180
 		days_re_enable = 60
 		modifier = {
-			air_experience = 0.45
+			experience_gain_air = 0.45
 		}
 		complete_effect = {
 			set_country_flag = TRI_temp_bill_activated

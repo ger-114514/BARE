@@ -81,10 +81,10 @@ leader_traits = {
     deja_vu = {
         random = no
         
-        experience_gain_army = 0.3
+        max_planning_factor = 0.1
+        army_org_factor = 0.1
         breakthrough_factor = 0.1
-        planning_speed = 0.25
-        max_planning_factor = 0.05
+        army_strength_factor = 0.1
     }
     #温和的领袖
     TRI_nagisa_Mild_leader = {

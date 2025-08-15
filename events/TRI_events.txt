@@ -166,7 +166,7 @@ country_event = {
             set_variable = { TRI_parliament_negative_event_chance = 3 }
             country_event = {
                 id = TRI_political_focus.0
-                days = 14
+                months = 1
             }
             
         }
