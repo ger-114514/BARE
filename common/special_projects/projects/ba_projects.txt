@@ -39,7 +39,7 @@ sp_ba_T1_opaz_project = {
     project_output = {
         country_effects = {
             set_technology = {
-               T2_opaz = 1
+               T1_opaz = 1
             }
         }
         facility_state_effects = {
