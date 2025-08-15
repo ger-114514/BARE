@@ -113,13 +113,14 @@ equipments = {
 		priority = 20	
 	}
 
-	support_security_equipment = { #不对称作战装备
+	support_security_equipment = { #专业保障器材
 		year = 2000
 
 		is_archetype = yes
 		picture = archetype_support_security_equipment
 		is_buildable = no
 		type = {
+			motorized
 			support
 		}
 		group_by = archetype

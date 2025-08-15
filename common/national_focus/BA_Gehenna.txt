@@ -3384,6 +3384,10 @@ focus_tree = {
         relative_position_id = GEH_investigate_production
         prerequisite = {  focus = GEH_investigate_production }
 
+        available = {
+            num_of_controlled_factories > 119
+        }
+
         completion_reward = {
 
             add_research_slot = 1
@@ -3803,6 +3807,10 @@ focus_tree = {
 
         relative_position_id = GEH_infrastructure_built
         prerequisite = {  focus = GEH_infrastructure_built }
+
+        available = {
+           num_of_controlled_factories > 99 
+        }
 
         completion_reward = {
             add_stability = -0.05

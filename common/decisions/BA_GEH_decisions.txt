@@ -645,4 +645,224 @@ GEH_dualHeaded = {
 			}
 		}
 	}
+
+
+	GEH_dualHeaded_hina_enforce_discipline = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+		
+			
+		}
+
+		days_remove = 14
+		days_re_enable = 90
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 500 }
+			command_power > 30
+		}
+
+		custom_cost_text = custom_cost_GEH_dualHeaded_hina_enforce_discipline
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_command_power = -30
+			set_country_flag = GEH_dualHeaded_changing
+		}
+
+		remove_effect = {
+			army_experience = 15
+			hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.05
+                }
+                subtract_from_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+            }
+			clr_country_flag = GEH_dualHeaded_changing
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Left_Tooltip
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.6
+					compare = greater_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+
+
+	
+	GEH_dualHeaded_hina_job_sharing = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+		
+			
+		}
+
+		cost = 50
+
+		days_re_enable = 120
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.05
+                }
+                subtract_from_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+            }
+
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Left_Tooltip
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.6
+					compare = greater_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+
+
+
+	GEH_dualHeaded_hina_let_makoto = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+		
+			
+		}
+
+		cost = 75
+
+		days_remove = 28
+		days_re_enable = 120
+
+		modifier = {
+			power_balance_weekly = 0.02
+			GEH_dualHeaded_Hina_Weekly_factor = 0.03
+		}
+
+		complete_effect = {
+			set_country_flag = GEH_dualHeaded_changing
+		}
+
+		remove_effect = {
+			clr_country_flag = GEH_dualHeaded_changing
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.6
+					compare = greater_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+		GEH_dualHeaded_hina_let_makoto = {
+		visible = {
+			
+			has_completed_focus = GEH_Steady_progress
+		}
+		available = {
+		
+			
+		}
+
+		cost = 100
+
+		days_re_enable = 210
+
+		modifier = {
+
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_stability = 0.03
+			add_war_support = 0.03
+			hidden_effect = {
+                set_temp_variable = {
+                    BARE_duelHead_Chance_temp = 0.1
+                }
+                subtract_from_variable = {
+                    GEH_dualHeaded_Influence_Factor = BARE_duelHead_Chance_temp
+                }
+                GEH_dualHeaded_Influence_Factor_Change = yes
+            }
+
+            custom_effect_tooltip = GEH_dualHeaded_Influence_Factor_Change_Text_Left_Tooltip
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				check_variable = {
+					var = GEH_dualHeaded_Influence_Factor
+					value = 0.6
+					compare = greater_than
+				}
+				not = {
+					has_country_flag = GEH_dualHeaded_changing
+				}
+			}
+		}
+	}
+
+	
 }

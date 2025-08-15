@@ -80,13 +80,15 @@ GEH_dualHeaded_makoto_send_away_hina_desc: "通过安排一些特训任务，我
 
 GEH_dualHeaded_hina_enforce_discipline: "整肃风纪委员会纪律"
 GEH_dualHeaded_hina_enforce_discipline_desc: "“你就是这么马马虎虎的做风纪委员的工作吗？真可耻！”"
+custom_cost_GEH_dualHeaded_hina_enforce_discipline: "£infantry_equipment_text_icon §Y500§!  £command_power  §Y30§!"
+custom_cost_GEH_dualHeaded_hina_enforce_discipline_blocked: "£infantry_equipment_text_icon §R500§!  £command_power  §R30§!"
 
 GEH_dualHeaded_hina_job_sharing: "分担日奈的工作"
 GEH_dualHeaded_hina_job_sharing_desc: "“你心情很好嘛。”\n“那是当然的，大家都在尽自己的责任，日奈也一直在努力着，我也是加把劲骑士！”"
 
 
-GEH_dualHeaded_hina_job_sharing: "放任真琴整活"
-GEH_dualHeaded_hina_job_sharing_desc: "反正风纪委始终都是要给真琴整的活擦屁股，不如让我们晚点再擦，让真琴再难堪一点。"
+GEH_dualHeaded_hina_let_makoto: "放任真琴整活"
+GEH_dualHeaded_hina_let_makoto_desc: "反正风纪委始终都是要给真琴整的活擦屁股，不如在她整活时我们晚点再擦，让真琴再难堪一点。"
 
-GEH_dualHeaded_hina_job_sharing: "请求与老师的合作"
-GEH_dualHeaded_hina_job_sharing_desc: "我们发现，只要日奈和老师在一起，她的心情都会变得舒畅起来，压力也减轻了不少，我们可以设法多安排一点和老师合作的机会，让日奈放松一下。"
+GEH_dualHeaded_hina_work_with_sensei: "请求与老师的合作"
+GEH_dualHeaded_hina_work_with_sensei_desc: "我们发现，只要日奈和老师在一起，她的心情都会变得舒畅起来，压力也减轻了不少，我们可以设法多安排一点和老师合作的机会，让日奈放松一下。"
