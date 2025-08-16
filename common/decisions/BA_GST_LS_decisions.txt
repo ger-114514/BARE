@@ -1331,7 +1331,10 @@ GST_LS_XC_DEBUFF_category = {
 		on_map_mode = map_and_decisions_view
     	target_trigger = {
 			FROM = {
-				has_dynamic_modifier = { modifier = TRI_ARI_GEH_JingPiLiJie }
+				has_dynamic_modifier = {
+					modifier = TRI_ARI_GEH_JingPiLiJie
+					scope = ARI
+				}
 			}
 			if = {
 				limit = {

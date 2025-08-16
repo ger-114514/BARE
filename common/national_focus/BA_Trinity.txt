@@ -2146,7 +2146,7 @@ focus_tree = {
 						remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
 						remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
 						remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
-						set_variable = { eden_broken_weekly_stability = -0.25 } #稳定度修正
+						set_variable = { eden_broken_weekly_stability = -0.002 } #稳定度修正
 						set_variable = { eden_broken_factory_output = -0.1 } #工厂产出修正
 						set_variable = { eden_broken_advisor_cost = 1 } #顾问花费修正
 						set_variable = { eden_broken_army_chief_cost = 1 } #陆军总司令花费修正

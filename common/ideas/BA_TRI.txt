@@ -106,6 +106,9 @@ ideas = {
                 political_power_cost = 0.2
                 TRI_unity_weekly_modifier = -1
             }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
         }
         TRI_prepare_for_meeting_2_1 = {
             picture = "GFX_TRI_prepare_for_meeting"
@@ -118,6 +121,9 @@ ideas = {
                 TRI_unity_weekly_modifier = -2
                 Eden_treaty_progress_modifier = 3
             }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
         }
         TRI_prepare_for_meeting_2_2 = {
             picture = "GFX_TRI_prepare_for_meeting"
@@ -126,6 +132,9 @@ ideas = {
                 stability_factor = -0.1
                 political_power_cost = 0.2
                 Eden_treaty_progress_modifier = 1
+            }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
         }
         TRI_prepare_for_meeting_3 = {
@@ -139,6 +148,9 @@ ideas = {
                 TRI_unity_weekly_modifier = -1
                 Eden_treaty_progress_modifier = 4
             }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
         }
         TRI_prepare_for_meeting_4 = {
             picture = "GFX_TRI_prepare_for_meeting"
@@ -149,6 +161,9 @@ ideas = {
                 stability_factor = 0.05
                 political_power_cost = 0.3
                 Eden_treaty_progress_modifier = 4
+            }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
         }
 

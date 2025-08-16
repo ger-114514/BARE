@@ -102,9 +102,10 @@ on_actions = {
 	}
 
 
-	on_daily = {
+	on_daily_KRO = {
 		effect = {
-			KRO = {
+			if = {
+				limit = { has_global_flag = Cathedral_war_backwater }
 				for_each_scope_loop = {
 					array = global.GST_JS_ZBH
 					if = {
@@ -128,7 +129,6 @@ on_actions = {
 					}
 				}
 			}
-
 		}
 	}
 }
