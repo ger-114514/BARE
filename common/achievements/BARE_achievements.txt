@@ -13,7 +13,7 @@ TRI_greetings_achievement = {
 	happened = {
 		custom_override_tooltip = {
 			tooltip = TRI_greetings_achievement_condition_tt
-			hidden_effect = {
+			hidden_trigger = {
 				date > 2019.01.02
 			}
 		}
@@ -33,7 +33,7 @@ TRI_politic_allies_achievement = {
 			tooltip = TRI_politic_allies_achievement_condition_tt
 			amount_taken_ideas = {
 				amount > 2
-				slots = {
+				government = {
 					political_advisor
 				}
 			}
