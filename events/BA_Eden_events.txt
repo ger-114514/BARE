@@ -43,6 +43,8 @@ news_event = {
         trigger = {
             original_tag = TRI
         }
+        set_temp_variable = { target = GEH }
+        Great_Game_add_cannot_invade = yes
 
 		ai_chance = {
 			base = 100
@@ -54,6 +56,8 @@ news_event = {
         trigger = {
             original_tag = GEH
         }
+        set_temp_variable = { target = TRI }
+        Great_Game_add_cannot_invade = yes
 
 		ai_chance = {
 			base = 100
@@ -216,7 +220,6 @@ country_event = {
     #picture =
 
     immediate = {
-        set_global_flag = BA_2st_eden_pact_end
     }
 
     option = {
@@ -224,6 +227,7 @@ country_event = {
         trigger = {
             original_tag = TRI
         }
+        BA_TRI_remove_paranoia_system = yes
         custom_effect_tooltip =  event_immediately_happened_tt
         effect_tooltip = {
             140 = {

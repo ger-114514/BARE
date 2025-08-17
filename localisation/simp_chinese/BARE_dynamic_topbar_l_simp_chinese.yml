@@ -63,3 +63,6 @@
  TRI_kirifuji_nagisa_paranoia_level: "桐藤渚偏执度"
  TRI_kirifuji_nagisa_paranoia_level_text: "[?TRI_nagisa_paranoia_total|R0]"
  TRI_kirifuji_nagisa_paranoia_level_tt: "$TRI_paranoia_text$\n$TRI_paranoia_nagisa_state$"
+ TRI_unity_data: "圣三一团结度"
+ TRI_unity_data_text: "[?TRI_unity|Y0]"
+ TRI_unity_data_tt: "团结度：[?TRI_unity|Y0]"

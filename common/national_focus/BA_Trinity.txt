@@ -523,7 +523,6 @@ focus_tree = {
 					add_stability = 0.05
 					set_global_flag = BA_2st_eden_pact_TRI_leader
 					Eden_treaty_start = yes
-					news_event = Eden_pact.1001
 					#桐藤渚偏执度-10%
 					TRI_paranoia_decrease_10 = yes
 					add_ideas = TRI_prepare_for_meeting
@@ -571,9 +570,18 @@ focus_tree = {
 						idea = TRI_2st_eden_pact_modifier
 						days = 120
 					}
-					swap_ideas = {
-						remove_idea = TRI_prepare_for_meeting
-						add_idea = TRI_prepare_for_meeting_2
+					if = {
+						limit = { has_idea = TRI_prepare_for_meeting }
+						swap_ideas = {
+							remove_idea = TRI_prepare_for_meeting
+							add_idea = TRI_prepare_for_meeting_2_1
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = TRI_prepare_for_meeting_2_2
+							add_idea = TRI_prepare_for_meeting_3
+						}
 					}
 				}
 			}
@@ -613,12 +621,21 @@ focus_tree = {
 					TRI_paranoia_decrease_10 = yes
 					set_temp_variable = { loyalty_change = 0.03 }
 					TRI_parliament_all_loyalty_change = yes
-					swap_ideas = {
-						remove_idea = TRI_prepare_for_meeting_2
-						add_idea = TRI_prepare_for_meeting_3
+					if = {
+						limit = { has_idea = TRI_prepare_for_meeting }
+						swap_ideas = {
+							remove_idea = TRI_prepare_for_meeting
+							add_idea = TRI_prepare_for_meeting_2_2
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = TRI_prepare_for_meeting_2_1
+							add_idea = TRI_prepare_for_meeting_3
+						}
 					}
 					#在议会决议栏中添加宣传决议组：效果为一次性花费pp和电话，提升稳定度，社团团结度或支持度。
-					set_country_flag = TRI_compaign_for_meeting
+					set_country_flag = TRI_precise_and_perfect_compaign
 					unlock_decision_tooltip = TRI_compaign_for_meeting
 				}
 			}
@@ -627,6 +644,7 @@ focus_tree = {
 				icon = GFX_goal_TRI_steady_as_she_goes
 				relative_position_id = TRI_deploy_materials
 				prerequisite = { focus = TRI_deploy_materials }
+				prerequisite = { focus = TRI_precise_and_perfect_compaign }
 				
 				cost = 5
 				x = 0
@@ -663,6 +681,10 @@ focus_tree = {
 					}
 					random_owned_controlled_state = {
 						add_extra_state_shared_building_slots = 1
+					}
+					swap_ideas = {
+						remove_idea = TRI_prepare_for_meeting_3
+						add_idea = TRI_prepare_for_meeting_4
 					}
 				}
 			}
@@ -2124,7 +2146,7 @@ focus_tree = {
 						remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
 						remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
 						remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
-						set_variable = { eden_broken_weekly_stability = -0.25 } #稳定度修正
+						set_variable = { eden_broken_weekly_stability = -0.002 } #稳定度修正
 						set_variable = { eden_broken_factory_output = -0.1 } #工厂产出修正
 						set_variable = { eden_broken_advisor_cost = 1 } #顾问花费修正
 						set_variable = { eden_broken_army_chief_cost = 1 } #陆军总司令花费修正
@@ -3388,7 +3410,7 @@ focus_tree = {
 							slot = air_chief
 							idea_token = TRI_commission_of_air_ground_ac
 							traits = {
-								army_commando_3
+								TRI_commission_of_air_ground_trait
 							}
 							ai_will_do = {
 								base = 1

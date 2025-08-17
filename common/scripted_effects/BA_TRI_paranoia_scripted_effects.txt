@@ -322,10 +322,10 @@ TRI_paranoia_check_association_state = {
 }
 #移除偏执度系统
 BA_TRI_remove_paranoia_system = {
-	custom_effect_tooltip = BA_TRI_remove_paranoia_system_tt
-	hidden_effect = {
-		if = {
-			limit = { has_country_flag = TRI_paranoia_system_active }
+	if = {
+		limit = { has_country_flag = TRI_paranoia_system_active }
+		custom_effect_tooltip = BA_TRI_remove_paranoia_system_tt
+		hidden_effect = {
 			remove_from_array = { Root.topbar_array = token:TRI_kirifuji_nagisa_paranoia_level } 
 			clear_array = TRI_paranoia_association
 			clr_country_flag = TRI_paranoia_system_active

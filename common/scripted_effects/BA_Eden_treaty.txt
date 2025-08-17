@@ -121,54 +121,8 @@ Eden_treaty_next_phase = {
 		else = {
 			clr_global_flag = Eden_treaty_negotiation_ongoing
 			set_global_flag = Eden_treaty_negotiation_completed
+        	set_global_flag = BA_2st_eden_pact_end
 			activate_mission = Eden_treaty_to_be_signed
-			if = {
-				limit = {
-					TRI = {
-						has_war_with = GEH
-						Great_Game_is_involved = yes
-					}
-				}
-				TRI = {
-					white_peace = GEH
-					for_each_scope_loop = {
-						array = Great_Game_temp_allies
-						Great_Game_get_coins = yes
-						clr_country_flag = involved_in_Great_Game_as_attacker
-						clr_country_flag = involved_in_Great_Game_as_defender
-						clear_variable = Great_Game_invader
-						clear_variable = Great_Game_invade_target
-						clear_variable = Great_Game_invade_target_overlord
-						clear_variable = Great_Game_enemy
-					}
-					clear_array = Great_Game_temp_allies
-					clr_country_flag = involved_in_Great_Game_as_attacker
-					clr_country_flag = involved_in_Great_Game_as_defender
-					clear_variable = Great_Game_invader
-					clear_variable = Great_Game_invade_target
-					clear_variable = Great_Game_invade_target_overlord
-					clear_variable = Great_Game_enemy
-				}
-				GEH = {
-					for_each_scope_loop = {
-						array = Great_Game_temp_allies
-						Great_Game_get_coins = yes
-						clr_country_flag = involved_in_Great_Game_as_attacker
-						clr_country_flag = involved_in_Great_Game_as_defender
-						clear_variable = Great_Game_invader
-						clear_variable = Great_Game_invade_target
-						clear_variable = Great_Game_invade_target_overlord
-						clear_variable = Great_Game_enemy
-					}
-					clear_array = Great_Game_temp_allies
-					clr_country_flag = involved_in_Great_Game_as_attacker
-					clr_country_flag = involved_in_Great_Game_as_defender
-					clear_variable = Great_Game_invader
-					clear_variable = Great_Game_invade_target
-					clear_variable = Great_Game_invade_target_overlord
-					clear_variable = Great_Game_enemy
-				}
-			}
             140 = {
                 set_demilitarized_zone = yes
             }
@@ -190,14 +144,10 @@ Eden_treaty_next_phase = {
 			clear_variable = global.Eden_treaty_phase
 			clear_variable = global.Eden_treaty_progress
 			TRI = {
-				set_temp_variable = { target = GEH }
-				Great_Game_add_cannot_invade = yes
 				country_event = Eden_pact.100
 				clear_variable = Eden_treaty_weights
 			}
 			GEH = {
-				set_temp_variable = { target = TRI }
-				Great_Game_add_cannot_invade = yes
 				country_event = Eden_pact.100
 				clear_variable = Eden_treaty_weights
 			}

@@ -102,21 +102,39 @@ ideas = {
         TRI_prepare_for_meeting = {
             picture = "GFX_TRI_prepare_for_meeting"
             modifier = {
-                stability_factor = 0.05
+                stability_factor = -0.1
                 political_power_cost = 0.2
                 TRI_unity_weekly_modifier = -1
             }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
         }
-        TRI_prepare_for_meeting_2 = {
+        TRI_prepare_for_meeting_2_1 = {
             picture = "GFX_TRI_prepare_for_meeting"
             modifier = {
                 consumer_goods_factor = 0.15
                 production_speed_buildings_factor = 0.1
                 production_factory_efficiency_gain_factor = 0.05
-                stability_factor = 0.05
+                stability_factor = -0.1
                 political_power_cost = 0.4
                 TRI_unity_weekly_modifier = -2
                 Eden_treaty_progress_modifier = 3
+            }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
+            }
+        }
+        TRI_prepare_for_meeting_2_2 = {
+            picture = "GFX_TRI_prepare_for_meeting"
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = -0.1
+                political_power_cost = 0.2
+                Eden_treaty_progress_modifier = 1
+            }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
         }
         TRI_prepare_for_meeting_3 = {
@@ -125,10 +143,13 @@ ideas = {
                 consumer_goods_factor = 0.1
                 production_speed_buildings_factor = 0.1
                 production_factory_efficiency_gain_factor = 0.05
-                stability_factor = 0.05
+                stability_factor = -0.1
                 political_power_cost = 0.4
                 TRI_unity_weekly_modifier = -1
                 Eden_treaty_progress_modifier = 4
+            }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
         }
         TRI_prepare_for_meeting_4 = {
@@ -137,9 +158,12 @@ ideas = {
                 consumer_goods_factor = 0.1
                 production_speed_buildings_factor = 0.1
                 production_factory_efficiency_gain_factor = 0.05
-                stability_factor = 0.2
+                stability_factor = 0.05
                 political_power_cost = 0.3
                 Eden_treaty_progress_modifier = 4
+            }
+            cancel = {
+                has_global_flag = Eden_treaty_negotiation_completed
             }
         }
 

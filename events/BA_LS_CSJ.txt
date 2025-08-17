@@ -238,6 +238,18 @@ country_event = { #初次袭击简报
 					modifier = TRI_BeiAliWuSiTuXi
 				}
 			}
+			683 = {
+				transfer_state_to = ARI #转移控制者和拥有者给予指定TAG
+				add_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
+			684 = {
+				transfer_state_to = ARI #转移控制者和拥有者给予指定TAG
+				add_dynamic_modifier = {
+					modifier = TRI_BeiAliWuSiTuXi
+				}
+			}
 			##不需要这个了
 			#activate_decision = GST_ARI_defend_cathedral
 			
