@@ -430,6 +430,10 @@ spriteTypes = {
 	#6.18新增
 	#以战止戈
 	#为会谈做出的整备
+	SpriteType = {
+		name = "TRI_2st_eden_pact_modifier"
+		texturefile = "gfx/interface/ideas/TRI/TRI_2st_eden_pact_modifier.dds"
+	}
 
 	#不谐之音被订正？
 	SpriteType = {
@@ -457,14 +461,26 @@ spriteTypes = {
 	#向下议院妥协中
 	#正在铺展的“影子”计划
 	#扫除威胁！
+	SpriteType = {
+		name = "GFX_idea_TRI_sweep_threat"
+		texturefile = "gfx/interface/ideas/TRI/TRI_sweep_threat.dds"
+	}
 	#维持军备
+	SpriteType = {
+		name = "GFX_idea_TRI_prepare_for_war"
+		texturefile = "gfx/interface/ideas/TRI/TRI_prepare_for_war.dds"
+	}
 	#重视稳定
+	SpriteType = {
+		name = "GFX_idea_TRI_focus_on_stability"
+		texturefile = "gfx/interface/ideas/TRI/TRI_focus_on_stability.dds"
+	}
 	#友谊，光荣与未来！
 	#胜利，信任与团结！
 
 	#进行中的行政重整
 	SpriteType = {
-		name = "GFX_TRI_reforming_administration_system"
+		name = "GFX_idea_TRI_reforming_administration_system"
 		texturefile = "gfx/interface/ideas/TRI/TRI_reforming_administration_system.dds"
 	}
 
@@ -477,14 +493,6 @@ spriteTypes = {
 		name = "GFX_eden_treaty_step_normal_modifier"
 		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
 	}
-
-		#伊甸条约阶段0 1 2 3 5图标
-	SpriteType = {
-		name = "GFX_idea_eden_treaty_step_normal_modifier"
-		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
-	}
-
-
 	#伊甸条约阶段4图标
 	SpriteType = {
 		name = "GFX_eden_treaty_step_bad_modifier"
@@ -493,7 +501,15 @@ spriteTypes = {
 
 	#毁灭性打击
 	#混乱的前线
+	SpriteType = {
+		name = "TRI_chaotic_frontline"
+		texturefile = "gfx/interface/ideas/TRI/TRI_chaotic_frontline.dds"
+	}
 	#携手并肩的前线
+	SpriteType = {
+		name = "TRI_chaotic_frontline_2"
+		texturefile = "gfx/interface/ideas/TRI/TRI_chaotic_frontline_2.dds"
+	}
 
 	#圣三一情报局
 	SpriteType = {
@@ -522,7 +538,7 @@ spriteTypes = {
 	#团结度修正
 	#焦点修正
 	#地区稳定度
-	#TRI_rebuilding_subsidy_modifier
+	#灾后重建津贴
 	#物资减少
 	#额外物资调配
 
@@ -549,27 +565,28 @@ spriteTypes = {
 	#################
 	######渚大林######
 	#################
+	#遭到审查的文职部员
 	#受到严格审查的陆军
 	SpriteType = {
-		name = "GFX_TRI_inspected_army"
+		name = "GFX_idea_TRI_inspected_army"
 		texturefile = "gfx/interface/ideas/TRI/TRI_inspected_army.dds"
 	}
 
 	#减少军事演习
 	SpriteType = {
-		name = "GFX_TRI_training_activities_curtailed"
+		name = "GFX_idea_TRI_training_activities_curtailed"
 		texturefile = "gfx/interface/ideas/TRI/TRI_training_activities_curtailed.dds"
 	}
 
 	#受到严格审查的空军
 	SpriteType = {
-		name = "GFX_TRI_inspected_airforce"
+		name = "GFX_idea_TRI_inspected_airforce"
 		texturefile = "gfx/interface/ideas/TRI/TRI_inspected_airforce.dds"
 	}
 
 	#暂停的地面训练
 	SpriteType = {
-		name = "GFX_TRI_ground_based_training"
+		name = "GFX_idea_TRI_ground_based_training"
 		texturefile = "gfx/interface/ideas/TRI/TRI_ground_based_training.dds"
 	}
 
