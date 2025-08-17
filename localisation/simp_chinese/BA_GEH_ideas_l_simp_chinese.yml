@@ -104,12 +104,12 @@ GEH_daily_seize_funds: "被万魔殿扣押资金"
 GEH_daily_bath_water: "70度的洗澡水"
 GEH_daily_chef: "格黑娜厨师速成班"
 GEH_daily_gold_metallurgy: "炼金合成兽"
-GEH_daily_abydos_compensation_in: "向阿拜多斯赔偿"
-GEH_daily_abydos_compensation_out: "来自格黑娜的赔款"
+GEH_daily_abydos_compensation_in: "向阿拜多斯赔偿" #不做
+GEH_daily_abydos_compensation_out: "来自格黑娜的赔款"  #不做
 GEH_daily_mass_production_tanks: "大规模坦克生产"
 GEH_daily_armored_technology_revolution: "装甲技术革命"
-GEH_daily_resource_purchase: "资源采购"
-GEH_daily_miss_makoto: "失踪的真琴"
+GEH_daily_resource_purchase: "资源采购" #可以不做，这个是凑数用的
+GEH_daily_miss_makoto: "失踪的真琴" #不做
 GEH_daily_lecture: "食堂演讲"
 
 #动态修正
@@ -139,5 +139,5 @@ GEH_armed_food_convoys: "武装食品运输队"
 GEH_daytoday_work_of_discipline_committee: "风纪委员会的日常"
 GEH_food_time_of_gourmet_research: "格黑娜的美食时光"
 GEH_hot_spring_time_of_hot_spring: "格黑娜的温泉时光"
-GEH_end_of_the_paving_stone: "铺路石的末路"
+GEH_end_of_the_paving_stone: "铺路石的末路" #可以不做，这个是凑数用的
 GEH_90degrees_of_water: "生命之水"

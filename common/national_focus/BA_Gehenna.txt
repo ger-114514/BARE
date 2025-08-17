@@ -631,6 +631,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
+            add_offsite_building = { type = industrial_complex level = 2 }
             hidden_effect = {
                 set_temp_variable = {
                     BARE_duelHead_Chance_temp = 0.06
@@ -1898,9 +1899,16 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_ECO }
 
         completion_reward = {
-            army_experience = 20
-            air_experience = 20
-
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 1000
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 100
+            }
+            army_experience = 75
+            air_experience = 50
         }
     }
 
@@ -1920,10 +1928,10 @@ focus_tree = {
             army_experience = 20
 
             add_doctrine_cost_reduction = {
-		     name = land_doc_bonus
-             cost_reduction = 0.5
-             uses = 1
-             category = land_doctrine
+                name = land_doc_bonus
+                cost_reduction = 0.5
+                uses = 1
+                category = land_doctrine
 	        }
         }
 
@@ -1946,14 +1954,20 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_People_oriented}
 
         completion_reward = {
-			add_to_variable = { GEH_army_speed_factor = 0.15 }
+			add_to_variable = { GEH_army_speed_factor = 0.1 }
 			custom_effect_tooltip = GEH_Speed_is_everything_tt
             add_ideas = {GEH_Speed_is_everything}
-            add_tech_bonus = {
-				bonus = 0.3
-				uses = 2
-				category = light_tank
+
+             add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
 			}
+
+            add_tech_bonus = {
+                bonus = 1
+                uses = 2
+                category = motorized
+            }
 
 		}
     }
@@ -1972,7 +1986,7 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_Overcoming_difficulties }
         completion_reward = {
          add_to_variable = { GEH_no_supply_grace = 48 }
-         add_to_variable = { GEH_org_loss_when_moving = -0.2 }
+         add_to_variable = { GEH_org_loss_when_moving = -0.15 }
          custom_effect_tooltip = GEH_Flexible_tt
         }
     }
@@ -2005,21 +2019,26 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_Speed_is_everything }
         mutually_exclusive = { focus = GEH_People_oriented}
         completion_reward = {
-            add_tech_bonus = {
-                bonus = 1
-				ahead_reduction = 2
-				uses = 1
-				category = heavy_tank
-
+            add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
 			}
+            
 
             add_tech_bonus = {
-				bonus = 0.3
+				bonus = 1
 				uses = 2
 				category = armor
 			}
+            add_to_variable = {
+                GEH_breakthrough_factor = 0.1
+            }
 
+            add_to_variable = {
+                GEH_max_planing_factor = 0.1
+            }
 
+            custom_effect_tooltip = GEH_Breakthrough_tt
 
 
         }
@@ -2090,9 +2109,20 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_Breakthrough }
         mutually_exclusive = { focus = GEH_Speed_is_everything }
         completion_reward = {
-        add_to_variable = { GEH_army_org_factor = 0.2 }
+        add_to_variable = { GEH_army_org_factor = 0.1 }
         add_to_variable = { GEH_land_reinforce_rate = 0.02 }
-        add_to_variable = { GEH_army_morale_factor = 0.1 }
+        add_to_variable = { GEH_army_morale_factor = 0.05 }
+        
+
+        add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 1
+		}
+        add_tech_bonus = {
+			bonus = 1
+			uses = 2
+			category = infantry_equipment
+		}
         # custom_effect_tooltip = GEH_People_oriented_skip_tt
         # show_ideas_tooltip = GEH_iori
         custom_effect_tooltip = GEH_People_oriented_tt
@@ -2114,7 +2144,7 @@ focus_tree = {
         completion_reward = {
         #  custom_effect_tooltip = GEH_Towering_mountain_skip_tt
         #  show_ideas_tooltip = GEH_haruka_pa
-         add_to_variable = { GEH_army_org_factor = 0.2 }
+         add_to_variable = { GEH_army_org_factor = 0.1 }
          add_ideas = { GEH_Towering_mountain_ideas }
          custom_effect_tooltip = GEH_Towering_mountain_tt
         }
@@ -2147,8 +2177,12 @@ focus_tree = {
         y = 1
 
         available = {
-            has_army_experience > 150
-            surrender_progress > 0.1
+            custom_trigger_tooltip = {
+                tooltip = GEH_Hundred_Battles_trigger_tt
+                check_variable = {
+                    GEH_Hundred_Battles_combat_var > 499
+                }
+            }
         }
         search_filters = { FOCUS_FILTER_ECO }
         relative_position_id = GEH_Black_Ball_Express
@@ -2169,7 +2203,6 @@ focus_tree = {
 			effect_tooltip = {
 				add_ideas = GEH_Reorganization_of_the_troops
 			}
-            army_experience = -150 
 
 			#(Complete Effect)
 			custom_effect_tooltip = SOV_focus_complete_effect_tt
@@ -2285,7 +2318,7 @@ focus_tree = {
         completion_reward = {
             air_experience = 20
             add_tech_bonus = {
-				bonus = 0.3
+				bonus = 1
 				uses = 2
 				category = uav
 			}
@@ -2305,12 +2338,21 @@ focus_tree = {
 
         prerequisite = {  focus = GEH_Conquer_the_sky }
          completion_reward = {
+
             
+            add_breakthrough_progress = {
+                specialization = specialization_air
+                value = 1
+            }
+
+            add_to_variable = { GEH_air_attack_factor = 0.1 }
+            custom_effect_tooltip = GEH_Experimental_Technology_tt
             add_tech_bonus = {
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = uav
 			}
+
         }
     }
     
@@ -2328,11 +2370,12 @@ focus_tree = {
 
         completion_reward = {
             
-            add_tech_bonus = {
-				bonus = 0.5
-				uses = 3
-				category = air_doctrine
-			}
+            add_doctrine_cost_reduction = {
+                name = GEH_Strengthen_training
+                cost_reduction = 0.5
+                uses = 3
+                category = air_doctrine
+            }
         }
     }
 
@@ -2350,7 +2393,7 @@ focus_tree = {
 
         completion_reward = {
             add_ideas = {
-                 GEH_Rotation_System
+                GEH_Rotation_System
             }
             
         }

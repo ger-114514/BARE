@@ -89,6 +89,30 @@ on_actions = {
 		}
 	}
 
-	
+	# GEH_Hundred_Battles_combat_var
 
+	on_army_leader_won_combat = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						tag = GEH
+					}
+					add_to_variable = {GEH_Hundred_Battles_combat_var = 1}
+				}
+			}
+		}
+	}
+	on_army_leader_lost_combat = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						tag = GEH
+					}
+					add_to_variable = {GEH_Hundred_Battles_combat_var = 1}
+				}
+			}
+		}
+	} 
 }

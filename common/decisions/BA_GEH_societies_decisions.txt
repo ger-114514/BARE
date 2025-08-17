@@ -148,7 +148,7 @@ GEH_societies_dec_category = {
                 GEH_discipline_committee_num = 1
             }
         }
-        timeout_effect = {
+        remove_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
@@ -192,7 +192,7 @@ GEH_societies_dec_category = {
             GEH_discipline_committee_calc = yes
             custom_effect_tooltip = GEH_discipline_committee_gangsters_eviction_tt
         }
-        timeout_effect = {
+        remove_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
@@ -227,7 +227,7 @@ GEH_societies_dec_category = {
             GEH_discipline_committee_calc = yes
             custom_effect_tooltip = GEH_discipline_committee_combat_helmet_regiments_tt
         }
-        timeout_effect = {
+        remove_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
@@ -253,7 +253,7 @@ GEH_societies_dec_category = {
             add_stability = -0.05
             GEH_discipline_committee_calc = yes
         }
-        timeout_effect = {
+        remove_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
@@ -290,7 +290,7 @@ GEH_societies_dec_category = {
             }
             add_war_support = 0.05
         }
-        timeout_effect = {
+        remove_effect = {
             add_to_variable = {
                 GEH_discipline_committee_num = -1
             }
