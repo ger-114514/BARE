@@ -670,6 +670,9 @@ BA_Great_Game_decisions = {
 				has_war_with = var:Great_Game_enemy
 			}
 		}
+		cancel_effect = {
+			Great_Game_ally_leave = yes
+		}
 	}
 	Great_Game_invade_cd = {
 		activation = {
@@ -681,7 +684,7 @@ BA_Great_Game_decisions = {
 		available = {
 			always = no
 		}
-		remove_effect = {
+		timeout_effect = {
 			clr_country_flag = Great_Game_invade_cd
 		}
 	}

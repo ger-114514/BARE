@@ -1568,8 +1568,7 @@ focus_tree = {
 		}
 	}
 	###3.17新增
-	focus = {
-		#行动的教训
+	focus = { #行动的教训
 		id = ARI_traveller_operation_lost
 		icon = GFX_focus_ARI_traveller_operation_lost
 		relative_position_id = ARI_traveller_operation
@@ -1595,8 +1594,7 @@ focus_tree = {
 			factor = 2
 		}
 	}
-	focus = {
-		#收回临机指挥权
+	focus = { #收回临机指挥权
 		id = ARI_get_back_command_power
 		icon = GFX_focus_ARI_get_back_command_power
 		relative_position_id = ARI_traveller_operation_lost
@@ -1638,8 +1636,7 @@ focus_tree = {
 			factor = 2
 		}
 	}
-	focus = {
-		#回收特战队
+	focus = { #回收特战队
 		id = ARI_get_back_special_force
 		icon = GFX_focus_ARI_get_back_special_force
 		relative_position_id = ARI_traveller_operation_lost
@@ -1679,8 +1676,7 @@ focus_tree = {
 			factor = 2
 		}
 	}
-	focus = {
-		#重申复仇理想
+	focus = { #重申复仇理想
 		id = ARI_get_back_revenge_spirit
 		icon = GFX_focus_ARI_get_back_revenge_spirit
 		relative_position_id = ARI_traveller_operation_lost
@@ -1759,8 +1755,8 @@ focus_tree = {
 						has_country_flag = ARI_have_skiped_solve_supply_shorting
 					}
 				}
-				complete_national_focus = ARI_solve_supply_shorting
 				set_country_flag = ARI_have_skiped_solve_supply_shorting
+				complete_national_focus = ARI_solve_supply_shorting
 			}
 		}
 		completion_reward = {
@@ -1769,14 +1765,23 @@ focus_tree = {
 			#花费物资或民工或军工(捐赠)减少“旅者”行动的教训的debuff如果已完成国策
 			#“向目标前进”立刻完成该国策并消完debuff
 			custom_effect_tooltip = ARI_immeditly_skip_debuff_supply_tooltip
-			unlock_decision_tooltip = ARI_fix_our_supply
+			if = {
+				limit = { has_country_flag = ARI_have_skiped_solve_supply_shorting }
+				custom_effect_tooltip = ARI_cut_traveller_operation_debuff_3
+				hidden_effect = {
+					add_to_variable = { ARI_lesson_traveller_operation_industrial_capacity_factory = 0.25 }
+					add_to_variable = { ARI_lesson_traveller_operation_goods_factor = -0.25 }
+				}
+			}
+			else = {
+				unlock_decision_tooltip = ARI_fix_our_supply
+			}
 		}
 		ai_will_do = {
 			factor = 2
 		}
 	}
-	focus = {
-		#处理“叛徒”
+	focus = { #处理“叛徒”
 		id = ARI_deal_with_traitor
 		icon = GFX_focus_ARI_deal_with_traitor
 		relative_position_id = ARI_get_back_special_force

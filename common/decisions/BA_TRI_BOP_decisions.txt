@@ -920,7 +920,7 @@ TRI_region_interaction_decisions_category = {
 				add_to_variable = { TRI_rebuilding_subsidy_fire_count = 1 }
 			}
 			ai_will_do = {
-				base = 3
+				base = 10
 				modifier = {
 					factor = 1.5
 					has_political_power > 100

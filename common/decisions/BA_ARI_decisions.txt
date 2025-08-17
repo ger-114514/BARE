@@ -4025,8 +4025,8 @@ ARI_traveller_operation_caretaking_decisions = {
 		remove_effect = {
 			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_3
 			hidden_effect = {
-				add_to_variable = { ARI_power_chaser_industrial_capacity_factory = 0.25 }
-				add_to_variable = { ARI_power_chaser_goods_factor = -0.25 }
+				add_to_variable = { ARI_lesson_traveller_operation_industrial_capacity_factory = 0.25 }
+				add_to_variable = { ARI_lesson_traveller_operation_goods_factor = -0.25 }
 			}
 		}
 		ai_will_do = {
@@ -4047,7 +4047,7 @@ ARI_traveller_operation_caretaking_decisions = {
 	}
 	ARI_deal_with_traitor_de = { #处理“叛徒”
 		visible = {
-			has_completed_focus = ARI_solve_supply_shorting
+			has_completed_focus = ARI_deal_with_traitor
 		}
 		available = {
 			has_manpower > 1999

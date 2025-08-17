@@ -312,7 +312,7 @@ country_event = { #旅者”行动总结-部分成功
             }
 
             set_variable = {
-                ARI_lesson_traveller_operation_goods_factor = -0.25
+                ARI_lesson_traveller_operation_goods_factor = 0.25
             }
             set_variable = {
                 ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
@@ -337,7 +337,7 @@ country_event = { #旅者”行动总结-部分成功
             }
 
             set_variable = {
-                ARI_lesson_traveller_operation_goods_factor = -0.25
+                ARI_lesson_traveller_operation_goods_factor = 0.25
             }
             set_variable = {
                 ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
@@ -970,7 +970,7 @@ country_event = { #“旅者”行动总结-基本失败
             }
 
             set_variable = {
-                ARI_lesson_traveller_operation_goods_factor = -0.25
+                ARI_lesson_traveller_operation_goods_factor = 0.25
             }
             set_variable = {
                 ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
@@ -1015,7 +1015,7 @@ country_event = { #“旅者”行动总结-基本失败
             }
 
             set_variable = {
-                ARI_lesson_traveller_operation_goods_factor = -0.25
+                ARI_lesson_traveller_operation_goods_factor = 0.25
             }
             set_variable = {
                 ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
