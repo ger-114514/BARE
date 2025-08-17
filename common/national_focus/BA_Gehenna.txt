@@ -631,6 +631,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
 
         completion_reward = {
+            add_offsite_building = { type = industrial_complex level = 2 }
             hidden_effect = {
                 set_temp_variable = {
                     BARE_duelHead_Chance_temp = 0.06
@@ -2114,8 +2115,8 @@ focus_tree = {
         
 
         add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 1
+			specialization = specialization_air
+			value = 1
 		}
         add_tech_bonus = {
 			bonus = 1
@@ -2317,7 +2318,7 @@ focus_tree = {
         completion_reward = {
             air_experience = 20
             add_tech_bonus = {
-				bonus = 0.3
+				bonus = 1
 				uses = 2
 				category = uav
 			}
@@ -2337,12 +2338,21 @@ focus_tree = {
 
         prerequisite = {  focus = GEH_Conquer_the_sky }
          completion_reward = {
+
             
+            add_breakthrough_progress = {
+                specialization = specialization_air
+                value = 1
+            }
+
+            add_to_variable = { GEH_air_attack_factor = 0.1 }
+            custom_effect_tooltip = GEH_Experimental_Technology_tt
             add_tech_bonus = {
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = uav
 			}
+
         }
     }
     
@@ -2360,11 +2370,12 @@ focus_tree = {
 
         completion_reward = {
             
-            add_tech_bonus = {
-				bonus = 0.5
-				uses = 3
-				category = air_doctrine
-			}
+            add_doctrine_cost_reduction = {
+                name = GEH_Strengthen_training
+                cost_reduction = 0.5
+                uses = 3
+                category = air_doctrine
+            }
         }
     }
 
@@ -2382,7 +2393,7 @@ focus_tree = {
 
         completion_reward = {
             add_ideas = {
-                 GEH_Rotation_System
+                GEH_Rotation_System
             }
             
         }
