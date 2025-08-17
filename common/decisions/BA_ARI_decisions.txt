@@ -3617,7 +3617,7 @@ ARI_power_chaser_decisions = {
 					localization_key =  ARI_has_mystic_progress
 					PROGRESS = "100"
 				}
-				check_variable = { ARI_mystic_progress = 100 }
+				check_variable = { ARI_mystic_progress > 99.999 }
 			}
 			if = {
 				limit = {
@@ -3671,7 +3671,7 @@ ARI_power_chaser_decisions = {
 					localization_key =  ARI_has_mystic_progress
 					PROGRESS = "100"
 				}
-				check_variable = { ARI_mystic_progress = 100 }
+				check_variable = { ARI_mystic_progress > 99.999 }
 			}
 		}
 
@@ -3762,7 +3762,8 @@ ARI_power_chaser_decisions = {
 
 	ARI_find_memory_of_past = { #探索圣徒会的记忆
 		visible = {
-			has_completed_focus = ARI_share_highest_knowledge
+			# has_completed_focus = ARI_share_highest_knowledge
+			has_completed_focus = ARI_mystery_and_contrast
 			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
 		}
 
@@ -3800,7 +3801,8 @@ ARI_power_chaser_decisions = {
 
 	ARI_new_weapons_for_projections = { #给投影生产新武器
 		visible = {
-			has_completed_focus = ARI_research_trinity_books
+			# has_completed_focus = ARI_research_trinity_books
+			has_completed_focus = ARI_new_weapon_for_projection
 			NOT = { has_country_flag = ARI_rank3_achieved } #如果rank大于等于4，立刻使得该决议消失
 				##不触发超过五次
 				NOT = {
@@ -3899,9 +3901,11 @@ ARI_traveller_operation_caretaking_decisions = {
 
 			custom_override_tooltip = {
 				tooltip = ARI_get_back_special_force_count_nomore_for_5times_tt
-
+				check_variable = {
+					ARI_lesson_traveller_operation_army_attack_factor > 0
+				}
 				##不触发超过五次
-				check_variable = { ARI_get_back_special_force_count < 6 }
+				# check_variable = { ARI_get_back_special_force_count < 6 }
 			}
 		}
 
@@ -3919,10 +3923,10 @@ ARI_traveller_operation_caretaking_decisions = {
 		remove_effect = {
 			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_2
 			hidden_effect = {
-				add_to_variable = { ARI_get_back_special_force_count = 1 }
+				# add_to_variable = { ARI_get_back_special_force_count = 1 }
 
-				add_to_variable = { ARI_lesson_traveller_operation_army_attack_factor = 0.05 }
-				add_to_variable = { ARI_lesson_traveller_operation_army_defence_factor = 0.05 }
+				add_to_variable = { ARI_lesson_traveller_operation_army_attack_factor = 0.1 }
+				add_to_variable = { ARI_lesson_traveller_operation_army_defence_factor = 0.1 }
 
 				ARI_check_if_traveller_idea_replaced = yes
 			}
@@ -4005,7 +4009,9 @@ ARI_traveller_operation_caretaking_decisions = {
 	ARI_fix_our_supply = { #弥补物资缺口
 		visible = {
 			has_completed_focus = ARI_solve_supply_shorting
-			NOT = { has_country_flag = ARI_have_skiped_solve_supply_shorting } #如果跳过了国策就不用出现
+			check_variable = {
+				ARI_lesson_traveller_operation_goods_factor > 0
+			}
 		}
 
 		available = {
@@ -4022,11 +4028,34 @@ ARI_traveller_operation_caretaking_decisions = {
 
 		fire_only_once = yes
 
+		complete_effect = {
+			if = {
+				limit = {
+					has_completed_focus = ARI_march_towards_the_goal
+					check_variable = {
+						ARI_lesson_traveller_operation_goods_factor > 0
+					}
+				}
+			    set_variable = {
+					ARI_lesson_traveller_operation_goods_factor = 0.25
+				}
+				set_variable = {
+					ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
+				}
+			}
+		}
+
 		remove_effect = {
 			custom_effect_tooltip = ARI_cut_traveller_operation_debuff_3
 			hidden_effect = {
-				add_to_variable = { ARI_lesson_traveller_operation_industrial_capacity_factory = 0.25 }
-				add_to_variable = { ARI_lesson_traveller_operation_goods_factor = -0.25 }
+				if = {
+					check_variable = {
+						ARI_lesson_traveller_operation_goods_factor > 0
+					}
+					add_to_variable = { ARI_lesson_traveller_operation_industrial_capacity_factory = 0.25 }
+					add_to_variable = { ARI_lesson_traveller_operation_goods_factor = -0.25 }
+				}
+				
 			}
 		}
 		ai_will_do = {
