@@ -278,6 +278,12 @@ Cathedral_war_ARI_defeated = {
 	529 = {
 		transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
 	}
+	683 = {
+		transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+	}
+	684 = {
+		transfer_state_to = TRI #转移控制者和拥有者给予指定TAG
+	}
 
 	###移出所有因古圣堂之战而出现的动态修正并自动营救所有学生###
 		for_each_scope_loop = {

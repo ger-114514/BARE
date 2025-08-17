@@ -4,6 +4,11 @@ TRI_debug_decisions = {
 			BA_TRI_initialize_paranoia_system = yes
 		}
 	}
+	BA_TRI_remove_paranoia_system = {
+		complete_effect = {
+			BA_TRI_remove_paranoia_system = yes
+		}
+	}
 	TRI_remove_debuff = {
 		complete_effect = {
 			every_state = {

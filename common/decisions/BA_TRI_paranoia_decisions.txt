@@ -47,6 +47,9 @@ TRI_paranoia_system = {
 	TRI_the_way_to_get_trust = { #取信之道
 		visible = {
 			has_country_flag = TRI_the_way_to_get_trust
+			TRI_nagisa = {
+				has_trait = TRI_nagisa_Find_the_root_2
+			}
 		}
 		available = {
 			if = {

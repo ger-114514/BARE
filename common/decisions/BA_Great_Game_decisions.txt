@@ -652,6 +652,11 @@ BA_Great_Game_decisions = {
 				var:Great_Game_invade_target_overlord = {
 					NOT = { has_war_with = var:Great_Game_invader }
 				}
+				all_enemy_country = {
+					NOT = {
+						Great_Game_is_involved = yes
+					}
+				}
 			}
 		}
 		complete_effect = {
@@ -750,6 +755,11 @@ BA_Great_Game_decisions_debug = {
 			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
 			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 			Great_Game_add_record = yes
+		}
+	}
+	clr_flag = {
+		complete_effect = {
+			clr_country_flag = Great_Game_invade_cd
 		}
 	}
 }
