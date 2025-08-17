@@ -1516,6 +1516,7 @@ ideas = {
               army_morale_factor = 0.1
               army_strength_factor = 0.1
               army_org_factor = 0.1
+              GEH_societies_discipline_committee_repression_weekly = 1
             }
             allowed = {
                 original_tag = GEH
@@ -1531,6 +1532,7 @@ ideas = {
               no_supply_grace = 24
               consumer_goods_factor = -0.05
               political_power_factor = 0.1
+              GEH_societies_gourmet_research_destructive_weekly = -1
             }
             allowed = {
                 original_tag = GEH
@@ -1545,6 +1547,7 @@ ideas = {
               army_morale_factor = 0.1
               research_speed_factor = 0.1
               political_power_factor = -0.1
+              GEH_societies_hot_spring_destructive_weekly = -1
             }
             allowed = {
                 original_tag = GEH
