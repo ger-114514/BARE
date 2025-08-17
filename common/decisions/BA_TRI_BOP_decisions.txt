@@ -979,6 +979,23 @@ TRI_region_interaction_decisions_category = {
 				subtract_from_variable = { TRI_tea_party_artillery_recruiting_use = 1 }
 			}
 			remove_effect = {
+
+				hidden_effect = {
+					if = {
+						limit = {
+							not = {
+								has_tech = tech_royal_artillery_support_company_units_unlock
+							}
+						}
+						set_technology = {
+							tech_royal_artillery_support_company_units_unlock = 1
+							popup = no
+						}
+						
+					}
+					
+				}
+
 				custom_effect_tooltip = TRI_tea_party_artillery_recruiting_tt
 				add_to_variable = { TRI_tea_party_artillery_cap = 2 }
 				add_to_variable = { TRI_tea_party_artillery_recruiting_count = 1 }

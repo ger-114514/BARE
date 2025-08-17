@@ -252,12 +252,16 @@ focus_tree = {
 		available = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = ARI_has_mystic_progress
+					localization_key = ARI_has_mystic_progress_justyna_projection
 					PROGRESS = "80"
+					RANK = "2"
 				}
 				NOT = {
 					check_variable = {
 						ARI_mystic_progress < 80
+					}
+					check_variable = {
+						ARI_mystic_rank > 1
 					}
 				}
 			}
@@ -361,7 +365,7 @@ focus_tree = {
 					RANK = "2"
 				}
 				check_variable = {
-					ARI_mystic_rank = 2
+					ARI_mystic_rank > 1
 				}
 			}
 		}
@@ -406,7 +410,7 @@ focus_tree = {
 					RANK = "2"
 				}
 				check_variable = {
-					ARI_mystic_rank = 2
+					ARI_mystic_rank > 1
 				}
 			}
 			custom_trigger_tooltip = {
@@ -446,7 +450,7 @@ focus_tree = {
 					RANK = "2"
 				}
 				check_variable = {
-					ARI_mystic_rank = 2
+					ARI_mystic_rank > 1
 				}
 			}
 		}
@@ -493,7 +497,7 @@ focus_tree = {
 					RANK = "2"
 				}
 				check_variable = {
-					ARI_mystic_rank = 2
+					ARI_mystic_rank > 1
 				}
 			}
 		}
@@ -540,7 +544,7 @@ focus_tree = {
 					RANK = "2"
 				}
 				check_variable = {
-					ARI_mystic_rank = 2
+					ARI_mystic_rank > 1
 				}
 			}
 		}
@@ -580,7 +584,7 @@ focus_tree = {
 					RANK = "3"
 				}
 				check_variable = {
-					ARI_mystic_rank = 3
+					ARI_mystic_rank > 2
 				}
 			}
 		}
@@ -623,7 +627,7 @@ focus_tree = {
 					RANK = "3"
 				}
 				check_variable = {
-					ARI_mystic_rank = 3
+					ARI_mystic_rank > 2
 				}
 			}
 		}
@@ -669,7 +673,7 @@ focus_tree = {
 					RANK = "3"
 				}
 				check_variable = {
-					ARI_mystic_rank = 3
+					ARI_mystic_rank > 2
 				}
 			}
 		}
@@ -716,7 +720,7 @@ focus_tree = {
 					RANK = "4"
 				}
 				check_variable = {
-					ARI_mystic_rank = 4
+					ARI_mystic_rank > 3
 				}
 			}
 		}
@@ -814,7 +818,7 @@ focus_tree = {
 					RANK = "4"
 				}
 				check_variable = {
-					ARI_mystic_rank = 4
+					ARI_mystic_rank > 3
 				}
 			}
 			##和两大校交战
@@ -1669,11 +1673,11 @@ focus_tree = {
 			#解锁决议以减少“旅者”行动的灾难的效果
 			army_experience = 10
 			unlock_decision_tooltip = ARI_get_back_special_force_de
-			hidden_effect = {
-				set_variable = {
-					ARI_get_back_special_force_count = 0
-				}
-			}
+			# hidden_effect = {
+			# 	set_variable = {
+			# 		ARI_get_back_special_force_count = 0
+			# 	}
+			# }
 		}
 		ai_will_do = {
 			factor = 2
@@ -1755,15 +1759,31 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = ARI_march_towards_the_goal
-					NOT = {
-						has_country_flag = ARI_have_skiped_solve_supply_shorting
-					}
+					
+				}
+			    set_variable = {
+					ARI_lesson_traveller_operation_goods_factor = 0.25
+				}
+				set_variable = {
+					ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
 				}
 				complete_national_focus = ARI_solve_supply_shorting
-				set_country_flag = ARI_have_skiped_solve_supply_shorting
+
 			}
 		}
 		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = ARI_march_towards_the_goal
+					
+				}
+			    set_variable = {
+					ARI_lesson_traveller_operation_goods_factor = 0.25
+				}
+				set_variable = {
+					ARI_lesson_traveller_operation_industrial_capacity_factory = -0.25
+				}
+			}
 			#减少“旅者”行动的灾难的效果
 			#解锁决议：重整物资供应
 			#花费物资或民工或军工(捐赠)减少“旅者”行动的教训的debuff如果已完成国策
@@ -4213,12 +4233,16 @@ focus_tree = {
 				}
 			}
 			#TODO:2张50特战学说卡，暂时用陆军学说代替
-			add_tech_bonus = {
-				bonus = 0.5
+
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 2
-				category = land_doctrine
+				category = air_doctrine
 			}
 			#解锁T2小型无人机科技
+			set_technology = {
+				fighting_drone_MK1 = 1
+			}
 			set_technology = {
 				fighting_drone_MK2 = 1
 			}
