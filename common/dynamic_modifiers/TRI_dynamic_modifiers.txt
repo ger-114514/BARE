@@ -151,7 +151,6 @@ eden_treaty_step_5_modifier = { #【逐渐稳定的《伊甸条约》】
 	research_speed_factor = eden_broken_research_speed
 }
 
-#混乱的前线
 TRI_devastated_by_arius = {
 	icon = "GFX_idea_unknown"
 	stability_weekly = TRI_devastated_by_arius_stability_weekly
@@ -165,7 +164,7 @@ TRI_devastated_by_arius = {
 #混乱的前线
 TRI_chaotic_frontline = {
 
-	icon = "GFX_idea_unknown"
+	icon = "TRI_chaotic_frontline"
 	enable = { always = yes }
 
 	army_org_factor = cf_army_org_factor
@@ -181,7 +180,7 @@ TRI_chaotic_frontline = {
 #携手并肩的前线
 TRI_chaotic_frontline_2 = {
 
-	icon = "GFX_idea_unknown"
+	icon = "TRI_chaotic_frontline_2"
 	enable = { always = yes }
 
 	army_org_factor = cf_army_org_factor
@@ -247,8 +246,6 @@ material_allocation_modifier = {
 
 #圣三一工业
 trinity_industry_modifier = {
-	
-	#icon = "GFX_idea_unknown"
 	icon = "GFX_trinity_industry_modifier"
 	enable = { always = yes }
 
@@ -330,6 +327,7 @@ TRI_state_region_stability_modifier = {
 	state_resources_factor = region_state_resources_factor
 	state_production_speed_buildings_factor = region_state_production_speed_factor
 }
+#灾后重建津贴
 TRI_rebuilding_subsidy_modifier = {
 	icon = "GFX_idea_unknown"
 	state_repair_speed_industrial_complex_factor = 0.2

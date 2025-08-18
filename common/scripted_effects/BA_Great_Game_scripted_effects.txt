@@ -231,7 +231,10 @@ Great_Game_invade_succeeded = {
 				has_war_together_with = ROOT
 				Great_Game_is_involved = yes
 			}
-			Great_Game_ally_leave = yes
+			every_enemy_country = {
+				limit = { Great_Game_is_involved = yes }
+				white_peace = PREV
+			}
 		}
 		clear_array = Great_Game_temp_allies
 		var:Great_Game_invade_target_overlord = {
@@ -252,7 +255,10 @@ Great_Game_invade_succeeded = {
 					has_war_together_with = PREV
 					Great_Game_is_involved = yes
 				}
-				Great_Game_ally_leave = yes
+				every_enemy_country = {
+					limit = { Great_Game_is_involved = yes }
+					white_peace = PREV
+				}
 			}
 			clear_array = Great_Game_temp_allies
 			remove_from_array = {
@@ -343,7 +349,10 @@ Great_Game_invade_failed = {
 					has_war_together_with = PREV
 					Great_Game_is_involved = yes
 				}
-				Great_Game_ally_leave = yes
+				every_enemy_country = {
+					limit = { Great_Game_is_involved = yes }
+					white_peace = PREV
+				}
 			}
 			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
@@ -368,7 +377,10 @@ Great_Game_invade_failed = {
 				has_war_together_with = ROOT
 				Great_Game_is_involved = yes
 			}
-			Great_Game_ally_leave = yes
+			every_enemy_country = {
+				limit = { Great_Game_is_involved = yes }
+				white_peace = PREV
+			}
 		}
 		clear_array = Great_Game_temp_allies
 		white_peace = var:Great_Game_invade_target_overlord
@@ -386,12 +398,7 @@ Great_Game_invade_failed = {
 Great_Game_ally_leave = {
 	Great_Game_get_coins = yes
 	every_enemy_country = {
-		limit = {
-			OR = {
-				Great_Game_is_involved = yes
-			}
-			
-		}
+		limit = { Great_Game_is_involved = yes }
 		white_peace = PREV
 	}
 	clr_country_flag = involved_in_Great_Game_as_attacker
