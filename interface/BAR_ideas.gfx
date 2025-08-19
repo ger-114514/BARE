@@ -443,13 +443,28 @@ spriteTypes = {
 
 	#铸剑为犁
 	#夏莱的老师
+	
+	SpriteType = {
+		name = "GFX_TRI_SCH_teacher_modifier"
+		texturefile = "gfx/interface/ideas/TRI/TRI_SCH_teacher_modifier.dds"
+	}
+
 
 	#筹备会谈
 	SpriteType = {
 		name = "GFX_TRI_prepare_for_meeting"
 		texturefile = "gfx/interface/ideas/TRI/TRI_prepare_for_meeting.dds"
 	}
+	SpriteType = {
+		name = "GFX_TRI_tea_party_artillery"
+		texturefile = "gfx/interface/ideas/TRI/TRI_tea_party_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_TRI_aeronautics_training"
+		texturefile = "gfx/interface/ideas/TRI/TRI_aeronautics_training.dds"
+	}
 
+	
 	#茶话会直属炮兵
 	#圣三一航空训练计划
 	#圣三一空地一体化系统
@@ -536,6 +551,12 @@ spriteTypes = {
 	}
 
 	#团结度修正
+	SpriteType = {
+		name = "GFX_TRI_unity_modifier"
+		texturefile = "gfx/interface/ideas/TRI/TRI_unity_modifier.dds"
+	}
+
+	
 	#焦点修正
 	#地区稳定度
 	#灾后重建津贴
@@ -566,6 +587,10 @@ spriteTypes = {
 	######渚大林######
 	#################
 	#遭到审查的文职部员
+	SpriteType = {
+		name = "GFX_idea_TRI_inspected_administration"
+		texturefile = "gfx/interface/ideas/TRI/TRI_inspected_administration.dds"
+	}
 	#受到严格审查的陆军
 	SpriteType = {
 		name = "GFX_idea_TRI_inspected_army"
@@ -644,9 +669,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Unacknowledged_College_Autonomous_Region.dds"
 	}
 
-		spriteType = {
+	spriteType = {
 		name = "GFX_idea_BARE_Global_Trusteeship_Area"
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Trusteeship_Area.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_BARE_Global_Suburban"
+		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Suburban.dds"
+	}
+
+		spriteType = {
+		name = "GFX_idea_BARE_Global_Blockade_Zone"
+		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Blockade_Zone.dds"
 	}
 
 	spriteType = {

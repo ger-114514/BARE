@@ -85,7 +85,7 @@ ideas = {
         #夏莱的老师
         TRI_SCH_teacher_modifier = {
             name = TRI_SCH_teacher_modifier
-            picture = unknown
+            picture = "GFX_TRI_SCH_teacher_modifier"
 
             allowed = {
                 original_tag = TRI
@@ -169,7 +169,7 @@ ideas = {
 
         #茶话会直属炮兵
         TRI_tea_party_artillery_1 = {
-            picture = unknown
+            picture = "GFX_TRI_tea_party_artillery"
             modifier = {
                 army_infantry_defence_factor = 0.04
             }
@@ -186,7 +186,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_2 = {
-            picture = unknown
+             picture = "GFX_TRI_tea_party_artillery"
             modifier = {
                 army_infantry_defence_factor = 0.08
             }
@@ -203,7 +203,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_3 = {
-            picture = unknown
+             picture = "GFX_TRI_tea_party_artillery"
             modifier = {
                 army_infantry_defence_factor = 0.12
             }
@@ -220,7 +220,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_4 = {
-            picture = unknown
+             picture = "GFX_TRI_tea_party_artillery"
             modifier = {
                 army_infantry_defence_factor = 0.16
             }
@@ -237,7 +237,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_5 = {
-            picture = unknown
+             picture = "GFX_TRI_tea_party_artillery"
             modifier = {
                 army_infantry_defence_factor = 0.2
             }
@@ -249,7 +249,7 @@ ideas = {
         }
         #圣三一航空训练计划
         TRI_aeronautics_training = {
-            picture = unknown
+            picture = "GFX_TRI_aeronautics_training"
             modifier = {
                 experience_gain_air = 0.05
                 experience_gain_air_factor = 0.1

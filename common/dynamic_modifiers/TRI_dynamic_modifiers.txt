@@ -296,7 +296,7 @@ trinity_industry_modifier_alt = {#添加装备增益后的动态民族精神
 #团结度修正
 TRI_unity_modifier = {
 	
-	icon = "GFX_idea_unknown"
+	icon = "GFX_TRI_unity_modifier"
 	enable = { always = yes }
 	
 	political_power_gain = TRI_unity_power_gain
