@@ -80,8 +80,11 @@ TRI_paranoia_system = {
 			has_country_flag = TRI_empty_nest_operation
 		}
 		available = {
-			command_power > 49.9
-			has_equipment = { infantry_equipment > 2999 }
+			if = {
+				limit = { is_ai = no }
+				command_power > 49.9
+				has_equipment = { infantry_equipment > 2999 }
+			}
 		}
 		cost = 50
 		days_remove = 35
