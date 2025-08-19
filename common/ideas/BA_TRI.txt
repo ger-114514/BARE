@@ -2,7 +2,7 @@ ideas = {
     country = {
         #文本idea  争辩无休的《伊甸条约》方针
         TRI_eden_treaty_step_0_modifier_Text_idea = {
-            picture = eden_treaty_step_normal_modifier
+            picture = GFX_eden_treaty_step_normal_modifier
             name = eden_treaty_step_0_modifier
 
             allowed = {
@@ -418,7 +418,6 @@ ideas = {
         }
         #扫除威胁！
         TRI_sweep_threat = {
-            picture = unknown
             modifier = {
                 combat_readiness_recovery_percentage = 1
             }
@@ -445,7 +444,6 @@ ideas = {
 
         #维持军备
         TRI_prepare_for_war = {
-            name = TRI_prepare_for_war
             picture = unknown
 
             allowed = {
@@ -459,7 +457,6 @@ ideas = {
 
         #重视稳定
         TRI_focus_on_stability = {
-            name = TRI_focus_on_stability
             picture = unknown
 
             allowed = {
@@ -509,7 +506,6 @@ ideas = {
         }
         #进行中的行政重整
         TRI_reforming_administration_system = {
-            picture = unknown
 
             allowed = {
                 original_tag = TRI

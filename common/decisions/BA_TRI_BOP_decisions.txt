@@ -4,6 +4,11 @@ TRI_debug_decisions = {
 			BA_TRI_initialize_paranoia_system = yes
 		}
 	}
+	BA_TRI_remove_paranoia_system = {
+		complete_effect = {
+			BA_TRI_remove_paranoia_system = yes
+		}
+	}
 	TRI_remove_debuff = {
 		complete_effect = {
 			every_state = {
@@ -915,7 +920,7 @@ TRI_region_interaction_decisions_category = {
 				add_to_variable = { TRI_rebuilding_subsidy_fire_count = 1 }
 			}
 			ai_will_do = {
-				base = 3
+				base = 10
 				modifier = {
 					factor = 1.5
 					has_political_power > 100

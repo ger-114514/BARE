@@ -2746,11 +2746,6 @@ focus_tree = {
 						}
 					}
 				}
-				custom_effect_tooltip = {
-					localization_key = advisor_available_tt
-					CHAR = TRI_hanako_name
-					JOB = political_advisor
-				}
 				#获得任务：最后的阻碍：消灭阿里乌斯。当阿里乌斯被消灭后,30天,将会触发一个奖励事件(使得桐藤渚的特质得到提升。)
 				hidden_effect = {
 					TRI_BOP_calculate_house_seats = yes

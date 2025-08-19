@@ -339,24 +339,10 @@ BA_TRI_remove_paranoia_system = {
 					clr_character_flag = TRI_character_arrested
 				}
 			}
-			TRI_nagisa = {
-				if = {
-					limit = { has_trait = BA_TRI_nagisa_paranoid }
-					remove_trait = { trait = BA_TRI_nagisa_paranoid }
-				}
-				if = {
-					limit = { has_trait = TRI_nagisa_Find_the_root }
-					remove_trait = { trait = TRI_nagisa_Find_the_root }
-				}
-				else_if = {
-					limit = { has_trait = TRI_nagisa_Find_the_root_2 }
-					remove_trait = { trait = TRI_nagisa_Find_the_root_2 }
-				}
-				else_if = {
-					limit = { has_trait = TRI_nagisa_Find_the_root_3 }
-					remove_trait = { trait = TRI_nagisa_Find_the_root_3 }
-				}
-			}
+			remove_country_leader_trait = BA_TRI_nagisa_paranoid
+			remove_country_leader_trait = TRI_nagisa_Find_the_root
+			remove_country_leader_trait = TRI_nagisa_Find_the_root_2
+			remove_country_leader_trait = TRI_nagisa_Find_the_root_3
 			remove_ideas = TRI_inspected_administration
 			remove_ideas = TRI_inspected_army
 			remove_ideas = TRI_training_activities_curtailed
