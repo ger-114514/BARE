@@ -3661,11 +3661,13 @@ ARI_power_chaser_decisions = {
 	ARI_final_ascension = { #飞升
 		visible = {
 			has_country_flag = ARI_rank3_achieved
+			
 		}
 
 		fire_only_once = yes
 
 		available = {
+			has_completed_focus = ARI_the_final_step
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key =  ARI_has_mystic_progress

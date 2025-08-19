@@ -3094,7 +3094,7 @@ focus_tree = {
 	focus = {
 		#扩建阿里乌斯通讯网络
 		id = ARI_communication_network
-		#icon = 
+		icon = GFX_focus_ARI_communication_network
 		relative_position_id = ARI_leaps_and_bounds
 		prerequisite = {
 			focus = ARI_leaps_and_bounds
@@ -3159,7 +3159,7 @@ focus_tree = {
 	focus = {
 		#义务施工队
 		id = ARI_compulsory_labor
-		#icon = 
+		icon = GFX_focus_ARI_compulsory_labor
 		relative_position_id = ARI_communication_network
 		prerequisite = {
 			focus = ARI_communication_network
