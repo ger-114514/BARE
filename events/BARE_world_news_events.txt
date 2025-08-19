@@ -798,27 +798,6 @@ news_event = {
 	desc = BARE_World_News.18.desc
 	is_triggered_only = yes
 	major = yes
-
-	immediate = {
-		######
-		##射击结算超事件##
-		hidden_effect = {
-			if = {
-				limit = {
-					#TRI = {
-					#	is_ally_with = GEH
-					#}
-					##目前不区分结局好了
-					#has_global_flag = Eden_treaty_negotiation_TRI_win
-				}
-				TRI = {
-					country_event = {
-						id = SEFL.1
-					}
-				}
-			}
-		}
-	}
 	
 	#有趣
 	option = {
@@ -827,7 +806,10 @@ news_event = {
 			OR = {
 				tag = TRI
 				tag = GEH
-			}
+			}	
+		}
+		hidden_effect = {
+			BSE_Fire_Super_Event_index_3 = yes
 		}
 	}
 	option = {
@@ -837,6 +819,9 @@ news_event = {
 				tag = TRI
 				tag = GEH
 			}
+		}
+		hidden_effect = {
+			BSE_Fire_Super_Event_index_3 = yes
 		}
 	}
 }
