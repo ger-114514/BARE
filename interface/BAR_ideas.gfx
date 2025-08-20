@@ -431,7 +431,7 @@ spriteTypes = {
 	#以战止戈
 	#为会谈做出的整备
 	SpriteType = {
-		name = "TRI_2st_eden_pact_modifier"
+		name = "GFX_idea_TRI_2st_eden_pact_modifier"
 		texturefile = "gfx/interface/ideas/TRI/TRI_2st_eden_pact_modifier.dds"
 	}
 
@@ -466,11 +466,27 @@ spriteTypes = {
 
 	
 	#茶话会直属炮兵
+	SpriteType = {
+		name = "GFX_idea_TRI_tea_party_artillery"
+		texturefile = "gfx/interface/ideas/TRI/TRI_tea_party_artillery.dds"
+	}
 	#圣三一航空训练计划
+	SpriteType = {
+		name = "GFX_idea_TRI_aeronautics_training"
+		texturefile = "gfx/interface/ideas/TRI/TRI_aeronautics_training.dds"
+	}
 	#圣三一空地一体化系统
 	#专业化无人机生产集团
 	#圣三一火炮
+	SpriteType = {
+		name = "GFX_idea_TRI_trinity_artillery"
+		texturefile = "gfx/interface/ideas/TRI/TRI_trinity_artillery.dds"
+	}
 	#先进性装甲
+	SpriteType = {
+		name = "GFX_idea_TRI_advanced_armour_idea"
+		texturefile = "gfx/interface/ideas/TRI/TRI_advanced_armour_idea.dds"
+	}
 	#紧急救援
 	#向上议院妥协中
 	#向下议院妥协中

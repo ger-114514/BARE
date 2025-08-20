@@ -314,7 +314,7 @@ TRI_unity_modifier = {
 }
 #焦点修正
 TRI_parliament_focus_modifier = {
-	icon = "GFX_idea_unknown"
+	icon = "GFX_material_allocation_modifier"
 	enable = { has_variable = TRI_parliament_focus }
 	consumer_goods_factor = TRI_focus_consumer_goods_factor
 	stability_weekly = TRI_focus_stability_weekly
