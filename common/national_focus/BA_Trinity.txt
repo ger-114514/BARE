@@ -1519,7 +1519,7 @@ focus_tree = {
 	#拥有焦点：【对现任茶话会领袖的支持】时显示的国策
 		focus = { #修复信任
 			id = TRI_repair_trust
-			##icon = GFX_goal_unknown	
+			icon = GFX_goal_TRI_repair_trust
 			allow_branch = {
 				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_trust_on_current_leader }
 			}
@@ -1589,7 +1589,7 @@ focus_tree = {
 		}
 		focus = { #探寻真相
 			id = TRI_exploring_the_truth
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_exploring_the_truth
 			relative_position_id = TRI_repair_trust
 			prerequisite = { focus = TRI_repair_trust }		
 			
@@ -1615,7 +1615,7 @@ focus_tree = {
 		}
 		focus = { #穿针引线
 			id = TRI_threading_a_needle
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_threading_a_needle
 			relative_position_id = TRI_repair_trust
 			prerequisite = { focus = TRI_repair_trust }		
 			
@@ -1679,7 +1679,7 @@ focus_tree = {
 		}
 		focus = { #重整旗鼓
 			id = TRI_bouncing_back
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_bouncing_back
 			relative_position_id = TRI_threading_a_needle
 			prerequisite = { focus = TRI_threading_a_needle }		
 			available = {
@@ -1733,7 +1733,7 @@ focus_tree = {
 		}
 		focus = { #桃来李答
 			id = TRI_return_a_favor
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_return_a_favor
 			relative_position_id = TRI_repair_trust
 			prerequisite = { focus = TRI_repair_trust }		
 			
@@ -1796,7 +1796,7 @@ focus_tree = {
 		}
 		focus = { #物尽其用
 			id = TRI_making_the_best_use
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_making_the_best_use
 			relative_position_id = TRI_return_a_favor
 			prerequisite = { focus = TRI_return_a_favor }		
 			available = {
@@ -1836,7 +1836,7 @@ focus_tree = {
 		}
 		focus = { #灾后重建津贴
 			id = TRI_rebuilding_subsidy
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_rebuilding_subsidy
 			relative_position_id = TRI_threading_a_needle
 			prerequisite = { focus = TRI_threading_a_needle }
 			prerequisite = { focus = TRI_return_a_favor }
@@ -1863,7 +1863,7 @@ focus_tree = {
 		}
 		focus = { #“影子”计划
 			id = TRI_shadow_scheme
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_shadow_scheme
 			relative_position_id = TRI_rebuilding_subsidy
 			prerequisite = { focus = TRI_rebuilding_subsidy }		
 			
@@ -2019,7 +2019,7 @@ focus_tree = {
 		}
 		focus = { #“重获信任”法案
 			id = TRI_Bill_of_regaining_trust
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_Bill_of_regaining_trust
 			relative_position_id = TRI_shadow_scheme
 			prerequisite = { focus = TRI_bouncing_back }
 			prerequisite = { focus = TRI_shadow_scheme }
@@ -2060,7 +2060,7 @@ focus_tree = {
 		}
 		focus = { #接续进取
 			id = TRI_enterprising
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_enterprising
 			relative_position_id = TRI_Bill_of_regaining_trust
 			prerequisite = { focus = TRI_Bill_of_regaining_trust }
 			
@@ -2123,7 +2123,7 @@ focus_tree = {
 	#以下为触发超事件【古圣堂遭受袭击！】后的国策树
 		focus = { #烽烟骤起
 			id = TRI_unexpected_accident
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_unexpected_accident
 			#事件：【古圣堂遭受袭击！】已发生
 			allow_branch = { #拥有焦点：《伊甸条约》的威胁
 				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat }
@@ -2295,7 +2295,7 @@ focus_tree = {
 		}
 		focus = { #越过禁忌的边界
 			id = TRI_across_the_border
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_across_the_border
 			relative_position_id = TRI_unexpected_accident
 			prerequisite = { focus = TRI_unexpected_accident }		
 			available = {
@@ -2348,7 +2348,7 @@ focus_tree = {
 		}
 		focus = { #动荡下的砥石
 			id = TRI_mainstay_in_the_collapse
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_mainstay_in_the_collapse
 			relative_position_id = TRI_across_the_border
 			prerequisite = { focus = TRI_across_the_border }
 			mutually_exclusive = { focus = TRI_torchbearer_in_the_storm }
@@ -2378,7 +2378,7 @@ focus_tree = {
 		}
 		focus = { #风暴中的炬手
 			id = TRI_torchbearer_in_the_storm
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_torchbearer_in_the_storm
 			relative_position_id = TRI_across_the_border
 			prerequisite = { focus = TRI_across_the_border }
 			mutually_exclusive = { focus = TRI_mainstay_in_the_collapse }
@@ -2605,7 +2605,7 @@ focus_tree = {
 		
 		focus = { #“紧急事态动议”法案
 			id = TRI_Bill_of_emergent_motion
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_Bill_of_emergent_motion
 			relative_position_id = TRI_temporary_comission_of_command
 			prerequisite = { focus = TRI_temporary_comission_of_command }			
 			cost = 5
@@ -2640,7 +2640,7 @@ focus_tree = {
 		}
 		focus = { #重铸前线
 			id = TRI_reinforce_the_frontline
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_reinforce_the_frontline
 			relative_position_id = TRI_Bill_of_emergent_motion
 			prerequisite = { focus = TRI_Bill_of_emergent_motion }				
 			cost = 5
@@ -2708,7 +2708,7 @@ focus_tree = {
 		}
 		focus = { #遏灾制祸
 			id = TRI_restrain_the_disaster
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_restrain_the_disaster
 			relative_position_id = TRI_reinforce_the_frontline
 			prerequisite = { focus = TRI_reinforce_the_frontline }
 			prerequisite = { focus = TRI_answer_for_thecreed }		

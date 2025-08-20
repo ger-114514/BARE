@@ -476,6 +476,10 @@ spriteTypes = {
 	#向上议院妥协中
 	#向下议院妥协中
 	#正在铺展的“影子”计划
+	SpriteType = {
+		name = "GFX_idea_TRI_shadow_scheme_in_progress"
+		texturefile = "gfx/interface/ideas/TRI/TRI_shadow_scheme_in_progress.dds"
+	}
 	#扫除威胁！
 	SpriteType = {
 		name = "GFX_idea_TRI_sweep_threat"
