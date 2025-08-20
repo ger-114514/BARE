@@ -59,7 +59,7 @@ focus_tree = {
         mutually_exclusive = { focus = GEH_Discipline_Committee }
         completion_reward = {
             add_political_power = 75
-
+            GEH_dualHeaded_Influence_Factor_Change = yes
 
             swap_ideas = {
                 remove_idea = GEH_severe_inside_contradiction

@@ -2,7 +2,7 @@ ideas = {
     country = {
         #文本idea  争辩无休的《伊甸条约》方针
         TRI_eden_treaty_step_0_modifier_Text_idea = {
-            picture = GFX_eden_treaty_step_normal_modifier
+            picture = eden_treaty_step_normal_modifier
             name = eden_treaty_step_0_modifier
 
             allowed = {
@@ -23,7 +23,17 @@ ideas = {
                 
             }
         }
-    
+        #文本idea  圣三一情报局
+        TRI_special_services_investigations_text_idea = {
+            name = TRI_special_services_investigations
+            picture = "TRI_special_services_investigations"
+            allowed = {
+                
+            }
+            modifier = {
+                
+            }
+        }
         #以战止戈
         TRI_authorize_eagle = {
             name = authorize_eagle_modifier
@@ -168,7 +178,7 @@ ideas = {
 
         #茶话会直属炮兵
         TRI_tea_party_artillery_1 = {
-            picture = GFX_idea_TRI_tea_party_artillery
+            picture = TRI_tea_party_artillery
             modifier = {
                 army_infantry_defence_factor = 0.04
             }
@@ -185,7 +195,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_2 = {
-            picture = GFX_idea_TRI_tea_party_artillery
+            picture = TRI_tea_party_artillery
             modifier = {
                 army_infantry_defence_factor = 0.08
             }
@@ -202,7 +212,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_3 = {
-            picture = GFX_idea_TRI_tea_party_artillery
+            picture = TRI_tea_party_artillery
             modifier = {
                 army_infantry_defence_factor = 0.12
             }
@@ -219,7 +229,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_4 = {
-            picture = GFX_idea_TRI_tea_party_artillery
+            picture = TRI_tea_party_artillery
             modifier = {
                 army_infantry_defence_factor = 0.16
             }
@@ -236,7 +246,7 @@ ideas = {
             }
         }
         TRI_tea_party_artillery_5 = {
-            picture = GFX_idea_TRI_tea_party_artillery
+            picture = TRI_tea_party_artillery
             modifier = {
                 army_infantry_defence_factor = 0.2
             }
@@ -466,7 +476,7 @@ ideas = {
         }
         #友谊，光荣与未来！
         TRI_friendship_glory_future = {
-            picture = GFX_eden_treaty_step_normal_modifier
+            picture = GFX_idea_eden_treaty_step_normal_modifier
 
             allowed = {
                 original_tag = TRI

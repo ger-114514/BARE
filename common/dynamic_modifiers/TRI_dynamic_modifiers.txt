@@ -29,7 +29,7 @@
 #伊甸条约
 eden_treaty_step_0_modifier = { #【争辩无休的《伊甸条约》方针】
 	
-	icon = "GFX_eden_treaty_step_normal_modifier"
+	icon = "GFX_idea_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -48,7 +48,7 @@ eden_treaty_step_0_modifier = { #【争辩无休的《伊甸条约》方针】
 
 eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
 	
-	icon = "GFX_eden_treaty_step_normal_modifier"
+	icon = "GFX_idea_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -68,7 +68,7 @@ eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
 
 eden_treaty_step_2_modifier = { #【方略周详的《伊甸条约》方针】
 	
-	icon = "GFX_eden_treaty_step_normal_modifier"
+	icon = "GFX_idea_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -88,7 +88,7 @@ eden_treaty_step_2_modifier = { #【方略周详的《伊甸条约》方针】
 
 eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
 	
-	icon = "GFX_eden_treaty_step_normal_modifier"
+	icon = "GFX_idea_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 	
 	#政治方面
@@ -128,7 +128,7 @@ eden_treaty_step_4_modifier = { #【濒临破灭的《伊甸条约》】
 
 eden_treaty_step_5_modifier = { #【逐渐稳定的《伊甸条约》】
 
-	icon = "GFX_eden_treaty_step_normal_modifier"
+	icon = "GFX_idea_eden_treaty_step_normal_modifier"
 	enable = { always = yes }
 
 	#政治方面
@@ -198,7 +198,7 @@ TRI_chaotic_frontline_2 = {
 
 #圣三一情报局
 TRI_special_services_investigations = {
-	icon = "GFX_TRI_special_services_investigations"
+	icon = "GFX_idea_TRI_special_services_investigations"
 	enable = { always = yes }
 
 	#间谍槽位

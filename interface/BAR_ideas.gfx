@@ -408,6 +408,12 @@ spriteTypes = {
 		name = "GFX_idea_TRI_gehenna_dip_support"
 		texturefile = "gfx/interface/ideas/GEH/TRI_gehenna_dip_support.dds"
 	}
+
+	#临时民族精神占位符
+	spriteType = {
+		name = "GFX_idea_GEH_temp_idea"
+		texturefile = "gfx/interface/ideas/GEH/GEH_temp_idea.dds"
+	}
 	
 	### MIL
 	spriteType = {
@@ -521,7 +527,7 @@ spriteTypes = {
 
 	#伊甸条约阶段0 1 2 3 5图标
 	SpriteType = {
-		name = "GFX_eden_treaty_step_normal_modifier"
+		name = "GFX_idea_eden_treaty_step_normal_modifier"
 		texturefile = "gfx/interface/ideas/TRI/eden_treaty_step_normal_modifier.dds"
 	}
 	#伊甸条约阶段4图标
@@ -544,7 +550,7 @@ spriteTypes = {
 
 	#圣三一情报局
 	SpriteType = {
-		name = "GFX_TRI_special_services_investigations"
+		name = "GFX_idea_TRI_special_services_investigations"
 		texturefile = "gfx/interface/ideas/TRI/TRI_special_services_investigations.dds"
 	}
 
