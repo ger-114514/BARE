@@ -1187,42 +1187,26 @@ country_event = {
         TRI_set_focus_successful_Eden = yes
     }
 }
-#善意的假面
-country_event = {
-    id = TRI_events.43
-    title = TRI_events.43.t
-    desc = TRI_events.43.d
-    picture = GFX_TRI_event_3
+# #善意的假面
+# country_event = {
+#     id = TRI_events.43
+#     title = TRI_events.43.t
+#     desc = TRI_events.43.d
+#     picture = GFX_TRI_event_3
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	fire_only_once = yes
+# 	fire_only_once = yes
 
-    option = {
-		name = TRI_events.43.a
-        add_political_power = 100
-        #启用政治顾问：阿慈谷日富美
-        add_advisor_role = {
-            character = TRI_hifumi
-            activate = no
-            advisor = { 
-                slot = political_advisor
-                idea_token = TRI_hifumi_pa
-                traits = {
-                    ordinary_girl
-                }
-                ai_will_do = {
-                    base = 1
-                }
-            }
-        }
-		ai_chance = {
-			base = 100
-		}
-    }
-}
+#     option = {
+# 		name = TRI_events.43.a
+# 		ai_chance = {
+# 			base = 100
+# 		}
+#     }
+# }
 
-#善意的假面
+#群龙无首
 country_event = {
     id = TRI_events.44
     title = TRI_events.44.t
