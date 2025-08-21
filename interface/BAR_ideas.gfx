@@ -715,6 +715,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/CEN/BARE_Global_Extrajudicial_Trusteeship_Area.dds"
 	}
 
+		#临时民族精神占位符
+	spriteType = {
+		name = "GFX_idea_TRI_temp_idea"
+		texturefile = "gfx/interface/ideas/TRI/TRI_temp_idea.dds"
+	}
+
 	###MIO###
 	#哦天哪这东西注册在ideas里吗
 	spriteType = {
