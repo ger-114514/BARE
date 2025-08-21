@@ -424,4 +424,28 @@ spriteTypes = {
 		name = "GFX_goal_TRI_restrain_the_disaster"
 		texturefile = "gfx/interface/goals/Trinity/focus_TRI_restrain_the_disaster.dds"
 	}
+	#
+	SpriteType = {
+		name = "GFX_goal_TRI_desperate_fight_A"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_desperate_fight_A.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_desperate_fight_B"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_desperate_fight_B.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_sweet_dream_in_one_night"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_sweet_dream_in_one_night.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_TRI_after_the_storm"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_after_the_storm.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_Congress_for_ending_all_conflict"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_Congress_for_ending_all_conflict.dds"
+	}
+
+	
 }
