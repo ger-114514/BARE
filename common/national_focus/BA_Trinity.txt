@@ -2197,11 +2197,6 @@ focus_tree = {
 						target = GEH #被宣战国家TAG
 						type = topple_government #战争目标类型 - 颠覆政权
 					}
-					#暂时移除领袖桐藤渚的所有效果
-					#在渚的头像上打上MISSING的红色标记
-					#同时将效果替换成“失踪的领袖”
-					#效果：（无法切换政治顾问、军事顾问和任何法案）
-					promote_character = TRI_missing_nagisa
 					add_stability = -0.3
 				}
 				else_if = {
@@ -2210,8 +2205,12 @@ focus_tree = {
 						target = GEH #被宣战国家TAG
 						type = topple_government #战争目标类型 - 颠覆政权
 					}
-					promote_character = TRI_missing_nagisa
 				}
+				#暂时移除领袖桐藤渚的所有效果
+				#在渚的头像上打上MISSING的红色标记
+				#同时将效果替换成“失踪的领袖”
+				#效果：（无法切换政治顾问、军事顾问和任何法案）
+				country_event = TRI_events.44
 
 				#补国策本地化效果
 				custom_effect_tooltip = eden_step_3_to_4_desc
