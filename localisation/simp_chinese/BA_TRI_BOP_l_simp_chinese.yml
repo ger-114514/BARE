@@ -71,7 +71,7 @@
 
  TRI_BOP_transfer_right: "委派更多权利"
  TRI_BOP_decision.1.t: "让渡权利"
- TRI_BOP_decision.1.desc: "委派更多权利 描述"
+#  TRI_BOP_decision.1.desc: "委派更多权利 描述"
  TRI_BOP_decision.1.a: "强硬派"
  TRI_BOP_decision.1.b: "中间派"
  TRI_BOP_decision.1.c: "温和派"
@@ -79,7 +79,7 @@
  TRI_BOP_strengthen_control: "确保可控状态"
  TRI_BOP_strengthen_control_trigger_tt: "上下两院的$BOP_conservative$占比均不超过§Y50%§!"
  TRI_BOP_decision.2.t: "确保可控状态"
- TRI_BOP_decision.2.desc: "确保可控状态 描述"
+#  TRI_BOP_decision.2.desc: "确保可控状态 描述"
  TRI_BOP_decision.2.a: "强硬派"
  TRI_BOP_decision.2.b: "温和派"
 
