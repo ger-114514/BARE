@@ -721,8 +721,8 @@ country_event = { #空巢行动
         name = TRI_coup.29.a
         add_war_support = 0.1
         hidden_effect = {
-            add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight }
-            activate_shine_on_focus = TRI_desperate_fight
+            add_to_array = { TRI_hoshubu_focus_line = token:TRI_desperate_fight_B }
+            activate_shine_on_focus = TRI_desperate_fight_B
             country_event = {
                 id = TRI_autofocus.1
                 days = 7
