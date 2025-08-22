@@ -566,19 +566,31 @@ BA_Great_Game_decisions = {
 		}
 
 		timeout_effect = {
-			if = { #攻方胜利
-				limit = {
-					var:Great_Game_invade_target = { has_capitulated = yes }
-				}
+			custom_effect_tooltip = if_tt
+			custom_effect_tooltip = college_exercise_ongoing_attacker_win_tt
+			effect_tooltip = {
 				Great_Game_invade_succeeded = yes
 			}
-			else = { #守方胜利
+			custom_effect_tooltip = else_tt
+			effect_tooltip = {
 				Great_Game_invade_failed = yes
 			}
-			remove_mission = college_exercise_ongoing_attacker
-			var:Great_Game_invade_target_overlord = {
-				remove_mission = college_exercise_ongoing_defender
+			hidden_effect = {
+				if = { #攻方胜利
+					limit = {
+						var:Great_Game_invade_target = { has_capitulated = yes }
+					}
+					Great_Game_invade_succeeded = yes
+				}
+				else = { #守方胜利
+					Great_Game_invade_failed = yes
+				}
+				remove_mission = college_exercise_ongoing_attacker
+				var:Great_Game_invade_target_overlord = {
+					remove_mission = college_exercise_ongoing_defender
+				}
 			}
+			
 		}
 		cancel_trigger = {
 			surrender_progress > 0.3
@@ -611,15 +623,11 @@ BA_Great_Game_decisions = {
 		}
 
 		timeout_effect = {
-			if = { #攻方胜利
-				limit = {
-					var:Great_Game_invade_target = { has_capitulated = yes }
-				}
-				custom_effect_tooltip = Great_Game_defend_failed_tt
-			}
-			else = { #守方胜利
-				custom_effect_tooltip = Great_Game_defend_succeeded_tt
-			}
+			custom_effect_tooltip = if_tt
+			custom_effect_tooltip = college_exercise_ongoing_attacker_win_tt
+			custom_effect_tooltip = Great_Game_defend_failed_tt
+			custom_effect_tooltip = else_tt
+			custom_effect_tooltip = Great_Game_defend_succeeded_tt
 			effect_tooltip = {
 				Great_Game_get_coins = yes
 			}
