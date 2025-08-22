@@ -638,7 +638,7 @@ sp_ba_T5_infantry_weapon_project = {
 
 
 
-sp_ba_T1_electronic_project_project = {
+sp_ba_T1_electronic_project = {
     specialization = specialization_air
     project_tags = {
         # sp_tag_tank
@@ -661,7 +661,7 @@ sp_ba_T1_electronic_project_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_ba_T1_electronic_project_project
+    icon = GFX_sp_ba_T1_electronic_project
     #blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
 
@@ -699,7 +699,7 @@ sp_ba_T1_electronic_project_project = {
     }
 }
 
-sp_ba_T2_electronic_project_project = {
+sp_ba_T2_electronic_project = {
     specialization = specialization_air
     project_tags = {
         # sp_tag_tank
@@ -725,7 +725,7 @@ sp_ba_T2_electronic_project_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_ba_T2_electronic_project_project
+    icon = GFX_sp_ba_T2_electronic_project
     #blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
 
@@ -764,7 +764,7 @@ sp_ba_T2_electronic_project_project = {
 }
 
 
-sp_ba_T3_electronic_project_project = {
+sp_ba_T3_electronic_project = {
     specialization = specialization_air
     project_tags = {
         # sp_tag_tank
@@ -790,7 +790,7 @@ sp_ba_T3_electronic_project_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_ba_T3_electronic_project_project
+    icon = GFX_sp_ba_T3_electronic_project
     #blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.medium
 
@@ -828,7 +828,7 @@ sp_ba_T3_electronic_project_project = {
     }
 }
 
-sp_ba_T4_electronic_project_project = {
+sp_ba_T4_electronic_project = {
     specialization = specialization_air
     project_tags = {
         # sp_tag_tank
@@ -854,7 +854,7 @@ sp_ba_T4_electronic_project_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_ba_T4_electronic_project_project
+    icon = GFX_sp_ba_T4_electronic_project
     #blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.long
 
@@ -891,7 +891,7 @@ sp_ba_T4_electronic_project_project = {
 
     }
 }
-sp_ba_T5_electronic_project_project = {
+sp_ba_T5_electronic_project = {
     specialization = specialization_air
     project_tags = {
         # sp_tag_tank
@@ -917,7 +917,7 @@ sp_ba_T5_electronic_project_project = {
         #name = "my_project_name_loc_key"
         #desc = "my_project_desc_loc_key"
     #}
-    icon = GFX_sp_ba_T5_electronic_project_project
+    icon = GFX_sp_ba_T5_electronic_project
     #blueprint_image = "GFX_my_project_blueprint"
     prototype_time = sp_time.prototype.very_long
 

@@ -2062,4 +2062,32 @@ characters={
             }
         }
     }
+
+
+	TRI_air_force_idea_a = {
+		name = TRI_air_force_idea_a_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_TRI_temp_idea
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = TRI_air_force_idea_a
+			cost = 100
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				TRI_air_force_idea_a_trait
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }
