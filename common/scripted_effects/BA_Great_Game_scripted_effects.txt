@@ -267,13 +267,17 @@ Great_Game_invade_succeeded = {
 			}
 			
 			clr_country_flag = involved_in_Great_Game_as_defender
+			clr_country_flag = involved_in_Great_Game_as_ally_leader
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
 		}
 		#白和
-		white_peace = var:Great_Game_invade_target_overlord
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = ROOT
+		}
 		#夺取托管地区
 		add_to_array = { BA_trusteeship_areas = var:Great_Game_invade_target }
 		if = {
@@ -318,6 +322,7 @@ Great_Game_invade_succeeded = {
 			}
 		}
 		clr_country_flag = involved_in_Great_Game_as_attacker
+		clr_country_flag = involved_in_Great_Game_as_ally_leader
 		clear_variable = Great_Game_invader
 		clear_variable = Great_Game_invade_target
 		clear_variable = Great_Game_invade_target_overlord
@@ -356,6 +361,7 @@ Great_Game_invade_failed = {
 			}
 			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
+			clr_country_flag = involved_in_Great_Game_as_ally_leader
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
@@ -383,8 +389,12 @@ Great_Game_invade_failed = {
 			}
 		}
 		clear_array = Great_Game_temp_allies
-		white_peace = var:Great_Game_invade_target_overlord
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = ROOT
+		}
 		clr_country_flag = involved_in_Great_Game_as_attacker
+		clr_country_flag = involved_in_Great_Game_as_ally_leader
 		clear_variable = Great_Game_invader
 		clear_variable = Great_Game_invade_target
 		clear_variable = Great_Game_invade_target_overlord

@@ -1,12 +1,12 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			CEN = {
-				news_event = {
-					id = Great_Game.1000
-					months = 18
-				}
-			}
+			# CEN = {
+			# 	news_event = {
+			# 		id = Great_Game.1000
+			# 		months = 18
+			# 	}
+			# }
 		}
 	}
 	on_monthly = {

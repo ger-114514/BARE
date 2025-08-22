@@ -32,6 +32,7 @@
  Great_Game_ask_for_support_trigger_tt: "我们阵营的总实力分数§Y低于§!对方且邀请§Y[FROM.GetName]§!（[?FROM.Great_Game_power_score|Y=]）后不超过对方的§Y120%§!"
  Great_Game_join_ally_tt: "$ALLY|Y$在此次演习加入$LEADER|Y$方对抗$ENEMY|Y$"
  college_exercise_ongoing_attacker: "进攻§Y[?Great_Game_enemy.GetName]§!的战术演习"
+ college_exercise_ongoing_attacker_win_tt: "§Y[?Great_Game_invade_target.GetName]§!已经停止抵抗"
  college_exercise_ongoing_defender: "防卫§Y[?Great_Game_enemy.GetName]§!的战术演习"
  college_exercise_ongoing_ally: "协助对抗§Y[?Great_Game_enemy.GetName]§!的战术演习"
  take_trusteeship_desc: "夺取托管地区"
