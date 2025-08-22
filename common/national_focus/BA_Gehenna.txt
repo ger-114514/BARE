@@ -2728,7 +2728,7 @@ focus_tree = {
         completion_reward = {
             set_country_flag = GEH_societies_start
             set_variable = {
-                GEH_discipline_committee_ability = 30
+                GEH_discipline_committee_ability = 20
             }
             #风纪委镇压度
             set_variable = {
@@ -2736,7 +2736,7 @@ focus_tree = {
             }
             #温泉部活跃度
             set_variable = {
-                GEH_hot_spring_activity = 10
+                GEH_hot_spring_activity = 20
             }
             #温泉部恶名
             set_variable = {
@@ -2752,7 +2752,7 @@ focus_tree = {
             }
             #美食部活跃度
             set_variable = {
-                GEH_gourmet_research_activity = 10
+                GEH_gourmet_research_activity = 20
             }
             #美食部恶名
             set_variable = {
@@ -3289,7 +3289,10 @@ focus_tree = {
        
 
         completion_reward = {
-        
+           add_offsite_building = { type = industrial_complex level = 3 }
+           add_offsite_building = { type = arms_factory level = 3 }
+           army_experience = 100
+           add_political_power = 150
         }
     }
 

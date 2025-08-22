@@ -1095,4 +1095,145 @@ characters = {
 			logistics_skill = 1
 		}
 	}
+
+
+	GEH_air_force_idea_a = {
+		name = GEH_air_force_idea_a_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_GEH_temp_idea
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = GEH_air_force_idea_a
+			cost = 100
+			allowed = {
+				original_tag = GEH
+			}
+			available = {
+				original_tag = GEH
+			}
+			traits = {
+				GEH_air_force_idea_a_trait
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	GEH_air_force_idea_b = {
+		name = GEH_air_force_idea_b_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_GEH_temp_idea
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = GEH_air_force_idea_b
+			allowed = {
+				original_tag = GEH
+			}
+			available = {
+				original_tag = GEH
+			}
+			traits = {
+				GEH_air_force_idea_b_trait
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	GEH_theorist_idea_a = {
+		name = GEH_theorist_idea_a_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_GEH_temp_idea
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = GEH_theorist_idea_a
+			cost = 150
+			allowed = {
+				original_tag = GEH
+			}
+			available = {
+				original_tag = GEH
+			}
+			research_bonus = {
+                armor = 0.15
+            }
+			traits = {
+				GEH_theorist_idea_a_trait
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	GEH_theorist_idea_b = {
+		name = GEH_theorist_idea_b_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_GEH_temp_idea
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = GEH_theorist_idea_b
+			cost = 150
+			allowed = {
+				original_tag = GEH
+			}
+			available = {
+				original_tag = GEH
+			}
+			traits = {
+				GEH_theorist_idea_b_trait
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	GEH_theorist_idea_c = {
+		name = GEH_theorist_idea_c_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_GEH_temp_idea
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = GEH_theorist_idea_c
+			cost = 150
+			allowed = {
+				original_tag = GEH
+			}
+			available = {
+				original_tag = GEH
+			}
+			traits = {
+				GEH_theorist_idea_c_trait
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }

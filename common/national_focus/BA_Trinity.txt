@@ -1267,7 +1267,7 @@ focus_tree = {
 			}
 			focus = { #困兽犹斗(A)
 				id = TRI_desperate_fight_A
-				##icon = GFX_goal_unknown
+				icon = GFX_goal_TRI_desperate_fight_A
 				relative_position_id = TRI_conspiracy_against_conspiracy
 				prerequisite = { focus = TRI_conspiracy_against_conspiracy }
 				prerequisite = { focus = TRI_buy_time }
@@ -1302,7 +1302,7 @@ focus_tree = {
 			}
 			focus = { #一夕安寝
 				id = TRI_sweet_dream_in_one_night
-				##icon = GFX_goal_unknown
+				icon = GFX_goal_TRI_sweet_dream_in_one_night
 				relative_position_id = TRI_desperate_fight_A
 				prerequisite = { focus = TRI_desperate_fight_A }
 				available = {
@@ -1444,7 +1444,7 @@ focus_tree = {
 			}
 			focus = { #困兽犹斗(B)
 				id = TRI_desperate_fight_B
-				##icon = GFX_goal_unknown
+				icon = GFX_goal_TRI_desperate_fight_B
 				relative_position_id = TRI_lure_the_enemy
 				prerequisite = { focus = TRI_lure_the_enemy }
 				prerequisite = { focus = TRI_buy_time }
@@ -1482,7 +1482,7 @@ focus_tree = {
 			}
 			focus = { #夜月落，朝阳升
 				id = TRI_moon_fall_sun_rise
-				##icon = GFX_goal_unknown
+				icon = GFX_goal_TRI_moon_fall_sun_rise
 				relative_position_id = TRI_desperate_fight_B
 				prerequisite = { focus = TRI_desperate_fight_B }
 				available = {
@@ -1518,7 +1518,7 @@ focus_tree = {
 
 			focus = { #补习部的教训
 				id = TRI_lesson_from_training_club
-				##icon = GFX_goal_unknown
+				icon = GFX_goal_TRI_lesson_from_training_club
 				relative_position_id = TRI_steady_as_she_goes
 				prerequisite = { focus = TRI_steady_as_she_goes }
 				prerequisite = { 
@@ -2124,7 +2124,7 @@ focus_tree = {
 
 		focus = { #召开第二次《伊甸条约》会议 假国策，激活30天后会触发事件，强制切换到另一条国策线
 			id = TRI_Congress_for_ending_all_conflict
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_Congress_for_ending_all_conflict
 			relative_position_id = TRI_enterprising
 			prerequisite = { focus = TRI_enterprising }
 			cancelable = no
@@ -2239,7 +2239,7 @@ focus_tree = {
 		}
 		focus = { #先遣勘探
 			id = TRI_advance_exploration
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_advance_exploration
 			relative_position_id = TRI_unexpected_accident
 			prerequisite = { focus = TRI_unexpected_accident }		
 			cost = 5
@@ -2253,7 +2253,7 @@ focus_tree = {
 		}
 		focus = { #唤醒职责
 			id = TRI_awareness_of_responsibility
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_awareness_of_responsibility
 			relative_position_id = TRI_advance_exploration
 			prerequisite = { focus = TRI_advance_exploration }
 			bypass = {
@@ -2283,7 +2283,7 @@ focus_tree = {
 		}
 		focus = { #绘制蓝图
 			id = TRI_draw_a_blueprint
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_draw_a_blueprint
 			relative_position_id = TRI_advance_exploration
 			prerequisite = { focus = TRI_advance_exploration }
 			cost = 5
@@ -2301,7 +2301,7 @@ focus_tree = {
 		}
 		focus = { #紧急救援
 			id = TRI_emergency_rescue
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_emergency_rescue
 			relative_position_id = TRI_awareness_of_responsibility
 			prerequisite = { focus = TRI_awareness_of_responsibility }
 			prerequisite = { focus = TRI_draw_a_blueprint }
@@ -2442,7 +2442,7 @@ focus_tree = {
 		}
 		focus = { #重树旗帜
 			id = TRI_set_up_the_flag
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_set_up_the_flag
 			relative_position_id = TRI_mainstay_in_the_collapse
 			prerequisite = {
 				focus = TRI_mainstay_in_the_collapse
@@ -2590,7 +2590,7 @@ focus_tree = {
 		}
 		focus = { #临时指战委员会
 			id = TRI_temporary_comission_of_command
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_temporary_comission_of_command
 			relative_position_id = TRI_set_up_the_flag
 			prerequisite = { focus = TRI_set_up_the_flag }
 			prerequisite = { focus = TRI_emergency_rescue }
@@ -2700,7 +2700,7 @@ focus_tree = {
 		}
 		focus = { #雨破天晴
 			id = TRI_after_the_storm
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_after_the_storm
 			relative_position_id = TRI_Bill_of_emergent_motion
 			allow_branch = { #拥有焦点：《伊甸条约》的威胁
 				check_variable = { TRI_parliament_focus = token:TRI_parliament_focus_Eden_threat }
@@ -2721,7 +2721,7 @@ focus_tree = {
 		}
 		focus = { #对古则的解答
 			id = TRI_answer_for_thecreed
-			##icon = GFX_goal_unknown
+			icon = GFX_goal_TRI_answer_for_thecreed
 			relative_position_id = TRI_Bill_of_emergent_motion
 			prerequisite = { focus = TRI_Bill_of_emergent_motion }		
 			cost = 5
