@@ -267,6 +267,7 @@ Great_Game_invade_succeeded = {
 			}
 			
 			clr_country_flag = involved_in_Great_Game_as_defender
+			clr_country_flag = involved_in_Great_Game_as_ally_leader
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
@@ -321,6 +322,7 @@ Great_Game_invade_succeeded = {
 			}
 		}
 		clr_country_flag = involved_in_Great_Game_as_attacker
+		clr_country_flag = involved_in_Great_Game_as_ally_leader
 		clear_variable = Great_Game_invader
 		clear_variable = Great_Game_invade_target
 		clear_variable = Great_Game_invade_target_overlord
@@ -359,6 +361,7 @@ Great_Game_invade_failed = {
 			}
 			clear_array = Great_Game_temp_allies
 			clr_country_flag = involved_in_Great_Game_as_defender
+			clr_country_flag = involved_in_Great_Game_as_ally_leader
 			clear_variable = Great_Game_invader
 			clear_variable = Great_Game_invade_target
 			clear_variable = Great_Game_invade_target_overlord
@@ -391,6 +394,7 @@ Great_Game_invade_failed = {
 			white_peace = ROOT
 		}
 		clr_country_flag = involved_in_Great_Game_as_attacker
+		clr_country_flag = involved_in_Great_Game_as_ally_leader
 		clear_variable = Great_Game_invader
 		clear_variable = Great_Game_invade_target
 		clear_variable = Great_Game_invade_target_overlord
