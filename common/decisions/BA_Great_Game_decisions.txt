@@ -254,7 +254,7 @@ BA_Great_Game_decisions = {
 		visible = {
 			has_war = no
 			Great_Game_is_involved = no
-			Great_Game_can_be_CEN_overlord = yes
+			original_tag = CEN
 			NOT = { has_country_flag = Great_Game_invade_cd }
 		}
 		available = {
