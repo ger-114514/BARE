@@ -147,6 +147,19 @@ ideas = {
 				original_tag = ARI
 			}
 			available = {
+				original_tag = ARI
+			}
+			allowed = {
+				always = no
+			}
+			allowed_to_remove  = {
+				if = {
+					limit = { original_tag = ARI }
+					custom_override_tooltip = {
+						tooltip = ARI_beatrice_laws_tt
+						always = no
+					}
+				}
 			}
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -222,9 +235,17 @@ ideas = {
 				custom_effect_tooltip = closed_economy_TT
 			}
 			allowed_to_remove = {
-				NOT = {
-					original_tag = ARI					#阿里乌斯
-					has_idea = BARE_Global_Blockade_Zone					#封锁地区
+				if = {
+					limit = { original_tag = ARI }					#阿里乌斯
+					custom_override_tooltip = {
+						tooltip = ARI_beatrice_laws_tt
+						always = no
+					}
+				}
+				else = {
+					NOT = {
+						has_idea = BARE_Global_Blockade_Zone					#封锁地区
+					}
 				}
 			}
 			ai_will_do = {
