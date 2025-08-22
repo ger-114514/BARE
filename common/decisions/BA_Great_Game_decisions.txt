@@ -271,7 +271,7 @@ BA_Great_Game_decisions = {
 				}
 				any_neighbor_country = {
 					OR = {
-						original_tag = ROOT
+						Great_Game_can_be_CEN_overlord = yes
 						AND = {
 							is_subject_of = CEN
 							has_autonomy_state = autonomy_CEN_trusteeship_area
